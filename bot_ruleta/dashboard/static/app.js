@@ -251,24 +251,23 @@ function buildCards(grid, tables) {
         }
 
         const alertBadge = t.alertas.length > 0
-            ? `<span class="alert-badge pulse">🔴 ${t.alertas.length} Señal${t.alertas.length > 1 ? 'es' : ''}</span>`
-            : (t.last_update_seconds > 180 ? `<span class="status-badge warn">⚠️ Inactivo</span>` : `<span class="status-badge safe">✅ Normal</span>`);
+            ? `<span class="alert-badge pulse">🔴${t.alertas.length}</span>`
+            : (t.last_update_seconds > 180 ? `<span class="status-badge warn">⚠️</span>` : `<span class="status-badge safe">✅</span>`);
 
         // Badge de racha de color
         let colorStreakBadge = '';
         if (t.color_streak && t.color_streak.streak >= colorStreakThreshold) {
             const isRed = t.color_streak.color === 'Red';
             const emoji = isRed ? '🔴' : '⚫';
-            const label = isRed ? 'Rojos' : 'Negros';
             const cls = isRed ? 'red' : 'black';
-            colorStreakBadge = `<span class="color-streak-badge ${cls}">${emoji} ${t.color_streak.streak} ${label}</span>`;
+            colorStreakBadge = `<span class="color-streak-badge ${cls}">${emoji}${t.color_streak.streak}</span>`;
         }
 
         // Badge de números retrasados
         let numberAlertBadge = '';
         if (t.number_alert_count > 0) {
             const numsDetail = t.number_alert_numbers.map(n => `${n[0]}(${n[1]})`).join(', ');
-            numberAlertBadge = `<span class="number-alert-badge" title="${numsDetail}">🔢 ${t.number_alert_count} número${t.number_alert_count > 1 ? 's' : ''}</span>`;
+            numberAlertBadge = `<span class="number-alert-badge" title="${numsDetail}">🔢${t.number_alert_count}</span>`;
         }
 
         const historyHTML = getMiniHistoryHTML(t.last_10);
@@ -277,7 +276,7 @@ function buildCards(grid, tables) {
             <div class="accordion-header" onclick="toggleAccordion(this)">
                 <div class="header-left">
                     <span class="tc-status-dot" style="background:${dotColor}; box-shadow:0 0 8px ${dotColor}"></span>
-                    <span class="tc-name" title="${t.name}">${t.name}</span>
+                    <span class="tc-name" title="${t.name}" style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:140px;display:inline-block;">${t.name}</span>
                     <span class="tc-freshness">${formatTimeAgo(t.last_update_seconds)}</span>
                 </div>
                 <div class="header-right">
@@ -374,24 +373,23 @@ function updateCards(tables) {
         if (headerRight) {
             const currentChevron = headerRight.querySelector(".chevron") ? '<span class="chevron">▼</span>' : '';
             const alertBadge = t.alertas.length > 0
-                ? `<span class="alert-badge pulse">🔴 ${t.alertas.length} Señal${t.alertas.length > 1 ? 'es' : ''}</span>`
-                : (t.last_update_seconds > 180 ? `<span class="status-badge warn">⚠️ Inactivo</span>` : `<span class="status-badge safe">✅ Normal</span>`);
+                ? `<span class="alert-badge pulse">🔴${t.alertas.length}</span>`
+                : (t.last_update_seconds > 180 ? `<span class="status-badge warn">⚠️</span>` : `<span class="status-badge safe">✅</span>`);
             
             // Badge de racha de color
             let colorStreakBadge = '';
             if (t.color_streak && t.color_streak.streak >= colorStreakThreshold) {
                 const isRed = t.color_streak.color === 'Red';
                 const emoji = isRed ? '🔴' : '⚫';
-                const label = isRed ? 'Rojos' : 'Negros';
                 const cls = isRed ? 'red' : 'black';
-                colorStreakBadge = `<span class="color-streak-badge ${cls}">${emoji} ${t.color_streak.streak} ${label}</span>`;
+                colorStreakBadge = `<span class="color-streak-badge ${cls}">${emoji}${t.color_streak.streak}</span>`;
             }
             
             // Badge de números retrasados
             let numberAlertBadge = '';
             if (t.number_alert_count > 0) {
                 const numsDetail = t.number_alert_numbers.map(n => `${n[0]}(${n[1]})`).join(', ');
-                numberAlertBadge = `<span class="number-alert-badge" title="${numsDetail}">🔢 ${t.number_alert_count} número${t.number_alert_count > 1 ? 's' : ''}</span>`;
+                numberAlertBadge = `<span class="number-alert-badge" title="${numsDetail}">🔢${t.number_alert_count}</span>`;
             }
             
             headerRight.innerHTML = numberAlertBadge + colorStreakBadge + alertBadge + currentChevron;
