@@ -103,9 +103,15 @@ def init_db():
             start_time      TEXT NOT NULL,
             end_time        TEXT,
             max_delay       INTEGER NOT NULL,
-            threshold_used  INTEGER NOT NULL
+            threshold_used  INTEGER NOT NULL,
+            termination     TEXT DEFAULT 'normal'
         )
     """)
+    # Migración: agregar columna termination si no existe en tablas viejas
+    try:
+        cursor.execute("ALTER TABLE number_delay_history ADD COLUMN termination TEXT DEFAULT 'normal'")
+    except sqlite3.OperationalError:
+        pass  # Ya existe, ignorar
     cursor.execute("CREATE INDEX IF NOT EXISTS idx_number_delay_table ON number_delay_history(table_name)")
     cursor.execute("CREATE INDEX IF NOT EXISTS idx_number_delay_number ON number_delay_history(number)")
 

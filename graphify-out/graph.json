@@ -4,42 +4,6 @@
   "graph": {},
   "nodes": [
     {
-      "label": "opencode.json",
-      "file_type": "code",
-      "source_file": ".opencode/opencode.json",
-      "source_location": "L1",
-      "id": "opencode_opencode",
-      "community": 12,
-      "norm_label": "opencode.json"
-    },
-    {
-      "label": "plugin",
-      "file_type": "code",
-      "source_file": ".opencode/opencode.json",
-      "source_location": "L2",
-      "id": "opencode_opencode_plugin",
-      "community": 12,
-      "norm_label": "plugin"
-    },
-    {
-      "label": "graphify.js",
-      "file_type": "code",
-      "source_file": ".opencode/plugins/graphify.js",
-      "source_location": "L1",
-      "id": "plugins_graphify",
-      "community": 13,
-      "norm_label": "graphify.js"
-    },
-    {
-      "label": "GraphifyPlugin()",
-      "file_type": "code",
-      "source_file": ".opencode/plugins/graphify.js",
-      "source_location": "L6",
-      "id": "plugins_graphify_graphifyplugin",
-      "community": 13,
-      "norm_label": "graphifyplugin()"
-    },
-    {
       "label": "app.py",
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/app.py",
@@ -160,7 +124,7 @@
       "label": "get_analisis_global()",
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L310",
+      "source_location": "L330",
       "id": "dashboard_app_get_analisis_global",
       "community": 1,
       "norm_label": "get_analisis_global()"
@@ -169,7 +133,7 @@
       "label": "get_signal_detail()",
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L377",
+      "source_location": "L408",
       "id": "dashboard_app_get_signal_detail",
       "community": 1,
       "norm_label": "get_signal_detail()"
@@ -178,7 +142,7 @@
       "label": "get_tunnel()",
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L438",
+      "source_location": "L469",
       "id": "dashboard_app_get_tunnel",
       "community": 1,
       "norm_label": "get_tunnel()"
@@ -220,20 +184,20 @@
       "norm_label": "historial de rachas de color completadas para una mesa."
     },
     {
-      "label": "Historial de retrasos de n\u00fameros individuales completados para una mesa.",
+      "label": "Historial de retrasos de n\u00fameros individuales completados + alertas activas.",
       "file_type": "rationale",
       "source_file": "bot_ruleta/dashboard/app.py",
       "source_location": "L280",
       "id": "dashboard_app_rationale_280",
       "community": 1,
-      "norm_label": "historial de retrasos de numeros individuales completados para una mesa."
+      "norm_label": "historial de retrasos de numeros individuales completados + alertas activas."
     },
     {
       "label": "Devuelve las jugadas individuales que componen una se\u00f1al espec\u00edfica.",
       "file_type": "rationale",
       "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L378",
-      "id": "dashboard_app_rationale_378",
+      "source_location": "L409",
+      "id": "dashboard_app_rationale_409",
       "community": 1,
       "norm_label": "devuelve las jugadas individuales que componen una senal especifica."
     },
@@ -241,8 +205,8 @@
       "label": "Retorna el link actual de Cloudflare si est\u00e1 disponible",
       "file_type": "rationale",
       "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L439",
-      "id": "dashboard_app_rationale_439",
+      "source_location": "L470",
+      "id": "dashboard_app_rationale_470",
       "community": 1,
       "norm_label": "retorna el link actual de cloudflare si esta disponible"
     },
@@ -286,7 +250,7 @@
       "label": "fetchGlobalData()",
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/analisis.js",
-      "source_location": "L108",
+      "source_location": "L100",
       "id": "static_analisis_fetchglobaldata",
       "community": 8,
       "norm_label": "fetchglobaldata()"
@@ -295,7 +259,7 @@
       "label": "renderTableBreakdown()",
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/analisis.js",
-      "source_location": "L134",
+      "source_location": "L126",
       "id": "static_analisis_rendertablebreakdown",
       "community": 8,
       "norm_label": "rendertablebreakdown()"
@@ -304,7 +268,7 @@
       "label": "processAndRender()",
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/analisis.js",
-      "source_location": "L165",
+      "source_location": "L157",
       "id": "static_analisis_processandrender",
       "community": 8,
       "norm_label": "processandrender()"
@@ -313,7 +277,7 @@
       "label": "renderCharts()",
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/analisis.js",
-      "source_location": "L320",
+      "source_location": "L302",
       "id": "static_analisis_rendercharts",
       "community": 8,
       "norm_label": "rendercharts()"
@@ -322,7 +286,7 @@
       "label": "setupModal()",
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/analisis.js",
-      "source_location": "L438",
+      "source_location": "L420",
       "id": "static_analisis_setupmodal",
       "community": 8,
       "norm_label": "setupmodal()"
@@ -331,7 +295,7 @@
       "label": "openSignalDetail()",
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/analisis.js",
-      "source_location": "L453",
+      "source_location": "L435",
       "id": "static_analisis_opensignaldetail",
       "community": 8,
       "norm_label": "opensignaldetail()"
@@ -340,199 +304,388 @@
       "label": "formatName()",
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/analisis.js",
-      "source_location": "L550",
+      "source_location": "L532",
       "id": "static_analisis_formatname",
       "community": 8,
       "norm_label": "formatname()"
+    },
+    {
+      "label": "mesa.js",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L1",
+      "id": "static_mesa",
+      "community": 5,
+      "norm_label": "mesa.js"
+    },
+    {
+      "label": "urlParams",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L6",
+      "id": "static_mesa_urlparams",
+      "community": 5,
+      "norm_label": "urlparams"
+    },
+    {
+      "label": "tableSelect",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L14",
+      "id": "static_mesa_tableselect",
+      "community": 5,
+      "norm_label": "tableselect"
+    },
+    {
+      "label": "statusDot",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L15",
+      "id": "static_mesa_statusdot",
+      "community": 5,
+      "norm_label": "statusdot"
+    },
+    {
+      "label": "soundBtn",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L16",
+      "id": "static_mesa_soundbtn",
+      "community": 5,
+      "norm_label": "soundbtn"
+    },
+    {
+      "label": "historyContainer",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L17",
+      "id": "static_mesa_historycontainer",
+      "community": 5,
+      "norm_label": "historycontainer"
+    },
+    {
+      "label": "loadTables()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L59",
+      "id": "static_mesa_loadtables",
+      "community": 5,
+      "norm_label": "loadtables()"
+    },
+    {
+      "label": "startPolling()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L77",
+      "id": "static_mesa_startpolling",
+      "community": 5,
+      "norm_label": "startpolling()"
+    },
+    {
+      "label": "fetchBacktest()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L88",
+      "id": "static_mesa_fetchbacktest",
+      "community": 5,
+      "norm_label": "fetchbacktest()"
+    },
+    {
+      "label": "fetchColorBacktest()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L132",
+      "id": "static_mesa_fetchcolorbacktest",
+      "community": 5,
+      "norm_label": "fetchcolorbacktest()"
+    },
+    {
+      "label": "fetchNumberBacktest()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L166",
+      "id": "static_mesa_fetchnumberbacktest",
+      "community": 5,
+      "norm_label": "fetchnumberbacktest()"
+    },
+    {
+      "label": "updateDashboard()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L231",
+      "id": "static_mesa_updatedashboard",
+      "community": 5,
+      "norm_label": "updatedashboard()"
+    },
+    {
+      "label": "updateCard()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L308",
+      "id": "static_mesa_updatecard",
+      "community": 5,
+      "norm_label": "updatecard()"
+    },
+    {
+      "label": "renderHistory()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L341",
+      "id": "static_mesa_renderhistory",
+      "community": 5,
+      "norm_label": "renderhistory()"
+    },
+    {
+      "label": "renderNumberGrid()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L356",
+      "id": "static_mesa_rendernumbergrid",
+      "community": 5,
+      "norm_label": "rendernumbergrid()"
+    },
+    {
+      "label": "initAudio()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L398",
+      "id": "static_mesa_initaudio",
+      "community": 5,
+      "norm_label": "initaudio()"
+    },
+    {
+      "label": "playAlertSound()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L408",
+      "id": "static_mesa_playalertsound",
+      "community": 5,
+      "norm_label": "playalertsound()"
+    },
+    {
+      "label": "opencode.json",
+      "file_type": "code",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L1",
+      "community": 12,
+      "norm_label": "opencode.json",
+      "id": "opencode_opencode"
+    },
+    {
+      "label": "plugin",
+      "file_type": "code",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L2",
+      "community": 12,
+      "norm_label": "plugin",
+      "id": "opencode_opencode_plugin"
+    },
+    {
+      "label": "graphify.js",
+      "file_type": "code",
+      "source_file": ".opencode/plugins/graphify.js",
+      "source_location": "L1",
+      "community": 13,
+      "norm_label": "graphify.js",
+      "id": "plugins_graphify"
+    },
+    {
+      "label": "GraphifyPlugin()",
+      "file_type": "code",
+      "source_file": ".opencode/plugins/graphify.js",
+      "source_location": "L6",
+      "community": 13,
+      "norm_label": "graphifyplugin()",
+      "id": "plugins_graphify_graphifyplugin"
     },
     {
       "label": "logic.py",
       "file_type": "code",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L1",
-      "id": "bot_ruleta_logic",
       "community": 1,
-      "norm_label": "logic.py"
+      "norm_label": "logic.py",
+      "id": "bot_ruleta_logic"
     },
     {
       "label": "compute_delays()",
       "file_type": "code",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L10",
-      "id": "bot_ruleta_logic_compute_delays",
       "community": 1,
-      "norm_label": "compute_delays()"
+      "norm_label": "compute_delays()",
+      "id": "bot_ruleta_logic_compute_delays"
     },
     {
       "label": "check_and_notify()",
       "file_type": "code",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L67",
-      "id": "bot_ruleta_logic_check_and_notify",
       "community": 1,
-      "norm_label": "check_and_notify()"
+      "norm_label": "check_and_notify()",
+      "id": "bot_ruleta_logic_check_and_notify"
     },
     {
       "label": "send_telegram_msg()",
       "file_type": "code",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L138",
-      "id": "bot_ruleta_logic_send_telegram_msg",
       "community": 3,
-      "norm_label": "send_telegram_msg()"
+      "norm_label": "send_telegram_msg()",
+      "id": "bot_ruleta_logic_send_telegram_msg"
     },
     {
       "label": "compute_color_streak()",
       "file_type": "code",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L156",
-      "id": "bot_ruleta_logic_compute_color_streak",
       "community": 1,
-      "norm_label": "compute_color_streak()"
+      "norm_label": "compute_color_streak()",
+      "id": "bot_ruleta_logic_compute_color_streak"
     },
     {
       "label": "check_and_notify_color()",
       "file_type": "code",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L206",
-      "id": "bot_ruleta_logic_check_and_notify_color",
       "community": 1,
-      "norm_label": "check_and_notify_color()"
+      "norm_label": "check_and_notify_color()",
+      "id": "bot_ruleta_logic_check_and_notify_color"
     },
     {
       "label": "sync_backtest()",
       "file_type": "code",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L267",
-      "id": "bot_ruleta_logic_sync_backtest",
       "community": 4,
-      "norm_label": "sync_backtest()"
+      "norm_label": "sync_backtest()",
+      "id": "bot_ruleta_logic_sync_backtest"
     },
     {
       "label": "sync_color_backtest()",
       "file_type": "code",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L390",
-      "id": "bot_ruleta_logic_sync_color_backtest",
       "community": 4,
-      "norm_label": "sync_color_backtest()"
+      "norm_label": "sync_color_backtest()",
+      "id": "bot_ruleta_logic_sync_color_backtest"
     },
     {
       "label": "compute_number_delays()",
       "file_type": "code",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L491",
-      "id": "bot_ruleta_logic_compute_number_delays",
       "community": 1,
-      "norm_label": "compute_number_delays()"
+      "norm_label": "compute_number_delays()",
+      "id": "bot_ruleta_logic_compute_number_delays"
     },
     {
       "label": "check_and_notify_number()",
       "file_type": "code",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L541",
-      "id": "bot_ruleta_logic_check_and_notify_number",
       "community": 1,
-      "norm_label": "check_and_notify_number()"
+      "norm_label": "check_and_notify_number()",
+      "id": "bot_ruleta_logic_check_and_notify_number"
     },
     {
       "label": "sync_number_backtest()",
       "file_type": "code",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L598",
-      "id": "bot_ruleta_logic_sync_number_backtest",
       "community": 4,
-      "norm_label": "sync_number_backtest()"
+      "norm_label": "sync_number_backtest()",
+      "id": "bot_ruleta_logic_sync_number_backtest"
     },
     {
       "label": "Calcula los delays de docenas y columnas dado una lista de n\u00fameros o diccionario",
       "file_type": "rationale",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L11",
-      "id": "bot_ruleta_logic_rationale_11",
       "community": 1,
-      "norm_label": "calcula los delays de docenas y columnas dado una lista de numeros o diccionario"
+      "norm_label": "calcula los delays de docenas y columnas dado una lista de numeros o diccionario",
+      "id": "bot_ruleta_logic_rationale_11"
     },
     {
       "label": "Verifica si hay delays que superen el umbral y env\u00eda notificaci\u00f3n a Telegram.",
       "file_type": "rationale",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L68",
-      "id": "bot_ruleta_logic_rationale_68",
       "community": 1,
-      "norm_label": "verifica si hay delays que superen el umbral y envia notificacion a telegram."
+      "norm_label": "verifica si hay delays que superen el umbral y envia notificacion a telegram.",
+      "id": "bot_ruleta_logic_rationale_68"
     },
     {
       "label": "Env\u00eda mensaje raw a Telegram.",
       "file_type": "rationale",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L139",
-      "id": "bot_ruleta_logic_rationale_139",
       "community": 3,
-      "norm_label": "envia mensaje raw a telegram."
+      "norm_label": "envia mensaje raw a telegram.",
+      "id": "bot_ruleta_logic_rationale_139"
     },
     {
       "label": "Calcula la racha actual de un color (Rojo o Negro) bas\u00e1ndose en los n\u00fameros reci",
       "file_type": "rationale",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L157",
-      "id": "bot_ruleta_logic_rationale_157",
       "community": 1,
-      "norm_label": "calcula la racha actual de un color (rojo o negro) basandose en los numeros reci"
+      "norm_label": "calcula la racha actual de un color (rojo o negro) basandose en los numeros reci",
+      "id": "bot_ruleta_logic_rationale_157"
     },
     {
       "label": "Si la racha de color supera el umbral, env\u00eda notificaci\u00f3n a Telegram.     Usa co",
       "file_type": "rationale",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L207",
-      "id": "bot_ruleta_logic_rationale_207",
       "community": 1,
-      "norm_label": "si la racha de color supera el umbral, envia notificacion a telegram.     usa co"
+      "norm_label": "si la racha de color supera el umbral, envia notificacion a telegram.     usa co",
+      "id": "bot_ruleta_logic_rationale_207"
     },
     {
       "label": "Sincroniza el historial de backtesting para una mesa.     Solo procesa los giros",
       "file_type": "rationale",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L268",
-      "id": "bot_ruleta_logic_rationale_268",
       "community": 4,
-      "norm_label": "sincroniza el historial de backtesting para una mesa.     solo procesa los giros"
+      "norm_label": "sincroniza el historial de backtesting para una mesa.     solo procesa los giros",
+      "id": "bot_ruleta_logic_rationale_268"
     },
     {
       "label": "Sincroniza el historial de rachas de color para una mesa.     Detecta rachas de",
       "file_type": "rationale",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L391",
-      "id": "bot_ruleta_logic_rationale_391",
       "community": 4,
-      "norm_label": "sincroniza el historial de rachas de color para una mesa.     detecta rachas de"
+      "norm_label": "sincroniza el historial de rachas de color para una mesa.     detecta rachas de",
+      "id": "bot_ruleta_logic_rationale_391"
     },
     {
       "label": "Calcula los delays (giros sin salir) para cada n\u00famero individual 0-36.     numer",
       "file_type": "rationale",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L492",
-      "id": "bot_ruleta_logic_rationale_492",
       "community": 1,
-      "norm_label": "calcula los delays (giros sin salir) para cada numero individual 0-36.     numer"
+      "norm_label": "calcula los delays (giros sin salir) para cada numero individual 0-36.     numer",
+      "id": "bot_ruleta_logic_rationale_492"
     },
     {
       "label": "Verifica si hay n\u00fameros individuales que superen el umbral de retraso.     Env\u00eda",
       "file_type": "rationale",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L542",
-      "id": "bot_ruleta_logic_rationale_542",
       "community": 1,
-      "norm_label": "verifica si hay numeros individuales que superen el umbral de retraso.     envia"
+      "norm_label": "verifica si hay numeros individuales que superen el umbral de retraso.     envia",
+      "id": "bot_ruleta_logic_rationale_542"
     },
     {
       "label": "Sincroniza el historial de backtesting para retrasos de n\u00fameros individuales.",
       "file_type": "rationale",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L599",
-      "id": "bot_ruleta_logic_rationale_599",
       "community": 4,
-      "norm_label": "sincroniza el historial de backtesting para retrasos de numeros individuales."
+      "norm_label": "sincroniza el historial de backtesting para retrasos de numeros individuales.",
+      "id": "bot_ruleta_logic_rationale_599"
     },
     {
       "label": "__init__.py",
@@ -785,159 +938,6 @@
       "community": 6,
       "norm_label": "playalertsound()",
       "id": "static_app_playalertsound"
-    },
-    {
-      "label": "mesa.js",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L1",
-      "community": 5,
-      "norm_label": "mesa.js",
-      "id": "static_mesa"
-    },
-    {
-      "label": "urlParams",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L6",
-      "community": 5,
-      "norm_label": "urlparams",
-      "id": "static_mesa_urlparams"
-    },
-    {
-      "label": "tableSelect",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L14",
-      "community": 5,
-      "norm_label": "tableselect",
-      "id": "static_mesa_tableselect"
-    },
-    {
-      "label": "statusDot",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L15",
-      "community": 5,
-      "norm_label": "statusdot",
-      "id": "static_mesa_statusdot"
-    },
-    {
-      "label": "soundBtn",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L16",
-      "community": 5,
-      "norm_label": "soundbtn",
-      "id": "static_mesa_soundbtn"
-    },
-    {
-      "label": "historyContainer",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L17",
-      "community": 5,
-      "norm_label": "historycontainer",
-      "id": "static_mesa_historycontainer"
-    },
-    {
-      "label": "loadTables()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L59",
-      "community": 5,
-      "norm_label": "loadtables()",
-      "id": "static_mesa_loadtables"
-    },
-    {
-      "label": "startPolling()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L77",
-      "community": 5,
-      "norm_label": "startpolling()",
-      "id": "static_mesa_startpolling"
-    },
-    {
-      "label": "fetchBacktest()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L88",
-      "community": 5,
-      "norm_label": "fetchbacktest()",
-      "id": "static_mesa_fetchbacktest"
-    },
-    {
-      "label": "fetchColorBacktest()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L132",
-      "community": 5,
-      "norm_label": "fetchcolorbacktest()",
-      "id": "static_mesa_fetchcolorbacktest"
-    },
-    {
-      "label": "fetchNumberBacktest()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L166",
-      "community": 5,
-      "norm_label": "fetchnumberbacktest()",
-      "id": "static_mesa_fetchnumberbacktest"
-    },
-    {
-      "label": "updateDashboard()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L203",
-      "community": 5,
-      "norm_label": "updatedashboard()",
-      "id": "static_mesa_updatedashboard"
-    },
-    {
-      "label": "updateCard()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L280",
-      "community": 5,
-      "norm_label": "updatecard()",
-      "id": "static_mesa_updatecard"
-    },
-    {
-      "label": "renderHistory()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L313",
-      "community": 5,
-      "norm_label": "renderhistory()",
-      "id": "static_mesa_renderhistory"
-    },
-    {
-      "label": "renderNumberGrid()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L328",
-      "community": 5,
-      "norm_label": "rendernumbergrid()",
-      "id": "static_mesa_rendernumbergrid"
-    },
-    {
-      "label": "initAudio()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L370",
-      "community": 5,
-      "norm_label": "initaudio()",
-      "id": "static_mesa_initaudio"
-    },
-    {
-      "label": "playAlertSound()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L380",
-      "community": 5,
-      "norm_label": "playalertsound()",
-      "id": "static_mesa_playalertsound"
     },
     {
       "label": "db.py",
@@ -2381,26 +2381,6 @@
   ],
   "links": [
     {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".opencode/opencode.json",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "opencode_opencode",
-      "target": "opencode_opencode_plugin"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": ".opencode/plugins/graphify.js",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "plugins_graphify",
-      "target": "plugins_graphify_graphifyplugin"
-    },
-    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -2743,7 +2723,18 @@
       "source_file": "bot_ruleta/dashboard/app.py",
       "source_location": "L355",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "dashboard_app_get_analisis_global",
+      "target": "dashboard_app_calcular_delays"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L308",
+      "weight": 1.0,
+      "source": "dashboard_app_get_backtest_number",
       "target": "dashboard_app_calcular_delays",
       "confidence_score": 1.0
     },
@@ -2901,9 +2892,9 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L378",
+      "source_location": "L409",
       "weight": 1.0,
-      "source": "dashboard_app_rationale_378",
+      "source": "dashboard_app_rationale_409",
       "target": "dashboard_app_get_signal_detail",
       "confidence_score": 1.0
     },
@@ -2911,9 +2902,9 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L439",
+      "source_location": "L470",
       "weight": 1.0,
-      "source": "dashboard_app_rationale_439",
+      "source": "dashboard_app_rationale_470",
       "target": "dashboard_app_get_tunnel",
       "confidence_score": 1.0
     },
@@ -3082,6 +3073,274 @@
       "confidence_score": 1.0,
       "source": "static_analisis_opensignaldetail",
       "target": "static_analisis_formatname"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L88",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_mesa",
+      "target": "static_mesa_fetchbacktest"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L132",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_mesa",
+      "target": "static_mesa_fetchcolorbacktest"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L166",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_mesa",
+      "target": "static_mesa_fetchnumberbacktest"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_mesa",
+      "target": "static_mesa_historycontainer"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L370",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_mesa",
+      "target": "static_mesa_initaudio"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L59",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_mesa",
+      "target": "static_mesa_loadtables"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L380",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_mesa",
+      "target": "static_mesa_playalertsound"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L313",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_mesa",
+      "target": "static_mesa_renderhistory"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L328",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_mesa",
+      "target": "static_mesa_rendernumbergrid"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_mesa",
+      "target": "static_mesa_soundbtn"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L77",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_mesa",
+      "target": "static_mesa_startpolling"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_mesa",
+      "target": "static_mesa_statusdot"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_mesa",
+      "target": "static_mesa_tableselect"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L280",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_mesa",
+      "target": "static_mesa_updatecard"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L203",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_mesa",
+      "target": "static_mesa_updatedashboard"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_mesa",
+      "target": "static_mesa_urlparams"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L79",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_mesa_startpolling",
+      "target": "static_mesa_fetchbacktest"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L80",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_mesa_startpolling",
+      "target": "static_mesa_fetchcolorbacktest"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L81",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_mesa_startpolling",
+      "target": "static_mesa_fetchnumberbacktest"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L78",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_mesa_startpolling",
+      "target": "static_mesa_updatedashboard"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L241",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_mesa_updatedashboard",
+      "target": "static_mesa_renderhistory"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L263",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_mesa_updatedashboard",
+      "target": "static_mesa_rendernumbergrid"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L236",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_mesa_updatedashboard",
+      "target": "static_mesa_updatecard"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/static/mesa.js",
+      "source_location": "L386",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "static_mesa_playalertsound",
+      "target": "static_mesa_initaudio"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".opencode/opencode.json",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "opencode_opencode",
+      "target": "opencode_opencode_plugin"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": ".opencode/plugins/graphify.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "plugins_graphify",
+      "target": "plugins_graphify_graphifyplugin"
     },
     {
       "relation": "imports_from",
@@ -4072,254 +4331,6 @@
       "confidence_score": 1.0,
       "source": "static_app_playalertsound",
       "target": "static_app_initaudio"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L88",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "static_mesa",
-      "target": "static_mesa_fetchbacktest"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L132",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "static_mesa",
-      "target": "static_mesa_fetchcolorbacktest"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L166",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "static_mesa",
-      "target": "static_mesa_fetchnumberbacktest"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L17",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "static_mesa",
-      "target": "static_mesa_historycontainer"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L370",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "static_mesa",
-      "target": "static_mesa_initaudio"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L59",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "static_mesa",
-      "target": "static_mesa_loadtables"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L380",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "static_mesa",
-      "target": "static_mesa_playalertsound"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L313",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "static_mesa",
-      "target": "static_mesa_renderhistory"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L328",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "static_mesa",
-      "target": "static_mesa_rendernumbergrid"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "static_mesa",
-      "target": "static_mesa_soundbtn"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L77",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "static_mesa",
-      "target": "static_mesa_startpolling"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "static_mesa",
-      "target": "static_mesa_statusdot"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "static_mesa",
-      "target": "static_mesa_tableselect"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L280",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "static_mesa",
-      "target": "static_mesa_updatecard"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L203",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "static_mesa",
-      "target": "static_mesa_updatedashboard"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "static_mesa",
-      "target": "static_mesa_urlparams"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L79",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "static_mesa_startpolling",
-      "target": "static_mesa_fetchbacktest"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L80",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "static_mesa_startpolling",
-      "target": "static_mesa_fetchcolorbacktest"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L81",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "static_mesa_startpolling",
-      "target": "static_mesa_fetchnumberbacktest"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L78",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "static_mesa_startpolling",
-      "target": "static_mesa_updatedashboard"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L241",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "static_mesa_updatedashboard",
-      "target": "static_mesa_renderhistory"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L263",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "static_mesa_updatedashboard",
-      "target": "static_mesa_rendernumbergrid"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L236",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "static_mesa_updatedashboard",
-      "target": "static_mesa_updatecard"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/static/mesa.js",
-      "source_location": "L386",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "static_mesa_playalertsound",
-      "target": "static_mesa_initaudio"
     },
     {
       "relation": "contains",
@@ -7522,5 +7533,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "c185986e23b3bcbf36580e5af07512a1ba883ab8"
+  "built_at_commit": "24f15d8cb16f87feb2d934e57be96cfd04b5c25f"
 }

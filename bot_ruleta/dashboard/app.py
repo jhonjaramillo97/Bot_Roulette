@@ -294,7 +294,7 @@ def get_backtest_number():
     try:
         conn = get_db_connection()
         cursor = conn.execute(
-            "SELECT number, start_time, end_time, max_delay FROM number_delay_history WHERE table_name = ? ORDER BY id DESC LIMIT 100",
+            "SELECT number, start_time, end_time, max_delay, termination FROM number_delay_history WHERE table_name = ? ORDER BY id DESC LIMIT 100",
             (table_name,)
         )
         rows = cursor.fetchall()
@@ -309,7 +309,7 @@ def get_backtest_number():
             if numeros:
                 current_delays = bt_logic.compute_number_delays(numeros)
                 active_alerts = [
-                    {"number": num, "max_delay": delay, "start_time": None, "end_time": None}
+                    {"number": num, "max_delay": delay, "start_time": None, "end_time": None, "termination": None}
                     for num, delay in current_delays.items()
                     if delay >= number_threshold
                 ]
@@ -360,7 +360,7 @@ def get_analisis_global():
         
         # 4. Extraer historial de números individuales
         cursor3 = conn.execute(
-            "SELECT table_name, number, start_time, end_time, max_delay FROM number_delay_history ORDER BY id DESC"
+            "SELECT table_name, number, start_time, end_time, max_delay, termination FROM number_delay_history ORDER BY id DESC"
         )
         number_rows = cursor3.fetchall()
         number_history = [dict(row) for row in number_rows]
@@ -384,7 +384,8 @@ def get_analisis_global():
                                 "number": num,
                                 "max_delay": delay,
                                 "start_time": None,
-                                "end_time": None
+                                "end_time": None,
+                                "termination": None
                             })
             except Exception:
                 current_number_delays[tn] = {}

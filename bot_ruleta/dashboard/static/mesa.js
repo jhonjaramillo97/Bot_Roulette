@@ -206,7 +206,11 @@ async function fetchNumberBacktest() {
         if (hasHistory) {
             data.history.forEach(evt => {
                 const tr = document.createElement('tr');
-                const end = evt.end_time ? (evt.end_time.split(' ')[1] || evt.end_time) : 'En progreso';
+                let endText = evt.end_time ? (evt.end_time.split(' ')[1] || evt.end_time) : 'En progreso';
+                let endStyle = '';
+                if (evt.termination === 'cadena_rota') {
+                    endText += ` <span style="color:var(--color-danger);font-size:0.7rem">(cadena rota)</span>`;
+                }
                 
                 let colorClass = "num-green";
                 if (evt.number > 0) {
@@ -218,7 +222,7 @@ async function fetchNumberBacktest() {
                     <td>${evt.start_time ? evt.start_time.slice(5, 16) : '—'}</td>
                     <td><span class="play-numero ${colorClass}">${evt.number}</span></td>
                     <td class="max-delay-col delay-extreme">${evt.max_delay} giros</td>
-                    <td>${end}</td>
+                    <td>${endText}</td>
                 `;
                 tbody.appendChild(tr);
             });

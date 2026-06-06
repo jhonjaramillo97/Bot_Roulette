@@ -628,7 +628,7 @@ def sync_number_backtest(table_name, threshold):
     last_ts_str = None
     
     def _flush_active_events(end_timestamp, force_save_warmup=False):
-        """Guarda todos los eventos activos que superaron el threshold."""
+        """Guarda todos los eventos activos que superaron el threshold (cierre por cadena rota)."""
         flushed = []
         for num in list(active_events.keys()):
             evt = active_events[num]
@@ -637,8 +637,8 @@ def sync_number_backtest(table_name, threshold):
                 if force_save_warmup or evt.get("is_new", False):
                     cursor.execute("""
                         INSERT INTO number_delay_history 
-                        (table_name, number, start_time, end_time, max_delay, threshold_used)
-                        VALUES (?, ?, ?, ?, ?, ?)
+                        (table_name, number, start_time, end_time, max_delay, threshold_used, termination)
+                        VALUES (?, ?, ?, ?, ?, ?, 'cadena_rota')
                     """, (table_name, num, evt["start_time"], end_timestamp, evt["max_delay"], threshold))
                 flushed.append(num)
         for num in flushed:
@@ -666,8 +666,8 @@ def sync_number_backtest(table_name, threshold):
                     if is_new_row or evt.get("is_new", False):
                         cursor.execute("""
                             INSERT INTO number_delay_history 
-                            (table_name, number, start_time, end_time, max_delay, threshold_used)
-                            VALUES (?, ?, ?, ?, ?, ?)
+                            (table_name, number, start_time, end_time, max_delay, threshold_used, termination)
+                            VALUES (?, ?, ?, ?, ?, ?, 'normal')
                         """, (table_name, num, evt["start_time"], ts, evt["max_delay"], threshold))
                 delays[num] = 0
                 delay_start_times[num] = None

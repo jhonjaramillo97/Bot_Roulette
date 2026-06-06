@@ -25,13 +25,13 @@
     "semantic_hash": "20b6fb5713abe66c86ffb339dd5ad2ed"
   },
   "bot_ruleta/dashboard/app.py": {
-    "mtime": 1780751491.4300578,
-    "ast_hash": "f4cbcfd1d0c4ec33b182506d56004773",
+    "mtime": 1780753515.9913683,
+    "ast_hash": "9f873acce1770bac0712e25b33ccca3d",
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/analisis.js": {
-    "mtime": 1780751562.2413745,
-    "ast_hash": "9b086183da7e08acafcebfd0fbd3e159",
+    "mtime": 1780753561.8121815,
+    "ast_hash": "d14433dd569724f401097ed727cb1981",
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/app.js": {
@@ -40,9 +40,9 @@
     "semantic_hash": "c26537bd211dc5781a78e9a7ea57d762"
   },
   "bot_ruleta/dashboard/static/mesa.js": {
-    "mtime": 1780715758.156188,
-    "ast_hash": "03b4406386624ae140f1ab88d9bdc395",
-    "semantic_hash": "03b4406386624ae140f1ab88d9bdc395"
+    "mtime": 1780753489.304035,
+    "ast_hash": "7f2b76c1777aad063c43e5247c5ad0dc",
+    "semantic_hash": ""
   },
   "bot_ruleta/db.py": {
     "mtime": 1780715624.5539804,

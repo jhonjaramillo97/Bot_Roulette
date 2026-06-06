@@ -263,7 +263,10 @@ function processAndRender(history, colorHistory, numberHistory, currentNumberDel
         topNNumbers.forEach((evt, index) => {
             const tr = document.createElement('tr');
             const isActive = !evt.start_time;  // Alerta activa (aún no completada)
-            const end = evt.end_time ? evt.end_time : 'En progreso';
+            let endText = evt.end_time ? evt.end_time : 'En progreso';
+            if (!isActive && evt.termination === 'cadena_rota') {
+                endText += ` <span style="color:var(--color-danger);font-size:0.7rem">(cadena rota)</span>`;
+            }
             
             let colorClass = "num-green";
             if (evt.number > 0) {
@@ -279,7 +282,7 @@ function processAndRender(history, colorHistory, numberHistory, currentNumberDel
                 <td><strong>${index + 1}. ${formatName(evt.table_name)}</strong></td>
                 <td><span class="play-numero ${colorClass}" ${isActive ? 'style="box-shadow: 0 0 10px rgba(255,68,68,0.5)"' : ''}>${evt.number}</span></td>
                 <td class="max-delay-col delay-extreme">${evt.max_delay} giros</td>
-                <td style="${isActive ? 'color:var(--color-critical);font-weight:700' : ''}">${end}</td>
+                <td style="${isActive ? 'color:var(--color-critical);font-weight:700' : ''}">${endText}</td>
             `;
             tr.addEventListener('click', () => {
                 openSignalDetail({

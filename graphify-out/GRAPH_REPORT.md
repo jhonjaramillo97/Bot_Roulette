@@ -1,16 +1,16 @@
 # Graph Report - Bot_Stake_Recolector  (2026-06-06)
 
 ## Corpus Check
-- 25 files · ~22,648 words
+- 25 files · ~22,790 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 263 nodes · 489 edges · 16 communities (13 shown, 3 thin omitted)
+- 263 nodes · 490 edges · 16 communities (13 shown, 3 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c185986e`
+- Built from commit: `24f15d8c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -99,7 +99,7 @@ Cohesion: 0.33
 Nodes (4): attach_gui_queue(), _GUIQueueHandler, Conecta una Queue al logger para que la GUI reciba los logs.     Llamar una sola, Handler que envía logs a una Queue para que la GUI los lea.
 
 ## Knowledge Gaps
-- **11 isolated node(s):** `plugin`, `globalData`, `alertTimestamps`, `cachedTables`, `urlParams` (+6 more)
+- **11 isolated node(s):** `globalData`, `urlParams`, `tableSelect`, `statusDot`, `soundBtn` (+6 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -112,11 +112,11 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.042) - this node is a cross-community bridge._
 - **Why does `get_logger()` connect `Community 0` to `Community 3`?**
   _High betweenness centrality (0.029) - this node is a cross-community bridge._
-- **What connects `plugin`, `Lee el threshold de los datos guardados por la GUI. Fallback al .env`, `Calcula los delays de docenas y columnas para una tabla dada (USANDO LOGIC COMPA` to the rest of the system?**
+- **What connects `Lee el threshold de los datos guardados por la GUI. Fallback al .env`, `Calcula los delays de docenas y columnas para una tabla dada (USANDO LOGIC COMPA`, `Retorna un resumen rápido de TODAS las mesas: delay máximo y alertas.` to the rest of the system?**
   _83 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.06586538461538462 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
-  _Cohesion score 0.08139534883720931 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.0824524312896406 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.08522727272727272 - nodes in this community are weakly interconnected._
