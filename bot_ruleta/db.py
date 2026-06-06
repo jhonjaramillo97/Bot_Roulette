@@ -94,6 +94,29 @@ def init_db():
         )
     """)
 
+    # Tabla global para historial de retrasos de números individuales
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS number_delay_history (
+            id              INTEGER PRIMARY KEY AUTOINCREMENT,
+            table_name      TEXT NOT NULL,
+            number          INTEGER NOT NULL,
+            start_time      TEXT NOT NULL,
+            end_time        TEXT,
+            max_delay       INTEGER NOT NULL,
+            threshold_used  INTEGER NOT NULL
+        )
+    """)
+    cursor.execute("CREATE INDEX IF NOT EXISTS idx_number_delay_table ON number_delay_history(table_name)")
+    cursor.execute("CREATE INDEX IF NOT EXISTS idx_number_delay_number ON number_delay_history(number)")
+
+    # Tabla para estado de sincronización de retrasos de números
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS number_sync_state (
+            table_name      TEXT PRIMARY KEY,
+            last_game_id    INTEGER NOT NULL
+        )
+    """)
+
     conn.commit()
     conn.close()
     print("✅ Tablas verificadas/creadas.")

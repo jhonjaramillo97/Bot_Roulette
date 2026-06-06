@@ -9,7 +9,7 @@ from flask import Flask, jsonify, request, send_from_directory
 # dirname(dirname) = bot_ruleta
 # dirname(dirname(dirname)) = PROYECTO ROOT
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-from bot_ruleta.config import TABLES, REDS, load_credentials, get_color_streak_threshold
+from bot_ruleta.config import TABLES, REDS, load_credentials, get_color_streak_threshold, get_number_delay_threshold
 from bot_ruleta.gui_credentials import load_saved_credentials
 import bot_ruleta.logic as bt_logic
 
@@ -126,6 +126,11 @@ def get_overview():
             [{"numero": n["numero"], "color": n.get("color", "Green")} for n in nums]
         ) if nums else {"color": None, "streak": 0}
 
+        # Calcular delays de números individuales
+        number_delays = bt_logic.compute_number_delays(nums) if nums else {n: 0 for n in range(37)}
+        number_threshold = get_number_delay_threshold()
+        number_alerts = [(num, delay) for num, delay in number_delays.items() if delay >= number_threshold]
+        
         result.append({
             "name": t["name"],
             "table_name": tn,
@@ -137,13 +142,18 @@ def get_overview():
             "ultimo_color": nums[0].get("color", "Green") if nums else None,
             "last_10": [{"val": n["numero"], "col": n.get("color", "Green")} for n in nums[:10]] if nums else [],
             "last_update_seconds": last_update_seconds,
-            "color_streak": color_streak
+            "color_streak": color_streak,
+            "number_delays": number_delays,
+            "number_alert_count": len(number_alerts),
+            "number_alert_numbers": sorted(number_alerts, key=lambda x: -x[1])[:5]  # Top 5 retrasados
         })
 
     color_thresh = get_color_streak_threshold()
+    number_thresh = get_number_delay_threshold()
     return jsonify({
         "threshold": threshold,
         "color_streak_threshold": color_thresh,
+        "number_delay_threshold": number_thresh,
         "tables": result
     })
 
@@ -183,6 +193,11 @@ def get_data():
         [{"numero": n["numero"], "color": n.get("color", "Green")} for n in numeros]
     ) if numeros else {"color": None, "streak": 0}
 
+    # Calcular delays de números individuales
+    number_delays = bt_logic.compute_number_delays(numeros) if numeros else {n: 0 for n in range(37)}
+    number_threshold = get_number_delay_threshold()
+    number_alerts = [(num, delay) for num, delay in number_delays.items() if delay >= number_threshold]
+
     return jsonify({
         "mesa": table_name,
         "ultimos": numeros[:20],
@@ -191,6 +206,10 @@ def get_data():
         "threshold": threshold,
         "color_streak": color_streak,
         "color_streak_threshold": get_color_streak_threshold(),
+        "number_delays": number_delays,
+        "number_alert_count": len(number_alerts),
+        "number_alert_numbers": sorted(number_alerts, key=lambda x: -x[1])[:5],
+        "number_delay_threshold": number_threshold,
         "last_update_seconds": last_update_seconds
     })
 
@@ -256,16 +275,50 @@ def get_backtest_color():
         return jsonify({"error": str(e)}), 500
 
 
+@app.route('/api/backtest_number')
+def get_backtest_number():
+    """Historial de retrasos de números individuales completados para una mesa."""
+    table_name = request.args.get('mesa', 'ruleta_latina')
+    if not any(t["table_name"] == table_name for t in TABLES):
+        return jsonify({"error": "Tabla no válida"}), 400
+
+    number_threshold = get_number_delay_threshold()
+    
+    # 1. Sincronizar
+    try:
+        bt_logic.sync_number_backtest(table_name, number_threshold)
+    except Exception as e:
+        print(f"Error en sync_number_backtest: {e}")
+        
+    # 2. Leer historial
+    try:
+        conn = get_db_connection()
+        cursor = conn.execute(
+            "SELECT number, start_time, end_time, max_delay FROM number_delay_history WHERE table_name = ? ORDER BY id DESC LIMIT 100",
+            (table_name,)
+        )
+        rows = cursor.fetchall()
+        conn.close()
+        
+        history = [dict(row) for row in rows]
+        return jsonify({"mesa": table_name, "history": history})
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
 @app.route('/api/analisis_global')
 def get_analisis_global():
     threshold = get_dashboard_threshold()
     color_threshold = get_color_streak_threshold()
+    
+    number_threshold = get_number_delay_threshold()
     
     # 1. Sincronizar TODAS las mesas para asegurar datos frescos
     try:
         for t in TABLES:
             bt_logic.sync_backtest(t["table_name"], threshold)
             bt_logic.sync_color_backtest(t["table_name"], color_threshold)
+            bt_logic.sync_number_backtest(t["table_name"], number_threshold)
     except Exception as e:
         print(f"Error en sync global: {e}")
         
@@ -285,13 +338,22 @@ def get_analisis_global():
         color_rows = cursor2.fetchall()
         color_history = [dict(row) for row in color_rows]
         
+        # 4. Extraer historial de números individuales
+        cursor3 = conn.execute(
+            "SELECT table_name, number, start_time, end_time, max_delay FROM number_delay_history ORDER BY id DESC"
+        )
+        number_rows = cursor3.fetchall()
+        number_history = [dict(row) for row in number_rows]
+        
         conn.close()
         
         return jsonify({
             "history": history,
             "color_history": color_history,
+            "number_history": number_history,
             "threshold": threshold,
-            "color_streak_threshold": color_threshold
+            "color_streak_threshold": color_threshold,
+            "number_delay_threshold": number_threshold
         })
     except Exception as e:
         return jsonify({"error": str(e)}), 500

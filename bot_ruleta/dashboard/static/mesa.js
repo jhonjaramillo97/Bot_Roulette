@@ -36,8 +36,11 @@ document.addEventListener("DOMContentLoaded", () => {
         document.querySelectorAll(".counter-value").forEach(el => el.textContent = "--");
         document.getElementById('backtest-body').innerHTML = '<tr><td colspan="4" class="loading-td">Cargando historial...</td></tr>';
         document.getElementById('backtest-color-body').innerHTML = '<tr><td colspan="4" class="loading-td">Cargando historial...</td></tr>';
+        document.getElementById('backtest-number-body').innerHTML = '<tr><td colspan="4" class="loading-td">Cargando historial...</td></tr>';
+        document.getElementById('number-grid').innerHTML = '<div class="number-grid-loading">Cargando grilla de números...</div>';
         fetchBacktest();
         fetchColorBacktest();
+        fetchNumberBacktest();
     });
 
     // Tab switching para historial
@@ -75,9 +78,11 @@ function startPolling() {
     updateDashboard();
     fetchBacktest();
     fetchColorBacktest();
+    fetchNumberBacktest();
     setInterval(updateDashboard, POLLING_INTERVAL);
     setInterval(fetchBacktest, 5000);
     setInterval(fetchColorBacktest, 5000);
+    setInterval(fetchNumberBacktest, 5000);
 }
 
 async function fetchBacktest() {
@@ -158,6 +163,43 @@ async function fetchColorBacktest() {
     }
 }
 
+async function fetchNumberBacktest() {
+    try {
+        const res = await fetch(`/api/backtest_number?mesa=${currentTable}`);
+        if (!res.ok) return;
+        const data = await res.json();
+
+        const tbody = document.getElementById('backtest-number-body');
+        tbody.innerHTML = '';
+
+        if (!data.history || data.history.length === 0) {
+            tbody.innerHTML = '<tr><td colspan="4" class="loading-td">No hay historial de números retrasados registrado aún.</td></tr>';
+            return;
+        }
+
+        data.history.forEach(evt => {
+            const tr = document.createElement('tr');
+            const end = evt.end_time ? (evt.end_time.split(' ')[1] || evt.end_time) : 'En progreso';
+            
+            let colorClass = "num-green";
+            if (evt.number > 0) {
+                const reds = ['1','3','5','7','9','12','14','16','18','19','21','23','25','27','30','32','34','36'];
+                colorClass = reds.includes(String(evt.number)) ? "num-red" : "num-black";
+            }
+
+            tr.innerHTML = `
+                <td>${evt.start_time.slice(5, 16)}</td>
+                <td><span class="play-numero ${colorClass}">${evt.number}</span></td>
+                <td class="max-delay-col delay-extreme">${evt.max_delay} giros</td>
+                <td>${end}</td>
+            `;
+            tbody.appendChild(tr);
+        });
+    } catch (e) {
+        console.error("Error cargando number backtest:", e);
+    }
+}
+
 async function updateDashboard() {
     try {
         const res = await fetch(`${API_URL}?mesa=${currentTable}`);
@@ -214,6 +256,11 @@ async function updateDashboard() {
             bannerText.innerHTML = `${emoji} <strong>${data.color_streak.streak} ${colorName}</strong> consecutivos — Señal para apostar al <strong>${opposite}</strong>`;
         } else {
             banner.style.display = "none";
+        }
+
+        // Renderizar grilla de números individuales
+        if (data.number_delays) {
+            renderNumberGrid(data.number_delays, data.number_delay_threshold || 20);
         }
 
         // Sonido si hay alerta activa (DESACTIVADO EN DETALLE, SOLO EN OVERVIEW)
@@ -276,6 +323,47 @@ function renderHistory(nums) {
 
         historyContainer.appendChild(div);
     });
+}
+
+function renderNumberGrid(number_delays, threshold) {
+    const gridContainer = document.getElementById('number-grid');
+    if (!gridContainer) return;
+    
+    const reds = ['1','3','5','7','9','12','14','16','18','19','21','23','25','27','30','32','34','36'];
+    
+    // Layout del tablero europeo (3 filas de 12 + el 0 arriba)
+    const rows = [
+        [0],
+        [3,6,9,12,15,18,21,24,27,30,33,36],
+        [2,5,8,11,14,17,20,23,26,29,32,35],
+        [1,4,7,10,13,16,19,22,25,28,31,34]
+    ];
+    
+    let html = '<div class="number-grid-container">';
+    
+    rows.forEach(row => {
+        html += '<div class="number-grid-row">';
+        row.forEach(num => {
+            const delay = number_delays[num] || 0;
+            let colorClass = 'black';
+            if (num === 0) colorClass = 'green';
+            else if (reds.includes(String(num))) colorClass = 'red';
+            
+            let delayClass = '';
+            if (delay >= threshold) delayClass = 'delay-critical';
+            else if (delay >= threshold - 3) delayClass = 'delay-danger';
+            else if (delay >= threshold - 6) delayClass = 'delay-warn';
+            
+            html += `<div class="number-cell ${colorClass} ${delayClass}" title="Número ${num}: ${delay} giros sin salir">
+                <div>${num}</div>
+                <div class="num-delay">${delay}</div>
+            </div>`;
+        });
+        html += '</div>';
+    });
+    
+    html += '</div>';
+    gridContainer.innerHTML = html;
 }
 
 // --- AUDIO ---

@@ -3,10 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
     setupModal();
 });
 
-let globalData = { history: [], color_history: [], threshold: 5, color_threshold: 5 };
+let globalData = { history: [], color_history: [], number_history: [], threshold: 5, color_threshold: 5, number_threshold: 20 };
 let currentTopLimit = 20;
 let chartTerciosInstance = null;
 let chartColorInstance = null;
+let chartNumberInstance = null;
 
 function setupGlobalTabs() {
     document.querySelectorAll('#global-tabs .tab-btn').forEach(btn => {
@@ -20,12 +21,15 @@ function setupGlobalTabs() {
             // Actualizar paneles visibles
             document.getElementById('chart-panel-tercios').classList.toggle('active', view === 'tercios');
             document.getElementById('chart-panel-colores').classList.toggle('active', view === 'colores');
+            document.getElementById('chart-panel-numeros').classList.toggle('active', view === 'numeros');
             
             document.getElementById('signals-panel-tercios').classList.toggle('active', view === 'tercios');
             document.getElementById('signals-panel-colores').classList.toggle('active', view === 'colores');
+            document.getElementById('signals-panel-numeros').classList.toggle('active', view === 'numeros');
             
             document.getElementById('tbody-tables-tercios').style.display = view === 'tercios' ? '' : 'none';
             document.getElementById('tbody-tables-colores').style.display = view === 'colores' ? '' : 'none';
+            document.getElementById('tbody-tables-numeros').style.display = view === 'numeros' ? '' : 'none';
 
             // Actualizar los KPIs y títulos en función de la vista seleccionada
             updateViewContext(view);
@@ -47,23 +51,36 @@ function setupGlobalTabs() {
 
 function updateViewContext(view) {
     const isTercios = view === 'tercios';
+    const isNumeros = view === 'numeros';
     
     // Títulos
-    document.getElementById('chart-title').textContent = isTercios 
-        ? `Top Rachas — Tercios` 
-        : `Top Rachas — Rojos / Negros`;
-        
-    document.getElementById('top-signals-title').textContent = isTercios 
-        ? `🏆 Top Señales — Tercios` 
-        : `🏆 Top Señales — Rojos / Negros`;
+    if (isNumeros) {
+        document.getElementById('chart-title').textContent = `Top Retrasos — Números`;
+        document.getElementById('top-signals-title').textContent = `🏆 Top Señales — Números`;
+        document.getElementById('breakdown-title').textContent = '📊 Desglose por Mesa — Números';
+    } else {
+        document.getElementById('chart-title').textContent = isTercios 
+            ? `Top Rachas — Tercios` 
+            : `Top Rachas — Rojos / Negros`;
+            
+        document.getElementById('top-signals-title').textContent = isTercios 
+            ? `🏆 Top Señales — Tercios` 
+            : `🏆 Top Señales — Rojos / Negros`;
 
-    document.getElementById('breakdown-title').textContent = isTercios
-        ? '📊 Desglose por Mesa — Tercios'
-        : '📊 Desglose por Mesa — Rojos / Negros';
+        document.getElementById('breakdown-title').textContent = isTercios
+            ? '📊 Desglose por Mesa — Tercios'
+            : '📊 Desglose por Mesa — Rojos / Negros';
+    }
 
     // Datos para los KPIs
-    const dataArray = isTercios ? globalData.history : globalData.color_history;
-    const valueKey = isTercios ? 'max_delay' : 'streak_count';
+    let dataArray, valueKey;
+    if (isNumeros) {
+        dataArray = globalData.number_history;
+        valueKey = 'max_delay';
+    } else {
+        dataArray = isTercios ? globalData.history : globalData.color_history;
+        valueKey = isTercios ? 'max_delay' : 'streak_count';
+    }
     
     const totalSignals = (dataArray || []).length;
     const allValues = (dataArray || []).map(e => e[valueKey]);
@@ -85,7 +102,7 @@ async function fetchGlobalData() {
         
         globalData = data; // Guardar estado para cambiar vistas sin recargar
 
-        processAndRender(data.history, data.color_history);
+        processAndRender(data.history, data.color_history, data.number_history);
         
         setupGlobalTabs();
         updateViewContext('tercios'); // Set initial state
@@ -134,11 +151,12 @@ function renderTableBreakdown(tbodyId, dataArray, valueKey) {
     });
 }
 
-function processAndRender(history, colorHistory) {
+function processAndRender(history, colorHistory, numberHistory) {
     const hasHistory = history && history.length > 0;
     const hasColorHistory = colorHistory && colorHistory.length > 0;
+    const hasNumberHistory = numberHistory && numberHistory.length > 0;
 
-    if (!hasHistory && !hasColorHistory) {
+    if (!hasHistory && !hasColorHistory && !hasNumberHistory) {
         document.getElementById('loader').innerHTML = `<div>No hay suficientes datos procesados en la Base de Datos.</div>`;
         return;
     }
@@ -146,6 +164,7 @@ function processAndRender(history, colorHistory) {
     // --- Generar Desglose por Mesas ---
     renderTableBreakdown('tbody-tables-tercios', history, 'max_delay');
     renderTableBreakdown('tbody-tables-colores', colorHistory, 'streak_count');
+    renderTableBreakdown('tbody-tables-numeros', numberHistory, 'max_delay');
 
     // --- Top N Señales Más Críticas (Tercios) ---
     const topN = (history || []).slice().sort((a, b) => b.max_delay - a.max_delay).slice(0, currentTopLimit);
@@ -223,17 +242,57 @@ function processAndRender(history, colorHistory) {
         });
     }
 
+    // --- Top N Señales Más Críticas (Números) ---
+    const topNNumbers = (numberHistory || []).slice().sort((a, b) => b.max_delay - a.max_delay).slice(0, currentTopLimit);
+    const tbodyTop20Numbers = document.getElementById('tbody-top20-numeros');
+
+    tbodyTop20Numbers.innerHTML = '';
+    if (topNNumbers.length === 0) {
+        tbodyTop20Numbers.innerHTML = '<tr><td colspan="4" class="loading-td">No hay señales de números registradas aún.</td></tr>';
+    } else {
+        topNNumbers.forEach((evt, index) => {
+            const tr = document.createElement('tr');
+            const end = evt.end_time ? evt.end_time : 'En progreso';
+            
+            let colorClass = "num-green";
+            if (evt.number > 0) {
+                const reds = ['1','3','5','7','9','12','14','16','18','19','21','23','25','27','30','32','34','36'];
+                colorClass = reds.includes(String(evt.number)) ? "num-red" : "num-black";
+            }
+
+            tr.className = 'clickable-row';
+            tr.innerHTML = `
+                <td><strong>${index + 1}. ${formatName(evt.table_name)}</strong></td>
+                <td><span class="play-numero ${colorClass}">${evt.number}</span></td>
+                <td class="max-delay-col delay-extreme">${evt.max_delay} giros</td>
+                <td>${end}</td>
+            `;
+            tr.addEventListener('click', () => {
+                openSignalDetail({
+                    type: 'number',
+                    table_name: evt.table_name,
+                    number: evt.number,
+                    max_delay: evt.max_delay,
+                    start_time: evt.start_time,
+                    end_time: evt.end_time
+                });
+            });
+            tbodyTop20Numbers.appendChild(tr);
+        });
+    }
+
     // --- Renderizar Gráficos (Chart.js) ---
-    renderCharts(topN, topNColor);
+    renderCharts(topN, topNColor, topNNumbers);
 }
 
-function renderCharts(topNTercios, topNColor) {
+function renderCharts(topNTercios, topNColor, topNNumbers) {
     // defaults
     Chart.defaults.color = '#94a3b8'; // text-secondary
     Chart.defaults.font.family = "'Inter', sans-serif";
 
     if (chartTerciosInstance) chartTerciosInstance.destroy();
     if (chartColorInstance) chartColorInstance.destroy();
+    if (chartNumberInstance) chartNumberInstance.destroy();
 
     // Gráfico 1: Top N Picos — Tercios (rojo)
     const ctxTercios = document.getElementById('chartTop20Tercios').getContext('2d');
@@ -301,6 +360,43 @@ function renderCharts(topNTercios, topNColor) {
             }
         }
     });
+
+    // Gráfico 3: Top N Retrasos — Números (azul)
+    const ctxNumber = document.getElementById('chartTop20Numeros').getContext('2d');
+    const numberLabels = topNNumbers.map((e, i) => {
+        const reds = ['1','3','5','7','9','12','14','16','18','19','21','23','25','27','30','32','34','36'];
+        const isRed = reds.includes(String(e.number));
+        const emoji = e.number === 0 ? '🟢' : (isRed ? '🔴' : '⚫');
+        return `${i + 1}. ${emoji} ${formatName(e.table_name)} #${e.number}`;
+    });
+    const numberData = topNNumbers.map(e => e.max_delay);
+
+    chartNumberInstance = new Chart(ctxNumber, {
+        type: 'line',
+        data: {
+            labels: numberLabels.length > 0 ? numberLabels : ['Sin datos'],
+            datasets: [{
+                label: 'Max Delay Alcanzado',
+                data: numberData.length > 0 ? numberData : [0],
+                backgroundColor: 'rgba(59, 130, 246, 0.2)',
+                borderColor: 'rgba(59, 130, 246, 1)',
+                borderWidth: 2,
+                pointBackgroundColor: 'rgba(59, 130, 246, 1)',
+                pointRadius: 5,
+                fill: true
+            }]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                y: { grid: { color: 'rgba(255,255,255,0.05)' } },
+                x: { grid: { display: false }, ticks: { display: false } }
+            },
+            plugins: {
+                legend: { display: false }
+            }
+        }
+    });
 }
 
 // ═══════════════════════════════════════════════════════
@@ -333,6 +429,14 @@ async function openSignalDetail(signal) {
         modalTitle.textContent = `📋 ${formatName(signal.table_name)}`;
         modalSubtitle.innerHTML = `
             <strong>Zona:</strong> ${signal.zoneLabel} &nbsp;|&nbsp;
+            <strong>Pico:</strong> ${signal.max_delay} giros &nbsp;|&nbsp;
+            <strong>Inicio:</strong> ${signal.start_time || '—'} &nbsp;→&nbsp;
+            <strong>Fin:</strong> ${signal.end_time || 'En progreso'}
+        `;
+    } else if (signal.type === 'number') {
+        modalTitle.textContent = `📋 ${formatName(signal.table_name)}`;
+        modalSubtitle.innerHTML = `
+            <strong>Número:</strong> ${signal.number} &nbsp;|&nbsp;
             <strong>Pico:</strong> ${signal.max_delay} giros &nbsp;|&nbsp;
             <strong>Inicio:</strong> ${signal.start_time || '—'} &nbsp;→&nbsp;
             <strong>Fin:</strong> ${signal.end_time || 'En progreso'}

@@ -7,6 +7,7 @@ let previousAlertCount = 0;  // Para detectar nuevas alertas
 
 let currentThreshold = 12; // Default
 let colorStreakThreshold = 5; // Default
+let numberDelayThreshold = 20; // Default
 let filterSignalsOnly = false;
 let alertTimestamps = {}; // { table_name: timestamp } para ordenar
 let cachedTables = []; // Cached tables data for re-rendering
@@ -123,6 +124,9 @@ async function fetchOverview() {
         if (data.color_streak_threshold) {
             colorStreakThreshold = data.color_streak_threshold;
         }
+        if (data.number_delay_threshold) {
+            numberDelayThreshold = data.number_delay_threshold;
+        }
 
         renderGrid(data.tables);
         cachedTables = data.tables; // Cache for filter re-render
@@ -158,12 +162,16 @@ async function fetchOverview() {
 function renderGrid(tables) {
     const grid = document.getElementById("overview-grid");
 
-    // Contar alertas totales actuales (tercios + rachas de color)
+    // Contar alertas totales actuales (tercios + rachas de color + números)
     let totalAlerts = 0;
     tables.forEach(t => {
         totalAlerts += t.alertas.length;
         // Contar señal de color como alerta adicional
         if (t.color_streak && t.color_streak.streak >= colorStreakThreshold) {
+            totalAlerts += 1;
+        }
+        // Contar alertas de números individuales
+        if (t.number_alert_count > 0) {
             totalAlerts += 1;
         }
     });
@@ -198,11 +206,13 @@ function buildCards(grid, tables) {
     tables.forEach(t => {
         const card = document.createElement("div");
         const hasColorStreak = t.color_streak && t.color_streak.streak >= colorStreakThreshold;
-        const hasAnyAlert = t.alertas.length > 0 || hasColorStreak;
+        const hasNumberAlert = t.number_alert_count > 0;
+        const hasAnyAlert = t.alertas.length > 0 || hasColorStreak || hasNumberAlert;
         
         let classes = "table-card list-item";
         if (hasAnyAlert) classes += " has-alert";
         if (hasColorStreak) classes += " has-color-streak";
+        if (hasNumberAlert) classes += " has-number-alert";
         if (expandedTables.has(t.table_name)) classes += " expanded";
         
         card.className = classes;
@@ -254,6 +264,13 @@ function buildCards(grid, tables) {
             colorStreakBadge = `<span class="color-streak-badge ${cls}">${emoji} ${t.color_streak.streak} ${label}</span>`;
         }
 
+        // Badge de números retrasados
+        let numberAlertBadge = '';
+        if (t.number_alert_count > 0) {
+            const numsDetail = t.number_alert_numbers.map(n => `${n[0]}(${n[1]})`).join(', ');
+            numberAlertBadge = `<span class="number-alert-badge" title="${numsDetail}">🔢 ${t.number_alert_count} número${t.number_alert_count > 1 ? 's' : ''}</span>`;
+        }
+
         const historyHTML = getMiniHistoryHTML(t.last_10);
 
         card.innerHTML = `
@@ -264,6 +281,7 @@ function buildCards(grid, tables) {
                     <span class="tc-freshness">${formatTimeAgo(t.last_update_seconds)}</span>
                 </div>
                 <div class="header-right">
+                    ${numberAlertBadge}
                     ${colorStreakBadge}
                     ${alertBadge}
                     <span class="chevron">▼</span>
@@ -294,7 +312,8 @@ function updateCards(tables) {
         if (!card) return;
 
         const hasColorStreak = t.color_streak && t.color_streak.streak >= colorStreakThreshold;
-        const hasAnyAlert = t.alertas.length > 0 || hasColorStreak;
+        const hasNumberAlert = t.number_alert_count > 0;
+        const hasAnyAlert = t.alertas.length > 0 || hasColorStreak || hasNumberAlert;
 
         if (hasAnyAlert) {
             card.classList.add("has-alert");
@@ -312,6 +331,12 @@ function updateCards(tables) {
             card.classList.add("has-color-streak");
         } else {
             card.classList.remove("has-color-streak");
+        }
+        
+        if (hasNumberAlert) {
+            card.classList.add("has-number-alert");
+        } else {
+            card.classList.remove("has-number-alert");
         }
 
         // Orden de llegada: Señales recientes arriba, PERO SOLO si estamos en la vista "Solo Señales"
@@ -362,7 +387,14 @@ function updateCards(tables) {
                 colorStreakBadge = `<span class="color-streak-badge ${cls}">${emoji} ${t.color_streak.streak} ${label}</span>`;
             }
             
-            headerRight.innerHTML = colorStreakBadge + alertBadge + currentChevron;
+            // Badge de números retrasados
+            let numberAlertBadge = '';
+            if (t.number_alert_count > 0) {
+                const numsDetail = t.number_alert_numbers.map(n => `${n[0]}(${n[1]})`).join(', ');
+                numberAlertBadge = `<span class="number-alert-badge" title="${numsDetail}">🔢 ${t.number_alert_count} número${t.number_alert_count > 1 ? 's' : ''}</span>`;
+            }
+            
+            headerRight.innerHTML = numberAlertBadge + colorStreakBadge + alertBadge + currentChevron;
         }
 
 

@@ -7,6 +7,59 @@
     <title>Roulette Sniper - 12 Trigger System</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <style>
+        .number-grid-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem;
+        }
+        .number-grid-row {
+            display: flex;
+            gap: 0.4rem;
+            justify-content: center;
+        }
+        .number-cell {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: white;
+            border: 2px solid rgba(255,255,255,0.1);
+            cursor: default;
+            transition: transform 0.15s, box-shadow 0.15s;
+        }
+        .number-cell:hover {
+            transform: scale(1.15);
+            z-index: 10;
+        }
+        .number-cell .num-delay {
+            font-size: 0.55rem;
+            font-weight: 500;
+            opacity: 0.85;
+            margin-top: -2px;
+        }
+        .number-cell.red { background: #dc2626; }
+        .number-cell.black { background: #1a1a2e; border-color: rgba(255,255,255,0.3); }
+        .number-cell.green { background: #16a34a; }
+        .number-cell.delay-warn { box-shadow: 0 0 8px rgba(255, 165, 0, 0.5); border-color: #ffa500; }
+        .number-cell.delay-danger { box-shadow: 0 0 12px rgba(255, 68, 68, 0.6); border-color: #ff4444; }
+        .number-cell.delay-critical { box-shadow: 0 0 16px rgba(255, 0, 0, 0.8); border-color: #ff0000; animation: pulse-num 1.5s infinite; }
+        @keyframes pulse-num {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.08); }
+        }
+        .number-grid-loading {
+            color: var(--text-secondary);
+            padding: 2rem;
+        }
+    </style>
 </head>
 
 <body>
@@ -99,6 +152,7 @@
                 <div class="tab-group" id="backtest-tabs">
                     <button class="tab-btn active" data-tab="tercios">Tercios</button>
                     <button class="tab-btn" data-tab="colores">Rojos / Negros</button>
+                    <button class="tab-btn" data-tab="numeros">Números</button>
                 </div>
             </div>
 
@@ -136,6 +190,31 @@
                             </tr>
                         </thead>
                         <tbody id="backtest-color-body">
+                            <tr>
+                                <td colspan="4" class="loading-td">Cargando historial...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Panel de Números Individuales -->
+            <div class="tab-panel" id="panel-numeros">
+                <div class="number-grid-container" id="number-grid">
+                    <!-- Grilla de números generada por JS -->
+                    <div class="number-grid-loading">Cargando grilla de números...</div>
+                </div>
+                <div class="table-container" style="margin-top: 1.5rem;">
+                    <table class="backtest-table">
+                        <thead>
+                            <tr>
+                                <th>Fecha Inicio</th>
+                                <th>Número</th>
+                                <th>Delay Máximo</th>
+                                <th>Terminó en</th>
+                            </tr>
+                        </thead>
+                        <tbody id="backtest-number-body">
                             <tr>
                                 <td colspan="4" class="loading-td">Cargando historial...</td>
                             </tr>

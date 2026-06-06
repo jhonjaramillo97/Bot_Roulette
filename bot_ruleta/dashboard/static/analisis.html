@@ -380,6 +380,7 @@
             <div class="tab-group" id="global-tabs">
                 <button class="tab-btn active" data-view="tercios">Tercios</button>
                 <button class="tab-btn" data-view="colores">Rojos / Negros</button>
+                <button class="tab-btn" data-view="numeros">Números</button>
             </div>
             <div class="tab-group" id="top-limit-tabs" style="margin-left: 1rem;">
                 <button class="tab-btn active" data-limit="20">Top 20</button>
@@ -415,6 +416,9 @@
                 </div>
                 <div id="chart-panel-colores" class="tab-panel">
                     <canvas id="chartTop20Color"></canvas>
+                </div>
+                <div id="chart-panel-numeros" class="tab-panel">
+                    <canvas id="chartTop20Numeros"></canvas>
                 </div>
             </div>
         </div>
@@ -459,6 +463,23 @@
                         </table>
                     </div>
                 </div>
+
+                <!-- Panel Números -->
+                <div class="tab-panel" id="signals-panel-numeros">
+                    <div class="table-container">
+                        <table class="backtest-table">
+                            <thead>
+                                <tr>
+                                    <th>Mesa</th>
+                                    <th>Número</th>
+                                    <th>Delay Máximo</th>
+                                    <th>Fecha Fin</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody-top20-numeros"></tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
 
             <div class="backtest-section">
@@ -480,6 +501,9 @@
                         
                         <!-- Panel Colores (Desglose) -->
                         <tbody id="tbody-tables-colores" style="display: none;"></tbody>
+
+                        <!-- Panel Números (Desglose) -->
+                        <tbody id="tbody-tables-numeros" style="display: none;"></tbody>
                     </table>
                 </div>
             </div>

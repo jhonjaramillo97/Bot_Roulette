@@ -53,6 +53,9 @@ REDS = ['1', '3', '5', '7', '9', '12', '14', '16', '18',
 # --- SEÑALES DE RACHA DE COLOR ---
 COLOR_STREAK_THRESHOLD = 5  # Default: señal a partir de 5 consecutivos del mismo color
 
+# --- SEÑALES DE NÚMEROS INDIVIDUALES ---
+NUMBER_DELAY_THRESHOLD = 20  # Default: señal cuando un número no sale en 20 giros
+
 # --- RUNTIME OVERRIDES (set by GUI) ---
 _runtime_overrides = {}
 
@@ -156,3 +159,34 @@ def get_color_streak_threshold():
     
     # 4. Default
     return COLOR_STREAK_THRESHOLD
+
+
+def get_number_delay_threshold():
+    """Lee el umbral de retraso de números individuales. Prioridad: runtime overrides > GUI saved > .env > default."""
+    # 1. Runtime overrides (GUI en sesión activa)
+    if 'number_delay_threshold' in _runtime_overrides:
+        return _runtime_overrides['number_delay_threshold']
+    
+    # 2. Credenciales guardadas por la GUI
+    try:
+        from bot_ruleta.gui_credentials import load_saved_credentials
+        saved = load_saved_credentials()
+        if saved and 'number_delay_threshold' in saved:
+            return saved['number_delay_threshold']
+    except Exception:
+        pass
+    
+    # 3. Variable de entorno (.env)
+    env_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), ".env")
+    try:
+        with open(env_path, "r", encoding="utf-8") as f:
+            for line in f:
+                line = line.strip()
+                if line.startswith("NUMBER_DELAY_THRESHOLD="):
+                    val = line.split("=", 1)[1].split("#")[0].strip()
+                    return int(val)
+    except Exception:
+        pass
+    
+    # 4. Default
+    return NUMBER_DELAY_THRESHOLD

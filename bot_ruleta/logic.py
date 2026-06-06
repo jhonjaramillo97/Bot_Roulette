@@ -484,3 +484,187 @@ def sync_color_backtest(table_name, threshold):
     
     conn.commit()
     conn.close()
+
+
+# ─── SEÑALES DE NÚMEROS INDIVIDUALES ─────────────────────────────────
+
+def compute_number_delays(numeros):
+    """
+    Calcula los delays (giros sin salir) para cada número individual 0-36.
+    numeros[0] es el más reciente.
+    Retorna un dict: {0: delay_0, 1: delay_1, ..., 36: delay_36}
+    """
+    delays = {n: 0 for n in range(37)}
+    found = {n: False for n in range(37)}
+    
+    for item in numeros:
+        # Extraer número
+        if hasattr(item, '__getitem__') and not isinstance(item, (str, bytes, int)):
+            try:
+                n = item['numero']
+            except:
+                n = item
+        else:
+            n = item
+        
+        # Marcador de cadena rota
+        if n == -1:
+            break
+        
+        # Actualizar delays
+        for num in range(37):
+            if num == n:
+                found[num] = True
+            elif not found[num]:
+                delays[num] += 1
+        
+        # Si ya encontramos todos, podemos parar
+        if all(found.values()):
+            break
+    
+    return delays
+
+
+def check_and_notify_number(table_name, delays, history=None):
+    """
+    Verifica si hay números individuales que superen el umbral de retraso.
+    Envía UNA notificación consolidada por mesa (no un mensaje por número).
+    Cooldown independiente de 5 minutos.
+    """
+    global _alert_cache
+    
+    from bot_ruleta.config import get_number_delay_threshold
+    
+    threshold = get_number_delay_threshold()
+    alert_numbers = [(num, delay) for num, delay in delays.items() if delay >= threshold]
+    
+    if not alert_numbers:
+        return
+    
+    _, _, token, chat_id, _, _ = load_credentials()
+    if not token or not chat_id:
+        return
+    
+    cache_key = f"{table_name}_numbers"
+    last_time = _alert_cache.get(cache_key, 0)
+    
+    if time.time() - last_time > ALERT_COOLDOWN:
+        # Formatear lista de números en alerta
+        nums_str = ", ".join([f"{num} ({delay})" for num, delay in sorted(alert_numbers, key=lambda x: -x[1])])
+        
+        # Historial visual (últimos 10 giros)
+        hist_str = ""
+        if history:
+            recent_10 = history[:10]
+            emojis = []
+            keycap_map = {
+                "0": "0️⃣", "1": "1️⃣", "2": "2️⃣", "3": "3️⃣", "4": "4️⃣",
+                "5": "5️⃣", "6": "6️⃣", "7": "7️⃣", "8": "8️⃣", "9": "9️⃣"
+            }
+            for item in reversed(recent_10):
+                n = item["numero"] if isinstance(item, dict) else item
+                if n == 10:
+                    emojis.append("🔟")
+                else:
+                    emojis.append("".join(keycap_map[c] for c in str(n)))
+            hist_str = " ".join(emojis)
+        
+        msg = (
+            f"🎰 *{table_name}*\n\n"
+            f"🔢 *Números retrasados:* {nums_str}\n"
+            f"📊 Umbral: {threshold} giros"
+        )
+        if hist_str:
+            msg += f"\n\n📊 *Últimos 10 giros:*\n{hist_str}"
+        
+        if send_telegram_msg(token, chat_id, msg):
+            print(f"✅ Alerta de números enviada: {table_name} - {len(alert_numbers)} números")
+            _alert_cache[cache_key] = time.time()
+
+
+def sync_number_backtest(table_name, threshold):
+    """
+    Sincroniza el historial de backtesting para retrasos de números individuales.
+    Detecta cuando un número supera el umbral y guarda el evento completo.
+    """
+    conn = get_connection()
+    cursor = conn.cursor()
+    
+    # 1. Obtener último estado
+    cursor.execute("SELECT last_game_id FROM number_sync_state WHERE table_name = ?", (table_name,))
+    row = cursor.fetchone()
+    last_game_id = row[0] if row else 0
+    
+    # 2. Leer giros nuevos + buffer de 100
+    warmup = 100
+    cursor.execute(f"SELECT id, numero, timestamp FROM {table_name} WHERE id > ? ORDER BY id ASC", (max(0, last_game_id - warmup),))
+    rows = cursor.fetchall()
+    
+    if not rows:
+        conn.close()
+        return
+    
+    delays = {n: 0 for n in range(37)}
+    active_events = {}  # number -> {"start_time": ts, "max_delay": int, "is_new": bool}
+    max_id_procesado = last_game_id
+    last_ts_str = None
+    
+    def _flush_active_events(end_timestamp, force_save_warmup=False):
+        """Guarda todos los eventos activos que superaron el threshold."""
+        flushed = []
+        for num in list(active_events.keys()):
+            evt = active_events[num]
+            if delays[num] >= threshold:
+                evt["max_delay"] = max(evt["max_delay"], delays[num])
+                if force_save_warmup or evt.get("is_new", False):
+                    cursor.execute("""
+                        INSERT INTO number_delay_history 
+                        (table_name, number, start_time, end_time, max_delay, threshold_used)
+                        VALUES (?, ?, ?, ?, ?, ?)
+                    """, (table_name, num, evt["start_time"], end_timestamp, evt["max_delay"], threshold))
+                flushed.append(num)
+        for num in flushed:
+            active_events.pop(num, None)
+    
+    for db_row in rows:
+        db_id, n, ts = db_row
+        max_id_procesado = max(max_id_procesado, db_id)
+        is_new_row = db_id > last_game_id
+        last_ts_str = ts
+        
+        if n == -1:
+            _flush_active_events(last_ts_str, force_save_warmup=is_new_row)
+            for num in range(37):
+                delays[num] = 0
+            active_events.clear()
+            continue
+        
+        for num in range(37):
+            if num == n:
+                # El número salió
+                if delays[num] >= threshold:
+                    if num in active_events:
+                        evt = active_events.pop(num)
+                        if is_new_row or evt.get("is_new", False):
+                            cursor.execute("""
+                                INSERT INTO number_delay_history 
+                                (table_name, number, start_time, end_time, max_delay, threshold_used)
+                                VALUES (?, ?, ?, ?, ?, ?)
+                            """, (table_name, num, evt["start_time"], ts, evt["max_delay"], threshold))
+                delays[num] = 0
+            else:
+                delays[num] += 1
+                if delays[num] >= threshold:
+                    if num not in active_events:
+                        active_events[num] = {"start_time": ts, "max_delay": delays[num], "is_new": is_new_row}
+                    else:
+                        active_events[num]["max_delay"] = max(active_events[num]["max_delay"], delays[num])
+    
+    # 3. Guardar estado incremental
+    cursor.execute("""
+        REPLACE INTO number_sync_state (table_name, last_game_id) 
+        VALUES (?, ?)
+    """, (table_name, max_id_procesado))
+    
+    conn.commit()
+    conn.close()
