@@ -389,84 +389,85 @@ class LoginScreen(ctk.CTkFrame):
         try:
             logo_path = resource_path(os.path.join("dashboard", "static", "logo.png"))
             img = Image.open(logo_path)
-            self.logo_image = ctk.CTkImage(light_image=img, dark_image=img, size=(100, 100))
+            self.logo_image = ctk.CTkImage(light_image=img, dark_image=img, size=(70, 70))
             lbl_logo = ctk.CTkLabel(self.form, image=self.logo_image, text="")
-            lbl_logo.pack(anchor="center", pady=(0, 20))
+            lbl_logo.pack(anchor="center", pady=(0, 8))
         except Exception as e:
             print(f"Error loading logo: {e}")
 
         # Title
-        lbl_title = ctk.CTkLabel(self.form, text="Welcome Back!", font=ctk.CTkFont(size=34, weight="bold"), text_color="#00C853")
-        lbl_title.pack(anchor="center", pady=(0, 5))
+        lbl_title = ctk.CTkLabel(self.form, text="Welcome Back!", font=ctk.CTkFont(size=26, weight="bold"), text_color="#00C853")
+        lbl_title.pack(anchor="center", pady=(0, 2))
         
-        lbl_subtitle = ctk.CTkLabel(self.form, text="Sign in to your bot instance", font=ctk.CTkFont(size=14), text_color="gray")
-        lbl_subtitle.pack(anchor="center", pady=(0, 20))
+        lbl_subtitle = ctk.CTkLabel(self.form, text="Sign in to your bot instance", font=ctk.CTkFont(size=12), text_color="gray")
+        lbl_subtitle.pack(anchor="center", pady=(0, 10))
 
         # Stake Credentials
-        lbl_email = ctk.CTkLabel(self.form, text="Email de Stake:", font=ctk.CTkFont(size=14, weight="bold"), text_color="#00C853")
-        lbl_email.pack(anchor="w", pady=(0, 5))
-        self.ent_email = ctk.CTkEntry(self.form, placeholder_text="ejemplo@correo.com", width=320, height=45, corner_radius=8, border_width=1)
-        self.ent_email.pack(anchor="w", pady=(0, 15))
+        lbl_email = ctk.CTkLabel(self.form, text="Email de Stake:", font=ctk.CTkFont(size=12, weight="bold"), text_color="#00C853")
+        lbl_email.pack(anchor="w", pady=(0, 2))
+        self.ent_email = ctk.CTkEntry(self.form, placeholder_text="ejemplo@correo.com", width=320, height=38, corner_radius=8, border_width=1)
+        self.ent_email.pack(anchor="w", pady=(0, 8))
         
-        lbl_pass = ctk.CTkLabel(self.form, text="Contraseña:", font=ctk.CTkFont(size=14, weight="bold"), text_color="#00C853")
-        lbl_pass.pack(anchor="w", pady=(0, 5))
-        self.ent_pass = ctk.CTkEntry(self.form, placeholder_text="••••••••", width=320, height=45, corner_radius=8, border_width=1, show="*")
-        self.ent_pass.pack(anchor="w", pady=(0, 15))
+        lbl_pass = ctk.CTkLabel(self.form, text="Contraseña:", font=ctk.CTkFont(size=12, weight="bold"), text_color="#00C853")
+        lbl_pass.pack(anchor="w", pady=(0, 2))
+        self.ent_pass = ctk.CTkEntry(self.form, placeholder_text="••••••••", width=320, height=38, corner_radius=8, border_width=1, show="*")
+        self.ent_pass.pack(anchor="w", pady=(0, 8))
 
         # Telegram Settings (Side by side)
-        lbl_tg = ctk.CTkLabel(self.form, text="Telegram (Token / ID):", font=ctk.CTkFont(size=12, weight="bold"), text_color="gray")
-        lbl_tg.pack(anchor="w", pady=(0, 5))
+        lbl_tg = ctk.CTkLabel(self.form, text="Telegram (Token / ID):", font=ctk.CTkFont(size=11, weight="bold"), text_color="gray")
+        lbl_tg.pack(anchor="w", pady=(0, 2))
 
         tg_frame = ctk.CTkFrame(self.form, fg_color="transparent")
-        tg_frame.pack(anchor="w", pady=(0, 15))
-        self.ent_token = ctk.CTkEntry(tg_frame, placeholder_text="Token", width=155, height=40, corner_radius=8, border_width=1)
+        tg_frame.pack(anchor="w", pady=(0, 8))
+        self.ent_token = ctk.CTkEntry(tg_frame, placeholder_text="Token", width=155, height=32, corner_radius=8, border_width=1)
         self.ent_token.pack(side="left", padx=(0, 10))
-        self.ent_chat_id = ctk.CTkEntry(tg_frame, placeholder_text="Chat ID", width=155, height=40, corner_radius=8, border_width=1)
+        self.ent_chat_id = ctk.CTkEntry(tg_frame, placeholder_text="Chat ID", width=155, height=32, corner_radius=8, border_width=1)
         self.ent_chat_id.pack(side="left")
 
         # Switches
         chk_frame = ctk.CTkFrame(self.form, fg_color="transparent")
-        chk_frame.pack(anchor="w", pady=(0, 15), fill="x")
+        chk_frame.pack(anchor="w", pady=(0, 8), fill="x")
         
-        self.chk_headless = ctk.CTkSwitch(chk_frame, text="Modo Oculto", width=120, progress_color="#00C853", button_color="#FFFFFF")
+        self.chk_headless = ctk.CTkSwitch(chk_frame, text="Oculto", width=90, progress_color="#00C853", button_color="#FFFFFF", font=ctk.CTkFont(size=11))
         self.chk_headless.select()
         self.chk_headless.pack(side="left")
 
-        self.chk_diagnostics = ctk.CTkSwitch(chk_frame, text="Guardar Logs/Fotos", width=140, progress_color="#00C853", button_color="#FFFFFF")
-        self.chk_diagnostics.deselect() # Apagado por defecto para ahorrar memoria
-        self.chk_diagnostics.pack(side="left", padx=10)
+        self.chk_diagnostics = ctk.CTkSwitch(chk_frame, text="Logs", width=80, progress_color="#00C853", button_color="#FFFFFF", font=ctk.CTkFont(size=11))
+        self.chk_diagnostics.deselect()
+        self.chk_diagnostics.pack(side="left", padx=8)
 
-        self.chk_remember = ctk.CTkSwitch(chk_frame, text="Recordar Datos", width=120, progress_color="#00C853", button_color="#FFFFFF")
+        self.chk_remember = ctk.CTkSwitch(chk_frame, text="Recordar", width=100, progress_color="#00C853", button_color="#FFFFFF", font=ctk.CTkFont(size=11))
         self.chk_remember.select()
         self.chk_remember.pack(side="right")
 
-        # Settings — Threshold de tercios
-        self.lbl_threshold = ctk.CTkLabel(self.form, text="Alerta tercios: 12 giros sin salir", font=ctk.CTkFont(size=12), text_color="gray")
-        self.lbl_threshold.pack(anchor="center", pady=(0, 5))
-        
-        self.slider_thresh = ctk.CTkSlider(self.form, from_=5, to=25, number_of_steps=20, width=320, command=self.update_thresh_lbl, progress_color="#00C853", button_color="#00C853")
+        # Settings — Thresholds (compact frame)
+        sliders_frame = ctk.CTkFrame(self.form, fg_color="transparent")
+        sliders_frame.pack(anchor="center", pady=(0, 10), fill="x")
+
+        # Tercios
+        self.lbl_threshold = ctk.CTkLabel(sliders_frame, text="Tercios: 12", font=ctk.CTkFont(size=10), text_color="gray")
+        self.lbl_threshold.pack(anchor="center", pady=(0, 0))
+        self.slider_thresh = ctk.CTkSlider(sliders_frame, from_=5, to=25, number_of_steps=20, width=320, command=self.update_thresh_lbl, progress_color="#00C853", button_color="#00C853", height=12)
         self.slider_thresh.set(12)
-        self.slider_thresh.pack(anchor="center", pady=(0, 12))
+        self.slider_thresh.pack(anchor="center", pady=(0, 4))
 
-        # Settings — Threshold de racha de color
-        self.lbl_color_thresh = ctk.CTkLabel(self.form, text="Señal racha color: 5 consecutivos", font=ctk.CTkFont(size=12), text_color="gray")
-        self.lbl_color_thresh.pack(anchor="center", pady=(0, 5))
-        
-        self.slider_color_thresh = ctk.CTkSlider(self.form, from_=3, to=15, number_of_steps=12, width=320, command=self.update_color_thresh_lbl, progress_color="#FF6B6B", button_color="#FF6B6B")
+        # Color
+        self.lbl_color_thresh = ctk.CTkLabel(sliders_frame, text="Color: 5", font=ctk.CTkFont(size=10), text_color="gray")
+        self.lbl_color_thresh.pack(anchor="center", pady=(0, 0))
+        self.slider_color_thresh = ctk.CTkSlider(sliders_frame, from_=3, to=15, number_of_steps=12, width=320, command=self.update_color_thresh_lbl, progress_color="#FF6B6B", button_color="#FF6B6B", height=12)
         self.slider_color_thresh.set(5)
-        self.slider_color_thresh.pack(anchor="center", pady=(0, 5))
+        self.slider_color_thresh.pack(anchor="center", pady=(0, 4))
 
-        # Settings — Threshold de números individuales
-        self.lbl_number_thresh = ctk.CTkLabel(self.form, text="Señal números: 20 giros sin salir", font=ctk.CTkFont(size=12), text_color="gray")
-        self.lbl_number_thresh.pack(anchor="center", pady=(0, 5))
-        
-        self.slider_number_thresh = ctk.CTkSlider(self.form, from_=10, to=50, number_of_steps=40, width=320, command=self.update_number_thresh_lbl, progress_color="#3B82F6", button_color="#3B82F6")
+        # Números
+        self.lbl_number_thresh = ctk.CTkLabel(sliders_frame, text="Números: 20", font=ctk.CTkFont(size=10), text_color="gray")
+        self.lbl_number_thresh.pack(anchor="center", pady=(0, 0))
+        self.slider_number_thresh = ctk.CTkSlider(sliders_frame, from_=10, to=50, number_of_steps=40, width=320, command=self.update_number_thresh_lbl, progress_color="#3B82F6", button_color="#3B82F6", height=12)
         self.slider_number_thresh.set(20)
-        self.slider_number_thresh.pack(anchor="center", pady=(0, 20))
+        self.slider_number_thresh.pack(anchor="center", pady=(0, 6))
 
         # Button (Pill shaped)
-        self.btn_start = ctk.CTkButton(self.form, text="INICIAR BOT", width=320, height=50, 
-                                       font=ctk.CTkFont(size=15, weight="bold"),
+        self.btn_start = ctk.CTkButton(self.form, text="INICIAR BOT", width=320, height=42, 
+                                       font=ctk.CTkFont(size=14, weight="bold"),
                                        corner_radius=25,
                                        fg_color="#00C853", hover_color="#00E676", text_color="black",
                                        command=self.start_bot)
@@ -500,13 +501,13 @@ class LoginScreen(ctk.CTkFrame):
                 self.chk_diagnostics.select()
 
     def update_thresh_lbl(self, val):
-        self.lbl_threshold.configure(text=f"Alerta tercios: {int(val)} giros sin salir")
+        self.lbl_threshold.configure(text=f"Tercios: {int(val)}")
 
     def update_color_thresh_lbl(self, val):
-        self.lbl_color_thresh.configure(text=f"Señal racha color: {int(val)} consecutivos")
+        self.lbl_color_thresh.configure(text=f"Color: {int(val)}")
 
     def update_number_thresh_lbl(self, val):
-        self.lbl_number_thresh.configure(text=f"Señal números: {int(val)} giros sin salir")
+        self.lbl_number_thresh.configure(text=f"Números: {int(val)}")
 
     def start_bot(self):
         email = self.ent_email.get().strip()
