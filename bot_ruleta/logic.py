@@ -494,10 +494,11 @@ def compute_number_delays(numeros):
     numeros[0] es el más reciente.
     Retorna un dict: {0: delay_0, 1: delay_1, ..., 36: delay_36}
     """
-    delays = {n: 0 for n in range(37)}
-    found = {n: False for n in range(37)}
+    # last_seen[num] = índice en el historial donde salió por última vez (0 = más reciente)
+    # None = no ha salido en el historial analizado
+    last_seen = {n: None for n in range(37)}
     
-    for item in numeros:
+    for idx, item in enumerate(numeros):
         # Extraer número
         if hasattr(item, '__getitem__') and not isinstance(item, (str, bytes, int)):
             try:
@@ -507,20 +508,28 @@ def compute_number_delays(numeros):
         else:
             n = item
         
-        # Marcador de cadena rota
+        # Marcador de cadena rota — detener aquí
         if n == -1:
             break
         
-        # Actualizar delays
-        for num in range(37):
-            if num == n:
-                found[num] = True
-            elif not found[num]:
-                delays[num] += 1
+        # Registrar primera aparición (más reciente) de cada número
+        if last_seen[n] is None:
+            last_seen[n] = idx
         
-        # Si ya encontramos todos, podemos parar
-        if all(found.values()):
+        # Si ya vimos todos los números, no necesitamos seguir
+        if None not in last_seen.values():
             break
+    
+    # Convertir last_seen a delays
+    # delay = cuántos giros han pasado desde la última aparición
+    # Si no apareció: delay = total de giros analizados
+    total_processed = idx if 'idx' in dir() else len(numeros)
+    delays = {}
+    for num in range(37):
+        if last_seen[num] is None:
+            delays[num] = total_processed
+        else:
+            delays[num] = last_seen[num]
     
     return delays
 
