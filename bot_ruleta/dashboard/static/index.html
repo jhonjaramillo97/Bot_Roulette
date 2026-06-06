@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.90, maximum-scale=0.90, user-scalable=no">
+    <title>Roulette Sniper - Overview</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+</head>
+
+<body>
+    <!-- PANTALLA DE CARGA INICIAL -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="spinner-container">
+            <div class="loader-ring"></div>
+            <div class="loader-core"></div>
+        </div>
+        <h2 style="margin-top: 2rem; font-size: 1.5rem; letter-spacing: 0.05em;">Conectando al Bot...</h2>
+        <p style="color: var(--text-secondary); margin-top: 0.5rem; font-size: 0.9rem;" id="loading-text">Esperando
+            datos frescos de la ruleta (El bot está escaneando las mesas)</p>
+        <button id="bypass-loader" class="btn-bypass">Ver datos guardados localmente</button>
+    </div>
+
+    <div class="overlay"></div>
+
+    <div class="overview-header">
+        <img src="logo.png" alt="Roulette Sniper" style="max-height: 80px; margin-bottom: 0px;">
+        <p>Monitoreo en tiempo real — Click en una mesa para ver detalles</p>
+        <div class="header-actions">
+            <a href="/analisis" class="btn-modern btn-analisis">
+                📊 Análisis Global
+            </a>
+
+            <button id="btn-view-toggle" class="btn-modern btn-view" title="Cambiar Vista">
+                <span class="icon-grid" style="display:none;">🔲 Cuadrícula</span>
+                <span class="icon-list">📋 Lista</span>
+            </button>
+
+            <button id="btn-filter-signals" class="btn-modern btn-filter" title="Filtrar por Señales">
+                <span class="filter-off">🔴 Solo Señales</span>
+                <span class="filter-on" style="display:none;">🔵 Mostrar Todas</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="overview-grid" id="overview-grid">
+        <!-- Cards generadas por JS -->
+        <div class="table-card" style="display:flex;align-items:center;justify-content:center;min-height:180px;">
+            <span style="color:var(--text-secondary)">Cargando mesas...</span>
+        </div>
+    </div>
+
+    <script src="app.js?v=6"></script>
+</body>
+
+</html>

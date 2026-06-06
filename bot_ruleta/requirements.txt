@@ -1,0 +1,10 @@
+selenium
+undetected-chromedriver
+flask
+waitress
+customtkinter
+Pillow
+requests
+pyinstaller
+colorama
+setuptools
