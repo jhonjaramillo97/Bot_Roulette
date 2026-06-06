@@ -461,8 +461,8 @@ class LoginScreen(ctk.CTkFrame):
         # Números
         self.lbl_number_thresh = ctk.CTkLabel(sliders_frame, text="Números: 20", font=ctk.CTkFont(size=10), text_color="gray")
         self.lbl_number_thresh.pack(anchor="center", pady=(0, 0))
-        self.slider_number_thresh = ctk.CTkSlider(sliders_frame, from_=10, to=50, number_of_steps=40, width=320, command=self.update_number_thresh_lbl, progress_color="#3B82F6", button_color="#3B82F6", height=12)
-        self.slider_number_thresh.set(20)
+        self.slider_number_thresh = ctk.CTkSlider(sliders_frame, from_=20, to=150, number_of_steps=130, width=320, command=self.update_number_thresh_lbl, progress_color="#3B82F6", button_color="#3B82F6", height=12)
+        self.slider_number_thresh.set(50)
         self.slider_number_thresh.pack(anchor="center", pady=(0, 6))
 
         # Button (Pill shaped)

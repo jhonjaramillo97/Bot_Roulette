@@ -492,11 +492,13 @@ def compute_number_delays(numeros):
     """
     Calcula los delays (giros sin salir) para cada número individual 0-36.
     numeros[0] es el más reciente.
+    Si encuentra un -1 (cadena rota), ignora todo lo posterior.
     Retorna un dict: {0: delay_0, 1: delay_1, ..., 36: delay_36}
     """
-    # last_seen[num] = índice en el historial donde salió por última vez (0 = más reciente)
-    # None = no ha salido en el historial analizado
+    # last_seen[num] = hace cuántos giros salió por última vez (0 = acaba de salir)
+    # None = no ha salido en la cadena actual (antes de un posible -1)
     last_seen = {n: None for n in range(37)}
+    total_processed = 0
     
     for idx, item in enumerate(numeros):
         # Extraer número
@@ -508,9 +510,12 @@ def compute_number_delays(numeros):
         else:
             n = item
         
-        # Marcador de cadena rota — detener aquí
+        # Marcador de cadena rota — detener aquí, NO contamos este giro
         if n == -1:
             break
+        
+        # Este giro es válido: contamos cuántos giros llevamos de la sesión actual
+        total_processed = idx + 1
         
         # Registrar primera aparición (más reciente) de cada número
         if last_seen[n] is None:
@@ -521,14 +526,13 @@ def compute_number_delays(numeros):
             break
     
     # Convertir last_seen a delays
-    # delay = cuántos giros han pasado desde la última aparición
-    # Si no apareció: delay = total de giros analizados
-    total_processed = idx if 'idx' in dir() else len(numeros)
     delays = {}
     for num in range(37):
         if last_seen[num] is None:
+            # No salió en la cadena actual: delay = total de giros válidos analizados
             delays[num] = total_processed
         else:
+            # Salió hace 'last_seen[num]' giros
             delays[num] = last_seen[num]
     
     return delays
