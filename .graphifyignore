@@ -1,0 +1,10 @@
+# Solo código — excluir docs, imágenes y binarios para extracción headless
+*.md
+*.html
+*.png
+*.ico
+*.txt
+*.bat
+*.spec
+*.exe
+.env

@@ -347,10 +347,24 @@ def get_analisis_global():
         
         conn.close()
         
+        # 5. Calcular delays actuales de números para cada mesa
+        current_number_delays = {}
+        for t in TABLES:
+            tn = t["table_name"]
+            try:
+                _, nums = calcular_delays(tn, limit=100)
+                if nums:
+                    nd = bt_logic.compute_number_delays(nums)
+                    # Serializar keys como string para JSON
+                    current_number_delays[tn] = {str(k): v for k, v in nd.items()}
+            except Exception:
+                current_number_delays[tn] = {}
+        
         return jsonify({
             "history": history,
             "color_history": color_history,
             "number_history": number_history,
+            "current_number_delays": current_number_delays,
             "threshold": threshold,
             "color_streak_threshold": color_threshold,
             "number_delay_threshold": number_threshold

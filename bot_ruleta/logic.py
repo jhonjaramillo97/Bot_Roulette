@@ -599,6 +599,10 @@ def sync_number_backtest(table_name, threshold):
     """
     Sincroniza el historial de backtesting para retrasos de números individuales.
     Detecta cuando un número supera el umbral y guarda el evento completo.
+    
+    El start_time se toma del primer giro donde el número NO apareció después
+    de su última aparición (cuando el delay pasó de 0 a 1), no del momento
+    en que se cruza el umbral.
     """
     conn = get_connection()
     cursor = conn.cursor()
@@ -618,6 +622,7 @@ def sync_number_backtest(table_name, threshold):
         return
     
     delays = {n: 0 for n in range(37)}
+    delay_start_times = {n: None for n in range(37)}  # timestamp cuando el delay pasó de 0 a 1
     active_events = {}  # number -> {"start_time": ts, "max_delay": int, "is_new": bool}
     max_id_procesado = last_game_id
     last_ts_str = None
@@ -649,27 +654,36 @@ def sync_number_backtest(table_name, threshold):
             _flush_active_events(last_ts_str, force_save_warmup=is_new_row)
             for num in range(37):
                 delays[num] = 0
+                delay_start_times[num] = None
             active_events.clear()
             continue
         
         for num in range(37):
             if num == n:
-                # El número salió
-                if delays[num] >= threshold:
-                    if num in active_events:
-                        evt = active_events.pop(num)
-                        if is_new_row or evt.get("is_new", False):
-                            cursor.execute("""
-                                INSERT INTO number_delay_history 
-                                (table_name, number, start_time, end_time, max_delay, threshold_used)
-                                VALUES (?, ?, ?, ?, ?, ?)
-                            """, (table_name, num, evt["start_time"], ts, evt["max_delay"], threshold))
+                # El número salió: si estaba en alerta, cerrar el evento
+                if delays[num] >= threshold and num in active_events:
+                    evt = active_events.pop(num)
+                    if is_new_row or evt.get("is_new", False):
+                        cursor.execute("""
+                            INSERT INTO number_delay_history 
+                            (table_name, number, start_time, end_time, max_delay, threshold_used)
+                            VALUES (?, ?, ?, ?, ?, ?)
+                        """, (table_name, num, evt["start_time"], ts, evt["max_delay"], threshold))
                 delays[num] = 0
+                delay_start_times[num] = None
             else:
+                prev_delay = delays[num]
                 delays[num] += 1
+                if prev_delay == 0:
+                    # El delay acaba de empezar: este giro es el start_time
+                    delay_start_times[num] = ts
                 if delays[num] >= threshold:
                     if num not in active_events:
-                        active_events[num] = {"start_time": ts, "max_delay": delays[num], "is_new": is_new_row}
+                        active_events[num] = {
+                            "start_time": delay_start_times[num] or ts,
+                            "max_delay": delays[num],
+                            "is_new": is_new_row
+                        }
                     else:
                         active_events[num]["max_delay"] = max(active_events[num]["max_delay"], delays[num])
     

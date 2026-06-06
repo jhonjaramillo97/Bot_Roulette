@@ -1,0 +1,430 @@
+{
+  "communities": {
+    "0": [
+      "bot_ruleta_db_guardar_resultado",
+      "bot_ruleta_db_init_db",
+      "bot_ruleta_db_rationale_126",
+      "bot_ruleta_db_rationale_27",
+      "bot_ruleta_debug_logger",
+      "bot_ruleta_debug_logger_capture_screenshot",
+      "bot_ruleta_debug_logger_cleanup_old_crash_reports",
+      "bot_ruleta_debug_logger_cleanup_old_screenshots",
+      "bot_ruleta_debug_logger_generate_crash_report",
+      "bot_ruleta_debug_logger_get_logger",
+      "bot_ruleta_debug_logger_rationale_1",
+      "bot_ruleta_debug_logger_rationale_120",
+      "bot_ruleta_debug_logger_rationale_173",
+      "bot_ruleta_debug_logger_rationale_195",
+      "bot_ruleta_debug_logger_rationale_332",
+      "bot_ruleta_debug_logger_rationale_431",
+      "bot_ruleta_debug_logger_rationale_469",
+      "bot_ruleta_debug_logger_rationale_75",
+      "bot_ruleta_debug_logger_run_diagnostics",
+      "bot_ruleta_debug_logger_send_crash_report_telegram",
+      "bot_ruleta_driver",
+      "bot_ruleta_driver_get_chrome_major_version",
+      "bot_ruleta_driver_hide_chrome_window",
+      "bot_ruleta_driver_login_stake",
+      "bot_ruleta_driver_rationale_1",
+      "bot_ruleta_driver_rationale_175",
+      "bot_ruleta_driver_rationale_23",
+      "bot_ruleta_driver_rationale_355",
+      "bot_ruleta_driver_rationale_37",
+      "bot_ruleta_driver_setup_driver",
+      "bot_ruleta_helpers",
+      "bot_ruleta_helpers_human_type",
+      "bot_ruleta_helpers_rationale_1",
+      "bot_ruleta_helpers_rationale_12",
+      "bot_ruleta_iframe",
+      "bot_ruleta_iframe_cerrar_modales",
+      "bot_ruleta_iframe_rationale_1",
+      "bot_ruleta_iframe_rationale_16",
+      "bot_ruleta_iframe_rationale_83",
+      "bot_ruleta_iframe_switch_to_game_iframe",
+      "bot_ruleta_lobby",
+      "bot_ruleta_lobby_check_session_alive",
+      "bot_ruleta_lobby_click_juego_real",
+      "bot_ruleta_lobby_ir_al_lobby",
+      "bot_ruleta_lobby_map_tables_dynamic",
+      "bot_ruleta_lobby_rationale_1",
+      "bot_ruleta_lobby_rationale_16",
+      "bot_ruleta_lobby_rationale_228",
+      "bot_ruleta_lobby_rationale_63",
+      "bot_ruleta_lobby_rationale_88",
+      "bot_ruleta_run",
+      "bot_ruleta_scan_lobby_ids",
+      "bot_ruleta_scan_lobby_ids_main",
+      "bot_ruleta_scanner",
+      "bot_ruleta_scanner_extract_nums_js",
+      "bot_ruleta_scanner_rationale_1",
+      "bot_ruleta_scanner_rationale_30",
+      "bot_ruleta_scanner_rationale_354",
+      "bot_ruleta_scanner_rationale_68",
+      "bot_ruleta_scanner_run_bot",
+      "bot_ruleta_scanner_run_single_session",
+      "exception",
+      "int",
+      "logger",
+      "str"
+    ],
+    "1": [
+      "bot_ruleta_config",
+      "bot_ruleta_config_get_color_streak_threshold",
+      "bot_ruleta_config_get_number_delay_threshold",
+      "bot_ruleta_config_load_credentials",
+      "bot_ruleta_config_rationale_1",
+      "bot_ruleta_config_rationale_133",
+      "bot_ruleta_config_rationale_165",
+      "bot_ruleta_config_rationale_71",
+      "bot_ruleta_logic",
+      "bot_ruleta_logic_check_and_notify",
+      "bot_ruleta_logic_check_and_notify_color",
+      "bot_ruleta_logic_check_and_notify_number",
+      "bot_ruleta_logic_compute_color_streak",
+      "bot_ruleta_logic_compute_delays",
+      "bot_ruleta_logic_compute_number_delays",
+      "bot_ruleta_logic_rationale_11",
+      "bot_ruleta_logic_rationale_157",
+      "bot_ruleta_logic_rationale_207",
+      "bot_ruleta_logic_rationale_492",
+      "bot_ruleta_logic_rationale_542",
+      "bot_ruleta_logic_rationale_68",
+      "dashboard_app",
+      "dashboard_app_calcular_delays",
+      "dashboard_app_get_analisis_global",
+      "dashboard_app_get_backtest",
+      "dashboard_app_get_backtest_color",
+      "dashboard_app_get_backtest_number",
+      "dashboard_app_get_dashboard_threshold",
+      "dashboard_app_get_data",
+      "dashboard_app_get_db_connection",
+      "dashboard_app_get_mesas",
+      "dashboard_app_get_overview",
+      "dashboard_app_get_signal_detail",
+      "dashboard_app_get_tunnel",
+      "dashboard_app_rationale_17",
+      "dashboard_app_rationale_249",
+      "dashboard_app_rationale_280",
+      "dashboard_app_rationale_364",
+      "dashboard_app_rationale_425",
+      "dashboard_app_rationale_48",
+      "dashboard_app_rationale_89",
+      "dashboard_app_serve_analisis",
+      "dashboard_app_serve_index",
+      "dashboard_app_serve_mesa"
+    ],
+    "2": [
+      "bool",
+      "bot_ruleta_config_rationale_64",
+      "bot_ruleta_config_set_runtime_config",
+      "bot_ruleta_debug_logger_rationale_115",
+      "bot_ruleta_debug_logger_set_diagnostics",
+      "bot_ruleta_gui_app_dashboardscreen",
+      "bot_ruleta_gui_app_dashboardscreen_append_log",
+      "bot_ruleta_gui_app_dashboardscreen_copy_url",
+      "bot_ruleta_gui_app_dashboardscreen_open_url",
+      "bot_ruleta_gui_app_dashboardscreen_show_open_button",
+      "bot_ruleta_gui_app_dashboardscreen_start_services",
+      "bot_ruleta_gui_app_dashboardscreen_stop_bot",
+      "bot_ruleta_gui_app_dashboardscreen_toggle_logs",
+      "bot_ruleta_gui_app_dashboardscreen_update_cf_url",
+      "bot_ruleta_gui_app_loadingscreen",
+      "bot_ruleta_gui_app_loadingscreen_start_loading",
+      "bot_ruleta_gui_app_loadingscreen_update_progress",
+      "bot_ruleta_gui_app_loginscreen",
+      "bot_ruleta_gui_app_loginscreen_on_show",
+      "bot_ruleta_gui_app_loginscreen_start_bot",
+      "bot_ruleta_gui_app_loginscreen_update_color_thresh_lbl",
+      "bot_ruleta_gui_app_loginscreen_update_number_thresh_lbl",
+      "bot_ruleta_gui_app_loginscreen_update_thresh_lbl",
+      "bot_ruleta_gui_app_prerequisitesscreen",
+      "bot_ruleta_gui_app_prerequisitesscreen_run_checks",
+      "bot_ruleta_gui_app_rationale_33",
+      "bot_ruleta_gui_app_resource_path",
+      "bot_ruleta_gui_app_rouletteapp",
+      "bot_ruleta_gui_app_rouletteapp_init",
+      "bot_ruleta_gui_app_rouletteapp_on_closing",
+      "bot_ruleta_gui_app_rouletteapp_process_log_queue",
+      "bot_ruleta_gui_app_rouletteapp_show_frame",
+      "bot_ruleta_gui_app_rouletteapp_start_background_services"
+    ],
+    "3": [
+      "bot_ruleta_gui_app",
+      "bot_ruleta_gui_app_get_cropped_image",
+      "bot_ruleta_gui_app_rouletteapp_cloudflared_watchdog",
+      "bot_ruleta_gui_app_updatescreen",
+      "bot_ruleta_gui_app_updatescreen_start_update",
+      "bot_ruleta_launcher",
+      "bot_ruleta_launcher_cleanup",
+      "bot_ruleta_launcher_clear_screen",
+      "bot_ruleta_launcher_cloudflared_watchdog",
+      "bot_ruleta_launcher_get_cf_env_vars",
+      "bot_ruleta_launcher_rationale_134",
+      "bot_ruleta_launcher_rationale_199",
+      "bot_ruleta_launcher_rationale_42",
+      "bot_ruleta_launcher_rationale_68",
+      "bot_ruleta_launcher_rationale_79",
+      "bot_ruleta_launcher_rationale_98",
+      "bot_ruleta_launcher_render_ui",
+      "bot_ruleta_launcher_start_cloudflared",
+      "bot_ruleta_launcher_track_bot",
+      "bot_ruleta_launcher_update_tunnel_url",
+      "bot_ruleta_logic_rationale_139",
+      "bot_ruleta_logic_send_telegram_msg",
+      "bot_ruleta_updater",
+      "bot_ruleta_updater_check_for_updates",
+      "bot_ruleta_updater_cleanup_old_versions",
+      "bot_ruleta_updater_get_download_url",
+      "bot_ruleta_updater_perform_update",
+      "bot_ruleta_updater_rationale_17",
+      "bot_ruleta_updater_rationale_21",
+      "bot_ruleta_updater_rationale_68",
+      "bot_ruleta_updater_rationale_94"
+    ],
+    "4": [
+      "bot_ruleta_db",
+      "bot_ruleta_db_get_connection",
+      "bot_ruleta_db_limpiar_mesa",
+      "bot_ruleta_db_obtener_ultimo_numero",
+      "bot_ruleta_db_obtener_ultimos_numeros",
+      "bot_ruleta_db_rationale_1",
+      "bot_ruleta_db_rationale_155",
+      "bot_ruleta_db_rationale_174",
+      "bot_ruleta_db_rationale_192",
+      "bot_ruleta_db_rationale_199",
+      "bot_ruleta_db_rationale_22",
+      "bot_ruleta_db_resolve_table_name",
+      "bot_ruleta_logic_rationale_268",
+      "bot_ruleta_logic_rationale_391",
+      "bot_ruleta_logic_rationale_599",
+      "bot_ruleta_logic_sync_backtest",
+      "bot_ruleta_logic_sync_color_backtest",
+      "bot_ruleta_logic_sync_number_backtest"
+    ],
+    "5": [
+      "static_mesa",
+      "static_mesa_fetchbacktest",
+      "static_mesa_fetchcolorbacktest",
+      "static_mesa_fetchnumberbacktest",
+      "static_mesa_historycontainer",
+      "static_mesa_initaudio",
+      "static_mesa_loadtables",
+      "static_mesa_playalertsound",
+      "static_mesa_renderhistory",
+      "static_mesa_rendernumbergrid",
+      "static_mesa_soundbtn",
+      "static_mesa_startpolling",
+      "static_mesa_statusdot",
+      "static_mesa_tableselect",
+      "static_mesa_updatecard",
+      "static_mesa_updatedashboard",
+      "static_mesa_urlparams"
+    ],
+    "6": [
+      "static_app",
+      "static_app_alerttimestamps",
+      "static_app_buildcards",
+      "static_app_cachedtables",
+      "static_app_fetchoverview",
+      "static_app_formattimeago",
+      "static_app_getchipclass",
+      "static_app_getminihistoryhtml",
+      "static_app_initaudio",
+      "static_app_playalertsound",
+      "static_app_rendergrid",
+      "static_app_toggleaccordion",
+      "static_app_updatecards",
+      "static_app_updatetoggleicon"
+    ],
+    "7": [
+      "publish",
+      "publish_api_request",
+      "publish_build_executable",
+      "publish_create_release",
+      "publish_delete_release",
+      "publish_delete_tag",
+      "publish_get_file_sha",
+      "publish_get_release_by_tag",
+      "publish_get_token",
+      "publish_main",
+      "publish_update_github_version_file",
+      "publish_update_local_updater",
+      "publish_upload_asset"
+    ],
+    "8": [
+      "static_analisis",
+      "static_analisis_fetchglobaldata",
+      "static_analisis_formatname",
+      "static_analisis_globaldata",
+      "static_analisis_opensignaldetail",
+      "static_analisis_processandrender",
+      "static_analisis_rendercharts",
+      "static_analisis_rendertablebreakdown",
+      "static_analisis_setupglobaltabs",
+      "static_analisis_setupmodal",
+      "static_analisis_updateviewcontext"
+    ],
+    "9": [
+      "bot_ruleta_debug_logger_attach_gui_queue",
+      "bot_ruleta_debug_logger_guiqueuehandler",
+      "bot_ruleta_debug_logger_guiqueuehandler_emit",
+      "bot_ruleta_debug_logger_guiqueuehandler_init",
+      "bot_ruleta_debug_logger_rationale_100",
+      "bot_ruleta_debug_logger_rationale_86"
+    ],
+    "10": [
+      "bot_ruleta_build_exe",
+      "bot_ruleta_build_exe_build",
+      "bot_ruleta_build_exe_rationale_1"
+    ],
+    "11": [
+      "c_users_bairon_jaramillo_documents_bot_stake_bot_stake_recolector_install_ubuntu_sh__entry",
+      "install_ubuntu"
+    ],
+    "12": [
+      "opencode_opencode",
+      "opencode_opencode_plugin"
+    ],
+    "13": [
+      "plugins_graphify",
+      "plugins_graphify_graphifyplugin"
+    ],
+    "14": [
+      "bot_ruleta_init"
+    ],
+    "15": [
+      "gen_icon"
+    ]
+  },
+  "cohesion": {
+    "0": 0.06586538461538462,
+    "1": 0.080338266384778,
+    "2": 0.08522727272727272,
+    "3": 0.1010752688172043,
+    "4": 0.1503267973856209,
+    "5": 0.17647058823529413,
+    "6": 0.1978021978021978,
+    "7": 0.358974358974359,
+    "8": 0.2909090909090909,
+    "9": 0.3333333333333333,
+    "10": 0.6666666666666666,
+    "11": 1.0,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0
+  },
+  "gods": [
+    {
+      "id": "bot_ruleta_config_load_credentials",
+      "label": "load_credentials()",
+      "degree": 19
+    },
+    {
+      "id": "bot_ruleta_debug_logger_get_logger",
+      "label": "get_logger()",
+      "degree": 15
+    },
+    {
+      "id": "bot_ruleta_debug_logger_capture_screenshot",
+      "label": "capture_screenshot()",
+      "degree": 15
+    },
+    {
+      "id": "bot_ruleta_scanner_run_single_session",
+      "label": "_run_single_session()",
+      "degree": 14
+    },
+    {
+      "id": "bot_ruleta_lobby_ir_al_lobby",
+      "label": "ir_al_lobby()",
+      "degree": 12
+    },
+    {
+      "id": "bot_ruleta_db_get_connection",
+      "label": "get_connection()",
+      "degree": 11
+    },
+    {
+      "id": "bot_ruleta_debug_logger_generate_crash_report",
+      "label": "generate_crash_report()",
+      "degree": 10
+    },
+    {
+      "id": "bot_ruleta_gui_app_dashboardscreen",
+      "label": "DashboardScreen",
+      "degree": 10
+    },
+    {
+      "id": "bot_ruleta_logic_send_telegram_msg",
+      "label": "send_telegram_msg()",
+      "degree": 10
+    },
+    {
+      "id": "bot_ruleta_config_get_color_streak_threshold",
+      "label": "get_color_streak_threshold()",
+      "degree": 9
+    }
+  ],
+  "surprises": [
+    {
+      "source": "run_diagnostics()",
+      "target": "load_credentials()",
+      "source_files": [
+        "bot_ruleta/debug_logger.py",
+        "bot_ruleta/config.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "_send_crash_report_telegram()",
+      "target": "load_credentials()",
+      "source_files": [
+        "bot_ruleta/debug_logger.py",
+        "bot_ruleta/config.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "_update_tunnel_url()",
+      "target": "load_credentials()",
+      "source_files": [
+        "bot_ruleta/launcher.py",
+        "bot_ruleta/config.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "main()",
+      "target": "load_credentials()",
+      "source_files": [
+        "bot_ruleta/scan_lobby_ids.py",
+        "bot_ruleta/config.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "run_bot()",
+      "target": "load_credentials()",
+      "source_files": [
+        "bot_ruleta/scanner.py",
+        "bot_ruleta/config.py"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "calls",
+      "why": "bridges separate communities"
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}

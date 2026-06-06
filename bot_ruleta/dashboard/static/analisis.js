@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setupModal();
 });
 
-let globalData = { history: [], color_history: [], number_history: [], threshold: 5, color_threshold: 5, number_threshold: 20 };
+let globalData = { history: [], color_history: [], number_history: [], current_number_delays: {}, threshold: 5, color_threshold: 5, number_threshold: 20 };
 let currentTopLimit = 20;
 let chartTerciosInstance = null;
 let chartColorInstance = null;
@@ -44,7 +44,7 @@ function setupGlobalTabs() {
             currentTopLimit = parseInt(btn.dataset.limit, 10);
             
             // Re-render con el nuevo limite
-            processAndRender(globalData.history, globalData.color_history);
+            processAndRender(globalData.history, globalData.color_history, globalData.number_history, globalData.current_number_delays || {});
         });
     });
 }
@@ -76,6 +76,17 @@ function updateViewContext(view) {
     let dataArray, valueKey;
     if (isNumeros) {
         dataArray = globalData.number_history;
+        if ((!dataArray || dataArray.length === 0) && globalData.current_number_delays) {
+            dataArray = [];
+            const th = globalData.number_delay_threshold || 20;
+            for (const [tn, delays] of Object.entries(globalData.current_number_delays)) {
+                for (const [numStr, delay] of Object.entries(delays)) {
+                    if (delay >= th) {
+                        dataArray.push({ table_name: tn, number: parseInt(numStr), max_delay: delay });
+                    }
+                }
+            }
+        }
         valueKey = 'max_delay';
     } else {
         dataArray = isTercios ? globalData.history : globalData.color_history;
@@ -102,7 +113,7 @@ async function fetchGlobalData() {
         
         globalData = data; // Guardar estado para cambiar vistas sin recargar
 
-        processAndRender(data.history, data.color_history, data.number_history);
+        processAndRender(data.history, data.color_history, data.number_history, data.current_number_delays || {});
         
         setupGlobalTabs();
         updateViewContext('tercios'); // Set initial state
@@ -151,12 +162,33 @@ function renderTableBreakdown(tbodyId, dataArray, valueKey) {
     });
 }
 
-function processAndRender(history, colorHistory, numberHistory) {
+function processAndRender(history, colorHistory, numberHistory, currentNumberDelays) {
     const hasHistory = history && history.length > 0;
     const hasColorHistory = colorHistory && colorHistory.length > 0;
     const hasNumberHistory = numberHistory && numberHistory.length > 0;
 
-    if (!hasHistory && !hasColorHistory && !hasNumberHistory) {
+    // Construir historial de respaldo desde delays actuales si no hay historial guardado
+    let effectiveNumberHistory = numberHistory || [];
+    if (!hasNumberHistory && currentNumberDelays && Object.keys(currentNumberDelays).length > 0) {
+        const threshold = globalData.number_delay_threshold || 20;
+        effectiveNumberHistory = [];
+        for (const [tableName, delays] of Object.entries(currentNumberDelays)) {
+            for (const [numStr, delay] of Object.entries(delays)) {
+                if (delay >= threshold) {
+                    effectiveNumberHistory.push({
+                        table_name: tableName,
+                        number: parseInt(numStr),
+                        max_delay: delay,
+                        start_time: null,
+                        end_time: null
+                    });
+                }
+            }
+        }
+    }
+    const hasEffectiveNumberHistory = effectiveNumberHistory.length > 0;
+
+    if (!hasHistory && !hasColorHistory && !hasEffectiveNumberHistory) {
         document.getElementById('loader').innerHTML = `<div>No hay suficientes datos procesados en la Base de Datos.</div>`;
         return;
     }
@@ -164,7 +196,7 @@ function processAndRender(history, colorHistory, numberHistory) {
     // --- Generar Desglose por Mesas ---
     renderTableBreakdown('tbody-tables-tercios', history, 'max_delay');
     renderTableBreakdown('tbody-tables-colores', colorHistory, 'streak_count');
-    renderTableBreakdown('tbody-tables-numeros', numberHistory, 'max_delay');
+    renderTableBreakdown('tbody-tables-numeros', effectiveNumberHistory, 'max_delay');
 
     // --- Top N Señales Más Críticas (Tercios) ---
     const topN = (history || []).slice().sort((a, b) => b.max_delay - a.max_delay).slice(0, currentTopLimit);
@@ -243,7 +275,7 @@ function processAndRender(history, colorHistory, numberHistory) {
     }
 
     // --- Top N Señales Más Críticas (Números) ---
-    const topNNumbers = (numberHistory || []).slice().sort((a, b) => b.max_delay - a.max_delay).slice(0, currentTopLimit);
+    const topNNumbers = effectiveNumberHistory.slice().sort((a, b) => b.max_delay - a.max_delay).slice(0, currentTopLimit);
     const tbodyTop20Numbers = document.getElementById('tbody-top20-numeros');
 
     tbodyTop20Numbers.innerHTML = '';

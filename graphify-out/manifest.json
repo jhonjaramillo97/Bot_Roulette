@@ -1,0 +1,127 @@
+{
+  ".opencode/opencode.json": {
+    "mtime": 1780721942.2420642,
+    "ast_hash": "f2ae21510d07365eb2bce8159272c7a0",
+    "semantic_hash": "f2ae21510d07365eb2bce8159272c7a0"
+  },
+  ".opencode/plugins/graphify.js": {
+    "mtime": 1780721942.2420642,
+    "ast_hash": "32b67963417a30cb80544e0b2a56a98d",
+    "semantic_hash": "32b67963417a30cb80544e0b2a56a98d"
+  },
+  "bot_ruleta/__init__.py": {
+    "mtime": 1771004267.1833322,
+    "ast_hash": "c7fd5b2b96c4dd635ce95c7108333576",
+    "semantic_hash": "c7fd5b2b96c4dd635ce95c7108333576"
+  },
+  "bot_ruleta/build_exe.py": {
+    "mtime": 1778271663.1948578,
+    "ast_hash": "e7ca12815cd2ee67ffdac17dd434c648",
+    "semantic_hash": "e7ca12815cd2ee67ffdac17dd434c648"
+  },
+  "bot_ruleta/config.py": {
+    "mtime": 1780715628.4833264,
+    "ast_hash": "20b6fb5713abe66c86ffb339dd5ad2ed",
+    "semantic_hash": "20b6fb5713abe66c86ffb339dd5ad2ed"
+  },
+  "bot_ruleta/dashboard/app.py": {
+    "mtime": 1780715690.049629,
+    "ast_hash": "38c4a75e634d493df2b9c515ad86970b",
+    "semantic_hash": "38c4a75e634d493df2b9c515ad86970b"
+  },
+  "bot_ruleta/dashboard/static/analisis.js": {
+    "mtime": 1780715813.9567456,
+    "ast_hash": "f595379bd17c3e97ff4c4244c9f53727",
+    "semantic_hash": "f595379bd17c3e97ff4c4244c9f53727"
+  },
+  "bot_ruleta/dashboard/static/app.js": {
+    "mtime": 1780716881.2552402,
+    "ast_hash": "c26537bd211dc5781a78e9a7ea57d762",
+    "semantic_hash": "c26537bd211dc5781a78e9a7ea57d762"
+  },
+  "bot_ruleta/dashboard/static/mesa.js": {
+    "mtime": 1780715758.156188,
+    "ast_hash": "03b4406386624ae140f1ab88d9bdc395",
+    "semantic_hash": "03b4406386624ae140f1ab88d9bdc395"
+  },
+  "bot_ruleta/db.py": {
+    "mtime": 1780715624.5539804,
+    "ast_hash": "3c6604b99539d4ce484476bf4cade46b",
+    "semantic_hash": "3c6604b99539d4ce484476bf4cade46b"
+  },
+  "bot_ruleta/debug_logger.py": {
+    "mtime": 1777223620.0282025,
+    "ast_hash": "e5ba813355935da1533fff7937425a75",
+    "semantic_hash": "e5ba813355935da1533fff7937425a75"
+  },
+  "bot_ruleta/driver.py": {
+    "mtime": 1778273556.5576642,
+    "ast_hash": "6676aed9b602ad6f891849c4a51c1287",
+    "semantic_hash": "6676aed9b602ad6f891849c4a51c1287"
+  },
+  "bot_ruleta/gui_app.py": {
+    "mtime": 1780718180.9732711,
+    "ast_hash": "94be1dfe392eedc143cde6d25afcc8bf",
+    "semantic_hash": "94be1dfe392eedc143cde6d25afcc8bf"
+  },
+  "bot_ruleta/helpers.py": {
+    "mtime": 1777255522.5613182,
+    "ast_hash": "b5d7081fc8d0917e3a2ed23914247d88",
+    "semantic_hash": "b5d7081fc8d0917e3a2ed23914247d88"
+  },
+  "bot_ruleta/iframe.py": {
+    "mtime": 1777222611.4918106,
+    "ast_hash": "d066ecdb914499a141797bd806dc9dbf",
+    "semantic_hash": "d066ecdb914499a141797bd806dc9dbf"
+  },
+  "bot_ruleta/launcher.py": {
+    "mtime": 1778865172.6507611,
+    "ast_hash": "74a945520c442e6923d46f95a2c0facb",
+    "semantic_hash": "74a945520c442e6923d46f95a2c0facb"
+  },
+  "bot_ruleta/lobby.py": {
+    "mtime": 1777255522.5633273,
+    "ast_hash": "b5807fb5527915c47575fc245698999e",
+    "semantic_hash": "b5807fb5527915c47575fc245698999e"
+  },
+  "bot_ruleta/logic.py": {
+    "mtime": 1780719101.6953993,
+    "ast_hash": "2e77e5cef44f7301033da50597c829b6",
+    "semantic_hash": "2e77e5cef44f7301033da50597c829b6"
+  },
+  "bot_ruleta/run.py": {
+    "mtime": 1777156100.0156984,
+    "ast_hash": "c45dad9a02ab13338fa254133e82c087",
+    "semantic_hash": "c45dad9a02ab13338fa254133e82c087"
+  },
+  "bot_ruleta/scan_lobby_ids.py": {
+    "mtime": 1771044082.0300999,
+    "ast_hash": "0deed7ab1a55e2f22f6a7f5b0f266a2a",
+    "semantic_hash": "0deed7ab1a55e2f22f6a7f5b0f266a2a"
+  },
+  "bot_ruleta/scanner.py": {
+    "mtime": 1780715663.7899594,
+    "ast_hash": "7ab07316d57b1de5b2ab580bcb88c602",
+    "semantic_hash": "7ab07316d57b1de5b2ab580bcb88c602"
+  },
+  "bot_ruleta/updater.py": {
+    "mtime": 1780705209.864964,
+    "ast_hash": "800c105d59ebc13502b6f579df1cf78e",
+    "semantic_hash": "800c105d59ebc13502b6f579df1cf78e"
+  },
+  "gen_icon.py": {
+    "mtime": 1778213302.031068,
+    "ast_hash": "fcaf0a51a4c4b342d76aa00ca3b19481",
+    "semantic_hash": "fcaf0a51a4c4b342d76aa00ca3b19481"
+  },
+  "install_ubuntu.sh": {
+    "mtime": 1773734392.0983102,
+    "ast_hash": "9bc16545d274d9532b16b676aa286c41",
+    "semantic_hash": "9bc16545d274d9532b16b676aa286c41"
+  },
+  "publish.py": {
+    "mtime": 1778269065.6590137,
+    "ast_hash": "7347ce551a7691ee2a37c106e54a81f0",
+    "semantic_hash": "7347ce551a7691ee2a37c106e54a81f0"
+  }
+}
