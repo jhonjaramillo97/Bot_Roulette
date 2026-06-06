@@ -277,7 +277,7 @@ def get_backtest_color():
 
 @app.route('/api/backtest_number')
 def get_backtest_number():
-    """Historial de retrasos de números individuales completados para una mesa."""
+    """Historial de retrasos de números individuales completados + alertas activas."""
     table_name = request.args.get('mesa', 'ruleta_latina')
     if not any(t["table_name"] == table_name for t in TABLES):
         return jsonify({"error": "Tabla no válida"}), 400
@@ -301,7 +301,27 @@ def get_backtest_number():
         conn.close()
         
         history = [dict(row) for row in rows]
-        return jsonify({"mesa": table_name, "history": history})
+        
+        # 3. Calcular alertas activas (números retrasados AHORA, aún no completados)
+        active_alerts = []
+        try:
+            _, numeros = calcular_delays(table_name, limit=100)
+            if numeros:
+                current_delays = bt_logic.compute_number_delays(numeros)
+                active_alerts = [
+                    {"number": num, "max_delay": delay, "start_time": None, "end_time": None}
+                    for num, delay in current_delays.items()
+                    if delay >= number_threshold
+                ]
+                active_alerts.sort(key=lambda x: -x["max_delay"])
+        except Exception as e:
+            print(f"Error calculando alertas activas: {e}")
+        
+        return jsonify({
+            "mesa": table_name,
+            "history": history,
+            "active_alerts": active_alerts
+        })
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
@@ -349,22 +369,33 @@ def get_analisis_global():
         
         # 5. Calcular delays actuales de números para cada mesa
         current_number_delays = {}
+        active_number_alerts = []  # Alertas activas (aún no completadas) para análisis global
         for t in TABLES:
             tn = t["table_name"]
             try:
                 _, nums = calcular_delays(tn, limit=100)
                 if nums:
                     nd = bt_logic.compute_number_delays(nums)
-                    # Serializar keys como string para JSON
                     current_number_delays[tn] = {str(k): v for k, v in nd.items()}
+                    for num, delay in nd.items():
+                        if delay >= number_threshold:
+                            active_number_alerts.append({
+                                "table_name": tn,
+                                "number": num,
+                                "max_delay": delay,
+                                "start_time": None,
+                                "end_time": None
+                            })
             except Exception:
                 current_number_delays[tn] = {}
+        active_number_alerts.sort(key=lambda x: -x["max_delay"])
         
         return jsonify({
             "history": history,
             "color_history": color_history,
             "number_history": number_history,
             "current_number_delays": current_number_delays,
+            "active_number_alerts": active_number_alerts,
             "threshold": threshold,
             "color_streak_threshold": color_threshold,
             "number_delay_threshold": number_threshold

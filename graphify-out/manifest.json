@@ -5,7 +5,7 @@
     "semantic_hash": "f2ae21510d07365eb2bce8159272c7a0"
   },
   ".opencode/plugins/graphify.js": {
-    "mtime": 1780721942.2420642,
+    "mtime": 1780722880.7817504,
     "ast_hash": "32b67963417a30cb80544e0b2a56a98d",
     "semantic_hash": "32b67963417a30cb80544e0b2a56a98d"
   },
@@ -25,14 +25,14 @@
     "semantic_hash": "20b6fb5713abe66c86ffb339dd5ad2ed"
   },
   "bot_ruleta/dashboard/app.py": {
-    "mtime": 1780715690.049629,
-    "ast_hash": "38c4a75e634d493df2b9c515ad86970b",
-    "semantic_hash": "38c4a75e634d493df2b9c515ad86970b"
+    "mtime": 1780751491.4300578,
+    "ast_hash": "f4cbcfd1d0c4ec33b182506d56004773",
+    "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/analisis.js": {
-    "mtime": 1780715813.9567456,
-    "ast_hash": "f595379bd17c3e97ff4c4244c9f53727",
-    "semantic_hash": "f595379bd17c3e97ff4c4244c9f53727"
+    "mtime": 1780751562.2413745,
+    "ast_hash": "9b086183da7e08acafcebfd0fbd3e159",
+    "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/app.js": {
     "mtime": 1780716881.2552402,
@@ -85,9 +85,9 @@
     "semantic_hash": "b5807fb5527915c47575fc245698999e"
   },
   "bot_ruleta/logic.py": {
-    "mtime": 1780719101.6953993,
-    "ast_hash": "2e77e5cef44f7301033da50597c829b6",
-    "semantic_hash": "2e77e5cef44f7301033da50597c829b6"
+    "mtime": 1780751471.464987,
+    "ast_hash": "0ea48cea74d95d4635ab5bd604935cd2",
+    "semantic_hash": ""
   },
   "bot_ruleta/run.py": {
     "mtime": 1777156100.0156984,

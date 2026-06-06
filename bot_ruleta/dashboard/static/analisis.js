@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     setupModal();
 });
 
-let globalData = { history: [], color_history: [], number_history: [], current_number_delays: {}, threshold: 5, color_threshold: 5, number_threshold: 20 };
+let globalData = { history: [], color_history: [], number_history: [], current_number_delays: {}, active_number_alerts: [], threshold: 5, color_threshold: 5, number_threshold: 20 };
 let currentTopLimit = 20;
 let chartTerciosInstance = null;
 let chartColorInstance = null;
@@ -75,17 +75,9 @@ function updateViewContext(view) {
     // Datos para los KPIs
     let dataArray, valueKey;
     if (isNumeros) {
-        dataArray = globalData.number_history;
-        if ((!dataArray || dataArray.length === 0) && globalData.current_number_delays) {
-            dataArray = [];
-            const th = globalData.number_delay_threshold || 20;
-            for (const [tn, delays] of Object.entries(globalData.current_number_delays)) {
-                for (const [numStr, delay] of Object.entries(delays)) {
-                    if (delay >= th) {
-                        dataArray.push({ table_name: tn, number: parseInt(numStr), max_delay: delay });
-                    }
-                }
-            }
+        dataArray = [...(globalData.active_number_alerts || [])];
+        if (globalData.number_history && globalData.number_history.length > 0) {
+            dataArray = dataArray.concat(globalData.number_history);
         }
         valueKey = 'max_delay';
     } else {
@@ -167,24 +159,10 @@ function processAndRender(history, colorHistory, numberHistory, currentNumberDel
     const hasColorHistory = colorHistory && colorHistory.length > 0;
     const hasNumberHistory = numberHistory && numberHistory.length > 0;
 
-    // Construir historial de respaldo desde delays actuales si no hay historial guardado
-    let effectiveNumberHistory = numberHistory || [];
-    if (!hasNumberHistory && currentNumberDelays && Object.keys(currentNumberDelays).length > 0) {
-        const threshold = globalData.number_delay_threshold || 20;
-        effectiveNumberHistory = [];
-        for (const [tableName, delays] of Object.entries(currentNumberDelays)) {
-            for (const [numStr, delay] of Object.entries(delays)) {
-                if (delay >= threshold) {
-                    effectiveNumberHistory.push({
-                        table_name: tableName,
-                        number: parseInt(numStr),
-                        max_delay: delay,
-                        start_time: null,
-                        end_time: null
-                    });
-                }
-            }
-        }
+    // Construir lista efectiva: alertas activas primero + historial completado
+    let effectiveNumberHistory = [...(globalData.active_number_alerts || [])];
+    if (numberHistory && numberHistory.length > 0) {
+        effectiveNumberHistory = effectiveNumberHistory.concat(numberHistory);
     }
     const hasEffectiveNumberHistory = effectiveNumberHistory.length > 0;
 
@@ -284,6 +262,7 @@ function processAndRender(history, colorHistory, numberHistory, currentNumberDel
     } else {
         topNNumbers.forEach((evt, index) => {
             const tr = document.createElement('tr');
+            const isActive = !evt.start_time;  // Alerta activa (aún no completada)
             const end = evt.end_time ? evt.end_time : 'En progreso';
             
             let colorClass = "num-green";
@@ -293,11 +272,14 @@ function processAndRender(history, colorHistory, numberHistory, currentNumberDel
             }
 
             tr.className = 'clickable-row';
+            if (isActive) {
+                tr.style.background = 'rgba(255, 68, 68, 0.08)';
+            }
             tr.innerHTML = `
                 <td><strong>${index + 1}. ${formatName(evt.table_name)}</strong></td>
-                <td><span class="play-numero ${colorClass}">${evt.number}</span></td>
+                <td><span class="play-numero ${colorClass}" ${isActive ? 'style="box-shadow: 0 0 10px rgba(255,68,68,0.5)"' : ''}>${evt.number}</span></td>
                 <td class="max-delay-col delay-extreme">${evt.max_delay} giros</td>
-                <td>${end}</td>
+                <td style="${isActive ? 'color:var(--color-critical);font-weight:700' : ''}">${end}</td>
             `;
             tr.addEventListener('click', () => {
                 openSignalDetail({

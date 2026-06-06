@@ -1,12 +1,18 @@
-# Graph Report - .  (2026-06-06)
+# Graph Report - Bot_Stake_Recolector  (2026-06-06)
 
 ## Corpus Check
-- cluster-only mode — file stats not available
+- 25 files · ~22,648 words
+- Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 263 nodes · 488 edges · 16 communities (13 shown, 3 thin omitted)
+- 263 nodes · 489 edges · 16 communities (13 shown, 3 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
+
+## Graph Freshness
+- Built from commit: `c185986e`
+- Run `git rev-parse HEAD` and compare to check if the graph is stale.
+- Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - [[_COMMUNITY_Community 0|Community 0]]
@@ -30,9 +36,9 @@
 4. `_run_single_session()` - 14 edges
 5. `ir_al_lobby()` - 12 edges
 6. `get_connection()` - 11 edges
-7. `generate_crash_report()` - 10 edges
-8. `DashboardScreen` - 10 edges
-9. `send_telegram_msg()` - 10 edges
+7. `send_telegram_msg()` - 10 edges
+8. `generate_crash_report()` - 10 edges
+9. `DashboardScreen` - 10 edges
 10. `get_color_streak_threshold()` - 9 edges
 
 ## Surprising Connections (you probably didn't know these)
@@ -106,11 +112,11 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.042) - this node is a cross-community bridge._
 - **Why does `get_logger()` connect `Community 0` to `Community 3`?**
   _High betweenness centrality (0.029) - this node is a cross-community bridge._
-- **What connects `plugin`, `Script para empaquetar Roulette Sniper Pro en un solo .exe Requiere: pip install`, `Configuración centralizada del bot de ruleta. Constantes, configuración de mesas` to the rest of the system?**
+- **What connects `plugin`, `Lee el threshold de los datos guardados por la GUI. Fallback al .env`, `Calcula los delays de docenas y columnas para una tabla dada (USANDO LOGIC COMPA` to the rest of the system?**
   _83 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.06586538461538462 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
-  _Cohesion score 0.080338266384778 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.08139534883720931 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.08522727272727272 - nodes in this community are weakly interconnected._

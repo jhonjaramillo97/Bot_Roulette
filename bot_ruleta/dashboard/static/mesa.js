@@ -172,29 +172,57 @@ async function fetchNumberBacktest() {
         const tbody = document.getElementById('backtest-number-body');
         tbody.innerHTML = '';
 
-        if (!data.history || data.history.length === 0) {
+        const hasHistory = data.history && data.history.length > 0;
+        const hasActive = data.active_alerts && data.active_alerts.length > 0;
+
+        if (!hasHistory && !hasActive) {
             tbody.innerHTML = '<tr><td colspan="4" class="loading-td">No hay historial de números retrasados registrado aún.</td></tr>';
             return;
         }
 
-        data.history.forEach(evt => {
-            const tr = document.createElement('tr');
-            const end = evt.end_time ? (evt.end_time.split(' ')[1] || evt.end_time) : 'En progreso';
-            
-            let colorClass = "num-green";
-            if (evt.number > 0) {
-                const reds = ['1','3','5','7','9','12','14','16','18','19','21','23','25','27','30','32','34','36'];
-                colorClass = reds.includes(String(evt.number)) ? "num-red" : "num-black";
-            }
+        // Mostrar alertas activas primero (En progreso)
+        if (hasActive) {
+            data.active_alerts.forEach(evt => {
+                const tr = document.createElement('tr');
+                tr.style.background = 'rgba(255, 68, 68, 0.08)';
+                
+                let colorClass = "num-green";
+                if (evt.number > 0) {
+                    const reds = ['1','3','5','7','9','12','14','16','18','19','21','23','25','27','30','32','34','36'];
+                    colorClass = reds.includes(String(evt.number)) ? "num-red" : "num-black";
+                }
 
-            tr.innerHTML = `
-                <td>${evt.start_time.slice(5, 16)}</td>
-                <td><span class="play-numero ${colorClass}">${evt.number}</span></td>
-                <td class="max-delay-col delay-extreme">${evt.max_delay} giros</td>
-                <td>${end}</td>
-            `;
-            tbody.appendChild(tr);
-        });
+                tr.innerHTML = `
+                    <td style="color:var(--color-warn)">AHORA</td>
+                    <td><span class="play-numero ${colorClass}" style="box-shadow: 0 0 10px rgba(255,68,68,0.5)">${evt.number}</span></td>
+                    <td class="max-delay-col delay-extreme">${evt.max_delay} giros</td>
+                    <td style="color:var(--color-critical);font-weight:700">En progreso</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Mostrar historial completado
+        if (hasHistory) {
+            data.history.forEach(evt => {
+                const tr = document.createElement('tr');
+                const end = evt.end_time ? (evt.end_time.split(' ')[1] || evt.end_time) : 'En progreso';
+                
+                let colorClass = "num-green";
+                if (evt.number > 0) {
+                    const reds = ['1','3','5','7','9','12','14','16','18','19','21','23','25','27','30','32','34','36'];
+                    colorClass = reds.includes(String(evt.number)) ? "num-red" : "num-black";
+                }
+
+                tr.innerHTML = `
+                    <td>${evt.start_time ? evt.start_time.slice(5, 16) : '—'}</td>
+                    <td><span class="play-numero ${colorClass}">${evt.number}</span></td>
+                    <td class="max-delay-col delay-extreme">${evt.max_delay} giros</td>
+                    <td>${end}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
     } catch (e) {
         console.error("Error cargando number backtest:", e);
     }

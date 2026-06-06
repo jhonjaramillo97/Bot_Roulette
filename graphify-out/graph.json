@@ -8,36 +8,531 @@
       "file_type": "code",
       "source_file": ".opencode/opencode.json",
       "source_location": "L1",
+      "id": "opencode_opencode",
       "community": 12,
-      "norm_label": "opencode.json",
-      "id": "opencode_opencode"
+      "norm_label": "opencode.json"
     },
     {
       "label": "plugin",
       "file_type": "code",
       "source_file": ".opencode/opencode.json",
       "source_location": "L2",
+      "id": "opencode_opencode_plugin",
       "community": 12,
-      "norm_label": "plugin",
-      "id": "opencode_opencode_plugin"
+      "norm_label": "plugin"
     },
     {
       "label": "graphify.js",
       "file_type": "code",
       "source_file": ".opencode/plugins/graphify.js",
       "source_location": "L1",
+      "id": "plugins_graphify",
       "community": 13,
-      "norm_label": "graphify.js",
-      "id": "plugins_graphify"
+      "norm_label": "graphify.js"
     },
     {
       "label": "GraphifyPlugin()",
       "file_type": "code",
       "source_file": ".opencode/plugins/graphify.js",
       "source_location": "L6",
+      "id": "plugins_graphify_graphifyplugin",
       "community": 13,
-      "norm_label": "graphifyplugin()",
-      "id": "plugins_graphify_graphifyplugin"
+      "norm_label": "graphifyplugin()"
+    },
+    {
+      "label": "app.py",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L1",
+      "id": "dashboard_app",
+      "community": 1,
+      "norm_label": "app.py"
+    },
+    {
+      "label": "get_dashboard_threshold()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L16",
+      "id": "dashboard_app_get_dashboard_threshold",
+      "community": 1,
+      "norm_label": "get_dashboard_threshold()"
+    },
+    {
+      "label": "get_db_connection()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L41",
+      "id": "dashboard_app_get_db_connection",
+      "community": 1,
+      "norm_label": "get_db_connection()"
+    },
+    {
+      "label": "calcular_delays()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L47",
+      "id": "dashboard_app_calcular_delays",
+      "community": 1,
+      "norm_label": "calcular_delays()"
+    },
+    {
+      "label": "serve_index()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L70",
+      "id": "dashboard_app_serve_index",
+      "community": 1,
+      "norm_label": "serve_index()"
+    },
+    {
+      "label": "serve_mesa()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L74",
+      "id": "dashboard_app_serve_mesa",
+      "community": 1,
+      "norm_label": "serve_mesa()"
+    },
+    {
+      "label": "serve_analisis()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L78",
+      "id": "dashboard_app_serve_analisis",
+      "community": 1,
+      "norm_label": "serve_analisis()"
+    },
+    {
+      "label": "get_mesas()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L83",
+      "id": "dashboard_app_get_mesas",
+      "community": 1,
+      "norm_label": "get_mesas()"
+    },
+    {
+      "label": "get_overview()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L88",
+      "id": "dashboard_app_get_overview",
+      "community": 1,
+      "norm_label": "get_overview()"
+    },
+    {
+      "label": "get_data()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L162",
+      "id": "dashboard_app_get_data",
+      "community": 1,
+      "norm_label": "get_data()"
+    },
+    {
+      "label": "get_backtest()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L218",
+      "id": "dashboard_app_get_backtest",
+      "community": 1,
+      "norm_label": "get_backtest()"
+    },
+    {
+      "label": "get_backtest_color()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L248",
+      "id": "dashboard_app_get_backtest_color",
+      "community": 1,
+      "norm_label": "get_backtest_color()"
+    },
+    {
+      "label": "get_backtest_number()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L279",
+      "id": "dashboard_app_get_backtest_number",
+      "community": 1,
+      "norm_label": "get_backtest_number()"
+    },
+    {
+      "label": "get_analisis_global()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L310",
+      "id": "dashboard_app_get_analisis_global",
+      "community": 1,
+      "norm_label": "get_analisis_global()"
+    },
+    {
+      "label": "get_signal_detail()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L377",
+      "id": "dashboard_app_get_signal_detail",
+      "community": 1,
+      "norm_label": "get_signal_detail()"
+    },
+    {
+      "label": "get_tunnel()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L438",
+      "id": "dashboard_app_get_tunnel",
+      "community": 1,
+      "norm_label": "get_tunnel()"
+    },
+    {
+      "label": "Lee el threshold de los datos guardados por la GUI. Fallback al .env",
+      "file_type": "rationale",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L17",
+      "id": "dashboard_app_rationale_17",
+      "community": 1,
+      "norm_label": "lee el threshold de los datos guardados por la gui. fallback al .env"
+    },
+    {
+      "label": "Calcula los delays de docenas y columnas para una tabla dada (USANDO LOGIC COMPA",
+      "file_type": "rationale",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L48",
+      "id": "dashboard_app_rationale_48",
+      "community": 1,
+      "norm_label": "calcula los delays de docenas y columnas para una tabla dada (usando logic compa"
+    },
+    {
+      "label": "Retorna un resumen r\u00e1pido de TODAS las mesas: delay m\u00e1ximo y alertas.",
+      "file_type": "rationale",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L89",
+      "id": "dashboard_app_rationale_89",
+      "community": 1,
+      "norm_label": "retorna un resumen rapido de todas las mesas: delay maximo y alertas."
+    },
+    {
+      "label": "Historial de rachas de color completadas para una mesa.",
+      "file_type": "rationale",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L249",
+      "id": "dashboard_app_rationale_249",
+      "community": 1,
+      "norm_label": "historial de rachas de color completadas para una mesa."
+    },
+    {
+      "label": "Historial de retrasos de n\u00fameros individuales completados para una mesa.",
+      "file_type": "rationale",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L280",
+      "id": "dashboard_app_rationale_280",
+      "community": 1,
+      "norm_label": "historial de retrasos de numeros individuales completados para una mesa."
+    },
+    {
+      "label": "Devuelve las jugadas individuales que componen una se\u00f1al espec\u00edfica.",
+      "file_type": "rationale",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L378",
+      "id": "dashboard_app_rationale_378",
+      "community": 1,
+      "norm_label": "devuelve las jugadas individuales que componen una senal especifica."
+    },
+    {
+      "label": "Retorna el link actual de Cloudflare si est\u00e1 disponible",
+      "file_type": "rationale",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L439",
+      "id": "dashboard_app_rationale_439",
+      "community": 1,
+      "norm_label": "retorna el link actual de cloudflare si esta disponible"
+    },
+    {
+      "label": "analisis.js",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/static/analisis.js",
+      "source_location": "L1",
+      "id": "static_analisis",
+      "community": 8,
+      "norm_label": "analisis.js"
+    },
+    {
+      "label": "globalData",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/static/analisis.js",
+      "source_location": "L6",
+      "id": "static_analisis_globaldata",
+      "community": 8,
+      "norm_label": "globaldata"
+    },
+    {
+      "label": "setupGlobalTabs()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/static/analisis.js",
+      "source_location": "L12",
+      "id": "static_analisis_setupglobaltabs",
+      "community": 8,
+      "norm_label": "setupglobaltabs()"
+    },
+    {
+      "label": "updateViewContext()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/static/analisis.js",
+      "source_location": "L52",
+      "id": "static_analisis_updateviewcontext",
+      "community": 8,
+      "norm_label": "updateviewcontext()"
+    },
+    {
+      "label": "fetchGlobalData()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/static/analisis.js",
+      "source_location": "L108",
+      "id": "static_analisis_fetchglobaldata",
+      "community": 8,
+      "norm_label": "fetchglobaldata()"
+    },
+    {
+      "label": "renderTableBreakdown()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/static/analisis.js",
+      "source_location": "L134",
+      "id": "static_analisis_rendertablebreakdown",
+      "community": 8,
+      "norm_label": "rendertablebreakdown()"
+    },
+    {
+      "label": "processAndRender()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/static/analisis.js",
+      "source_location": "L165",
+      "id": "static_analisis_processandrender",
+      "community": 8,
+      "norm_label": "processandrender()"
+    },
+    {
+      "label": "renderCharts()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/static/analisis.js",
+      "source_location": "L320",
+      "id": "static_analisis_rendercharts",
+      "community": 8,
+      "norm_label": "rendercharts()"
+    },
+    {
+      "label": "setupModal()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/static/analisis.js",
+      "source_location": "L438",
+      "id": "static_analisis_setupmodal",
+      "community": 8,
+      "norm_label": "setupmodal()"
+    },
+    {
+      "label": "openSignalDetail()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/static/analisis.js",
+      "source_location": "L453",
+      "id": "static_analisis_opensignaldetail",
+      "community": 8,
+      "norm_label": "opensignaldetail()"
+    },
+    {
+      "label": "formatName()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/dashboard/static/analisis.js",
+      "source_location": "L550",
+      "id": "static_analisis_formatname",
+      "community": 8,
+      "norm_label": "formatname()"
+    },
+    {
+      "label": "logic.py",
+      "file_type": "code",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L1",
+      "id": "bot_ruleta_logic",
+      "community": 1,
+      "norm_label": "logic.py"
+    },
+    {
+      "label": "compute_delays()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L10",
+      "id": "bot_ruleta_logic_compute_delays",
+      "community": 1,
+      "norm_label": "compute_delays()"
+    },
+    {
+      "label": "check_and_notify()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L67",
+      "id": "bot_ruleta_logic_check_and_notify",
+      "community": 1,
+      "norm_label": "check_and_notify()"
+    },
+    {
+      "label": "send_telegram_msg()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L138",
+      "id": "bot_ruleta_logic_send_telegram_msg",
+      "community": 3,
+      "norm_label": "send_telegram_msg()"
+    },
+    {
+      "label": "compute_color_streak()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L156",
+      "id": "bot_ruleta_logic_compute_color_streak",
+      "community": 1,
+      "norm_label": "compute_color_streak()"
+    },
+    {
+      "label": "check_and_notify_color()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L206",
+      "id": "bot_ruleta_logic_check_and_notify_color",
+      "community": 1,
+      "norm_label": "check_and_notify_color()"
+    },
+    {
+      "label": "sync_backtest()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L267",
+      "id": "bot_ruleta_logic_sync_backtest",
+      "community": 4,
+      "norm_label": "sync_backtest()"
+    },
+    {
+      "label": "sync_color_backtest()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L390",
+      "id": "bot_ruleta_logic_sync_color_backtest",
+      "community": 4,
+      "norm_label": "sync_color_backtest()"
+    },
+    {
+      "label": "compute_number_delays()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L491",
+      "id": "bot_ruleta_logic_compute_number_delays",
+      "community": 1,
+      "norm_label": "compute_number_delays()"
+    },
+    {
+      "label": "check_and_notify_number()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L541",
+      "id": "bot_ruleta_logic_check_and_notify_number",
+      "community": 1,
+      "norm_label": "check_and_notify_number()"
+    },
+    {
+      "label": "sync_number_backtest()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L598",
+      "id": "bot_ruleta_logic_sync_number_backtest",
+      "community": 4,
+      "norm_label": "sync_number_backtest()"
+    },
+    {
+      "label": "Calcula los delays de docenas y columnas dado una lista de n\u00fameros o diccionario",
+      "file_type": "rationale",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L11",
+      "id": "bot_ruleta_logic_rationale_11",
+      "community": 1,
+      "norm_label": "calcula los delays de docenas y columnas dado una lista de numeros o diccionario"
+    },
+    {
+      "label": "Verifica si hay delays que superen el umbral y env\u00eda notificaci\u00f3n a Telegram.",
+      "file_type": "rationale",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L68",
+      "id": "bot_ruleta_logic_rationale_68",
+      "community": 1,
+      "norm_label": "verifica si hay delays que superen el umbral y envia notificacion a telegram."
+    },
+    {
+      "label": "Env\u00eda mensaje raw a Telegram.",
+      "file_type": "rationale",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L139",
+      "id": "bot_ruleta_logic_rationale_139",
+      "community": 3,
+      "norm_label": "envia mensaje raw a telegram."
+    },
+    {
+      "label": "Calcula la racha actual de un color (Rojo o Negro) bas\u00e1ndose en los n\u00fameros reci",
+      "file_type": "rationale",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L157",
+      "id": "bot_ruleta_logic_rationale_157",
+      "community": 1,
+      "norm_label": "calcula la racha actual de un color (rojo o negro) basandose en los numeros reci"
+    },
+    {
+      "label": "Si la racha de color supera el umbral, env\u00eda notificaci\u00f3n a Telegram.     Usa co",
+      "file_type": "rationale",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L207",
+      "id": "bot_ruleta_logic_rationale_207",
+      "community": 1,
+      "norm_label": "si la racha de color supera el umbral, envia notificacion a telegram.     usa co"
+    },
+    {
+      "label": "Sincroniza el historial de backtesting para una mesa.     Solo procesa los giros",
+      "file_type": "rationale",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L268",
+      "id": "bot_ruleta_logic_rationale_268",
+      "community": 4,
+      "norm_label": "sincroniza el historial de backtesting para una mesa.     solo procesa los giros"
+    },
+    {
+      "label": "Sincroniza el historial de rachas de color para una mesa.     Detecta rachas de",
+      "file_type": "rationale",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L391",
+      "id": "bot_ruleta_logic_rationale_391",
+      "community": 4,
+      "norm_label": "sincroniza el historial de rachas de color para una mesa.     detecta rachas de"
+    },
+    {
+      "label": "Calcula los delays (giros sin salir) para cada n\u00famero individual 0-36.     numer",
+      "file_type": "rationale",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L492",
+      "id": "bot_ruleta_logic_rationale_492",
+      "community": 1,
+      "norm_label": "calcula los delays (giros sin salir) para cada numero individual 0-36.     numer"
+    },
+    {
+      "label": "Verifica si hay n\u00fameros individuales que superen el umbral de retraso.     Env\u00eda",
+      "file_type": "rationale",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L542",
+      "id": "bot_ruleta_logic_rationale_542",
+      "community": 1,
+      "norm_label": "verifica si hay numeros individuales que superen el umbral de retraso.     envia"
+    },
+    {
+      "label": "Sincroniza el historial de backtesting para retrasos de n\u00fameros individuales.",
+      "file_type": "rationale",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L599",
+      "id": "bot_ruleta_logic_rationale_599",
+      "community": 4,
+      "norm_label": "sincroniza el historial de backtesting para retrasos de numeros individuales."
     },
     {
       "label": "__init__.py",
@@ -164,312 +659,6 @@
       "community": 1,
       "norm_label": "lee el umbral de retraso de numeros individuales. prioridad: runtime overrides >",
       "id": "bot_ruleta_config_rationale_165"
-    },
-    {
-      "label": "app.py",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L1",
-      "community": 1,
-      "norm_label": "app.py",
-      "id": "dashboard_app"
-    },
-    {
-      "label": "get_dashboard_threshold()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L16",
-      "community": 1,
-      "norm_label": "get_dashboard_threshold()",
-      "id": "dashboard_app_get_dashboard_threshold"
-    },
-    {
-      "label": "get_db_connection()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L41",
-      "community": 1,
-      "norm_label": "get_db_connection()",
-      "id": "dashboard_app_get_db_connection"
-    },
-    {
-      "label": "calcular_delays()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L47",
-      "community": 1,
-      "norm_label": "calcular_delays()",
-      "id": "dashboard_app_calcular_delays"
-    },
-    {
-      "label": "serve_index()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L70",
-      "community": 1,
-      "norm_label": "serve_index()",
-      "id": "dashboard_app_serve_index"
-    },
-    {
-      "label": "serve_mesa()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L74",
-      "community": 1,
-      "norm_label": "serve_mesa()",
-      "id": "dashboard_app_serve_mesa"
-    },
-    {
-      "label": "serve_analisis()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L78",
-      "community": 1,
-      "norm_label": "serve_analisis()",
-      "id": "dashboard_app_serve_analisis"
-    },
-    {
-      "label": "get_mesas()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L83",
-      "community": 1,
-      "norm_label": "get_mesas()",
-      "id": "dashboard_app_get_mesas"
-    },
-    {
-      "label": "get_overview()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L88",
-      "community": 1,
-      "norm_label": "get_overview()",
-      "id": "dashboard_app_get_overview"
-    },
-    {
-      "label": "get_data()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L162",
-      "community": 1,
-      "norm_label": "get_data()",
-      "id": "dashboard_app_get_data"
-    },
-    {
-      "label": "get_backtest()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L218",
-      "community": 1,
-      "norm_label": "get_backtest()",
-      "id": "dashboard_app_get_backtest"
-    },
-    {
-      "label": "get_backtest_color()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L248",
-      "community": 1,
-      "norm_label": "get_backtest_color()",
-      "id": "dashboard_app_get_backtest_color"
-    },
-    {
-      "label": "get_backtest_number()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L279",
-      "community": 1,
-      "norm_label": "get_backtest_number()",
-      "id": "dashboard_app_get_backtest_number"
-    },
-    {
-      "label": "get_analisis_global()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L310",
-      "community": 1,
-      "norm_label": "get_analisis_global()",
-      "id": "dashboard_app_get_analisis_global"
-    },
-    {
-      "label": "get_signal_detail()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L363",
-      "community": 1,
-      "norm_label": "get_signal_detail()",
-      "id": "dashboard_app_get_signal_detail"
-    },
-    {
-      "label": "get_tunnel()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L424",
-      "community": 1,
-      "norm_label": "get_tunnel()",
-      "id": "dashboard_app_get_tunnel"
-    },
-    {
-      "label": "Lee el threshold de los datos guardados por la GUI. Fallback al .env",
-      "file_type": "rationale",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L17",
-      "community": 1,
-      "norm_label": "lee el threshold de los datos guardados por la gui. fallback al .env",
-      "id": "dashboard_app_rationale_17"
-    },
-    {
-      "label": "Calcula los delays de docenas y columnas para una tabla dada (USANDO LOGIC COMPA",
-      "file_type": "rationale",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L48",
-      "community": 1,
-      "norm_label": "calcula los delays de docenas y columnas para una tabla dada (usando logic compa",
-      "id": "dashboard_app_rationale_48"
-    },
-    {
-      "label": "Retorna un resumen r\u00e1pido de TODAS las mesas: delay m\u00e1ximo y alertas.",
-      "file_type": "rationale",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L89",
-      "community": 1,
-      "norm_label": "retorna un resumen rapido de todas las mesas: delay maximo y alertas.",
-      "id": "dashboard_app_rationale_89"
-    },
-    {
-      "label": "Historial de rachas de color completadas para una mesa.",
-      "file_type": "rationale",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L249",
-      "community": 1,
-      "norm_label": "historial de rachas de color completadas para una mesa.",
-      "id": "dashboard_app_rationale_249"
-    },
-    {
-      "label": "Historial de retrasos de n\u00fameros individuales completados para una mesa.",
-      "file_type": "rationale",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L280",
-      "community": 1,
-      "norm_label": "historial de retrasos de numeros individuales completados para una mesa.",
-      "id": "dashboard_app_rationale_280"
-    },
-    {
-      "label": "Devuelve las jugadas individuales que componen una se\u00f1al espec\u00edfica.",
-      "file_type": "rationale",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L364",
-      "community": 1,
-      "norm_label": "devuelve las jugadas individuales que componen una senal especifica.",
-      "id": "dashboard_app_rationale_364"
-    },
-    {
-      "label": "Retorna el link actual de Cloudflare si est\u00e1 disponible",
-      "file_type": "rationale",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L425",
-      "community": 1,
-      "norm_label": "retorna el link actual de cloudflare si esta disponible",
-      "id": "dashboard_app_rationale_425"
-    },
-    {
-      "label": "analisis.js",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/static/analisis.js",
-      "source_location": "L1",
-      "community": 8,
-      "norm_label": "analisis.js",
-      "id": "static_analisis"
-    },
-    {
-      "label": "globalData",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/static/analisis.js",
-      "source_location": "L6",
-      "community": 8,
-      "norm_label": "globaldata",
-      "id": "static_analisis_globaldata"
-    },
-    {
-      "label": "setupGlobalTabs()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/static/analisis.js",
-      "source_location": "L12",
-      "community": 8,
-      "norm_label": "setupglobaltabs()",
-      "id": "static_analisis_setupglobaltabs"
-    },
-    {
-      "label": "updateViewContext()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/static/analisis.js",
-      "source_location": "L52",
-      "community": 8,
-      "norm_label": "updateviewcontext()",
-      "id": "static_analisis_updateviewcontext"
-    },
-    {
-      "label": "fetchGlobalData()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/static/analisis.js",
-      "source_location": "L97",
-      "community": 8,
-      "norm_label": "fetchglobaldata()",
-      "id": "static_analisis_fetchglobaldata"
-    },
-    {
-      "label": "renderTableBreakdown()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/static/analisis.js",
-      "source_location": "L123",
-      "community": 8,
-      "norm_label": "rendertablebreakdown()",
-      "id": "static_analisis_rendertablebreakdown"
-    },
-    {
-      "label": "processAndRender()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/static/analisis.js",
-      "source_location": "L154",
-      "community": 8,
-      "norm_label": "processandrender()",
-      "id": "static_analisis_processandrender"
-    },
-    {
-      "label": "renderCharts()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/static/analisis.js",
-      "source_location": "L288",
-      "community": 8,
-      "norm_label": "rendercharts()",
-      "id": "static_analisis_rendercharts"
-    },
-    {
-      "label": "setupModal()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/static/analisis.js",
-      "source_location": "L406",
-      "community": 8,
-      "norm_label": "setupmodal()",
-      "id": "static_analisis_setupmodal"
-    },
-    {
-      "label": "openSignalDetail()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/static/analisis.js",
-      "source_location": "L421",
-      "community": 8,
-      "norm_label": "opensignaldetail()",
-      "id": "static_analisis_opensignaldetail"
-    },
-    {
-      "label": "formatName()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/dashboard/static/analisis.js",
-      "source_location": "L518",
-      "community": 8,
-      "norm_label": "formatname()",
-      "id": "static_analisis_formatname"
     },
     {
       "label": "app.js",
@@ -1858,195 +2047,6 @@
       "id": "bot_ruleta_lobby_rationale_228"
     },
     {
-      "label": "logic.py",
-      "file_type": "code",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L1",
-      "community": 1,
-      "norm_label": "logic.py",
-      "id": "bot_ruleta_logic"
-    },
-    {
-      "label": "compute_delays()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L10",
-      "community": 1,
-      "norm_label": "compute_delays()",
-      "id": "bot_ruleta_logic_compute_delays"
-    },
-    {
-      "label": "check_and_notify()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L67",
-      "community": 1,
-      "norm_label": "check_and_notify()",
-      "id": "bot_ruleta_logic_check_and_notify"
-    },
-    {
-      "label": "send_telegram_msg()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L138",
-      "community": 3,
-      "norm_label": "send_telegram_msg()",
-      "id": "bot_ruleta_logic_send_telegram_msg"
-    },
-    {
-      "label": "compute_color_streak()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L156",
-      "community": 1,
-      "norm_label": "compute_color_streak()",
-      "id": "bot_ruleta_logic_compute_color_streak"
-    },
-    {
-      "label": "check_and_notify_color()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L206",
-      "community": 1,
-      "norm_label": "check_and_notify_color()",
-      "id": "bot_ruleta_logic_check_and_notify_color"
-    },
-    {
-      "label": "sync_backtest()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L267",
-      "community": 4,
-      "norm_label": "sync_backtest()",
-      "id": "bot_ruleta_logic_sync_backtest"
-    },
-    {
-      "label": "sync_color_backtest()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L390",
-      "community": 4,
-      "norm_label": "sync_color_backtest()",
-      "id": "bot_ruleta_logic_sync_color_backtest"
-    },
-    {
-      "label": "compute_number_delays()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L491",
-      "community": 1,
-      "norm_label": "compute_number_delays()",
-      "id": "bot_ruleta_logic_compute_number_delays"
-    },
-    {
-      "label": "check_and_notify_number()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L541",
-      "community": 1,
-      "norm_label": "check_and_notify_number()",
-      "id": "bot_ruleta_logic_check_and_notify_number"
-    },
-    {
-      "label": "sync_number_backtest()",
-      "file_type": "code",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L598",
-      "community": 4,
-      "norm_label": "sync_number_backtest()",
-      "id": "bot_ruleta_logic_sync_number_backtest"
-    },
-    {
-      "label": "Calcula los delays de docenas y columnas dado una lista de n\u00fameros o diccionario",
-      "file_type": "rationale",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L11",
-      "community": 1,
-      "norm_label": "calcula los delays de docenas y columnas dado una lista de numeros o diccionario",
-      "id": "bot_ruleta_logic_rationale_11"
-    },
-    {
-      "label": "Verifica si hay delays que superen el umbral y env\u00eda notificaci\u00f3n a Telegram.",
-      "file_type": "rationale",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L68",
-      "community": 1,
-      "norm_label": "verifica si hay delays que superen el umbral y envia notificacion a telegram.",
-      "id": "bot_ruleta_logic_rationale_68"
-    },
-    {
-      "label": "Env\u00eda mensaje raw a Telegram.",
-      "file_type": "rationale",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L139",
-      "community": 3,
-      "norm_label": "envia mensaje raw a telegram.",
-      "id": "bot_ruleta_logic_rationale_139"
-    },
-    {
-      "label": "Calcula la racha actual de un color (Rojo o Negro) bas\u00e1ndose en los n\u00fameros reci",
-      "file_type": "rationale",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L157",
-      "community": 1,
-      "norm_label": "calcula la racha actual de un color (rojo o negro) basandose en los numeros reci",
-      "id": "bot_ruleta_logic_rationale_157"
-    },
-    {
-      "label": "Si la racha de color supera el umbral, env\u00eda notificaci\u00f3n a Telegram.     Usa co",
-      "file_type": "rationale",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L207",
-      "community": 1,
-      "norm_label": "si la racha de color supera el umbral, envia notificacion a telegram.     usa co",
-      "id": "bot_ruleta_logic_rationale_207"
-    },
-    {
-      "label": "Sincroniza el historial de backtesting para una mesa.     Solo procesa los giros",
-      "file_type": "rationale",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L268",
-      "community": 4,
-      "norm_label": "sincroniza el historial de backtesting para una mesa.     solo procesa los giros",
-      "id": "bot_ruleta_logic_rationale_268"
-    },
-    {
-      "label": "Sincroniza el historial de rachas de color para una mesa.     Detecta rachas de",
-      "file_type": "rationale",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L391",
-      "community": 4,
-      "norm_label": "sincroniza el historial de rachas de color para una mesa.     detecta rachas de",
-      "id": "bot_ruleta_logic_rationale_391"
-    },
-    {
-      "label": "Calcula los delays (giros sin salir) para cada n\u00famero individual 0-36.     numer",
-      "file_type": "rationale",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L492",
-      "community": 1,
-      "norm_label": "calcula los delays (giros sin salir) para cada numero individual 0-36.     numer",
-      "id": "bot_ruleta_logic_rationale_492"
-    },
-    {
-      "label": "Verifica si hay n\u00fameros individuales que superen el umbral de retraso.     Env\u00eda",
-      "file_type": "rationale",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L542",
-      "community": 1,
-      "norm_label": "verifica si hay numeros individuales que superen el umbral de retraso.     envia",
-      "id": "bot_ruleta_logic_rationale_542"
-    },
-    {
-      "label": "Sincroniza el historial de backtesting para retrasos de n\u00fameros individuales.",
-      "file_type": "rationale",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L599",
-      "community": 4,
-      "norm_label": "sincroniza el historial de backtesting para retrasos de numeros individuales.",
-      "id": "bot_ruleta_logic_rationale_599"
-    },
-    {
       "label": "run.py",
       "file_type": "code",
       "source_file": "bot_ruleta/run.py",
@@ -2401,164 +2401,6 @@
       "target": "plugins_graphify_graphifyplugin"
     },
     {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/build_exe.py",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_build_exe",
-      "target": "bot_ruleta_build_exe_build"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/build_exe.py",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_build_exe_rationale_1",
-      "target": "bot_ruleta_build_exe"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/config.py",
-      "source_location": "L132",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_config",
-      "target": "bot_ruleta_config_get_color_streak_threshold"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/config.py",
-      "source_location": "L164",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_config",
-      "target": "bot_ruleta_config_get_number_delay_threshold"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/config.py",
-      "source_location": "L70",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_config",
-      "target": "bot_ruleta_config_load_credentials"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/config.py",
-      "source_location": "L63",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_config",
-      "target": "bot_ruleta_config_set_runtime_config"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/config.py",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_config_rationale_1",
-      "target": "bot_ruleta_config"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/db.py",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_db",
-      "target": "bot_ruleta_config"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/driver.py",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_driver",
-      "target": "bot_ruleta_config"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/gui_app.py",
-      "source_location": "L17",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_gui_app",
-      "target": "bot_ruleta_config"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/launcher.py",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_launcher",
-      "target": "bot_ruleta_config"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/lobby.py",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_lobby",
-      "target": "bot_ruleta_config"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic",
-      "target": "bot_ruleta_config"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/scan_lobby_ids.py",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_scan_lobby_ids",
-      "target": "bot_ruleta_config"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/scanner.py",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_scanner",
-      "target": "bot_ruleta_config"
-    },
-    {
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -2568,267 +2410,6 @@
       "confidence_score": 1.0,
       "source": "dashboard_app",
       "target": "bot_ruleta_config"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/config.py",
-      "source_location": "L64",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_config_rationale_64",
-      "target": "bot_ruleta_config_set_runtime_config"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/gui_app.py",
-      "source_location": "L17",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_gui_app",
-      "target": "bot_ruleta_config_set_runtime_config"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "bot_ruleta/gui_app.py",
-      "source_location": "L534",
-      "weight": 1.0,
-      "source": "bot_ruleta_gui_app_loginscreen_start_bot",
-      "target": "bot_ruleta_config_set_runtime_config"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/config.py",
-      "source_location": "L71",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_config_rationale_71",
-      "target": "bot_ruleta_config_load_credentials"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/debug_logger.py",
-      "source_location": "L257",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_debug_logger",
-      "target": "bot_ruleta_config_load_credentials"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/debug_logger.py",
-      "source_location": "L258",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_debug_logger_run_diagnostics",
-      "target": "bot_ruleta_config_load_credentials"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/debug_logger.py",
-      "source_location": "L435",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_debug_logger_send_crash_report_telegram",
-      "target": "bot_ruleta_config_load_credentials"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/gui_app.py",
-      "source_location": "L17",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_gui_app",
-      "target": "bot_ruleta_config_load_credentials"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "bot_ruleta/gui_app.py",
-      "source_location": "L168",
-      "weight": 1.0,
-      "source": "bot_ruleta_gui_app_rouletteapp_cloudflared_watchdog",
-      "target": "bot_ruleta_config_load_credentials"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/launcher.py",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_launcher",
-      "target": "bot_ruleta_config_load_credentials"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/launcher.py",
-      "source_location": "L115",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_launcher_update_tunnel_url",
-      "target": "bot_ruleta_config_load_credentials"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic",
-      "target": "bot_ruleta_config_load_credentials"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L76",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic_check_and_notify",
-      "target": "bot_ruleta_config_load_credentials"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L222",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic_check_and_notify_color",
-      "target": "bot_ruleta_config_load_credentials"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L557",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic_check_and_notify_number",
-      "target": "bot_ruleta_config_load_credentials"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/scan_lobby_ids.py",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_scan_lobby_ids",
-      "target": "bot_ruleta_config_load_credentials"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/scan_lobby_ids.py",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_scan_lobby_ids_main",
-      "target": "bot_ruleta_config_load_credentials"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/scanner.py",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_scanner",
-      "target": "bot_ruleta_config_load_credentials"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/scanner.py",
-      "source_location": "L361",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_scanner_run_bot",
-      "target": "bot_ruleta_config_load_credentials"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "bot_ruleta_config_load_credentials"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_get_dashboard_threshold",
-      "target": "bot_ruleta_config_load_credentials"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/config.py",
-      "source_location": "L133",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_config_rationale_133",
-      "target": "bot_ruleta_config_get_color_streak_threshold"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L213",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic",
-      "target": "bot_ruleta_config_get_color_streak_threshold"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L217",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic_check_and_notify_color",
-      "target": "bot_ruleta_config_get_color_streak_threshold"
     },
     {
       "relation": "imports",
@@ -2842,82 +2423,6 @@
       "target": "bot_ruleta_config_get_color_streak_threshold"
     },
     {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L312",
-      "weight": 1.0,
-      "source": "dashboard_app_get_analisis_global",
-      "target": "bot_ruleta_config_get_color_streak_threshold"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L254",
-      "weight": 1.0,
-      "source": "dashboard_app_get_backtest_color",
-      "target": "bot_ruleta_config_get_color_streak_threshold"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L208",
-      "weight": 1.0,
-      "source": "dashboard_app_get_data",
-      "target": "bot_ruleta_config_get_color_streak_threshold"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L151",
-      "weight": 1.0,
-      "source": "dashboard_app_get_overview",
-      "target": "bot_ruleta_config_get_color_streak_threshold"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/config.py",
-      "source_location": "L165",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_config_rationale_165",
-      "target": "bot_ruleta_config_get_number_delay_threshold"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L549",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic",
-      "target": "bot_ruleta_config_get_number_delay_threshold"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L551",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic_check_and_notify_number",
-      "target": "bot_ruleta_config_get_number_delay_threshold"
-    },
-    {
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
@@ -2929,48 +2434,15 @@
       "target": "bot_ruleta_config_get_number_delay_threshold"
     },
     {
-      "relation": "calls",
-      "context": "call",
+      "relation": "imports",
+      "context": "import",
       "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
       "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L314",
+      "source_location": "L12",
       "weight": 1.0,
-      "source": "dashboard_app_get_analisis_global",
-      "target": "bot_ruleta_config_get_number_delay_threshold"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
       "confidence_score": 1.0,
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L285",
-      "weight": 1.0,
-      "source": "dashboard_app_get_backtest_number",
-      "target": "bot_ruleta_config_get_number_delay_threshold"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L198",
-      "weight": 1.0,
-      "source": "dashboard_app_get_data",
-      "target": "bot_ruleta_config_get_number_delay_threshold"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L131",
-      "weight": 1.0,
-      "source": "dashboard_app_get_overview",
-      "target": "bot_ruleta_config_get_number_delay_threshold"
+      "source": "dashboard_app",
+      "target": "bot_ruleta_config_load_credentials"
     },
     {
       "relation": "imports",
@@ -3160,6 +2632,17 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_get_dashboard_threshold",
+      "target": "bot_ruleta_config_load_credentials"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
       "source_location": "L175",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -3258,6 +2741,17 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L355",
+      "weight": 1.0,
+      "source": "dashboard_app_get_analisis_global",
+      "target": "dashboard_app_calcular_delays",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
       "source_location": "L170",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -3286,6 +2780,28 @@
       "target": "dashboard_app_calcular_delays"
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L151",
+      "weight": 1.0,
+      "source": "dashboard_app_get_overview",
+      "target": "bot_ruleta_config_get_color_streak_threshold"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L131",
+      "weight": 1.0,
+      "source": "dashboard_app_get_overview",
+      "target": "bot_ruleta_config_get_number_delay_threshold"
+    },
+    {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "bot_ruleta/dashboard/app.py",
@@ -3294,6 +2810,39 @@
       "confidence_score": 1.0,
       "source": "dashboard_app_rationale_89",
       "target": "dashboard_app_get_overview"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L208",
+      "weight": 1.0,
+      "source": "dashboard_app_get_data",
+      "target": "bot_ruleta_config_get_color_streak_threshold"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L198",
+      "weight": 1.0,
+      "source": "dashboard_app_get_data",
+      "target": "bot_ruleta_config_get_number_delay_threshold"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L254",
+      "weight": 1.0,
+      "source": "dashboard_app_get_backtest_color",
+      "target": "bot_ruleta_config_get_color_streak_threshold"
     },
     {
       "relation": "rationale_for",
@@ -3306,6 +2855,17 @@
       "target": "dashboard_app_get_backtest_color"
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L285",
+      "weight": 1.0,
+      "source": "dashboard_app_get_backtest_number",
+      "target": "bot_ruleta_config_get_number_delay_threshold"
+    },
+    {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "bot_ruleta/dashboard/app.py",
@@ -3316,24 +2876,46 @@
       "target": "dashboard_app_get_backtest_number"
     },
     {
-      "relation": "rationale_for",
+      "relation": "calls",
+      "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L364",
-      "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "dashboard_app_rationale_364",
-      "target": "dashboard_app_get_signal_detail"
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L312",
+      "weight": 1.0,
+      "source": "dashboard_app_get_analisis_global",
+      "target": "bot_ruleta_config_get_color_streak_threshold"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L314",
+      "weight": 1.0,
+      "source": "dashboard_app_get_analisis_global",
+      "target": "bot_ruleta_config_get_number_delay_threshold"
     },
     {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L425",
+      "source_location": "L378",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_rationale_425",
-      "target": "dashboard_app_get_tunnel"
+      "source": "dashboard_app_rationale_378",
+      "target": "dashboard_app_get_signal_detail",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L439",
+      "weight": 1.0,
+      "source": "dashboard_app_rationale_439",
+      "target": "dashboard_app_get_tunnel",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -3500,6 +3082,811 @@
       "confidence_score": 1.0,
       "source": "static_analisis_opensignaldetail",
       "target": "static_analisis_formatname"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/gui_app.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_gui_app",
+      "target": "bot_ruleta_logic"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/launcher.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_launcher",
+      "target": "bot_ruleta_logic"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic",
+      "target": "bot_ruleta_config"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L213",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic",
+      "target": "bot_ruleta_config_get_color_streak_threshold"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L549",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic",
+      "target": "bot_ruleta_config_get_number_delay_threshold"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic",
+      "target": "bot_ruleta_config_load_credentials"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L265",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic",
+      "target": "bot_ruleta_db"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L265",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic",
+      "target": "bot_ruleta_db_get_connection"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L67",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic",
+      "target": "bot_ruleta_logic_check_and_notify"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L206",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic",
+      "target": "bot_ruleta_logic_check_and_notify_color"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L541",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic",
+      "target": "bot_ruleta_logic_check_and_notify_number"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L156",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic",
+      "target": "bot_ruleta_logic_compute_color_streak"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic",
+      "target": "bot_ruleta_logic_compute_delays"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L491",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic",
+      "target": "bot_ruleta_logic_compute_number_delays"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L138",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic",
+      "target": "bot_ruleta_logic_send_telegram_msg"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L267",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic",
+      "target": "bot_ruleta_logic_sync_backtest"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L390",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic",
+      "target": "bot_ruleta_logic_sync_color_backtest"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L598",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic",
+      "target": "bot_ruleta_logic_sync_number_backtest"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/scanner.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_scanner",
+      "target": "bot_ruleta_logic"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic_rationale_11",
+      "target": "bot_ruleta_logic_compute_delays"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L76",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic_check_and_notify",
+      "target": "bot_ruleta_config_load_credentials"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L123",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic_check_and_notify",
+      "target": "bot_ruleta_logic_send_telegram_msg"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L68",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic_rationale_68",
+      "target": "bot_ruleta_logic_check_and_notify"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/gui_app.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_gui_app",
+      "target": "bot_ruleta_logic_send_telegram_msg"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bot_ruleta/gui_app.py",
+      "source_location": "L174",
+      "weight": 1.0,
+      "source": "bot_ruleta_gui_app_rouletteapp_cloudflared_watchdog",
+      "target": "bot_ruleta_logic_send_telegram_msg"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/launcher.py",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_launcher",
+      "target": "bot_ruleta_logic_send_telegram_msg"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/launcher.py",
+      "source_location": "L176",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_launcher_cloudflared_watchdog",
+      "target": "bot_ruleta_logic_send_telegram_msg"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/launcher.py",
+      "source_location": "L127",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_launcher_update_tunnel_url",
+      "target": "bot_ruleta_logic_send_telegram_msg"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L259",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic_check_and_notify_color",
+      "target": "bot_ruleta_logic_send_telegram_msg"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L593",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic_check_and_notify_number",
+      "target": "bot_ruleta_logic_send_telegram_msg"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L139",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic_rationale_139",
+      "target": "bot_ruleta_logic_send_telegram_msg"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L157",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic_rationale_157",
+      "target": "bot_ruleta_logic_compute_color_streak"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L217",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic_check_and_notify_color",
+      "target": "bot_ruleta_config_get_color_streak_threshold"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L222",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic_check_and_notify_color",
+      "target": "bot_ruleta_config_load_credentials"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L207",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic_rationale_207",
+      "target": "bot_ruleta_logic_check_and_notify_color"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L268",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic_rationale_268",
+      "target": "bot_ruleta_logic_sync_backtest"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L274",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic_sync_backtest",
+      "target": "bot_ruleta_db_get_connection"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L391",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic_rationale_391",
+      "target": "bot_ruleta_logic_sync_color_backtest"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L396",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic_sync_color_backtest",
+      "target": "bot_ruleta_db_get_connection"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L492",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic_rationale_492",
+      "target": "bot_ruleta_logic_compute_number_delays"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L551",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic_check_and_notify_number",
+      "target": "bot_ruleta_config_get_number_delay_threshold"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L557",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic_check_and_notify_number",
+      "target": "bot_ruleta_config_load_credentials"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L542",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic_rationale_542",
+      "target": "bot_ruleta_logic_check_and_notify_number"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L599",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic_rationale_599",
+      "target": "bot_ruleta_logic_sync_number_backtest"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/logic.py",
+      "source_location": "L603",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_logic_sync_number_backtest",
+      "target": "bot_ruleta_db_get_connection"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/build_exe.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_build_exe",
+      "target": "bot_ruleta_build_exe_build"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/build_exe.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_build_exe_rationale_1",
+      "target": "bot_ruleta_build_exe"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/config.py",
+      "source_location": "L132",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_config",
+      "target": "bot_ruleta_config_get_color_streak_threshold"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/config.py",
+      "source_location": "L164",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_config",
+      "target": "bot_ruleta_config_get_number_delay_threshold"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/config.py",
+      "source_location": "L70",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_config",
+      "target": "bot_ruleta_config_load_credentials"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/config.py",
+      "source_location": "L63",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_config",
+      "target": "bot_ruleta_config_set_runtime_config"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/config.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_config_rationale_1",
+      "target": "bot_ruleta_config"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/db.py",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_db",
+      "target": "bot_ruleta_config"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/driver.py",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_driver",
+      "target": "bot_ruleta_config"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/gui_app.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_gui_app",
+      "target": "bot_ruleta_config"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/launcher.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_launcher",
+      "target": "bot_ruleta_config"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/lobby.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_lobby",
+      "target": "bot_ruleta_config"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/scan_lobby_ids.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_scan_lobby_ids",
+      "target": "bot_ruleta_config"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/scanner.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_scanner",
+      "target": "bot_ruleta_config"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/config.py",
+      "source_location": "L64",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_config_rationale_64",
+      "target": "bot_ruleta_config_set_runtime_config"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/gui_app.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_gui_app",
+      "target": "bot_ruleta_config_set_runtime_config"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bot_ruleta/gui_app.py",
+      "source_location": "L534",
+      "weight": 1.0,
+      "source": "bot_ruleta_gui_app_loginscreen_start_bot",
+      "target": "bot_ruleta_config_set_runtime_config"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/config.py",
+      "source_location": "L71",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_config_rationale_71",
+      "target": "bot_ruleta_config_load_credentials"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/debug_logger.py",
+      "source_location": "L257",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_debug_logger",
+      "target": "bot_ruleta_config_load_credentials"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/debug_logger.py",
+      "source_location": "L258",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_debug_logger_run_diagnostics",
+      "target": "bot_ruleta_config_load_credentials"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/debug_logger.py",
+      "source_location": "L435",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_debug_logger_send_crash_report_telegram",
+      "target": "bot_ruleta_config_load_credentials"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/gui_app.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_gui_app",
+      "target": "bot_ruleta_config_load_credentials"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bot_ruleta/gui_app.py",
+      "source_location": "L168",
+      "weight": 1.0,
+      "source": "bot_ruleta_gui_app_rouletteapp_cloudflared_watchdog",
+      "target": "bot_ruleta_config_load_credentials"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/launcher.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_launcher",
+      "target": "bot_ruleta_config_load_credentials"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/launcher.py",
+      "source_location": "L115",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_launcher_update_tunnel_url",
+      "target": "bot_ruleta_config_load_credentials"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/scan_lobby_ids.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_scan_lobby_ids",
+      "target": "bot_ruleta_config_load_credentials"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/scan_lobby_ids.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_scan_lobby_ids_main",
+      "target": "bot_ruleta_config_load_credentials"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/scanner.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_scanner",
+      "target": "bot_ruleta_config_load_credentials"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/scanner.py",
+      "source_location": "L361",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_scanner_run_bot",
+      "target": "bot_ruleta_config_load_credentials"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/config.py",
+      "source_location": "L133",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_config_rationale_133",
+      "target": "bot_ruleta_config_get_color_streak_threshold"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/config.py",
+      "source_location": "L165",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_config_rationale_165",
+      "target": "bot_ruleta_config_get_number_delay_threshold"
     },
     {
       "relation": "contains",
@@ -4018,17 +4405,6 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L265",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic",
-      "target": "bot_ruleta_db"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L18",
       "weight": 1.0,
@@ -4099,50 +4475,6 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "bot_ruleta_db_rationale_22",
-      "target": "bot_ruleta_db_get_connection"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L265",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic",
-      "target": "bot_ruleta_db_get_connection"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L274",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic_sync_backtest",
-      "target": "bot_ruleta_db_get_connection"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L396",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic_sync_color_backtest",
-      "target": "bot_ruleta_db_get_connection"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L603",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic_sync_number_backtest",
       "target": "bot_ruleta_db_get_connection"
     },
     {
@@ -5534,28 +5866,6 @@
       "context": "import",
       "confidence": "EXTRACTED",
       "source_file": "bot_ruleta/gui_app.py",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_gui_app",
-      "target": "bot_ruleta_logic"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/gui_app.py",
-      "source_location": "L21",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_gui_app",
-      "target": "bot_ruleta_logic_send_telegram_msg"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L19",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5835,17 +6145,6 @@
       "weight": 1.0,
       "source": "bot_ruleta_gui_app_rouletteapp_cloudflared_watchdog",
       "target": "bot_ruleta_launcher_start_cloudflared"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "bot_ruleta/gui_app.py",
-      "source_location": "L174",
-      "weight": 1.0,
-      "source": "bot_ruleta_gui_app_rouletteapp_cloudflared_watchdog",
-      "target": "bot_ruleta_logic_send_telegram_msg"
     },
     {
       "relation": "method",
@@ -6375,28 +6674,6 @@
       "target": "bot_ruleta_launcher_update_tunnel_url"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/launcher.py",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_launcher",
-      "target": "bot_ruleta_logic"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/launcher.py",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_launcher",
-      "target": "bot_ruleta_logic_send_telegram_msg"
-    },
-    {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
@@ -6512,28 +6789,6 @@
       "confidence_score": 1.0,
       "source": "bot_ruleta_launcher_rationale_98",
       "target": "bot_ruleta_launcher_update_tunnel_url"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/launcher.py",
-      "source_location": "L127",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_launcher_update_tunnel_url",
-      "target": "bot_ruleta_logic_send_telegram_msg"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/launcher.py",
-      "source_location": "L176",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_launcher_cloudflared_watchdog",
-      "target": "bot_ruleta_logic_send_telegram_msg"
     },
     {
       "relation": "rationale_for",
@@ -6754,250 +7009,6 @@
       "confidence_score": 1.0,
       "source": "bot_ruleta_scanner_run_single_session",
       "target": "bot_ruleta_lobby_map_tables_dynamic"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L67",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic",
-      "target": "bot_ruleta_logic_check_and_notify"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L206",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic",
-      "target": "bot_ruleta_logic_check_and_notify_color"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L541",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic",
-      "target": "bot_ruleta_logic_check_and_notify_number"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L156",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic",
-      "target": "bot_ruleta_logic_compute_color_streak"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic",
-      "target": "bot_ruleta_logic_compute_delays"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L491",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic",
-      "target": "bot_ruleta_logic_compute_number_delays"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L138",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic",
-      "target": "bot_ruleta_logic_send_telegram_msg"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L267",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic",
-      "target": "bot_ruleta_logic_sync_backtest"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L390",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic",
-      "target": "bot_ruleta_logic_sync_color_backtest"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L598",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic",
-      "target": "bot_ruleta_logic_sync_number_backtest"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/scanner.py",
-      "source_location": "L19",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_scanner",
-      "target": "bot_ruleta_logic"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic_rationale_11",
-      "target": "bot_ruleta_logic_compute_delays"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L123",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic_check_and_notify",
-      "target": "bot_ruleta_logic_send_telegram_msg"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L68",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic_rationale_68",
-      "target": "bot_ruleta_logic_check_and_notify"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L259",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic_check_and_notify_color",
-      "target": "bot_ruleta_logic_send_telegram_msg"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L593",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic_check_and_notify_number",
-      "target": "bot_ruleta_logic_send_telegram_msg"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L139",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic_rationale_139",
-      "target": "bot_ruleta_logic_send_telegram_msg"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L157",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic_rationale_157",
-      "target": "bot_ruleta_logic_compute_color_streak"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L207",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic_rationale_207",
-      "target": "bot_ruleta_logic_check_and_notify_color"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L268",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic_rationale_268",
-      "target": "bot_ruleta_logic_sync_backtest"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L391",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic_rationale_391",
-      "target": "bot_ruleta_logic_sync_color_backtest"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L492",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic_rationale_492",
-      "target": "bot_ruleta_logic_compute_number_delays"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L542",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic_rationale_542",
-      "target": "bot_ruleta_logic_check_and_notify_number"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/logic.py",
-      "source_location": "L599",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "bot_ruleta_logic_rationale_599",
-      "target": "bot_ruleta_logic_sync_number_backtest"
     },
     {
       "relation": "imports_from",
@@ -7510,5 +7521,6 @@
       "target": "publish_upload_asset"
     }
   ],
-  "hyperedges": []
+  "hyperedges": [],
+  "built_at_commit": "c185986e23b3bcbf36580e5af07512a1ba883ab8"
 }
