@@ -16,7 +16,10 @@ from bot_ruleta.paths import get_data_dir
 DATA_DIR = get_data_dir()
 TUNNEL_FILE = os.path.join(DATA_DIR, "tunnel.txt")
 
-DEV_MODE = os.environ.get("USE_RANDOM_TUNNEL", "true").lower() == "true"
+DEV_MODE = True  # Cambia a False para compilar .exe de produccion (botstake.shop)
+
+if "USE_RANDOM_TUNNEL" in os.environ:
+    DEV_MODE = os.environ["USE_RANDOM_TUNNEL"].lower() == "true"
 
 _URL_PATTERN = re.compile(r"https://[a-zA-Z0-9-]+\.trycloudflare\.com")
 
