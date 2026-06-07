@@ -72,7 +72,7 @@ def run_diagnostics() -> str:
     env_path = os.path.join(os.path.dirname(_BASE_DIR), ".env")
     if os.path.exists(env_path):
         try:
-            from bot_ruleta.config import load_credentials
+            from bot_ruleta.credentials import load_credentials
             email, password, tg_token, tg_chat_id, threshold, headless = load_credentials()
             email_masked = email[:3] + "***" + email[email.index("@"):] if "@" in email else "???"
             _add(".env:", "✅ Encontrado")

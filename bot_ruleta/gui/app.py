@@ -13,7 +13,7 @@ import customtkinter as ctk
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from bot_ruleta.config import load_credentials
+from bot_ruleta.credentials import load_credentials
 from bot_ruleta.debug_logger import attach_gui_queue, get_logger
 from bot_ruleta.launcher import _start_cloudflared, get_cf_env_vars, TUNNEL_FILE
 from bot_ruleta.logic import send_telegram_msg

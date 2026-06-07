@@ -7,7 +7,7 @@ import time
 
 # Permitir cargar módulos del proyecto compartidos
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from bot_ruleta.config import load_credentials
+from bot_ruleta.credentials import load_credentials
 from bot_ruleta.logic import send_telegram_msg
 from bot_ruleta.debug_logger import run_diagnostics, get_logger
 

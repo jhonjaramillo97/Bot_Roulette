@@ -4,7 +4,7 @@ from PIL import Image
 
 from bot_ruleta.debug_logger import get_logger
 from bot_ruleta.gui_credentials import save_credentials, load_saved_credentials, delete_saved_credentials
-from bot_ruleta.config import set_runtime_config
+from bot_ruleta.credentials import set_runtime_config
 from bot_ruleta.debug_logger import set_diagnostics
 
 log = get_logger("gui")

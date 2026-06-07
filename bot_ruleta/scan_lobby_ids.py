@@ -2,7 +2,7 @@ import time
 from selenium.webdriver.common.by import By
 from bot_ruleta.driver import setup_driver, login_stake
 from bot_ruleta.lobby import ir_al_lobby
-from bot_ruleta.config import load_credentials
+from bot_ruleta.credentials import load_credentials
 
 def main():
     email, password = load_credentials()

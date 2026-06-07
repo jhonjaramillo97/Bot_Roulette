@@ -1,6 +1,6 @@
 import requests
 import time
-from bot_ruleta.config import load_credentials
+from bot_ruleta.credentials import load_credentials
 
 # Cache para evitar spam de notificaciones
 # Key: f"{table_name}_{zone}" -> Value: timestamp de última notificación

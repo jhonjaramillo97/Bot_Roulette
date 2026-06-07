@@ -103,7 +103,7 @@ def generate_crash_report(driver=None, error: Exception = None) -> str | None:
 def _send_crash_report_telegram(zip_path: str, error: Exception = None):
     log = get_logger("crash_report")
     try:
-        from bot_ruleta.config import load_credentials
+        from bot_ruleta.credentials import load_credentials
         _, _, token, chat_id, _, _ = load_credentials()
 
         if not token or not chat_id:

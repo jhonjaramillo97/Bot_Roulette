@@ -8,9 +8,8 @@ import time
 import random
 from selenium.webdriver.common.by import By
 
-from bot_ruleta.config import (
-    TABLES, DATA_DIR, LOBBY_MODE, LOBBY_URL, REDS, load_credentials,
-)
+from bot_ruleta.config import TABLES, DATA_DIR, LOBBY_MODE, LOBBY_URL, REDS
+from bot_ruleta.credentials import load_credentials
 from bot_ruleta.driver import setup_driver, login_stake
 from bot_ruleta.lobby import ir_al_lobby, map_tables_dynamic
 from bot_ruleta.iframe import switch_to_game_iframe
