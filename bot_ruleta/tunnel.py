@@ -15,18 +15,21 @@ from bot_ruleta.paths import get_data_dir
 DATA_DIR = get_data_dir()
 TUNNEL_FILE = os.path.join(DATA_DIR, "tunnel.txt")
 
-DEV_MODE = True
+DEV_MODE = os.environ.get("USE_RANDOM_TUNNEL", "true").lower() == "true"
 
 _URL_PATTERN = re.compile(r"https://[a-zA-Z0-9-]+\.trycloudflare\.com")
 
 
 def get_cf_env_vars():
-    """Retorna el token y dominio de Cloudflare. Si DEV_MODE es True, devuelve None."""
+    """Retorna (token, dominio) de Cloudflare desde variables de entorno.
+    Si DEV_MODE es True, devuelve (None, None) para usar tunel temporal trycloudflare."""
     if DEV_MODE:
         return None, None
 
-    token = "eyJhIjoiNDg0MjBiMDE0MzQ4MzhlNDk2ODAwNzYwOTM1Y2I0ODciLCJ0IjoiYmMxNzAxODMtOWI0NS00Zjg5LWI0ZDItYWQ0MzMwOWNlNGRiIiwicyI6Ik9Ua3hObVF5TkdNdFpUUTFNeTAwT0dSbUxUaGhOemd0TWpJMlpUSTFZell5TldZMiJ9"
-    domain = "botstake.shop"
+    token = os.environ.get("CLOUDFLARE_TOKEN", "")
+    domain = os.environ.get("CLOUDFLARE_DOMAIN", "botstake.shop")
+    if not token:
+        return None, None
     return token, domain
 
 
