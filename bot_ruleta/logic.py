@@ -264,226 +264,249 @@ def check_and_notify_color(table_name, streak_data, history=None):
 from datetime import datetime
 from bot_ruleta.db import get_connection
 
-def sync_backtest(table_name, threshold):
-    """
-    Sincroniza el historial de backtesting para una mesa.
-    Solo procesa los giros nuevos usando un buffer de 'warmup' para mantener precisión.
-    
-    Robusto: guarda eventos activos antes de resetear por gaps y al final del procesamiento.
-    """
-    conn = get_connection()
-    cursor = conn.cursor()
-    
-    # 1. Obtener último estado
-    cursor.execute("SELECT last_game_id FROM sync_state WHERE table_name = ?", (table_name,))
-    row = cursor.fetchone()
-    last_game_id = row[0] if row else 0
-    
-    # 2. Leer giros nuevos + buffer de 100 para inicializar delays
-    warmup = 100
-    cursor.execute(f"SELECT id, numero, timestamp FROM {table_name} WHERE id > ? ORDER BY id ASC", (max(0, last_game_id - warmup),))
-    rows = cursor.fetchall()
-    
-    if not rows:
-        conn.close()
-        return
 
-    delays = {
-        "docena_1": 0, "docena_2": 0, "docena_3": 0,
-        "columna_1": 0, "columna_2": 0, "columna_3": 0
+# ═══════════════════════════════════════════════════════════════════════
+# Motor genérico de sincronización de backtests
+# ═══════════════════════════════════════════════════════════════════════
+
+class _BacktestSyncEngine:
+    """Motor de sincronización incremental compartido por todos los backtests.
+
+    Maneja: conexión a DB, lectura de estado de sincronización, batch con
+    warmup, loop principal con manejo de cadena rota (-1), y guardado de
+    estado incremental. Las subclases solo definen la lógica de dominio:
+    cómo inicializar delays, procesar cada fila y guardar eventos.
+
+    Atributos que la subclase debe definir en _init_state():
+        self.max_id   -- último game_id procesado (se actualiza en el loop)
+    """
+
+    def __init__(self, table_name, threshold, sync_state_table, warmup=100):
+        self.table_name = table_name
+        self.threshold = threshold
+        self.sync_state_table = sync_state_table
+        self.warmup = warmup
+        self.conn = None
+        self.cursor = None
+        self.last_game_id = 0
+
+    # ── setup / teardown ──────────────────────────────────────────
+
+    def _open(self):
+        self.conn = get_connection()
+        self.cursor = self.conn.cursor()
+
+    def _load_state(self):
+        self.cursor.execute(
+            f"SELECT last_game_id FROM {self.sync_state_table} "
+            f"WHERE table_name = ?", (self.table_name,)
+        )
+        row = self.cursor.fetchone()
+        self.last_game_id = row[0] if row else 0
+
+    def _fetch_rows(self, columns):
+        lo = max(0, self.last_game_id - self.warmup)
+        self.cursor.execute(
+            f"SELECT {columns} FROM {self.table_name} "
+            f"WHERE id > ? ORDER BY id ASC", (lo,)
+        )
+        return self.cursor.fetchall()
+
+    def _is_new(self, db_id):
+        return db_id > self.last_game_id
+
+    def _save_state(self):
+        self.cursor.execute(
+            f"REPLACE INTO {self.sync_state_table} (table_name, last_game_id) "
+            f"VALUES (?, ?)", (self.table_name, self.max_id)
+        )
+
+    def _close(self):
+        if self.conn:
+            self.conn.commit()
+            self.conn.close()
+
+    # ── método principal (llamado por las subclases) ────────────────
+
+    def run(self, columns='id, numero, timestamp'):
+        self._open()
+        self._load_state()
+        rows = self._fetch_rows(columns)
+
+        if not rows:
+            self._close()
+            return
+
+        self._init_state()
+        self.max_id = self.last_game_id
+
+        for row in rows:
+            db_id, n = row[0], row[1]
+            extra = row[2:] if len(row) > 2 else ()
+            ts = row[-1]
+            self.max_id = max(self.max_id, db_id)
+            is_new = self._is_new(db_id)
+
+            if n == -1:
+                self._handle_chain_break(ts, is_new)
+                self._init_state()
+                continue
+
+            self._process_row(db_id, n, extra, ts, is_new)
+
+        self._save_state()
+        self._close()
+
+    # ── métodos que las subclases deben implementar ─────────────────
+
+    def _init_state(self):
+        raise NotImplementedError
+
+    def _process_row(self, db_id, n, extra, ts, is_new):
+        raise NotImplementedError
+
+    def _handle_chain_break(self, ts, is_new):
+        raise NotImplementedError
+
+
+# ═══════════════════════════════════════════════════════════════════════
+# Backtest: docenas / columnas
+# ═══════════════════════════════════════════════════════════════════════
+
+class _ZoneBacktestSync(_BacktestSyncEngine):
+    """Sincroniza eventos de retraso de docenas y columnas."""
+
+    _ZONES = {
+        "docena_1": (1, 12), "docena_2": (13, 24), "docena_3": (25, 36),
+        "columna_1": (1, 1), "columna_2": (2, 2), "columna_3": (0, 0),
     }
-    
-    active_events = {}
-    max_id_procesado = last_game_id
-    last_ts_obj = None
-    last_ts_str = None
-    
-    def _flush_active_events(end_timestamp, force_save_warmup=False):
-        """Guarda todos los eventos activos que superaron el threshold."""
-        flushed = []
-        for k in list(active_events.keys()):
-            evt = active_events[k]
-            if delays[k] >= threshold:
-                evt["max_delay"] = max(evt["max_delay"], delays[k])
-                # Siempre guarda si se fuerza (ej. por Cadena Rota -1), o si el evento se generó en esta nueva tanda
-                if force_save_warmup or evt.get("is_new", False):
-                    cursor.execute("""
-                        INSERT INTO backtest_history 
-                        (table_name, zone_name, start_time, end_time, max_delay, threshold_used)
-                        VALUES (?, ?, ?, ?, ?, ?)
-                    """, (table_name, k, evt["start_time"], end_timestamp, evt["max_delay"], threshold))
-                flushed.append(k)
-        for k in flushed:
-            active_events.pop(k, None)
-    
-    for row in rows:
-        db_id, n, ts = row
-        max_id_procesado = max(max_id_procesado, db_id)
-        is_new_row = db_id > last_game_id
-        
-        try:
-            current_ts_obj = datetime.strptime(ts, "%Y-%m-%d %H:%M:%S")
-            last_ts_str = ts
-        except:
-            pass
-            
-        if n == -1:
-            # MARCADOR OFICIAL DE CADENA ROTA
-            # El escáner dictaminó que hubo giros perdidos. 
-            # Guardamos lo acumulado y reseteamos.
-            # force_save_warmup = is_new_row fuerza a guardar incluso los eventos que empezaron en el warmup
-            _flush_active_events(last_ts_str, force_save_warmup=is_new_row)
-            for k in delays: delays[k] = 0
-            active_events.clear()
-            continue
-        
-        if n == 0:
-            for k in delays: delays[k] += 1
-            # Actualizar max_delay si están activos
-            for k in active_events:
-                if delays[k] >= threshold:
-                    active_events[k]["max_delay"] = max(active_events[k]["max_delay"], delays[k])
-        else:
-            zones = {
-                "docena_1": (1 <= n <= 12),
-                "docena_2": (13 <= n <= 24),
-                "docena_3": (25 <= n <= 36),
-                "columna_1": (n % 3 == 1),
-                "columna_2": (n % 3 == 2),
-                "columna_3": (n % 3 == 0),
-            }
-            
-            for k, hits in zones.items():
-                if hits:
-                    if delays[k] >= threshold:
-                        if k in active_events:
-                            evt = active_events.pop(k)
-                            if is_new_row or evt.get("is_new", False):
-                                # Guardar evento completado
-                                cursor.execute("""
-                                    INSERT INTO backtest_history 
-                                    (table_name, zone_name, start_time, end_time, max_delay, threshold_used)
-                                    VALUES (?, ?, ?, ?, ?, ?)
-                                """, (table_name, k, evt["start_time"], ts, evt["max_delay"], threshold))
-                    else:
-                        if k in active_events: active_events.pop(k) # Cleanup
-                            
-                    delays[k] = 0
-                else:
-                    delays[k] += 1
-                    if delays[k] >= threshold:
-                        if k not in active_events:
-                            active_events[k] = {"start_time": ts, "max_delay": delays[k], "is_new": is_new_row}
-                        else:
-                            active_events[k]["max_delay"] = max(active_events[k]["max_delay"], delays[k])
 
-    # 3. Guardar estado incremental
-    cursor.execute("""
-        REPLACE INTO sync_state (table_name, last_game_id) 
-        VALUES (?, ?)
-    """, (table_name, max_id_procesado))
-    
-    conn.commit()
-    conn.close()
+    def __init__(self, table_name, threshold):
+        super().__init__(table_name, threshold, 'sync_state')
+
+    def _init_state(self):
+        self.delays = {k: 0 for k in self._ZONES}
+        self.active = {}
+
+    def _handle_chain_break(self, ts, is_new):
+        for k in list(self.active.keys()):
+            evt = self.active[k]
+            if self.delays[k] >= self.threshold:
+                evt["max_delay"] = max(evt["max_delay"], self.delays[k])
+                if is_new or evt.get("is_new", False):
+                    self.cursor.execute(
+                        "INSERT INTO backtest_history "
+                        "(table_name, zone_name, start_time, end_time, max_delay, threshold_used) "
+                        "VALUES (?, ?, ?, ?, ?, ?)",
+                        (self.table_name, k, evt["start_time"], ts, evt["max_delay"], self.threshold)
+                    )
+        self.active.clear()
+
+    def _process_row(self, db_id, n, extra, ts, is_new):
+        if n == 0:
+            for k in self.delays:
+                self.delays[k] += 1
+            for k in self.active:
+                if self.delays[k] >= self.threshold:
+                    self.active[k]["max_delay"] = max(self.active[k]["max_delay"], self.delays[k])
+            return
+
+        for k, zone in self._ZONES.items():
+            if k.startswith("docena"):
+                hits = zone[0] <= n <= zone[1]
+            else:  # columna
+                hits = (n % 3 == zone[0] % 3 or (zone[0] == 0 and n % 3 == 0))
+
+            if hits:
+                if self.delays[k] >= self.threshold and k in self.active:
+                    evt = self.active.pop(k)
+                    if is_new or evt.get("is_new", False):
+                        self.cursor.execute(
+                            "INSERT INTO backtest_history "
+                            "(table_name, zone_name, start_time, end_time, max_delay, threshold_used) "
+                            "VALUES (?, ?, ?, ?, ?, ?)",
+                            (self.table_name, k, evt["start_time"], ts, evt["max_delay"], self.threshold)
+                        )
+                else:
+                    self.active.pop(k, None)
+                self.delays[k] = 0
+            else:
+                self.delays[k] += 1
+                if self.delays[k] >= self.threshold:
+                    if k not in self.active:
+                        self.active[k] = {"start_time": ts, "max_delay": self.delays[k], "is_new": is_new}
+                    else:
+                        self.active[k]["max_delay"] = max(self.active[k]["max_delay"], self.delays[k])
+
+
+def sync_backtest(table_name, threshold):
+    _ZoneBacktestSync(table_name, threshold).run()
+
+
+# ═══════════════════════════════════════════════════════════════════════
+# Backtest: rachas de color
+# ═══════════════════════════════════════════════════════════════════════
+
+class _ColorBacktestSync(_BacktestSyncEngine):
+    """Sincroniza eventos de rachas de rojos/negros consecutivos."""
+
+    def __init__(self, table_name, threshold):
+        super().__init__(table_name, threshold, 'color_sync_state', warmup=50)
+
+    def _init_state(self):
+        self.current_color = None
+        self.current_count = 0
+        self.current_start_ts = None
+        self.active_is_new = False
+
+    def _handle_chain_break(self, ts, is_new):
+        self._save_streak(ts, is_new)
+        self.current_color = None
+        self.current_count = 0
+        self.current_start_ts = None
+        self.active_is_new = False
+
+    def _save_streak(self, end_ts, is_end_new):
+        if self.current_color and self.current_count >= self.threshold and (self.active_is_new or is_end_new):
+            self.cursor.execute(
+                "INSERT INTO color_streak_history "
+                "(table_name, streak_color, streak_count, start_time, end_time, threshold_used) "
+                "VALUES (?, ?, ?, ?, ?, ?)",
+                (self.table_name, self.current_color, self.current_count, self.current_start_ts, end_ts, self.threshold)
+            )
+
+    def _process_row(self, db_id, n, extra, ts, is_new):
+        color = extra[0] if extra else ''
+
+        if color == "Green" or n == 0:
+            if self.current_color is not None:
+                self.current_count += 1
+                if is_new:
+                    self.active_is_new = True
+            return
+
+        if color not in ("Red", "Black"):
+            return
+
+        if self.current_color is None:
+            self.current_color = color
+            self.current_count = 1
+            self.current_start_ts = ts
+            self.active_is_new = is_new
+        elif color == self.current_color:
+            self.current_count += 1
+            if is_new:
+                self.active_is_new = True
+        else:
+            self._save_streak(ts, is_new)
+            self.current_color = color
+            self.current_count = 1
+            self.current_start_ts = ts
+            self.active_is_new = is_new
 
 
 def sync_color_backtest(table_name, threshold):
-    """
-    Sincroniza el historial de rachas de color para una mesa.
-    Detecta rachas de rojos/negros consecutivos (verde = comodín).
-    Solo procesa giros nuevos usando un buffer de warmup.
-    """
-    conn = get_connection()
-    cursor = conn.cursor()
-    
-    # 1. Obtener último estado
-    cursor.execute("SELECT last_game_id FROM color_sync_state WHERE table_name = ?", (table_name,))
-    row = cursor.fetchone()
-    last_game_id = row[0] if row else 0
-    
-    # 2. Leer giros nuevos + buffer
-    warmup = 50
-    cursor.execute(f"SELECT id, numero, color, timestamp FROM {table_name} WHERE id > ? ORDER BY id ASC", (max(0, last_game_id - warmup),))
-    rows = cursor.fetchall()
-    
-    if not rows:
-        conn.close()
-        return
-
-    # Estado de la racha actual
-    current_color = None   # "Red" o "Black"
-    current_count = 0
-    current_start_ts = None
-    active_is_new = False  # Si la racha empezó en datos nuevos
-    max_id_procesado = last_game_id
-    last_ts = None
-
-    def _save_streak(end_timestamp, is_end_new):
-        """Guarda la racha si supera el threshold."""
-        nonlocal current_color, current_count, current_start_ts, active_is_new
-        if current_color and current_count >= threshold and (active_is_new or is_end_new):
-            cursor.execute("""
-                INSERT INTO color_streak_history 
-                (table_name, streak_color, streak_count, start_time, end_time, threshold_used)
-                VALUES (?, ?, ?, ?, ?, ?)
-            """, (table_name, current_color, current_count, current_start_ts, end_timestamp, threshold))
-
-    for row in rows:
-        db_id, n, color, ts = row
-        max_id_procesado = max(max_id_procesado, db_id)
-        is_new_row = db_id > last_game_id
-        last_ts = ts
-
-        # Cadena rota
-        if n == -1:
-            _save_streak(ts, is_new_row)
-            current_color = None
-            current_count = 0
-            current_start_ts = None
-            active_is_new = False
-            continue
-
-        # Verde = comodín, suma a la racha
-        if color == "Green" or n == 0:
-            if current_color is not None:
-                current_count += 1
-                if is_new_row:
-                    active_is_new = True
-            continue
-
-        if color not in ("Red", "Black"):
-            continue
-
-        if current_color is None:
-            # Inicio de racha
-            current_color = color
-            current_count = 1
-            current_start_ts = ts
-            active_is_new = is_new_row
-        elif color == current_color:
-            # Racha sigue
-            current_count += 1
-            if is_new_row:
-                active_is_new = True
-        else:
-            # Color opuesto: la racha anterior terminó
-            _save_streak(ts, is_new_row)
-            # Empezar nueva racha con el color actual
-            current_color = color
-            current_count = 1
-            current_start_ts = ts
-            active_is_new = is_new_row
-
-    # No guardar la racha activa al final (aún está en progreso)
-
-    # 3. Guardar estado incremental
-    cursor.execute("""
-        REPLACE INTO color_sync_state (table_name, last_game_id) 
-        VALUES (?, ?)
-    """, (table_name, max_id_procesado))
-    
-    conn.commit()
-    conn.close()
+    _ColorBacktestSync(table_name, threshold).run(columns='id, numero, color, timestamp')
 
 
 # ─── SEÑALES DE NÚMEROS INDIVIDUALES ─────────────────────────────────
@@ -495,13 +518,10 @@ def compute_number_delays(numeros):
     Si encuentra un -1 (cadena rota), ignora todo lo posterior.
     Retorna un dict: {0: delay_0, 1: delay_1, ..., 36: delay_36}
     """
-    # last_seen[num] = hace cuántos giros salió por última vez (0 = acaba de salir)
-    # None = no ha salido en la cadena actual (antes de un posible -1)
     last_seen = {n: None for n in range(37)}
     total_processed = 0
-    
+
     for idx, item in enumerate(numeros):
-        # Extraer número
         if hasattr(item, '__getitem__') and not isinstance(item, (str, bytes, int)):
             try:
                 n = item['numero']
@@ -509,32 +529,25 @@ def compute_number_delays(numeros):
                 n = item
         else:
             n = item
-        
-        # Marcador de cadena rota — detener aquí, NO contamos este giro
+
         if n == -1:
             break
-        
-        # Este giro es válido: contamos cuántos giros llevamos de la sesión actual
+
         total_processed = idx + 1
-        
-        # Registrar primera aparición (más reciente) de cada número
+
         if last_seen[n] is None:
             last_seen[n] = idx
-        
-        # Si ya vimos todos los números, no necesitamos seguir
+
         if None not in last_seen.values():
             break
-    
-    # Convertir last_seen a delays
+
     delays = {}
     for num in range(37):
         if last_seen[num] is None:
-            # No salió en la cadena actual: delay = total de giros válidos analizados
             delays[num] = total_processed
         else:
-            # Salió hace 'last_seen[num]' giros
             delays[num] = last_seen[num]
-    
+
     return delays
 
 
@@ -545,27 +558,25 @@ def check_and_notify_number(table_name, delays, history=None):
     Cooldown independiente de 5 minutos.
     """
     global _alert_cache
-    
+
     from bot_ruleta.config import get_number_delay_threshold
-    
+
     threshold = get_number_delay_threshold()
     alert_numbers = [(num, delay) for num, delay in delays.items() if delay >= threshold]
-    
+
     if not alert_numbers:
         return
-    
+
     _, _, token, chat_id, _, _ = load_credentials()
     if not token or not chat_id:
         return
-    
+
     cache_key = f"{table_name}_numbers"
     last_time = _alert_cache.get(cache_key, 0)
-    
+
     if time.time() - last_time > ALERT_COOLDOWN:
-        # Formatear lista de números en alerta
         nums_str = ", ".join([f"{num} ({delay})" for num, delay in sorted(alert_numbers, key=lambda x: -x[1])])
-        
-        # Historial visual (últimos 10 giros)
+
         hist_str = ""
         if history:
             recent_10 = history[:10]
@@ -581,7 +592,7 @@ def check_and_notify_number(table_name, delays, history=None):
                 else:
                     emojis.append("".join(keycap_map[c] for c in str(n)))
             hist_str = " ".join(emojis)
-        
+
         msg = (
             f"🎰 *{table_name}*\n\n"
             f"🔢 *Números retrasados:* {nums_str}\n"
@@ -589,109 +600,70 @@ def check_and_notify_number(table_name, delays, history=None):
         )
         if hist_str:
             msg += f"\n\n📊 *Últimos 10 giros:*\n{hist_str}"
-        
+
         if send_telegram_msg(token, chat_id, msg):
             print(f"✅ Alerta de números enviada: {table_name} - {len(alert_numbers)} números")
             _alert_cache[cache_key] = time.time()
 
 
-def sync_number_backtest(table_name, threshold):
-    """
-    Sincroniza el historial de backtesting para retrasos de números individuales.
-    Detecta cuando un número supera el umbral y guarda el evento completo.
-    
-    El start_time se toma del primer giro donde el número NO apareció después
-    de su última aparición (cuando el delay pasó de 0 a 1), no del momento
-    en que se cruza el umbral.
-    """
-    conn = get_connection()
-    cursor = conn.cursor()
-    
-    # 1. Obtener último estado
-    cursor.execute("SELECT last_game_id FROM number_sync_state WHERE table_name = ?", (table_name,))
-    row = cursor.fetchone()
-    last_game_id = row[0] if row else 0
-    
-    # 2. Leer giros nuevos + buffer de 100
-    warmup = 100
-    cursor.execute(f"SELECT id, numero, timestamp FROM {table_name} WHERE id > ? ORDER BY id ASC", (max(0, last_game_id - warmup),))
-    rows = cursor.fetchall()
-    
-    if not rows:
-        conn.close()
-        return
-    
-    delays = {n: 0 for n in range(37)}
-    delay_start_times = {n: None for n in range(37)}  # timestamp cuando el delay pasó de 0 a 1
-    active_events = {}  # number -> {"start_time": ts, "max_delay": int, "is_new": bool}
-    max_id_procesado = last_game_id
-    last_ts_str = None
-    
-    def _flush_active_events(end_timestamp, force_save_warmup=False):
-        """Guarda todos los eventos activos que superaron el threshold (cierre por cadena rota)."""
-        flushed = []
-        for num in list(active_events.keys()):
-            evt = active_events[num]
-            if delays[num] >= threshold:
-                evt["max_delay"] = max(evt["max_delay"], delays[num])
-                if force_save_warmup or evt.get("is_new", False):
-                    cursor.execute("""
-                        INSERT INTO number_delay_history 
-                        (table_name, number, start_time, end_time, max_delay, threshold_used, termination)
-                        VALUES (?, ?, ?, ?, ?, ?, 'cadena_rota')
-                    """, (table_name, num, evt["start_time"], end_timestamp, evt["max_delay"], threshold))
-                flushed.append(num)
-        for num in flushed:
-            active_events.pop(num, None)
-    
-    for db_row in rows:
-        db_id, n, ts = db_row
-        max_id_procesado = max(max_id_procesado, db_id)
-        is_new_row = db_id > last_game_id
-        last_ts_str = ts
-        
-        if n == -1:
-            _flush_active_events(last_ts_str, force_save_warmup=is_new_row)
-            for num in range(37):
-                delays[num] = 0
-                delay_start_times[num] = None
-            active_events.clear()
-            continue
-        
+# ═══════════════════════════════════════════════════════════════════════
+# Backtest: números individuales
+# ═══════════════════════════════════════════════════════════════════════
+
+class _NumberBacktestSync(_BacktestSyncEngine):
+    """Sincroniza eventos de retraso de números individuales (0-36)."""
+
+    def __init__(self, table_name, threshold):
+        super().__init__(table_name, threshold, 'number_sync_state')
+
+    def _init_state(self):
+        self.delays = {n: 0 for n in range(37)}
+        self.delay_start_times = {n: None for n in range(37)}
+        self.active = {}
+
+    def _handle_chain_break(self, ts, is_new):
+        for num in list(self.active.keys()):
+            evt = self.active[num]
+            if self.delays[num] >= self.threshold:
+                evt["max_delay"] = max(evt["max_delay"], self.delays[num])
+                if is_new or evt.get("is_new", False):
+                    self.cursor.execute(
+                        "INSERT INTO number_delay_history "
+                        "(table_name, number, start_time, end_time, max_delay, threshold_used, termination) "
+                        "VALUES (?, ?, ?, ?, ?, ?, 'cadena_rota')",
+                        (self.table_name, num, evt["start_time"], ts, evt["max_delay"], self.threshold)
+                    )
+        self.active.clear()
+
+    def _process_row(self, db_id, n, extra, ts, is_new):
         for num in range(37):
             if num == n:
-                # El número salió: si estaba en alerta, cerrar el evento
-                if delays[num] >= threshold and num in active_events:
-                    evt = active_events.pop(num)
-                    if is_new_row or evt.get("is_new", False):
-                        cursor.execute("""
-                            INSERT INTO number_delay_history 
-                            (table_name, number, start_time, end_time, max_delay, threshold_used, termination)
-                            VALUES (?, ?, ?, ?, ?, ?, 'normal')
-                        """, (table_name, num, evt["start_time"], ts, evt["max_delay"], threshold))
-                delays[num] = 0
-                delay_start_times[num] = None
+                if self.delays[num] >= self.threshold and num in self.active:
+                    evt = self.active.pop(num)
+                    if is_new or evt.get("is_new", False):
+                        self.cursor.execute(
+                            "INSERT INTO number_delay_history "
+                            "(table_name, number, start_time, end_time, max_delay, threshold_used, termination) "
+                            "VALUES (?, ?, ?, ?, ?, ?, 'normal')",
+                            (self.table_name, num, evt["start_time"], ts, evt["max_delay"], self.threshold)
+                        )
+                self.delays[num] = 0
+                self.delay_start_times[num] = None
             else:
-                prev_delay = delays[num]
-                delays[num] += 1
+                prev_delay = self.delays[num]
+                self.delays[num] += 1
                 if prev_delay == 0:
-                    # El delay acaba de empezar: este giro es el start_time
-                    delay_start_times[num] = ts
-                if delays[num] >= threshold:
-                    if num not in active_events:
-                        active_events[num] = {
-                            "start_time": delay_start_times[num] or ts,
-                            "max_delay": delays[num],
-                            "is_new": is_new_row
+                    self.delay_start_times[num] = ts
+                if self.delays[num] >= self.threshold:
+                    if num not in self.active:
+                        self.active[num] = {
+                            "start_time": self.delay_start_times[num] or ts,
+                            "max_delay": self.delays[num],
+                            "is_new": is_new
                         }
                     else:
-                        active_events[num]["max_delay"] = max(active_events[num]["max_delay"], delays[num])
-    
-    # 3. Guardar estado incremental
-    cursor.execute("""
-        REPLACE INTO number_sync_state (table_name, last_game_id) 
-        VALUES (?, ?)
-    """, (table_name, max_id_procesado))
-    
-    conn.commit()
-    conn.close()
+                        self.active[num]["max_delay"] = max(self.active[num]["max_delay"], self.delays[num])
+
+
+def sync_number_backtest(table_name, threshold):
+    _NumberBacktestSync(table_name, threshold).run()
