@@ -1,9 +1,12 @@
 from PIL import Image
 import os, shutil, struct, io
 
-logo_path = r'd:\GITHUBB\bot_stake\bot_ruleta\dashboard\static\logo.png'
-ico_path = r'd:\GITHUBB\bot_stake\bot_ruleta\icon.ico'
-favicon_path = r'd:\GITHUBB\bot_stake\bot_ruleta\dashboard\static\favicon.ico'
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE = os.path.join(ROOT, "bot_ruleta")
+
+logo_path = os.path.join(BASE, "dashboard", "static", "logo.png")
+ico_path = os.path.join(BASE, "icon.ico")
+favicon_path = os.path.join(BASE, "dashboard", "static", "favicon.ico")
 
 img = Image.open(logo_path).convert('RGBA')
 

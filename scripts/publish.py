@@ -6,9 +6,12 @@ import urllib.request
 import urllib.error
 import subprocess
 
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, ROOT)
+
 # Leer token desde un archivo local para evitar revocacion automatica de GitHub
 def get_token():
-    token_file = "github_token.txt"
+    token_file = os.path.join(ROOT, "github_token.txt")
     if os.path.exists(token_file):
         with open(token_file, "r") as f:
             return f.read().strip()
@@ -17,8 +20,8 @@ def get_token():
 GITHUB_TOKEN = get_token()
 REPO_OWNER = "jhonjaramillo97"
 REPO_NAME = "roulette-sniper-releases"
-EXE_PATH = os.path.join("dist", "RouletteSniperPro.exe")
-UPDATER_FILE = os.path.join("bot_ruleta", "updater.py")
+EXE_PATH = os.path.join(ROOT, "dist", "RouletteSniperPro.exe")
+UPDATER_FILE = os.path.join(ROOT, "bot_ruleta", "updater.py")
 
 def api_request(url, method="GET", data=None, is_upload=False):
     headers = {
@@ -60,7 +63,7 @@ def get_file_sha(path):
 
 def update_github_version_file(new_version):
     print("-> Actualizando version.txt en GitHub...")
-    path = "version.txt"
+    path = os.path.join(ROOT, "version.txt")
     sha = get_file_sha(path)
     
     url = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/contents/{path}"
@@ -93,7 +96,7 @@ def update_local_updater(new_version):
 def build_executable():
     print("-> Compilando nuevo ejecutable. Esto tomara unos minutos...")
     try:
-        subprocess.check_call([sys.executable, os.path.join("bot_ruleta", "build_exe.py")])
+        subprocess.check_call([sys.executable, os.path.join(ROOT, "scripts", "build_exe.py")])
         print("OK: Ejecutable compilado con exito.")
     except Exception as e:
         print(f"Error al compilar: {e}")
