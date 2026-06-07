@@ -5,6 +5,7 @@ Manejo de base de datos SQLite con tablas separadas por juego.
 import sqlite3
 import os
 import re
+import threading
 from bot_ruleta.config import TABLES
 
 import sys
@@ -17,6 +18,24 @@ log = get_logger("db")
 _VALID_TABLE_NAMES = {t["table_name"] for t in TABLES}
 _TABLE_NAME_RE = re.compile(r"^[a-zA-Z_][a-zA-Z0-9_]*$")
 
+DB_NAME = "ruleta.db"
+DATA_DIR = get_data_dir()
+DB_PATH = os.path.join(DATA_DIR, DB_NAME)
+
+_conn = None
+_conn_lock = threading.Lock()
+
+
+def get_connection():
+    """Retorna la conexion persistente a la BD (inicializa con WAL si es necesario)."""
+    global _conn
+    if _conn is None:
+        with _conn_lock:
+            if _conn is None:
+                _conn = sqlite3.connect(DB_PATH, check_same_thread=False)
+                _conn.execute("PRAGMA journal_mode=WAL;")
+    return _conn
+
 
 def validate_table_name(name):
     """Valida que un nombre de tabla sea seguro y exista en la configuracion.
@@ -28,15 +47,6 @@ def validate_table_name(name):
     if name not in _VALID_TABLE_NAMES:
         raise ValueError(f"Tabla no configurada: {name!r}")
     return name
-
-DB_NAME = "ruleta.db"
-DATA_DIR = get_data_dir()
-DB_PATH = os.path.join(DATA_DIR, DB_NAME)
-
-
-def get_connection():
-    """Retorna una conexi├│n a la base de datos."""
-    return sqlite3.connect(DB_PATH)
 
 
 def init_db():
@@ -51,7 +61,6 @@ def init_db():
             continue
         table_name = validate_table_name(table_name)
 
-        # Crear tabla espec├¡fica para cada juego
         cursor.execute(f"""
             CREATE TABLE IF NOT EXISTS {table_name} (
                 id          INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -61,13 +70,11 @@ def init_db():
                 game_id     INTEGER
             )
         """)
-        # ├ìndice b├ísico por timestamp
         cursor.execute(f"""
             CREATE INDEX IF NOT EXISTS idx_{table_name}_ts 
             ON {table_name}(timestamp)
         """)
 
-    # Tabla global para historial de backtesting (se├▒ales completadas)
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS backtest_history (
             id              INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -81,7 +88,6 @@ def init_db():
     """)
     cursor.execute("CREATE INDEX IF NOT EXISTS idx_backtest_table ON backtest_history(table_name)")
 
-    # Tabla para estado de sincronizaci├│n incremental
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS sync_state (
             table_name      TEXT PRIMARY KEY,
@@ -89,7 +95,6 @@ def init_db():
         )
     """)
 
-    # Tabla global para historial de rachas de color (se├▒ales completadas)
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS color_streak_history (
             id              INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -103,7 +108,6 @@ def init_db():
     """)
     cursor.execute("CREATE INDEX IF NOT EXISTS idx_color_streak_table ON color_streak_history(table_name)")
 
-    # Tabla para estado de sincronizaci├│n de rachas de color
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS color_sync_state (
             table_name      TEXT PRIMARY KEY,
@@ -111,7 +115,6 @@ def init_db():
         )
     """)
 
-    # Tabla global para historial de retrasos de n├║meros individuales
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS number_delay_history (
             id              INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -124,15 +127,13 @@ def init_db():
             termination     TEXT DEFAULT 'normal'
         )
     """)
-    # Migraci├│n: agregar columna termination si no existe en tablas viejas
     try:
         cursor.execute("ALTER TABLE number_delay_history ADD COLUMN termination TEXT DEFAULT 'normal'")
     except sqlite3.OperationalError:
-        pass  # Ya existe, ignorar
+        pass
     cursor.execute("CREATE INDEX IF NOT EXISTS idx_number_delay_table ON number_delay_history(table_name)")
     cursor.execute("CREATE INDEX IF NOT EXISTS idx_number_delay_number ON number_delay_history(number)")
 
-    # Tabla para estado de sincronizaci├│n de retrasos de n├║meros
     cursor.execute("""
         CREATE TABLE IF NOT EXISTS number_sync_state (
             table_name      TEXT PRIMARY KEY,
@@ -141,13 +142,11 @@ def init_db():
     """)
 
     conn.commit()
-    conn.close()
     log.info("Tablas verificadas/creadas.")
 
 
 def guardar_resultado(mesa_nombre, numero, color, timestamp, game_id):
-    """Guarda un resultado en la tabla espec├¡fica del juego."""
-    # Buscar el table_name correspondiente al nombre descriptivo o usar directo si ya viene
+    """Guarda un resultado en la tabla especifica del juego."""
     table_name = None
     for t in TABLES:
         if t["name"] == mesa_nombre or t["table_name"] == mesa_nombre:
@@ -161,23 +160,20 @@ def guardar_resultado(mesa_nombre, numero, color, timestamp, game_id):
     table_name = validate_table_name(table_name)
 
     try:
-        conn = get_connection()
-        cursor = conn.cursor()
-        
-        # INSERT directo a la tabla del juego
-        cursor.execute(f"""
-            INSERT INTO {table_name} (numero, color, timestamp, game_id)
-            VALUES (?, ?, ?, ?)
-        """, (numero, color, timestamp, game_id))
-        
-        conn.commit()
-        conn.close()
+        with _conn_lock:
+            conn = get_connection()
+            cursor = conn.cursor()
+            cursor.execute(f"""
+                INSERT INTO {table_name} (numero, color, timestamp, game_id)
+                VALUES (?, ?, ?, ?)
+            """, (numero, color, timestamp, game_id))
+            conn.commit()
     except Exception as e:
         log.error(f"Error guardando en BD ({table_name}): {e}")
 
 
 def obtener_ultimo_numero(mesa_nombre):
-    """Obtiene el ├║ltimo n├║mero registrado en la tabla del juego."""
+    """Obtiene el ultimo numero registrado en la tabla del juego."""
     table_name = _resolve_table_name(mesa_nombre)
     if not table_name:
         return None
@@ -188,7 +184,6 @@ def obtener_ultimo_numero(mesa_nombre):
         cursor = conn.cursor()
         cursor.execute(f"SELECT numero FROM {table_name} ORDER BY id DESC LIMIT 1")
         row = cursor.fetchone()
-        conn.close()
         if row:
             return row[0]
     except Exception:
@@ -197,7 +192,7 @@ def obtener_ultimo_numero(mesa_nombre):
 
 
 def obtener_ultimos_numeros(mesa_nombre, limit=None):
-    """Obtiene los ├║ltimos N registros (n├║mero, color y timestamp). Si limit es None, obtiene todos."""
+    """Obtiene los ultimos N registros (numero, color y timestamp). Si limit es None, obtiene todos."""
     table_name = _resolve_table_name(mesa_nombre)
     if not table_name:
         return []
@@ -212,7 +207,6 @@ def obtener_ultimos_numeros(mesa_nombre, limit=None):
         else:
             cursor.execute(f"SELECT numero, color, timestamp FROM {table_name} ORDER BY id DESC")
         rows = cursor.fetchall()
-        conn.close()
         return [{"numero": r[0], "color": r[1], "timestamp": r[2]} for r in rows]
     except Exception as e:
         log.error(f"Error obtener_ultimos_numeros: {e}")
@@ -226,9 +220,9 @@ def _resolve_table_name(mesa_nombre):
             return t["table_name"]
     return None
 
+
 def limpiar_mesa(mesa_nombre):
-    """Elimina todos los registros de la tabla de una mesa espec├¡fica. 
-    Usado cuando se detecta que el bot estuvo apagado mucho tiempo y los datos en pantalla no empalman."""
+    """Elimina todos los registros de la tabla de una mesa especifica."""
     table_name = _resolve_table_name(mesa_nombre)
     if not table_name:
         return
@@ -236,11 +230,11 @@ def limpiar_mesa(mesa_nombre):
     table_name = validate_table_name(table_name)
 
     try:
-        conn = get_connection()
-        cursor = conn.cursor()
-        cursor.execute(f"DELETE FROM {table_name}")
-        conn.commit()
-        conn.close()
+        with _conn_lock:
+            conn = get_connection()
+            cursor = conn.cursor()
+            cursor.execute(f"DELETE FROM {table_name}")
+            conn.commit()
         log.info(f"Historial limpiado para la mesa '{mesa_nombre}' (Sesion Stale detectada)")
     except Exception as e:
         log.error(f"Error limpiando BD ({table_name}): {e}")
