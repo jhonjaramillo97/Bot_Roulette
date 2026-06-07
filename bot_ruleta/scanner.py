@@ -7,10 +7,9 @@ import os
 import time
 import random
 from selenium.webdriver.common.by import By
-from selenium.webdriver.common.action_chains import ActionChains
 
 from bot_ruleta.config import (
-    TABLES, DATA_DIR, LOBBY_MODE, REDS, load_credentials,
+    TABLES, DATA_DIR, LOBBY_MODE, LOBBY_URL, REDS, load_credentials,
 )
 from bot_ruleta.driver import setup_driver, login_stake
 from bot_ruleta.lobby import ir_al_lobby, map_tables_dynamic
@@ -64,286 +63,310 @@ def extract_nums_js(driver, tile_element):
 # Sesión Unitaria (Driver Start -> Login -> Loop -> Error)
 # ---------------------------------------------------------------------------
 
+# ── constantes del scanner ─────────────────────────────────────────────
+_MIN_CHAIN = 4
+_MAX_ZERO_TILES = 30
+_SESSION_CHECK_INTERVAL = 30
+_HEARTBEAT_INTERVAL = 60
+_SOFT_REFRESH_AT = 15
+_EXPIRY_CHECK_AT_ZERO_TILES = 3
+
+
 def _run_single_session(email, password, headless=True, stop_event=None):
-    """
-    Ejecuta una sesión completa del bot.
-    Si ocurre un error crítico, lanza una excepción para que el supervisor reinicie.
-    """
+    """Orquestador: inicializa, escanea y maneja errores de una sesión."""
     driver = None
     try:
-        # 1. Setup Driver
-        log.info("🚀 Iniciando nueva sesión del bot...")
-        driver, wait = setup_driver(headless=headless)
-        actions = ActionChains(driver)
-        capture_screenshot(driver, "01_driver_iniciado")
-
-        # 2. Login
-        login_stake(driver, wait, email, password)
-        # Screenshot de login lo maneja driver.py (solo ante error)
-
-        # 3. Ir al Lobby
-        ir_al_lobby(driver, wait)
-        capture_screenshot(driver, "03_lobby_cargado")
-
-        # 4. Configurar Modo Lobby
-        if LOBBY_MODE:
-            log.info("👀 MODO ESPÍA ACTIVADO: Escaneando miniaturas...")
-            
-            # Buscar iframe usando helper
-            switch_to_game_iframe(driver)
-            capture_screenshot(driver, "04_iframe_context")
-            
-            time.sleep(2)
-            map_tables_dynamic(driver)
-            capture_screenshot(driver, "05_mesas_mapeadas")
-
-        # 5. Audio Keep-Alive
-        try:
-            driver.execute_script("""
-                window.audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-                var osc = window.audioCtx.createOscillator();
-                var gain = window.audioCtx.createGain();
-                osc.type = 'sine';
-                osc.frequency.setValueAtTime(440, window.audioCtx.currentTime);
-                gain.gain.setValueAtTime(0.0001, window.audioCtx.currentTime);
-                osc.connect(gain);
-                gain.connect(window.audioCtx.destination);
-                osc.start();
-                setInterval(() => {
-                    if(window.audioCtx.state === 'suspended') window.audioCtx.resume();
-                }, 1000);
-            """)
-            log.debug("🔊 Audio keep-alive activado")
-        except:
-            log.debug("⚠️ Audio keep-alive no disponible (no crítico)")
-
-        # 6. Loop de Escaneo
-        log.info("📡 Comienza escaneo continuo...")
-        
-        # Contadores de errores para reinicio automático
-        consecutive_zero_tiles = 0
-        MAX_ZERO_TILES = 30  # ~15 segundos de fallos consecutivos
-        scan_cycle = 0
-
-        while True:
-            if stop_event and stop_event.is_set():
-                log.info("🛑 Bot detenido por usuario (GUI).")
-                return
-            scan_cycle += 1
-            
-            # Interacción Simulada (JavaScript) para evitar desconexión de Pragmatic
-            try:
-                driver.execute_script("""
-                    var ev = new MouseEvent('mousemove', {
-                        'view': window, 'bubbles': true, 'cancelable': true,
-                        'clientX': Math.floor(Math.random() * window.innerWidth),
-                        'clientY': Math.floor(Math.random() * window.innerHeight)
-                    });
-                    document.dispatchEvent(ev);
-                """)
-            except: pass
-
-            # -----------------------------------------------------------
-            # Detección proactiva de sesión expirada (cada 30 ciclos)
-            # En lugar de Anti-AFK, dejamos que Stake cierre la sesión
-            # y la detectamos rápidamente para hacer soft-restart.
-            # -----------------------------------------------------------
-            if scan_cycle % 30 == 0:
-                try:
-                    driver.switch_to.default_content()
-                    inactivity_els = driver.find_elements(
-                        By.XPATH,
-                        "//*[contains(text(), 'sesión ha finalizado')] | "
-                        "//*[contains(text(), 'falta de inactividad')] | "
-                        "//*[contains(text(), 'session has expired')] | "
-                        "//*[contains(text(), 'vuelve a iniciar sesión')]"
-                    )
-                    for el in inactivity_els:
-                        if el.is_displayed():
-                            log.warning("⏰ Sesión expirada por inactividad. Reiniciando sesión...")
-                            raise Exception("SESIÓN EXPIRADA: Reinicio automático")
-                    # Restaurar contexto
-                    switch_to_game_iframe(driver)
-                except Exception as e:
-                    if "SESIÓN EXPIRADA" in str(e):
-                        raise
-
-            # Escaneo de mesas
-            tables_scanned_successfully = 0
-            
-            for mesa in TABLES:
-                nombre = mesa["name"]
-                iframe_id = mesa["id"]
-
-                try:
-                    tile = driver.find_element(By.ID, iframe_id)
-                    driver.execute_script("arguments[0].scrollIntoView({block: 'center', inline: 'nearest'});", tile)
-                    time.sleep(0.5) # Leve pausa para render
-
-                    numeros = extract_nums_js(driver, tile)
-                    
-                    if numeros:
-                        consecutive_zero_tiles = 0 # Reset contador de errores
-                        tables_scanned_successfully += 1
-                        
-                        # --- Procesamiento de números (Lógica Robusta de Anclaje) ---
-                        nums_int = [int(n) for n in numeros]
-                        db_history = obtener_ultimos_numeros(nombre, limit=15)
-                        db_nums = [d["numero"] for d in db_history] if db_history else []
-                        
-                        nuevos = []
-                        MIN_CHAIN = 4  # Mínimo de números consecutivos para confirmar empalme
-                        
-                        if not db_nums:
-                            # Primera vez: no hay datos previos, insertar todo lo visible
-                            nuevos = list(reversed(nums_int))
-                        else:
-                            # ── BÚSQUEDA ROBUSTA DE CADENA ──
-                            # Buscar en TODAS las posiciones del tile nuevo contra TODAS
-                            # las posiciones del historial DB, exigiendo MIN_CHAIN coincidencias
-                            # consecutivas para confirmar un empalme genuino.
-                            anchor_idx = -1
-                            
-                            for i in range(len(nums_int)):
-                                for j in range(len(db_nums)):
-                                    if nums_int[i] == db_nums[j]:
-                                        # Verificar longitud de la cadena
-                                        chain_len = 0
-                                        while (i + chain_len < len(nums_int) and
-                                               j + chain_len < len(db_nums) and
-                                               nums_int[i + chain_len] == db_nums[j + chain_len]):
-                                            chain_len += 1
-                                        
-                                        if chain_len >= MIN_CHAIN:
-                                            anchor_idx = i
-                                            break
-                                
-                                if anchor_idx != -1:
-                                    break
-                            
-                            if anchor_idx > 0:
-                                # Empalme confirmado: solo insertar los números nuevos (antes del ancla)
-                                nuevos = list(reversed(nums_int[:anchor_idx]))
-                            elif anchor_idx == 0:
-                                # El tile no cambió, no hay números nuevos
-                                nuevos = []
-                            else:
-                                # ── CADENA ROTA ──
-                                # No se encontró empalme de 4+ números.
-                                # Insertar todo como sesión fresca, PERO precedido
-                                # del marcador oficial de ruptura de cadena (-1).
-                                log.warning(f"⚠️ {nombre}: CADENA ROTA - sin empalme de {MIN_CHAIN}+ números. Reinicio de sesión.")
-                                nuevos = [-1] + list(reversed(nums_int))
-
-                        if nuevos:
-                            log.info(f"🔥 {nombre}: Nuevos -> {nuevos}")
-                            ts_base = time.time()
-                            for idx, num in enumerate(nuevos):
-                                if num == -1:
-                                    color = "Reset"
-                                else:
-                                    color = "Red" if str(num) in REDS else ("Green" if num == 0 else "Black")
-                                
-                                ts = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(ts_base - len(nuevos) + 1 + idx))
-                                guardar_resultado(nombre, num, color, ts, int(ts_base)+idx)
-                            
-                            # Alertas Telegram
-                            try:
-                                history = obtener_ultimos_numeros(nombre)
-                                if history:
-                                    delays = bt_logic.compute_delays(history)
-                                    bt_logic.check_and_notify(nombre, delays, history)
-                                    log.debug(f"TG check: {nombre} Delays={delays}")
-                                    
-                                    # Señales de color (rachas rojos/negros)
-                                    streak_data = bt_logic.compute_color_streak(history)
-                                    bt_logic.check_and_notify_color(nombre, streak_data, history)
-                                    
-                                    # Señales de números individuales
-                                    number_delays = bt_logic.compute_number_delays(history)
-                                    bt_logic.check_and_notify_number(nombre, number_delays, history)
-                            except Exception as e:
-                                log.error(f"Error TG: {e}")
-
-                    else:
-                        # No numeros encontrados en este tile
-                        pass
-
-                except Exception as e:
-                    log.debug(f"Error escaneando tile '{nombre}': {e}")
-            
-            # Verificación GLOBAL de salud del escaneo
-            if tables_scanned_successfully == 0:
-                consecutive_zero_tiles += 1
-                if consecutive_zero_tiles % 5 == 0:
-                    log.warning(f"⚠️ Alerta: 0 tiles leídos por {consecutive_zero_tiles} ciclos...")
-                
-                # Verificar inactividad inmediatamente al primer bloque de zero tiles
-                if consecutive_zero_tiles >= 3:
-                    try:
-                        driver.switch_to.default_content()
-                        inactivity_elements = driver.find_elements(
-                            By.XPATH,
-                            "//*[contains(text(), 'sesión ha finalizado')] | "
-                            "//*[contains(text(), 'falta de inactividad')] | "
-                            "//*[contains(text(), 'session has expired')] | "
-                            "//*[contains(text(), 'vuelve a iniciar sesión')]"
-                        )
-                        for el in inactivity_elements:
-                            if el.is_displayed():
-                                log.warning("⏰ Sesión expirada por inactividad. Reiniciando sesión...")
-                                raise Exception("SESIÓN EXPIRADA: Reinicio automático")
-                        # Restaurar contexto rápidamente
-                        switch_to_game_iframe(driver, max_wait=3)
-                    except Exception as e:
-                        if "SESIÓN EXPIRADA" in str(e):
-                            raise
-                
-                if consecutive_zero_tiles == 15:
-                    log.warning("🔄 15 ciclos sin tiles. Intentando recuperar el lobby (Soft Refresh)...")
-                    driver.switch_to.default_content()
-                    driver.get(LOBBY_URL)
-                    time.sleep(5)
-                    ir_al_lobby(driver, wait, from_anti_afk=False)
-                    if LOBBY_MODE:
-                        switch_to_game_iframe(driver)
-                        time.sleep(2)
-                        map_tables_dynamic(driver)
-                    consecutive_zero_tiles = 0
-                    continue
-                
-                if consecutive_zero_tiles >= MAX_ZERO_TILES:
-                    capture_screenshot(driver, "CRITICAL_max_zero_tiles")
-                    raise Exception("MAX_ZERO_TILES alcanzado: El bot parece ciego o desconectado.")
-            else:
-                consecutive_zero_tiles = 0
-
-            # Log de heartbeat cada 60 ciclos (~30 seg)
-            if scan_cycle % 60 == 0:
-                log.debug(f"💓 Heartbeat: ciclo {scan_cycle}, tiles OK en último escaneo: {tables_scanned_successfully}")
-
-            print(f"📡 Escaneando... [{time.strftime('%H:%M:%S')}]", end="\r", flush=True)
-            time.sleep(0.5)
-
+        driver, wait = _initialize_session(email, password, headless)
+        _scan_loop(driver, wait, stop_event)
     except KeyboardInterrupt:
         raise
     except Exception as e:
-        error_msg = str(e)
-        if "SESIÓN EXPIRADA" in error_msg:
-            # Sesión expirada por inactividad - es esperado, reinicio rápido
-            log.warning(f"⏰ {error_msg}")
-            log.info("🔄 Preparando reinicio rápido de sesión (Cloudflare se mantiene activo)...")
-        else:
-            # Error real/inesperado - generar crash report
-            log.critical(f"❌ Error crítico en sesión: {e}")
-            log.critical(f"Traceback completo:\n{__import__('traceback').format_exc()}")
-            generate_crash_report(driver=driver, error=e)
-        raise # Re-lanzar para que el loop supervisor reinicie
+        _handle_error(driver, e)
+        raise
     finally:
-        if driver:
-            log.info("🛑 Cerrando navegador...")
-            try: driver.quit()
-            except: pass
+        _cleanup_driver(driver)
+
+
+# ── setup ──────────────────────────────────────────────────────────────
+
+def _initialize_session(email, password, headless):
+    """Setup driver + login + lobby + iframe + audio keep-alive."""
+    log.info("🚀 Iniciando nueva sesión del bot...")
+    driver, wait = setup_driver(headless=headless)
+    capture_screenshot(driver, "01_driver_iniciado")
+
+    login_stake(driver, wait, email, password)
+    ir_al_lobby(driver, wait)
+    capture_screenshot(driver, "03_lobby_cargado")
+
+    if LOBBY_MODE:
+        log.info("👀 MODO ESPÍA ACTIVADO: Escaneando miniaturas...")
+        switch_to_game_iframe(driver)
+        capture_screenshot(driver, "04_iframe_context")
+        time.sleep(2)
+        map_tables_dynamic(driver)
+        capture_screenshot(driver, "05_mesas_mapeadas")
+
+    _start_audio_keepalive(driver)
+    return driver, wait
+
+
+def _start_audio_keepalive(driver):
+    """AudioContext silencioso para evitar que Chrome suspenda la página."""
+    try:
+        driver.execute_script("""
+            window.audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            var osc = window.audioCtx.createOscillator();
+            var gain = window.audioCtx.createGain();
+            osc.type = 'sine';
+            osc.frequency.setValueAtTime(440, window.audioCtx.currentTime);
+            gain.gain.setValueAtTime(0.0001, window.audioCtx.currentTime);
+            osc.connect(gain);
+            gain.connect(window.audioCtx.destination);
+            osc.start();
+            setInterval(() => {
+                if(window.audioCtx.state === 'suspended') window.audioCtx.resume();
+            }, 1000);
+        """)
+        log.debug("🔊 Audio keep-alive activado")
+    except:
+        log.debug("⚠️ Audio keep-alive no disponible (no crítico)")
+
+
+# ── loop principal ─────────────────────────────────────────────────────
+
+def _scan_loop(driver, wait, stop_event):
+    """Loop infinito de escaneo de tiles."""
+    log.info("📡 Comienza escaneo continuo...")
+    consecutive_zero_tiles = 0
+    scan_cycle = 0
+
+    while True:
+        if stop_event and stop_event.is_set():
+            log.info("🛑 Bot detenido por usuario (GUI).")
+            return
+        scan_cycle += 1
+
+        _simulate_mouse_move(driver)
+
+        if scan_cycle % _SESSION_CHECK_INTERVAL == 0:
+            _check_session_expiry(driver)
+
+        tables_scanned = _scan_all_tables(driver)
+
+        if tables_scanned == 0:
+            consecutive_zero_tiles += 1
+            consecutive_zero_tiles = _handle_zero_tiles(driver, wait, consecutive_zero_tiles)
+            if consecutive_zero_tiles == 0:
+                continue  # soft refresh hizo reset
+        else:
+            consecutive_zero_tiles = 0
+
+        if scan_cycle % _HEARTBEAT_INTERVAL == 0:
+            log.debug(f"💓 Heartbeat: ciclo {scan_cycle}, tiles OK: {tables_scanned}")
+
+        print(f"📡 Escaneando... [{time.strftime('%H:%M:%S')}]", end="\r", flush=True)
+        time.sleep(0.5)
+
+
+def _simulate_mouse_move(driver):
+    """Simula movimiento de mouse JS para evitar desconexión de Pragmatic."""
+    try:
+        driver.execute_script("""
+            var ev = new MouseEvent('mousemove', {
+                'view': window, 'bubbles': true, 'cancelable': true,
+                'clientX': Math.floor(Math.random() * window.innerWidth),
+                'clientY': Math.floor(Math.random() * window.innerHeight)
+            });
+            document.dispatchEvent(ev);
+        """)
+    except:
+        pass
+
+
+# ── escaneo de mesas ───────────────────────────────────────────────────
+
+def _scan_all_tables(driver):
+    """Escanea todas las mesas configuradas. Retorna cuántas tuvieron éxito."""
+    scanned = 0
+    for mesa in TABLES:
+        if _scan_single_table(driver, mesa["name"], mesa["id"]):
+            scanned += 1
+    return scanned
+
+
+def _scan_single_table(driver, nombre, iframe_id):
+    """Escanea una mesa. Retorna True si encontró números y los procesó."""
+    try:
+        tile = driver.find_element(By.ID, iframe_id)
+        driver.execute_script(
+            "arguments[0].scrollIntoView({block: 'center', inline: 'nearest'});", tile
+        )
+        time.sleep(0.5)
+
+        numeros = extract_nums_js(driver, tile)
+        if not numeros:
+            return False
+
+        nuevos = _chain_match_and_save(nombre, numeros)
+        if nuevos:
+            _send_alerts(nombre)
+
+        return True
+    except Exception as e:
+        log.debug(f"Error escaneando tile '{nombre}': {e}")
+        return False
+
+
+def _chain_match_and_save(nombre, numeros):
+    """Chain matching robusto + guardado en DB. Retorna los números nuevos."""
+    nums_int = [int(n) for n in numeros]
+    db_history = obtener_ultimos_numeros(nombre, limit=15)
+    db_nums = [d["numero"] for d in db_history] if db_history else []
+
+    nuevos = _chain_match(nums_int, db_nums, nombre)
+    if not nuevos:
+        return []
+
+    log.info(f"🔥 {nombre}: Nuevos -> {nuevos}")
+    ts_base = time.time()
+    for idx, num in enumerate(nuevos):
+        color = _get_color(num)
+        ts = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(ts_base - len(nuevos) + 1 + idx))
+        guardar_resultado(nombre, num, color, ts, int(ts_base) + idx)
+
+    return nuevos
+
+
+def _get_color(num):
+    if num == -1:
+        return "Reset"
+    if num == 0:
+        return "Green"
+    return "Red" if str(num) in REDS else "Black"
+
+
+def _chain_match(nums_int, db_nums, nombre):
+    """Busca empalme de MIN_CHAIN números consecutivos entre tile y DB.
+    Retorna lista de números nuevos (reversed)."""
+    if not db_nums:
+        return list(reversed(nums_int))
+
+    anchor_idx = -1
+    for i in range(len(nums_int)):
+        for j in range(len(db_nums)):
+            if nums_int[i] == db_nums[j]:
+                chain_len = 0
+                while (i + chain_len < len(nums_int) and
+                       j + chain_len < len(db_nums) and
+                       nums_int[i + chain_len] == db_nums[j + chain_len]):
+                    chain_len += 1
+                if chain_len >= _MIN_CHAIN:
+                    anchor_idx = i
+                    break
+        if anchor_idx != -1:
+            break
+
+    if anchor_idx > 0:
+        return list(reversed(nums_int[:anchor_idx]))
+    elif anchor_idx == 0:
+        return []
+    else:
+        log.warning(f"⚠️ {nombre}: CADENA ROTA (sin empalme de {_MIN_CHAIN}+).")
+        return [-1] + list(reversed(nums_int))
+
+
+def _send_alerts(nombre):
+    """Envía alertas de delay, color y números a Telegram."""
+    try:
+        history = obtener_ultimos_numeros(nombre)
+        if not history:
+            return
+        bt_logic.check_and_notify(nombre, bt_logic.compute_delays(history), history)
+        bt_logic.check_and_notify_color(nombre, bt_logic.compute_color_streak(history), history)
+        bt_logic.check_and_notify_number(nombre, bt_logic.compute_number_delays(history), history)
+    except Exception as e:
+        log.error(f"Error TG: {e}")
+
+
+# ── salud del escaneo ──────────────────────────────────────────────────
+
+def _handle_zero_tiles(driver, wait, consecutive):
+    """Maneja ciclos sin tiles: chequeo de expiración, soft refresh, fallo crítico."""
+    if consecutive % 5 == 0:
+        log.warning(f"⚠️ 0 tiles por {consecutive} ciclos...")
+
+    if consecutive >= _EXPIRY_CHECK_AT_ZERO_TILES:
+        _check_session_expiry(driver)
+
+    if consecutive >= _MAX_ZERO_TILES:
+        capture_screenshot(driver, "CRITICAL_max_zero_tiles")
+        raise Exception("MAX_ZERO_TILES alcanzado: bot ciego o desconectado.")
+
+    if consecutive == _SOFT_REFRESH_AT:
+        _soft_refresh_lobby(driver, wait)
+        return 0  # reset contador
+
+    return consecutive
+
+
+def _check_session_expiry(driver):
+    """Detecta si la sesión expiró por inactividad."""
+    try:
+        driver.switch_to.default_content()
+        elements = driver.find_elements(
+            By.XPATH,
+            "//*[contains(text(), 'sesión ha finalizado')] | "
+            "//*[contains(text(), 'falta de inactividad')] | "
+            "//*[contains(text(), 'session has expired')] | "
+            "//*[contains(text(), 'vuelve a iniciar sesión')]"
+        )
+        for el in elements:
+            if el.is_displayed():
+                log.warning("⏰ Sesión expirada por inactividad. Reiniciando...")
+                raise Exception("SESIÓN EXPIRADA: Reinicio automático")
+        switch_to_game_iframe(driver)
+    except Exception as e:
+        if "SESIÓN EXPIRADA" in str(e):
+            raise
+        switch_to_game_iframe(driver, max_wait=3)
+
+
+def _soft_refresh_lobby(driver, wait):
+    """Soft refresh: recarga el lobby sin re-login."""
+    log.warning("🔄 15 ciclos sin tiles. Soft Refresh...")
+    driver.switch_to.default_content()
+    driver.get(LOBBY_URL)
+    time.sleep(5)
+    ir_al_lobby(driver, wait, from_anti_afk=False)
+    if LOBBY_MODE:
+        switch_to_game_iframe(driver)
+        time.sleep(2)
+        map_tables_dynamic(driver)
+
+
+# ── error / cleanup ────────────────────────────────────────────────────
+
+def _handle_error(driver, e):
+    """Distingue sesión expirada de error real y genera crash report si aplica."""
+    error_msg = str(e)
+    if "SESIÓN EXPIRADA" in error_msg:
+        log.warning(f"⏰ {error_msg}")
+        log.info("🔄 Preparando reinicio rápido de sesión...")
+    else:
+        log.critical(f"❌ Error crítico en sesión: {e}")
+        log.critical(f"Traceback completo:\n{__import__('traceback').format_exc()}")
+        generate_crash_report(driver=driver, error=e)
+
+
+def _cleanup_driver(driver):
+    """Cierra el navegador de forma segura."""
+    if driver:
+        log.info("🛑 Cerrando navegador...")
+        try:
+            driver.quit()
+        except:
+            pass
 
 
 # ---------------------------------------------------------------------------
