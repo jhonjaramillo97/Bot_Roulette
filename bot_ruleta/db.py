@@ -4,6 +4,7 @@ Manejo de base de datos SQLite con tablas separadas por juego.
 
 import sqlite3
 import os
+import re
 from bot_ruleta.config import TABLES
 
 import sys
@@ -12,6 +13,21 @@ from bot_ruleta.paths import get_data_dir
 from bot_ruleta.debug_logger import get_logger
 
 log = get_logger("db")
+
+_VALID_TABLE_NAMES = {t["table_name"] for t in TABLES}
+_TABLE_NAME_RE = re.compile(r"^[a-zA-Z_][a-zA-Z0-9_]*$")
+
+
+def validate_table_name(name):
+    """Valida que un nombre de tabla sea seguro y exista en la configuracion.
+    Lanza ValueError si no es valido."""
+    if not name or not isinstance(name, str):
+        raise ValueError(f"Nombre de tabla invalido: {name!r}")
+    if not _TABLE_NAME_RE.match(name):
+        raise ValueError(f"Nombre de tabla con caracteres no permitidos: {name!r}")
+    if name not in _VALID_TABLE_NAMES:
+        raise ValueError(f"Tabla no configurada: {name!r}")
+    return name
 
 DB_NAME = "ruleta.db"
 DATA_DIR = get_data_dir()
