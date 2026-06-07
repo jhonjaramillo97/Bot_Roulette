@@ -16,13 +16,7 @@ from bot_ruleta.paths import get_data_dir
 DATA_DIR = get_data_dir()
 TUNNEL_FILE = os.path.join(DATA_DIR, "tunnel.txt")
 
-DEV_MODE = os.environ.get("USE_RANDOM_TUNNEL", "").lower()
-if DEV_MODE == "":
-    # .exe compilado -> dominio real con token built-in
-    # source code -> tunel temporal gratuito
-    DEV_MODE = not getattr(sys, 'frozen', False)
-else:
-    DEV_MODE = DEV_MODE == "true"
+DEV_MODE = os.environ.get("USE_RANDOM_TUNNEL", "true").lower() == "true"
 
 _URL_PATTERN = re.compile(r"https://[a-zA-Z0-9-]+\.trycloudflare\.com")
 
