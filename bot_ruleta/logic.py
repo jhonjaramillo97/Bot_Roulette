@@ -1,6 +1,7 @@
 import requests
 import time
 from bot_ruleta.credentials import load_credentials
+from bot_ruleta.logic_helpers import extract_numero, nums_to_emoji
 
 # Cache para evitar spam de notificaciones
 # Key: f"{table_name}_{zone}" -> Value: timestamp de última notificación
@@ -25,14 +26,12 @@ def compute_delays(numeros):
     for item in numeros:
         # Extraer el número y timestamp si es un dict/Row
         timestamp_str = None
-        if hasattr(item, '__getitem__') and not isinstance(item, (str, bytes, int)):
-            try:
-                n = item['numero']
-                timestamp_str = item.get('timestamp')
-            except:
-                n = item
+        timestamp_str = None
+        if isinstance(item, dict):
+            n = item.get('numero', item)
+            timestamp_str = item.get('timestamp')
         else:
-            n = item
+            n = extract_numero(item)
             
         # Validación rigurosa de continuidad (Marcador oficial de cadena rota)
         if n == -1:
@@ -96,23 +95,9 @@ def check_and_notify(table_name, delays, history=None):
         last_time = _alert_cache.get(cache_key, 0)
         
         if time.time() - last_time > ALERT_COOLDOWN:
-            # Formatear el historial de los ultimos 10 números con emojis keycap
             hist_str = ""
             if history:
-                recent_10 = history[:10]
-                emojis = []
-                keycap_map = {
-                    "0": "0️⃣", "1": "1️⃣", "2": "2️⃣", "3": "3️⃣", "4": "4️⃣",
-                    "5": "5️⃣", "6": "6️⃣", "7": "7️⃣", "8": "8️⃣", "9": "9️⃣"
-                }
-                for item in reversed(recent_10):
-                    n = item["numero"] if isinstance(item, dict) else item
-                    if n == 10:
-                        emojis.append("🔟")
-                    else:
-                        emojis.append("".join(keycap_map[c] for c in str(n)))
-                
-                hist_str = " ".join(emojis)
+                hist_str = nums_to_emoji(history)
 
             # Enviar alerta (Diseño sofisticado solicitado por usario)
             friendly_zone = zone.replace("_", " ").title()
@@ -274,13 +259,7 @@ def compute_number_delays(numeros):
     total_processed = 0
 
     for idx, item in enumerate(numeros):
-        if hasattr(item, '__getitem__') and not isinstance(item, (str, bytes, int)):
-            try:
-                n = item['numero']
-            except Exception:
-                n = item
-        else:
-            n = item
+        n = extract_numero(item)
 
         if n == -1:
             break
@@ -331,19 +310,7 @@ def check_and_notify_number(table_name, delays, history=None):
 
         hist_str = ""
         if history:
-            recent_10 = history[:10]
-            emojis = []
-            keycap_map = {
-                "0": "0️⃣", "1": "1️⃣", "2": "2️⃣", "3": "3️⃣", "4": "4️⃣",
-                "5": "5️⃣", "6": "6️⃣", "7": "7️⃣", "8": "8️⃣", "9": "9️⃣"
-            }
-            for item in reversed(recent_10):
-                n = item["numero"] if isinstance(item, dict) else item
-                if n == 10:
-                    emojis.append("🔟")
-                else:
-                    emojis.append("".join(keycap_map[c] for c in str(n)))
-            hist_str = " ".join(emojis)
+            hist_str = nums_to_emoji(history)
 
         msg = (
             f"🎰 *{table_name}*\n\n"
