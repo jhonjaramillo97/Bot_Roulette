@@ -25,8 +25,8 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/app.py": {
-    "mtime": 1780808232.3936374,
-    "ast_hash": "4e1b4a464bcd3bfa974eef91a3a03112",
+    "mtime": 1780810288.710582,
+    "ast_hash": "3987fa2d3a7adeffd7bfb380900a30b4",
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/analisis.js": {
@@ -45,8 +45,8 @@
     "semantic_hash": ""
   },
   "bot_ruleta/db.py": {
-    "mtime": 1780776854.925449,
-    "ast_hash": "c42bad50b5aab6e8e71827771ddd7753",
+    "mtime": 1780810283.320582,
+    "ast_hash": "9d62660faa98ef3150c8c3d7d7d17568",
     "semantic_hash": ""
   },
   "bot_ruleta/debug_logger.py": {
@@ -75,8 +75,8 @@
     "semantic_hash": "d066ecdb914499a141797bd806dc9dbf"
   },
   "bot_ruleta/launcher.py": {
-    "mtime": 1780807347.9082384,
-    "ast_hash": "f7cce44b40b73c7a960fe36290a150cd",
+    "mtime": 1780810850.5302446,
+    "ast_hash": "18774ba1589e2ffe79b7c1f8ab6ec6aa",
     "semantic_hash": ""
   },
   "bot_ruleta/lobby.py": {
@@ -85,8 +85,8 @@
     "semantic_hash": "b5807fb5527915c47575fc245698999e"
   },
   "bot_ruleta/logic.py": {
-    "mtime": 1780808235.2255156,
-    "ast_hash": "87ef3dbd4e806cbe5f09afe0e93edd22",
+    "mtime": 1780810849.499679,
+    "ast_hash": "214742763df4f3e3805b9ffa202d4871",
     "semantic_hash": ""
   },
   "bot_ruleta/run.py": {
@@ -160,8 +160,8 @@
     "semantic_hash": ""
   },
   "bot_ruleta/gui/app.py": {
-    "mtime": 1780807344.9216309,
-    "ast_hash": "6f638f56981a98d70285210511c65ebe",
+    "mtime": 1780810851.598601,
+    "ast_hash": "d6f9bbae86ff612f45afd19c3c595c16",
     "semantic_hash": ""
   },
   "bot_ruleta/gui/screens/__init__.py": {
@@ -197,6 +197,21 @@
   "bot_ruleta/thresholds.py": {
     "mtime": 1780808210.179329,
     "ast_hash": "ab798ffb0d35fe180b43ea72568b6fca",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/backtest.py": {
+    "mtime": 1780810241.7773926,
+    "ast_hash": "58e42d2292da7cec7f9837cd8da7a827",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/logic_helpers.py": {
+    "mtime": 1780810454.6999943,
+    "ast_hash": "2a49b35a2e4eeedbb3cda2eaf1cbe43c",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/telegram.py": {
+    "mtime": 1780810841.8961897,
+    "ast_hash": "dfdc742c0c779e351fee7e4e9f9799de",
     "semantic_hash": ""
   }
 }
