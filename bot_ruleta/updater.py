@@ -6,6 +6,8 @@ import subprocess
 import glob
 import logging
 
+from bot_ruleta.paths import is_frozen
+
 log = logging.getLogger("bot")
 
 CURRENT_VERSION = "3.0.101"
@@ -97,7 +99,7 @@ def perform_update(new_version, progress_callback, completion_callback):
     """
     def _update():
         try:
-            if not getattr(sys, 'frozen', False):
+            if not is_frozen():
                 log.warning("Ejecutando desde código fuente. La actualización automática solo funciona en el ejecutable compilado (.exe).")
                 completion_callback(False, "Solo funciona en el .exe")
                 return

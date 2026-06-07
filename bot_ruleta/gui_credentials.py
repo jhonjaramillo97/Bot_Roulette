@@ -92,11 +92,9 @@ def _legacy_decrypt(filepath: str) -> dict | None:
 
 # --- RUTA DEL ARCHIVO ---
 
-if getattr(sys, 'frozen', False):
-    DATA_DIR = os.path.join(os.path.dirname(sys.executable), "data")
-else:
-    DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
+from bot_ruleta.paths import get_data_dir
 
+DATA_DIR = get_data_dir()
 _CRED_FILE = os.path.join(DATA_DIR, "credentials.dat")
 
 

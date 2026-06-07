@@ -10,12 +10,9 @@ import time
 import subprocess
 import threading
 
-if getattr(sys, 'frozen', False):
-    DATA_DIR = os.path.join(os.path.dirname(sys.executable), "data")
-else:
-    DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
+from bot_ruleta.paths import get_data_dir
 
-os.makedirs(DATA_DIR, exist_ok=True)
+DATA_DIR = get_data_dir()
 TUNNEL_FILE = os.path.join(DATA_DIR, "tunnel.txt")
 
 DEV_MODE = True

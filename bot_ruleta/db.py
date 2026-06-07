@@ -8,13 +8,10 @@ from bot_ruleta.config import TABLES
 
 import sys
 
-DB_NAME = "ruleta.db"
-if getattr(sys, 'frozen', False):
-    DATA_DIR = os.path.join(os.path.dirname(sys.executable), "data")
-else:
-    DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
+from bot_ruleta.paths import get_data_dir
 
-os.makedirs(DATA_DIR, exist_ok=True)
+DB_NAME = "ruleta.db"
+DATA_DIR = get_data_dir()
 DB_PATH = os.path.join(DATA_DIR, DB_NAME)
 
 

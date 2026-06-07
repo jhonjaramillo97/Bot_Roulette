@@ -6,14 +6,10 @@ import sys
 import glob
 from datetime import datetime
 
+from bot_ruleta.paths import get_data_dir
 from bot_ruleta.diagnostics.logger import get_logger
 
-if getattr(sys, 'frozen', False):
-    _BASE_DIR = os.path.dirname(sys.executable)
-else:
-    _BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-SCREENSHOTS_DIR = os.path.join(_BASE_DIR, "data", "logs", "screenshots")
+SCREENSHOTS_DIR = os.path.join(get_data_dir(), "logs", "screenshots")
 os.makedirs(SCREENSHOTS_DIR, exist_ok=True)
 
 _screenshot_counter = 0

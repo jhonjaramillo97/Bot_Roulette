@@ -9,6 +9,7 @@ from bot_ruleta.credentials import load_credentials
 from bot_ruleta.telegram import send_telegram_msg
 from bot_ruleta.debug_logger import run_diagnostics, get_logger
 from bot_ruleta.tunnel import run_tunnel, TUNNEL_FILE
+from bot_ruleta.paths import is_frozen, get_base_dir
 
 log = get_logger("launcher")
 
@@ -113,8 +114,8 @@ def cleanup():
     
     def _do_cleanup():
         import glob
-        exe_dir = os.path.dirname(sys.executable) if getattr(sys, 'frozen', False) else os.path.dirname(os.path.abspath(__file__))
-        current_exe = os.path.abspath(sys.executable) if getattr(sys, 'frozen', False) else None
+        exe_dir = get_base_dir()
+        current_exe = os.path.abspath(sys.executable) if is_frozen() else None
         
         cleanup_patterns = ["*.old", "*.update", "restart_update.bat"]
         

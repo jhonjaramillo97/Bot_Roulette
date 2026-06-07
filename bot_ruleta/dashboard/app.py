@@ -24,16 +24,15 @@ def get_dashboard_threshold():
     _, _, _, _, threshold, _ = load_credentials()
     return threshold
 
+from bot_ruleta.paths import get_data_dir
+
 # Determinar rutas correctas para PyInstaller o desarrollo
 if getattr(sys, 'frozen', False):
-    # Archivos estáticos están empaquetados en MEIPASS
     static_dir = os.path.join(sys._MEIPASS, 'dashboard', 'static')
-    # Datos persistentes van junto al ejecutable
-    DATA_DIR = os.path.join(os.path.dirname(sys.executable), "data")
 else:
-    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     static_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static')
-    DATA_DIR = os.path.join(base_dir, "data")
+
+DATA_DIR = get_data_dir()
 
 app = Flask(__name__, static_url_path='', static_folder=static_dir)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0  # Sin caché para archivos estáticos
