@@ -1,129 +1,139 @@
-# Roulette Sniper - Bot Analítico para Stake 🎰
+# Roulette Sniper - Bot Analitico para Stake
 
-Un bot automatizado avanzado diseñado para extraer datos en vivo de múltiples mesas de ruleta de Pragmatic Play a través del casino online Stake, calcular los retrasos (delays) estadísticos de docenas y columnas, emitir alertas en Telegram, y proveer un Dashboard visual de monitoreo en tiempo real.
-
----
-
-## 🚀 Características Principales
-
-- **Web Scraping Dinámico:** Usa Selenium (`undetected_chromedriver`) para rodear medidas Anti-Bot (ej. Cloudflare) y extraer el feed en vivo del Lobby del casino sin abrir múltiples iframes.
-- **Multimesa Simultáneo:** Capaz de rastrear 10 mesas simultáneamente:
-    - Ruleta Latina / Stake Roulette
-    - Mega Roulette / Brazilian Mega Roulette
-    - Roulette Macao / Brazilian Roulette
-    - Roulette 1 / Roulette 3
-    - Roulette 2 Extra Time
-    - Lucky 6 Roulette / Auto Roulette
-- **Gestión de Sesión Constante:** Reutiliza el perfil de Chrome (cookies) e implementa limpiezas preventivas de LocalStorage/Cookies antes del inicio de sesión para mantener estabilidad. Módulo Anti-AFK integrado.
-- **Base de Datos Persistente:** Utiliza **SQLite 3** (`data/ruleta.db`) para ir almacenando cada giro y preservar el histórico sin utilizar RAM desmesurada ni lidiar con bloqueos de CSV concurrentes.
-- **Backtesting en Tiempo Real:** Cuenta con una tabla de eventos cerrados y un motor de sincronización incremental (`sync_backtest`) capaz de mostrar rápidamente el historial de retrasos de cualquier mesa para evaluación analítica.
-- **Alertas Premium en Telegram:** Envío asíncrono e inteligente de alertas hacia Telegram (cada vez que una docena/columna pasa del `THRESHOLD`). En el mensaje se adjuntan, pre-formateados con Emojis Blue Keycap, los últimos 10 giros que provocaron la alerta para un contexto ultra rápido.
-- **Dashboard Interactivo:** Panel web local asincrónico montado en Flask. Funciona en el puerto `:5050` con una UI estética y responsiva: vistas globales resumiendo delays altos en todas las ruletas y vistas detalladas por mesa con gráficos visuales y alarmas sonoras automáticas.
+Bot automatizado avanzado para extraer datos en vivo de multiples mesas de ruleta de Pragmatic Play via Stake, calcular delays estadisticos de docenas/columnas, emitir alertas en Telegram, y proveer un Dashboard web en tiempo real.
 
 ---
 
-## 📋 Requisitos Previos
+## Caracteristicas Principales
 
-Necesitarás instalar los siguientes componentes en el sistema (Linux/Windows/macOS):
+- **Web Scraping Dinamico:** Usa Selenium (`undetected_chromedriver`) para evadir medidas Anti-Bot y extraer el feed en vivo del Lobby.
+- **Multimesa Simultaneo:** Rastrea 19 mesas simultaneamente (Ruleta Latina, Mega Roulette, Brazilian Roulette, Roulette Macao, etc.).
+- **Gestion de Sesion:** Limpieza de cookies/LocalStorage, modulo Anti-AFK integrado, auto-reinicio ante sesion expirada.
+- **Base de Datos Persistente:** SQLite con WAL mode, conexion persistente y tablas separadas por juego.
+- **Backtesting en Tiempo Real:** Motor de sincronizacion incremental con historial de senales completadas.
+- **Alertas en Telegram:** Notificaciones de docenas/columnas retrasadas, rachas de color y numeros individuales con cooldown de 5 min.
+- **Dashboard Interactivo:** Panel web en Flask + Waitress en puerto `:5050` con vistas globales y detalladas.
+- **GUI Desktop:** Interfaz CustomTkinter con wizard de configuracion y credenciales encriptadas con Windows DPAPI.
+- **Tunel Cloudflare:** Acceso remoto al dashboard via Cloudflare Tunnel.
+- **Auto-Updater:** Descarga e instalacion automatica de nuevas versiones desde GitHub Releases.
+
+---
+
+## Requisitos
 
 - **Python 3.9+**
-- **Google Chrome** instalado (versión regular de escritorio).
-- Administrador de paquetes **pip**.
+- **Google Chrome** instalado
+- **pip**
 
 ---
 
-## 🛠️ Instalación y Configuración
+## Instalacion
 
-1. **Clonar o descargar el proyecto**
-2. **Instalar Dependencias de Python**
-   Abre una terminal en la ruta del proyecto y ejecuta:
-   ```bash
-   pip install -r requirements.txt
-   ```
-   *(Si no hay `requirements.txt`, instalar las principales: `pip install selenium undetected-chromedriver requests flask python-dotenv`)*
-
-3. **Configuración del Archivo Entorno (`.env`)**
-   Crea o modifica el archivo `.env` en el directorio principal del proyecto con los siguientes datos esenciales:
-
-   ```env
-   tu_email_de_stake@gmail.com
-   TuPasswordSecreta123!
-   TELEGRAM_TOKEN=123456789:TuTokenBotDeTelegram...
-   TELEGRAM_CHAT_ID=00000000
-   ALERT_THRESHOLD=10
-   HEADLESS=true
-   ```
-
-   - **Líneas 1 y 2**: Tu correo electrónico y contraseña en Stake.
-   - **TELEGRAM_TOKEN / TELEGRAM_CHAT_ID**: Las credenciales de la API de Telegram para enviar las alertas.
-   - **ALERT_THRESHOLD**: El nivel de "Ausencia/Retraso" en una docena o columna al cual se dispara la prevención de apuesta (ej `10`).
-   - **HEADLESS**: Ponlo en `true` para que el navegador corra de fondo sin molestarte visualmente. En `false` mostrará la interfaz de Chrome abriéndose (ideal para comprobar fallos/debug).
-
----
-
-## 🖥️ Uso del Sistema
-
-Este bot posee diferentes scripts ejecutables de acuerdo a lo que necesites:
-
-### 1. Arrancar el Ecosistema Completo
-Inicia el Dashboard de métricas, y acto seguido arranca el proceso automático de bot/scrape:
 ```bash
-# En Windows:
+git clone <repo>
+cd Bot_Stake_Recolector
+pip install -r bot_ruleta/requirements.txt
+```
+
+### Credenciales
+
+**GUI (.exe):** Las credenciales se ingresan en la pantalla de login y se guardan encriptadas con DPAPI (`data/credentials.dat`).
+
+**CLI (.env):** Copia `.env.example` a `.env` y completa los valores. El CLI usa `.env` como fallback si no hay credenciales DPAPI guardadas.
+
+---
+
+## Uso
+
+### Ejecutable (.exe)
+```bash
+# Construir
+python scripts/build_exe.py
+
+# Ejecutar
+scripts/dist/RouletteSniperPro.exe
+```
+
+### Desde codigo fuente
+```bash
+# Windows
 start_bot.bat
 
-# En Linux:
-./start_bot.sh
-```
-Una vez iniciado, entra en tu navegador favorito a `http://localhost:5050` para ver la interfaz en tiempo real.
-
-### 2. Comprobar Alertas Manualmente
-Si quieres correr una diagnosis instantánea basada en el historial registrado en la Base de Datos para probar si el formato de alertas funciona, puedes correr este script utilitario:
-```bash
-python3 check_alerts_now.py
+# Ubuntu/VPS
+bash install_ubuntu.sh
 ```
 
-### 3. Extraer Análisis Detallado (Backtesting Global)
-Si necesitas auditar matemáticamente rendimientos profundos sobre otra base de datos o el historial completo actual (promedios de caídas, tops de rachas negativas históricas):
-```bash
-python3 analyze_analisis_db.py
-```
-*(Esto deposita un archivo `Reporte_Backtesting.md` con las analíticas del casino calculadas a nivel estadístico).*
+Dashboard en `http://localhost:5050`.
 
 ---
 
-## 🗂️ Estructura del Proyecto Recomendada
+## Estructura del Proyecto
 
 ```
-bot_stake/
-├── .env                              # Archivo clave con contraseñas e IDs de Bot
-├── start_bot.bat / .sh               # Lanzador principal
-├── Documentacion_Tecnica_Bot_Stake.md # Guía sobre estructura interna
-├── analyze_analisis_db.py            # Validador estadístico masivo historico
-├── check_alerts_now.py               # Probe para telegram
+Bot_Stake_Recolector/
+├── .env.example              # Plantilla de configuracion
+├── start_bot.bat             # Lanzador Windows
+├── install_ubuntu.sh         # Instalador Ubuntu/VPS
+├── README.md
+├── version.txt
 │
 ├── bot_ruleta/
-│   ├── config.py                     # Motor lectura config .env
-│   ├── db.py                         # Conexión local a Base de Datos (SQLite)
-│   ├── logic.py                      # Algoritmia matemática y alertas TG
-│   ├── driver.py                     # Manejo Selenium
-│   ├── scanner.py                    # Scanner de OCR / Parseo DOM pragmátic
+│   ├── config.py             # Constantes y configuracion de mesas
+│   ├── db.py                 # SQLite con WAL + conexion persistente
+│   ├── logic.py              # Algoritmos de delays, rachas y alertas
+│   ├── scanner.py            # Loop principal de escaneo
+│   ├── driver.py             # Selenium + anti-deteccion
+│   ├── lobby.py              # Navegacion y mapeo dinamico de mesas
+│   ├── iframe.py             # Manejo de iframes y modales
+│   ├── telegram.py           # Cliente de Telegram Bot API
+│   ├── tunnel.py             # Cloudflare Tunnel
+│   ├── credentials.py        # Carga de credenciales (runtime > DPAPI > .env)
+│   ├── thresholds.py         # Umbrales de alerta
+│   ├── backtest.py           # Motor de sincronizacion incremental
+│   ├── updater.py            # Auto-updater desde GitHub Releases
+│   ├── launcher.py           # Orquestador CLI
+│   ├── gui_app.py            # Entry point GUI (PyInstaller)
+│   ├── run.py                # Entry point CLI
+│   ├── logic_helpers.py      # Utilidades compartidas
+│   ├── helpers.py            # human_type
+│   ├── paths.py              # Resolucion de rutas (frozen vs dev)
+│   ├── debug_logger.py       # Re-exportador de diagnostics
+│   ├── gui_credentials.py    # DPAPI encrypt/decrypt (Windows)
 │   │
-│   ├── data/
-│   │   └── ruleta.db                 # ¡Tu Base de datos generada automaticamente!
+│   ├── gui/
+│   │   ├── app.py            # Orquestador GUI (CustomTkinter)
+│   │   └── screens/          # Pantallas: prerequisites, login, loading, dashboard, update
 │   │
-│   └── dashboard/
-│       ├── app.py                    # Backend Flask Server
-│       ├── templates/                # (Opcional) Views de Flask
-│       └── static/                   # Frontend de la Vista
-│           ├── index.html            # Overivew Page
-│           ├── mesa.html             # Detail view y backtest UI
-│           ├── style.css             # Styling Dark Web Premium 
-│           ├── main.js               # Logic Polling Index
-│           └── mesa.js               # Logic Polling Detail
-└── ...
+│   ├── dashboard/
+│   │   ├── app.py            # Backend Flask
+│   │   └── static/           # Frontend HTML/CSS/JS
+│   │
+│   ├── diagnostics/          # Logger, screenshots, crash reports, system info
+│   ├── tests/                # Tests unitarios (pytest)
+│   └── data/                 # SQLite DB + logs + credenciales (gitignored)
+│
+├── scripts/
+│   ├── build_exe.py          # Builder PyInstaller
+│   ├── publish.py            # Publicador GitHub Releases
+│   ├── gen_icon.py           # Generador de icono
+│   └── verify_number_delays.py
+│
+├── docs/
+│   └── Documentacion_Bot_Stake.md
+│
+└── graphify-out/             # Knowledge graph (auto-generado)
 ```
 
 ---
 
-## 🛡️ Aviso de Responsabilidad
-Este software es una herramienta estrictamente analítica. Todos los valores presentados están basados en la información expuesta visualmente por los proveedores en vivo. Se recomienda configuraciones de `THRESHOLD` holgadas y usar prudencia; la automatización del sitio interactúa con infraestructuras privadas. El autor de las estrategias asume toda responsabilidad por uso y mantenimiento de las credenciales de conectividad inyectadas al Bot. 
+## Tests
+
+```bash
+pytest bot_ruleta/tests/ -v
+```
+
+---
+
+## Aviso de Responsabilidad
+
+Este software es una herramienta estrictamente analitica. Los valores presentados estan basados en informacion expuesta visualmente por los proveedores en vivo. El autor asume toda responsabilidad por el uso y mantenimiento de las credenciales inyectadas al Bot.

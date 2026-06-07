@@ -6,7 +6,7 @@ import time
 from selenium.webdriver.common.by import By
 
 from bot_ruleta.config import LOBBY_URL, TABLES
-from bot_ruleta.iframe import switch_to_game_iframe, cerrar_modales
+from bot_ruleta.iframe import switch_to_game_iframe, close_modals
 from bot_ruleta.debug_logger import get_logger, capture_screenshot
 
 log = get_logger("lobby")
@@ -84,7 +84,7 @@ def _click_juego_real(driver):
     return False
 
 
-def ir_al_lobby(driver, wait, from_anti_afk=False):
+def go_to_lobby(driver, wait, from_anti_afk=False):
     """Navega al lobby de Ruleta, entra al iframe y cierra modales.
     
     Args:
@@ -213,7 +213,7 @@ def ir_al_lobby(driver, wait, from_anti_afk=False):
                 log.warning(f"⚠️ Timeout esperando tiles ({max_wait}s)")
                 capture_screenshot(driver, "WARN_lobby_timeout_tiles")
 
-            cerrar_modales(driver)
+            close_modals(driver)
         else:
             log.error("❌ No se pudo cambiar al iframe del juego.")
             capture_screenshot(driver, "ERROR_lobby_sin_iframe")

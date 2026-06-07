@@ -147,7 +147,7 @@ def init_db() -> None:
     log.info("Tablas verificadas/creadas.")
 
 
-def guardar_resultado(mesa_nombre: str, numero: int, color: str, timestamp: str, game_id: int) -> None:
+def save_result(mesa_nombre: str, numero: int, color: str, timestamp: str, game_id: int) -> None:
     """Guarda un resultado en la tabla especifica del juego."""
     table_name = None
     for t in TABLES:
@@ -174,7 +174,7 @@ def guardar_resultado(mesa_nombre: str, numero: int, color: str, timestamp: str,
         log.error(f"Error guardando en BD ({table_name}): {e}")
 
 
-def obtener_ultimo_numero(mesa_nombre: str) -> Optional[int]:
+def get_last_number(mesa_nombre: str) -> Optional[int]:
     """Obtiene el ultimo numero registrado en la tabla del juego."""
     table_name = _resolve_table_name(mesa_nombre)
     if not table_name:
@@ -193,7 +193,7 @@ def obtener_ultimo_numero(mesa_nombre: str) -> Optional[int]:
     return None
 
 
-def obtener_ultimos_numeros(mesa_nombre: str, limit: Optional[int] = None) -> List[Dict[str, object]]:
+def get_last_numbers(mesa_nombre: str, limit: Optional[int] = None) -> List[Dict[str, object]]:
     """Obtiene los ultimos N registros (numero, color y timestamp). Si limit es None, obtiene todos."""
     table_name = _resolve_table_name(mesa_nombre)
     if not table_name:
@@ -211,7 +211,7 @@ def obtener_ultimos_numeros(mesa_nombre: str, limit: Optional[int] = None) -> Li
         rows = cursor.fetchall()
         return [{"numero": r[0], "color": r[1], "timestamp": r[2]} for r in rows]
     except Exception as e:
-        log.error(f"Error obtener_ultimos_numeros: {e}")
+        log.error(f"Error get_last_numbers: {e}")
         return []
 
 
@@ -223,7 +223,7 @@ def _resolve_table_name(mesa_nombre: str) -> Optional[str]:
     return None
 
 
-def limpiar_mesa(mesa_nombre: str) -> None:
+def clear_table(mesa_nombre: str) -> None:
     """Elimina todos los registros de la tabla de una mesa especifica."""
     table_name = _resolve_table_name(mesa_nombre)
     if not table_name:

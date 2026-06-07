@@ -51,7 +51,7 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0  # Sin caché para archivos estátic
 os.makedirs(DATA_DIR, exist_ok=True)
 
 
-def calcular_delays(table_name, limit=None):
+def calculate_delays(table_name, limit=None):
     """Calcula los delays de docenas y columnas para una tabla dada (USANDO LOGIC COMPARTIDA)."""
     try:
         table_name = validate_table_name(table_name)
@@ -107,7 +107,7 @@ def get_overview():
     result = []
     for t in TABLES:
         tn = t["table_name"]
-        delays, nums = calcular_delays(tn)
+        delays, nums = calculate_delays(tn)
         if delays is None:
             continue
 
@@ -180,7 +180,7 @@ def get_data():
     except ValueError:
         return jsonify({"error": "Parametro 'mesa' invalido"}), 400
 
-    delays, numeros = calcular_delays(table_name)
+    delays, numeros = calculate_delays(table_name)
     if delays is None:
         return jsonify({"error": "Error interno al leer datos"}), 500
 
@@ -323,7 +323,7 @@ def get_backtest_number():
         # 3. Calcular alertas activas (números retrasados AHORA, aún no completados)
         active_alerts = []
         try:
-            _, numeros = calcular_delays(table_name)
+            _, numeros = calculate_delays(table_name)
             if numeros:
                 current_delays = bt_logic.compute_number_delays(numeros)
                 active_alerts = [
@@ -390,7 +390,7 @@ def get_analisis_global():
         for t in TABLES:
             tn = t["table_name"]
             try:
-                _, nums = calcular_delays(tn)
+                _, nums = calculate_delays(tn)
                 if nums:
                     nd = bt_logic.compute_number_delays(nums)
                     current_number_delays[tn] = {str(k): v for k, v in nd.items()}

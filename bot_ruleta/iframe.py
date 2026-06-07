@@ -80,7 +80,7 @@ def switch_to_game_iframe(driver, max_wait=15):
     return False
 
 
-def cerrar_modales(driver):
+def close_modals(driver):
     """Intenta cerrar modales/popups que bloquean la vista (dentro del iframe)."""
     log.info("🛡️ Verificando modales bloquantes...")
     try:

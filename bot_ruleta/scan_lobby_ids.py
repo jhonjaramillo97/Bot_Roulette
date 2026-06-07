@@ -1,7 +1,7 @@
 import time
 from selenium.webdriver.common.by import By
 from bot_ruleta.driver import setup_driver, login_stake
-from bot_ruleta.lobby import ir_al_lobby
+from bot_ruleta.lobby import go_to_lobby
 from bot_ruleta.credentials import load_credentials
 
 def main():
@@ -10,7 +10,7 @@ def main():
     
     try:
         login_stake(driver, wait, email, password)
-        ir_al_lobby(driver, wait)
+        go_to_lobby(driver, wait)
         
         print("\n🕵️  ESCANEANDO TODOS LOS TILES DEL LOBBY...")
         

@@ -12,9 +12,9 @@ from selenium.webdriver.common.by import By
 from bot_ruleta.config import TABLES, DATA_DIR, LOBBY_MODE, LOBBY_URL, REDS
 from bot_ruleta.credentials import load_credentials
 from bot_ruleta.driver import setup_driver, login_stake
-from bot_ruleta.lobby import ir_al_lobby, map_tables_dynamic
+from bot_ruleta.lobby import go_to_lobby, map_tables_dynamic
 from bot_ruleta.iframe import switch_to_game_iframe
-from bot_ruleta.db import init_db, guardar_resultado, obtener_ultimo_numero, obtener_ultimos_numeros
+from bot_ruleta.db import init_db, save_result, get_last_number, get_last_numbers
 import bot_ruleta.logic as bt_logic
 from bot_ruleta.debug_logger import get_logger, capture_screenshot, generate_crash_report, run_diagnostics
 
@@ -103,7 +103,7 @@ def _initialize_session(email, password, headless):
     capture_screenshot(driver, "01_driver_iniciado")
 
     login_stake(driver, wait, email, password)
-    ir_al_lobby(driver, wait)
+    go_to_lobby(driver, wait)
     capture_screenshot(driver, "03_lobby_cargado")
 
     mapped = list(TABLES)
@@ -229,7 +229,7 @@ def _scan_single_table(driver, nombre, iframe_id):
 def _chain_match_and_save(nombre, numeros):
     """Chain matching robusto + guardado en DB. Retorna los números nuevos."""
     nums_int = [int(n) for n in numeros]
-    db_history = obtener_ultimos_numeros(nombre, limit=15)
+    db_history = get_last_numbers(nombre, limit=15)
     db_nums = [d["numero"] for d in db_history] if db_history else []
 
     nuevos = _chain_match(nums_int, db_nums, nombre)
@@ -241,7 +241,7 @@ def _chain_match_and_save(nombre, numeros):
     for idx, num in enumerate(nuevos):
         color = _get_color(num)
         ts = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime(ts_base - len(nuevos) + 1 + idx))
-        guardar_resultado(nombre, num, color, ts, int(ts_base) + idx)
+        save_result(nombre, num, color, ts, int(ts_base) + idx)
 
     return nuevos
 
@@ -287,7 +287,7 @@ def _chain_match(nums_int, db_nums, nombre):
 def _send_alerts(nombre):
     """Envía alertas de delay, color y números a Telegram."""
     try:
-        history = obtener_ultimos_numeros(nombre)
+        history = get_last_numbers(nombre)
         if not history:
             return
         bt_logic.check_and_notify(nombre, bt_logic.compute_delays(history), history)
@@ -347,7 +347,7 @@ def _soft_refresh_lobby(driver, wait):
     driver.switch_to.default_content()
     driver.get(LOBBY_URL)
     time.sleep(5)
-    ir_al_lobby(driver, wait, from_anti_afk=False)
+    go_to_lobby(driver, wait, from_anti_afk=False)
     if LOBBY_MODE:
         switch_to_game_iframe(driver)
         time.sleep(2)
