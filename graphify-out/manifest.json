@@ -20,13 +20,13 @@
     "semantic_hash": "e7ca12815cd2ee67ffdac17dd434c648"
   },
   "bot_ruleta/config.py": {
-    "mtime": 1780715628.4833264,
-    "ast_hash": "20b6fb5713abe66c86ffb339dd5ad2ed",
-    "semantic_hash": "20b6fb5713abe66c86ffb339dd5ad2ed"
+    "mtime": 1780808226.71174,
+    "ast_hash": "4a686b91a5b34e2eab8d493fc2a21b96",
+    "semantic_hash": ""
   },
   "bot_ruleta/dashboard/app.py": {
-    "mtime": 1780756712.118538,
-    "ast_hash": "1dae40fc3d8a8263afa039e2e376089e",
+    "mtime": 1780808232.3936374,
+    "ast_hash": "4e1b4a464bcd3bfa974eef91a3a03112",
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/analisis.js": {
@@ -45,14 +45,14 @@
     "semantic_hash": ""
   },
   "bot_ruleta/db.py": {
-    "mtime": 1780756653.1791227,
-    "ast_hash": "4ec9017d44b8d0873ec1be5c89fb08a4",
+    "mtime": 1780776854.925449,
+    "ast_hash": "c42bad50b5aab6e8e71827771ddd7753",
     "semantic_hash": ""
   },
   "bot_ruleta/debug_logger.py": {
-    "mtime": 1777223620.0282025,
-    "ast_hash": "e5ba813355935da1533fff7937425a75",
-    "semantic_hash": "e5ba813355935da1533fff7937425a75"
+    "mtime": 1780806522.3160439,
+    "ast_hash": "b7a3b3da854eeba5ff7445c9c22914b4",
+    "semantic_hash": ""
   },
   "bot_ruleta/driver.py": {
     "mtime": 1778273556.5576642,
@@ -60,9 +60,9 @@
     "semantic_hash": "6676aed9b602ad6f891849c4a51c1287"
   },
   "bot_ruleta/gui_app.py": {
-    "mtime": 1780718180.9732711,
-    "ast_hash": "94be1dfe392eedc143cde6d25afcc8bf",
-    "semantic_hash": "94be1dfe392eedc143cde6d25afcc8bf"
+    "mtime": 1780806522.338242,
+    "ast_hash": "99cd76cab13865e741a5ba976f48cad9",
+    "semantic_hash": ""
   },
   "bot_ruleta/helpers.py": {
     "mtime": 1777255522.5613182,
@@ -75,9 +75,9 @@
     "semantic_hash": "d066ecdb914499a141797bd806dc9dbf"
   },
   "bot_ruleta/launcher.py": {
-    "mtime": 1778865172.6507611,
-    "ast_hash": "74a945520c442e6923d46f95a2c0facb",
-    "semantic_hash": "74a945520c442e6923d46f95a2c0facb"
+    "mtime": 1780807347.9082384,
+    "ast_hash": "f7cce44b40b73c7a960fe36290a150cd",
+    "semantic_hash": ""
   },
   "bot_ruleta/lobby.py": {
     "mtime": 1777255522.5633273,
@@ -85,8 +85,8 @@
     "semantic_hash": "b5807fb5527915c47575fc245698999e"
   },
   "bot_ruleta/logic.py": {
-    "mtime": 1780756674.4471688,
-    "ast_hash": "70b221e4700bd8f23fc1f8ba917e7a23",
+    "mtime": 1780808235.2255156,
+    "ast_hash": "87ef3dbd4e806cbe5f09afe0e93edd22",
     "semantic_hash": ""
   },
   "bot_ruleta/run.py": {
@@ -95,14 +95,14 @@
     "semantic_hash": "c45dad9a02ab13338fa254133e82c087"
   },
   "bot_ruleta/scan_lobby_ids.py": {
-    "mtime": 1771044082.0300999,
-    "ast_hash": "0deed7ab1a55e2f22f6a7f5b0f266a2a",
-    "semantic_hash": "0deed7ab1a55e2f22f6a7f5b0f266a2a"
+    "mtime": 1780807348.9166052,
+    "ast_hash": "b8fc319ed2dc83c3c506bdb26b21f48f",
+    "semantic_hash": ""
   },
   "bot_ruleta/scanner.py": {
-    "mtime": 1780715663.7899594,
-    "ast_hash": "7ab07316d57b1de5b2ab580bcb88c602",
-    "semantic_hash": "7ab07316d57b1de5b2ab580bcb88c602"
+    "mtime": 1780807341.7672243,
+    "ast_hash": "377ac5b2c324cba71fd23e17bffe24d0",
+    "semantic_hash": ""
   },
   "bot_ruleta/updater.py": {
     "mtime": 1780705209.864964,
@@ -125,8 +125,78 @@
     "semantic_hash": "7347ce551a7691ee2a37c106e54a81f0"
   },
   "verify_number_delays.py": {
-    "mtime": 1780756866.481121,
-    "ast_hash": "c405d8fb80920ab943e84b97724f54de",
+    "mtime": 1780760053.8361413,
+    "ast_hash": "b21827dd437b8d0e0b9646826fddfafa",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/diagnostics/__init__.py": {
+    "mtime": 1780806522.317046,
+    "ast_hash": "46448d170b5bdb1719cd01a9c88d18fb",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/diagnostics/crash_report.py": {
+    "mtime": 1780807346.876501,
+    "ast_hash": "23e36563b43b0fd30e0328f3a50820e2",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/diagnostics/logger.py": {
+    "mtime": 1780806522.3230426,
+    "ast_hash": "be1dedc8857cc0e4915a93aec7e1f84b",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/diagnostics/screenshots.py": {
+    "mtime": 1780806522.3275862,
+    "ast_hash": "2635dcc898dedfb5abeeb21bd97beec2",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/diagnostics/system_info.py": {
+    "mtime": 1780807345.8679683,
+    "ast_hash": "bf30bfc5168e4bec353f196d1bac4134",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/gui/__init__.py": {
+    "mtime": 1780806522.3306913,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/gui/app.py": {
+    "mtime": 1780807344.9216309,
+    "ast_hash": "6f638f56981a98d70285210511c65ebe",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/gui/screens/__init__.py": {
+    "mtime": 1780806522.3326938,
+    "ast_hash": "c5b3a53eec3a928f29a228ea3bbbd120",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/gui/screens/dashboard.py": {
+    "mtime": 1780806522.3336937,
+    "ast_hash": "f640c93c7f80a15454c47ab91324dc48",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/gui/screens/loading.py": {
+    "mtime": 1780806522.3346908,
+    "ast_hash": "416c320a1a05d2444503c7a469092d64",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/gui/screens/login.py": {
+    "mtime": 1780807343.8545458,
+    "ast_hash": "554251a981e29e7dbf216777c4dcbb74",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/gui/screens/prerequisites.py": {
+    "mtime": 1780806522.3370924,
+    "ast_hash": "f1baac9dea7e42c487f6a36680c722a9",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/gui/screens/update.py": {
+    "mtime": 1780806522.3370924,
+    "ast_hash": "a79d2a882e0f5a28e8755546d1451800",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/thresholds.py": {
+    "mtime": 1780808210.179329,
+    "ast_hash": "ab798ffb0d35fe180b43ea72568b6fca",
     "semantic_hash": ""
   }
 }
