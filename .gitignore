@@ -61,3 +61,8 @@ Thumbs.db
 *.pkg
 *.pyz
 bootloader/
+
+# ============================================================
+# Graphify cache (el grafo principal graph.json y GRAPH_REPORT.md se versionan)
+# ============================================================
+graphify-out/cache/
