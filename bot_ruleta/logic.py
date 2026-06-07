@@ -1,4 +1,5 @@
 import time
+from typing import Dict, List, Any, Optional, Union
 from bot_ruleta.credentials import load_credentials
 from bot_ruleta.logic_helpers import extract_numero, nums_to_emoji
 from bot_ruleta.telegram import send_telegram_msg
@@ -11,7 +12,7 @@ log = get_logger("logic")
 ALERT_COOLDOWN = 60 * 5  # 5 minutos entre alertas de la misma zona
 _alert_cache = {}
 
-def compute_delays(numeros):
+def compute_delays(numeros: List[Any]) -> Dict[str, int]:
     """
     Calcula los delays de docenas y columnas dado una lista de números o diccionarios.
     numeros[0] es el más reciente.
@@ -65,7 +66,7 @@ def compute_delays(numeros):
             
     return delays
 
-def check_and_notify(table_name, delays, history=None):
+def check_and_notify(table_name: str, delays: Dict[str, int], history: Optional[List[Any]] = None) -> None:
     """
     Verifica si hay delays que superen el umbral y envía notificación a Telegram.
     Maneja cooldown para no spamear.
@@ -126,7 +127,7 @@ def check_and_notify(table_name, delays, history=None):
 
 # ─── SEÑALES DE RACHAS DE COLOR (ROJOS/NEGROS) ───────────────────────
 
-def compute_color_streak(numeros):
+def compute_color_streak(numeros: List[Any]) -> Dict[str, Optional[Union[str, int]]]:
     """
     Calcula la racha actual de un color (Rojo o Negro) basándose en los números recientes.
     El verde (0) es un comodín: suma a la racha sin romperla.
@@ -176,7 +177,7 @@ def compute_color_streak(numeros):
     return {"color": streak_color, "streak": streak_count}
 
 
-def check_and_notify_color(table_name, streak_data, history=None):
+def check_and_notify_color(table_name: str, streak_data: Dict[str, Any], history: Optional[List[Any]] = None) -> None:
     """
     Si la racha de color supera el umbral, envía notificación a Telegram.
     Usa cooldown independiente con cache key 'tablename_color_Red/Black'.
@@ -236,7 +237,7 @@ def check_and_notify_color(table_name, streak_data, history=None):
 
 # ─── SEÑALES DE NÚMEROS INDIVIDUALES ─────────────────────────────────
 
-def compute_number_delays(numeros):
+def compute_number_delays(numeros: List[Any]) -> Dict[int, int]:
     """
     Calcula los delays (giros sin salir) para cada número individual 0-36.
     numeros[0] es el más reciente.
@@ -270,7 +271,7 @@ def compute_number_delays(numeros):
     return delays
 
 
-def check_and_notify_number(table_name, delays, history=None):
+def check_and_notify_number(table_name: str, delays: Dict[int, int], history: Optional[List[Any]] = None) -> None:
     """
     Verifica si hay números individuales que superen el umbral de retraso.
     Envía UNA notificación consolidada por mesa (no un mensaje por número).

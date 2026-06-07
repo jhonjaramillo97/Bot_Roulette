@@ -6,6 +6,7 @@ import sqlite3
 import os
 import re
 import threading
+from typing import List, Dict, Optional
 from bot_ruleta.config import TABLES
 
 import sys
@@ -26,7 +27,7 @@ _conn = None
 _conn_lock = threading.Lock()
 
 
-def get_connection():
+def get_connection() -> sqlite3.Connection:
     """Retorna la conexion persistente a la BD (inicializa con WAL si es necesario)."""
     global _conn
     if _conn is None:
@@ -38,7 +39,7 @@ def get_connection():
     return _conn
 
 
-def validate_table_name(name):
+def validate_table_name(name: str) -> str:
     """Valida que un nombre de tabla sea seguro y exista en la configuracion.
     Lanza ValueError si no es valido."""
     if not name or not isinstance(name, str):
@@ -50,7 +51,7 @@ def validate_table_name(name):
     return name
 
 
-def init_db():
+def init_db() -> None:
     """Inicializa la base de datos creando las tablas configuradas."""
     log.info(f"Inicializando base de datos en: {DB_PATH}")
     conn = get_connection()
@@ -146,7 +147,7 @@ def init_db():
     log.info("Tablas verificadas/creadas.")
 
 
-def guardar_resultado(mesa_nombre, numero, color, timestamp, game_id):
+def guardar_resultado(mesa_nombre: str, numero: int, color: str, timestamp: str, game_id: int) -> None:
     """Guarda un resultado en la tabla especifica del juego."""
     table_name = None
     for t in TABLES:
@@ -173,7 +174,7 @@ def guardar_resultado(mesa_nombre, numero, color, timestamp, game_id):
         log.error(f"Error guardando en BD ({table_name}): {e}")
 
 
-def obtener_ultimo_numero(mesa_nombre):
+def obtener_ultimo_numero(mesa_nombre: str) -> Optional[int]:
     """Obtiene el ultimo numero registrado en la tabla del juego."""
     table_name = _resolve_table_name(mesa_nombre)
     if not table_name:
@@ -192,7 +193,7 @@ def obtener_ultimo_numero(mesa_nombre):
     return None
 
 
-def obtener_ultimos_numeros(mesa_nombre, limit=None):
+def obtener_ultimos_numeros(mesa_nombre: str, limit: Optional[int] = None) -> List[Dict[str, object]]:
     """Obtiene los ultimos N registros (numero, color y timestamp). Si limit es None, obtiene todos."""
     table_name = _resolve_table_name(mesa_nombre)
     if not table_name:
@@ -214,7 +215,7 @@ def obtener_ultimos_numeros(mesa_nombre, limit=None):
         return []
 
 
-def _resolve_table_name(mesa_nombre):
+def _resolve_table_name(mesa_nombre: str) -> Optional[str]:
     """Resuelve el nombre de tabla SQLite a partir del nombre descriptivo."""
     for t in TABLES:
         if t["name"] == mesa_nombre or t["table_name"] == mesa_nombre:
@@ -222,7 +223,7 @@ def _resolve_table_name(mesa_nombre):
     return None
 
 
-def limpiar_mesa(mesa_nombre):
+def limpiar_mesa(mesa_nombre: str) -> None:
     """Elimina todos los registros de la tabla de una mesa especifica."""
     table_name = _resolve_table_name(mesa_nombre)
     if not table_name:

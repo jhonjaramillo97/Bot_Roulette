@@ -1,17 +1,16 @@
 """
-Configuración centralizada del bot de ruleta.
-Constantes, configuración de mesas, URLs.
+Configuracion centralizada del bot de ruleta.
+Constantes, configuracion de mesas, URLs.
 """
 
 import os
+from typing import List, Dict
 
-# --- MODO DE OPERACIÓN ---
-LOBBY_MODE = True  # False = modo clásico (desactivado)
+# --- MODO DE OPERACION ---
+LOBBY_MODE: bool = True
 
 # --- MESAS CONFIGURADAS ---
-# Los IDs se actualizan dinámicamente al iniciar (map_tables_dynamic).
-# Los valores aquí son fallback en caso de que el escaneo falle.
-TABLES = [
+TABLES: List[Dict[str, str]] = [
     {"name": "Ruleta Latina", "id": "roulerw234rwl292-234", "op_id": "234", "table_name": "ruleta_latina"},
     {"name": "Mega Roulette", "id": "1hl65ce1lxuqdrkr-204", "op_id": "204", "table_name": "mega_roulette"},
     {"name": "Brazilian Roulette", "id": "rwbrzportrwa16rg-237", "op_id": "237", "table_name": "brazilian_roulette"},
@@ -38,16 +37,16 @@ TABLES = [
 ]
 
 # --- URLs ---
-LOBBY_URL = "https://stake.com.co/es/casino/juego/roulette-lobby-571"
+LOBBY_URL: str = "https://stake.com.co/es/casino/juego/roulette-lobby-571"
 
 # --- DIRECTORIOS ---
-DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
+DATA_DIR: str = os.path.join(os.path.dirname(__file__), "data")
 
 # --- INTERVALOS ---
-AFK_INTERVAL = 300  # segundos (300 = 5 min producción)
+AFK_INTERVAL: int = 300  # segundos (300 = 5 min produccion)
 
 # --- COLORES DE RULETA ---
-REDS = ['1', '3', '5', '7', '9', '12', '14', '16', '18',
+REDS: List[str] = ['1', '3', '5', '7', '9', '12', '14', '16', '18',
         '19', '21', '23', '25', '27', '30', '32', '34', '36']
 
 

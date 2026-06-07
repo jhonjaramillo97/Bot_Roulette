@@ -6,6 +6,7 @@ Incluye detección de sesión expirada y auto-reinicio.
 import os
 import time
 import random
+from typing import List, Optional, Any
 from selenium.webdriver.common.by import By
 
 from bot_ruleta.config import TABLES, DATA_DIR, LOBBY_MODE, LOBBY_URL, REDS
@@ -24,7 +25,7 @@ log = get_logger("scanner")
 # Helpers internos del scanner
 # ---------------------------------------------------------------------------
 
-def extract_nums_js(driver, tile_element):
+def extract_nums_js(driver, tile_element) -> List[str]:
     """Extrae números visibles de un tile usando JavaScript (class-agnostic)."""
     js_script = """
         var tile = arguments[0];
@@ -381,7 +382,7 @@ def _cleanup_driver(driver):
 # Loop Supervisor (Entry Point)
 # ---------------------------------------------------------------------------
 
-def run_bot(stop_event=None):
+def run_bot(stop_event: Optional[Any] = None) -> None:
     """Loop supervisor que asegura que el bot se reinicie si falla.
     
     Args:
