@@ -111,10 +111,13 @@ class RouletteApp(ctk.CTk):
     def start_background_services(self):
         try:
             creationflags = subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
-            gui_app_path = os.path.join(os.path.dirname(__file__), "..", "gui_app.py")
+            if getattr(sys, 'frozen', False):
+                cmd = [sys.executable, "--run-dashboard"]
+            else:
+                gui_app_path = os.path.join(os.path.dirname(__file__), "..", "gui_app.py")
+                cmd = [sys.executable, os.path.abspath(gui_app_path), "--run-dashboard"]
             self.dashboard_proc = subprocess.Popen(
-                [sys.executable, os.path.abspath(gui_app_path), "--run-dashboard"],
-                stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
                 creationflags=creationflags
             )
         except Exception:
