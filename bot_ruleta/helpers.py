@@ -2,8 +2,6 @@
 Funciones auxiliares puras: escritura simulada, persistencia CSV.
 """
 
-import csv
-import os
 import random
 import time
 
