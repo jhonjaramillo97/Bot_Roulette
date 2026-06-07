@@ -13,6 +13,7 @@ from bot_ruleta.config import TABLES, REDS
 from bot_ruleta.credentials import load_credentials
 from bot_ruleta.thresholds import get_color_streak_threshold, get_number_delay_threshold
 from bot_ruleta.gui_credentials import load_saved_credentials
+from bot_ruleta.db import sync_backtest, sync_color_backtest, sync_number_backtest
 import bot_ruleta.logic as bt_logic
 
 def get_dashboard_threshold():
@@ -231,7 +232,7 @@ def get_backtest():
     
     # 1. Sincronizar (procesar giros nuevos)
     try:
-        bt_logic.sync_backtest(table_name, threshold)
+        sync_backtest(table_name, threshold)
     except Exception as e:
         print(f"Error en sync_backtest: {e}")
         
@@ -262,7 +263,7 @@ def get_backtest_color():
     
     # 1. Sincronizar
     try:
-        bt_logic.sync_color_backtest(table_name, color_threshold)
+        sync_color_backtest(table_name, color_threshold)
     except Exception as e:
         print(f"Error en sync_color_backtest: {e}")
         
@@ -293,7 +294,7 @@ def get_backtest_number():
     
     # 1. Sincronizar
     try:
-        bt_logic.sync_number_backtest(table_name, number_threshold)
+        sync_number_backtest(table_name, number_threshold)
     except Exception as e:
         print(f"Error en sync_number_backtest: {e}")
         
@@ -343,9 +344,9 @@ def get_analisis_global():
     # 1. Sincronizar TODAS las mesas para asegurar datos frescos
     try:
         for t in TABLES:
-            bt_logic.sync_backtest(t["table_name"], threshold)
-            bt_logic.sync_color_backtest(t["table_name"], color_threshold)
-            bt_logic.sync_number_backtest(t["table_name"], number_threshold)
+            sync_backtest(t["table_name"], threshold)
+            sync_color_backtest(t["table_name"], color_threshold)
+            sync_number_backtest(t["table_name"], number_threshold)
     except Exception as e:
         print(f"Error en sync global: {e}")
         
