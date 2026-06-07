@@ -168,7 +168,7 @@ def obtener_ultimo_numero(mesa_nombre):
         conn.close()
         if row:
             return row[0]
-    except:
+    except Exception:
         pass
     return None
 

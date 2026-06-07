@@ -160,12 +160,12 @@ class RouletteApp(ctk.CTk):
         if self.dashboard_proc:
             try:
                 self.dashboard_proc.terminate()
-            except:
+            except Exception:
                 pass
         if self.cf_proc:
             try:
                 self.cf_proc.terminate()
-            except:
+            except Exception:
                 pass
         self.destroy()
 

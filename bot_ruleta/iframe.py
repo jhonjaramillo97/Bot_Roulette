@@ -55,7 +55,8 @@ def switch_to_game_iframe(driver, max_wait=15):
                     if len(tiles) > 0:
                         log.info("   ✅ Elementos del juego encontrados en el iframe principal. No requiere anidado.")
                         return True
-                except: pass
+                except Exception:
+                    pass
                 
                 # 2. Buscar iframe anidado clásico
                 inner_iframes = driver.find_elements(By.TAG_NAME, "iframe")
@@ -103,7 +104,7 @@ def cerrar_modales(driver):
                     log.info(f"   Click en cerrar modal: {xpath}")
                     driver.execute_script("arguments[0].click();", btn)
                     time.sleep(1)
-            except:
+            except Exception:
                 pass
 
     except Exception as e:

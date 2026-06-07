@@ -79,7 +79,7 @@ def _click_juego_real(driver):
                     log.info(f"   👉 Click en '{el.text.strip()}' ...")
                     driver.execute_script("arguments[0].click();", el)
                     return True
-        except:
+        except Exception:
             pass
     return False
 
@@ -127,8 +127,8 @@ def ir_al_lobby(driver, wait, from_anti_afk=False):
                     with open(html_path, "w", encoding="utf-8") as f:
                         f.write(driver.page_source)
                     log.critical(f"   📄 HTML guardado: {html_path}")
-                except:
-                    pass
+                except Exception:
+                    log.debug("Error al guardar HTML de diagnostico")
                 raise Exception("SESIÓN PERDIDA: Se requiere re-login completo")
             
             log.info("   ✅ Sesión sigue activa tras Anti-AFK")
@@ -155,7 +155,7 @@ def ir_al_lobby(driver, wait, from_anti_afk=False):
                     clicked = _click_juego_real(driver)
                     if clicked:
                         break
-                except:
+                except Exception:
                     pass
             driver.switch_to.default_content()
 
@@ -206,7 +206,7 @@ def ir_al_lobby(driver, wait, from_anti_afk=False):
                         log.debug(f"   ⏳ Pantalla de carga activa... ({elapsed}s)")
                     else:
                         log.debug(f"   ⏳ Curtain cerrado, esperando tiles... ({elapsed}s)")
-                except:
+                except Exception:
                     pass
 
             if not tiles_found:
@@ -275,8 +275,8 @@ def map_tables_dynamic(driver):
                 with open("debug_afk_failure.html", "w", encoding="utf-8") as f:
                     f.write(driver.page_source)
                 log.error("   HTML dump guardado: 'debug_afk_failure.html'")
-            except:
-                pass
+            except Exception:
+                log.debug("Error al guardar HTML de tiles")
             return
 
         # Recopilar (tile_id, titulo) de todos los tiles
@@ -312,11 +312,11 @@ def map_tables_dynamic(driver):
                         if txt and not txt.isdigit():
                             titulo = txt
                             break
-                    except:
+                    except Exception:
                         pass
 
                 lobby_tiles.append((tile_id, titulo))
-            except:
+            except Exception:
                 pass
 
         # 3. Mostrar tabla de resumen

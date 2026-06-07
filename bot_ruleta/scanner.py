@@ -54,7 +54,8 @@ def extract_nums_js(driver, tile_element):
     """
     try:
         return driver.execute_script(js_script, tile_element)
-    except:
+    except Exception:
+        log.debug(f"extract_nums_js fallo para tile", exc_info=True)
         return []
 
 
@@ -128,7 +129,7 @@ def _start_audio_keepalive(driver):
             }, 1000);
         """)
         log.debug("🔊 Audio keep-alive activado")
-    except:
+    except Exception:
         log.debug("⚠️ Audio keep-alive no disponible (no crítico)")
 
 
@@ -179,7 +180,7 @@ def _simulate_mouse_move(driver):
             });
             document.dispatchEvent(ev);
         """)
-    except:
+    except Exception:
         pass
 
 
@@ -364,8 +365,8 @@ def _cleanup_driver(driver):
         log.info("🛑 Cerrando navegador...")
         try:
             driver.quit()
-        except:
-            pass
+        except Exception:
+            log.debug("Error al cerrar driver", exc_info=True)
 
 
 # ---------------------------------------------------------------------------

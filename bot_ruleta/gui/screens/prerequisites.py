@@ -62,14 +62,14 @@ class PrerequisitesScreen(ctk.CTkFrame):
             else:
                 self.lbl_chrome.configure(text="✅ Sistema no-Windows (Asumiendo Chrome OK)", text_color="#00FF88")
                 chrome_ok = True
-        except:
+        except Exception:
             self.lbl_chrome.configure(text="❌ Chrome NO encontrado", text_color="#FF4444")
             all_ok = False
 
         try:
             subprocess.run(["cloudflared", "--version"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=2)
             self.lbl_cf.configure(text="✅ Cloudflared instalado", text_color="#00FF88")
-        except:
+        except Exception:
             self.lbl_cf.configure(text="❌ Cloudflared NO encontrado", text_color="#FF4444")
             self.btn_download_cf.pack(pady=10, before=self.btn_continue)
             all_ok = False
@@ -87,7 +87,7 @@ class PrerequisitesScreen(ctk.CTkFrame):
             try:
                 urllib.request.urlopen("https://google.com", timeout=5)
                 self.lbl_net.configure(text="✅ Conexion a Internet OK (Google)", text_color="#00FF88")
-            except:
+            except Exception:
                 self.lbl_net.configure(text="❌ Sin conexion a Internet", text_color="#FF4444")
                 all_ok = False
 

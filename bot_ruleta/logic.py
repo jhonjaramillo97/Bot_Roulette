@@ -78,7 +78,7 @@ def check_and_notify(table_name, delays, history=None):
         with open("bot_ruleta/logs/debug_tg.txt", "a") as f:
             ts = time.strftime("%Y-%m-%d %H:%M:%S")
             f.write(f"[{ts}] CHECKING {table_name}: Threshold={alert_threshold} Delays={delays}\n")
-    except:
+    except Exception:
         pass
     
     if not token or not chat_id:
@@ -110,14 +110,14 @@ def check_and_notify(table_name, delays, history=None):
                 try:
                     with open("bot_ruleta/logs/debug_tg.txt", "a") as f:
                          f.write(f"   >>> SENT ALERT for {zone} (Delay {delays[zone]})\n")
-                except: pass
+                except Exception: pass
                 
                 _alert_cache[cache_key] = time.time()
         else:
             try:
                 with open("bot_ruleta/logs/debug_tg.txt", "a") as f:
                      f.write(f"   >>> SKIPPED {zone} (Cooldown)\n")
-            except: pass
+            except Exception: pass
 
 
 
@@ -139,7 +139,7 @@ def compute_color_streak(numeros):
             try:
                 color = item.get('color', item.get('col', ''))
                 n = item.get('numero', item.get('val', -1))
-            except:
+            except Exception:
                 continue
         else:
             continue

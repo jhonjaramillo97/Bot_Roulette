@@ -32,7 +32,7 @@ def main():
                 for _ in range(5):
                     driver.execute_script("arguments[0].scrollTop += 500;", scroll_container)
                     time.sleep(1)
-        except:
+        except Exception:
             pass
 
         # 2. Extraer info iterando y scrolleando a cada uno
@@ -71,7 +71,7 @@ def main():
                         if txt and not txt.isdigit(): # El título no debería ser solo un número
                             title = txt
                             break
-                    except:
+                    except Exception:
                         pass
                 
                 print(f"{tid:<25} | {title}")

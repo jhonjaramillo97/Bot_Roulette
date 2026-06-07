@@ -106,8 +106,8 @@ def setup_driver(headless=True):
             if platform.system() == "Windows":
                 subprocess.run(["taskkill", "/F", "/IM", "chrome.exe"], capture_output=True, timeout=5)
                 subprocess.run(["taskkill", "/F", "/IM", "chromedriver.exe"], capture_output=True, timeout=5)
-        except:
-            pass
+        except Exception:
+            log.warning("Error al forzar cierre de Chrome/chromedriver", exc_info=True)
         raise Exception("TIMEOUT: Chrome no respondió en 60s al iniciar")
 
     if isinstance(driver_exception[0], Exception):
@@ -362,8 +362,8 @@ def login_stake(driver, wait, email, password):
         log.info("🧹 Limpiando cookies y almacenamiento local...")
         driver.delete_all_cookies()
         driver.execute_script("window.localStorage.clear(); window.sessionStorage.clear();")
-    except:
-        pass
+    except Exception:
+        log.debug("Error al limpiar cookies/storage (no crítico)")
 
     try:
         log.info("🔑 Iniciando sesión...")

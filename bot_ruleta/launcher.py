@@ -107,7 +107,8 @@ def cleanup():
     # Eliminar archivo tunnel.txt si queda
     if os.path.exists(TUNNEL_FILE):
         try: os.remove(TUNNEL_FILE)
-        except: pass
+        except Exception:
+            pass
         
     import threading
     import time
@@ -127,17 +128,17 @@ def cleanup():
                 for old_file in glob.glob(os.path.join(exe_dir, pattern)):
                     try: 
                         os.remove(old_file)
-                    except: 
+                    except Exception: 
                         all_clean = False
             
             # Limpiar versiones viejas versionadas (RouletteSniperPro_v*.exe) excepto la actual
             for old_file in glob.glob(os.path.join(exe_dir, "RouletteSniperPro_v*.exe")):
                 if current_exe and os.path.abspath(old_file) == current_exe:
                     continue
-                try: 
-                    os.remove(old_file)
-                except: 
-                    all_clean = False
+                    try: 
+                        os.remove(old_file)
+                    except Exception: 
+                        all_clean = False
             
             if all_clean:
                 break
@@ -199,8 +200,8 @@ if __name__ == "__main__":
     finally:
         # Cerrar todo ordenadamente
         try: bot_proc.terminate()
-        except: pass
+        except Exception: pass
         try: dashboard_proc.terminate()
-        except: pass
+        except Exception: pass
         # cloudflared se cierra solo porque el hilo watchdog es daemon
         cleanup()
