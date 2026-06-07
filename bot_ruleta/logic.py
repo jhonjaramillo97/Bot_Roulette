@@ -1,7 +1,7 @@
-import requests
 import time
 from bot_ruleta.credentials import load_credentials
 from bot_ruleta.logic_helpers import extract_numero, nums_to_emoji
+from bot_ruleta.telegram import send_telegram_msg
 
 # Cache para evitar spam de notificaciones
 # Key: f"{table_name}_{zone}" -> Value: timestamp de última notificación
@@ -120,20 +120,6 @@ def check_and_notify(table_name, delays, history=None):
                      f.write(f"   >>> SKIPPED {zone} (Cooldown)\n")
             except: pass
 
-def send_telegram_msg(token, chat_id, text):
-    """Envía mensaje raw a Telegram."""
-    url = f"https://api.telegram.org/bot{token}/sendMessage"
-    payload = {
-        "chat_id": chat_id,
-        "text": text,
-        "parse_mode": "Markdown"
-    }
-    try:
-        r = requests.post(url, json=payload, timeout=5)
-        return r.status_code == 200
-    except Exception as e:
-        print(f"❌ Error enviando Telegram: {e}")
-        return False
 
 
 # ─── SEÑALES DE RACHAS DE COLOR (ROJOS/NEGROS) ───────────────────────
