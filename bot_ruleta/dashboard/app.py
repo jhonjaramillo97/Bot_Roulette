@@ -1,6 +1,5 @@
 import sys
 import os
-import sqlite3
 import logging
 from flask import Flask, jsonify, request, send_from_directory
 
@@ -17,7 +16,7 @@ from bot_ruleta.credentials import load_credentials
 from bot_ruleta.thresholds import get_color_streak_threshold, get_number_delay_threshold
 from bot_ruleta.gui_credentials import load_saved_credentials
 from bot_ruleta.backtest import sync_backtest, sync_color_backtest, sync_number_backtest
-from bot_ruleta.db import validate_table_name
+from bot_ruleta.db import validate_table_name, get_connection as get_db_connection
 import bot_ruleta.logic as bt_logic
 
 def get_dashboard_threshold():
@@ -50,12 +49,6 @@ app = Flask(__name__, static_url_path='', static_folder=static_dir)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0  # Sin caché para archivos estáticos
 
 os.makedirs(DATA_DIR, exist_ok=True)
-DB_PATH = os.path.join(DATA_DIR, "ruleta.db")
-
-def get_db_connection():
-    conn = sqlite3.connect(DB_PATH)
-    conn.row_factory = sqlite3.Row
-    return conn
 
 
 def calcular_delays(table_name, limit=None):
@@ -72,7 +65,6 @@ def calcular_delays(table_name, limit=None):
                 f"SELECT numero, color, timestamp FROM {table_name} ORDER BY id DESC"
             )
         rows = cursor.fetchall()
-        conn.close()
     except Exception:
         return None, []
 
@@ -259,7 +251,6 @@ def get_backtest():
             (table_name,)
         )
         rows = cursor.fetchall()
-        conn.close()
         
         history = [dict(row) for row in rows]
         return jsonify({"mesa": table_name, "history": history})
@@ -293,7 +284,6 @@ def get_backtest_color():
             (table_name,)
         )
         rows = cursor.fetchall()
-        conn.close()
         
         history = [dict(row) for row in rows]
         return jsonify({"mesa": table_name, "history": history})
@@ -327,7 +317,6 @@ def get_backtest_number():
             (table_name,)
         )
         rows = cursor.fetchall()
-        conn.close()
         
         history = [dict(row) for row in rows]
         
@@ -394,8 +383,6 @@ def get_analisis_global():
         )
         number_rows = cursor3.fetchall()
         number_history = [dict(row) for row in number_rows]
-        
-        conn.close()
         
         # 5. Calcular delays actuales de números para cada mesa
         current_number_delays = {}
@@ -491,7 +478,6 @@ def get_signal_detail():
                     (start_time,)
                 )
             rows = cursor.fetchall()
-        conn.close()
         
         plays = [{"numero": r["numero"], "color": r["color"], "timestamp": r["timestamp"]} for r in rows]
         return jsonify({"mesa": table_name, "plays": plays})

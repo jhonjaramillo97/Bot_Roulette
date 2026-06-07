@@ -63,7 +63,6 @@ class _BacktestSyncEngine:
     def _close(self):
         if self.conn:
             self.conn.commit()
-            self.conn.close()
 
     def run(self, columns='id, numero, timestamp'):
         self._open()
