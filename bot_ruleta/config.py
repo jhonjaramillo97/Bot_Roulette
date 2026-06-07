@@ -4,6 +4,7 @@ Constantes, configuración de mesas, URLs y lectura de credenciales.
 """
 
 import os
+import time
 
 # --- MODO DE OPERACIÓN ---
 LOBBY_MODE = True  # False = modo clásico (desactivado)
@@ -59,6 +60,24 @@ NUMBER_DELAY_THRESHOLD = 20  # Default: señal cuando un número no sale en 20 g
 # --- RUNTIME OVERRIDES (set by GUI) ---
 _runtime_overrides = {}
 
+# --- CACHE DE CREDENCIALES ---
+# Evita leer .env del disco decenas de veces por ciclo de escaneo.
+# TTL de 30s: suficiente para un ciclo completo sin perder reactividad a cambios.
+_CACHE_TTL = 30
+_credentials_cache = {"value": None, "expires_at": 0}
+_color_threshold_cache = {"value": None, "expires_at": 0}
+_number_threshold_cache = {"value": None, "expires_at": 0}
+
+def _cache_get(cache):
+    now = time.time()
+    if cache["value"] is not None and now < cache["expires_at"]:
+        return cache["value"]
+    return None
+
+def _cache_set(cache, value):
+    cache["value"] = value
+    cache["expires_at"] = time.time() + _CACHE_TTL
+
 
 def set_runtime_config(**kwargs):
     """Permite a la GUI inyectar credenciales sin modificar .env.
@@ -68,8 +87,9 @@ def set_runtime_config(**kwargs):
 
 
 def load_credentials():
-    """Lee credenciales. Prioridad: runtime overrides > .env"""
-    # Si la GUI ya configuró las credenciales, usarlas directamente
+    """Lee credenciales. Prioridad: runtime overrides > .env.
+    Cachea el resultado de .env por 30s para evitar lecturas repetidas."""
+    # Si la GUI ya configuró las credenciales, usarlas directamente (sin cache)
     if _runtime_overrides:
         return (
             _runtime_overrides.get('email', ''),
@@ -79,6 +99,11 @@ def load_credentials():
             _runtime_overrides.get('threshold', 12),
             _runtime_overrides.get('headless', True),
         )
+
+    # Usar cache si está vigente
+    cached = _cache_get(_credentials_cache)
+    if cached is not None:
+        return cached
 
     # Fallback: leer desde .env
     email = ""
@@ -126,17 +151,19 @@ def load_credentials():
     except Exception as e:
         print(f"⚠️ No se pudo leer .env: {e}")
     
-    return email, password, tg_token, tg_chat_id, alert_threshold, headless
+    result = (email, password, tg_token, tg_chat_id, alert_threshold, headless)
+    _cache_set(_credentials_cache, result)
+    return result
 
 
 def get_color_streak_threshold():
     """Lee el umbral de racha de color. Prioridad: runtime overrides > GUI saved > .env > default.
-    Independiente de load_credentials() para no romper call sites existentes."""
-    # 1. Runtime overrides (GUI en sesión activa)
+    Cachea el resultado por 30s para evitar lecturas repetidas de .env."""
+    # 1. Runtime overrides (GUI en sesión activa) — sin cache
     if 'color_streak_threshold' in _runtime_overrides:
         return _runtime_overrides['color_streak_threshold']
     
-    # 2. Credenciales guardadas por la GUI
+    # 2. Credenciales guardadas por la GUI — sin cache
     try:
         from bot_ruleta.gui_credentials import load_saved_credentials
         saved = load_saved_credentials()
@@ -145,7 +172,12 @@ def get_color_streak_threshold():
     except Exception:
         pass
     
-    # 3. Variable de entorno (.env)
+    # 3. Cache de .env (el fallback más caro)
+    cached = _cache_get(_color_threshold_cache)
+    if cached is not None:
+        return cached
+
+    # 4. Variable de entorno (.env)
     env_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), ".env")
     try:
         with open(env_path, "r", encoding="utf-8") as f:
@@ -153,21 +185,26 @@ def get_color_streak_threshold():
                 line = line.strip()
                 if line.startswith("COLOR_STREAK_THRESHOLD="):
                     val = line.split("=", 1)[1].split("#")[0].strip()
-                    return int(val)
+                    result = int(val)
+                    _cache_set(_color_threshold_cache, result)
+                    return result
     except Exception:
         pass
     
-    # 4. Default
-    return COLOR_STREAK_THRESHOLD
+    # 5. Default
+    result = COLOR_STREAK_THRESHOLD
+    _cache_set(_color_threshold_cache, result)
+    return result
 
 
 def get_number_delay_threshold():
-    """Lee el umbral de retraso de números individuales. Prioridad: runtime overrides > GUI saved > .env > default."""
-    # 1. Runtime overrides (GUI en sesión activa)
+    """Lee el umbral de retraso de números individuales. Prioridad: runtime overrides > GUI saved > .env > default.
+    Cachea el resultado por 30s para evitar lecturas repetidas de .env."""
+    # 1. Runtime overrides (GUI en sesión activa) — sin cache
     if 'number_delay_threshold' in _runtime_overrides:
         return _runtime_overrides['number_delay_threshold']
     
-    # 2. Credenciales guardadas por la GUI
+    # 2. Credenciales guardadas por la GUI — sin cache
     try:
         from bot_ruleta.gui_credentials import load_saved_credentials
         saved = load_saved_credentials()
@@ -176,7 +213,12 @@ def get_number_delay_threshold():
     except Exception:
         pass
     
-    # 3. Variable de entorno (.env)
+    # 3. Cache de .env (el fallback más caro)
+    cached = _cache_get(_number_threshold_cache)
+    if cached is not None:
+        return cached
+
+    # 4. Variable de entorno (.env)
     env_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), ".env")
     try:
         with open(env_path, "r", encoding="utf-8") as f:
@@ -184,9 +226,13 @@ def get_number_delay_threshold():
                 line = line.strip()
                 if line.startswith("NUMBER_DELAY_THRESHOLD="):
                     val = line.split("=", 1)[1].split("#")[0].strip()
-                    return int(val)
+                    result = int(val)
+                    _cache_set(_number_threshold_cache, result)
+                    return result
     except Exception:
         pass
     
-    # 4. Default
-    return NUMBER_DELAY_THRESHOLD
+    # 5. Default
+    result = NUMBER_DELAY_THRESHOLD
+    _cache_set(_number_threshold_cache, result)
+    return result
