@@ -68,11 +68,10 @@ class PrerequisitesScreen(ctk.CTkFrame):
 
         try:
             subprocess.run(["cloudflared", "--version"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=2)
-            self.lbl_cf.configure(text="✅ Cloudflared instalado", text_color="#00FF88")
+            self.lbl_cf.configure(text="Cloudflared instalado", text_color="#00FF88")
         except Exception:
-            self.lbl_cf.configure(text="❌ Cloudflared NO encontrado", text_color="#FF4444")
+            self.lbl_cf.configure(text="Cloudflared NO encontrado (solo acceso remoto)", text_color="#FFAA00")
             self.btn_download_cf.pack(pady=10, before=self.btn_continue)
-            all_ok = False
 
         try:
             try:
