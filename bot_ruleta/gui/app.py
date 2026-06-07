@@ -13,10 +13,8 @@ import customtkinter as ctk
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from bot_ruleta.credentials import load_credentials
 from bot_ruleta.debug_logger import attach_gui_queue, get_logger
 from bot_ruleta.tunnel import run_tunnel, TUNNEL_FILE
-from bot_ruleta.telegram import send_telegram_msg
 from bot_ruleta.gui.screens import (
     PrerequisitesScreen, LoginScreen, LoadingScreen, DashboardScreen, UpdateScreen
 )
@@ -113,8 +111,9 @@ class RouletteApp(ctk.CTk):
     def start_background_services(self):
         try:
             creationflags = subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
+            gui_app_path = os.path.join(os.path.dirname(__file__), "..", "gui_app.py")
             self.dashboard_proc = subprocess.Popen(
-                [sys.executable, "--run-dashboard"],
+                [sys.executable, os.path.abspath(gui_app_path), "--run-dashboard"],
                 stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
                 creationflags=creationflags
             )
@@ -127,7 +126,7 @@ class RouletteApp(ctk.CTk):
     def _cloudflared_watchdog(self):
         def _on_url(url):
             if url == "__error:no_instalado__":
-                log.error("\u274c cloudflared no esta instalado")
+                log.error("cloudflared no esta instalado")
                 self.frames[DashboardScreen].update_cf_url("ERROR: No instalado")
                 return
 
@@ -136,22 +135,8 @@ class RouletteApp(ctk.CTk):
             self.frames[DashboardScreen].update_cf_url(url)
 
             if url != old_url:
-                try:
-                    _, _, tg_token, chat_id, _, _ = load_credentials()
-                    if tg_token and chat_id and tg_token.strip() != "":
-                        if "trycloudflare" in url:
-                            tg_msg = (
-                                f"\u2699\ufe0f <b>[MODO DESARROLLADOR]</b> Bot iniciado.\n\n"
-                                f"Dashboard temporal: {url}"
-                            )
-                        else:
-                            tg_msg = (
-                                f"\U0001f310 *Dashboard Activo*\n\n"
-                                f"El bot acaba de encenderse. Panel permanente disponible en:\n\n{url}"
-                            )
-                        send_telegram_msg(tg_token, chat_id, tg_msg)
-                except Exception as e:
-                    log.warning(f"Error enviando URL a Telegram: {e}")
+                from bot_ruleta.tunnel import notify_tunnel_url
+                notify_tunnel_url(url, old_url)
 
         run_tunnel(on_url=_on_url, stop_event=self.stop_event)
 
@@ -168,26 +153,3 @@ class RouletteApp(ctk.CTk):
             except Exception:
                 pass
         self.destroy()
-
-
-if __name__ == "__main__":
-    import multiprocessing
-    multiprocessing.freeze_support()
-
-    if len(sys.argv) > 1 and sys.argv[1] == "--run-dashboard":
-        if getattr(sys, 'stdout', None) is None:
-            sys.stdout = open(os.devnull, 'w')
-        if getattr(sys, 'stderr', None) is None:
-            sys.stderr = open(os.devnull, 'w')
-
-        from bot_ruleta.dashboard.app import app as flask_app
-        import logging
-        log_werkzeug = logging.getLogger('werkzeug')
-        log_werkzeug.setLevel(logging.ERROR)
-
-        from waitress import serve
-        serve(flask_app, host='0.0.0.0', port=5050, clear_untrusted_proxy_headers=False)
-        sys.exit(0)
-
-    app = RouletteApp()
-    app.mainloop()

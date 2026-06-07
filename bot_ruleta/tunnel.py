@@ -58,6 +58,27 @@ def _save_tunnel_url(url):
         pass
 
 
+def notify_tunnel_url(url, old_url=""):
+    """Envia notificacion por Telegram cuando el URL del tunel se establece o cambia.
+    Usa formato unificado para CLI y GUI."""
+    try:
+        from bot_ruleta.telegram import send_telegram_msg
+        from bot_ruleta.credentials import load_credentials
+        _, _, token, chat_id, _, _ = load_credentials()
+        if not token or not chat_id or not token.strip():
+            return
+
+        is_update = old_url and "trycloudflare" in str(old_url)
+        if is_update:
+            msg = f"Nuevo enlace del Dashboard:\n\n{url}"
+        else:
+            msg = f"Dashboard Activo\n\n{url}"
+
+        send_telegram_msg(token, chat_id, msg)
+    except Exception:
+        pass
+
+
 def run_tunnel(on_url, stop_event=None):
     """
     Mantiene un tunel cloudflared vivo con auto-reinicio.

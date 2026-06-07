@@ -5,8 +5,6 @@ import sys
 import time
 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from bot_ruleta.credentials import load_credentials
-from bot_ruleta.telegram import send_telegram_msg
 from bot_ruleta.debug_logger import run_diagnostics, get_logger
 from bot_ruleta.tunnel import run_tunnel, TUNNEL_FILE
 from bot_ruleta.paths import is_frozen, get_base_dir
@@ -54,22 +52,8 @@ def _update_tunnel_url(found_url):
         public_url = found_url
 
         if found_url != old_url:
-            try:
-                _, _, token, chat_id, _, _ = load_credentials()
-                if token and chat_id and token.strip() != "":
-                    if old_url and "trycloudflare" in str(old_url):
-                        tg_msg = (
-                            f"🔄 *Enlace del Dashboard Actualizado*\n\n"
-                            f"El túnel se renovó automáticamente. Nuevo enlace:\n\n{found_url}"
-                        )
-                    else:
-                        tg_msg = (
-                            f"🌐 *Nuevo Enlace del Dashboard*\n\n"
-                            f"El bot acaba de encenderse. Puedes acceder al escáner en tiempo real desde cualquier lugar aquí:\n\n{found_url}"
-                        )
-                    send_telegram_msg(token, chat_id, tg_msg)
-            except Exception:
-                pass
+            from bot_ruleta.tunnel import notify_tunnel_url
+            notify_tunnel_url(found_url, old_url)
 
     render_ui()
 
@@ -163,10 +147,10 @@ if __name__ == "__main__":
     print("=" * 60)
     time.sleep(3)  # Dar tiempo a leer el diagnóstico
     
-    # 1. Iniciar Dashboard
+    # 1. Iniciar Dashboard (via gui_app.py --run-dashboard, mismo handler que la GUI)
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    app_py_path = os.path.join(base_dir, "dashboard", "app.py")
-    dashboard_proc = subprocess.Popen([sys.executable, app_py_path], 
+    gui_app_path = os.path.join(base_dir, "gui_app.py")
+    dashboard_proc = subprocess.Popen([sys.executable, gui_app_path, "--run-dashboard"], 
                                       stdout=subprocess.DEVNULL, 
                                       stderr=subprocess.DEVNULL)
     
