@@ -36,8 +36,8 @@ def set_runtime_config(**kwargs):
 
 
 def load_credentials():
-    """Lee credenciales. Prioridad: runtime overrides > .env.
-    Cachea el resultado de .env por 30s para evitar lecturas repetidas."""
+    """Lee credenciales. Prioridad: runtime overrides > .env > DPAPI (gui_credentials).
+    Cachea el resultado por 30s para evitar lecturas repetidas."""
     # Si la GUI ya configuró las credenciales, usarlas directamente (sin cache)
     if _runtime_overrides:
         return (
@@ -54,7 +54,7 @@ def load_credentials():
     if cached is not None:
         return cached
 
-    # Fallback: leer desde .env
+    # Defaults
     email = ""
     password = ""
     tg_token = ""
@@ -62,29 +62,25 @@ def load_credentials():
     alert_threshold = 12
     headless = True
 
-    # Buscar .env en la raíz del proyecto
+    # 1. Intentar leer desde .env (fallback legacy)
     env_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), ".env")
-    try:
-        with open(env_path, "r", encoding="utf-8") as f:
-            lines = f.read().splitlines()
-
-            valid_lines = [line.strip() for line in lines if line.strip() and not line.strip().startswith("#")]
-            creds = [line for line in valid_lines if "=" not in line]
-
-            # Backwards compatibility con el archivo viejo (sin llaves)
-            if len(creds) >= 1:
-                email = creds[0]
-            if len(creds) >= 2:
-                password = creds[1]
-
-            for line in valid_lines:
-                if "=" in line:
+    env_loaded = False
+    if os.path.exists(env_path):
+        try:
+            with open(env_path, "r", encoding="utf-8") as f:
+                for line in f:
+                    line = line.strip()
+                    if not line or line.startswith("#"):
+                        continue
+                    if "=" not in line:
+                        continue
                     parts = line.split("=", 1)
                     key = parts[0].strip()
                     val = parts[1].split("#")[0].strip()
 
                     if key == "STAKE_EMAIL" or key == "CORREO":
                         email = val
+                        env_loaded = True
                     elif key == "STAKE_PASSWORD" or key == "CONTRASEÑA" or key == "CONTRASENA":
                         password = val
                     elif key == "TELEGRAM_TOKEN":
@@ -95,12 +91,26 @@ def load_credentials():
                         try:
                             alert_threshold = int(val)
                         except Exception:
-                            alert_threshold = 12
+                            pass
                     elif key == "HEADLESS":
                         headless = (val.lower() == "true")
+        except Exception:
+            pass
 
-    except Exception as e:
-        print(f"⚠️ No se pudo leer .env: {e}")
+    # 2. Si no se cargó desde .env, intentar DPAPI (gui_credentials)
+    if not env_loaded and not (email and password):
+        try:
+            from bot_ruleta.gui_credentials import load_saved_credentials
+            saved = load_saved_credentials()
+            if saved:
+                email = saved.get("email", email)
+                password = saved.get("password", password)
+                tg_token = saved.get("tg_token", tg_token)
+                tg_chat_id = saved.get("tg_chat_id", tg_chat_id)
+                alert_threshold = saved.get("threshold", alert_threshold)
+                headless = saved.get("headless", headless)
+        except Exception:
+            pass
 
     result = (email, password, tg_token, tg_chat_id, alert_threshold, headless)
     _cache_set(_credentials_cache, result)
