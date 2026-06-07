@@ -13,7 +13,7 @@ from bot_ruleta.config import TABLES, REDS
 from bot_ruleta.credentials import load_credentials
 from bot_ruleta.thresholds import get_color_streak_threshold, get_number_delay_threshold
 from bot_ruleta.gui_credentials import load_saved_credentials
-from bot_ruleta.db import sync_backtest, sync_color_backtest, sync_number_backtest
+from bot_ruleta.backtest import sync_backtest, sync_color_backtest, sync_number_backtest
 import bot_ruleta.logic as bt_logic
 
 def get_dashboard_threshold():
