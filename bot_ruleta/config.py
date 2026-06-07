@@ -5,11 +5,6 @@ Constantes, configuración de mesas, URLs.
 
 import os
 
-from bot_ruleta.credentials import (
-    _runtime_overrides, _cache_get, _cache_set,
-    _color_threshold_cache, _number_threshold_cache,
-)
-
 # --- MODO DE OPERACIÓN ---
 LOBBY_MODE = True  # False = modo clásico (desactivado)
 
@@ -55,89 +50,4 @@ AFK_INTERVAL = 300  # segundos (300 = 5 min producción)
 REDS = ['1', '3', '5', '7', '9', '12', '14', '16', '18',
         '19', '21', '23', '25', '27', '30', '32', '34', '36']
 
-# --- SEÑALES DE RACHA DE COLOR ---
-COLOR_STREAK_THRESHOLD = 5  # Default: señal a partir de 5 consecutivos del mismo color
 
-# --- SEÑALES DE NÚMEROS INDIVIDUALES ---
-NUMBER_DELAY_THRESHOLD = 20  # Default: señal cuando un número no sale en 20 giros
-
-def get_color_streak_threshold():
-    """Lee el umbral de racha de color. Prioridad: runtime overrides > GUI saved > .env > default.
-    Cachea el resultado por 30s para evitar lecturas repetidas de .env."""
-    # 1. Runtime overrides (GUI en sesión activa) — sin cache
-    if 'color_streak_threshold' in _runtime_overrides:
-        return _runtime_overrides['color_streak_threshold']
-    
-    # 2. Credenciales guardadas por la GUI — sin cache
-    try:
-        from bot_ruleta.gui_credentials import load_saved_credentials
-        saved = load_saved_credentials()
-        if saved and 'color_streak_threshold' in saved:
-            return saved['color_streak_threshold']
-    except Exception:
-        pass
-    
-    # 3. Cache de .env (el fallback más caro)
-    cached = _cache_get(_color_threshold_cache)
-    if cached is not None:
-        return cached
-
-    # 4. Variable de entorno (.env)
-    env_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), ".env")
-    try:
-        with open(env_path, "r", encoding="utf-8") as f:
-            for line in f:
-                line = line.strip()
-                if line.startswith("COLOR_STREAK_THRESHOLD="):
-                    val = line.split("=", 1)[1].split("#")[0].strip()
-                    result = int(val)
-                    _cache_set(_color_threshold_cache, result)
-                    return result
-    except Exception:
-        pass
-    
-    # 5. Default
-    result = COLOR_STREAK_THRESHOLD
-    _cache_set(_color_threshold_cache, result)
-    return result
-
-
-def get_number_delay_threshold():
-    """Lee el umbral de retraso de números individuales. Prioridad: runtime overrides > GUI saved > .env > default.
-    Cachea el resultado por 30s para evitar lecturas repetidas de .env."""
-    # 1. Runtime overrides (GUI en sesión activa) — sin cache
-    if 'number_delay_threshold' in _runtime_overrides:
-        return _runtime_overrides['number_delay_threshold']
-    
-    # 2. Credenciales guardadas por la GUI — sin cache
-    try:
-        from bot_ruleta.gui_credentials import load_saved_credentials
-        saved = load_saved_credentials()
-        if saved and 'number_delay_threshold' in saved:
-            return saved['number_delay_threshold']
-    except Exception:
-        pass
-    
-    # 3. Cache de .env (el fallback más caro)
-    cached = _cache_get(_number_threshold_cache)
-    if cached is not None:
-        return cached
-
-    # 4. Variable de entorno (.env)
-    env_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), ".env")
-    try:
-        with open(env_path, "r", encoding="utf-8") as f:
-            for line in f:
-                line = line.strip()
-                if line.startswith("NUMBER_DELAY_THRESHOLD="):
-                    val = line.split("=", 1)[1].split("#")[0].strip()
-                    result = int(val)
-                    _cache_set(_number_threshold_cache, result)
-                    return result
-    except Exception:
-        pass
-    
-    # 5. Default
-    result = NUMBER_DELAY_THRESHOLD
-    _cache_set(_number_threshold_cache, result)
-    return result

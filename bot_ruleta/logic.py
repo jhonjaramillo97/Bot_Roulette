@@ -210,7 +210,7 @@ def check_and_notify_color(table_name, streak_data, history=None):
     """
     global _alert_cache
     
-    from bot_ruleta.config import get_color_streak_threshold
+    from bot_ruleta.thresholds import get_color_streak_threshold
     
     color = streak_data.get("color")
     streak = streak_data.get("streak", 0)
@@ -559,7 +559,7 @@ def check_and_notify_number(table_name, delays, history=None):
     """
     global _alert_cache
 
-    from bot_ruleta.config import get_number_delay_threshold
+    from bot_ruleta.thresholds import get_number_delay_threshold
 
     threshold = get_number_delay_threshold()
     alert_numbers = [(num, delay) for num, delay in delays.items() if delay >= threshold]

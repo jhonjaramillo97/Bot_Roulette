@@ -9,8 +9,9 @@ from flask import Flask, jsonify, request, send_from_directory
 # dirname(dirname) = bot_ruleta
 # dirname(dirname(dirname)) = PROYECTO ROOT
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
-from bot_ruleta.config import TABLES, REDS, get_color_streak_threshold, get_number_delay_threshold
+from bot_ruleta.config import TABLES, REDS
 from bot_ruleta.credentials import load_credentials
+from bot_ruleta.thresholds import get_color_streak_threshold, get_number_delay_threshold
 from bot_ruleta.gui_credentials import load_saved_credentials
 import bot_ruleta.logic as bt_logic
 
