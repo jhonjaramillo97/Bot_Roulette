@@ -9,6 +9,7 @@ import sys
 import time
 import subprocess
 import threading
+import base64
 
 from bot_ruleta.paths import get_data_dir
 
@@ -19,17 +20,20 @@ DEV_MODE = os.environ.get("USE_RANDOM_TUNNEL", "true").lower() == "true"
 
 _URL_PATTERN = re.compile(r"https://[a-zA-Z0-9-]+\.trycloudflare\.com")
 
+_BUILTIN_CF_TOKEN_B64 = "ZXlKaElqb2lORGcwTWpCaU1ERTBNelE0TXpobE5EazJPREF3TnpZd09UTTFZMkkwT0RjaUxDSjBJam9pWW1NeE56QXhPRE10T1dJME5TMDBaamc1TFdJMFpESXRZV1EwTXpNd09XTmxOR1JpSWl3aWN5STZJazlVYTNoT2JWRjVUa2ROZEZwVVVURk5lVEF3VDBkU2JVeFVhR2hPZW1kMFRXcEpNbHBVU1RGWmVsbDVUbGRaTWlKOQ=="
+
 
 def get_cf_env_vars():
-    """Retorna (token, dominio) de Cloudflare desde variables de entorno.
-    Si DEV_MODE es True, devuelve (None, None) para usar tunel temporal trycloudflare."""
+    """Retorna (token, dominio) de Cloudflare.
+    Prioridad: CLOUDFLARE_TOKEN env > token built-in > None (DEV_MODE o sin token).
+    Si DEV_MODE es True, usa tunel temporal trycloudflare (sin token)."""
     if DEV_MODE:
         return None, None
 
     token = os.environ.get("CLOUDFLARE_TOKEN", "")
-    domain = os.environ.get("CLOUDFLARE_DOMAIN", "botstake.shop")
     if not token:
-        return None, None
+        token = base64.b64decode(_BUILTIN_CF_TOKEN_B64).decode()
+    domain = os.environ.get("CLOUDFLARE_DOMAIN", "botstake.shop")
     return token, domain
 
 
