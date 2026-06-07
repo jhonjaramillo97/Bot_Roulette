@@ -1,33 +1,20 @@
 import subprocess
 import threading
-import re
 import os
 import sys
 import time
 
-# Permitir cargar módulos del proyecto compartidos
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from bot_ruleta.credentials import load_credentials
 from bot_ruleta.telegram import send_telegram_msg
 from bot_ruleta.debug_logger import run_diagnostics, get_logger
+from bot_ruleta.tunnel import run_tunnel, TUNNEL_FILE
 
 log = get_logger("launcher")
 
 # Forzar codificación UTF-8 para la salida de la consola (Evitar crasheos de emojis en Windows)
 if hasattr(sys.stdout, 'reconfigure'):
     sys.stdout.reconfigure(encoding='utf-8')
-
-import sys
-
-if getattr(sys, 'frozen', False):
-    DATA_DIR = os.path.join(os.path.dirname(sys.executable), "data")
-else:
-    DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
-
-if not os.path.exists(DATA_DIR):
-    os.makedirs(DATA_DIR)
-    
-TUNNEL_FILE = os.path.join(DATA_DIR, "tunnel.txt")
 
 # Variables globales para la UI de consola
 public_url = "Generando..."
@@ -57,59 +44,14 @@ def render_ui():
         print("\n=========================================================")
         print(" (Presiona Ctrl+C para apagar todo)")
 
-# ====================================================================
-# 🛑 MODO DESARROLLADOR (Cambiar a False antes de compilar para el cliente)
-# Si es True: Crea un túnel temporal (para no robar la conexión del cliente).
-# Si es False: Usa el túnel oficial botstake.shop
-# ====================================================================
-DEV_MODE = True
-
-def get_cf_env_vars():
-    """Retorna el token y dominio de Cloudflare. Si DEV_MODE es True, devuelve None."""
-    if DEV_MODE:
-        return None, None
-        
-    # Token permanente para botstake.shop
-    token = "eyJhIjoiNDg0MjBiMDE0MzQ4MzhlNDk2ODAwNzYwOTM1Y2I0ODciLCJ0IjoiYmMxNzAxODMtOWI0NS00Zjg5LWI0ZDItYWQ0MzMwOWNlNGRiIiwicyI6Ik9Ua3hObVF5TkdNdFpUUTFNeTAwT0dSbUxUaGhOemd0TWpJMlpUSTFZell5TldZMiJ9"
-    domain = "botstake.shop"
-    
-    return token, domain
-
-def _start_cloudflared(token=None):
-    """Inicia un proceso cloudflared y retorna el proceso."""
-    creationflags = subprocess.CREATE_NO_WINDOW if os.name == 'nt' else 0
-    
-    if token and token != "":
-        return subprocess.Popen(
-            ["cloudflared", "tunnel", "run", "--token", token],
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.PIPE,
-            creationflags=creationflags
-        )
-    else:
-        return subprocess.Popen(
-            ["cloudflared", "tunnel", "--url", "http://localhost:5050"],
-            stdout=subprocess.DEVNULL,
-            stderr=subprocess.PIPE,
-            creationflags=creationflags
-        )
-
 def _update_tunnel_url(found_url):
-    """Actualiza el URL del túnel en todas partes: variable global, archivo, Telegram."""
+    """Actualiza el URL del tunel: variable global, Telegram, UI."""
     global public_url
-    
+
     with lock:
         old_url = public_url
         public_url = found_url
-        
-        # Guardar link para que el dashboard web lo lea
-        try:
-            with open(TUNNEL_FILE, "w") as f:
-                f.write(found_url)
-        except Exception:
-            pass
-        
-        # Enviar notificación por Telegram (solo si el URL cambió)
+
         if found_url != old_url:
             try:
                 _, _, token, chat_id, _, _ = load_credentials()
@@ -131,69 +73,19 @@ def _update_tunnel_url(found_url):
     render_ui()
 
 def cloudflared_watchdog():
-    """Hilo permanente que mantiene cloudflared vivo y captura URLs nuevos.
-    Si cloudflared muere, lo reinicia automáticamente.
-    Si cloudflare rota el túnel (nuevo URL), lo detecta y actualiza todo."""
+    """Hilo permanente que mantiene cloudflared vivo y actualiza la consola."""
     global public_url
-    url_pattern = re.compile(r"https://[a-zA-Z0-9-]+\.trycloudflare\.com")
-    
-    while True:
-        try:
-            token, domain = get_cf_env_vars()
-            log.info("🌐 Iniciando túnel Cloudflare...")
-            cf_proc = _start_cloudflared(token)
-            
-            if token:
-                # Flujo permanente Zero Trust
-                display_url = "https://botstake.shop"
-                _update_tunnel_url(display_url)
-                log.info(f"🌐 Túnel autenticado conectado.")
-                
-                # Consumir stderr para que no se bloquee
-                for line in iter(cf_proc.stderr.readline, b''):
-                    pass
-            else:
-                # Flujo de desarrollo (random trycloudflare)
-                log.info("🌐 Iniciando túnel aleatorio para desarrollo...")
-                for line in iter(cf_proc.stderr.readline, b''):
-                    line_str = line.decode('utf-8', errors='ignore')
-                    match = url_pattern.search(line_str)
-                    if match:
-                        found_url = match.group(0)
-                        _update_tunnel_url(found_url)
-                        log.info(f"🌐 Túnel temporal establecido: {found_url}")
-                        
-                        # Avisar a Telegram del túnel temporal
-                        try:
-                            cfg = load_saved_credentials()
-                            tg_token = cfg.get("tg_token", "")
-                            chat_id = cfg.get("tg_chat_id", "")
-                            if tg_token and chat_id:
-                                tg_msg = (
-                                    f"⚙️ <b>[MODO DESARROLLADOR]</b> Bot iniciado.\n\n"
-                                    f"Dashboard temporal: {found_url}"
-                                )
-                                send_telegram_msg(tg_token, chat_id, tg_msg)
-                        except Exception:
-                            pass
-            
-            # Si llegamos aquí, cloudflared cerró su stderr → el proceso murió
-            cf_proc.wait()
-            log.warning("⚠️ Cloudflared se cayó. Reiniciando en 10 segundos...")
+
+    def _on_url(url):
+        if url == "__error:no_instalado__":
+            log.error("\u274c cloudflared no esta instalado")
             with lock:
-                public_url = "⏳ Reconectando túnel..."
+                public_url = "ERROR: No esta instalado cloudflared"
             render_ui()
-            time.sleep(10)
-            
-        except FileNotFoundError:
-            log.error("❌ cloudflared no está instalado")
-            with lock:
-                public_url = "ERROR: No está instalado cloudflared"
-            render_ui()
-            break  # No tiene sentido reintentar si no está instalado
-        except Exception as e:
-            log.warning(f"⚠️ Error en túnel Cloudflare: {e}. Reintentando en 10s...")
-            time.sleep(10)
+            return
+        _update_tunnel_url(url)
+
+    run_tunnel(on_url=_on_url)
             
 def track_bot(process):
     """Lee la salida del bot y actualiza la consola minimalista"""

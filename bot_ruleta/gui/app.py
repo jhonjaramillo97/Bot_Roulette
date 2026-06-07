@@ -15,7 +15,7 @@ sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from bot_ruleta.credentials import load_credentials
 from bot_ruleta.debug_logger import attach_gui_queue, get_logger
-from bot_ruleta.launcher import _start_cloudflared, get_cf_env_vars, TUNNEL_FILE
+from bot_ruleta.tunnel import run_tunnel, TUNNEL_FILE
 from bot_ruleta.telegram import send_telegram_msg
 from bot_ruleta.gui.screens import (
     PrerequisitesScreen, LoginScreen, LoadingScreen, DashboardScreen, UpdateScreen
@@ -125,91 +125,35 @@ class RouletteApp(ctk.CTk):
         self.cf_watchdog_thread.start()
 
     def _cloudflared_watchdog(self):
-        while not self.stop_event.is_set():
-            try:
-                token, domain = get_cf_env_vars()
-                log.info("🌐 Iniciando tunel Cloudflare...")
-                self.cf_proc = _start_cloudflared(token)
-
-                if token:
-                    display_url = "https://botstake.shop"
-                    old_url = self.public_url
-                    self.public_url = display_url
-                    self.frames[DashboardScreen].update_cf_url(display_url)
-
-                    try:
-                        with open(TUNNEL_FILE, "w") as f:
-                            f.write(display_url)
-                    except Exception:
-                        pass
-
-                    if display_url != old_url:
-                        try:
-                            _, _, tg_token, chat_id, _, _ = load_credentials()
-                            if tg_token and chat_id and tg_token.strip() != "":
-                                tg_msg = (
-                                    f"🌐 *Dashboard Activo*\n\n"
-                                    f"El bot acaba de encenderse. Panel permanente disponible en:\n\n{display_url}"
-                                )
-                                send_telegram_msg(tg_token, chat_id, tg_msg)
-                        except Exception as e:
-                            log.warning(f"Error enviando URL a Telegram: {e}")
-
-                    log.info(f"🌐 Tunel Zero Trust conectado: {display_url}")
-
-                    for line in iter(self.cf_proc.stderr.readline, b''):
-                        if self.stop_event.is_set():
-                            break
-                else:
-                    import re
-                    url_pattern = re.compile(r"https://[a-zA-Z0-9-]+\.trycloudflare\.com")
-                    log.info("🌐 Iniciando tunel aleatorio para desarrollo...")
-                    for line in iter(self.cf_proc.stderr.readline, b''):
-                        if self.stop_event.is_set():
-                            break
-                        line_str = line.decode('utf-8', errors='ignore')
-                        match = url_pattern.search(line_str)
-                        if match:
-                            found_url = match.group(0)
-                            old_url = self.public_url
-                            self.public_url = found_url
-                            self.frames[DashboardScreen].update_cf_url(found_url)
-
-                            try:
-                                with open(TUNNEL_FILE, "w") as f:
-                                    f.write(found_url)
-                            except Exception:
-                                pass
-
-                            log.info(f"🌐 Tunel temporal establecido: {found_url}")
-
-                            if found_url != old_url:
-                                try:
-                                    _, _, tg_token, chat_id, _, _ = load_credentials()
-                                    if tg_token and chat_id and tg_token.strip() != "":
-                                        tg_msg = (
-                                            f"⚙️ <b>[MODO DESARROLLADOR]</b> Bot iniciado.\n\n"
-                                            f"Dashboard temporal: {found_url}"
-                                        )
-                                        send_telegram_msg(tg_token, chat_id, tg_msg)
-                                except Exception:
-                                    pass
-
-                if self.stop_event.is_set():
-                    break
-
-                self.cf_proc.wait()
-                log.warning("⚠️ Cloudflared se cayo. Reiniciando en 10 segundos...")
-                self.frames[DashboardScreen].update_cf_url("⏳ Reconectando...")
-                time.sleep(10)
-
-            except FileNotFoundError:
-                log.error("❌ cloudflared no esta instalado")
+        def _on_url(url):
+            if url == "__error:no_instalado__":
+                log.error("\u274c cloudflared no esta instalado")
                 self.frames[DashboardScreen].update_cf_url("ERROR: No instalado")
-                break
-            except Exception as e:
-                log.warning(f"⚠️ Error en tunel Cloudflare: {e}")
-                time.sleep(10)
+                return
+
+            old_url = self.public_url
+            self.public_url = url
+            self.frames[DashboardScreen].update_cf_url(url)
+
+            if url != old_url:
+                try:
+                    _, _, tg_token, chat_id, _, _ = load_credentials()
+                    if tg_token and chat_id and tg_token.strip() != "":
+                        if "trycloudflare" in url:
+                            tg_msg = (
+                                f"\u2699\ufe0f <b>[MODO DESARROLLADOR]</b> Bot iniciado.\n\n"
+                                f"Dashboard temporal: {url}"
+                            )
+                        else:
+                            tg_msg = (
+                                f"\U0001f310 *Dashboard Activo*\n\n"
+                                f"El bot acaba de encenderse. Panel permanente disponible en:\n\n{url}"
+                            )
+                        send_telegram_msg(tg_token, chat_id, tg_msg)
+                except Exception as e:
+                    log.warning(f"Error enviando URL a Telegram: {e}")
+
+        run_tunnel(on_url=_on_url, stop_event=self.stop_event)
 
     def on_closing(self):
         self.stop_event.set()
