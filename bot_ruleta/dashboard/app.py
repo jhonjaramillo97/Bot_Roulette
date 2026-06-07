@@ -17,6 +17,7 @@ from bot_ruleta.credentials import load_credentials
 from bot_ruleta.thresholds import get_color_streak_threshold, get_number_delay_threshold
 from bot_ruleta.gui_credentials import load_saved_credentials
 from bot_ruleta.backtest import sync_backtest, sync_color_backtest, sync_number_backtest
+from bot_ruleta.db import validate_table_name
 import bot_ruleta.logic as bt_logic
 
 def get_dashboard_threshold():
@@ -26,6 +27,14 @@ def get_dashboard_threshold():
         return saved["threshold"]
     _, _, _, _, threshold, _ = load_credentials()
     return threshold
+
+
+def _get_validated_table(mesa_param):
+    """Valida el parametro 'mesa' de un request.
+    Retorna el table_name validado o lanza ValueError."""
+    if not mesa_param:
+        raise ValueError("Parametro 'mesa' requerido")
+    return validate_table_name(mesa_param)
 
 from bot_ruleta.paths import get_data_dir
 
@@ -52,6 +61,7 @@ def get_db_connection():
 def calcular_delays(table_name, limit=None):
     """Calcula los delays de docenas y columnas para una tabla dada (USANDO LOGIC COMPARTIDA)."""
     try:
+        table_name = validate_table_name(table_name)
         conn = get_db_connection()
         if limit is not None:
             cursor = conn.execute(
@@ -173,13 +183,14 @@ def get_data():
     from datetime import datetime
     table_name = request.args.get('mesa', 'ruleta_latina')
 
-    # Validar tabla
-    if not any(t["table_name"] == table_name for t in TABLES):
-        return jsonify({"error": "Tabla no válida"}), 400
+    try:
+        table_name = _get_validated_table(table_name)
+    except ValueError:
+        return jsonify({"error": "Parametro 'mesa' invalido"}), 400
 
     delays, numeros = calcular_delays(table_name)
     if delays is None:
-        return jsonify({"error": "Error leyendo BD"}), 500
+        return jsonify({"error": "Error interno al leer datos"}), 500
 
     # Cargar threshold dinámico
     threshold = get_dashboard_threshold()
@@ -227,8 +238,10 @@ def get_data():
 @app.route('/api/backtest')
 def get_backtest():
     table_name = request.args.get('mesa', 'ruleta_latina')
-    if not any(t["table_name"] == table_name for t in TABLES):
-        return jsonify({"error": "Tabla no válida"}), 400
+    try:
+        table_name = _get_validated_table(table_name)
+    except ValueError:
+        return jsonify({"error": "Parametro 'mesa' invalido"}), 400
 
     threshold = get_dashboard_threshold()
     
@@ -251,15 +264,18 @@ def get_backtest():
         history = [dict(row) for row in rows]
         return jsonify({"mesa": table_name, "history": history})
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        log.error(f"Error en get_backtest: {e}")
+        return jsonify({"error": "Error interno al leer backtest"}), 500
 
 
 @app.route('/api/backtest_color')
 def get_backtest_color():
     """Historial de rachas de color completadas para una mesa."""
     table_name = request.args.get('mesa', 'ruleta_latina')
-    if not any(t["table_name"] == table_name for t in TABLES):
-        return jsonify({"error": "Tabla no válida"}), 400
+    try:
+        table_name = _get_validated_table(table_name)
+    except ValueError:
+        return jsonify({"error": "Parametro 'mesa' invalido"}), 400
 
     color_threshold = get_color_streak_threshold()
     
@@ -282,15 +298,18 @@ def get_backtest_color():
         history = [dict(row) for row in rows]
         return jsonify({"mesa": table_name, "history": history})
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        log.error(f"Error en get_backtest_color: {e}")
+        return jsonify({"error": "Error interno al leer backtest de color"}), 500
 
 
 @app.route('/api/backtest_number')
 def get_backtest_number():
-    """Historial de retrasos de números individuales completados + alertas activas."""
+    """Historial de retrasos de numeros individuales completados + alertas activas."""
     table_name = request.args.get('mesa', 'ruleta_latina')
-    if not any(t["table_name"] == table_name for t in TABLES):
-        return jsonify({"error": "Tabla no válida"}), 400
+    try:
+        table_name = _get_validated_table(table_name)
+    except ValueError:
+        return jsonify({"error": "Parametro 'mesa' invalido"}), 400
 
     number_threshold = get_number_delay_threshold()
     
@@ -333,7 +352,8 @@ def get_backtest_number():
             "active_alerts": active_alerts
         })
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        log.error(f"Error en get_backtest_number: {e}")
+        return jsonify({"error": "Error interno al leer backtest de numeros"}), 500
 
 
 @app.route('/api/analisis_global')
@@ -412,28 +432,33 @@ def get_analisis_global():
             "number_delay_threshold": number_threshold
         })
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        log.error(f"Error en analisis_global: {e}")
+        return jsonify({"error": "Error interno en analisis global"}), 500
 
 
 @app.route('/api/signal_detail')
 def get_signal_detail():
-    """Devuelve las jugadas individuales que componen una señal específica."""
+    """Devuelve las jugadas individuales que componen una senal especifica."""
     table_name = request.args.get('mesa')
     start_time = request.args.get('start')
     end_time = request.args.get('end')
     pico = request.args.get('pico', type=int)
     
     if not table_name:
-        return jsonify({"error": "Falta parámetro mesa"}), 400
-    if not any(t["table_name"] == table_name for t in TABLES):
-        return jsonify({"error": "Tabla no válida"}), 400
+        return jsonify({"error": "Parametro 'mesa' requerido"}), 400
+    try:
+        table_name = _get_validated_table(table_name)
+    except ValueError:
+        return jsonify({"error": "Parametro 'mesa' invalido"}), 400
+
+    if pico is not None and pico <= 0:
+        return jsonify({"error": "Parametro 'pico' debe ser mayor a 0"}), 400
     
     try:
         conn = get_db_connection()
         
         if pico and pico > 0:
             if end_time:
-                # La racha se rompió, así que traemos 'pico' jugadas + 1 (la que rompió la racha)
                 limit = pico + 1
                 cursor = conn.execute(
                     f"SELECT numero, color, timestamp FROM {table_name} "
@@ -441,7 +466,6 @@ def get_signal_detail():
                     (end_time, limit)
                 )
             else:
-                # La racha está activa, así que la última jugada de la mesa pertenece a la racha
                 limit = pico
                 cursor = conn.execute(
                     f"SELECT numero, color, timestamp FROM {table_name} "
@@ -452,7 +476,7 @@ def get_signal_detail():
             rows.reverse()
         else:
             if not start_time:
-                return jsonify({"error": "Se requiere start_time si no hay pico"}), 400
+                return jsonify({"error": "Parametro 'start' requerido si no hay 'pico'"}), 400
                 
             if end_time:
                 cursor = conn.execute(
@@ -461,7 +485,6 @@ def get_signal_detail():
                     (start_time, end_time)
                 )
             else:
-                # Si no hay end_time (señal en progreso), traer desde start_time
                 cursor = conn.execute(
                     f"SELECT numero, color, timestamp FROM {table_name} "
                     f"WHERE timestamp >= ? ORDER BY id ASC LIMIT 50",
@@ -473,7 +496,8 @@ def get_signal_detail():
         plays = [{"numero": r["numero"], "color": r["color"], "timestamp": r["timestamp"]} for r in rows]
         return jsonify({"mesa": table_name, "plays": plays})
     except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        log.error(f"Error en signal_detail: {e}")
+        return jsonify({"error": "Error interno al leer detalle de senal"}), 500
 
 
 @app.route('/api/tunnel')
