@@ -217,7 +217,7 @@ start "" "{current_exe}"
             os._exit(0)
             
         except Exception as e:
-            log.error(f"Error durante la actualización: {e}")
-            completion_callback(False, str(e))
+            log.error(f"Error durante la actualizacion: {e}")
+            completion_callback(False, "Error interno durante la actualizacion. Revisa los logs.")
             
     threading.Thread(target=_update, daemon=True).start()
