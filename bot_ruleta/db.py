@@ -49,6 +49,7 @@ def init_db():
         table_name = mesa.get("table_name")
         if not table_name:
             continue
+        table_name = validate_table_name(table_name)
 
         # Crear tabla espec├¡fica para cada juego
         cursor.execute(f"""
@@ -157,6 +158,8 @@ def guardar_resultado(mesa_nombre, numero, color, timestamp, game_id):
         log.error(f"No se encontro tabla para '{mesa_nombre}'")
         return
 
+    table_name = validate_table_name(table_name)
+
     try:
         conn = get_connection()
         cursor = conn.cursor()
@@ -178,6 +181,7 @@ def obtener_ultimo_numero(mesa_nombre):
     table_name = _resolve_table_name(mesa_nombre)
     if not table_name:
         return None
+    table_name = validate_table_name(table_name)
 
     try:
         conn = get_connection()
@@ -197,6 +201,8 @@ def obtener_ultimos_numeros(mesa_nombre, limit=None):
     table_name = _resolve_table_name(mesa_nombre)
     if not table_name:
         return []
+
+    table_name = validate_table_name(table_name)
 
     try:
         conn = get_connection()
@@ -226,6 +232,8 @@ def limpiar_mesa(mesa_nombre):
     table_name = _resolve_table_name(mesa_nombre)
     if not table_name:
         return
+
+    table_name = validate_table_name(table_name)
 
     try:
         conn = get_connection()
