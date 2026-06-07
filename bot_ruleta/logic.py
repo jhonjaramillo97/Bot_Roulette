@@ -26,7 +26,6 @@ def compute_delays(numeros):
     for item in numeros:
         # Extraer el número y timestamp si es un dict/Row
         timestamp_str = None
-        timestamp_str = None
         if isinstance(item, dict):
             n = item.get('numero', item)
             timestamp_str = item.get('timestamp')
