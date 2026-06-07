@@ -7,7 +7,7 @@ Extraido de db.py/logic.py para mantener separacion de responsabilidades:
 """
 
 from datetime import datetime
-from bot_ruleta.db import get_connection
+from bot_ruleta.db import get_connection, validate_table_name
 
 
 class _BacktestSyncEngine:
@@ -23,7 +23,7 @@ class _BacktestSyncEngine:
     """
 
     def __init__(self, table_name, threshold, sync_state_table, warmup=100):
-        self.table_name = table_name
+        self.table_name = validate_table_name(table_name)
         self.threshold = threshold
         self.sync_state_table = sync_state_table
         self.warmup = warmup
