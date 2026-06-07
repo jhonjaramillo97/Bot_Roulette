@@ -4,6 +4,9 @@ Extraido de logic.py para separar el envio de mensajes de la logica de analytics
 """
 
 import requests
+from bot_ruleta.debug_logger import get_logger
+
+log = get_logger("telegram")
 
 
 def send_telegram_msg(token, chat_id, text):
@@ -18,5 +21,5 @@ def send_telegram_msg(token, chat_id, text):
         r = requests.post(url, json=payload, timeout=5)
         return r.status_code == 200
     except Exception as e:
-        print(f"\u274c Error enviando Telegram: {e}")
+        log.error(f"Error enviando Telegram: {e}")
         return False

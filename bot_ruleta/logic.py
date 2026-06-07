@@ -2,6 +2,9 @@ import time
 from bot_ruleta.credentials import load_credentials
 from bot_ruleta.logic_helpers import extract_numero, nums_to_emoji
 from bot_ruleta.telegram import send_telegram_msg
+from bot_ruleta.debug_logger import get_logger
+
+log = get_logger("logic")
 
 # Cache para evitar spam de notificaciones
 # Key: f"{table_name}_{zone}" -> Value: timestamp de última notificación
@@ -105,7 +108,7 @@ def check_and_notify(table_name, delays, history=None):
                 msg += f"\n\n📊 *Últimos 10 giros:*\n{hist_str}"
             
             if send_telegram_msg(token, chat_id, msg):
-                print(f"✅ Notificación Telegram enviada: {table_name} - {zone}")
+                log.info(f"Notificacion Telegram enviada: {table_name} - {zone}")
                 
                 try:
                     with open("bot_ruleta/logs/debug_tg.txt", "a") as f:
@@ -227,7 +230,7 @@ def check_and_notify_color(table_name, streak_data, history=None):
             msg += f"\n\n📊 *Últimos giros:*\n{hist_str}"
         
         if send_telegram_msg(token, chat_id, msg):
-            print(f"✅ Alerta de color enviada: {table_name} - {streak} {color_name}")
+            log.info(f"Alerta de color enviada: {table_name} - {streak} {color_name}")
             _alert_cache[cache_key] = time.time()
 
 
@@ -306,6 +309,6 @@ def check_and_notify_number(table_name, delays, history=None):
             msg += f"\n\n📊 *Últimos 10 giros:*\n{hist_str}"
 
         if send_telegram_msg(token, chat_id, msg):
-            print(f"✅ Alerta de números enviada: {table_name} - {len(alert_numbers)} números")
+            log.info(f"Alerta de numeros enviada: {table_name} - {len(alert_numbers)} numeros")
             _alert_cache[cache_key] = time.time()
 

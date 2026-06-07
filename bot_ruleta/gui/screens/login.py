@@ -40,7 +40,7 @@ class LoginScreen(ctk.CTkFrame):
             lbl_logo = ctk.CTkLabel(self.form, image=self.logo_image, text="")
             lbl_logo.pack(anchor="center", pady=(0, 8))
         except Exception as e:
-            print(f"Error loading logo: {e}")
+            log.debug(f"Error loading logo: {e}")
 
         lbl_title = ctk.CTkLabel(self.form, text="Welcome Back!", font=ctk.CTkFont(size=26, weight="bold"),
                                  text_color="#00C853")

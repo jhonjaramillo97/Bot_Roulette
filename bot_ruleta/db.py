@@ -9,6 +9,9 @@ from bot_ruleta.config import TABLES
 import sys
 
 from bot_ruleta.paths import get_data_dir
+from bot_ruleta.debug_logger import get_logger
+
+log = get_logger("db")
 
 DB_NAME = "ruleta.db"
 DATA_DIR = get_data_dir()
@@ -22,7 +25,7 @@ def get_connection():
 
 def init_db():
     """Inicializa la base de datos creando las tablas configuradas."""
-    print(f"≡ƒùä∩╕Å  Inicializando base de datos en: {DB_PATH}")
+    log.info(f"Inicializando base de datos en: {DB_PATH}")
     conn = get_connection()
     cursor = conn.cursor()
 
@@ -122,7 +125,7 @@ def init_db():
 
     conn.commit()
     conn.close()
-    print("Γ£à Tablas verificadas/creadas.")
+    log.info("Tablas verificadas/creadas.")
 
 
 def guardar_resultado(mesa_nombre, numero, color, timestamp, game_id):
@@ -135,7 +138,7 @@ def guardar_resultado(mesa_nombre, numero, color, timestamp, game_id):
             break
     
     if not table_name:
-        print(f"ΓÜá∩╕Å Error BD: No se encontr├│ tabla para '{mesa_nombre}'")
+        log.error(f"No se encontro tabla para '{mesa_nombre}'")
         return
 
     try:
@@ -151,7 +154,7 @@ def guardar_resultado(mesa_nombre, numero, color, timestamp, game_id):
         conn.commit()
         conn.close()
     except Exception as e:
-        print(f"ΓÜá∩╕Å Error guardando en BD ({table_name}): {e}")
+        log.error(f"Error guardando en BD ({table_name}): {e}")
 
 
 def obtener_ultimo_numero(mesa_nombre):
@@ -190,7 +193,7 @@ def obtener_ultimos_numeros(mesa_nombre, limit=None):
         conn.close()
         return [{"numero": r[0], "color": r[1], "timestamp": r[2]} for r in rows]
     except Exception as e:
-        print(f"Error obtener_ultimos_numeros: {e}")
+        log.error(f"Error obtener_ultimos_numeros: {e}")
         return []
 
 
@@ -214,6 +217,6 @@ def limpiar_mesa(mesa_nombre):
         cursor.execute(f"DELETE FROM {table_name}")
         conn.commit()
         conn.close()
-        print(f"≡ƒº╣ Historial limpiado para la mesa '{mesa_nombre}' (Sesi├│n Stale detectada)")
+        log.info(f"Historial limpiado para la mesa '{mesa_nombre}' (Sesion Stale detectada)")
     except Exception as e:
-        print(f"ΓÜá∩╕Å Error limpiando BD ({table_name}): {e}")
+        log.error(f"Error limpiando BD ({table_name}): {e}")

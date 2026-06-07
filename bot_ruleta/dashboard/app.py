@@ -1,7 +1,10 @@
 import sys
 import os
 import sqlite3
+import logging
 from flask import Flask, jsonify, request, send_from_directory
+
+log = logging.getLogger("dashboard")
 
 # Añadir directorio raíz del proyecto al path para importar bot_ruleta
 # __file__ = bot_ruleta/dashboard/app.py
@@ -193,7 +196,7 @@ def get_data():
             last_ts_seconds = time.mktime(last_ts.timetuple())
             last_update_seconds = time.time() - last_ts_seconds
         except Exception as e:
-            print(f"Error parsing date {numeros[0]['timestamp']}: {e}")
+            log.warning(f"Error parsing date {numeros[0]['timestamp']}: {e}")
 
     # Calcular racha de color
     color_streak = bt_logic.compute_color_streak(
@@ -233,7 +236,7 @@ def get_backtest():
     try:
         sync_backtest(table_name, threshold)
     except Exception as e:
-        print(f"Error en sync_backtest: {e}")
+        log.warning(f"Error en sync_backtest: {e}")
         
     # 2. Leer historial
     try:
@@ -264,7 +267,7 @@ def get_backtest_color():
     try:
         sync_color_backtest(table_name, color_threshold)
     except Exception as e:
-        print(f"Error en sync_color_backtest: {e}")
+        log.warning(f"Error en sync_color_backtest: {e}")
         
     # 2. Leer historial
     try:
@@ -295,7 +298,7 @@ def get_backtest_number():
     try:
         sync_number_backtest(table_name, number_threshold)
     except Exception as e:
-        print(f"Error en sync_number_backtest: {e}")
+        log.warning(f"Error en sync_number_backtest: {e}")
         
     # 2. Leer historial
     try:
@@ -322,7 +325,7 @@ def get_backtest_number():
                 ]
                 active_alerts.sort(key=lambda x: -x["max_delay"])
         except Exception as e:
-            print(f"Error calculando alertas activas: {e}")
+            log.warning(f"Error calculando alertas activas: {e}")
         
         return jsonify({
             "mesa": table_name,
@@ -347,7 +350,7 @@ def get_analisis_global():
             sync_color_backtest(t["table_name"], color_threshold)
             sync_number_backtest(t["table_name"], number_threshold)
     except Exception as e:
-        print(f"Error en sync global: {e}")
+        log.warning(f"Error en sync global: {e}")
         
     # 2. Extraer historial de tercios
     try:
@@ -492,5 +495,5 @@ def get_tunnel():
 
 
 if __name__ == '__main__':
-    print("Iniciando dashboard en puerto 5050...")
+    log.info("Iniciando dashboard en puerto 5050...")
     app.run(port=5050, host='0.0.0.0', use_reloader=False)
