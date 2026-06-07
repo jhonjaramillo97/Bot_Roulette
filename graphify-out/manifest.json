@@ -25,13 +25,13 @@
     "semantic_hash": "20b6fb5713abe66c86ffb339dd5ad2ed"
   },
   "bot_ruleta/dashboard/app.py": {
-    "mtime": 1780753515.9913683,
-    "ast_hash": "9f873acce1770bac0712e25b33ccca3d",
+    "mtime": 1780756712.118538,
+    "ast_hash": "1dae40fc3d8a8263afa039e2e376089e",
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/analisis.js": {
-    "mtime": 1780753561.8121815,
-    "ast_hash": "d14433dd569724f401097ed727cb1981",
+    "mtime": 1780756760.184407,
+    "ast_hash": "51b9837cbf29eeb5d8c14d0bb625649d",
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/app.js": {
@@ -40,14 +40,14 @@
     "semantic_hash": "c26537bd211dc5781a78e9a7ea57d762"
   },
   "bot_ruleta/dashboard/static/mesa.js": {
-    "mtime": 1780753489.304035,
-    "ast_hash": "7f2b76c1777aad063c43e5247c5ad0dc",
+    "mtime": 1780756742.9165876,
+    "ast_hash": "6ee2e009cc15ecb5d3f0be0df970061a",
     "semantic_hash": ""
   },
   "bot_ruleta/db.py": {
-    "mtime": 1780715624.5539804,
-    "ast_hash": "3c6604b99539d4ce484476bf4cade46b",
-    "semantic_hash": "3c6604b99539d4ce484476bf4cade46b"
+    "mtime": 1780756653.1791227,
+    "ast_hash": "4ec9017d44b8d0873ec1be5c89fb08a4",
+    "semantic_hash": ""
   },
   "bot_ruleta/debug_logger.py": {
     "mtime": 1777223620.0282025,
@@ -85,8 +85,8 @@
     "semantic_hash": "b5807fb5527915c47575fc245698999e"
   },
   "bot_ruleta/logic.py": {
-    "mtime": 1780751471.464987,
-    "ast_hash": "0ea48cea74d95d4635ab5bd604935cd2",
+    "mtime": 1780756674.4471688,
+    "ast_hash": "70b221e4700bd8f23fc1f8ba917e7a23",
     "semantic_hash": ""
   },
   "bot_ruleta/run.py": {
@@ -123,5 +123,10 @@
     "mtime": 1778269065.6590137,
     "ast_hash": "7347ce551a7691ee2a37c106e54a81f0",
     "semantic_hash": "7347ce551a7691ee2a37c106e54a81f0"
+  },
+  "verify_number_delays.py": {
+    "mtime": 1780756866.481121,
+    "ast_hash": "c405d8fb80920ab943e84b97724f54de",
+    "semantic_hash": ""
   }
 }

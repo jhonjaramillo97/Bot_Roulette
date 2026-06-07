@@ -44,13 +44,18 @@ def get_db_connection():
     return conn
 
 
-def calcular_delays(table_name, limit=500):
+def calcular_delays(table_name, limit=None):
     """Calcula los delays de docenas y columnas para una tabla dada (USANDO LOGIC COMPARTIDA)."""
     try:
         conn = get_db_connection()
-        cursor = conn.execute(
-            f"SELECT numero, color, timestamp FROM {table_name} ORDER BY id DESC LIMIT ?", (limit,)
-        )
+        if limit is not None:
+            cursor = conn.execute(
+                f"SELECT numero, color, timestamp FROM {table_name} ORDER BY id DESC LIMIT ?", (limit,)
+            )
+        else:
+            cursor = conn.execute(
+                f"SELECT numero, color, timestamp FROM {table_name} ORDER BY id DESC"
+            )
         rows = cursor.fetchall()
         conn.close()
     except Exception:
@@ -95,7 +100,7 @@ def get_overview():
     result = []
     for t in TABLES:
         tn = t["table_name"]
-        delays, nums = calcular_delays(tn, limit=100)
+        delays, nums = calcular_delays(tn)
         if delays is None:
             continue
 
@@ -167,7 +172,7 @@ def get_data():
     if not any(t["table_name"] == table_name for t in TABLES):
         return jsonify({"error": "Tabla no válida"}), 400
 
-    delays, numeros = calcular_delays(table_name, limit=100)
+    delays, numeros = calcular_delays(table_name)
     if delays is None:
         return jsonify({"error": "Error leyendo BD"}), 500
 
@@ -305,7 +310,7 @@ def get_backtest_number():
         # 3. Calcular alertas activas (números retrasados AHORA, aún no completados)
         active_alerts = []
         try:
-            _, numeros = calcular_delays(table_name, limit=100)
+            _, numeros = calcular_delays(table_name)
             if numeros:
                 current_delays = bt_logic.compute_number_delays(numeros)
                 active_alerts = [
@@ -373,7 +378,7 @@ def get_analisis_global():
         for t in TABLES:
             tn = t["table_name"]
             try:
-                _, nums = calcular_delays(tn, limit=100)
+                _, nums = calcular_delays(tn)
                 if nums:
                     nd = bt_logic.compute_number_delays(nums)
                     current_number_delays[tn] = {str(k): v for k, v in nd.items()}

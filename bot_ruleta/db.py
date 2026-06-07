@@ -176,8 +176,8 @@ def obtener_ultimo_numero(mesa_nombre):
     return None
 
 
-def obtener_ultimos_numeros(mesa_nombre, limit=15):
-    """Obtiene los últimos N registros (número, color y timestamp)."""
+def obtener_ultimos_numeros(mesa_nombre, limit=None):
+    """Obtiene los últimos N registros (número, color y timestamp). Si limit es None, obtiene todos."""
     table_name = _resolve_table_name(mesa_nombre)
     if not table_name:
         return []
@@ -185,7 +185,10 @@ def obtener_ultimos_numeros(mesa_nombre, limit=15):
     try:
         conn = get_connection()
         cursor = conn.cursor()
-        cursor.execute(f"SELECT numero, color, timestamp FROM {table_name} ORDER BY id DESC LIMIT ?", (limit,))
+        if limit is not None:
+            cursor.execute(f"SELECT numero, color, timestamp FROM {table_name} ORDER BY id DESC LIMIT ?", (limit,))
+        else:
+            cursor.execute(f"SELECT numero, color, timestamp FROM {table_name} ORDER BY id DESC")
         rows = cursor.fetchall()
         conn.close()
         return [{"numero": r[0], "color": r[1], "timestamp": r[2]} for r in rows]

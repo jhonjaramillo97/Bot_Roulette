@@ -249,7 +249,7 @@ def _run_single_session(email, password, headless=True, stop_event=None):
                             
                             # Alertas Telegram
                             try:
-                                history = obtener_ultimos_numeros(nombre, limit=100)
+                                history = obtener_ultimos_numeros(nombre)
                                 if history:
                                     delays = bt_logic.compute_delays(history)
                                     bt_logic.check_and_notify(nombre, delays, history)

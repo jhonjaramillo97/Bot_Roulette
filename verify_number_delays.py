@@ -1,14 +1,14 @@
 """
-verify_number_delays.py — Auditoría de la base de datos.
+verify_number_delays.py — Auditoria de la base de datos.
 
 Para cada mesa:
 1. Cuenta el total de giros registrados
-2. Calcula delays de números con compute_number_delays (últimos 100)
-3. Verifica contra un cálculo manual independiente
-4. Detecta mesas sin datos o con anomalías
-5. Reporta números más retrasados
+2. Calcula delays de numeros con compute_number_delays (ultimos 100)
+3. Verifica contra un calculo manual independiente
+4. Detecta mesas sin datos o con anomalias
+5. Reporta numeros mas retrasados
 
-Uso:  python verify_number_delays.py [--umbral 50]
+Uso:  python verify_number_delays.py [--umbral 50] [--db ruta/ruleta.db]
 """
 
 import sys
@@ -19,12 +19,7 @@ import argparse
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from bot_ruleta.config import TABLES, get_number_delay_threshold
 
-# Determinar ruta de la BD
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_DIR = os.path.join(BASE_DIR, "data")
-if not os.path.isdir(DATA_DIR):
-    DATA_DIR = os.path.join(BASE_DIR, "bot_ruleta", "data")
-DB_PATH = os.path.join(DATA_DIR, "ruleta.db")
+DB_PATH = None  # Se setea en main()
 
 
 def get_connection():
@@ -34,7 +29,7 @@ def get_connection():
 def manual_delays(numeros):
     """
     Calcula delays manualmente (independiente de compute_number_delays).
-    numeros[0] es el más reciente.
+    numeros[0] es el mas reciente.
     """
     last_seen = {n: None for n in range(37)}
     total = 0
@@ -66,16 +61,15 @@ def manual_delays(numeros):
 def format_color(num):
     reds = [1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36]
     if num == 0:
-        return "[G]"  # Green
+        return "[G]"
     elif num in reds:
-        return "[R]"  # Red
-    return "[N]"  # Black
+        return "[R]"
+    return "[N]"
 
 
 def audit_table(table_name, threshold):
     conn = get_connection()
 
-    # Total de giros
     cursor = conn.execute(f"SELECT COUNT(*) FROM {table_name}")
     total_spins = cursor.fetchone()[0]
 
@@ -86,28 +80,24 @@ def audit_table(table_name, threshold):
             "total_spins": 0,
             "delays": {},
             "alerts": [],
-            "errors": ["TABLA VACIA — sin giros registrados"]
+            "errors": ["TABLA VACIA - sin giros registrados"]
         }
 
-    # Últimos 100 giros
     cursor = conn.execute(
         f"SELECT numero, color, timestamp FROM {table_name} ORDER BY id DESC LIMIT 100"
     )
     rows = cursor.fetchall()
 
-    # Último timestamp
     cursor = conn.execute(f"SELECT MAX(timestamp) FROM {table_name}")
-    last_ts = cursor.fetchone()[0] or "—"
+    last_ts = cursor.fetchone()[0] or "-"
 
     conn.close()
 
     numeros = [{"numero": r[0], "color": r[1], "timestamp": r[2]} for r in rows]
 
-    # Usar la función real
     from bot_ruleta.logic import compute_number_delays
     real_delays = compute_number_delays(numeros)
 
-    # Verificar contra cálculo manual
     manual = manual_delays(numeros)
     mismatches = []
     for n in range(37):
@@ -118,7 +108,6 @@ def audit_table(table_name, threshold):
     if mismatches:
         errors.append(f"DISCREPANCIA! {len(mismatches)} numeros no coinciden: {', '.join(mismatches[:5])}")
 
-    # Números con delay >= threshold
     alerts = [(n, real_delays[n], format_color(n)) for n in range(37) if real_delays[n] >= threshold]
     alerts.sort(key=lambda x: -x[1])
 
@@ -133,13 +122,26 @@ def audit_table(table_name, threshold):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="Auditar delays de números en la BD")
+    global DB_PATH
+
+    # Ruta por defecto: buscar en dist/data (donde corre el .exe), luego bot_ruleta/data
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    default_paths = [
+        os.path.join(script_dir, "dist", "data", "ruleta.db"),
+        os.path.join(script_dir, "bot_ruleta", "data", "ruleta.db"),
+    ]
+    default_db = next((p for p in default_paths if os.path.exists(p)), default_paths[0])
+
+    parser = argparse.ArgumentParser(description="Auditar delays de numeros en la BD")
     parser.add_argument("--umbral", type=int, default=None, help="Umbral de delay (default: valor de la GUI)")
+    parser.add_argument("--db", type=str, default=default_db, help="Ruta a la base de datos SQLite")
     args = parser.parse_args()
 
+    DB_PATH = args.db
     threshold = args.umbral or get_number_delay_threshold()
 
-    print(f"=== AUDITORIA DE NUMEROS -- BD: {DB_PATH} ===")
+    print(f"=== AUDITORIA DE NUMEROS ===")
+    print(f"=== BD: {DB_PATH} ===")
     print(f"=== Umbral configurado: {threshold} giros ===\n")
 
     if not os.path.exists(DB_PATH):
