@@ -8,9 +8,10 @@ import platform
 import shutil
 from datetime import datetime
 
-from bot_ruleta.paths import get_data_dir
+from bot_ruleta.paths import get_data_dir, get_base_dir
 from bot_ruleta.diagnostics.logger import get_logger
 
+_BASE_DIR = get_base_dir()
 LOGS_DIR = os.path.join(get_data_dir(), "logs")
 os.makedirs(LOGS_DIR, exist_ok=True)
 

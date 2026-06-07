@@ -9,9 +9,10 @@ import traceback
 from datetime import datetime
 
 from bot_ruleta.diagnostics.logger import get_logger
-from bot_ruleta.paths import get_data_dir
+from bot_ruleta.paths import get_data_dir, get_base_dir
 from bot_ruleta.diagnostics.screenshots import capture_screenshot, _cleanup_old_screenshots
 
+_BASE_DIR = get_base_dir()
 LOGS_DIR = os.path.join(get_data_dir(), "logs")
 SCREENSHOTS_DIR = os.path.join(LOGS_DIR, "screenshots")
 CRASH_REPORTS_DIR = os.path.join(LOGS_DIR, "crash_reports")
