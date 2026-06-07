@@ -71,12 +71,17 @@ _HEARTBEAT_INTERVAL = 60
 _SOFT_REFRESH_AT = 15
 _EXPIRY_CHECK_AT_ZERO_TILES = 3
 
+# Tablas mapeadas dinamicamente (se actualizan en cada sesion/refresh)
+_mapped_tables = list(TABLES)
+
 
 def _run_single_session(email, password, headless=True, stop_event=None):
-    """Orquestador: inicializa, escanea y maneja errores de una sesión."""
+    """Orquestador: inicializa, escanea y maneja errores de una sesion."""
+    global _mapped_tables
     driver = None
     try:
-        driver, wait = _initialize_session(email, password, headless)
+        driver, wait, tables = _initialize_session(email, password, headless)
+        _mapped_tables = tables
         _scan_loop(driver, wait, stop_event)
     except KeyboardInterrupt:
         raise
@@ -90,8 +95,9 @@ def _run_single_session(email, password, headless=True, stop_event=None):
 # ── setup ──────────────────────────────────────────────────────────────
 
 def _initialize_session(email, password, headless):
-    """Setup driver + login + lobby + iframe + audio keep-alive."""
-    log.info("🚀 Iniciando nueva sesión del bot...")
+    """Setup driver + login + lobby + iframe + audio keep-alive.
+    Retorna (driver, wait, mapped_tables)."""
+    log.info("Iniciando nueva sesion del bot...")
     driver, wait = setup_driver(headless=headless)
     capture_screenshot(driver, "01_driver_iniciado")
 
@@ -99,16 +105,17 @@ def _initialize_session(email, password, headless):
     ir_al_lobby(driver, wait)
     capture_screenshot(driver, "03_lobby_cargado")
 
+    mapped = list(TABLES)
     if LOBBY_MODE:
-        log.info("👀 MODO ESPÍA ACTIVADO: Escaneando miniaturas...")
+        log.info("MODO ESPIA ACTIVADO: Escaneando miniaturas...")
         switch_to_game_iframe(driver)
         capture_screenshot(driver, "04_iframe_context")
         time.sleep(2)
-        map_tables_dynamic(driver)
+        mapped = map_tables_dynamic(driver)
         capture_screenshot(driver, "05_mesas_mapeadas")
 
     _start_audio_keepalive(driver)
-    return driver, wait
+    return driver, wait, mapped
 
 
 def _start_audio_keepalive(driver):
@@ -187,9 +194,9 @@ def _simulate_mouse_move(driver):
 # ── escaneo de mesas ───────────────────────────────────────────────────
 
 def _scan_all_tables(driver):
-    """Escanea todas las mesas configuradas. Retorna cuántas tuvieron éxito."""
+    """Escanea todas las mesas mapeadas. Retorna cuantas tuvieron exito."""
     scanned = 0
-    for mesa in TABLES:
+    for mesa in _mapped_tables:
         if _scan_single_table(driver, mesa["name"], mesa["id"]):
             scanned += 1
     return scanned
@@ -334,7 +341,8 @@ def _check_session_expiry(driver):
 
 def _soft_refresh_lobby(driver, wait):
     """Soft refresh: recarga el lobby sin re-login."""
-    log.warning("🔄 15 ciclos sin tiles. Soft Refresh...")
+    global _mapped_tables
+    log.warning("15 ciclos sin tiles. Soft Refresh...")
     driver.switch_to.default_content()
     driver.get(LOBBY_URL)
     time.sleep(5)
@@ -342,7 +350,7 @@ def _soft_refresh_lobby(driver, wait):
     if LOBBY_MODE:
         switch_to_game_iframe(driver)
         time.sleep(2)
-        map_tables_dynamic(driver)
+        _mapped_tables = map_tables_dynamic(driver)
 
 
 # ── error / cleanup ────────────────────────────────────────────────────

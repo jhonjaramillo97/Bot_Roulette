@@ -225,11 +225,13 @@ def ir_al_lobby(driver, wait, from_anti_afk=False):
 
 
 def map_tables_dynamic(driver):
-    """Escanea el lobby tile por tile, extrae el título visible de cada uno,
-    y actualiza dinámicamente los IDs en TABLES.  Esto hace al bot
-    resiliente a cambios de IDs entre sesiones."""
+    """Escanea el lobby tile por tile, extrae el titulo visible de cada uno,
+    y retorna una nueva lista de mesas con IDs actualizados.
+    NO modifica la config global TABLES."""
+    import copy
 
-    log.info("🗺️  Escaneando IDs de mesas dinámicamente (modo robusto)...")
+    log.info("Mapa de IDs de mesas (modo robusto)...")
+    mapped = copy.deepcopy(TABLES)
     try:
         # Asegurar contexto iframe
         switch_to_game_iframe(driver)
@@ -326,9 +328,9 @@ def map_tables_dynamic(driver):
             log.info(f"   {tid:<30} | {title or '???'}")
         log.info(f"   {'-'*60}")
 
-        # 4. Emparejar: buscar cada TABLES[].name en los títulos del lobby
+        # 4. Emparejar: buscar cada mapped[].name en los titulos del lobby
         matched_table_names = set()
-        for mesa in TABLES:
+        for mesa in mapped:
             config_name = mesa["name"].lower()
 
             best_match_id = None
@@ -366,19 +368,18 @@ def map_tables_dynamic(driver):
 
             if best_match_id:
                 if mesa["id"] != best_match_id:
-                    log.warning(f"   ⚠️  CAMBIO DE ID para '{mesa['name']}':")
-                    log.warning(f"       Antiguo: {mesa['id']}")
-                    log.warning(f"       Nuevo:   {best_match_id}")
+                    log.warning(f"     CAMBIO DE ID para '{mesa['name']}': {mesa['id']} -> {best_match_id}")
                     mesa["id"] = best_match_id
                 else:
-                    log.info(f"   ✅ {mesa['name']}: ID confirmado ({mesa['id']})")
+                    log.info(f"     {mesa['name']}: ID confirmado ({mesa['id']})")
                 matched_table_names.add(mesa["name"])
             else:
-                log.warning(f"   ❌ ALERTA: '{mesa['name']}' NO ENCONTRADA en el lobby")
+                log.warning(f"     ALERTA: '{mesa['name']}' NO ENCONTRADA en el lobby")
 
-        log.info(f"\n✅ Mapeo completado. {len(matched_table_names)}/{len(TABLES)} mesas emparejadas.")
-        # Flujo normal - sin screenshot
+        log.info(f"Mapeo completado. {len(matched_table_names)}/{len(mapped)} mesas emparejadas.")
+        return mapped
 
     except Exception as e:
-        log.error(f"❌ Error en mapeo dinámico: {e}")
+        log.error(f"Error en mapeo dinamico: {e}")
         capture_screenshot(driver, "ERROR_mapeo_dinamico")
+        return list(TABLES)
