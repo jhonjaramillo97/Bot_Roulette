@@ -270,17 +270,17 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/query-rRwWEUS_.js": {
-    "mtime": 1780968418.174612,
+    "mtime": 1780968652.016598,
     "ast_hash": "feb4b3fb0827b961ea2ae47ce16199c1",
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/recharts-CkMf2Xat.js": {
-    "mtime": 1780968418.174612,
+    "mtime": 1780968652.016598,
     "ast_hash": "d86f64f1a3c20be1864a1b50f202defc",
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/rolldown-runtime-QTnfLwEv.js": {
-    "mtime": 1780968418.1767924,
+    "mtime": 1780968652.0183494,
     "ast_hash": "0b9fa1f21df87441aa366e428d1ebb49",
     "semantic_hash": ""
   },
@@ -345,8 +345,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/lib/api.ts": {
-    "mtime": 1780966902.0131497,
-    "ast_hash": "392b84c3b54d47b5e3cf18f8099885f4",
+    "mtime": 1780968606.8015163,
+    "ast_hash": "7dc75e9833c2e375662f84ec1c986756",
     "semantic_hash": ""
   },
   "react-dashboard/src/lib/types.ts": {
@@ -370,8 +370,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/MesaDetail.tsx": {
-    "mtime": 1780968372.0456262,
-    "ast_hash": "5217c449a1659cf38ddc6c23871a35e8",
+    "mtime": 1780968624.4318738,
+    "ast_hash": "1ca5e0031416717b64cc6c074e5add35",
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/Overview.tsx": {
@@ -427,6 +427,11 @@
   "bot_ruleta/dashboard/static/assets/index-Bu-D4V8O.js": {
     "mtime": 1780967778.6151586,
     "ast_hash": "52daedee4a0097a99f90ef92357f96be",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/dashboard/static/assets/index-DzzgQmSc.js": {
+    "mtime": 1780968652.012228,
+    "ast_hash": "01b76dd55f306428ba9a4bbb23a8c394",
     "semantic_hash": ""
   }
 }
