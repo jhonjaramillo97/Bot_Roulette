@@ -178,7 +178,7 @@ export default function AnalisisGlobalPage() {
               <LineChart data={currentData as any[]}>
                 <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
                 <XAxis dataKey="table_name" tick={{ fontSize: 10, fill: "#8a8a9a" }} tickFormatter={(v: string) => fmt(v)} />
-                <YAxis tick={{ fontSize: 10, fill: "#8a8a9a" }} />
+                <YAxis tick={{ fontSize: 10, fill: "#8a8a9a" }} domain={["dataMin - 1", "dataMax + 2"]} />
                 <Tooltip
                   contentStyle={{ backgroundColor: "#1a1a24", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, fontSize: 12 }}
                   labelFormatter={(v: any) => fmt(String(v))}
@@ -364,6 +364,7 @@ function SignalModal({ signal, onClose }: {
   }
   onClose: () => void
 }) {
+  const isActive = !signal.startTime
   const { data, isLoading } = useSignalDetail(
     signal.tableName,
     signal.startTime ?? "",
@@ -379,6 +380,10 @@ function SignalModal({ signal, onClose }: {
   } else {
     const colorLabel = signal.streakColor === "Red" ? "Rojos" : "Negros"
     subtitle = `Racha: ${signal.streakCount} ${colorLabel}`
+  }
+
+  if (isActive) {
+    subtitle += " | Senal activa (en progreso)"
   }
 
   return (
@@ -422,7 +427,11 @@ function SignalModal({ signal, onClose }: {
               </tbody>
             </table>
           ) : (
-            <div className="py-8 text-center text-text-secondary">No se encontraron jugadas en este rango.</div>
+            <div className="py-8 text-center text-text-secondary">
+              {isActive
+                ? "Senal activa: los datos se iran completando a medida que avancen los giros."
+                : "No se encontraron jugadas en este rango."}
+            </div>
           )}
         </div>
       </div>

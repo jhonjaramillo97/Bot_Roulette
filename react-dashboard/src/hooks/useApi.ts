@@ -73,6 +73,6 @@ export function useSignalDetail(table: string, start: string, end: string, pico:
   return useQuery({
     queryKey: ["signal-detail", table, start, end, pico],
     queryFn: () => api.signalDetail(table, start, end, pico),
-    enabled: !!table && !!start && !!end,
+    enabled: !!table && pico > 0,
   })
 }
