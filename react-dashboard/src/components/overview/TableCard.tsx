@@ -72,7 +72,7 @@ export const TableCard = memo(function TableCard({
   return (
     <div
       className={cn(
-        "group rounded-md border border-border bg-bg-card shadow-sm transition-colors hover:border-border-hover hover:bg-bg-card-hover",
+        "group rounded-sm border border-border bg-bg-card shadow-sm transition-colors hover:border-border-hover hover:bg-bg-card-hover",
         viewMode === "grid" && "hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/20",
         hasAnyAlert && "border-l-2",
         getSeverityClasses(hasAnyAlert ? maxSeverity : "safe"),

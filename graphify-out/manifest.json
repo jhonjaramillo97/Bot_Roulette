@@ -280,7 +280,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/rolldown-runtime-QTnfLwEv.js": {
-    "mtime": 1780972347.6555107,
+    "mtime": 1780973140.4356954,
     "ast_hash": "0b9fa1f21df87441aa366e428d1ebb49",
     "semantic_hash": ""
   },
@@ -310,8 +310,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/components/overview/TableCard.tsx": {
-    "mtime": 1780972008.3660135,
-    "ast_hash": "38dbb7ab83456f3178c2991048055584",
+    "mtime": 1780972663.3885784,
+    "ast_hash": "98ba9d1330727f4a096c7f90c040b8f4",
     "semantic_hash": ""
   },
   "react-dashboard/src/components/overview/index.ts": {
@@ -365,8 +365,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/AnalisisGlobal.tsx": {
-    "mtime": 1780972336.5004218,
-    "ast_hash": "603b8cbc925c93b3630603a1546a3386",
+    "mtime": 1780972648.0012338,
+    "ast_hash": "11075bf71a7b85fc583fd6e02e4a2ad0",
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/MesaDetail.tsx": {
@@ -460,12 +460,12 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/query-BPe0xBFE.js": {
-    "mtime": 1780972347.6525135,
+    "mtime": 1780973140.4326959,
     "ast_hash": "04faa70bf0cdaeaa34d0fc73933f2336",
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/recharts-DMPSVTCT.js": {
-    "mtime": 1780972347.6535127,
+    "mtime": 1780973140.4336972,
     "ast_hash": "81c1764a338cd132daef0ea7aec2f283",
     "semantic_hash": ""
   },
@@ -487,6 +487,11 @@
   "bot_ruleta/dashboard/static/assets/index-dXk60V6S.js": {
     "mtime": 1780972053.8098524,
     "ast_hash": "449cf71110b43f1ca297b5fbb7e4d1c7",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/dashboard/static/assets/index-NMPzQ5wZ.js": {
+    "mtime": 1780973140.4326959,
+    "ast_hash": "a7137e2d8a30e2666a10294903a44318",
     "semantic_hash": ""
   }
 }
