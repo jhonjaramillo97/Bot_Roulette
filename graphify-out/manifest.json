@@ -305,8 +305,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/components/layout/LoadingOverlay.tsx": {
-    "mtime": 1780971578.0379457,
-    "ast_hash": "eff389c72f910c261a68d06740b023d2",
+    "mtime": 1780971605.3527267,
+    "ast_hash": "fd130d6ba4805e9f057f2c6dd3ff7c5f",
     "semantic_hash": ""
   },
   "react-dashboard/src/components/overview/TableCard.tsx": {
@@ -365,13 +365,13 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/AnalisisGlobal.tsx": {
-    "mtime": 1780971528.4360356,
-    "ast_hash": "549b4c9523a98c23aa76d8ce2b406206",
+    "mtime": 1780971612.7316794,
+    "ast_hash": "294eb439def12b720145802a2bb7f4b7",
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/MesaDetail.tsx": {
-    "mtime": 1780971563.4534457,
-    "ast_hash": "1555e8c1299d06a2330d8c903e02b402",
+    "mtime": 1780971609.2127094,
+    "ast_hash": "dceef1e339b5a0b3231d7440521a0fb7",
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/Overview.tsx": {
