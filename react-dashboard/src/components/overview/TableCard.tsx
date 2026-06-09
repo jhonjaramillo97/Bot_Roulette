@@ -102,19 +102,9 @@ export const TableCard = memo(function TableCard({
           </span>
         </div>
         <div className="flex items-center gap-1 shrink-0">
-          {hasNumberAlert && (
-            <Badge variant="danger" className="text-[9px] px-1 py-0 leading-tight">
-              {table.number_alert_count}N
-            </Badge>
-          )}
           {hasColorStreak && table.color_streak && (
             <Badge variant={table.color_streak.color === "Red" ? "red" : "black"} className="text-[9px] px-1 py-0 leading-tight">
               {table.color_streak.color === "Red" ? "R" : "B"}{table.color_streak.streak}
-            </Badge>
-          )}
-          {table.alertas.length > 0 && (
-            <Badge variant="danger" className="text-[9px] px-1 py-0 leading-tight">
-              {table.alertas.length}
             </Badge>
           )}
           {viewMode === "list" && (
