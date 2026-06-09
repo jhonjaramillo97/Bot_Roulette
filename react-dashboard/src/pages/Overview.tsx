@@ -25,12 +25,12 @@ export default function OverviewPage() {
   const totalAlerts = useMemo(() => {
     if (!data) return 0
     return tables.reduce((acc, t) => {
-      acc += t.alertas.length
+      acc += t.alertas.filter((a) => (t.delays[a] ?? 0) >= threshold).length
       if (t.color_streak && t.color_streak.streak >= colorStreakThreshold) acc += 1
-      if (t.number_alert_count > 0) acc += 1
+      if ((t.number_alert_numbers ?? []).some(([, delay]) => delay >= numberDelayThreshold)) acc += 1
       return acc
     }, 0)
-  }, [data, tables, colorStreakThreshold])
+  }, [data, tables, colorStreakThreshold, threshold, numberDelayThreshold])
 
   useAlertSound(totalAlerts)
 
@@ -41,11 +41,13 @@ export default function OverviewPage() {
     let result = tables.filter((t) => !hiddenTables.has(t.table_name))
     if (filterSignals) {
       result = result.filter(
-        (t) => t.alertas.length > 0 || (t.color_streak && t.color_streak.streak >= colorStreakThreshold) || t.number_alert_count > 0
+        (t) => t.alertas.some((a) => (t.delays[a] ?? 0) >= threshold)
+          || (t.color_streak && t.color_streak.streak >= colorStreakThreshold)
+          || (t.number_alert_numbers ?? []).some(([, delay]) => delay >= numberDelayThreshold)
       )
     }
     return result
-  }, [tables, filterSignals, colorStreakThreshold, hiddenTables])
+  }, [tables, filterSignals, colorStreakThreshold, threshold, numberDelayThreshold, hiddenTables])
 
   const toggleExpanded = (tableName: string) => {
     setExpandedCards((prev) => {

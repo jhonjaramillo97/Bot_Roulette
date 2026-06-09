@@ -280,7 +280,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/rolldown-runtime-QTnfLwEv.js": {
-    "mtime": 1781022488.3380375,
+    "mtime": 1781027911.575281,
     "ast_hash": "0b9fa1f21df87441aa366e428d1ebb49",
     "semantic_hash": ""
   },
@@ -300,8 +300,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/components/layout/AppHeader.tsx": {
-    "mtime": 1781022240.9493878,
-    "ast_hash": "2bf731645bb7c9fbc5e48c86d90e595a",
+    "mtime": 1781027847.0417,
+    "ast_hash": "2f0d0dc10377b792e458018fd66be8c5",
     "semantic_hash": ""
   },
   "react-dashboard/src/components/layout/LoadingOverlay.tsx": {
@@ -310,8 +310,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/components/overview/TableCard.tsx": {
-    "mtime": 1781021270.260225,
-    "ast_hash": "2662f56500134a0976ee2dca14bb46df",
+    "mtime": 1781027895.5077314,
+    "ast_hash": "8873cc982bf3e13e3d8bff99bc3173a2",
     "semantic_hash": ""
   },
   "react-dashboard/src/components/overview/index.ts": {
@@ -375,8 +375,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/Overview.tsx": {
-    "mtime": 1781022213.819266,
-    "ast_hash": "fcbc89e47b4df8e1468ffce0b13e4352",
+    "mtime": 1781027865.8741531,
+    "ast_hash": "e6ba67b074ea3418be87d4186562a447",
     "semantic_hash": ""
   },
   "react-dashboard/tsconfig.app.json": {
@@ -460,7 +460,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/query-BPe0xBFE.js": {
-    "mtime": 1781022488.3350396,
+    "mtime": 1781027911.5742784,
     "ast_hash": "04faa70bf0cdaeaa34d0fc73933f2336",
     "semantic_hash": ""
   },
@@ -470,8 +470,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/lib/DashboardContext.tsx": {
-    "mtime": 1781022163.5113914,
-    "ast_hash": "d93ba255fe16e974e7bdd83e19e2f171",
+    "mtime": 1781027813.6539068,
+    "ast_hash": "d65eae176ce20ea293c17b80c55af8c5",
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/index-DGDPgzEt.js": {
@@ -550,13 +550,18 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/index-N4yrNIX1.js": {
-    "mtime": 1781022488.3340387,
+    "mtime": 1781027632.9842808,
     "ast_hash": "d08b73f6d32818e647afdcf894059769",
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js": {
-    "mtime": 1781022488.336038,
+    "mtime": 1781027911.5742784,
     "ast_hash": "e8baacc3f66b9f1f0110fe204745ffcf",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/dashboard/static/assets/index-CrBO5x1T.js": {
+    "mtime": 1781027911.5732782,
+    "ast_hash": "cda10bf10918f65abb1b155bea9f7931",
     "semantic_hash": ""
   }
 }

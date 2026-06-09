@@ -56,8 +56,8 @@ export function getDelaySeverity(
   threshold: number
 ): "safe" | "warn" | "danger" | "critical" {
   if (value >= threshold) return "critical"
-  if (value >= threshold - 2) return "danger"
-  if (value >= 6) return "warn"
+  if (value >= threshold - 1) return "danger"
+  if (value >= threshold - 2) return "warn"
   return "safe"
 }
 
