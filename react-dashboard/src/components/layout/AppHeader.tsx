@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/shadcn"
 import { useOverview } from "@/hooks/useApi"
 import { useDashboard } from "@/lib/DashboardContext"
 
-
 export function AppHeader() {
   const location = useLocation()
   const { data } = useOverview()
@@ -21,9 +20,9 @@ export function AppHeader() {
       <div className="flex items-center gap-3">
         <img src="/logo.png" alt="Roulette Sniper" className="h-7" />
         <div className="flex items-center gap-1.5">
-          <Activity className="h-2.5 w-2.5 text-safe" />
+          <Activity className="h-2.5 w-2.5 text-safe" aria-hidden="true" />
           <span className="text-xs text-text-secondary">
-            {data?.tables ? `${data.tables.length} mesas` : "Conectando..."}
+            {data?.tables ? `${data.tables.length} mesas` : "Conectando…"}
           </span>
         </div>
       </div>
@@ -39,7 +38,7 @@ export function AppHeader() {
                 size="sm"
                 className="gap-1.5"
               >
-                <Icon className="h-3.5 w-3.5" />
+                <Icon className="h-3.5 w-3.5" aria-hidden="true" />
                 {link.label}
               </Button>
             </Link>
@@ -48,14 +47,16 @@ export function AppHeader() {
 
         {isOverview && (
           <>
-            <div className="mx-1 h-5 w-px bg-border" />
+            <div className="mx-1 h-5 w-px bg-border" aria-hidden="true" />
             <Button
               variant={filterSignals ? "danger" : "ghost"}
               size="sm"
               onClick={() => setFilterSignals(!filterSignals)}
               className="gap-1.5"
+              aria-label={filterSignals ? "Mostrar todas las mesas" : "Filtrar solo mesas con señales"}
+              aria-pressed={filterSignals}
             >
-              <Filter className="h-3.5 w-3.5" />
+              <Filter className="h-3.5 w-3.5" aria-hidden="true" />
               {filterSignals ? "Todas" : "Señales"}
             </Button>
             <Button
@@ -63,17 +64,14 @@ export function AppHeader() {
               size="sm"
               onClick={() => setViewMode(viewMode === "list" ? "grid" : "list")}
               className="gap-1.5"
+              aria-label={viewMode === "list" ? "Cambiar a vista de cuadrícula" : "Cambiar a vista de lista"}
             >
-              {viewMode === "list" ? <LayoutGrid className="h-3.5 w-3.5" /> : <List className="h-3.5 w-3.5" />}
+              {viewMode === "list" ? <LayoutGrid className="h-3.5 w-3.5" aria-hidden="true" /> : <List className="h-3.5 w-3.5" aria-hidden="true" />}
               {viewMode === "list" ? "Grid" : "Lista"}
             </Button>
           </>
         )}
       </nav>
-
-      <div className="flex items-center gap-2 text-xs text-text-secondary">
-        {/* reserved */}
-      </div>
     </header>
   )
 }

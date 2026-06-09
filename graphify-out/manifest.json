@@ -270,17 +270,17 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/query-rRwWEUS_.js": {
-    "mtime": 1780969470.7856345,
+    "mtime": 1780970189.9039426,
     "ast_hash": "feb4b3fb0827b961ea2ae47ce16199c1",
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/recharts-CkMf2Xat.js": {
-    "mtime": 1780969470.7866297,
+    "mtime": 1780970189.9049404,
     "ast_hash": "d86f64f1a3c20be1864a1b50f202defc",
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/rolldown-runtime-QTnfLwEv.js": {
-    "mtime": 1780969470.788629,
+    "mtime": 1780970848.702449,
     "ast_hash": "0b9fa1f21df87441aa366e428d1ebb49",
     "semantic_hash": ""
   },
@@ -295,13 +295,13 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/App.tsx": {
-    "mtime": 1780966667.1925635,
-    "ast_hash": "d96ab67c79ff2864807e20b971ea3b26",
+    "mtime": 1780970736.7145271,
+    "ast_hash": "5604d77a4dbe336cc7af0b6fd3e1d39b",
     "semantic_hash": ""
   },
   "react-dashboard/src/components/layout/AppHeader.tsx": {
-    "mtime": 1780966791.574705,
-    "ast_hash": "258e36bb660cabc951965f993903769e",
+    "mtime": 1780970833.6795557,
+    "ast_hash": "2a604bc320d4c177000701eb501d2987",
     "semantic_hash": ""
   },
   "react-dashboard/src/components/layout/LoadingOverlay.tsx": {
@@ -310,8 +310,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/components/overview/TableCard.tsx": {
-    "mtime": 1780966758.6482744,
-    "ast_hash": "60186d65e07aa4aec7620abe90fefec9",
+    "mtime": 1780970817.080258,
+    "ast_hash": "06681d18ae11a7966ccf108fff219721",
     "semantic_hash": ""
   },
   "react-dashboard/src/components/overview/index.ts": {
@@ -350,8 +350,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/lib/types.ts": {
-    "mtime": 1780966478.699252,
-    "ast_hash": "ba46f7a9da22a3c5e0daf56818cdb0f5",
+    "mtime": 1780969766.7145433,
+    "ast_hash": "29b7507e7d989b07cdfc839c0f59401b",
     "semantic_hash": ""
   },
   "react-dashboard/src/lib/utils.ts": {
@@ -365,18 +365,18 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/AnalisisGlobal.tsx": {
-    "mtime": 1780969459.5988202,
-    "ast_hash": "fd70494c8892291cb90120b4f6f869a6",
+    "mtime": 1780969791.8859067,
+    "ast_hash": "95ce4001bb833399156439828a0e009d",
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/MesaDetail.tsx": {
-    "mtime": 1780968624.4318738,
-    "ast_hash": "1ca5e0031416717b64cc6c074e5add35",
+    "mtime": 1780970175.4587684,
+    "ast_hash": "c64507bcda8795d0e6136b4ed305fa8f",
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/Overview.tsx": {
-    "mtime": 1780967764.905494,
-    "ast_hash": "fc14aa4b49661b9a1b04fb954b98abfb",
+    "mtime": 1780970764.145507,
+    "ast_hash": "5baf14d36d77513080cc0d9eb6ffc52f",
     "semantic_hash": ""
   },
   "react-dashboard/tsconfig.app.json": {
@@ -442,6 +442,36 @@
   "bot_ruleta/dashboard/static/assets/index-Bfzz8Sb6.js": {
     "mtime": 1780969470.7846293,
     "ast_hash": "79e06c592ede7befb61e9ca1061b8db3",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/dashboard/static/assets/index-BOdWTEKZ.js": {
+    "mtime": 1780969816.3314326,
+    "ast_hash": "3291cf420ed0f3f405967186e4a469fa",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/dashboard/static/assets/index-CdKalb2n.js": {
+    "mtime": 1780970848.6994486,
+    "ast_hash": "7d5ba9adc7a50807d52fd40a7c16d4c4",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/dashboard/static/assets/index-DjPEQuoT.js": {
+    "mtime": 1780970189.90294,
+    "ast_hash": "cca93a2660dddf4b0fb17bbe6ddda420",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/dashboard/static/assets/query-BPe0xBFE.js": {
+    "mtime": 1780970848.6994486,
+    "ast_hash": "04faa70bf0cdaeaa34d0fc73933f2336",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/dashboard/static/assets/recharts-DMPSVTCT.js": {
+    "mtime": 1780970848.7004483,
+    "ast_hash": "81c1764a338cd132daef0ea7aec2f283",
+    "semantic_hash": ""
+  },
+  "react-dashboard/src/lib/DashboardContext.tsx": {
+    "mtime": 1780970702.7456698,
+    "ast_hash": "6ec66032a6f51ceffe86477abf36bbc0",
     "semantic_hash": ""
   }
 }

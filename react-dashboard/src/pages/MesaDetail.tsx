@@ -109,6 +109,7 @@ export default function MesaDetailPage() {
             value={table}
             onChange={(e) => navigate(`/mesa?mesa=${e.target.value}`)}
             className="rounded-md border border-border bg-bg-card px-3 py-1.5 text-sm text-text"
+            aria-label="Seleccionar mesa"
           >
             {(mesasList ?? []).map((t: string) => (
               <option key={t} value={t}>
@@ -131,9 +132,10 @@ export default function MesaDetailPage() {
           <button
             onClick={() => setSoundEnabled(!soundEnabled)}
             className="rounded-md border border-border bg-bg-card px-2 py-1.5 text-sm text-text-secondary transition-colors hover:bg-bg-card-hover hover:text-text"
+            aria-label={soundEnabled ? "Desactivar sonido de alertas" : "Activar sonido de alertas"}
             title={soundEnabled ? "Sonido activado" : "Sonido desactivado"}
           >
-            {soundEnabled ? <Volume2 className="h-4 w-4" /> : <VolumeX className="h-4 w-4" />}
+            {soundEnabled ? <Volume2 className="h-4 w-4" aria-hidden="true" /> : <VolumeX className="h-4 w-4" aria-hidden="true" />}
           </button>
         </div>
       </div>
