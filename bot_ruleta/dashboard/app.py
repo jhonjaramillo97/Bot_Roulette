@@ -50,6 +50,16 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0  # Sin caché para archivos estátic
 
 os.makedirs(DATA_DIR, exist_ok=True)
 
+# ── Auth middleware ──
+DASHBOARD_TOKEN = os.getenv("DASHBOARD_TOKEN", "")
+
+@app.before_request
+def check_token():
+    if DASHBOARD_TOKEN and request.path.startswith("/api/"):
+        token = request.args.get("token", "")
+        if token != DASHBOARD_TOKEN:
+            return jsonify({"error": "Token invalido"}), 401
+
 
 def calculate_delays(table_name, limit=None):
     """Calcula los delays de docenas y columnas para una tabla dada (USANDO LOGIC COMPARTIDA)."""

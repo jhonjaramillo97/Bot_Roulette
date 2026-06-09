@@ -11,6 +11,13 @@ import type {
 const API_BASE = "/api"
 
 async function fetchJSON<T>(url: string): Promise<T> {
+  try {
+    const token = localStorage.getItem("dashboardToken")
+    if (token) {
+      const sep = url.includes("?") ? "&" : "?"
+      url = `${url}${sep}token=${encodeURIComponent(token)}`
+    }
+  } catch { /* noop */ }
   const res = await fetch(url)
   if (!res.ok) throw new Error(`API Error: ${res.status}`)
   return res.json()

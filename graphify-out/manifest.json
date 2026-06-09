@@ -280,7 +280,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/rolldown-runtime-QTnfLwEv.js": {
-    "mtime": 1781029535.3084404,
+    "mtime": 1781032145.2060378,
     "ast_hash": "0b9fa1f21df87441aa366e428d1ebb49",
     "semantic_hash": ""
   },
@@ -355,8 +355,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/lib/utils.ts": {
-    "mtime": 1781028573.1053922,
-    "ast_hash": "53df1e82c31a97b1fe29ba5a8ddd7e58",
+    "mtime": 1781032041.0111308,
+    "ast_hash": "56d6d98cbcb8044442c871a868f1d175",
     "semantic_hash": ""
   },
   "react-dashboard/src/main.tsx": {
@@ -370,8 +370,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/MesaDetail.tsx": {
-    "mtime": 1781022441.6085784,
-    "ast_hash": "d27de1a4595f42174574d518dbbdb9e0",
+    "mtime": 1781032129.8654478,
+    "ast_hash": "27621ff0ed307412948c0f8cf2bf0324",
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/Overview.tsx": {
@@ -460,7 +460,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/query-BPe0xBFE.js": {
-    "mtime": 1781029535.3054414,
+    "mtime": 1781032145.2030396,
     "ast_hash": "04faa70bf0cdaeaa34d0fc73933f2336",
     "semantic_hash": ""
   },
@@ -505,8 +505,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/components/overview/MesaPopup.tsx": {
-    "mtime": 1781029515.442776,
-    "ast_hash": "c2cc22eafbe9399fb5cf797497ae62f6",
+    "mtime": 1781032090.6669264,
+    "ast_hash": "c77c5b9555e09758acdbe42f94076282",
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/index-CQla_q-2.js": {
@@ -555,7 +555,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js": {
-    "mtime": 1781029535.3064528,
+    "mtime": 1781032145.2040381,
     "ast_hash": "e8baacc3f66b9f1f0110fe204745ffcf",
     "semantic_hash": ""
   },
@@ -572,6 +572,11 @@
   "bot_ruleta/dashboard/static/assets/index-p0h6lDpj.js": {
     "mtime": 1781029535.3044405,
     "ast_hash": "f3559eb4ded022183cf3fc4dfc2f5a3e",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/dashboard/static/assets/index-DoliFxqk.js": {
+    "mtime": 1781032145.2030396,
+    "ast_hash": "39d1a0f9965b45ee4ca98827ae4ea5e3",
     "semantic_hash": ""
   }
 }
