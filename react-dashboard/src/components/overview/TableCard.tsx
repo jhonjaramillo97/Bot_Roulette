@@ -37,6 +37,7 @@ interface TableCardProps {
   viewMode: "list" | "grid"
   isExpanded: boolean
   onToggle: () => void
+  onNameClick?: (tableName: string) => void
 }
 
 export const TableCard = memo(function TableCard({
@@ -46,6 +47,7 @@ export const TableCard = memo(function TableCard({
   viewMode,
   isExpanded,
   onToggle,
+  onNameClick,
 }: TableCardProps) {
   const hasColorStreak = table.color_streak && table.color_streak.streak >= colorStreakThreshold
   const hasNumberAlert = table.number_alert_count > 0
@@ -91,7 +93,10 @@ export const TableCard = memo(function TableCard({
               hasAnyAlert ? "bg-danger shadow-[0_0_4px_var(--color-danger)]" : "bg-safe shadow-[0_0_4px_var(--color-safe)]"
             )}
           />
-          <span className="truncate text-xs font-semibold">{table.name}</span>
+          <span
+            onClick={(e) => { e.stopPropagation(); onNameClick?.(table.table_name) }}
+            className="cursor-pointer truncate text-xs font-semibold transition-colors hover:text-accent"
+          >{table.name}</span>
           <span className="shrink-0 text-[10px] text-text-muted">
             {formatTimeAgo(table.last_update_seconds)}
           </span>

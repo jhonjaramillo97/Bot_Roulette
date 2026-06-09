@@ -3,6 +3,7 @@ import { useOverview } from "@/hooks/useApi"
 import { useAlertSound } from "@/hooks/useAlert"
 import { useDashboard } from "@/lib/DashboardContext"
 import { TableCard } from "@/components/overview"
+import { MesaPopup } from "@/components/overview/MesaPopup"
 import { LoadingOverlay } from "@/components/layout/LoadingOverlay"
 import { cn } from "@/lib/utils"
 
@@ -10,6 +11,7 @@ export default function OverviewPage() {
   const { data, isLoading } = useOverview()
   const { viewMode, filterSignals } = useDashboard()
   const [expandedCards, setExpandedCards] = useState<Set<string>>(new Set())
+  const [popupTable, setPopupTable] = useState<string | null>(null)
 
   const threshold = data?.threshold ?? 12
   const colorStreakThreshold = data?.color_streak_threshold ?? 5
@@ -73,10 +75,13 @@ export default function OverviewPage() {
               viewMode={viewMode}
               isExpanded={expandedCards.has(table.table_name)}
               onToggle={() => toggleExpanded(table.table_name)}
+              onNameClick={(name) => setPopupTable(name)}
             />
           ))
         )}
       </div>
+
+      {popupTable && <MesaPopup tableName={popupTable} onClose={() => setPopupTable(null)} />}
     </div>
   )
 }
