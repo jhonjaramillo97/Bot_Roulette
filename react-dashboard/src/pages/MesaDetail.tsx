@@ -326,7 +326,7 @@ function BacktestTabs({ backtest, backtestColor, backtestNumber, numberGrid, num
         <h2 className="text-base font-semibold tracking-wide text-text">
           Historial de Señales Detectadas
         </h2>
-        <div className="flex gap-0.5">
+<div className="flex gap-0.5">
           <Tabs value={tab} onValueChange={setTab}>
             <TabsTrigger value="tercios">Tercios</TabsTrigger>
             <TabsTrigger value="colores">Rojos / Negros</TabsTrigger>
@@ -335,10 +335,10 @@ function BacktestTabs({ backtest, backtestColor, backtestNumber, numberGrid, num
         </div>
       </div>
 
-      <Tabs value={tab} onValueChange={setTab}>
+   <div className="w-full">
         {/* Tercios */}
         {tab === "tercios" && (
-          <div className="max-h-[400px] overflow-auto border border-border/50">
+          <div className="max-h-[400px] w-full overflow-auto border border-border/50">
             <table className="w-full text-sm">
               <thead className="sticky top-0 bg-bg-card/95 backdrop-blur-sm">
                 <tr>
@@ -368,7 +368,7 @@ function BacktestTabs({ backtest, backtestColor, backtestNumber, numberGrid, num
 
         {/* Colores */}
         {tab === "colores" && (
-          <div className="max-h-[400px] overflow-auto border border-border/50">
+          <div className="max-h-[400px] w-full overflow-auto border border-border/50">
             <table className="w-full text-sm">
               <thead className="sticky top-0 bg-bg-card/95 backdrop-blur-sm">
                 <tr>
@@ -436,7 +436,7 @@ function BacktestTabs({ backtest, backtestColor, backtestNumber, numberGrid, num
             </div>
           </div>
         )}
-      </Tabs>
+      </div>
     </div>
   )
 }

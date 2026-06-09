@@ -103,11 +103,6 @@ export const TableCard = memo(function TableCard({
           </span>
         </div>
         <div className="flex items-center gap-1 shrink-0">
-          {hasColorStreak && table.color_streak && (
-            <Badge variant={table.color_streak.color === "Red" ? "red" : "black"} className="text-[9px] px-1 py-0 leading-tight">
-              {table.color_streak.color === "Red" ? "R" : "N"}{table.color_streak.streak}
-            </Badge>
-          )}
           {topAlertNums.length > 0 && topAlertNums.map(([num, delay]) => {
             const numColor = getNumberColor(num)
             return (
@@ -168,8 +163,8 @@ export const TableCard = memo(function TableCard({
           })}
         </div>
 
-        {/* Footer: last numbers */}
-        <div className="flex items-center justify-center border-t border-border/50 pt-1.5 mt-1.5">
+        {/* Footer: last numbers + color streak */}
+        <div className="flex items-center justify-between border-t border-border/50 pt-1.5 mt-1.5">
           <div className="flex items-center gap-0.5">
             {table.last_10?.slice(0, 8).map((spin, i) => (
               <span
@@ -187,6 +182,11 @@ export const TableCard = memo(function TableCard({
               </span>
             ))}
           </div>
+          {hasColorStreak && table.color_streak && (
+            <Badge variant={table.color_streak.color === "Red" ? "red" : "black"} className="text-[9px] px-1.5 py-0 leading-tight shrink-0">
+              {table.color_streak.color === "Red" ? "Rojo" : "Negro"} x{table.color_streak.streak}
+            </Badge>
+          )}
         </div>
       </div>
     </div>
