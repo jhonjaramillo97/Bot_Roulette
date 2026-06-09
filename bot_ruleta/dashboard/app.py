@@ -1,7 +1,7 @@
 import sys
 import os
 import logging
-from flask import Flask, jsonify, request, send_from_directory
+from flask import Flask, jsonify, request, send_from_directory, Response
 
 log = logging.getLogger("dashboard")
 
@@ -78,17 +78,12 @@ def calculate_delays(table_name, limit=None):
 
 # ─── RUTAS ────────────────────────────────────────────────────────────
 
+# SPA: todas las rutas de página sirven el mismo index.html (React Router)
 @app.route('/')
-def serve_index():
-    return send_from_directory(app.static_folder, 'index.html')
-
 @app.route('/mesa')
-def serve_mesa():
-    return send_from_directory(app.static_folder, 'mesa.html')
-
 @app.route('/analisis')
-def serve_analisis():
-    return send_from_directory(app.static_folder, 'analisis.html')
+def serve_spa():
+    return send_from_directory(app.static_folder, 'index.html')
 
 
 @app.route('/api/mesas')
@@ -502,6 +497,91 @@ def get_tunnel():
             pass
             
     return jsonify({"url": None})
+
+
+@app.route('/api/stream')
+def sse_stream():
+    """Server-Sent Events endpoint para datos en tiempo real."""
+    import json
+    import time
+
+    def generate():
+        while True:
+            try:
+                overview_data = _build_overview_data()
+                yield f"event: overview\ndata: {json.dumps(overview_data)}\n\n"
+            except Exception as e:
+                log.error(f"SSE error: {e}")
+                yield f"event: error\ndata: {{}}\n\n"
+            time.sleep(1)
+
+    return Response(generate(), mimetype='text/event-stream', headers={
+        'Cache-Control': 'no-cache',
+        'Connection': 'keep-alive',
+        'X-Accel-Buffering': 'no',
+    })
+
+
+def _build_overview_data():
+    """Construye los datos del overview como dict (sin jsonify)."""
+    from datetime import datetime
+    import time as _time
+
+    threshold = get_dashboard_threshold()
+    result = []
+    for t in TABLES:
+        tn = t["table_name"]
+        delays, nums = calculate_delays(tn)
+        if delays is None:
+            continue
+
+        max_delay = max(delays.values())
+        alertas = [k for k, v in delays.items() if v >= threshold]
+        max_zone = max(delays, key=delays.get)
+        zone_labels = {
+            "docena_1": "1ª Docena", "docena_2": "2ª Docena", "docena_3": "3ª Docena",
+            "columna_1": "Col. 1", "columna_2": "Col. 2", "columna_3": "Col. 3"
+        }
+
+        last_update_seconds = 999999
+        if nums and "timestamp" in nums[0]:
+            try:
+                last_ts = datetime.strptime(nums[0]["timestamp"], "%Y-%m-%d %H:%M:%S")
+                last_update_seconds = _time.time() - (_time.mktime(last_ts.timetuple()))
+            except Exception:
+                pass
+
+        color_streak = bt_logic.compute_color_streak(
+            [{"numero": n["numero"], "color": n.get("color", "Green")} for n in nums]
+        ) if nums else {"color": None, "streak": 0}
+
+        number_delays = bt_logic.compute_number_delays(nums) if nums else {n: 0 for n in range(37)}
+        number_threshold = get_number_delay_threshold()
+        number_alerts = [(num, delay) for num, delay in number_delays.items() if delay >= number_threshold]
+
+        result.append({
+            "name": t["name"],
+            "table_name": tn,
+            "max_delay": max_delay,
+            "max_zone": zone_labels.get(max_zone, max_zone),
+            "delays": delays,
+            "alertas": alertas,
+            "ultimo": nums[0]["numero"] if nums else None,
+            "ultimo_color": nums[0].get("color", "Green") if nums else None,
+            "last_10": [{"val": n["numero"], "col": n.get("color", "Green")} for n in nums[:10]] if nums else [],
+            "last_update_seconds": last_update_seconds,
+            "color_streak": color_streak,
+            "number_delays": number_delays,
+            "number_alert_count": len(number_alerts),
+            "number_alert_numbers": sorted(number_alerts, key=lambda x: -x[1])[:5]
+        })
+
+    return {
+        "threshold": threshold,
+        "color_streak_threshold": get_color_streak_threshold(),
+        "number_delay_threshold": get_number_delay_threshold(),
+        "tables": result
+    }
 
 
 if __name__ == '__main__':
