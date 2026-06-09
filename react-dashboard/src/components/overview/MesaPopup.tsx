@@ -4,12 +4,12 @@ import { cn, getNumberColor, getDelaySeverity, formatTimeAgo } from "@/lib/utils
 import { Link } from "react-router-dom"
 
 const ZONES = [
-  { key: "docena_1", label: "1ª Doc" },
-  { key: "docena_2", label: "2ª Doc" },
-  { key: "docena_3", label: "3ª Doc" },
-  { key: "columna_3", label: "Col 3" },
-  { key: "columna_2", label: "Col 2" },
-  { key: "columna_1", label: "Col 1" },
+  { key: "docena_1", label: "1ª Doc", col: 1, row: "1 / 4" },
+  { key: "docena_2", label: "2ª Doc", col: 2, row: "1 / 4" },
+  { key: "docena_3", label: "3ª Doc", col: 3, row: "1 / 4" },
+  { key: "columna_3", label: "Col 3", col: 4, row: "1" },
+  { key: "columna_2", label: "Col 2", col: 4, row: "2" },
+  { key: "columna_1", label: "Col 1", col: 4, row: "3" },
 ]
 
 interface Props {
@@ -17,11 +17,13 @@ interface Props {
   onClose: () => void
 }
 
-function getChipClass(value: number, threshold: number): string {
-  if (value >= threshold) return "text-critical bg-critical-dim border-critical/30"
-  if (value >= threshold - 2) return "text-danger bg-danger-dim border-danger/20"
-  if (value >= 6) return "text-warn bg-warn-dim border-warn/20"
-  return "text-text bg-white/[0.03] border-border"
+function getChipBg(severity: string): string {
+  switch (severity) {
+    case "critical": return "bg-critical-dim border-critical/30 text-critical"
+    case "danger": return "bg-danger-dim border-danger/20 text-danger"
+    case "warn": return "bg-warn-dim border-warn/20 text-warn"
+    default: return "bg-white/[0.03] border-border text-text"
+  }
 }
 
 export function MesaPopup({ tableName, onClose }: Props) {
@@ -61,17 +63,27 @@ export function MesaPopup({ tableName, onClose }: Props) {
           <div className="py-10 text-center text-text-muted text-sm">Cargando…</div>
         ) : (
           <div className="px-4 py-3">
-            {/* Delay grid - 3x2 layout */}
-            <div className="grid grid-cols-6 gap-2 mb-3">
+            {/* Delay grid - table layout: 3 dozens + column stack */}
+            <div className="grid grid-cols-4 grid-rows-3 gap-1.5 mb-3" style={{ minHeight: 160 }}>
               {ZONES.map((zone) => {
                 const value = data.delays[zone.key] ?? 0
+                const severity = getDelaySeverity(value, threshold)
                 const pct = Math.min((value / (threshold * 1.5)) * 100, 100)
                 return (
-                  <div key={zone.key} className={cn("flex flex-col items-center rounded-sm border px-2 py-2", getChipClass(value, threshold))}>
-                    <span className="font-tabular-nums text-xl font-bold leading-none">{value}</span>
-                    <span className="mt-1 text-[9px] uppercase tracking-wider text-text-muted">{zone.label}</span>
-                    <div className="mt-1 h-1 w-full overflow-hidden rounded-full bg-white/10">
-                      <div className={cn("h-full rounded-full transition-[width] duration-500", value >= threshold ? "bg-critical" : value >= threshold - 2 ? "bg-danger" : value >= 6 ? "bg-warn" : "bg-safe")} style={{ width: `${pct}%` }} />
+                  <div
+                    key={zone.key}
+                    className={cn(
+                      "flex flex-col items-center justify-center rounded-sm border py-2 transition-colors",
+                      zone.key.startsWith("col") ? "" : "",
+                      getChipBg(severity),
+                      severity === "critical" && "animate-pulse",
+                    )}
+                    style={{ gridColumn: zone.col, gridRow: zone.row }}
+                  >
+                    <span className="font-tabular-nums text-lg font-bold leading-none">{value}</span>
+                    <span className="mt-0.5 text-[9px] uppercase tracking-wider text-text-muted">{zone.label}</span>
+                    <div className="mt-1.5 h-1 w-3/4 overflow-hidden rounded-full bg-white/10">
+                      <div className={cn("h-full rounded-full transition-[width] duration-500", severity === "critical" ? "bg-critical" : severity === "danger" ? "bg-danger" : severity === "warn" ? "bg-warn" : "bg-safe")} style={{ width: `${pct}%` }} />
                     </div>
                   </div>
                 )

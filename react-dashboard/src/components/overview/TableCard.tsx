@@ -1,6 +1,6 @@
 import { memo } from "react"
 import type { TableData } from "@/lib/types"
-import { cn, getDelaySeverity, formatTimeAgo, getZoneLabel } from "@/lib/utils"
+import { cn, getDelaySeverity, formatTimeAgo, getZoneLabel, getNumberColor } from "@/lib/utils"
 import { Badge } from "@/components/ui/shadcn"
 import { Link } from "react-router-dom"
 
@@ -50,6 +50,7 @@ export const TableCard = memo(function TableCard({
   onNameClick,
 }: TableCardProps) {
   const hasColorStreak = table.color_streak && table.color_streak.streak >= colorStreakThreshold
+  const topAlertNums = table.number_alert_numbers?.slice(0, 3) ?? []
   const hasNumberAlert = table.number_alert_count > 0
   const hasAnyAlert = table.alertas.length > 0 || hasColorStreak || hasNumberAlert
 
@@ -107,6 +108,25 @@ export const TableCard = memo(function TableCard({
               {table.color_streak.color === "Red" ? "R" : "B"}{table.color_streak.streak}
             </Badge>
           )}
+          {topAlertNums.length > 0 && topAlertNums.map(([num, delay]) => {
+            const numColor = getNumberColor(num)
+            const sev = getDelaySeverity(delay, 50)
+            return (
+              <span
+                key={num}
+                className={cn(
+                  "flex h-4 w-4 items-center justify-center rounded-full text-[8px] font-bold text-white",
+                  numColor === "red" && "bg-roulette-red",
+                  numColor === "black" && "bg-roulette-black border border-white/15",
+                  numColor === "green" && "bg-roulette-green",
+                  sev === "critical" && "shadow-[0_0_3px_rgba(255,0,0,0.5)]"
+                )}
+                title={`Número ${num} — retraso ${delay}`}
+              >
+                {num}
+              </span>
+            )
+          })}
           {viewMode === "list" && (
             <span className={cn("text-text-muted text-[10px] transition-transform", isExpanded && "rotate-180")}>
               ▼
