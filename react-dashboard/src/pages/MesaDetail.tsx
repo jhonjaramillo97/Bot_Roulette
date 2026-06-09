@@ -161,7 +161,6 @@ export default function MesaDetailPage() {
                   className={cn(
                     "font-tabular-nums text-4xl font-extrabold leading-none",
                     severity === "critical" && "text-critical",
-                    severity === "danger" && "text-danger",
                     severity === "warn" && "text-warn",
                     severity === "safe" && "text-safe"
                   )}
@@ -173,7 +172,6 @@ export default function MesaDetailPage() {
                     className={cn(
                       "h-full rounded-full transition-[width] duration-500",
                       severity === "critical" && "bg-critical",
-                      severity === "danger" && "bg-danger",
                       severity === "warn" && "bg-warn",
                       severity === "safe" && "bg-safe"
                     )}
@@ -197,7 +195,6 @@ export default function MesaDetailPage() {
                     className={cn(
                       "font-tabular-nums text-2xl font-extrabold leading-none",
                       severity === "critical" && "text-critical",
-                      severity === "danger" && "text-danger",
                       severity === "warn" && "text-warn",
                       severity === "safe" && "text-safe"
                     )}
@@ -209,7 +206,6 @@ export default function MesaDetailPage() {
                       className={cn(
                         "h-full rounded-full transition-[width] duration-500",
                         severity === "critical" && "bg-critical",
-                        severity === "danger" && "bg-danger",
                         severity === "warn" && "bg-warn",
                         severity === "safe" && "bg-safe"
                       )}
@@ -295,7 +291,6 @@ function NumberGrid({ grid }: { grid: { num: number; delay: number; color: "red"
                 color === "black" && "bg-roulette-black border-white/20",
                 color === "green" && "bg-roulette-green border-green-800/40",
                 severity === "critical" && "border-critical shadow-[0_0_16px_rgba(255,0,0,0.6)] animate-pulse",
-                severity === "danger" && "border-danger shadow-[0_0_12px_rgba(255,68,68,0.6)]",
                 severity === "warn" && "border-warn/60 shadow-[0_0_8px_rgba(255,165,0,0.5)]"
               )}
             >

@@ -54,9 +54,8 @@ export function getNumberColor(num: number): "red" | "black" | "green" {
 export function getDelaySeverity(
   value: number,
   threshold: number
-): "safe" | "warn" | "danger" | "critical" {
+): "safe" | "warn" | "critical" {
   if (value >= threshold) return "critical"
-  if (value >= threshold - 1) return "danger"
   if (value >= threshold - 2) return "warn"
   return "safe"
 }

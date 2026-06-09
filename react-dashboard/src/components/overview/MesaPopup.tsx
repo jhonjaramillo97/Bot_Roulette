@@ -90,7 +90,7 @@ export function MesaPopup({ tableName, onClose, customThreshold, customColorStre
                     <span className="font-tabular-nums text-lg font-bold leading-none">{value}</span>
                     <span className="mt-0.5 text-[9px] uppercase tracking-wider text-text-muted">{zone.label}</span>
                     <div className="mt-1.5 h-1 w-3/4 overflow-hidden rounded-full bg-white/10">
-                      <div className={cn("h-full rounded-full transition-[width] duration-500", severity === "critical" ? "bg-critical" : severity === "danger" ? "bg-danger" : severity === "warn" ? "bg-warn" : "bg-safe")} style={{ width: `${pct}%` }} />
+                      <div className={cn("h-full rounded-full transition-[width] duration-500", severity === "critical" ? "bg-critical" : severity === "warn" ? "bg-warn" : "bg-safe")} style={{ width: `${pct}%` }} />
                     </div>
                   </div>
                 )
@@ -121,7 +121,6 @@ export function MesaPopup({ tableName, onClose, customThreshold, customColorStre
                           color === "black" && "bg-roulette-black border-white/20",
                           color === "green" && "bg-roulette-green border-green-800/40",
                           severity === "critical" && "border-critical shadow-[0_0_12px_rgba(255,0,0,0.5)] animate-pulse",
-                          severity === "danger" && "border-danger shadow-[0_0_8px_rgba(255,68,68,0.4)]",
                           severity === "warn" && "border-warn/60 shadow-[0_0_6px_rgba(255,165,0,0.3)]"
                         )}
                       >
