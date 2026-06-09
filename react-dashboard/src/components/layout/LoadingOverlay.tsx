@@ -27,7 +27,7 @@ export function LoadingOverlay({ hasData, isFresh, onBypass }: LoadingOverlayPro
 
   return (
     <div
-      className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-bg/98 backdrop-blur-xl transition-all duration-700 ${
+      className={`fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-bg/98 backdrop-blur-xl transition-[opacity,visibility] duration-700 ${
         visible ? "opacity-100" : "pointer-events-none opacity-0"
       }`}
     >

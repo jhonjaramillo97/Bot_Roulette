@@ -166,7 +166,7 @@ export default function MesaDetailPage() {
                 <div className="mt-3 h-1.5 w-full overflow-hidden rounded-full bg-white/10">
                   <div
                     className={cn(
-                      "h-full rounded-full transition-all duration-500",
+                      "h-full rounded-full transition-[width] duration-500",
                       severity === "critical" && "bg-critical",
                       severity === "danger" && "bg-danger",
                       severity === "warn" && "bg-warn",
@@ -202,7 +202,7 @@ export default function MesaDetailPage() {
                   <div className="mt-1.5 h-1 w-full overflow-hidden rounded-full bg-white/10">
                     <div
                       className={cn(
-                        "h-full rounded-full transition-all duration-500",
+                        "h-full rounded-full transition-[width] duration-500",
                         severity === "critical" && "bg-critical",
                         severity === "danger" && "bg-danger",
                         severity === "warn" && "bg-warn",
