@@ -1,7 +1,7 @@
 # Graph Report - Bot_Stake_Recolector  (2026-06-08)
 
 ## Corpus Check
-- 90 files · ~104,233 words
+- 90 files · ~104,272 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `1ed037c7`
+- Built from commit: `f6b35d13`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -775,7 +775,7 @@ Cohesion: 0.29
 Nodes (7): bo(), da(), gw(), La(), pa(), vw(), zt()
 
 ## Knowledge Gaps
-- **130 isolated node(s):** `queryClient`, `TableCardProps`, `DashboardState`, `DashboardContext`, `DOZEN_ZONES` (+125 more)
+- **130 isolated node(s):** `DOZEN_ZONES`, `COLUMN_ZONES`, `ROULETTE_LAYOUT`, `TABLE_NAMES`, `queryClient` (+125 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -783,14 +783,14 @@ Nodes (7): bo(), da(), gw(), La(), pa(), vw(), zt()
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `$()` connect `Community 130` to `Community 37`, `Community 71`, `Community 137`, `Community 138`, `Community 106`, `Community 140`, `Community 141`, `Community 46`, `Community 144`, `Community 146`, `Community 148`, `Community 156`, `Community 126`?**
-  _High betweenness centrality (0.345) - this node is a cross-community bridge._
+  _High betweenness centrality (0.348) - this node is a cross-community bridge._
 - **Why does `_()` connect `Community 17` to `Community 160`, `Community 129`, `Community 135`, `Community 136`, `Community 142`, `Community 18`, `Community 149`, `Community 23`, `Community 154`, `Community 126`, `Community 127`?**
-  _High betweenness centrality (0.153) - this node is a cross-community bridge._
+  _High betweenness centrality (0.154) - this node is a cross-community bridge._
 - **Why does `_()` connect `Community 19` to `Community 32`, `Community 33`, `Community 128`, `Community 131`, `Community 132`, `Community 37`, `Community 38`, `Community 133`, `Community 36`, `Community 105`, `Community 106`, `Community 76`, `Community 45`, `Community 44`, `Community 47`, `Community 51`, `Community 125`?**
   _High betweenness centrality (0.140) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `$()` (e.g. with `ak()` and `tk()`) actually correct?**
   _`$()` has 2 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `queryClient`, `TableCardProps`, `DashboardState` to the rest of the system?**
+- **What connects `DOZEN_ZONES`, `COLUMN_ZONES`, `ROULETTE_LAYOUT` to the rest of the system?**
   _289 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.09716599190283401 - nodes in this community are weakly interconnected._

@@ -387,11 +387,11 @@ function SignalModal({ signal, onClose }: {
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={onClose}>
-      <div className="mx-4 max-h-[70vh] w-full max-w-[500px] overflow-auto rounded-lg border border-border bg-bg-card" onClick={(e) => e.stopPropagation()}>
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={onClose} onKeyDown={(e) => e.key === "Escape" && onClose()}>
+      <div role="dialog" aria-modal="true" aria-label={`Detalle de señal — ${fmt(signal.tableName)}`} className="mx-4 max-h-[70vh] w-full max-w-[500px] overflow-auto rounded-lg border border-border bg-bg-card" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-center justify-between border-b border-border px-4 py-3">
           <h3 className="text-sm font-semibold">{fmt(signal.tableName)}</h3>
-          <button onClick={onClose} className="text-lg text-text-muted hover:text-danger">&times;</button>
+          <button onClick={onClose} aria-label="Cerrar modal" className="text-lg text-text-muted hover:text-danger">&times;</button>
         </div>
         <div className="border-b border-border/50 px-4 py-2 text-xs text-text-secondary">{subtitle}</div>
         <div className="max-h-[50vh] overflow-auto">

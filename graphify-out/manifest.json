@@ -300,8 +300,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/components/layout/AppHeader.tsx": {
-    "mtime": 1780970833.6795557,
-    "ast_hash": "2a604bc320d4c177000701eb501d2987",
+    "mtime": 1780971458.7252305,
+    "ast_hash": "cc8731d629bff45cac39fdb0c7fe8ff1",
     "semantic_hash": ""
   },
   "react-dashboard/src/components/layout/LoadingOverlay.tsx": {
@@ -370,8 +370,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/MesaDetail.tsx": {
-    "mtime": 1780970175.4587684,
-    "ast_hash": "c64507bcda8795d0e6136b4ed305fa8f",
+    "mtime": 1780971504.0581837,
+    "ast_hash": "17043fd650affdc45adfeffe4d15e56f",
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/Overview.tsx": {
