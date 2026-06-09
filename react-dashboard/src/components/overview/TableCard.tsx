@@ -33,6 +33,7 @@ interface TableCardProps {
   table: TableData
   threshold: number
   colorStreakThreshold: number
+  numberDelayThreshold?: number
   viewMode: "list" | "grid"
   isExpanded: boolean
   onToggle: () => void
@@ -43,14 +44,15 @@ export const TableCard = memo(function TableCard({
   table,
   threshold,
   colorStreakThreshold,
+  numberDelayThreshold = 70,
   viewMode,
   isExpanded,
   onToggle,
   onNameClick,
 }: TableCardProps) {
   const hasColorStreak = table.color_streak && table.color_streak.streak >= colorStreakThreshold
-  const topAlertNums = table.number_alert_numbers?.slice(0, 3) ?? []
-  const hasNumberAlert = table.number_alert_count > 0
+  const topAlertNums = (table.number_alert_numbers ?? []).filter(([, delay]) => delay >= numberDelayThreshold).slice(0, 3)
+  const hasNumberAlert = (table.number_alert_numbers ?? []).some(([, delay]) => delay >= numberDelayThreshold)
   const hasAnyAlert = table.alertas.length > 0 || hasColorStreak || hasNumberAlert
 
   const maxSeverity = hasAnyAlert

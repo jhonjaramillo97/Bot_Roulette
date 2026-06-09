@@ -20,8 +20,8 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/app.py": {
-    "mtime": 1780968386.6269028,
-    "ast_hash": "c039d2a7a704c2513c8c5193976f802f",
+    "mtime": 1781022429.5008163,
+    "ast_hash": "896b12f1a5d460c9b94b8025b83688e3",
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/analisis.js": {
@@ -280,7 +280,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/rolldown-runtime-QTnfLwEv.js": {
-    "mtime": 1781022260.611277,
+    "mtime": 1781022488.3380375,
     "ast_hash": "0b9fa1f21df87441aa366e428d1ebb49",
     "semantic_hash": ""
   },
@@ -365,13 +365,13 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/AnalisisGlobal.tsx": {
-    "mtime": 1780972648.0012338,
-    "ast_hash": "11075bf71a7b85fc583fd6e02e4a2ad0",
+    "mtime": 1781022475.1852252,
+    "ast_hash": "75bcd59d65213722634f6df69aaad57b",
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/MesaDetail.tsx": {
-    "mtime": 1781021241.8032947,
-    "ast_hash": "ff2a87365cfb2243a50156c25f706258",
+    "mtime": 1781022441.6085784,
+    "ast_hash": "d27de1a4595f42174574d518dbbdb9e0",
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/Overview.tsx": {
@@ -460,7 +460,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/query-BPe0xBFE.js": {
-    "mtime": 1781022260.609279,
+    "mtime": 1781022488.3350396,
     "ast_hash": "04faa70bf0cdaeaa34d0fc73933f2336",
     "semantic_hash": ""
   },
@@ -547,6 +547,16 @@
   "bot_ruleta/dashboard/static/assets/index-DbfqQsEG.js": {
     "mtime": 1781022260.6082768,
     "ast_hash": "83626c9a6f391d6716718567434d6500",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/dashboard/static/assets/index-N4yrNIX1.js": {
+    "mtime": 1781022488.3340387,
+    "ast_hash": "d08b73f6d32818e647afdcf894059769",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js": {
+    "mtime": 1781022488.336038,
+    "ast_hash": "e8baacc3f66b9f1f0110fe204745ffcf",
     "semantic_hash": ""
   }
 }

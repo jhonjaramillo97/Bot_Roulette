@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react"
 import { Link, useLocation } from "react-router-dom"
-import { Activity, BarChart3, LayoutGrid, List, Filter, Eye, ChevronDown } from "lucide-react"
+import { Activity, BarChart3, LayoutGrid, List, Filter, Eye, ChevronDown, SlidersHorizontal } from "lucide-react"
 import { Button } from "@/components/ui/shadcn"
 import { useOverview } from "@/hooks/useApi"
 import { useDashboard } from "@/lib/DashboardContext"
@@ -81,6 +81,156 @@ function TableFilterDropdown() {
   )
 }
 
+function ThresholdDropdown() {
+  const { data } = useOverview()
+  const { customThresholds, setCustomThresholds } = useDashboard()
+  const [open, setOpen] = useState(false)
+  const ref = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (ref.current && !ref.current.contains(e.target as Node)) setOpen(false)
+    }
+    if (open) document.addEventListener("mousedown", handler)
+    return () => document.removeEventListener("mousedown", handler)
+  }, [open])
+
+  const apiThreshold = data?.threshold ?? 15
+  const apiColorStreak = data?.color_streak_threshold ?? 8
+  const apiNumberDelay = data?.number_delay_threshold ?? 70
+
+  const current = {
+    delay: customThresholds?.delay ?? apiThreshold,
+    colorStreak: customThresholds?.colorStreak ?? apiColorStreak,
+    numberDelay: customThresholds?.numberDelay ?? apiNumberDelay,
+  }
+
+  const hasCustom = customThresholds !== null
+
+  const update = (key: keyof typeof current, value: number) => {
+    setCustomThresholds({
+      delay: key === "delay" ? value : current.delay,
+      colorStreak: key === "colorStreak" ? value : current.colorStreak,
+      numberDelay: key === "numberDelay" ? value : current.numberDelay,
+    })
+  }
+
+  const reset = () => setCustomThresholds(null)
+
+  const sliderClass = (hasCustom: boolean) => cn(
+    "w-full cursor-pointer appearance-none rounded-full h-1.5",
+    "bg-white/10",
+    "[&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:cursor-pointer",
+    hasCustom
+      ? "[&::-webkit-slider-thumb]:bg-accent [&::-webkit-slider-thumb]:shadow-[0_0_8px_var(--color-accent)]"
+      : "[&::-webkit-slider-thumb]:bg-text-muted"
+  )
+
+  return (
+    <div ref={ref} className="relative">
+      <Button
+        variant={hasCustom ? "default" : "ghost"}
+        size="sm"
+        onClick={() => setOpen(!open)}
+        className="gap-1.5"
+        aria-label="Ajustar umbrales de alerta"
+        aria-expanded={open}
+      >
+        <SlidersHorizontal className="h-3.5 w-3.5" aria-hidden="true" />
+        Ajustes
+      </Button>
+
+      {open && (
+        <>
+          <div className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm" onClick={() => setOpen(false)} />
+          <div className="absolute right-0 top-full mt-1 w-64 rounded-sm border border-border bg-bg-card shadow-xl z-50">
+            <div className="flex items-center justify-between border-b border-border px-3 py-2">
+              <span className="text-[10px] uppercase tracking-wider text-text-muted">Umbrales</span>
+              <button
+                onClick={reset}
+                className={cn("text-[10px] transition-colors", hasCustom ? "text-accent hover:text-accent-hover" : "text-text-muted")}
+              >
+                Restablecer
+              </button>
+            </div>
+
+            <div className="px-3 py-2 space-y-4">
+              {/* Docenas / Columnas */}
+              <div>
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-[10px] text-text-secondary">Docenas / Columnas</span>
+                  <span className="font-tabular-nums text-xs font-semibold text-text">{current.delay}</span>
+                </div>
+                <input
+                  type="range"
+                  min={5}
+                  max={30}
+                  step={1}
+                  value={current.delay}
+                  onChange={(e) => update("delay", Number(e.target.value))}
+                  className={sliderClass(current.delay !== apiThreshold)}
+                />
+                <div className="flex items-center justify-between mt-0.5 text-[8px] text-text-muted">
+                  <span>5</span>
+                  <span>30</span>
+                </div>
+              </div>
+
+              {/* Racha Rojo / Negro */}
+              <div>
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-[10px] text-text-secondary">Racha Rojo / Negro</span>
+                  <span className="font-tabular-nums text-xs font-semibold text-text">{current.colorStreak}</span>
+                </div>
+                <input
+                  type="range"
+                  min={3}
+                  max={20}
+                  step={1}
+                  value={current.colorStreak}
+                  onChange={(e) => update("colorStreak", Number(e.target.value))}
+                  className={sliderClass(current.colorStreak !== apiColorStreak)}
+                />
+                <div className="flex items-center justify-between mt-0.5 text-[8px] text-text-muted">
+                  <span>3</span>
+                  <span>20</span>
+                </div>
+              </div>
+
+              {/* Números */}
+              <div>
+                <div className="flex items-center justify-between mb-1">
+                  <span className="text-[10px] text-text-secondary">Números</span>
+                  <span className="font-tabular-nums text-xs font-semibold text-text">{current.numberDelay}</span>
+                </div>
+                <input
+                  type="range"
+                  min={50}
+                  max={200}
+                  step={5}
+                  value={current.numberDelay}
+                  onChange={(e) => update("numberDelay", Number(e.target.value))}
+                  className={sliderClass(current.numberDelay !== apiNumberDelay)}
+                />
+                <div className="flex items-center justify-between mt-0.5 text-[8px] text-text-muted">
+                  <span>50</span>
+                  <span>200</span>
+                </div>
+              </div>
+
+              {!hasCustom && (
+                <div className="text-center text-[9px] text-text-muted pt-1">
+                  Usando valores por defecto del bot
+                </div>
+              )}
+            </div>
+          </div>
+        </>
+      )}
+    </div>
+  )
+}
+
 export function AppHeader() {
   const location = useLocation()
   const { data } = useOverview()
@@ -125,6 +275,7 @@ export function AppHeader() {
         {isOverview && (
           <>
             <div className="mx-1 h-5 w-px bg-border" aria-hidden="true" />
+            <ThresholdDropdown />
             <TableFilterDropdown />
             <Button
               variant={filterSignals ? "danger" : "ghost"}

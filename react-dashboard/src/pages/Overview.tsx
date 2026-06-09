@@ -9,13 +9,18 @@ import { cn } from "@/lib/utils"
 
 export default function OverviewPage() {
   const { data, isLoading } = useOverview()
-  const { viewMode, filterSignals, hiddenTables } = useDashboard()
+  const { viewMode, filterSignals, hiddenTables, customThresholds } = useDashboard()
   const [expandedCards, setExpandedCards] = useState<Set<string>>(new Set())
   const [popupTable, setPopupTable] = useState<string | null>(null)
 
-  const threshold = data?.threshold ?? 12
-  const colorStreakThreshold = data?.color_streak_threshold ?? 5
+  const apiThreshold = data?.threshold ?? 15
+  const apiColorStreak = data?.color_streak_threshold ?? 8
+  const apiNumberDelay = data?.number_delay_threshold ?? 70
   const tables = data?.tables ?? []
+
+  const threshold = customThresholds?.delay ?? apiThreshold
+  const colorStreakThreshold = customThresholds?.colorStreak ?? apiColorStreak
+  const numberDelayThreshold = customThresholds?.numberDelay ?? apiNumberDelay
 
   const totalAlerts = useMemo(() => {
     if (!data) return 0
@@ -75,6 +80,7 @@ export default function OverviewPage() {
               table={table}
               threshold={threshold}
               colorStreakThreshold={colorStreakThreshold}
+              numberDelayThreshold={numberDelayThreshold}
               viewMode={viewMode}
               isExpanded={expandedCards.has(table.table_name)}
               onToggle={() => toggleExpanded(table.table_name)}
