@@ -34,7 +34,7 @@ function TableFilterDropdown() {
         aria-expanded={open}
       >
         <Eye className="h-3.5 w-3.5" aria-hidden="true" />
-        Mesas
+        <span className="hidden sm:inline">Mesas</span>
         <ChevronDown className={cn("h-3 w-3 ml-0.5 transition-transform", open && "rotate-180")} aria-hidden="true" />
       </Button>
 
@@ -137,7 +137,7 @@ function ThresholdDropdown() {
         aria-expanded={open}
       >
         <SlidersHorizontal className="h-3.5 w-3.5" aria-hidden="true" />
-        Ajustes
+        <span className="hidden sm:inline">Ajustes</span>
       </Button>
 
       {open && (
@@ -243,10 +243,10 @@ export function AppHeader() {
   ]
 
   return (
-    <header className="sticky top-0 z-50 flex items-center justify-between border-b border-border bg-bg/80 px-4 py-2 backdrop-blur-md">
-      <div className="flex items-center gap-3">
-        <img src="/logo.png" alt="Roulette Sniper" className="h-7" />
-        <div className="flex items-center gap-1.5">
+    <header className="sticky top-0 z-50 flex items-center justify-between border-b border-border bg-bg/80 px-2 sm:px-4 py-2 backdrop-blur-md">
+      <div className="flex items-center gap-2 sm:gap-3">
+        <img src="/logo.png" alt="Roulette Sniper" className="h-6 sm:h-7" />
+        <div className="hidden sm:flex items-center gap-1.5">
           <Activity className="h-2.5 w-2.5 text-safe" aria-hidden="true" />
           <span className="text-xs text-text-secondary">
             {data?.tables ? `${data.tables.length} mesas` : "Conectando…"}
@@ -263,11 +263,11 @@ export function AppHeader() {
               <Button
                 variant={isActive ? "default" : "ghost"}
                 size="sm"
-                className="gap-1.5"
+                className="gap-1 sm:gap-1.5 px-2 sm:px-3"
                 onClick={playClickSound}
               >
                 <Icon className="h-3.5 w-3.5" aria-hidden="true" />
-                {link.label}
+                <span className="hidden sm:inline">{link.label}</span>
               </Button>
             </Link>
           )
@@ -275,29 +275,29 @@ export function AppHeader() {
 
         {isOverview && (
           <>
-            <div className="mx-1 h-5 w-px bg-border" aria-hidden="true" />
+            <div className="mx-1 h-5 w-px bg-border hidden sm:block" aria-hidden="true" />
             <ThresholdDropdown />
             <TableFilterDropdown />
             <Button
               variant={filterSignals ? "danger" : "ghost"}
               size="sm"
               onClick={() => { playClickSound(); setFilterSignals(!filterSignals) }}
-              className="gap-1.5"
+              className="gap-1 sm:gap-1.5 px-2 sm:px-3"
               aria-label={filterSignals ? "Mostrar todas las mesas" : "Filtrar solo mesas con señales"}
               aria-pressed={filterSignals}
             >
               <Filter className="h-3.5 w-3.5" aria-hidden="true" />
-              {filterSignals ? "Todas" : "Señales"}
+              <span className="hidden sm:inline">{filterSignals ? "Todas" : "Señales"}</span>
             </Button>
             <Button
               variant="ghost"
               size="sm"
               onClick={() => { playClickSound(); setViewMode(viewMode === "list" ? "grid" : "list") }}
-              className="gap-1.5"
+              className="gap-1 sm:gap-1.5 px-2 sm:px-3"
               aria-label={viewMode === "list" ? "Cambiar a vista de cuadrícula" : "Cambiar a vista de lista"}
             >
               {viewMode === "list" ? <LayoutGrid className="h-3.5 w-3.5" aria-hidden="true" /> : <List className="h-3.5 w-3.5" aria-hidden="true" />}
-              {viewMode === "list" ? "Grid" : "Lista"}
+              <span className="hidden sm:inline">{viewMode === "list" ? "Grid" : "Lista"}</span>
             </Button>
           </>
         )}

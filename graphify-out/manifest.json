@@ -280,7 +280,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/rolldown-runtime-QTnfLwEv.js": {
-    "mtime": 1781033662.6315167,
+    "mtime": 1781034232.535383,
     "ast_hash": "0b9fa1f21df87441aa366e428d1ebb49",
     "semantic_hash": ""
   },
@@ -295,13 +295,13 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/App.tsx": {
-    "mtime": 1781033106.957421,
-    "ast_hash": "5d76492e354a05ddafa5ea960d6f2d3a",
+    "mtime": 1781034112.9134512,
+    "ast_hash": "11f12319fb8614d523514a504a4d34c7",
     "semantic_hash": ""
   },
   "react-dashboard/src/components/layout/AppHeader.tsx": {
-    "mtime": 1781028536.1316922,
-    "ast_hash": "b0f5b02d46947557753a017d03067332",
+    "mtime": 1781034214.0157464,
+    "ast_hash": "062be27097c024674cd62bb4b557d715",
     "semantic_hash": ""
   },
   "react-dashboard/src/components/layout/LoadingOverlay.tsx": {
@@ -310,8 +310,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/components/overview/TableCard.tsx": {
-    "mtime": 1781029477.160921,
-    "ast_hash": "70ea26d5e5fa44b38de57becc7379104",
+    "mtime": 1781034208.2680724,
+    "ast_hash": "2831633d0d23d0edeb42804e2f38351f",
     "semantic_hash": ""
   },
   "react-dashboard/src/components/overview/index.ts": {
@@ -355,8 +355,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/lib/utils.ts": {
-    "mtime": 1781032041.0111308,
-    "ast_hash": "56d6d98cbcb8044442c871a868f1d175",
+    "mtime": 1781034124.6551545,
+    "ast_hash": "499bdab25db80f7dda4f022c1b370fea",
     "semantic_hash": ""
   },
   "react-dashboard/src/main.tsx": {
@@ -460,7 +460,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/query-BPe0xBFE.js": {
-    "mtime": 1781033662.6294994,
+    "mtime": 1781034232.532384,
     "ast_hash": "04faa70bf0cdaeaa34d0fc73933f2336",
     "semantic_hash": ""
   },
@@ -555,7 +555,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js": {
-    "mtime": 1781033662.6315167,
+    "mtime": 1781034232.5333836,
     "ast_hash": "e8baacc3f66b9f1f0110fe204745ffcf",
     "semantic_hash": ""
   },
@@ -585,8 +585,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/Login.tsx": {
-    "mtime": 1781033645.9176629,
-    "ast_hash": "ecbffd42fa289ef0a63b396dbd13d041",
+    "mtime": 1781034136.0995991,
+    "ast_hash": "a3775e5dc0927e36c5d4727cabdde71a",
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/index-DK76No1o.js": {
@@ -597,6 +597,11 @@
   "react-dashboard/src/pages/LoginBackground.tsx": {
     "mtime": 1781033627.629953,
     "ast_hash": "579ce88e89775fdd685f7eadd3d1ddf4",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/dashboard/static/assets/index-DAFE4YTh.js": {
+    "mtime": 1781034232.532384,
+    "ast_hash": "c22d98389cc3ebe17ed4b679b3e31661",
     "semantic_hash": ""
   }
 }
