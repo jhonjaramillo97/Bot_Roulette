@@ -20,9 +20,9 @@ export function LoadingOverlay({ hasData, isFresh, onBypass }: LoadingOverlayPro
 
   let statusText = "Esperando datos frescos de la ruleta (El bot está escaneando las mesas)"
   if (isFresh) {
-    statusText = "Datos disponibles — Entrando..."
+    statusText = "Datos disponibles — Entrando…"
   } else if (hasData) {
-    statusText = "Datos locales encontrados — Cargando..."
+    statusText = "Datos locales encontrados — Cargando…"
   }
 
   return (
@@ -35,7 +35,7 @@ export function LoadingOverlay({ hasData, isFresh, onBypass }: LoadingOverlayPro
         <div className="absolute inset-0 animate-spin rounded-full border-[3px] border-transparent border-t-accent border-r-safe" />
         <div className="absolute left-1/2 top-1/2 h-2/5 w-2/5 -translate-x-1/2 -translate-y-1/2 animate-pulse rounded-full bg-accent shadow-[0_0_20px_var(--color-accent)]" />
       </div>
-      <h2 className="mt-8 text-lg font-semibold tracking-wide">Conectando al Bot...</h2>
+      <h2 className="mt-8 text-lg font-semibold tracking-wide">Conectando al Bot…</h2>
       <p className="mt-2 max-w-xs text-center text-sm text-text-secondary">
         {statusText}
       </p>

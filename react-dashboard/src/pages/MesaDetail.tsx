@@ -345,7 +345,7 @@ function BacktestTabs({ backtest, backtestColor, backtestNumber, numberGrid, num
               </thead>
               <tbody>
                 {backtest.isLoading ? (
-                  <tr><td colSpan={4} className="px-3 py-6 text-center text-text-muted italic">Cargando historial...</td></tr>
+                  <tr><td colSpan={4} className="px-3 py-6 text-center text-text-muted italic">Cargando historial…</td></tr>
                 ) : (backtest.data ?? []).length === 0 ? (
                   <tr><td colSpan={4} className="px-3 py-6 text-center text-text-muted italic">Sin señales detectadas</td></tr>
                 ) : (backtest.data ?? []).map((s: any, i: number) => (
@@ -375,7 +375,7 @@ function BacktestTabs({ backtest, backtestColor, backtestNumber, numberGrid, num
               </thead>
               <tbody>
                 {backtestColor.isLoading ? (
-                  <tr><td colSpan={4} className="px-3 py-6 text-center text-text-muted italic">Cargando historial...</td></tr>
+                  <tr><td colSpan={4} className="px-3 py-6 text-center text-text-muted italic">Cargando historial…</td></tr>
                 ) : (backtestColor.data ?? []).length === 0 ? (
                   <tr><td colSpan={4} className="px-3 py-6 text-center text-text-muted italic">Sin señales detectadas</td></tr>
                 ) : (backtestColor.data ?? []).map((s: any, i: number) => (
@@ -411,7 +411,7 @@ function BacktestTabs({ backtest, backtestColor, backtestNumber, numberGrid, num
                 </thead>
                 <tbody>
                   {backtestNumber.isLoading ? (
-                    <tr><td colSpan={4} className="px-3 py-6 text-center text-text-muted italic">Cargando historial...</td></tr>
+                    <tr><td colSpan={4} className="px-3 py-6 text-center text-text-muted italic">Cargando historial…</td></tr>
                   ) : (backtestNumber.data?.history ?? []).length === 0 ? (
                     <tr><td colSpan={4} className="px-3 py-6 text-center text-text-muted italic">Sin señales detectadas</td></tr>
                   ) : (backtestNumber.data?.history ?? []).map((s: any, i: number) => (

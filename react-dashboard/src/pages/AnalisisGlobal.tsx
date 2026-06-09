@@ -396,7 +396,7 @@ function SignalModal({ signal, onClose }: {
         <div className="border-b border-border/50 px-4 py-2 text-xs text-text-secondary">{subtitle}</div>
         <div className="max-h-[50vh] overflow-auto">
           {isLoading ? (
-            <div className="py-8 text-center text-text-secondary">Cargando...</div>
+            <div className="py-8 text-center text-text-secondary">Cargando…</div>
           ) : data?.plays && data.plays.length > 0 ? (
             <table className="w-full text-sm">
               <thead className="sticky top-0 bg-bg-card">
