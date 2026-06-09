@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils"
 
 export default function OverviewPage() {
   const { data, isLoading } = useOverview()
-  const { viewMode, filterSignals } = useDashboard()
+  const { viewMode, filterSignals, hiddenTables } = useDashboard()
   const [expandedCards, setExpandedCards] = useState<Set<string>>(new Set())
   const [popupTable, setPopupTable] = useState<string | null>(null)
 
@@ -33,11 +33,14 @@ export default function OverviewPage() {
   const hasData = tables.length > 0
 
   const filteredTables = useMemo(() => {
-    if (!filterSignals) return tables
-    return tables.filter(
-      (t) => t.alertas.length > 0 || (t.color_streak && t.color_streak.streak >= colorStreakThreshold) || t.number_alert_count > 0
-    )
-  }, [tables, filterSignals, colorStreakThreshold])
+    let result = tables.filter((t) => !hiddenTables.has(t.table_name))
+    if (filterSignals) {
+      result = result.filter(
+        (t) => t.alertas.length > 0 || (t.color_streak && t.color_streak.streak >= colorStreakThreshold) || t.number_alert_count > 0
+      )
+    }
+    return result
+  }, [tables, filterSignals, colorStreakThreshold, hiddenTables])
 
   const toggleExpanded = (tableName: string) => {
     setExpandedCards((prev) => {
