@@ -148,29 +148,23 @@ export default function AnalisisGlobalPage() {
       </div>
 
       {/* Stats Summary */}
-      <div className="mb-4 grid grid-cols-3 gap-3">
-        <Card className="border-l-2 border-l-accent">
-          <CardContent className="p-4 text-center">
-            <div className="text-[10px] uppercase tracking-wider text-text-muted">Total Señales</div>
-            <div className="font-tabular-nums text-2xl font-bold text-accent">{stats.total}</div>
-          </CardContent>
-        </Card>
-        <Card className="border-l-2 border-l-warn">
-          <CardContent className="p-4 text-center">
-            <div className="text-[10px] uppercase tracking-wider text-text-muted">Pico Promedio</div>
-            <div className="font-tabular-nums text-2xl font-bold text-warn">{stats.avg}</div>
-          </CardContent>
-        </Card>
-        <Card className="border-l-2 border-l-danger">
-          <CardContent className="p-4 text-center">
-            <div className="text-[10px] uppercase tracking-wider text-text-muted">Peor Escenario</div>
-            <div className="font-tabular-nums text-2xl font-bold text-danger">{stats.max}</div>
-          </CardContent>
-        </Card>
+      <div className="mb-4 grid grid-cols-3 divide-x divide-border border border-border">
+        <div className="flex flex-col items-center justify-center py-3">
+          <span className="text-[10px] uppercase tracking-wider text-text-muted">{stats.total}</span>
+          <span className="text-[10px] text-text-muted">Señales</span>
+        </div>
+        <div className="flex flex-col items-center justify-center py-3">
+          <span className="text-[10px] uppercase tracking-wider text-text-muted">{stats.avg}</span>
+          <span className="text-[10px] text-text-muted">Pico Prom.</span>
+        </div>
+        <div className="flex flex-col items-center justify-center py-3">
+          <span className="text-[10px] uppercase tracking-wider text-text-muted">{stats.max}</span>
+          <span className="text-[10px] text-text-muted">Peor Caso</span>
+        </div>
       </div>
 
       {/* Chart - shows ONLY the current tab */}
-      <Card className="mb-4">
+      <Card className="mb-4 rounded-none">
         <CardContent className="p-4">
           <h3 className="mb-3 text-sm font-semibold text-text-muted">{chartTitle}</h3>
           <div className="h-[300px]">
@@ -198,7 +192,7 @@ export default function AnalisisGlobalPage() {
       </Card>
 
       {/* Top Signals Table */}
-      <Card className="mb-4">
+      <Card className="mb-4 rounded-none">
         <CardContent className="p-0">
           <div className="border-b border-border px-4 py-3">
             <h3 className="text-sm font-semibold">{signalsTitle}</h3>
@@ -314,7 +308,7 @@ export default function AnalisisGlobalPage() {
       </Card>
 
       {/* Breakdown by Table */}
-      <Card>
+      <Card className="rounded-none">
         <CardContent className="p-0">
           <div className="border-b border-border px-4 py-3">
             <h3 className="text-sm font-semibold">Desglose por Mesa</h3>
