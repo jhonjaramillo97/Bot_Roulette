@@ -92,7 +92,7 @@ export default function OverviewPage() {
         )}
       </div>
 
-      {popupTable && <MesaPopup tableName={popupTable} onClose={() => setPopupTable(null)} />}
+      {popupTable && <MesaPopup tableName={popupTable} onClose={() => setPopupTable(null)} customThreshold={customThresholds?.delay} customColorStreak={customThresholds?.colorStreak} customNumberDelay={customThresholds?.numberDelay} />}
     </div>
   )
 }

@@ -53,10 +53,11 @@ export const TableCard = memo(function TableCard({
   const hasColorStreak = table.color_streak && table.color_streak.streak >= colorStreakThreshold
   const topAlertNums = (table.number_alert_numbers ?? []).filter(([, delay]) => delay >= numberDelayThreshold).slice(0, 3)
   const hasNumberAlert = (table.number_alert_numbers ?? []).some(([, delay]) => delay >= numberDelayThreshold)
-  const hasAnyAlert = table.alertas.length > 0 || hasColorStreak || hasNumberAlert
+  const hasDozenAlert = table.alertas.some((a) => (table.delays[a] ?? 0) >= threshold)
+  const hasAnyAlert = hasDozenAlert || hasColorStreak || hasNumberAlert
 
   const maxSeverity = hasAnyAlert
-    ? table.alertas.length > 0
+    ? hasDozenAlert
       ? "danger"
       : hasColorStreak
         ? "warn"

@@ -15,6 +15,9 @@ const ZONES = [
 interface Props {
   tableName: string
   onClose: () => void
+  customThreshold?: number
+  customColorStreak?: number
+  customNumberDelay?: number
 }
 
 function getChipBg(severity: string): string {
@@ -26,10 +29,12 @@ function getChipBg(severity: string): string {
   }
 }
 
-export function MesaPopup({ tableName, onClose }: Props) {
+export function MesaPopup({ tableName, onClose, customThreshold, customColorStreak, customNumberDelay }: Props) {
   const { data } = useMesaData(tableName)
 
-  const threshold = data?.threshold ?? 12
+  const threshold = customThreshold ?? data?.threshold ?? 15
+  const colorStreakThreshold = customColorStreak ?? data?.color_streak_threshold ?? 8
+  const numberDelayThreshold = customNumberDelay ?? data?.number_delay_threshold ?? 70
 
   const topNumbers = useMemo(() => {
     if (!data?.number_delays) return null
@@ -44,7 +49,9 @@ export function MesaPopup({ tableName, onClose }: Props) {
     return entries.slice(0, maxShow)
   }, [data])
 
-  const hasAnyAlert = (data?.alertas?.length ?? 0) > 0 || (data?.color_streak && data.color_streak.streak >= 5)
+  const hasDozenAlert = (data?.alertas ?? []).some((a) => (data?.delays[a] ?? 0) >= threshold)
+  const hasColorAlert = data?.color_streak && data.color_streak.streak >= colorStreakThreshold
+  const hasAnyAlert = hasDozenAlert || hasColorAlert || (topNumbers && topNumbers.length > 0)
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={onClose} onKeyDown={(e) => e.key === "Escape" && onClose()}>
@@ -91,7 +98,7 @@ export function MesaPopup({ tableName, onClose }: Props) {
             </div>
 
             {/* Color streak */}
-            {data.color_streak && data.color_streak.streak >= 5 && (
+            {data.color_streak && data.color_streak.streak >= colorStreakThreshold && (
               <div className={cn("mb-3 flex items-center justify-center gap-2 rounded-sm border px-3 py-2 text-xs font-medium", data.color_streak.color === "Red" ? "border-danger/40 bg-danger-dim text-danger" : "border-white/20 bg-white/5 text-text-secondary")}>
                 Racha {data.color_streak.color === "Red" ? "Rojos" : "Negros"}: {data.color_streak.streak} consecutivos
               </div>
@@ -104,7 +111,7 @@ export function MesaPopup({ tableName, onClose }: Props) {
                 <div className="flex flex-wrap gap-1.5 justify-center">
                   {topNumbers.map(({ num, delay }) => {
                     const color = getNumberColor(num)
-                    const severity = getDelaySeverity(delay, data.number_delay_threshold)
+                    const severity = getDelaySeverity(delay, numberDelayThreshold)
                     return (
                       <div
                         key={num}
