@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { LoginBackground } from "./LoginBackground"
+import { playClickSound } from "@/lib/utils"
 
 export function LoginPage({ onLogin }: { onLogin: (token: string) => void }) {
   const [token, setToken] = useState("")
@@ -9,6 +10,7 @@ export function LoginPage({ onLogin }: { onLogin: (token: string) => void }) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!token.trim()) return
+    playClickSound()
     setLoading(true)
     setError(false)
 
@@ -29,7 +31,7 @@ export function LoginPage({ onLogin }: { onLogin: (token: string) => void }) {
   const isValid = token.trim().length > 0
 
   return (
-    <div className="relative flex min-h-screen flex-col items-center justify-center bg-[#1a1a1e]">
+    <div className="relative flex min-h-screen flex-col items-center justify-center bg-bg">
       <LoginBackground />
       <div className="relative z-10 w-full max-w-[320px] px-4">
         <form onSubmit={handleSubmit} className="flex flex-col gap-3">

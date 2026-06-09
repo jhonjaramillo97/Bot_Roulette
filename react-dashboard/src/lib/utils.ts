@@ -93,6 +93,26 @@ export function playAlertSound(): void {
   }
 }
 
+export function playClickSound(): void {
+  try {
+    const ctx = new AudioContext()
+    const t = ctx.currentTime
+    const osc = ctx.createOscillator()
+    const gain = ctx.createGain()
+    osc.type = "sine"
+    osc.frequency.setValueAtTime(600, t)
+    gain.gain.setValueAtTime(0, t)
+    gain.gain.linearRampToValueAtTime(0.02, t + 0.005)
+    gain.gain.exponentialRampToValueAtTime(0.001, t + 0.035)
+    osc.connect(gain)
+    gain.connect(ctx.destination)
+    osc.start(t)
+    osc.stop(t + 0.035)
+  } catch {
+    // Audio not available
+  }
+}
+
 const ZONE_LABELS: Record<string, string> = {
   docena_1: "1ª Doc",
   docena_2: "2ª Doc",

@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #0f0f14;
-  --color-bg-card: #16161d;
-  --color-bg-card-hover: #1c1c25;
+  --color-bg: #1a1a1e;
+  --color-bg-card: #111115;
+  --color-bg-card-hover: #15151a;
   --color-border: rgba(255, 255, 255, 0.06);
   --color-border-hover: rgba(255, 255, 255, 0.12);
   --color-text: #e8e8ed;

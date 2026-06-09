@@ -1,6 +1,6 @@
 import { memo } from "react"
 import type { TableData } from "@/lib/types"
-import { cn, getDelaySeverity, formatTimeAgo, getZoneLabel, getNumberColor } from "@/lib/utils"
+import { cn, getDelaySeverity, formatTimeAgo, getZoneLabel, getNumberColor, playClickSound } from "@/lib/utils"
 import { Badge } from "@/components/ui/shadcn"
 
 function getSeverityClasses(severity: string) {
@@ -76,7 +76,7 @@ export const TableCard = memo(function TableCard({
 
   return (
     <div
-      onClick={() => onNameClick?.(table.table_name)}
+      onClick={() => { playClickSound(); onNameClick?.(table.table_name) }}
       className={cn(
         "group cursor-pointer rounded-sm border border-border bg-bg-card shadow-sm transition-colors hover:border-border-hover hover:bg-bg-card-hover",
         viewMode === "grid" && "hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/20",

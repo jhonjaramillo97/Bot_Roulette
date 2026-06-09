@@ -4,7 +4,7 @@ import { Activity, BarChart3, LayoutGrid, List, Filter, Eye, ChevronDown, Slider
 import { Button } from "@/components/ui/shadcn"
 import { useOverview } from "@/hooks/useApi"
 import { useDashboard } from "@/lib/DashboardContext"
-import { cn } from "@/lib/utils"
+import { cn, playClickSound } from "@/lib/utils"
 
 function TableFilterDropdown() {
   const { data } = useOverview()
@@ -28,7 +28,7 @@ function TableFilterDropdown() {
       <Button
         variant="ghost"
         size="sm"
-        onClick={() => setOpen(!open)}
+        onClick={() => { playClickSound(); setOpen(!open) }}
         className="gap-1"
         aria-label="Mostrar / ocultar mesas"
         aria-expanded={open}
@@ -43,7 +43,7 @@ function TableFilterDropdown() {
           <div className="flex items-center justify-between border-b border-border px-3 py-2">
             <span className="text-[10px] uppercase tracking-wider text-text-muted">Mesas visibles</span>
             <button
-              onClick={showAllTables}
+              onClick={() => { playClickSound(); showAllTables() }}
               className="text-[10px] text-accent hover:text-accent-hover transition-colors"
             >
               Mostrar todas
@@ -115,7 +115,7 @@ function ThresholdDropdown() {
     })
   }
 
-  const reset = () => setCustomThresholds(null)
+  const reset = () => { playClickSound(); setCustomThresholds(null) }
 
   const sliderClass = (hasCustom: boolean) => cn(
     "w-full cursor-pointer appearance-none rounded-full h-1.5",
@@ -131,7 +131,7 @@ function ThresholdDropdown() {
       <Button
         variant={hasCustom ? "default" : "ghost"}
         size="sm"
-        onClick={() => setOpen(!open)}
+        onClick={() => { playClickSound(); setOpen(!open) }}
         className="gap-1.5"
         aria-label="Ajustar umbrales de alerta"
         aria-expanded={open}
@@ -264,6 +264,7 @@ export function AppHeader() {
                 variant={isActive ? "default" : "ghost"}
                 size="sm"
                 className="gap-1.5"
+                onClick={playClickSound}
               >
                 <Icon className="h-3.5 w-3.5" aria-hidden="true" />
                 {link.label}
@@ -280,7 +281,7 @@ export function AppHeader() {
             <Button
               variant={filterSignals ? "danger" : "ghost"}
               size="sm"
-              onClick={() => setFilterSignals(!filterSignals)}
+              onClick={() => { playClickSound(); setFilterSignals(!filterSignals) }}
               className="gap-1.5"
               aria-label={filterSignals ? "Mostrar todas las mesas" : "Filtrar solo mesas con señales"}
               aria-pressed={filterSignals}
@@ -291,7 +292,7 @@ export function AppHeader() {
             <Button
               variant="ghost"
               size="sm"
-              onClick={() => setViewMode(viewMode === "list" ? "grid" : "list")}
+              onClick={() => { playClickSound(); setViewMode(viewMode === "list" ? "grid" : "list") }}
               className="gap-1.5"
               aria-label={viewMode === "list" ? "Cambiar a vista de cuadrícula" : "Cambiar a vista de lista"}
             >

@@ -49,7 +49,7 @@ function AppContent() {
 
   if (checking) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-[#1a1a1e]" />
+      <div className="flex min-h-screen items-center justify-center bg-bg" />
     )
   }
 
