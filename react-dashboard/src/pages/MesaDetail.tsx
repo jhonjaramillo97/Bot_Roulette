@@ -255,12 +255,12 @@ export default function MesaDetailPage() {
           <div className="mb-2 text-[10px] font-semibold uppercase tracking-wider text-text-muted">
             Historial Reciente
           </div>
-          <div className="flex gap-1.5 overflow-x-auto pb-1">
+          <div className="flex gap-1 flex-wrap">
             {data.ultimos.map((spin, i) => (
               <span
                 key={i}
                 className={cn(
-                  "flex h-8 w-8 shrink-0 items-center justify-center rounded-md text-xs font-bold text-white",
+                  "flex h-6 w-6 shrink-0 items-center justify-center rounded-sm text-[10px] font-bold text-white",
                   spin.color === "Red"
                     ? "bg-roulette-red"
                     : spin.color === "Black"

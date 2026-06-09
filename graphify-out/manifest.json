@@ -280,7 +280,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/rolldown-runtime-QTnfLwEv.js": {
-    "mtime": 1781021283.7646396,
+    "mtime": 1781022260.611277,
     "ast_hash": "0b9fa1f21df87441aa366e428d1ebb49",
     "semantic_hash": ""
   },
@@ -300,8 +300,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/components/layout/AppHeader.tsx": {
-    "mtime": 1780971458.7252305,
-    "ast_hash": "cc8731d629bff45cac39fdb0c7fe8ff1",
+    "mtime": 1781022240.9493878,
+    "ast_hash": "2bf731645bb7c9fbc5e48c86d90e595a",
     "semantic_hash": ""
   },
   "react-dashboard/src/components/layout/LoadingOverlay.tsx": {
@@ -375,8 +375,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/Overview.tsx": {
-    "mtime": 1781018863.8507297,
-    "ast_hash": "03924a31f8efd8308aa16af977d41875",
+    "mtime": 1781022213.819266,
+    "ast_hash": "fcbc89e47b4df8e1468ffce0b13e4352",
     "semantic_hash": ""
   },
   "react-dashboard/tsconfig.app.json": {
@@ -460,18 +460,18 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/query-BPe0xBFE.js": {
-    "mtime": 1781021283.7616394,
+    "mtime": 1781022260.609279,
     "ast_hash": "04faa70bf0cdaeaa34d0fc73933f2336",
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/recharts-DMPSVTCT.js": {
-    "mtime": 1781021283.7626407,
+    "mtime": 1781022260.610276,
     "ast_hash": "81c1764a338cd132daef0ea7aec2f283",
     "semantic_hash": ""
   },
   "react-dashboard/src/lib/DashboardContext.tsx": {
-    "mtime": 1780970702.7456698,
-    "ast_hash": "6ec66032a6f51ceffe86477abf36bbc0",
+    "mtime": 1781022163.5113914,
+    "ast_hash": "d93ba255fe16e974e7bdd83e19e2f171",
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/index-DGDPgzEt.js": {
@@ -542,6 +542,11 @@
   "bot_ruleta/dashboard/static/assets/index-Bj6j9Yz2.js": {
     "mtime": 1781021283.7616394,
     "ast_hash": "be774466c272c19757da770dbe3adf43",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/dashboard/static/assets/index-DbfqQsEG.js": {
+    "mtime": 1781022260.6082768,
+    "ast_hash": "83626c9a6f391d6716718567434d6500",
     "semantic_hash": ""
   }
 }

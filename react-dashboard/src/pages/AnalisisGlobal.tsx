@@ -4,7 +4,7 @@ import { Card, CardContent } from "@/components/ui/shadcn"
 import { Tabs, TabsTrigger } from "@/components/ui/Tabs"
 import { Link } from "react-router-dom"
 import {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
+  AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, ReferenceLine,
 } from "recharts"
 import { cn } from "@/lib/utils"
 
@@ -165,27 +165,43 @@ export default function AnalisisGlobalPage() {
 
       {/* Chart - shows ONLY the current tab */}
       <Card className="mb-4 rounded-none">
-        <CardContent className="p-4">
-          <h3 className="mb-3 text-sm font-semibold text-text-muted">{chartTitle}</h3>
-          <div className="h-[300px]">
+        <CardContent className="p-0">
+          <div className="border-b border-border px-4 py-3">
+            <h3 className="text-sm font-semibold">{chartTitle}</h3>
+          </div>
+          <div className="h-[320px] p-2">
             <ResponsiveContainer width="100%" height="100%">
-              <LineChart data={currentData as any[]}>
-                <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.05)" />
-                <XAxis dataKey="table_name" tick={{ fontSize: 10, fill: "#8a8a9a" }} tickFormatter={(v: string) => fmt(v)} />
-                <YAxis tick={{ fontSize: 10, fill: "#8a8a9a" }} domain={["dataMin - 1", "dataMax + 2"]} />
+              <AreaChart data={currentData as any[]} margin={{ top: 8, right: 12, left: 0, bottom: 0 }}>
+                <defs>
+                  <linearGradient id="chartGradient" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor={tab === "tercios" ? "#dc5a5a" : tab === "colores" ? "#d4a853" : "#60a5fa"} stopOpacity={0.25} />
+                    <stop offset="100%" stopColor={tab === "tercios" ? "#dc5a5a" : tab === "colores" ? "#d4a853" : "#60a5fa"} stopOpacity={0.02} />
+                  </linearGradient>
+                </defs>
+                <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.04)" vertical={false} />
+                <XAxis dataKey="table_name" tick={{ fontSize: 11, fill: "#8a8a9a" }} tickFormatter={(v: string) => fmt(v)} axisLine={false} tickLine={false} dy={8} />
+                <YAxis tick={{ fontSize: 11, fill: "#8a8a9a" }} domain={["dataMin - 1", "dataMax + 2"]} axisLine={false} tickLine={false} dx={-4} />
                 <Tooltip
-                  contentStyle={{ backgroundColor: "#1a1a24", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, fontSize: 12 }}
+                  contentStyle={{ backgroundColor: "#16161d", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 6, fontSize: 12, boxShadow: "0 4px 20px rgba(0,0,0,0.4)" }}
                   labelFormatter={(v: any) => fmt(String(v))}
+                  itemStyle={{ color: tab === "tercios" ? "#dc5a5a" : tab === "colores" ? "#d4a853" : "#60a5fa" }}
+                  cursor={{ stroke: "rgba(255,255,255,0.08)", strokeDasharray: "4 4" }}
                 />
-                <Line
+                {tab === "tercios" && threshold > 0 && (
+                  <ReferenceLine y={threshold} stroke="#dc5a5a" strokeDasharray="6 4" strokeOpacity={0.4} label={{ value: `Umbral ${threshold}`, position: "right", fill: "#dc5a5a", fontSize: 10 }} />
+                )}
+                <Area
                   type="monotone"
                   dataKey={valueKey}
                   stroke={tab === "tercios" ? "#dc5a5a" : tab === "colores" ? "#d4a853" : "#60a5fa"}
                   strokeWidth={2}
-                  dot={{ r: 3 }}
+                  fill="url(#chartGradient)"
+                  dot={{ r: 2, strokeWidth: 0 }}
+                  activeDot={{ r: 5, strokeWidth: 2, stroke: "#0f0f14", fill: tab === "tercios" ? "#dc5a5a" : tab === "colores" ? "#d4a853" : "#60a5fa" }}
                   name={tab === "colores" ? "Racha" : "Pico"}
+                  animationDuration={800}
                 />
-              </LineChart>
+              </AreaChart>
             </ResponsiveContainer>
           </div>
         </CardContent>

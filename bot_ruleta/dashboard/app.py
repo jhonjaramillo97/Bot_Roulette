@@ -216,7 +216,7 @@ def get_data():
 
     return jsonify({
         "mesa": table_name,
-        "ultimos": numeros[:20],
+        "ultimos": numeros[:500],
         "delays": delays,
         "alertas": alertas,
         "threshold": threshold,
