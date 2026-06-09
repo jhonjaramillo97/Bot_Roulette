@@ -82,54 +82,53 @@ export const TableCard = memo(function TableCard({
       {/* Header */}
       <button
         onClick={onToggle}
-        className="flex w-full items-center justify-between px-3 py-2.5 text-left"
+        className="flex w-full items-center justify-between px-2.5 py-1.5 text-left"
       >
-        <div className="flex items-center gap-2 min-w-0">
+        <div className="flex items-center gap-1.5 min-w-0">
           <span
             className={cn(
-              "h-2 w-2 shrink-0 rounded-full",
-              hasAnyAlert ? "bg-danger shadow-[0_0_6px_var(--color-danger)]" : "bg-safe shadow-[0_0_6px_var(--color-safe)]"
+              "h-1.5 w-1.5 shrink-0 rounded-full",
+              hasAnyAlert ? "bg-danger shadow-[0_0_4px_var(--color-danger)]" : "bg-safe shadow-[0_0_4px_var(--color-safe)]"
             )}
           />
-          <span className="truncate text-sm font-semibold">{table.name}</span>
-          <span className="shrink-0 text-[11px] text-text-muted">
+          <span className="truncate text-xs font-semibold">{table.name}</span>
+          <span className="shrink-0 text-[10px] text-text-muted">
             {formatTimeAgo(table.last_update_seconds)}
           </span>
         </div>
-        <div className="flex items-center gap-1.5 shrink-0">
+        <div className="flex items-center gap-1 shrink-0">
           {hasNumberAlert && (
-            <Badge variant="danger" className="text-[10px] px-1.5 py-0">
+            <Badge variant="danger" className="text-[9px] px-1 py-0 leading-tight">
               {table.number_alert_count}N
             </Badge>
           )}
           {hasColorStreak && table.color_streak && (
-            <Badge variant={table.color_streak.color === "Red" ? "red" : "black"} className="text-[10px] px-1.5 py-0">
+            <Badge variant={table.color_streak.color === "Red" ? "red" : "black"} className="text-[9px] px-1 py-0 leading-tight">
               {table.color_streak.color === "Red" ? "R" : "B"}{table.color_streak.streak}
             </Badge>
           )}
           {table.alertas.length > 0 && (
-            <Badge variant="danger" className="text-[10px] px-1.5 py-0">
+            <Badge variant="danger" className="text-[9px] px-1 py-0 leading-tight">
               {table.alertas.length}
             </Badge>
           )}
           {viewMode === "list" && (
-            <span className={cn("text-text-muted text-xs transition-transform", isExpanded && "rotate-180")}>
+            <span className={cn("text-text-muted text-[10px] transition-transform", isExpanded && "rotate-180")}>
               ▼
             </span>
           )}
         </div>
       </button>
 
-      {/* Body - always visible in grid, expandable in list */}
+      {/* Body */}
       <div
         className={cn(
-          "px-3 pb-3",
-          viewMode === "list" && !isExpanded && "hidden",
-          viewMode === "list" && isExpanded && "animate-in fade-in slide-in-from-top-2"
+          "px-2.5 pb-2",
+          viewMode === "list" && !isExpanded && "hidden"
         )}
       >
         {/* Delay grid */}
-        <div className="grid grid-cols-4 grid-rows-3 gap-1 mb-2" style={{ minHeight: viewMode === "grid" ? "120px" : undefined }}>
+        <div className="grid grid-cols-4 grid-rows-3 gap-px" style={{ minHeight: viewMode === "grid" ? "90px" : undefined }}>
           {zoneKeys.map((key) => {
             const value = table.delays[key]
             if (value === undefined) return null
@@ -138,14 +137,14 @@ export const TableCard = memo(function TableCard({
               <div
                 key={key}
                 className={cn(
-                  "flex flex-col items-center justify-center rounded-md border py-1.5 transition-all duration-300",
+                  "flex flex-col items-center justify-center rounded border py-1 transition-all duration-300",
                   zoneGridClasses[key],
                   getChipBg(severity),
                   severity === "critical" && "animate-pulse"
                 )}
               >
-                <span className="font-tabular-nums text-lg font-bold leading-none">{value}</span>
-                <span className="mt-0.5 text-[9px] uppercase tracking-wider text-text-muted">
+                <span className="font-tabular-nums text-sm font-bold leading-none">{value}</span>
+                <span className="mt-0 text-[8px] uppercase tracking-wider text-text-muted">
                   {getZoneLabel(key)}
                 </span>
               </div>
@@ -154,13 +153,13 @@ export const TableCard = memo(function TableCard({
         </div>
 
         {/* Footer: last numbers + link */}
-        <div className="flex items-center justify-between border-t border-border/50 pt-2">
+        <div className="flex items-center justify-between border-t border-border/50 pt-1.5 mt-1.5">
           <div className="flex items-center gap-0.5">
             {table.last_10?.slice(0, 8).map((spin, i) => (
               <span
                 key={i}
                 className={cn(
-                  "flex h-5 w-5 items-center justify-center rounded text-[10px] font-bold text-white",
+                  "flex h-4 w-4 items-center justify-center rounded text-[9px] font-bold text-white",
                   spin.col === "Red"
                     ? "bg-roulette-red"
                     : spin.col === "Black"
@@ -174,7 +173,7 @@ export const TableCard = memo(function TableCard({
           </div>
           <Link
             to={`/mesa?mesa=${table.table_name}`}
-            className="text-[11px] font-medium text-text-muted transition-colors hover:text-accent"
+            className="text-[10px] font-medium text-text-muted transition-colors hover:text-accent"
           >
             Abrir →
           </Link>

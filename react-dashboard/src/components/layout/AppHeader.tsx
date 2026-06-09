@@ -1,12 +1,15 @@
 import { Link, useLocation } from "react-router-dom"
-import { Activity, BarChart3, LayoutGrid } from "lucide-react"
+import { Activity, BarChart3, LayoutGrid, List, Filter } from "lucide-react"
 import { Button } from "@/components/ui/shadcn"
 import { useOverview } from "@/hooks/useApi"
+import { useDashboard } from "@/lib/DashboardContext"
+
 
 export function AppHeader() {
   const location = useLocation()
   const { data } = useOverview()
-  const tunnelUrl = ""
+  const { viewMode, setViewMode, filterSignals, setFilterSignals } = useDashboard()
+  const isOverview = location.pathname === "/"
 
   const links = [
     { to: "/", label: "Overview", icon: LayoutGrid },
@@ -16,7 +19,7 @@ export function AppHeader() {
   return (
     <header className="sticky top-0 z-50 flex items-center justify-between border-b border-border bg-bg/80 px-4 py-2 backdrop-blur-md">
       <div className="flex items-center gap-3">
-        <img src="/logo.png" alt="Roulette Sniper" className="h-8" />
+        <img src="/logo.png" alt="Roulette Sniper" className="h-7" />
         <div className="flex items-center gap-1.5">
           <Activity className="h-2.5 w-2.5 text-safe" />
           <span className="text-xs text-text-secondary">
@@ -42,14 +45,34 @@ export function AppHeader() {
             </Link>
           )
         })}
+
+        {isOverview && (
+          <>
+            <div className="mx-1 h-5 w-px bg-border" />
+            <Button
+              variant={filterSignals ? "danger" : "ghost"}
+              size="sm"
+              onClick={() => setFilterSignals(!filterSignals)}
+              className="gap-1.5"
+            >
+              <Filter className="h-3.5 w-3.5" />
+              {filterSignals ? "Todas" : "Señales"}
+            </Button>
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={() => setViewMode(viewMode === "list" ? "grid" : "list")}
+              className="gap-1.5"
+            >
+              {viewMode === "list" ? <LayoutGrid className="h-3.5 w-3.5" /> : <List className="h-3.5 w-3.5" />}
+              {viewMode === "list" ? "Grid" : "Lista"}
+            </Button>
+          </>
+        )}
       </nav>
 
       <div className="flex items-center gap-2 text-xs text-text-secondary">
-        {tunnelUrl && (
-          <a href={tunnelUrl} target="_blank" rel="noopener noreferrer" className="hover:text-text">
-            Tunnel activo
-          </a>
-        )}
+        {/* reserved */}
       </div>
     </header>
   )
