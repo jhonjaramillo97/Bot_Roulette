@@ -206,7 +206,7 @@ export default function AnalisisGlobalPage() {
           <div className="max-h-[500px] overflow-auto">
             {tab === "tercios" && (
               <table className="w-full text-sm">
-                <thead className="sticky top-0 bg-bg-card z-10">
+                <thead className="sticky top-0 bg-bg-card/95 backdrop-blur-sm/95 backdrop-blur-sm">
                   <tr className="border-b border-border">
                     <th className="px-3 py-2 text-left text-xs font-semibold text-text-muted">#</th>
                     <th className="px-3 py-2 text-left text-xs font-semibold text-text-muted">Mesa</th>
@@ -219,7 +219,7 @@ export default function AnalisisGlobalPage() {
                   {topTercios.map((s, i) => (
                     <tr
                       key={i}
-                      className="cursor-pointer border-b border-border/30 hover:bg-bg-card-hover"
+                      className="cursor-pointer border-b border-border/30 hover:bg-bg-card/95 backdrop-blur-sm-hover"
                       onClick={() => setModal({
                         type: "tercios", tableName: s.table_name, zoneName: s.zone_name,
                         maxDelay: s.max_delay, startTime: s.start_time, endTime: s.end_time ?? undefined,
@@ -237,7 +237,7 @@ export default function AnalisisGlobalPage() {
             )}
             {tab === "colores" && (
               <table className="w-full text-sm">
-                <thead className="sticky top-0 bg-bg-card z-10">
+                <thead className="sticky top-0 bg-bg-card/95 backdrop-blur-sm/95 backdrop-blur-sm">
                   <tr className="border-b border-border">
                     <th className="px-3 py-2 text-left text-xs font-semibold text-text-muted">#</th>
                     <th className="px-3 py-2 text-left text-xs font-semibold text-text-muted">Mesa</th>
@@ -250,7 +250,7 @@ export default function AnalisisGlobalPage() {
                   {topColores.map((s, i) => (
                     <tr
                       key={i}
-                      className="cursor-pointer border-b border-border/30 hover:bg-bg-card-hover"
+                      className="cursor-pointer border-b border-border/30 hover:bg-bg-card/95 backdrop-blur-sm-hover"
                       onClick={() => setModal({
                         type: "colores", tableName: s.table_name, streakColor: s.streak_color,
                         streakCount: s.streak_count, maxDelay: s.streak_count,
@@ -273,7 +273,7 @@ export default function AnalisisGlobalPage() {
             )}
             {tab === "numeros" && (
               <table className="w-full text-sm">
-                <thead className="sticky top-0 bg-bg-card z-10">
+                <thead className="sticky top-0 bg-bg-card/95 backdrop-blur-sm/95 backdrop-blur-sm">
                   <tr className="border-b border-border">
                     <th className="px-3 py-2 text-left text-xs font-semibold text-text-muted">#</th>
                     <th className="px-3 py-2 text-left text-xs font-semibold text-text-muted">Mesa</th>
@@ -286,7 +286,7 @@ export default function AnalisisGlobalPage() {
                   {topNumeros.map((s: any, i: number) => (
                     <tr
                       key={i}
-                      className={cn("cursor-pointer border-b border-border/30 hover:bg-bg-card-hover", !s.start_time && "bg-critical-dim/20")}
+                      className={cn("cursor-pointer border-b border-border/30 hover:bg-bg-card/95 backdrop-blur-sm-hover", !s.start_time && "bg-critical-dim/20")}
                       onClick={() => setModal({
                         type: "numeros", tableName: s.table_name, number: s.number,
                         maxDelay: s.max_delay, startTime: s.start_time, endTime: s.end_time ?? undefined,
@@ -321,7 +321,7 @@ export default function AnalisisGlobalPage() {
           </div>
           <div className="overflow-auto">
             <table className="w-full text-sm">
-              <thead className="sticky top-0 bg-bg-card">
+              <thead className="sticky top-0 bg-bg-card/95 backdrop-blur-sm">
                 <tr className="border-b border-border">
                   <th className="px-3 py-2 text-left text-xs font-semibold text-text-muted">Mesa</th>
                   <th className="px-3 py-2 text-left text-xs font-semibold text-text-muted">Senales</th>
@@ -331,7 +331,7 @@ export default function AnalisisGlobalPage() {
               </thead>
               <tbody>
                 {breakdownData.map((row) => (
-                  <tr key={row.name} className="border-b border-border/30 hover:bg-bg-card-hover">
+                  <tr key={row.name} className="border-b border-border/30 hover:bg-bg-card/95 backdrop-blur-sm-hover">
                     <td className="px-3 py-2 text-xs font-medium">{fmt(row.name)}</td>
                     <td className="px-3 py-2 font-tabular-nums">{row.count}</td>
                     <td className="px-3 py-2 font-tabular-nums">{(row.sum / row.count).toFixed(1)}</td>
@@ -388,7 +388,7 @@ function SignalModal({ signal, onClose }: {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={onClose} onKeyDown={(e) => e.key === "Escape" && onClose()}>
-      <div role="dialog" aria-modal="true" aria-label={`Detalle de señal — ${fmt(signal.tableName)}`} className="mx-4 max-h-[70vh] w-full max-w-[500px] overflow-auto rounded-lg border border-border bg-bg-card" onClick={(e) => e.stopPropagation()}>
+      <div role="dialog" aria-modal="true" aria-label={`Detalle de señal — ${fmt(signal.tableName)}`} className="mx-4 max-h-[70vh] w-full max-w-[500px] overflow-auto rounded-lg border border-border bg-bg-card/95 backdrop-blur-sm" onClick={(e) => e.stopPropagation()}>
         <div className="flex items-center justify-between border-b border-border px-4 py-3">
           <h3 className="text-sm font-semibold">{fmt(signal.tableName)}</h3>
           <button onClick={onClose} aria-label="Cerrar modal" className="text-lg text-text-muted hover:text-danger">&times;</button>
@@ -399,7 +399,7 @@ function SignalModal({ signal, onClose }: {
             <div className="py-8 text-center text-text-secondary">Cargando…</div>
           ) : data?.plays && data.plays.length > 0 ? (
             <table className="w-full text-sm">
-              <thead className="sticky top-0 bg-bg-card">
+              <thead className="sticky top-0 bg-bg-card/95 backdrop-blur-sm">
                 <tr className="border-b border-border">
                   <th className="px-3 py-2 text-left text-[10px] font-semibold text-text-muted">#</th>
                   <th className="px-3 py-2 text-left text-[10px] font-semibold text-text-muted">Hora</th>

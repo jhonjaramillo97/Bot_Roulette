@@ -335,7 +335,7 @@ function BacktestTabs({ backtest, backtestColor, backtestNumber, numberGrid, num
         {tab === "tercios" && (
           <div className="max-h-[400px] overflow-auto rounded-md border border-border/50">
             <table className="w-full text-sm">
-              <thead className="sticky top-0 bg-black/50 backdrop-blur-sm">
+              <thead className="sticky top-0 bg-bg-card/95 backdrop-blur-sm">
                 <tr>
                   <th className="px-3 py-2 text-left text-xs font-semibold text-text-muted">Fecha Inicio</th>
                   <th className="px-3 py-2 text-left text-xs font-semibold text-text-muted">Zona</th>
@@ -365,7 +365,7 @@ function BacktestTabs({ backtest, backtestColor, backtestNumber, numberGrid, num
         {tab === "colores" && (
           <div className="max-h-[400px] overflow-auto rounded-md border border-border/50">
             <table className="w-full text-sm">
-              <thead className="sticky top-0 bg-black/50 backdrop-blur-sm">
+              <thead className="sticky top-0 bg-bg-card/95 backdrop-blur-sm">
                 <tr>
                   <th className="px-3 py-2 text-left text-xs font-semibold text-text-muted">Fecha Inicio</th>
                   <th className="px-3 py-2 text-left text-xs font-semibold text-text-muted">Color</th>
@@ -401,7 +401,7 @@ function BacktestTabs({ backtest, backtestColor, backtestNumber, numberGrid, num
             {numberGrid && <NumberGrid grid={numberGrid} />}
             <div className="mt-4 max-h-[400px] overflow-auto rounded-md border border-border/50">
               <table className="w-full text-sm">
-                <thead className="sticky top-0 bg-black/50 backdrop-blur-sm">
+                <thead className="sticky top-0 bg-bg-card/95 backdrop-blur-sm">
                   <tr>
                     <th className="px-3 py-2 text-left text-xs font-semibold text-text-muted">Fecha Inicio</th>
                     <th className="px-3 py-2 text-left text-xs font-semibold text-text-muted">Número</th>
