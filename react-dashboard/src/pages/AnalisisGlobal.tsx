@@ -149,19 +149,19 @@ export default function AnalisisGlobalPage() {
 
       {/* Stats Summary */}
       <div className="mb-4 grid grid-cols-3 gap-3">
-        <Card>
+        <Card className="border-l-2 border-l-accent">
           <CardContent className="p-4 text-center">
-            <div className="text-[10px] uppercase tracking-wider text-text-muted">Total Senales</div>
+            <div className="text-[10px] uppercase tracking-wider text-text-muted">Total Señales</div>
             <div className="font-tabular-nums text-2xl font-bold text-accent">{stats.total}</div>
           </CardContent>
         </Card>
-        <Card>
+        <Card className="border-l-2 border-l-warn">
           <CardContent className="p-4 text-center">
             <div className="text-[10px] uppercase tracking-wider text-text-muted">Pico Promedio</div>
             <div className="font-tabular-nums text-2xl font-bold text-warn">{stats.avg}</div>
           </CardContent>
         </Card>
-        <Card>
+        <Card className="border-l-2 border-l-danger">
           <CardContent className="p-4 text-center">
             <div className="text-[10px] uppercase tracking-wider text-text-muted">Peor Escenario</div>
             <div className="font-tabular-nums text-2xl font-bold text-danger">{stats.max}</div>
