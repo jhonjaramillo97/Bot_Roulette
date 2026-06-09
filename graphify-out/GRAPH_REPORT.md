@@ -1,16 +1,16 @@
 # Graph Report - Bot_Stake_Recolector  (2026-06-08)
 
 ## Corpus Check
-- 91 files · ~110,703 words
+- 93 files · ~123,504 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 5833 nodes · 18594 edges · 174 communities (165 shown, 9 thin omitted)
-- Extraction: 87% EXTRACTED · 13% INFERRED · 0% AMBIGUOUS · INFERRED: 2385 edges (avg confidence: 0.8)
+- 6559 nodes · 20919 edges · 186 communities (177 shown, 9 thin omitted)
+- Extraction: 89% EXTRACTED · 11% INFERRED · 0% AMBIGUOUS · INFERRED: 2390 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `167d3e38`
+- Built from commit: `66afc16d`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -181,15 +181,27 @@
 - [[_COMMUNITY_Community 171|Community 171]]
 - [[_COMMUNITY_Community 172|Community 172]]
 - [[_COMMUNITY_Community 173|Community 173]]
+- [[_COMMUNITY_Community 174|Community 174]]
+- [[_COMMUNITY_Community 175|Community 175]]
+- [[_COMMUNITY_Community 176|Community 176]]
+- [[_COMMUNITY_Community 177|Community 177]]
+- [[_COMMUNITY_Community 178|Community 178]]
+- [[_COMMUNITY_Community 179|Community 179]]
+- [[_COMMUNITY_Community 180|Community 180]]
+- [[_COMMUNITY_Community 181|Community 181]]
+- [[_COMMUNITY_Community 182|Community 182]]
+- [[_COMMUNITY_Community 183|Community 183]]
+- [[_COMMUNITY_Community 184|Community 184]]
+- [[_COMMUNITY_Community 185|Community 185]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `_()` - 576 edges
 2. `_()` - 576 edges
 3. `$()` - 381 edges
 4. `$()` - 378 edges
-5. `$()` - 376 edges
-6. `$()` - 373 edges
-7. `$()` - 373 edges
+5. `$()` - 378 edges
+6. `$()` - 376 edges
+7. `$()` - 376 edges
 8. `$()` - 373 edges
 9. `$()` - 373 edges
 10. `$()` - 373 edges
@@ -209,7 +221,7 @@
 ## Import Cycles
 - 1-file cycle: `bot_ruleta/gui_app.py -> bot_ruleta/gui_app.py`
 
-## Communities (174 total, 9 thin omitted)
+## Communities (186 total, 9 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.36
@@ -253,15 +265,15 @@ Nodes (37): check_and_notify(), check_and_notify_color(), check_and_notify_numbe
 
 ### Community 17 - "Community 17"
 Cohesion: 0.01
-Nodes (82): _(), aj(), Al(), ar(), arc(), BD(), bezierCurveTo(), Bs() (+74 more)
+Nodes (87): _(), aj(), Al(), ar(), arc(), bezierCurveTo(), Bs(), bt() (+79 more)
 
 ### Community 18 - "Community 18"
 Cohesion: 0.04
-Nodes (100): Ao(), as(), ay(), bA(), bw(), Dd(), defineProperty(), displayable() (+92 more)
+Nodes (98): Ao(), as(), ay(), bA(), BD(), bw(), Dd(), defineProperty() (+90 more)
 
 ### Community 19 - "Community 19"
 Cohesion: 0.01
-Nodes (81): _(), aj(), Al(), ar(), Aw(), Bs(), bt(), bu() (+73 more)
+Nodes (80): _(), aj(), Al(), ar(), arc(), BD(), bezierCurveTo(), Bs() (+72 more)
 
 ### Community 20 - "Community 20"
 Cohesion: 0.09
@@ -276,8 +288,8 @@ Cohesion: 0.08
 Nodes (27): Configuracion centralizada del bot de ruleta. Constantes, configuracion de mesa, clear_table(), get_connection(), get_last_number(), get_last_numbers(), init_db(), int, str (+19 more)
 
 ### Community 23 - "Community 23"
-Cohesion: 0.06
-Nodes (50): ag(), bh(), bp(), bv(), Ch(), copy(), dh(), eg() (+42 more)
+Cohesion: 0.05
+Nodes (89): r(), A(), ag(), b(), be(), bv(), c(), cancel() (+81 more)
 
 ### Community 24 - "Community 24"
 Cohesion: 0.10
@@ -297,75 +309,75 @@ Nodes (55): a(), ap(), as(), Au(), Bo(), ci(), ct(), Cu() (+47 more)
 
 ### Community 30 - "Community 30"
 Cohesion: 0.07
-Nodes (45): ae(), bn(), Bt(), ce(), cn(), De(), dt(), E() (+37 more)
+Nodes (48): ae(), ai(), an(), bn(), Bt(), ce(), cn(), De() (+40 more)
 
 ### Community 31 - "Community 31"
 Cohesion: 0.07
 Nodes (55): a(), ap(), as(), at(), Au(), Bo(), ci(), Cu() (+47 more)
 
 ### Community 32 - "Community 32"
-Cohesion: 0.07
-Nodes (57): ai(), oi(), aa(), Ac(), applyPatches(), bc(), bi(), Cc() (+49 more)
+Cohesion: 0.08
+Nodes (48): aa(), Ac(), applyPatches(), bc(), bi(), Cc(), clear(), concat() (+40 more)
 
 ### Community 33 - "Community 33"
-Cohesion: 0.14
-Nodes (21): bv(), copy(), eg(), fv(), gv(), ig(), iv(), kv() (+13 more)
+Cohesion: 0.08
+Nodes (38): ag(), bv(), copy(), eg(), fg(), fv(), gg(), gh() (+30 more)
 
 ### Community 34 - "Community 34"
-Cohesion: 0.10
-Nodes (25): as(), bu(), cs(), d(), ds(), es(), f(), fs() (+17 more)
+Cohesion: 0.09
+Nodes (40): a(), ao(), as(), b(), Bo(), ds(), es(), Fa() (+32 more)
 
 ### Community 35 - "Community 35"
 Cohesion: 0.05
 Nodes (42): dependencies, class-variance-authority, clsx, lucide-react, react, react-dom, react-router-dom, recharts (+34 more)
 
 ### Community 36 - "Community 36"
-Cohesion: 0.06
-Nodes (83): a(), aa(), Ac(), ao(), at(), bc(), be(), Bo() (+75 more)
+Cohesion: 0.09
+Nodes (56): aa(), Ac(), bc(), be(), _c(), ca(), cc(), cf() (+48 more)
 
 ### Community 37 - "Community 37"
 Cohesion: 0.06
 Nodes (19): _(), A(), D(), defaultMutationOptions(), E(), findAll(), getAll(), getMutationDefaults() (+11 more)
 
 ### Community 38 - "Community 38"
-Cohesion: 0.09
-Nodes (33): Am(), bh(), bm(), Ch(), clamp(), Cm(), dh(), eh() (+25 more)
+Cohesion: 0.07
+Nodes (44): Am(), bh(), bm(), bp(), Ch(), clamp(), Cm(), dh() (+36 more)
 
 ### Community 39 - "Community 39"
-Cohesion: 0.15
-Nodes (24): b(), bi(), componentDidCatch(), ec(), ei(), Ha(), hi(), i() (+16 more)
+Cohesion: 0.16
+Nodes (21): bi(), componentDidCatch(), Du(), ec(), ei(), Ha(), hi(), ic() (+13 more)
 
 ### Community 40 - "Community 40"
 Cohesion: 0.05
 Nodes (29): useAlertSound(), useLocalStorage(), useAnalisisGlobal(), useBacktest(), useBacktestColor(), useBacktestNumber(), useMesaData(), useMesas() (+21 more)
 
 ### Community 41 - "Community 41"
-Cohesion: 0.09
-Nodes (36): ad(), Au(), bd(), cd(), Cu(), et(), Eu(), Fa() (+28 more)
+Cohesion: 0.08
+Nodes (49): ap(), at(), Au(), bd(), cd(), ci(), cp(), Cu() (+41 more)
 
 ### Community 42 - "Community 42"
-Cohesion: 0.26
-Nodes (17): af(), df(), ef(), ff(), gf(), go(), If(), jf() (+9 more)
+Cohesion: 0.10
+Nodes (38): af(), bl(), df(), dl(), ef(), el(), en(), ff() (+30 more)
 
 ### Community 43 - "Community 43"
-Cohesion: 0.13
-Nodes (26): an(), cr(), dn(), dr(), Ed(), fd(), gn(), jd() (+18 more)
+Cohesion: 0.12
+Nodes (26): bu(), cr(), d(), dn(), dr(), Ed(), f(), gn() (+18 more)
 
 ### Community 44 - "Community 44"
-Cohesion: 0.15
-Nodes (13): bl(), bw(), Cw(), Ew(), kw(), Ll(), Or(), qn() (+5 more)
+Cohesion: 0.08
+Nodes (24): aE(), Aw(), bl(), ce(), constructor(), Ew(), hw(), jw() (+16 more)
 
 ### Community 45 - "Community 45"
-Cohesion: 0.09
-Nodes (24): add(), ak(), bk(), Ck(), divide(), Dm(), Ef(), h() (+16 more)
+Cohesion: 0.08
+Nodes (30): Vd(), add(), ak(), bk(), Ck(), df(), divide(), Ef() (+22 more)
 
 ### Community 46 - "Community 46"
 Cohesion: 0.17
 Nodes (20): add(), build(), ce(), defaultQueryOptions(), fetchOptimistic(), get(), getCurrentResult(), getDefaultOptions() (+12 more)
 
 ### Community 47 - "Community 47"
-Cohesion: 0.04
-Nodes (98): as(), ay(), bA(), cd(), Dd(), defineProperty(), displayable(), Dl() (+90 more)
+Cohesion: 0.03
+Nodes (108): Ao(), as(), ay(), bA(), bw(), cd(), Dd(), defineProperty() (+100 more)
 
 ### Community 48 - "Community 48"
 Cohesion: 0.09
@@ -380,8 +392,8 @@ Cohesion: 0.09
 Nodes (39): aa(), af(), bc(), be(), cf(), dc(), Do(), ff() (+31 more)
 
 ### Community 51 - "Community 51"
-Cohesion: 0.08
-Nodes (38): ap(), bs(), ci(), cp(), ct(), dd(), di(), dp() (+30 more)
+Cohesion: 0.20
+Nodes (15): cl(), fl(), Il(), Ll(), Lu(), Nl(), no(), pl() (+7 more)
 
 ### Community 52 - "Community 52"
 Cohesion: 0.16
@@ -480,8 +492,8 @@ Cohesion: 0.10
 Nodes (30): at(), bu(), cp(), cr(), d(), dn(), dp(), dr() (+22 more)
 
 ### Community 76 - "Community 76"
-Cohesion: 0.13
-Nodes (16): aE(), bo(), Ca(), da(), deleteProperty(), ea(), gw(), La() (+8 more)
+Cohesion: 0.29
+Nodes (7): bo(), da(), gw(), La(), pa(), vw(), zt()
 
 ### Community 77 - "Community 77"
 Cohesion: 0.09
@@ -576,12 +588,12 @@ Cohesion: 0.21
 Nodes (27): af(), cf(), df(), dt(), ef(), ff(), gf(), go() (+19 more)
 
 ### Community 105 - "Community 105"
-Cohesion: 0.06
-Nodes (46): $(), bl(), cl(), dl(), el(), en(), Er(), fl() (+38 more)
+Cohesion: 0.05
+Nodes (48): $(), ad(), bs(), cs(), ct(), ep(), Er(), fs() (+40 more)
 
 ### Community 106 - "Community 106"
-Cohesion: 0.06
-Nodes (65): gr(), A(), ag(), Ap(), b(), be(), bp(), c() (+57 more)
+Cohesion: 0.08
+Nodes (54): gr(), oi(), A(), Ap(), b(), be(), c(), Ca() (+46 more)
 
 ### Community 107 - "Community 107"
 Cohesion: 0.11
@@ -636,16 +648,16 @@ Cohesion: 0.14
 Nodes (18): at(), bi(), componentDidCatch(), ep(), f(), Ha(), hi(), i() (+10 more)
 
 ### Community 123 - "Community 123"
-Cohesion: 0.07
-Nodes (68): aa(), Ac(), af(), b(), bc(), be(), _c(), ca() (+60 more)
+Cohesion: 0.06
+Nodes (77): a(), aa(), Ac(), ao(), bc(), be(), _c(), ca() (+69 more)
 
 ### Community 124 - "Community 124"
 Cohesion: 0.09
 Nodes (21): _chain_match(), _chain_match_and_save(), extract_nums_js(), _get_color(), str, Escanea todas las mesas mapeadas. Retorna cuantas tuvieron exito., Escanea una mesa. Retorna True si encontró números y los procesó., Chain matching robusto + guardado en DB. Retorna los números nuevos. (+13 more)
 
 ### Community 125 - "Community 125"
-Cohesion: 0.17
-Nodes (13): arc(), bezierCurveTo(), closePath(), draw(), ee(), et(), he(), j() (+5 more)
+Cohesion: 0.04
+Nodes (66): $(), ad(), ai(), ap(), Ar(), br(), bs(), cp() (+58 more)
 
 ### Community 126 - "Community 126"
 Cohesion: 0.07
@@ -653,43 +665,43 @@ Nodes (75): a(), aa(), Ac(), ao(), b(), bc(), be(), _c() (+67 more)
 
 ### Community 127 - "Community 127"
 Cohesion: 0.05
-Nodes (55): $(), ae(), bl(), bs(), ct(), De(), df(), Ee() (+47 more)
+Nodes (53): $(), ae(), as(), b(), Bo(), bs(), cs(), De() (+45 more)
 
 ### Community 128 - "Community 128"
-Cohesion: 0.28
-Nodes (9): Vd(), df(), g(), Jd(), MD(), Qk(), render(), wc() (+1 more)
+Cohesion: 0.04
+Nodes (60): $(), ad(), ae(), Ar(), br(), bs(), Bt(), cr() (+52 more)
 
 ### Community 129 - "Community 129"
-Cohesion: 0.07
-Nodes (68): aa(), Ac(), add(), Ap(), applyPatches(), bc(), c(), Ca() (+60 more)
+Cohesion: 0.06
+Nodes (71): aa(), Ac(), Ap(), applyPatches(), bc(), bi(), Ca(), Cc() (+63 more)
 
 ### Community 130 - "Community 130"
 Cohesion: 0.05
 Nodes (45): $(), ad(), ae(), bd(), bs(), cd(), De(), df() (+37 more)
 
 ### Community 131 - "Community 131"
-Cohesion: 0.33
-Nodes (7): Ao(), EO(), jo(), ko(), Mo(), No(), qo()
+Cohesion: 0.10
+Nodes (47): aa(), Ac(), ao(), bc(), be(), _c(), cc(), Ce() (+39 more)
 
 ### Community 132 - "Community 132"
-Cohesion: 0.33
-Nodes (6): BD(), ld(), Rd(), vA(), yA(), zD()
+Cohesion: 0.09
+Nodes (45): aa(), Ac(), b(), bc(), be(), _c(), ca(), cc() (+37 more)
 
 ### Community 133 - "Community 133"
-Cohesion: 0.40
-Nodes (5): Gl(), hl(), ml(), Na(), wl()
+Cohesion: 0.07
+Nodes (44): Ae(), as(), b(), Bo(), Bt(), de(), Dn(), ds() (+36 more)
 
 ### Community 134 - "Community 134"
-Cohesion: 0.14
-Nodes (27): ad(), Au(), bd(), cd(), Cu(), et(), Eu(), Gd() (+19 more)
+Cohesion: 0.06
+Nodes (62): ad(), ap(), Au(), bd(), cd(), ci(), Cu(), dd() (+54 more)
 
 ### Community 135 - "Community 135"
 Cohesion: 0.06
-Nodes (18): _(), A(), defaultMutationOptions(), fetchInfiniteQuery(), findAll(), getAll(), getMutationDefaults(), getQueriesData() (+10 more)
+Nodes (17): _(), defaultMutationOptions(), fetchInfiniteQuery(), findAll(), getAll(), getMutationDefaults(), getQueriesData(), isFetching() (+9 more)
 
 ### Community 136 - "Community 136"
-Cohesion: 0.13
-Nodes (22): Am(), bm(), clamp(), Cm(), Dm(), formatHsl(), Hm(), jm() (+14 more)
+Cohesion: 0.07
+Nodes (39): Am(), bh(), bm(), bp(), Ch(), clamp(), Cm(), dh() (+31 more)
 
 ### Community 137 - "Community 137"
 Cohesion: 0.07
@@ -701,7 +713,7 @@ Nodes (31): an(), bn(), Bt(), cn(), E(), fd(), ft(), Gt() (+23 more)
 
 ### Community 139 - "Community 139"
 Cohesion: 0.10
-Nodes (30): a(), at(), bu(), d(), dl(), f(), Fa(), ff() (+22 more)
+Nodes (30): cl(), ct(), dl(), fl(), Fr(), Il(), Ir(), kl() (+22 more)
 
 ### Community 140 - "Community 140"
 Cohesion: 0.10
@@ -712,20 +724,20 @@ Cohesion: 0.11
 Nodes (30): cl(), ct(), dl(), fl(), Fr(), gl(), Il(), Ir() (+22 more)
 
 ### Community 142 - "Community 142"
-Cohesion: 0.11
-Nodes (23): ak(), bk(), Ck(), df(), ed(), g(), h(), ha() (+15 more)
+Cohesion: 0.08
+Nodes (29): add(), ak(), bk(), Ck(), df(), divide(), Ef(), g() (+21 more)
 
 ### Community 143 - "Community 143"
-Cohesion: 0.17
-Nodes (19): cr(), dn(), dp(), dr(), Ed(), gn(), kr(), mr() (+11 more)
+Cohesion: 0.11
+Nodes (28): at(), bu(), cp(), cr(), d(), dn(), dp(), dr() (+20 more)
 
 ### Community 144 - "Community 144"
 Cohesion: 0.14
 Nodes (28): Au(), componentDidCatch(), Cu(), Du(), ec(), Eu(), gu(), ic() (+20 more)
 
 ### Community 145 - "Community 145"
-Cohesion: 0.10
-Nodes (32): an(), bn(), Bt(), ce(), cn(), E(), fd(), ft() (+24 more)
+Cohesion: 0.12
+Nodes (27): an(), bn(), Bt(), cn(), E(), fd(), ft(), Gt() (+19 more)
 
 ### Community 146 - "Community 146"
 Cohesion: 0.10
@@ -741,31 +753,31 @@ Nodes (24): at(), bu(), cr(), d(), dr(), Ed(), f(), gn() (+16 more)
 
 ### Community 149 - "Community 149"
 Cohesion: 0.08
-Nodes (25): aE(), Aw(), bl(), Ew(), gk(), hk(), hw(), jk() (+17 more)
+Nodes (24): aE(), Aw(), bl(), ce(), constructor(), Ew(), hw(), jw() (+16 more)
 
 ### Community 150 - "Community 150"
-Cohesion: 0.10
-Nodes (28): ao(), bi(), ep(), fc(), hi(), i(), ia(), ko() (+20 more)
+Cohesion: 0.12
+Nodes (23): bi(), ce(), componentDidCatch(), ec(), ep(), hi(), i(), it() (+15 more)
 
 ### Community 151 - "Community 151"
-Cohesion: 0.14
-Nodes (18): bindMethods(), C(), ce(), constructor(), getCurrentResult(), getOptimisticResult(), getQueryCache(), hasListeners() (+10 more)
+Cohesion: 0.15
+Nodes (19): C(), ce(), createResult(), getCurrentResult(), getOptimisticResult(), h(), hasListeners(), mount() (+11 more)
 
 ### Community 152 - "Community 152"
-Cohesion: 0.21
-Nodes (18): build(), clearInterval(), defaultQueryOptions(), ensureInfiniteQueryData(), ensureQueryData(), fetchOptimistic(), fetchQuery(), get() (+10 more)
+Cohesion: 0.16
+Nodes (23): build(), clearInterval(), defaultQueryOptions(), ensureInfiniteQueryData(), ensureQueryData(), fetchOptimistic(), fetchQuery(), g() (+15 more)
 
 ### Community 153 - "Community 153"
-Cohesion: 0.16
-Nodes (17): add(), addObserver(), b(), cancel(), clearGcTimeout(), clearTimeout(), destroy(), mount() (+9 more)
+Cohesion: 0.15
+Nodes (19): add(), addObserver(), b(), cancel(), clearGcTimeout(), clearTimeout(), destroy(), fetch() (+11 more)
 
 ### Community 154 - "Community 154"
-Cohesion: 0.09
-Nodes (37): ai(), ap(), as(), Bo(), ci(), cp(), dd(), di() (+29 more)
+Cohesion: 0.21
+Nodes (15): ai(), ei(), hn(), Ii(), k(), mi(), ni(), o() (+7 more)
 
 ### Community 155 - "Community 155"
-Cohesion: 0.18
-Nodes (12): g(), getDefaultOptions(), getObserversCount(), isActive(), isDisabled(), isFetched(), isServer(), isStale() (+4 more)
+Cohesion: 0.33
+Nodes (6): getObserversCount(), isActive(), isDisabled(), isFetched(), isStale(), isStatic()
 
 ### Community 156 - "Community 156"
 Cohesion: 0.20
@@ -776,16 +788,16 @@ Cohesion: 0.29
 Nodes (10): canRun(), continue(), execute(), find(), isFocused(), onFocus(), onOnline(), refetch() (+2 more)
 
 ### Community 158 - "Community 158"
-Cohesion: 0.27
-Nodes (10): createResult(), fetch(), h(), invalidate(), #l(), O(), q(), re() (+2 more)
+Cohesion: 0.10
+Nodes (39): at(), Au(), bd(), bi(), cd(), ci(), componentDidCatch(), Cu() (+31 more)
 
 ### Community 159 - "Community 159"
-Cohesion: 0.29
-Nodes (7): D(), E(), j(), k(), N(), P(), T()
+Cohesion: 0.15
+Nodes (15): bindMethods(), constructor(), D(), E(), getQueryCache(), I(), j(), k() (+7 more)
 
 ### Community 160 - "Community 160"
-Cohesion: 0.08
-Nodes (41): r(), A(), be(), bo(), cd(), da(), de(), dj() (+33 more)
+Cohesion: 0.29
+Nodes (7): bo(), da(), gw(), La(), pa(), vw(), zt()
 
 ### Community 161 - "Community 161"
 Cohesion: 0.11
@@ -812,35 +824,83 @@ Cohesion: 0.17
 Nodes (19): bi(), componentDidCatch(), dc(), ec(), Ei(), gi(), ic(), ja() (+11 more)
 
 ### Community 167 - "Community 167"
-Cohesion: 0.20
-Nodes (15): cl(), fl(), Il(), Ll(), Nl(), no(), pl(), qc() (+7 more)
+Cohesion: 0.09
+Nodes (38): a(), at(), cl(), d(), dl(), f(), Fa(), fl() (+30 more)
 
 ### Community 168 - "Community 168"
-Cohesion: 0.17
-Nodes (15): cs(), ds(), fs(), Fu(), gs(), Iu(), ks(), mu() (+7 more)
+Cohesion: 0.08
+Nodes (37): af(), bl(), cf(), dc(), ef(), el(), gf(), Hf() (+29 more)
 
 ### Community 169 - "Community 169"
-Cohesion: 0.15
-Nodes (15): bi(), ce(), constructor(), Di(), finishDraft(), ia(), Li(), Mi() (+7 more)
+Cohesion: 0.10
+Nodes (36): ap(), Au(), bd(), bu(), cd(), ci(), cp(), Cu() (+28 more)
 
 ### Community 170 - "Community 170"
-Cohesion: 0.14
-Nodes (14): b(), eh(), eS(), k(), lh(), nh(), rk(), th() (+6 more)
+Cohesion: 0.10
+Nodes (31): ao(), cf(), dc(), ea(), fc(), fo(), hc(), Hd() (+23 more)
 
 ### Community 171 - "Community 171"
-Cohesion: 0.23
-Nodes (13): componentDidCatch(), Du(), ec(), ic(), it(), ot(), qu(), rc() (+5 more)
+Cohesion: 0.11
+Nodes (29): af(), bl(), df(), ef(), el(), gf(), Hf(), hl() (+21 more)
 
 ### Community 172 - "Community 172"
-Cohesion: 0.40
-Nodes (5): Gl(), hl(), ml(), Na(), wl()
+Cohesion: 0.13
+Nodes (27): an(), bn(), en(), fd(), hn(), jd(), Jn(), kn() (+19 more)
 
 ### Community 173 - "Community 173"
 Cohesion: 0.50
 Nodes (4): bindMethods(), constructor(), I(), ue()
 
+### Community 174 - "Community 174"
+Cohesion: 0.11
+Nodes (26): ct(), dd(), Du(), ep(), fi(), hu(), Ii(), is() (+18 more)
+
+### Community 175 - "Community 175"
+Cohesion: 0.14
+Nodes (26): an(), bn(), en(), fd(), hn(), jd(), kn(), ln() (+18 more)
+
+### Community 176 - "Community 176"
+Cohesion: 0.10
+Nodes (25): af(), bl(), ef(), el(), en(), gf(), gl(), Hf() (+17 more)
+
+### Community 177 - "Community 177"
+Cohesion: 0.14
+Nodes (24): cl(), dl(), fl(), gl(), Il(), Ir(), kl(), Ll() (+16 more)
+
+### Community 178 - "Community 178"
+Cohesion: 0.15
+Nodes (22): ai(), bi(), dd(), di(), fi(), gi(), Ii(), j() (+14 more)
+
+### Community 179 - "Community 179"
+Cohesion: 0.14
+Nodes (18): a(), bu(), ca(), d(), f(), Fa(), gc(), hs() (+10 more)
+
+### Community 180 - "Community 180"
+Cohesion: 0.15
+Nodes (17): ce(), ep(), i(), Jn(), ko(), l(), mp(), mt() (+9 more)
+
+### Community 181 - "Community 181"
+Cohesion: 0.21
+Nodes (14): componentDidCatch(), Du(), ec(), Ei(), ic(), it(), ot(), qu() (+6 more)
+
+### Community 182 - "Community 182"
+Cohesion: 0.19
+Nodes (14): cs(), ds(), fs(), Fu(), gs(), Iu(), ks(), mu() (+6 more)
+
+### Community 183 - "Community 183"
+Cohesion: 0.14
+Nodes (14): By(), Cf(), cy(), gx(), hx(), iy(), ly(), ry() (+6 more)
+
+### Community 184 - "Community 184"
+Cohesion: 0.24
+Nodes (10): cs(), fs(), Fu(), Iu(), mu(), Nu(), pu(), us() (+2 more)
+
+### Community 185 - "Community 185"
+Cohesion: 0.29
+Nodes (8): as(), Bo(), es(), qo(), ss(), Wo(), Yo(), zo()
+
 ## Knowledge Gaps
-- **130 isolated node(s):** `DOZEN_ZONES`, `COLUMN_ZONES`, `ROULETTE_LAYOUT`, `TABLE_NAMES`, `TABLE_NAMES` (+125 more)
+- **130 isolated node(s):** `TABLE_NAMES`, `AnalysisTab`, `DOZEN_ZONES`, `COLUMN_ZONES`, `ROULETTE_LAYOUT` (+125 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -848,14 +908,14 @@ Nodes (4): bindMethods(), constructor(), I(), ue()
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `$()` connect `Community 130` to `Community 67`, `Community 37`, `Community 137`, `Community 138`, `Community 106`, `Community 140`, `Community 141`, `Community 173`, `Community 144`, `Community 146`, `Community 148`, `Community 156`, `Community 126`?**
-  _High betweenness centrality (0.365) - this node is a cross-community bridge._
-- **Why does `_()` connect `Community 17` to `Community 160`, `Community 129`, `Community 135`, `Community 136`, `Community 169`, `Community 170`, `Community 172`, `Community 142`, `Community 18`, `Community 149`, `Community 23`, `Community 126`, `Community 127`?**
-  _High betweenness centrality (0.171) - this node is a cross-community bridge._
-- **Why does `_()` connect `Community 19` to `Community 32`, `Community 33`, `Community 128`, `Community 131`, `Community 132`, `Community 37`, `Community 38`, `Community 133`, `Community 36`, `Community 105`, `Community 106`, `Community 76`, `Community 45`, `Community 44`, `Community 47`, `Community 51`, `Community 125`?**
-  _High betweenness centrality (0.132) - this node is a cross-community bridge._
+  _High betweenness centrality (0.439) - this node is a cross-community bridge._
+- **Why does `ve()` connect `Community 23` to `Community 17`, `Community 130`, `Community 18`, `Community 127`?**
+  _High betweenness centrality (0.208) - this node is a cross-community bridge._
+- **Why does `ae()` connect `Community 130` to `Community 23`?**
+  _High betweenness centrality (0.208) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `$()` (e.g. with `ak()` and `tk()`) actually correct?**
   _`$()` has 2 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `DOZEN_ZONES`, `COLUMN_ZONES`, `ROULETTE_LAYOUT` to the rest of the system?**
+- **What connects `TABLE_NAMES`, `AnalysisTab`, `DOZEN_ZONES` to the rest of the system?**
   _289 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.09716599190283401 - nodes in this community are weakly interconnected._

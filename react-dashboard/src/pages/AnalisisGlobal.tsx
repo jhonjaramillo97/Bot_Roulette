@@ -148,18 +148,18 @@ export default function AnalisisGlobalPage() {
       </div>
 
       {/* Stats Summary */}
-      <div className="mb-4 grid grid-cols-3 divide-x divide-border border border-border">
-        <div className="flex flex-col items-center justify-center py-3">
-          <span className="text-[10px] uppercase tracking-wider text-text-muted">{stats.total}</span>
-          <span className="text-[10px] text-text-muted">Señales</span>
+      <div className="mx-auto mb-5 flex w-fit divide-x divide-border border border-border">
+        <div className="flex flex-col items-center justify-center px-8 py-4">
+          <span className="font-tabular-nums text-2xl font-semibold leading-none tracking-tight text-text">{stats.total}</span>
+          <span className="mt-1.5 text-[11px] tracking-wide text-text-muted">Señales</span>
         </div>
-        <div className="flex flex-col items-center justify-center py-3">
-          <span className="text-[10px] uppercase tracking-wider text-text-muted">{stats.avg}</span>
-          <span className="text-[10px] text-text-muted">Pico Prom.</span>
+        <div className="flex flex-col items-center justify-center px-8 py-4">
+          <span className="font-tabular-nums text-2xl font-semibold leading-none tracking-tight text-text">{stats.avg}</span>
+          <span className="mt-1.5 text-[11px] tracking-wide text-text-muted">Pico Prom.</span>
         </div>
-        <div className="flex flex-col items-center justify-center py-3">
-          <span className="text-[10px] uppercase tracking-wider text-text-muted">{stats.max}</span>
-          <span className="text-[10px] text-text-muted">Peor Caso</span>
+        <div className="flex flex-col items-center justify-center px-8 py-4">
+          <span className="font-tabular-nums text-2xl font-semibold leading-none tracking-tight text-text">{stats.max}</span>
+          <span className="mt-1.5 text-[11px] tracking-wide text-text-muted">Peor Caso</span>
         </div>
       </div>
 

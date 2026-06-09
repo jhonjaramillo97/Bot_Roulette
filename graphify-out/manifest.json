@@ -280,7 +280,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/rolldown-runtime-QTnfLwEv.js": {
-    "mtime": 1780971677.937461,
+    "mtime": 1780972347.6555107,
     "ast_hash": "0b9fa1f21df87441aa366e428d1ebb49",
     "semantic_hash": ""
   },
@@ -365,8 +365,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/AnalisisGlobal.tsx": {
-    "mtime": 1780971959.331009,
-    "ast_hash": "c637b913f55d00e7ed2e3914e834ce76",
+    "mtime": 1780972336.5004218,
+    "ast_hash": "603b8cbc925c93b3630603a1546a3386",
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/MesaDetail.tsx": {
@@ -460,12 +460,12 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/query-BPe0xBFE.js": {
-    "mtime": 1780971677.9354596,
+    "mtime": 1780972347.6525135,
     "ast_hash": "04faa70bf0cdaeaa34d0fc73933f2336",
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/recharts-DMPSVTCT.js": {
-    "mtime": 1780971677.9354596,
+    "mtime": 1780972347.6535127,
     "ast_hash": "81c1764a338cd132daef0ea7aec2f283",
     "semantic_hash": ""
   },
@@ -477,6 +477,16 @@
   "bot_ruleta/dashboard/static/assets/index-DGDPgzEt.js": {
     "mtime": 1780971677.934458,
     "ast_hash": "e5cc979d5f1f5444108ee96c609b34a8",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/dashboard/static/assets/index-DJl8tLP9.js": {
+    "mtime": 1780972347.6515098,
+    "ast_hash": "2d9fb375ddc4b632d8c0cb3c274511ec",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/dashboard/static/assets/index-dXk60V6S.js": {
+    "mtime": 1780972053.8098524,
+    "ast_hash": "449cf71110b43f1ca297b5fbb7e4d1c7",
     "semantic_hash": ""
   }
 }
