@@ -270,17 +270,17 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/query-rRwWEUS_.js": {
-    "mtime": 1780969127.4897711,
+    "mtime": 1780969470.7856345,
     "ast_hash": "feb4b3fb0827b961ea2ae47ce16199c1",
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/recharts-CkMf2Xat.js": {
-    "mtime": 1780969127.4915583,
+    "mtime": 1780969470.7866297,
     "ast_hash": "d86f64f1a3c20be1864a1b50f202defc",
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/rolldown-runtime-QTnfLwEv.js": {
-    "mtime": 1780969127.4935682,
+    "mtime": 1780969470.788629,
     "ast_hash": "0b9fa1f21df87441aa366e428d1ebb49",
     "semantic_hash": ""
   },
@@ -335,8 +335,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/hooks/useApi.ts": {
-    "mtime": 1780966507.2816584,
-    "ast_hash": "275a2acf5e50b5a665814adcf8648839",
+    "mtime": 1780969428.7535155,
+    "ast_hash": "b71fe2a9e2157e584f3c705e159c9b76",
     "semantic_hash": ""
   },
   "react-dashboard/src/hooks/useSSE.ts": {
@@ -365,8 +365,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/AnalisisGlobal.tsx": {
-    "mtime": 1780969114.1744936,
-    "ast_hash": "522471ee090283a4e083ba3c30c02a41",
+    "mtime": 1780969459.5988202,
+    "ast_hash": "fd70494c8892291cb90120b4f6f869a6",
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/MesaDetail.tsx": {
@@ -437,6 +437,11 @@
   "bot_ruleta/dashboard/static/assets/index-BejtiFmR.js": {
     "mtime": 1780969127.4897711,
     "ast_hash": "3ec3e6c8224c7c343a23affa803b407d",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/dashboard/static/assets/index-Bfzz8Sb6.js": {
+    "mtime": 1780969470.7846293,
+    "ast_hash": "79e06c592ede7befb61e9ca1061b8db3",
     "semantic_hash": ""
   }
 }

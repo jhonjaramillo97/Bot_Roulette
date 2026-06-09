@@ -397,7 +397,7 @@ function SignalModal({ signal, onClose }: {
         <div className="max-h-[50vh] overflow-auto">
           {isLoading ? (
             <div className="py-8 text-center text-text-secondary">Cargando...</div>
-          ) : data?.spins && data.spins.length > 0 ? (
+          ) : data?.plays && data.plays.length > 0 ? (
             <table className="w-full text-sm">
               <thead className="sticky top-0 bg-bg-card">
                 <tr className="border-b border-border">
@@ -408,7 +408,7 @@ function SignalModal({ signal, onClose }: {
                 </tr>
               </thead>
               <tbody>
-                {data.spins.map((s: any, i: number) => {
+                {data.plays.map((s: any, i: number) => {
                   const time = s.timestamp ? s.timestamp.split(" ")[1] ?? s.timestamp : "—"
                   const colorClass = s.color === "Red" ? "bg-roulette-red" : s.color === "Black" ? "bg-roulette-black" : "bg-roulette-green"
                   return (

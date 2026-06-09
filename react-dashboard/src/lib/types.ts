@@ -102,7 +102,7 @@ export interface GlobalAnalysisData {
 }
 
 export interface SignalDetail {
-  spins: SpinRecord[]
+  plays: SpinRecord[]
 }
 
 export type ViewMode = "list" | "grid"
