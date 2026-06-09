@@ -1,7 +1,7 @@
 # Graph Report - Bot_Stake_Recolector  (2026-06-08)
 
 ## Corpus Check
-- 91 files · ~110,660 words
+- 91 files · ~110,703 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `8d700e29`
+- Built from commit: `167d3e38`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -840,7 +840,7 @@ Cohesion: 0.50
 Nodes (4): bindMethods(), constructor(), I(), ue()
 
 ## Knowledge Gaps
-- **130 isolated node(s):** `TABLE_NAMES`, `AnalysisTab`, `DOZEN_ZONES`, `COLUMN_ZONES`, `ROULETTE_LAYOUT` (+125 more)
+- **130 isolated node(s):** `DOZEN_ZONES`, `COLUMN_ZONES`, `ROULETTE_LAYOUT`, `TABLE_NAMES`, `TABLE_NAMES` (+125 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -855,7 +855,7 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.132) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `$()` (e.g. with `ak()` and `tk()`) actually correct?**
   _`$()` has 2 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `TABLE_NAMES`, `AnalysisTab`, `DOZEN_ZONES` to the rest of the system?**
+- **What connects `DOZEN_ZONES`, `COLUMN_ZONES`, `ROULETTE_LAYOUT` to the rest of the system?**
   _289 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.09716599190283401 - nodes in this community are weakly interconnected._
