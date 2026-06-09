@@ -14,39 +14,34 @@
     "ast_hash": "c7fd5b2b96c4dd635ce95c7108333576",
     "semantic_hash": "c7fd5b2b96c4dd635ce95c7108333576"
   },
-  "bot_ruleta/build_exe.py": {
-    "mtime": 1778271663.1948578,
-    "ast_hash": "e7ca12815cd2ee67ffdac17dd434c648",
-    "semantic_hash": "e7ca12815cd2ee67ffdac17dd434c648"
-  },
   "bot_ruleta/config.py": {
-    "mtime": 1780808226.71174,
-    "ast_hash": "4a686b91a5b34e2eab8d493fc2a21b96",
+    "mtime": 1780855352.3634882,
+    "ast_hash": "cfadb93b35431f0a069eddabb927d938",
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/app.py": {
-    "mtime": 1780811130.380774,
-    "ast_hash": "3d7a40a005cc04e45926dadab0468e31",
+    "mtime": 1780968386.6269028,
+    "ast_hash": "c039d2a7a704c2513c8c5193976f802f",
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/analisis.js": {
-    "mtime": 1780756760.184407,
-    "ast_hash": "51b9837cbf29eeb5d8c14d0bb625649d",
+    "mtime": 1780967043.4400337,
+    "ast_hash": "9933c4e0eaa16028429400c2acd32d8b",
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/app.js": {
-    "mtime": 1780716881.2552402,
-    "ast_hash": "c26537bd211dc5781a78e9a7ea57d762",
-    "semantic_hash": "c26537bd211dc5781a78e9a7ea57d762"
+    "mtime": 1780967043.4410431,
+    "ast_hash": "06c86c8988d4d81a5f6ef93629ae7a5d",
+    "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/mesa.js": {
-    "mtime": 1780756742.9165876,
-    "ast_hash": "6ee2e009cc15ecb5d3f0be0df970061a",
+    "mtime": 1780967043.4541514,
+    "ast_hash": "a5ad4aebf784b1c142042108834d4463",
     "semantic_hash": ""
   },
   "bot_ruleta/db.py": {
-    "mtime": 1780811093.4997072,
-    "ast_hash": "d1c0724e1342a42de949472947e7ea50",
+    "mtime": 1780855352.3705213,
+    "ast_hash": "805b9e65b4f9f1a0da97a62b36fbe862",
     "semantic_hash": ""
   },
   "bot_ruleta/debug_logger.py": {
@@ -55,9 +50,9 @@
     "semantic_hash": ""
   },
   "bot_ruleta/driver.py": {
-    "mtime": 1778273556.5576642,
-    "ast_hash": "6676aed9b602ad6f891849c4a51c1287",
-    "semantic_hash": "6676aed9b602ad6f891849c4a51c1287"
+    "mtime": 1780855352.382654,
+    "ast_hash": "0852367c7c3fbf97b9487b86e1b3e995",
+    "semantic_hash": ""
   },
   "bot_ruleta/gui_app.py": {
     "mtime": 1780806522.338242,
@@ -65,28 +60,28 @@
     "semantic_hash": ""
   },
   "bot_ruleta/helpers.py": {
-    "mtime": 1777255522.5613182,
-    "ast_hash": "b5d7081fc8d0917e3a2ed23914247d88",
-    "semantic_hash": "b5d7081fc8d0917e3a2ed23914247d88"
+    "mtime": 1780855352.3951283,
+    "ast_hash": "a7b5adcc80fc31946c4be5748b6509fd",
+    "semantic_hash": ""
   },
   "bot_ruleta/iframe.py": {
-    "mtime": 1777222611.4918106,
-    "ast_hash": "d066ecdb914499a141797bd806dc9dbf",
-    "semantic_hash": "d066ecdb914499a141797bd806dc9dbf"
+    "mtime": 1780855352.3971407,
+    "ast_hash": "d895b9f06415f43117ec5a467bb4bd6f",
+    "semantic_hash": ""
   },
   "bot_ruleta/launcher.py": {
-    "mtime": 1780811146.0243616,
-    "ast_hash": "c93daf7437d4108a20e60f500f4905b0",
+    "mtime": 1780855352.399162,
+    "ast_hash": "0bcdaedca34be8520314bee4650a6563",
     "semantic_hash": ""
   },
   "bot_ruleta/lobby.py": {
-    "mtime": 1777255522.5633273,
-    "ast_hash": "b5807fb5527915c47575fc245698999e",
-    "semantic_hash": "b5807fb5527915c47575fc245698999e"
+    "mtime": 1780855352.4016874,
+    "ast_hash": "255bef4402a9594c8d25e5289207074a",
+    "semantic_hash": ""
   },
   "bot_ruleta/logic.py": {
-    "mtime": 1780810849.499679,
-    "ast_hash": "214742763df4f3e3805b9ffa202d4871",
+    "mtime": 1780855352.4033973,
+    "ast_hash": "147247fe196efc964afa5fb89cf2b4eb",
     "semantic_hash": ""
   },
   "bot_ruleta/run.py": {
@@ -95,39 +90,24 @@
     "semantic_hash": "c45dad9a02ab13338fa254133e82c087"
   },
   "bot_ruleta/scan_lobby_ids.py": {
-    "mtime": 1780807348.9166052,
-    "ast_hash": "b8fc319ed2dc83c3c506bdb26b21f48f",
+    "mtime": 1780855352.408928,
+    "ast_hash": "6f557107c855e101cc08abb145cc4c2b",
     "semantic_hash": ""
   },
   "bot_ruleta/scanner.py": {
-    "mtime": 1780807341.7672243,
-    "ast_hash": "377ac5b2c324cba71fd23e17bffe24d0",
+    "mtime": 1780855352.41093,
+    "ast_hash": "8110702fbfdf29103d25eb3a4aebc37d",
     "semantic_hash": ""
   },
   "bot_ruleta/updater.py": {
-    "mtime": 1780811157.784582,
-    "ast_hash": "3cd4e04a6520c7070aee83c198bc47e1",
+    "mtime": 1780856119.0154064,
+    "ast_hash": "da69797aa8fc64893995380bb1c2986b",
     "semantic_hash": ""
-  },
-  "gen_icon.py": {
-    "mtime": 1778213302.031068,
-    "ast_hash": "fcaf0a51a4c4b342d76aa00ca3b19481",
-    "semantic_hash": "fcaf0a51a4c4b342d76aa00ca3b19481"
   },
   "install_ubuntu.sh": {
     "mtime": 1773734392.0983102,
     "ast_hash": "9bc16545d274d9532b16b676aa286c41",
     "semantic_hash": "9bc16545d274d9532b16b676aa286c41"
-  },
-  "publish.py": {
-    "mtime": 1778269065.6590137,
-    "ast_hash": "7347ce551a7691ee2a37c106e54a81f0",
-    "semantic_hash": "7347ce551a7691ee2a37c106e54a81f0"
-  },
-  "verify_number_delays.py": {
-    "mtime": 1780760053.8361413,
-    "ast_hash": "b21827dd437b8d0e0b9646826fddfafa",
-    "semantic_hash": ""
   },
   "bot_ruleta/diagnostics/__init__.py": {
     "mtime": 1780806522.317046,
@@ -135,23 +115,23 @@
     "semantic_hash": ""
   },
   "bot_ruleta/diagnostics/crash_report.py": {
-    "mtime": 1780811121.7681742,
-    "ast_hash": "1b974ca2e9663cd3ecd3aa2a1430928b",
+    "mtime": 1780812121.8881824,
+    "ast_hash": "78feb46134e20f0f2ae389774354b687",
     "semantic_hash": ""
   },
   "bot_ruleta/diagnostics/logger.py": {
-    "mtime": 1780811127.4618142,
+    "mtime": 1780812121.8922143,
     "ast_hash": "ff5a191be87ccc1906d22a4731c15b28",
     "semantic_hash": ""
   },
   "bot_ruleta/diagnostics/screenshots.py": {
-    "mtime": 1780811125.7535288,
+    "mtime": 1780812121.8932188,
     "ast_hash": "1854ea2855bc4f9f40d1f8a345e8cff9",
     "semantic_hash": ""
   },
   "bot_ruleta/diagnostics/system_info.py": {
-    "mtime": 1780811123.6796627,
-    "ast_hash": "c866aa8c7b033280bd70fba83a53802e",
+    "mtime": 1780812121.8942113,
+    "ast_hash": "ec0159004092b4306f99b1a09bf5401e",
     "semantic_hash": ""
   },
   "bot_ruleta/gui/__init__.py": {
@@ -160,8 +140,8 @@
     "semantic_hash": ""
   },
   "bot_ruleta/gui/app.py": {
-    "mtime": 1780811028.8445625,
-    "ast_hash": "f15d43920d82ed265239575b0f5a958a",
+    "mtime": 1780855352.385036,
+    "ast_hash": "393f417a2b669c11c24f9b452a0b88d3",
     "semantic_hash": ""
   },
   "bot_ruleta/gui/screens/__init__.py": {
@@ -180,13 +160,13 @@
     "semantic_hash": ""
   },
   "bot_ruleta/gui/screens/login.py": {
-    "mtime": 1780807343.8545458,
-    "ast_hash": "554251a981e29e7dbf216777c4dcbb74",
+    "mtime": 1780855352.3874543,
+    "ast_hash": "8fa8f1dcfb653fc9b53fc43948652c36",
     "semantic_hash": ""
   },
   "bot_ruleta/gui/screens/prerequisites.py": {
-    "mtime": 1780806522.3370924,
-    "ast_hash": "f1baac9dea7e42c487f6a36680c722a9",
+    "mtime": 1780855352.3936172,
+    "ast_hash": "f091e60cb6872ddac1e9fc95f241af35",
     "semantic_hash": ""
   },
   "bot_ruleta/gui/screens/update.py": {
@@ -195,33 +175,258 @@
     "semantic_hash": ""
   },
   "bot_ruleta/thresholds.py": {
-    "mtime": 1780808210.179329,
-    "ast_hash": "ab798ffb0d35fe180b43ea72568b6fca",
+    "mtime": 1780812121.908357,
+    "ast_hash": "7ac3db9a1a5aa4fac73c874796f227ca",
     "semantic_hash": ""
   },
   "bot_ruleta/backtest.py": {
-    "mtime": 1780810241.7773926,
-    "ast_hash": "58e42d2292da7cec7f9837cd8da7a827",
+    "mtime": 1780856119.0123627,
+    "ast_hash": "60e7865e644764dd178d355d902fc4b2",
     "semantic_hash": ""
   },
   "bot_ruleta/logic_helpers.py": {
-    "mtime": 1780810454.6999943,
-    "ast_hash": "2a49b35a2e4eeedbb3cda2eaf1cbe43c",
+    "mtime": 1780812121.9013536,
+    "ast_hash": "d3aedb06851d64afac1a3dc800e38882",
     "semantic_hash": ""
   },
   "bot_ruleta/telegram.py": {
-    "mtime": 1780810841.8961897,
-    "ast_hash": "dfdc742c0c779e351fee7e4e9f9799de",
+    "mtime": 1780855352.4129481,
+    "ast_hash": "8541a3ade585c1d6556d3a54db23630e",
     "semantic_hash": ""
   },
   "bot_ruleta/tunnel.py": {
-    "mtime": 1780811091.6849875,
-    "ast_hash": "4316bdb4ca582e2b2e67c5e20aff7717",
+    "mtime": 1780857919.9046385,
+    "ast_hash": "9484c07053afc112efbffa5c646da5e9",
     "semantic_hash": ""
   },
   "bot_ruleta/paths.py": {
-    "mtime": 1780811075.4040143,
-    "ast_hash": "aac0b3a7046c248aecaf02a6288e9157",
+    "mtime": 1780812121.9023523,
+    "ast_hash": "9e7aa6e0769e11101032192e15ae0707",
+    "semantic_hash": ""
+  },
+  "scripts/build_exe.py": {
+    "mtime": 1780855352.4533558,
+    "ast_hash": "d48f6e7ff60ca4cbbffd827fe9c02084",
+    "semantic_hash": ""
+  },
+  "scripts/gen_icon.py": {
+    "mtime": 1780855352.4579127,
+    "ast_hash": "b93fb2d2f5239af9a80ce89af7cda434",
+    "semantic_hash": ""
+  },
+  "scripts/publish.py": {
+    "mtime": 1780855352.4598968,
+    "ast_hash": "21057949cd201cfd5e498a41e76df5b3",
+    "semantic_hash": ""
+  },
+  "scripts/verify_number_delays.py": {
+    "mtime": 1780855352.4608994,
+    "ast_hash": "ce0e309171814b66f2b58b1a5eb8fe23",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/tests/__init__.py": {
+    "mtime": 1780855352.4141848,
+    "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/tests/test_logic.py": {
+    "mtime": 1780855352.4167054,
+    "ast_hash": "13e788898901165c6e36526d187a2e5d",
+    "semantic_hash": ""
+  },
+  ".github/workflows/tests.yml": {
+    "mtime": 1780856119.0103426,
+    "ast_hash": "b79fe0605d6cde4555f51a22431f4683",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/tests/test_db.py": {
+    "mtime": 1780872995.4814014,
+    "ast_hash": "6f839981a75b2d0b517455881d928c86",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/tests/test_helpers.py": {
+    "mtime": 1780872995.4823973,
+    "ast_hash": "65db0c77966fbeef06bbaefac03bcb72",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/tests/test_telegram_tunnel.py": {
+    "mtime": 1780872995.4834003,
+    "ast_hash": "2b325a0b49a2153e486c89b08dbb26c5",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/tests/test_config_paths.py": {
+    "mtime": 1780872995.479401,
+    "ast_hash": "74b0b0e4824e0b87e6d228068490ec65",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/tests/test_backtest.py": {
+    "mtime": 1780872995.4783993,
+    "ast_hash": "6294107ff68c716048a71f0a418675cd",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/dashboard/static/assets/index-DXkWzDqH.js": {
+    "mtime": 1780967054.499979,
+    "ast_hash": "a812e1c572f048e463ee1fb30afd1039",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/dashboard/static/assets/query-rRwWEUS_.js": {
+    "mtime": 1780968418.174612,
+    "ast_hash": "feb4b3fb0827b961ea2ae47ce16199c1",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/dashboard/static/assets/recharts-CkMf2Xat.js": {
+    "mtime": 1780968418.174612,
+    "ast_hash": "d86f64f1a3c20be1864a1b50f202defc",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/dashboard/static/assets/rolldown-runtime-QTnfLwEv.js": {
+    "mtime": 1780968418.1767924,
+    "ast_hash": "0b9fa1f21df87441aa366e428d1ebb49",
+    "semantic_hash": ""
+  },
+  "react-dashboard/eslint.config.js": {
+    "mtime": 1780966316.9930682,
+    "ast_hash": "0355276bc79439afe3c53e3a2470ca1e",
+    "semantic_hash": ""
+  },
+  "react-dashboard/package.json": {
+    "mtime": 1780966421.0717475,
+    "ast_hash": "d630a5f4dc3c2745985537df7aa39dc2",
+    "semantic_hash": ""
+  },
+  "react-dashboard/src/App.tsx": {
+    "mtime": 1780966667.1925635,
+    "ast_hash": "d96ab67c79ff2864807e20b971ea3b26",
+    "semantic_hash": ""
+  },
+  "react-dashboard/src/components/layout/AppHeader.tsx": {
+    "mtime": 1780966791.574705,
+    "ast_hash": "258e36bb660cabc951965f993903769e",
+    "semantic_hash": ""
+  },
+  "react-dashboard/src/components/layout/LoadingOverlay.tsx": {
+    "mtime": 1780967756.367688,
+    "ast_hash": "0ea7b3eaf9b9da770651b9a25c9a3028",
+    "semantic_hash": ""
+  },
+  "react-dashboard/src/components/overview/TableCard.tsx": {
+    "mtime": 1780966758.6482744,
+    "ast_hash": "60186d65e07aa4aec7620abe90fefec9",
+    "semantic_hash": ""
+  },
+  "react-dashboard/src/components/overview/index.ts": {
+    "mtime": 1780966574.8037848,
+    "ast_hash": "84cf6f6fcae0c9ba7b6656542c9e6c32",
+    "semantic_hash": ""
+  },
+  "react-dashboard/src/components/ui/Tabs.tsx": {
+    "mtime": 1780966751.9774373,
+    "ast_hash": "03dd8fa9b6c1c26e387c37b8403f5c0f",
+    "semantic_hash": ""
+  },
+  "react-dashboard/src/components/ui/shadcn.tsx": {
+    "mtime": 1780966750.2801974,
+    "ast_hash": "d6663674d13db042e0c8898f032c9d2f",
+    "semantic_hash": ""
+  },
+  "react-dashboard/src/hooks/useAlert.ts": {
+    "mtime": 1780966516.5817895,
+    "ast_hash": "79065b30e6ee2dc3626d69ee7b83536d",
+    "semantic_hash": ""
+  },
+  "react-dashboard/src/hooks/useApi.ts": {
+    "mtime": 1780966507.2816584,
+    "ast_hash": "275a2acf5e50b5a665814adcf8648839",
+    "semantic_hash": ""
+  },
+  "react-dashboard/src/hooks/useSSE.ts": {
+    "mtime": 1780966784.408999,
+    "ast_hash": "7ba58c54227c8f60a7ed0a790f04867b",
+    "semantic_hash": ""
+  },
+  "react-dashboard/src/lib/api.ts": {
+    "mtime": 1780966902.0131497,
+    "ast_hash": "392b84c3b54d47b5e3cf18f8099885f4",
+    "semantic_hash": ""
+  },
+  "react-dashboard/src/lib/types.ts": {
+    "mtime": 1780966478.699252,
+    "ast_hash": "ba46f7a9da22a3c5e0daf56818cdb0f5",
+    "semantic_hash": ""
+  },
+  "react-dashboard/src/lib/utils.ts": {
+    "mtime": 1780966745.3005128,
+    "ast_hash": "a72eb490ea85ce922d973629e1426529",
+    "semantic_hash": ""
+  },
+  "react-dashboard/src/main.tsx": {
+    "mtime": 1780966670.5968294,
+    "ast_hash": "95ea812aa356d9825e4abe7a04cb3710",
+    "semantic_hash": ""
+  },
+  "react-dashboard/src/pages/AnalisisGlobal.tsx": {
+    "mtime": 1780966780.1526167,
+    "ast_hash": "e34c2bfdf51b7b49010d3070e0136cfb",
+    "semantic_hash": ""
+  },
+  "react-dashboard/src/pages/MesaDetail.tsx": {
+    "mtime": 1780968372.0456262,
+    "ast_hash": "5217c449a1659cf38ddc6c23871a35e8",
+    "semantic_hash": ""
+  },
+  "react-dashboard/src/pages/Overview.tsx": {
+    "mtime": 1780967764.905494,
+    "ast_hash": "fc14aa4b49661b9a1b04fb954b98abfb",
+    "semantic_hash": ""
+  },
+  "react-dashboard/tsconfig.app.json": {
+    "mtime": 1780966719.1364496,
+    "ast_hash": "d4c1507c07bddd9e88f398d72318bee8",
+    "semantic_hash": ""
+  },
+  "react-dashboard/tsconfig.json": {
+    "mtime": 1780966317.086175,
+    "ast_hash": "a3d39fa780ebff65444de257f291ce6c",
+    "semantic_hash": ""
+  },
+  "react-dashboard/tsconfig.node.json": {
+    "mtime": 1780966317.0970325,
+    "ast_hash": "70bdd0a673bcfc0e828080b306e7c680",
+    "semantic_hash": ""
+  },
+  "react-dashboard/vite.config.ts": {
+    "mtime": 1780967040.2751586,
+    "ast_hash": "887511b2eeb7b8a1adf9c45a920329e8",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/dashboard/static/favicon.svg": {
+    "mtime": 1780966317.2152617,
+    "ast_hash": "7e840862161341271697daa99a40d76b",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/dashboard/static/icons.svg": {
+    "mtime": 1780966317.252966,
+    "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
+    "semantic_hash": ""
+  },
+  "react-dashboard/public/favicon.svg": {
+    "mtime": 1780966317.2152617,
+    "ast_hash": "7e840862161341271697daa99a40d76b",
+    "semantic_hash": ""
+  },
+  "react-dashboard/public/icons.svg": {
+    "mtime": 1780966317.252966,
+    "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/dashboard/static/assets/index-BmHuXXNa.js": {
+    "mtime": 1780968418.174612,
+    "ast_hash": "7088779fd63de007f24af1275828e231",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/dashboard/static/assets/index-Bu-D4V8O.js": {
+    "mtime": 1780967778.6151586,
+    "ast_hash": "52daedee4a0097a99f90ef92357f96be",
     "semantic_hash": ""
   }
 }

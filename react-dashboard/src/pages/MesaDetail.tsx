@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react"
 import { useSearchParams, useNavigate } from "react-router-dom"
 import { useMesaData, useBacktest, useBacktestColor, useBacktestNumber, useMesas } from "@/hooks/useApi"
+import type { BacktestSignal, ColorStreakSignal, NumberDelaySignal } from "@/lib/types"
 import { Card, CardHeader, CardTitle, CardContent, Badge } from "@/components/ui/shadcn"
 import { Tabs, TabsTrigger, TabsContent } from "@/components/ui/Tabs"
 import { cn, getDelaySeverity, getNumberColor, formatTimeAgo } from "@/lib/utils"
@@ -262,9 +263,9 @@ export default function MesaDetailPage() {
 }
 
 function BacktestTabs({ backtest, backtestColor, backtestNumber, threshold }: {
-  backtest: { data?: any[]; isLoading: boolean }
-  backtestColor: { data?: any[]; isLoading: boolean }
-  backtestNumber: { data?: { history?: any[]; active?: any[] } | null; isLoading: boolean }
+  backtest: { data?: BacktestSignal[] | null; isLoading: boolean }
+  backtestColor: { data?: ColorStreakSignal[] | null; isLoading: boolean }
+  backtestNumber: { data?: { history: NumberDelaySignal[]; active: any[] } | null; isLoading: boolean }
   threshold: number
 }) {
   const [tab, setTab] = useState("tercios")

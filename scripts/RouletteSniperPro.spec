@@ -1,18 +1,10 @@
 # -*- mode: python ; coding: utf-8 -*-
-import os
 from PyInstaller.utils.hooks import collect_data_files
 from PyInstaller.utils.hooks import collect_submodules
 from PyInstaller.utils.hooks import collect_all
 from PyInstaller.utils.hooks import copy_metadata
 
-# El spec esta en scripts/, las rutas son relativas al proyecto root
-BASE = os.path.join(os.path.dirname(SPECPATH), '..', 'bot_ruleta')
-
-datas = [
-    (os.path.join(BASE, 'icon.ico'), '.'),
-    (os.path.join(BASE, 'dashboard', 'static'), 'dashboard/static'),
-    (os.path.join(BASE, '..', 'venv', 'Lib', 'site-packages', 'customtkinter'), 'customtkinter'),
-]
+datas = [('C:\\Users\\Bairon Jaramillo\\Documents\\bot_stake\\Bot_Stake_Recolector\\scripts\\..\\bot_ruleta\\icon.ico', '.'), ('C:\\Users\\Bairon Jaramillo\\Documents\\bot_stake\\Bot_Stake_Recolector\\scripts\\..\\bot_ruleta\\dashboard\\static', 'dashboard/static'), ('C:\\Users\\Bairon Jaramillo\\Documents\\bot_stake\\Bot_Stake_Recolector\\venv\\Lib\\site-packages\\customtkinter', 'customtkinter')]
 binaries = []
 hiddenimports = ['undetected_chromedriver', 'selenium', 'PIL', 'urllib', 'tkinter', 'waitress']
 datas += collect_data_files('selenium')
@@ -31,7 +23,7 @@ datas += tmp_ret[0]; binaries += tmp_ret[1]; hiddenimports += tmp_ret[2]
 
 
 a = Analysis(
-    [os.path.join(BASE, 'gui_app.py')],
+    ['C:\\Users\\Bairon Jaramillo\\Documents\\bot_stake\\Bot_Stake_Recolector\\scripts\\..\\bot_ruleta\\gui_app.py'],
     pathex=[],
     binaries=binaries,
     datas=datas,
@@ -64,5 +56,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=[os.path.join(BASE, 'icon.ico')],
+    icon=['C:\\Users\\Bairon Jaramillo\\Documents\\bot_stake\\Bot_Stake_Recolector\\bot_ruleta\\icon.ico'],
 )

@@ -29,7 +29,8 @@ export default function OverviewPage() {
 
   useAlertSound(totalAlerts)
 
-  const isFresh = tables.some((t) => t.last_update_seconds < 60)
+  const isFresh = tables.some((t) => t.last_update_seconds < 300)
+  const hasData = tables.length > 0
 
   const filteredTables = useMemo(() => {
     if (!filterSignals) return tables
@@ -49,7 +50,7 @@ export default function OverviewPage() {
 
   return (
     <div className="flex min-h-screen flex-col">
-      <LoadingOverlay isFresh={isFresh} onBypass={() => {}} />
+      <LoadingOverlay hasData={hasData} isFresh={isFresh} onBypass={() => {}} />
 
       {/* Header */}
       <div className="border-b border-border px-4 py-4 text-center">

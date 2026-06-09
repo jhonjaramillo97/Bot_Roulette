@@ -28,16 +28,16 @@ export const api = {
     fetchJSON<MesaData>(`${API_BASE}/data?mesa=${encodeURIComponent(table)}`),
 
   backtest: (table: string) =>
-    fetchJSON<BacktestSignal[]>(`${API_BASE}/backtest?mesa=${encodeURIComponent(table)}`),
+    fetchJSON<{ history: BacktestSignal[]; mesa: string }>(`${API_BASE}/backtest?mesa=${encodeURIComponent(table)}`)
+      .then(data => data.history ?? []),
 
   backtestColor: (table: string) =>
-    fetchJSON<ColorStreakSignal[]>(`${API_BASE}/backtest_color?mesa=${encodeURIComponent(table)}`),
+    fetchJSON<{ history: ColorStreakSignal[]; mesa: string }>(`${API_BASE}/backtest_color?mesa=${encodeURIComponent(table)}`)
+      .then(data => data.history ?? []),
 
   backtestNumber: (table: string) =>
-    fetchJSON<{
-      history: NumberDelaySignal[]
-      active: { table_name: string; number: number; max_delay: number }[]
-    }>(`${API_BASE}/backtest_number?mesa=${encodeURIComponent(table)}`),
+    fetchJSON<{ history: NumberDelaySignal[]; active_alerts: any[]; mesa: string }>(`${API_BASE}/backtest_number?mesa=${encodeURIComponent(table)}`)
+      .then(data => ({ history: data.history ?? [], active: data.active_alerts ?? [] })),
 
   analisisGlobal: () =>
     fetchJSON<GlobalAnalysisData>(`${API_BASE}/analisis_global`),
