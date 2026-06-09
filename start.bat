@@ -1,0 +1,50 @@
+@echo off
+chcp 65001 >nul 2>&1
+title Roulette Sniper Pro - Launcher
+
+echo.
+echo  =========================================================
+echo   🎰 ROULETTE SNIPER PRO - Launcher 🎰
+echo  =========================================================
+echo.
+
+set "PROJECT_DIR=%~dp0"
+cd /d "%PROJECT_DIR%"
+
+:: Check Node.js
+where node >nul 2>&1
+if %ERRORLEVEL% neq 0 (
+    echo  ❌ Node.js no esta instalado. Instalalo con: winget install OpenJS.NodeJS.LTS
+    pause
+    exit /b 1
+)
+
+:: Step 1: Build React dashboard (if needed)
+echo  [1/3] 🔨 Compilando dashboard React...
+cd /d "%PROJECT_DIR%react-dashboard"
+call npm run build >nul 2>&1
+if %ERRORLEVEL% neq 0 (
+    echo  ❌ Error compilando React. Instalando dependencias...
+    call npm install
+    call npm run build
+)
+
+:: Step 2: Copy build to Flask static
+echo  [2/3] 📦 Copiando build a Flask...
+if not exist "%PROJECT_DIR%bot_ruleta\dashboard\static\assets" mkdir "%PROJECT_DIR%bot_ruleta\dashboard\static\assets"
+copy /Y "%PROJECT_DIR%react-dashboard\dist\index.html" "%PROJECT_DIR%bot_ruleta\dashboard\static\index.html" >nul
+copy /Y "%PROJECT_DIR%react-dashboard\dist\assets\*" "%PROJECT_DIR%bot_ruleta\dashboard\static\assets\" >nul
+
+:: Step 3: Start bot launcher (includes Flask dashboard)
+echo  [3/3] 🚀 Iniciando bot...
+echo.
+echo  =========================================================
+echo   Dashboard React:  http://127.0.0.1:5050
+echo   Dashboard Dev:     http://localhost:5173 (ejecuta npm run dev)
+echo  =========================================================
+echo.
+
+cd /d "%PROJECT_DIR%"
+python -u bot_ruleta\launcher.py
+
+pause

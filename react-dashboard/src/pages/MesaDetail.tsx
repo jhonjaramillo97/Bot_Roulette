@@ -1,9 +1,8 @@
 import { useMemo, useState } from "react"
-import { useSearchParams } from "react-router-dom"
+import { useSearchParams, useNavigate } from "react-router-dom"
 import { useMesaData, useBacktest, useBacktestColor, useBacktestNumber, useMesas } from "@/hooks/useApi"
 import { Card, CardHeader, CardTitle, CardContent, Badge } from "@/components/ui/shadcn"
 import { Tabs, TabsTrigger, TabsContent } from "@/components/ui/Tabs"
-import { Link } from "react-router-dom"
 import { cn, getDelaySeverity, getNumberColor, formatTimeAgo } from "@/lib/utils"
 
 const ZONES = [
@@ -22,12 +21,39 @@ const ROULETTE_LAYOUT = [
   [1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34],
 ]
 
+const TABLE_NAMES: Record<string, string> = {
+  ruleta_latina: "Ruleta Latina",
+  mega_roulette: "Mega Roulette",
+  brazilian_roulette: "Brazilian Roulette",
+  roulette_1: "Roulette 1",
+  roulette_3: "Roulette 3",
+  roulette_macao: "Roulette Macao",
+  roulette_2_extra_time: "Roulette 2 ET",
+  brazilian_mega_roulette: "Brazilian Mega",
+  lucky_6_roulette: "Lucky 6",
+  auto_roulette: "Auto Roulette",
+  stake_roulette: "Stake Roulette",
+  turkish_roulette: "Turkish Roulette",
+  german_roulette: "German Roulette",
+  romanian_roulette: "Romanian Roulette",
+  roulette_italia_tricolore: "Italia Tricolore",
+  russian_roulette: "Russian Roulette",
+  gates_of_olympus_roulette: "Gates of Olympus",
+  turkish_mega_roulette: "Turkish Mega",
+  mega_roulette_3000: "Mega 3000",
+}
+
+function formatTableName(name: string): string {
+  return TABLE_NAMES[name] ?? name.replace(/_/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())
+}
+
 export default function MesaDetailPage() {
   const [searchParams] = useSearchParams()
+  const navigate = useNavigate()
   const table = searchParams.get("mesa") ?? ""
 
   const { data: mesasList } = useMesas()
-  const { data } = useMesaData(table)
+  const { data, isLoading } = useMesaData(table)
   const backtest = useBacktest(table)
   const backtestColor = useBacktestColor(table)
   const backtestNumber = useBacktestNumber(table)
@@ -47,7 +73,18 @@ export default function MesaDetailPage() {
     )
   }, [data, numberDelayThreshold])
 
-  if (!data) {
+  if (!table) {
+    return (
+      <div className="flex min-h-screen items-center justify-center text-text-secondary">
+        <div className="text-center">
+          <p className="text-lg font-medium mb-2">No se especificó una mesa</p>
+          <a href="/" className="text-accent hover:text-accent-hover text-sm">← Volver al Overview</a>
+        </div>
+      </div>
+    )
+  }
+
+  if (isLoading || !data) {
     return (
       <div className="flex min-h-screen items-center justify-center text-text-secondary">
         Cargando datos de la mesa...
@@ -59,19 +96,15 @@ export default function MesaDetailPage() {
     <div className="mx-auto min-h-screen max-w-[900px] px-4 py-4">
       {/* Header */}
       <div className="mb-4 flex items-center gap-3">
-        <Link to="/" className="text-sm font-medium text-accent hover:text-accent-hover">← Volver</Link>
+        <a href="/" className="text-sm font-medium text-accent hover:text-accent-hover">← Volver</a>
         <select
           value={table}
-          onChange={(e) => {
-            const url = new URL(window.location.href)
-            url.searchParams.set("mesa", e.target.value)
-            window.location.href = url.toString()
-          }}
+          onChange={(e) => navigate(`/mesa?mesa=${e.target.value}`)}
           className="rounded-md border border-border bg-bg-card px-3 py-1.5 text-sm text-text"
         >
-          {mesasList?.map((t: string) => (
+          {(mesasList ?? []).map((t: string) => (
             <option key={t} value={t}>
-              {t.replace(/_/g, " ").replace(/\b\w/g, (l: string) => l.toUpperCase())}
+              {formatTableName(t)}
             </option>
           ))}
         </select>
@@ -195,12 +228,7 @@ export default function MesaDetailPage() {
           <CardTitle>Historial de Señales Detectadas</CardTitle>
         </CardHeader>
         <CardContent>
-          <BacktestTabs
-            backtest={backtest}
-            backtestColor={backtestColor}
-            backtestNumber={backtestNumber}
-            threshold={threshold}
-          />
+          <BacktestTabs backtest={backtest} backtestColor={backtestColor} backtestNumber={backtestNumber} threshold={threshold} />
         </CardContent>
       </Card>
 
@@ -233,7 +261,12 @@ export default function MesaDetailPage() {
   )
 }
 
-function BacktestTabs({ backtest, backtestColor, backtestNumber, threshold }: any) {
+function BacktestTabs({ backtest, backtestColor, backtestNumber, threshold }: {
+  backtest: { data?: any[]; isLoading: boolean }
+  backtestColor: { data?: any[]; isLoading: boolean }
+  backtestNumber: { data?: { history?: any[]; active?: any[] } | null; isLoading: boolean }
+  threshold: number
+}) {
   const [tab, setTab] = useState("tercios")
 
   return (

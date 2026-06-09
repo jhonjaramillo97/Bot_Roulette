@@ -86,6 +86,14 @@ def serve_spa():
     return send_from_directory(app.static_folder, 'index.html')
 
 
+@app.errorhandler(404)
+def spa_fallback(e):
+    """Cualquier ruta que no sea /api/* sirve index.html para React Router."""
+    if request.path.startswith('/api/'):
+        return jsonify({"error": "Not found"}), 404
+    return send_from_directory(app.static_folder, 'index.html')
+
+
 @app.route('/api/mesas')
 def get_mesas():
     return jsonify([{"name": t["name"], "value": t["table_name"]} for t in TABLES])
