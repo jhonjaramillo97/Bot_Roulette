@@ -105,18 +105,23 @@ export default function MesaDetailPage() {
       <div className="mb-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
           <Link to="/" className="text-sm font-semibold text-accent hover:text-accent-hover transition-opacity">← Volver</Link>
-          <select
-            value={table}
-            onChange={(e) => navigate(`/mesa?mesa=${e.target.value}`)}
-            className="rounded-md border border-border bg-bg-card px-3 py-1.5 text-sm text-text"
-            aria-label="Seleccionar mesa"
-          >
-            {(mesasList ?? []).map((t: string) => (
-              <option key={t} value={t}>
-                {formatTableName(t)}
-              </option>
-            ))}
-          </select>
+          <div className="relative">
+            <select
+              value={table}
+              onChange={(e) => navigate(`/mesa?mesa=${e.target.value}`)}
+              className="appearance-none rounded-md border border-border bg-bg-card px-3 py-1.5 pr-8 text-sm text-text transition-colors hover:border-border-hover focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+              aria-label="Seleccionar mesa"
+            >
+              {(mesasList ?? []).map((t: string) => (
+                <option key={t} value={t}>
+                  {formatTableName(t)}
+                </option>
+              ))}
+            </select>
+            <svg className="pointer-events-none absolute right-2 top-1/2 h-4 w-4 -translate-y-1/2 text-text-muted" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M4 6l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
           <span className="text-xs text-text-muted">
             {formatTimeAgo(data.last_update_seconds)}
           </span>
