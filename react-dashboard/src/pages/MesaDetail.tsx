@@ -238,7 +238,7 @@ export default function MesaDetailPage() {
       )}
 
       {/* Backtest Section */}
-      <div className="mt-6 rounded-xl border border-border/50 bg-bg-card p-5">
+      <div className="mt-6 rounded-sm border border-border/50 bg-bg-card p-4">
         <BacktestTabs
           backtest={backtest}
           backtestColor={backtestColor}
@@ -338,7 +338,7 @@ function BacktestTabs({ backtest, backtestColor, backtestNumber, numberGrid, num
       <Tabs value={tab} onValueChange={setTab}>
         {/* Tercios */}
         {tab === "tercios" && (
-          <div className="max-h-[400px] overflow-auto rounded-md border border-border/50">
+          <div className="max-h-[400px] overflow-auto border border-border/50">
             <table className="w-full text-sm">
               <thead className="sticky top-0 bg-bg-card/95 backdrop-blur-sm">
                 <tr>
@@ -368,7 +368,7 @@ function BacktestTabs({ backtest, backtestColor, backtestNumber, numberGrid, num
 
         {/* Colores */}
         {tab === "colores" && (
-          <div className="max-h-[400px] overflow-auto rounded-md border border-border/50">
+          <div className="max-h-[400px] overflow-auto border border-border/50">
             <table className="w-full text-sm">
               <thead className="sticky top-0 bg-bg-card/95 backdrop-blur-sm">
                 <tr>
@@ -404,7 +404,7 @@ function BacktestTabs({ backtest, backtestColor, backtestNumber, numberGrid, num
         {tab === "numeros" && (
           <div>
             {numberGrid && <NumberGrid grid={numberGrid} />}
-            <div className="mt-4 max-h-[400px] overflow-auto rounded-md border border-border/50">
+            <div className="mt-4 max-h-[400px] overflow-auto border border-border/50">
               <table className="w-full text-sm">
                 <thead className="sticky top-0 bg-bg-card/95 backdrop-blur-sm">
                   <tr>

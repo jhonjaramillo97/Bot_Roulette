@@ -2,7 +2,6 @@ import { memo } from "react"
 import type { TableData } from "@/lib/types"
 import { cn, getDelaySeverity, formatTimeAgo, getZoneLabel, getNumberColor } from "@/lib/utils"
 import { Badge } from "@/components/ui/shadcn"
-import { Link } from "react-router-dom"
 
 function getSeverityClasses(severity: string) {
   switch (severity) {
@@ -74,8 +73,9 @@ export const TableCard = memo(function TableCard({
 
   return (
     <div
+      onClick={() => onNameClick?.(table.table_name)}
       className={cn(
-        "group rounded-sm border border-border bg-bg-card shadow-sm transition-colors hover:border-border-hover hover:bg-bg-card-hover",
+        "group cursor-pointer rounded-sm border border-border bg-bg-card shadow-sm transition-colors hover:border-border-hover hover:bg-bg-card-hover",
         viewMode === "grid" && "hover:-translate-y-0.5 hover:shadow-lg hover:shadow-black/20",
         hasAnyAlert && "border-l-2",
         getSeverityClasses(hasAnyAlert ? maxSeverity : "safe"),
@@ -84,7 +84,7 @@ export const TableCard = memo(function TableCard({
     >
       {/* Header */}
       <button
-        onClick={onToggle}
+        onClick={(e) => { e.stopPropagation(); onToggle() }}
         className="flex w-full items-center justify-between px-2.5 py-1.5 text-left"
       >
         <div className="flex items-center gap-1.5 min-w-0">
@@ -105,7 +105,7 @@ export const TableCard = memo(function TableCard({
         <div className="flex items-center gap-1 shrink-0">
           {hasColorStreak && table.color_streak && (
             <Badge variant={table.color_streak.color === "Red" ? "red" : "black"} className="text-[9px] px-1 py-0 leading-tight">
-              {table.color_streak.color === "Red" ? "R" : "B"}{table.color_streak.streak}
+              {table.color_streak.color === "Red" ? "R" : "N"}{table.color_streak.streak}
             </Badge>
           )}
           {topAlertNums.length > 0 && topAlertNums.map(([num, delay]) => {
@@ -168,8 +168,8 @@ export const TableCard = memo(function TableCard({
           })}
         </div>
 
-        {/* Footer: last numbers + link */}
-        <div className="flex items-center justify-between border-t border-border/50 pt-1.5 mt-1.5">
+        {/* Footer: last numbers */}
+        <div className="flex items-center justify-center border-t border-border/50 pt-1.5 mt-1.5">
           <div className="flex items-center gap-0.5">
             {table.last_10?.slice(0, 8).map((spin, i) => (
               <span
@@ -187,12 +187,6 @@ export const TableCard = memo(function TableCard({
               </span>
             ))}
           </div>
-          <Link
-            to={`/mesa?mesa=${table.table_name}`}
-            className="text-[10px] font-medium text-text-muted transition-colors hover:text-accent"
-          >
-            Abrir →
-          </Link>
         </div>
       </div>
     </div>

@@ -101,7 +101,7 @@ export function MesaPopup({ tableName, onClose }: Props) {
             {topNumbers && topNumbers.length > 0 && (
               <div className="mb-3 rounded-sm border border-border/30 bg-black/20 p-3">
                 <div className="mb-2 text-[9px] font-semibold uppercase tracking-wider text-text-muted">Mayores Retrasos por Número</div>
-                <div className="flex flex-wrap gap-1.5">
+                <div className="flex flex-wrap gap-1.5 justify-center">
                   {topNumbers.map(({ num, delay }) => {
                     const color = getNumberColor(num)
                     const severity = getDelaySeverity(delay, data.number_delay_threshold)
