@@ -112,18 +112,21 @@ export const TableCard = memo(function TableCard({
             const numColor = getNumberColor(num)
             const sev = getDelaySeverity(delay, 50)
             return (
-              <span
-                key={num}
-                className={cn(
-                  "flex h-4 w-4 items-center justify-center rounded-full text-[8px] font-bold text-white",
-                  numColor === "red" && "bg-roulette-red",
-                  numColor === "black" && "bg-roulette-black border border-white/15",
-                  numColor === "green" && "bg-roulette-green",
-                  sev === "critical" && "shadow-[0_0_3px_rgba(255,0,0,0.5)]"
-                )}
-                title={`Número ${num} — retraso ${delay}`}
-              >
-                {num}
+              <span key={num} className="group/tip relative flex items-center">
+                <span
+                  className={cn(
+                    "flex h-4 w-4 items-center justify-center rounded-full text-[8px] font-bold text-white cursor-default",
+                    numColor === "red" && "bg-roulette-red",
+                    numColor === "black" && "bg-roulette-black border border-white/15",
+                    numColor === "green" && "bg-roulette-green",
+                    sev === "critical" && "shadow-[0_0_3px_rgba(255,0,0,0.5)]"
+                  )}
+                >
+                  {num}
+                </span>
+                <span className="pointer-events-none absolute -top-7 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-sm border border-border/60 bg-bg-card px-1.5 py-0.5 text-[9px] text-text-secondary opacity-0 shadow-lg transition-opacity group-hover/tip:opacity-100 z-20">
+                  {delay} giros
+                </span>
               </span>
             )
           })}
