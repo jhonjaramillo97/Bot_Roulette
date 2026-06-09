@@ -1,14 +1,7 @@
 import { useMemo } from "react"
 import { useMesaData } from "@/hooks/useApi"
-import { cn, getNumberColor, formatTimeAgo } from "@/lib/utils"
+import { cn, getNumberColor, getDelaySeverity, formatTimeAgo } from "@/lib/utils"
 import { Link } from "react-router-dom"
-
-const ROULETTE_LAYOUT = [
-  [0],
-  [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36],
-  [2, 5, 8, 11, 14, 17, 20, 23, 26, 29, 32, 35],
-  [1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34],
-]
 
 const ZONES = [
   { key: "docena_1", label: "1ª Doc" },
@@ -35,19 +28,19 @@ export function MesaPopup({ tableName, onClose }: Props) {
   const { data } = useMesaData(tableName)
 
   const threshold = data?.threshold ?? 12
-  const numberDelayThreshold = data?.number_delay_threshold ?? 50
 
-  const numberGrid = useMemo(() => {
+  const topNumbers = useMemo(() => {
     if (!data?.number_delays) return null
-    return ROULETTE_LAYOUT.map((row) =>
-      row.map((num) => {
-        const delay = data.number_delays[String(num)] ?? data.number_delays[num] ?? 0
-        const color = getNumberColor(num)
-        const severity = delay >= numberDelayThreshold ? "critical" : delay >= numberDelayThreshold - 5 ? "danger" : delay >= numberDelayThreshold - 10 ? "warn" : "safe"
-        return { num, delay, color, severity }
-      })
-    )
-  }, [data, numberDelayThreshold])
+    const entries: { num: number; delay: number }[] = []
+    for (const [numStr, delay] of Object.entries(data.number_delays)) {
+      const num = Number(numStr)
+      if (isNaN(num) || delay <= 0) continue
+      entries.push({ num, delay })
+    }
+    entries.sort((a, b) => b.delay - a.delay)
+    const maxShow = data.number_alert_numbers?.length > 0 ? Math.max(data.number_alert_numbers.length, 6) : 10
+    return entries.slice(0, maxShow)
+  }, [data])
 
   const hasAnyAlert = (data?.alertas?.length ?? 0) > 0 || (data?.color_streak && data.color_streak.streak >= 5)
 
@@ -92,17 +85,19 @@ export function MesaPopup({ tableName, onClose }: Props) {
               </div>
             )}
 
-            {/* Number grid */}
-            {numberGrid && (
-              <div className="mb-3 flex flex-col items-center gap-1 rounded-sm border border-border/30 bg-black/20 p-3">
-                <div className="mb-1 text-[9px] font-semibold uppercase tracking-wider text-text-muted">Retrasos por Número</div>
-                {numberGrid.map((row, ri) => (
-                  <div key={ri} className="flex gap-[3px]">
-                    {row.map(({ num, delay, color, severity }) => (
+            {/* Top number delays */}
+            {topNumbers && topNumbers.length > 0 && (
+              <div className="mb-3 rounded-sm border border-border/30 bg-black/20 p-3">
+                <div className="mb-2 text-[9px] font-semibold uppercase tracking-wider text-text-muted">Mayores Retrasos por Número</div>
+                <div className="flex flex-wrap gap-1.5">
+                  {topNumbers.map(({ num, delay }) => {
+                    const color = getNumberColor(num)
+                    const severity = getDelaySeverity(delay, data.number_delay_threshold)
+                    return (
                       <div
                         key={num}
                         className={cn(
-                          "flex h-8 w-8 flex-col items-center justify-center rounded-full border text-[10px] font-bold text-white",
+                          "flex h-10 w-10 flex-col items-center justify-center rounded-full border text-[11px] font-bold text-white",
                           color === "red" && "bg-roulette-red border-red-800/40",
                           color === "black" && "bg-roulette-black border-white/20",
                           color === "green" && "bg-roulette-green border-green-800/40",
@@ -112,11 +107,11 @@ export function MesaPopup({ tableName, onClose }: Props) {
                         )}
                       >
                         <span>{num}</span>
-                        <span className="text-[7px] opacity-80 leading-none">{delay}</span>
+                        <span className="text-[8px] opacity-80 leading-none">{delay}</span>
                       </div>
-                    ))}
-                  </div>
-                ))}
+                    )
+                  })}
+                </div>
               </div>
             )}
 

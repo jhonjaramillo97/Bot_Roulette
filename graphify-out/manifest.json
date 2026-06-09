@@ -280,7 +280,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/rolldown-runtime-QTnfLwEv.js": {
-    "mtime": 1781018256.8074262,
+    "mtime": 1781018905.9127352,
     "ast_hash": "0b9fa1f21df87441aa366e428d1ebb49",
     "semantic_hash": ""
   },
@@ -310,8 +310,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/components/overview/TableCard.tsx": {
-    "mtime": 1780973315.4536498,
-    "ast_hash": "04cbab8c8b7a4046fcdeaa3e951cb89d",
+    "mtime": 1781018817.2014754,
+    "ast_hash": "ab61bb10c2246e9e860ee4635bf23e4d",
     "semantic_hash": ""
   },
   "react-dashboard/src/components/overview/index.ts": {
@@ -375,8 +375,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/Overview.tsx": {
-    "mtime": 1780970764.145507,
-    "ast_hash": "5baf14d36d77513080cc0d9eb6ffc52f",
+    "mtime": 1781018863.8507297,
+    "ast_hash": "03924a31f8efd8308aa16af977d41875",
     "semantic_hash": ""
   },
   "react-dashboard/tsconfig.app.json": {
@@ -460,12 +460,12 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/query-BPe0xBFE.js": {
-    "mtime": 1781018256.8054278,
+    "mtime": 1781018905.9092982,
     "ast_hash": "04faa70bf0cdaeaa34d0fc73933f2336",
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/recharts-DMPSVTCT.js": {
-    "mtime": 1781018256.8064258,
+    "mtime": 1781018905.9108074,
     "ast_hash": "81c1764a338cd132daef0ea7aec2f283",
     "semantic_hash": ""
   },
@@ -495,8 +495,18 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/index-C1KQpj1d.js": {
-    "mtime": 1781018256.8054278,
+    "mtime": 1781018283.9125013,
     "ast_hash": "20221959f897eafe75156c9811d88afa",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/dashboard/static/assets/index-CZgB_JEY.js": {
+    "mtime": 1781018905.9092982,
+    "ast_hash": "fcd498bd951f0fe7cf02a4d130058f84",
+    "semantic_hash": ""
+  },
+  "react-dashboard/src/components/overview/MesaPopup.tsx": {
+    "mtime": 1781018887.8343937,
+    "ast_hash": "a498544c797ee84653a988d52f5e0b0a",
     "semantic_hash": ""
   }
 }
