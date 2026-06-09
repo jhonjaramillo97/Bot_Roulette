@@ -20,8 +20,8 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/app.py": {
-    "mtime": 1781022429.5008163,
-    "ast_hash": "896b12f1a5d460c9b94b8025b83688e3",
+    "mtime": 1781033065.1980088,
+    "ast_hash": "19d63479c8b406d874529a66b11d4d9e",
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/analisis.js": {
@@ -280,7 +280,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/rolldown-runtime-QTnfLwEv.js": {
-    "mtime": 1781032145.2060378,
+    "mtime": 1781033152.0557199,
     "ast_hash": "0b9fa1f21df87441aa366e428d1ebb49",
     "semantic_hash": ""
   },
@@ -295,8 +295,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/App.tsx": {
-    "mtime": 1780970736.7145271,
-    "ast_hash": "5604d77a4dbe336cc7af0b6fd3e1d39b",
+    "mtime": 1781033106.957421,
+    "ast_hash": "5d76492e354a05ddafa5ea960d6f2d3a",
     "semantic_hash": ""
   },
   "react-dashboard/src/components/layout/AppHeader.tsx": {
@@ -345,8 +345,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/lib/api.ts": {
-    "mtime": 1780968606.8015163,
-    "ast_hash": "7dc75e9833c2e375662f84ec1c986756",
+    "mtime": 1781033096.4410071,
+    "ast_hash": "b14c3c05d3ecbaf9fa2a4645578229bf",
     "semantic_hash": ""
   },
   "react-dashboard/src/lib/types.ts": {
@@ -460,7 +460,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/query-BPe0xBFE.js": {
-    "mtime": 1781032145.2030396,
+    "mtime": 1781033152.0547204,
     "ast_hash": "04faa70bf0cdaeaa34d0fc73933f2336",
     "semantic_hash": ""
   },
@@ -555,7 +555,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js": {
-    "mtime": 1781032145.2040381,
+    "mtime": 1781033152.0557199,
     "ast_hash": "e8baacc3f66b9f1f0110fe204745ffcf",
     "semantic_hash": ""
   },
@@ -577,6 +577,16 @@
   "bot_ruleta/dashboard/static/assets/index-DoliFxqk.js": {
     "mtime": 1781032145.2030396,
     "ast_hash": "39d1a0f9965b45ee4ca98827ae4ea5e3",
+    "semantic_hash": ""
+  },
+  "bot_ruleta/dashboard/static/assets/index-DMZ33Fa0.js": {
+    "mtime": 1781033152.0537186,
+    "ast_hash": "d405acf9852b1b7154553964387bdd2d",
+    "semantic_hash": ""
+  },
+  "react-dashboard/src/pages/Login.tsx": {
+    "mtime": 1781033136.3993826,
+    "ast_hash": "bda9b4dc396316ba4d2fd883c312f1f8",
     "semantic_hash": ""
   }
 }

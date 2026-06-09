@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { LoginBackground } from "./LoginBackground"
 
 export function LoginPage({ onLogin }: { onLogin: (token: string) => void }) {
   const [token, setToken] = useState("")
@@ -28,8 +29,9 @@ export function LoginPage({ onLogin }: { onLogin: (token: string) => void }) {
   const isValid = token.trim().length > 0
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-[#1a1a1e]">
-      <div className="w-full max-w-[320px] px-4">
+    <div className="relative flex min-h-screen flex-col items-center justify-center bg-[#1a1a1e]">
+      <LoginBackground />
+      <div className="relative z-10 w-full max-w-[320px] px-4">
         <form onSubmit={handleSubmit} className="flex flex-col gap-3">
           <input
             type="password"
