@@ -12,6 +12,24 @@ from bot_ruleta.paths import get_data_dir
 LOGS_DIR = os.path.join(get_data_dir(), "logs")
 os.makedirs(LOGS_DIR, exist_ok=True)
 
+
+def _cleanup_old_logs(max_days=7):
+    """Elimina archivos de log con mas de max_days dias de antigüedad."""
+    try:
+        now = datetime.now()
+        for fname in os.listdir(LOGS_DIR):
+            if not fname.endswith(".log"):
+                continue
+            fpath = os.path.join(LOGS_DIR, fname)
+            mtime = datetime.fromtimestamp(os.path.getmtime(fpath))
+            if (now - mtime).days > max_days:
+                os.remove(fpath)
+    except Exception:
+        pass
+
+
+_cleanup_old_logs()
+
 _LOG_FORMAT = "[%(asctime)s.%(msecs)03d] [%(levelname)-8s] [%(name)s] %(message)s"
 _LOG_DATE_FORMAT = "%Y-%m-%d %H:%M:%S"
 

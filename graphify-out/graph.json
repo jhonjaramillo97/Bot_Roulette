@@ -54,7 +54,7 @@
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L1",
       "id": "bot_ruleta_backtest",
-      "community": 1,
+      "community": 31,
       "norm_label": "backtest.py"
     },
     {
@@ -72,7 +72,7 @@
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L25",
       "id": "bot_ruleta_backtest_backtestsyncengine_init",
-      "community": 5,
+      "community": 69,
       "norm_label": ".__init__()"
     },
     {
@@ -180,7 +180,7 @@
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L129",
       "id": "bot_ruleta_backtest_zonebacktestsync_init",
-      "community": 31,
+      "community": 91,
       "norm_label": ".__init__()"
     },
     {
@@ -225,7 +225,7 @@
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L191",
       "id": "bot_ruleta_backtest_colorbacktestsync",
-      "community": 31,
+      "community": 91,
       "norm_label": "_colorbacktestsync"
     },
     {
@@ -234,7 +234,7 @@
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L194",
       "id": "bot_ruleta_backtest_colorbacktestsync_init",
-      "community": 31,
+      "community": 91,
       "norm_label": ".__init__()"
     },
     {
@@ -243,7 +243,7 @@
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L197",
       "id": "bot_ruleta_backtest_colorbacktestsync_init_state",
-      "community": 31,
+      "community": 91,
       "norm_label": "._init_state()"
     },
     {
@@ -252,7 +252,7 @@
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L203",
       "id": "bot_ruleta_backtest_colorbacktestsync_handle_chain_break",
-      "community": 31,
+      "community": 91,
       "norm_label": "._handle_chain_break()"
     },
     {
@@ -261,7 +261,7 @@
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L210",
       "id": "bot_ruleta_backtest_colorbacktestsync_save_streak",
-      "community": 31,
+      "community": 91,
       "norm_label": "._save_streak()"
     },
     {
@@ -270,7 +270,7 @@
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L220",
       "id": "bot_ruleta_backtest_colorbacktestsync_process_row",
-      "community": 31,
+      "community": 91,
       "norm_label": "._process_row()"
     },
     {
@@ -297,7 +297,7 @@
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L257",
       "id": "bot_ruleta_backtest_numberbacktestsync_init",
-      "community": 31,
+      "community": 91,
       "norm_label": ".__init__()"
     },
     {
@@ -342,7 +342,7 @@
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L1",
       "id": "bot_ruleta_backtest_rationale_1",
-      "community": 1,
+      "community": 31,
       "norm_label": "motores de sincronizacion incremental de backtests. extraido de db.py/logic.py"
     },
     {
@@ -369,7 +369,7 @@
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L192",
       "id": "bot_ruleta_backtest_rationale_192",
-      "community": 31,
+      "community": 91,
       "norm_label": "sincroniza eventos de rachas de rojos/negros consecutivos."
     },
     {
@@ -414,7 +414,7 @@
       "source_file": "bot_ruleta/dashboard/app.py",
       "source_location": "L22",
       "id": "dashboard_app_get_dashboard_threshold",
-      "community": 20,
+      "community": 1,
       "norm_label": "get_dashboard_threshold()"
     },
     {
@@ -441,7 +441,7 @@
       "source_file": "bot_ruleta/dashboard/app.py",
       "source_location": "L64",
       "id": "dashboard_app_calculate_delays",
-      "community": 20,
+      "community": 1,
       "norm_label": "calculate_delays()"
     },
     {
@@ -477,7 +477,7 @@
       "source_file": "bot_ruleta/dashboard/app.py",
       "source_location": "L113",
       "id": "dashboard_app_get_overview",
-      "community": 20,
+      "community": 1,
       "norm_label": "get_overview()"
     },
     {
@@ -486,7 +486,7 @@
       "source_file": "bot_ruleta/dashboard/app.py",
       "source_location": "L187",
       "id": "dashboard_app_get_data",
-      "community": 20,
+      "community": 1,
       "norm_label": "get_data()"
     },
     {
@@ -522,7 +522,7 @@
       "source_file": "bot_ruleta/dashboard/app.py",
       "source_location": "L362",
       "id": "dashboard_app_get_analisis_global",
-      "community": 20,
+      "community": 1,
       "norm_label": "get_analisis_global()"
     },
     {
@@ -558,7 +558,7 @@
       "source_file": "bot_ruleta/dashboard/app.py",
       "source_location": "L543",
       "id": "dashboard_app_build_overview_data",
-      "community": 20,
+      "community": 1,
       "norm_label": "_build_overview_data()"
     },
     {
@@ -567,7 +567,7 @@
       "source_file": "bot_ruleta/dashboard/app.py",
       "source_location": "L23",
       "id": "dashboard_app_rationale_23",
-      "community": 20,
+      "community": 1,
       "norm_label": "lee el threshold de los datos guardados por la gui. fallback al .env"
     },
     {
@@ -585,7 +585,7 @@
       "source_file": "bot_ruleta/dashboard/app.py",
       "source_location": "L65",
       "id": "dashboard_app_rationale_65",
-      "community": 20,
+      "community": 1,
       "norm_label": "calcula los delays de docenas y columnas para una tabla dada (usando logic compa"
     },
     {
@@ -603,7 +603,7 @@
       "source_file": "bot_ruleta/dashboard/app.py",
       "source_location": "L114",
       "id": "dashboard_app_rationale_114",
-      "community": 20,
+      "community": 1,
       "norm_label": "retorna un resumen rapido de todas las mesas: delay maximo y alertas."
     },
     {
@@ -657,7 +657,7 @@
       "source_file": "bot_ruleta/dashboard/app.py",
       "source_location": "L544",
       "id": "dashboard_app_rationale_544",
-      "community": 20,
+      "community": 1,
       "norm_label": "construye los datos del overview como dict (sin jsonify)."
     },
     {
@@ -3645,7 +3645,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L9",
       "id": "assets_index_bn1vdvlw_w",
-      "community": 252,
+      "community": 30,
       "norm_label": "w()"
     },
     {
@@ -5202,7 +5202,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_n",
-      "community": 252,
+      "community": 15,
       "norm_label": "n()"
     },
     {
@@ -5211,7 +5211,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_i",
-      "community": 252,
+      "community": 26,
       "norm_label": "i()"
     },
     {
@@ -5220,7 +5220,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_s",
-      "community": 252,
+      "community": 30,
       "norm_label": "s()"
     },
     {
@@ -5229,7 +5229,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_l",
-      "community": 252,
+      "community": 72,
       "norm_label": "l()"
     },
     {
@@ -5238,7 +5238,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_c",
-      "community": 252,
+      "community": 30,
       "norm_label": "c()"
     },
     {
@@ -5247,7 +5247,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_d",
-      "community": 252,
+      "community": 72,
       "norm_label": "d()"
     },
     {
@@ -5265,7 +5265,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_m",
-      "community": 29,
+      "community": 63,
       "norm_label": "m()"
     },
     {
@@ -5292,7 +5292,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_v",
-      "community": 8,
+      "community": 235,
       "norm_label": "v()"
     },
     {
@@ -5301,7 +5301,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_b",
-      "community": 252,
+      "community": 26,
       "norm_label": "b()"
     },
     {
@@ -5310,7 +5310,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_x",
-      "community": 252,
+      "community": 2,
       "norm_label": "x()"
     },
     {
@@ -5319,7 +5319,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_t",
-      "community": 252,
+      "community": 26,
       "norm_label": "t()"
     },
     {
@@ -5328,7 +5328,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_e",
-      "community": 252,
+      "community": 30,
       "norm_label": "e()"
     },
     {
@@ -5445,7 +5445,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_tostring",
-      "community": 15,
+      "community": 27,
       "norm_label": "tostring()"
     },
     {
@@ -5472,7 +5472,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_se",
-      "community": 8,
+      "community": 235,
       "norm_label": "se()"
     },
     {
@@ -5634,7 +5634,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_we",
-      "community": 24,
+      "community": 21,
       "norm_label": "we()"
     },
     {
@@ -5715,7 +5715,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_r",
-      "community": 252,
+      "community": 15,
       "norm_label": "r()"
     },
     {
@@ -5724,7 +5724,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_o",
-      "community": 252,
+      "community": 235,
       "norm_label": "o()"
     },
     {
@@ -5733,7 +5733,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_at",
-      "community": 41,
+      "community": 252,
       "norm_label": "at()"
     },
     {
@@ -5751,7 +5751,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_ht",
-      "community": 41,
+      "community": 252,
       "norm_label": "ht()"
     },
     {
@@ -5787,7 +5787,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_tt",
-      "community": 41,
+      "community": 24,
       "norm_label": "tt()"
     },
     {
@@ -5796,7 +5796,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_et",
-      "community": 41,
+      "community": 24,
       "norm_label": "et()"
     },
     {
@@ -5805,7 +5805,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_dt",
-      "community": 41,
+      "community": 24,
       "norm_label": "dt()"
     },
     {
@@ -5823,7 +5823,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_u",
-      "community": 252,
+      "community": 63,
       "norm_label": "u()"
     },
     {
@@ -5904,7 +5904,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_an",
-      "community": 66,
+      "community": 252,
       "norm_label": "an()"
     },
     {
@@ -5913,7 +5913,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_jn",
-      "community": 66,
+      "community": 252,
       "norm_label": "jn()"
     },
     {
@@ -5940,7 +5940,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_kn",
-      "community": 252,
+      "community": 15,
       "norm_label": "kn()"
     },
     {
@@ -5949,7 +5949,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_zn",
-      "community": 252,
+      "community": 15,
       "norm_label": "zn()"
     },
     {
@@ -5958,7 +5958,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_qn",
-      "community": 252,
+      "community": 15,
       "norm_label": "qn()"
     },
     {
@@ -5976,7 +5976,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_tr",
-      "community": 252,
+      "community": 32,
       "norm_label": "tr()"
     },
     {
@@ -6255,7 +6255,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_setprototypeof",
-      "community": 33,
+      "community": 235,
       "norm_label": "setprototypeof()"
     },
     {
@@ -6345,7 +6345,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_shouldusestrictiteration",
-      "community": 62,
+      "community": 235,
       "norm_label": "shouldusestrictiteration()"
     },
     {
@@ -6426,7 +6426,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_ji",
-      "community": 235,
+      "community": 15,
       "norm_label": "ji()"
     },
     {
@@ -6444,7 +6444,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_dispatch",
-      "community": 252,
+      "community": 30,
       "norm_label": "dispatch()"
     },
     {
@@ -6453,7 +6453,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_zi",
-      "community": 252,
+      "community": 32,
       "norm_label": "zi()"
     },
     {
@@ -6471,7 +6471,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_qi",
-      "community": 18,
+      "community": 32,
       "norm_label": "qi()"
     },
     {
@@ -6480,7 +6480,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_ea",
-      "community": 18,
+      "community": 32,
       "norm_label": "ea()"
     },
     {
@@ -6507,7 +6507,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_cancel",
-      "community": 252,
+      "community": 15,
       "norm_label": "cancel()"
     },
     {
@@ -6516,7 +6516,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_ia",
-      "community": 18,
+      "community": 32,
       "norm_label": "ia()"
     },
     {
@@ -6768,7 +6768,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_ns",
-      "community": 89,
+      "community": 21,
       "norm_label": "ns()"
     },
     {
@@ -6777,7 +6777,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L1",
       "id": "assets_recharts_pnxljkz_rs",
-      "community": 89,
+      "community": 252,
       "norm_label": "rs()"
     },
     {
@@ -6813,7 +6813,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L4",
       "id": "assets_recharts_pnxljkz_ds",
-      "community": 72,
+      "community": 45,
       "norm_label": "ds()"
     },
     {
@@ -6831,7 +6831,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L4",
       "id": "assets_recharts_pnxljkz_ms",
-      "community": 62,
+      "community": 235,
       "norm_label": "ms()"
     },
     {
@@ -6858,7 +6858,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L4",
       "id": "assets_recharts_pnxljkz_ls",
-      "community": 235,
+      "community": 62,
       "norm_label": "ls()"
     },
     {
@@ -6921,7 +6921,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L4",
       "id": "assets_recharts_pnxljkz_ys",
-      "community": 252,
+      "community": 30,
       "norm_label": "ys()"
     },
     {
@@ -6993,7 +6993,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L4",
       "id": "assets_recharts_pnxljkz_ac",
-      "community": 235,
+      "community": 62,
       "norm_label": "ac()"
     },
     {
@@ -7047,7 +7047,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L4",
       "id": "assets_recharts_pnxljkz_mc",
-      "community": 235,
+      "community": 62,
       "norm_label": "mc()"
     },
     {
@@ -7065,7 +7065,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L4",
       "id": "assets_recharts_pnxljkz_gc",
-      "community": 62,
+      "community": 66,
       "norm_label": "gc()"
     },
     {
@@ -7092,7 +7092,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L4",
       "id": "assets_recharts_pnxljkz_reducer",
-      "community": 8,
+      "community": 235,
       "norm_label": "reducer()"
     },
     {
@@ -7128,7 +7128,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L4",
       "id": "assets_recharts_pnxljkz_wc",
-      "community": 62,
+      "community": 66,
       "norm_label": "wc()"
     },
     {
@@ -7137,7 +7137,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L4",
       "id": "assets_recharts_pnxljkz_kc",
-      "community": 8,
+      "community": 66,
       "norm_label": "kc()"
     },
     {
@@ -7173,7 +7173,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L4",
       "id": "assets_recharts_pnxljkz_zc",
-      "community": 24,
+      "community": 21,
       "norm_label": "zc()"
     },
     {
@@ -7218,7 +7218,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L4",
       "id": "assets_recharts_pnxljkz_ol",
-      "community": 252,
+      "community": 63,
       "norm_label": "ol()"
     },
     {
@@ -7299,7 +7299,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L4",
       "id": "assets_recharts_pnxljkz_vl",
-      "community": 57,
+      "community": 24,
       "norm_label": "vl()"
     },
     {
@@ -7308,7 +7308,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L4",
       "id": "assets_recharts_pnxljkz_yl",
-      "community": 57,
+      "community": 24,
       "norm_label": "yl()"
     },
     {
@@ -7389,7 +7389,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L4",
       "id": "assets_recharts_pnxljkz_eu",
-      "community": 252,
+      "community": 63,
       "norm_label": "eu()"
     },
     {
@@ -7398,7 +7398,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L4",
       "id": "assets_recharts_pnxljkz_tu",
-      "community": 252,
+      "community": 63,
       "norm_label": "tu()"
     },
     {
@@ -7452,7 +7452,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L4",
       "id": "assets_recharts_pnxljkz_su",
-      "community": 252,
+      "community": 63,
       "norm_label": "su()"
     },
     {
@@ -7461,7 +7461,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L4",
       "id": "assets_recharts_pnxljkz_du",
-      "community": 18,
+      "community": 8,
       "norm_label": "du()"
     },
     {
@@ -7596,7 +7596,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_zd",
-      "community": 29,
+      "community": 44,
       "norm_label": "zd()"
     },
     {
@@ -7614,7 +7614,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_hd",
-      "community": 29,
+      "community": 44,
       "norm_label": "hd()"
     },
     {
@@ -7623,7 +7623,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_y",
-      "community": 252,
+      "community": 26,
       "norm_label": "y()"
     },
     {
@@ -7632,7 +7632,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_w",
-      "community": 252,
+      "community": 26,
       "norm_label": "w()"
     },
     {
@@ -7641,7 +7641,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_k",
-      "community": 252,
+      "community": 26,
       "norm_label": "k()"
     },
     {
@@ -7650,7 +7650,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_j",
-      "community": 252,
+      "community": 26,
       "norm_label": "j()"
     },
     {
@@ -7668,7 +7668,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_wd",
-      "community": 252,
+      "community": 72,
       "norm_label": "wd()"
     },
     {
@@ -7848,7 +7848,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_xf",
-      "community": 2,
+      "community": 26,
       "norm_label": "xf()"
     },
     {
@@ -7911,7 +7911,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_sp",
-      "community": 2,
+      "community": 26,
       "norm_label": "sp()"
     },
     {
@@ -7920,7 +7920,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_cp",
-      "community": 2,
+      "community": 26,
       "norm_label": "cp()"
     },
     {
@@ -7938,7 +7938,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_up",
-      "community": 15,
+      "community": 27,
       "norm_label": "up()"
     },
     {
@@ -7974,7 +7974,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_hp",
-      "community": 15,
+      "community": 27,
       "norm_label": "hp()"
     },
     {
@@ -7983,7 +7983,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_gp",
-      "community": 15,
+      "community": 72,
       "norm_label": "gp()"
     },
     {
@@ -7992,7 +7992,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_vp",
-      "community": 15,
+      "community": 27,
       "norm_label": "vp()"
     },
     {
@@ -8010,7 +8010,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_bp",
-      "community": 15,
+      "community": 27,
       "norm_label": "bp()"
     },
     {
@@ -8019,7 +8019,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_xp",
-      "community": 15,
+      "community": 72,
       "norm_label": "xp()"
     },
     {
@@ -8046,7 +8046,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_zp",
-      "community": 15,
+      "community": 27,
       "norm_label": "zp()"
     },
     {
@@ -8100,7 +8100,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_kp",
-      "community": 15,
+      "community": 72,
       "norm_label": "kp()"
     },
     {
@@ -8154,7 +8154,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_nm",
-      "community": 252,
+      "community": 2,
       "norm_label": "nm()"
     },
     {
@@ -8172,7 +8172,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_am",
-      "community": 252,
+      "community": 15,
       "norm_label": "am()"
     },
     {
@@ -8199,7 +8199,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_cm",
-      "community": 252,
+      "community": 15,
       "norm_label": "cm()"
     },
     {
@@ -8217,7 +8217,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_dm",
-      "community": 15,
+      "community": 27,
       "norm_label": "dm()"
     },
     {
@@ -8226,7 +8226,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_fm",
-      "community": 15,
+      "community": 27,
       "norm_label": "fm()"
     },
     {
@@ -8235,7 +8235,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_pm",
-      "community": 252,
+      "community": 2,
       "norm_label": "pm()"
     },
     {
@@ -8253,7 +8253,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_hm",
-      "community": 15,
+      "community": 27,
       "norm_label": "hm()"
     },
     {
@@ -8289,7 +8289,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_xm",
-      "community": 15,
+      "community": 27,
       "norm_label": "xm()"
     },
     {
@@ -8433,7 +8433,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_lh",
-      "community": 252,
+      "community": 2,
       "norm_label": "lh()"
     },
     {
@@ -8469,7 +8469,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_ph",
-      "community": 2,
+      "community": 30,
       "norm_label": "ph()"
     },
     {
@@ -8784,7 +8784,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_yg",
-      "community": 252,
+      "community": 26,
       "norm_label": "yg()"
     },
     {
@@ -9234,7 +9234,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_sx",
-      "community": 29,
+      "community": 44,
       "norm_label": "sx()"
     },
     {
@@ -9243,7 +9243,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_cx",
-      "community": 29,
+      "community": 44,
       "norm_label": "cx()"
     },
     {
@@ -9252,7 +9252,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_lx",
-      "community": 29,
+      "community": 44,
       "norm_label": "lx()"
     },
     {
@@ -9279,7 +9279,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_vx",
-      "community": 96,
+      "community": 2,
       "norm_label": "vx()"
     },
     {
@@ -9288,7 +9288,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_yx",
-      "community": 96,
+      "community": 2,
       "norm_label": "yx()"
     },
     {
@@ -9297,7 +9297,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_bx",
-      "community": 29,
+      "community": 44,
       "norm_label": "bx()"
     },
     {
@@ -9306,7 +9306,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_xx",
-      "community": 29,
+      "community": 44,
       "norm_label": "xx()"
     },
     {
@@ -9315,7 +9315,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_wx",
-      "community": 29,
+      "community": 44,
       "norm_label": "wx()"
     },
     {
@@ -9378,7 +9378,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_setchartdata",
-      "community": 8,
+      "community": 235,
       "norm_label": "setchartdata()"
     },
     {
@@ -9405,7 +9405,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_pc",
-      "community": 8,
+      "community": 252,
       "norm_label": "pc()"
     },
     {
@@ -9603,7 +9603,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_lw",
-      "community": 72,
+      "community": 45,
       "norm_label": "lw()"
     },
     {
@@ -9657,7 +9657,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_rt",
-      "community": 72,
+      "community": 45,
       "norm_label": "rt()"
     },
     {
@@ -9666,7 +9666,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_it",
-      "community": 72,
+      "community": 45,
       "norm_label": "it()"
     },
     {
@@ -9702,7 +9702,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L31",
       "id": "assets_recharts_pnxljkz_ut",
-      "community": 72,
+      "community": 45,
       "norm_label": "ut()"
     },
     {
@@ -9711,7 +9711,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L33",
       "id": "assets_recharts_pnxljkz_wt",
-      "community": 72,
+      "community": 45,
       "norm_label": "wt()"
     },
     {
@@ -9720,7 +9720,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L33",
       "id": "assets_recharts_pnxljkz_jt",
-      "community": 41,
+      "community": 252,
       "norm_label": "jt()"
     },
     {
@@ -9738,7 +9738,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L33",
       "id": "assets_recharts_pnxljkz_addradiusaxis",
-      "community": 8,
+      "community": 235,
       "norm_label": "addradiusaxis()"
     },
     {
@@ -9756,7 +9756,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L33",
       "id": "assets_recharts_pnxljkz_addangleaxis",
-      "community": 8,
+      "community": 235,
       "norm_label": "addangleaxis()"
     },
     {
@@ -9801,7 +9801,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L33",
       "id": "assets_recharts_pnxljkz_rd",
-      "community": 252,
+      "community": 30,
       "norm_label": "rd()"
     },
     {
@@ -9909,7 +9909,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L33",
       "id": "assets_recharts_pnxljkz_gd",
-      "community": 252,
+      "community": 63,
       "norm_label": "gd()"
     },
     {
@@ -9936,7 +9936,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L33",
       "id": "assets_recharts_pnxljkz_do",
-      "community": 252,
+      "community": 72,
       "norm_label": "do()"
     },
     {
@@ -9981,7 +9981,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L33",
       "id": "assets_recharts_pnxljkz_ak",
-      "community": 18,
+      "community": 8,
       "norm_label": "ak()"
     },
     {
@@ -9990,7 +9990,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L33",
       "id": "assets_recharts_pnxljkz_ok",
-      "community": 18,
+      "community": 8,
       "norm_label": "ok()"
     },
     {
@@ -9999,7 +9999,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L33",
       "id": "assets_recharts_pnxljkz_sk",
-      "community": 18,
+      "community": 8,
       "norm_label": "sk()"
     },
     {
@@ -10008,7 +10008,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L33",
       "id": "assets_recharts_pnxljkz_ck",
-      "community": 21,
+      "community": 41,
       "norm_label": "ck()"
     },
     {
@@ -10017,7 +10017,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L33",
       "id": "assets_recharts_pnxljkz_lk",
-      "community": 21,
+      "community": 41,
       "norm_label": "lk()"
     },
     {
@@ -10026,7 +10026,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L33",
       "id": "assets_recharts_pnxljkz_uk",
-      "community": 18,
+      "community": 41,
       "norm_label": "uk()"
     },
     {
@@ -10035,7 +10035,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L33",
       "id": "assets_recharts_pnxljkz_dk",
-      "community": 18,
+      "community": 8,
       "norm_label": "dk()"
     },
     {
@@ -10044,7 +10044,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L33",
       "id": "assets_recharts_pnxljkz_fk",
-      "community": 18,
+      "community": 8,
       "norm_label": "fk()"
     },
     {
@@ -10053,7 +10053,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L33",
       "id": "assets_recharts_pnxljkz_pk",
-      "community": 18,
+      "community": 8,
       "norm_label": "pk()"
     },
     {
@@ -10062,7 +10062,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L33",
       "id": "assets_recharts_pnxljkz_gk",
-      "community": 18,
+      "community": 41,
       "norm_label": "gk()"
     },
     {
@@ -10071,7 +10071,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L33",
       "id": "assets_recharts_pnxljkz_vk",
-      "community": 18,
+      "community": 41,
       "norm_label": "vk()"
     },
     {
@@ -10107,7 +10107,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L33",
       "id": "assets_recharts_pnxljkz_render",
-      "community": 18,
+      "community": 8,
       "norm_label": "render()"
     },
     {
@@ -10116,7 +10116,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L33",
       "id": "assets_recharts_pnxljkz_ek",
-      "community": 18,
+      "community": 8,
       "norm_label": "ek()"
     },
     {
@@ -10134,7 +10134,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L33",
       "id": "assets_recharts_pnxljkz_nk",
-      "community": 18,
+      "community": 8,
       "norm_label": "nk()"
     },
     {
@@ -10143,7 +10143,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L33",
       "id": "assets_recharts_pnxljkz_ik",
-      "community": 18,
+      "community": 8,
       "norm_label": "ik()"
     },
     {
@@ -10152,7 +10152,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L33",
       "id": "assets_recharts_pnxljkz_hk",
-      "community": 18,
+      "community": 41,
       "norm_label": "hk()"
     },
     {
@@ -10161,7 +10161,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L33",
       "id": "assets_recharts_pnxljkz_wk",
-      "community": 18,
+      "community": 41,
       "norm_label": "wk()"
     },
     {
@@ -10206,7 +10206,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L33",
       "id": "assets_recharts_pnxljkz_aa",
-      "community": 18,
+      "community": 32,
       "norm_label": "aa()"
     },
     {
@@ -10215,7 +10215,7 @@
       "source_file": "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js",
       "source_location": "L33",
       "id": "assets_recharts_pnxljkz_oa",
-      "community": 18,
+      "community": 32,
       "norm_label": "oa()"
     },
     {
@@ -10440,7 +10440,7 @@
       "source_file": "bot_ruleta/db.py",
       "source_location": "L1",
       "id": "bot_ruleta_db",
-      "community": 5,
+      "community": 92,
       "norm_label": "db.py"
     },
     {
@@ -10449,7 +10449,7 @@
       "source_file": "bot_ruleta/db.py",
       "source_location": "L30",
       "id": "bot_ruleta_db_get_connection",
-      "community": 9,
+      "community": 31,
       "norm_label": "get_connection()"
     },
     {
@@ -10458,7 +10458,7 @@
       "source_file": "bot_ruleta/db.py",
       "source_location": "L30",
       "id": "connection",
-      "community": 9,
+      "community": 31,
       "norm_label": "connection"
     },
     {
@@ -10467,7 +10467,7 @@
       "source_file": "bot_ruleta/db.py",
       "source_location": "L42",
       "id": "bot_ruleta_db_validate_table_name",
-      "community": 5,
+      "community": 23,
       "norm_label": "validate_table_name()"
     },
     {
@@ -10485,7 +10485,7 @@
       "source_file": "bot_ruleta/db.py",
       "source_location": "L54",
       "id": "bot_ruleta_db_init_db",
-      "community": 5,
+      "community": 31,
       "norm_label": "init_db()"
     },
     {
@@ -10557,7 +10557,7 @@
       "source_file": "bot_ruleta/db.py",
       "source_location": "L1",
       "id": "bot_ruleta_db_rationale_1",
-      "community": 5,
+      "community": 92,
       "norm_label": "manejo de base de datos sqlite con tablas separadas por juego."
     },
     {
@@ -10566,7 +10566,7 @@
       "source_file": "bot_ruleta/db.py",
       "source_location": "L31",
       "id": "bot_ruleta_db_rationale_31",
-      "community": 9,
+      "community": 31,
       "norm_label": "retorna la conexion persistente a la bd (inicializa con wal si es necesario)."
     },
     {
@@ -10575,7 +10575,7 @@
       "source_file": "bot_ruleta/db.py",
       "source_location": "L43",
       "id": "bot_ruleta_db_rationale_43",
-      "community": 5,
+      "community": 23,
       "norm_label": "valida que un nombre de tabla sea seguro y exista en la configuracion.     lanz"
     },
     {
@@ -10584,7 +10584,7 @@
       "source_file": "bot_ruleta/db.py",
       "source_location": "L55",
       "id": "bot_ruleta_db_rationale_55",
-      "community": 5,
+      "community": 31,
       "norm_label": "inicializa la base de datos creando las tablas configuradas."
     },
     {
@@ -10683,7 +10683,7 @@
       "source_file": "bot_ruleta/diagnostics/crash_report.py",
       "source_location": "L22",
       "id": "exception",
-      "community": 17,
+      "community": 6,
       "norm_label": "exception"
     },
     {
@@ -10764,7 +10764,7 @@
       "source_file": "bot_ruleta/diagnostics/logger.py",
       "source_location": "L42",
       "id": "logger",
-      "community": 92,
+      "community": 6,
       "norm_label": "logger"
     },
     {
@@ -10836,7 +10836,7 @@
       "source_file": "bot_ruleta/diagnostics/screenshots.py",
       "source_location": "L19",
       "id": "bool",
-      "community": 92,
+      "community": 28,
       "norm_label": "bool"
     },
     {
@@ -10845,7 +10845,7 @@
       "source_file": "bot_ruleta/diagnostics/screenshots.py",
       "source_location": "L24",
       "id": "diagnostics_screenshots_capture_screenshot",
-      "community": 92,
+      "community": 17,
       "norm_label": "capture_screenshot()"
     },
     {
@@ -10854,7 +10854,7 @@
       "source_file": "bot_ruleta/diagnostics/screenshots.py",
       "source_location": "L24",
       "id": "bot_ruleta_diagnostics_screenshots_py_str",
-      "community": 92,
+      "community": 17,
       "norm_label": "str"
     },
     {
@@ -11088,7 +11088,7 @@
       "source_file": "bot_ruleta/gui/app.py",
       "source_location": "L129",
       "id": "gui_app_rouletteapp_cloudflared_watchdog",
-      "community": 30,
+      "community": 3,
       "norm_label": "._cloudflared_watchdog()"
     },
     {
@@ -11124,7 +11124,7 @@
       "source_file": "bot_ruleta/gui/screens/dashboard.py",
       "source_location": "L1",
       "id": "screens_dashboard",
-      "community": 6,
+      "community": 86,
       "norm_label": "dashboard.py"
     },
     {
@@ -11133,7 +11133,7 @@
       "source_file": "bot_ruleta/gui/screens/dashboard.py",
       "source_location": "L12",
       "id": "screens_dashboard_dashboardscreen",
-      "community": 23,
+      "community": 86,
       "norm_label": "dashboardscreen"
     },
     {
@@ -11142,7 +11142,7 @@
       "source_file": "bot_ruleta/gui/screens/dashboard.py",
       "source_location": "L13",
       "id": "screens_dashboard_dashboardscreen_init",
-      "community": 23,
+      "community": 86,
       "norm_label": ".__init__()"
     },
     {
@@ -11151,7 +11151,7 @@
       "source_file": "bot_ruleta/gui/screens/dashboard.py",
       "source_location": "L64",
       "id": "screens_dashboard_dashboardscreen_toggle_logs",
-      "community": 23,
+      "community": 86,
       "norm_label": ".toggle_logs()"
     },
     {
@@ -11160,7 +11160,7 @@
       "source_file": "bot_ruleta/gui/screens/dashboard.py",
       "source_location": "L74",
       "id": "screens_dashboard_dashboardscreen_update_cf_url",
-      "community": 23,
+      "community": 86,
       "norm_label": ".update_cf_url()"
     },
     {
@@ -11169,7 +11169,7 @@
       "source_file": "bot_ruleta/gui/screens/dashboard.py",
       "source_location": "L84",
       "id": "screens_dashboard_dashboardscreen_show_open_button",
-      "community": 23,
+      "community": 86,
       "norm_label": "._show_open_button()"
     },
     {
@@ -11178,7 +11178,7 @@
       "source_file": "bot_ruleta/gui/screens/dashboard.py",
       "source_location": "L87",
       "id": "screens_dashboard_dashboardscreen_copy_url",
-      "community": 23,
+      "community": 86,
       "norm_label": ".copy_url()"
     },
     {
@@ -11187,7 +11187,7 @@
       "source_file": "bot_ruleta/gui/screens/dashboard.py",
       "source_location": "L93",
       "id": "screens_dashboard_dashboardscreen_open_url",
-      "community": 23,
+      "community": 86,
       "norm_label": ".open_url()"
     },
     {
@@ -11196,7 +11196,7 @@
       "source_file": "bot_ruleta/gui/screens/dashboard.py",
       "source_location": "L119",
       "id": "screens_dashboard_dashboardscreen_append_log",
-      "community": 23,
+      "community": 86,
       "norm_label": ".append_log()"
     },
     {
@@ -11205,7 +11205,7 @@
       "source_file": "bot_ruleta/gui/screens/dashboard.py",
       "source_location": "L128",
       "id": "screens_dashboard_dashboardscreen_start_services",
-      "community": 23,
+      "community": 86,
       "norm_label": ".start_services()"
     },
     {
@@ -11214,7 +11214,7 @@
       "source_file": "bot_ruleta/gui/screens/dashboard.py",
       "source_location": "L136",
       "id": "screens_dashboard_dashboardscreen_stop_bot",
-      "community": 23,
+      "community": 86,
       "norm_label": ".stop_bot()"
     },
     {
@@ -11223,7 +11223,7 @@
       "source_file": "bot_ruleta/gui/screens/loading.py",
       "source_location": "L1",
       "id": "screens_loading",
-      "community": 23,
+      "community": 86,
       "norm_label": "loading.py"
     },
     {
@@ -11232,7 +11232,7 @@
       "source_file": "bot_ruleta/gui/screens/loading.py",
       "source_location": "L6",
       "id": "screens_loading_loadingscreen",
-      "community": 23,
+      "community": 86,
       "norm_label": "loadingscreen"
     },
     {
@@ -11241,7 +11241,7 @@
       "source_file": "bot_ruleta/gui/screens/loading.py",
       "source_location": "L7",
       "id": "screens_loading_loadingscreen_init",
-      "community": 23,
+      "community": 86,
       "norm_label": ".__init__()"
     },
     {
@@ -11250,7 +11250,7 @@
       "source_file": "bot_ruleta/gui/screens/loading.py",
       "source_location": "L31",
       "id": "screens_loading_loadingscreen_start_loading",
-      "community": 23,
+      "community": 86,
       "norm_label": ".start_loading()"
     },
     {
@@ -11259,7 +11259,7 @@
       "source_file": "bot_ruleta/gui/screens/loading.py",
       "source_location": "L37",
       "id": "screens_loading_loadingscreen_update_progress",
-      "community": 23,
+      "community": 86,
       "norm_label": ".update_progress()"
     },
     {
@@ -11268,7 +11268,7 @@
       "source_file": "bot_ruleta/gui/screens/login.py",
       "source_location": "L1",
       "id": "screens_login",
-      "community": 32,
+      "community": 86,
       "norm_label": "login.py"
     },
     {
@@ -11277,7 +11277,7 @@
       "source_file": "bot_ruleta/gui/screens/login.py",
       "source_location": "L13",
       "id": "screens_login_resource_path",
-      "community": 32,
+      "community": 86,
       "norm_label": "_resource_path()"
     },
     {
@@ -11286,7 +11286,7 @@
       "source_file": "bot_ruleta/gui/screens/login.py",
       "source_location": "L22",
       "id": "screens_login_loginscreen",
-      "community": 32,
+      "community": 86,
       "norm_label": "loginscreen"
     },
     {
@@ -11295,7 +11295,7 @@
       "source_file": "bot_ruleta/gui/screens/login.py",
       "source_location": "L23",
       "id": "screens_login_loginscreen_init",
-      "community": 32,
+      "community": 86,
       "norm_label": ".__init__()"
     },
     {
@@ -11304,7 +11304,7 @@
       "source_file": "bot_ruleta/gui/screens/login.py",
       "source_location": "L132",
       "id": "screens_login_loginscreen_on_show",
-      "community": 32,
+      "community": 86,
       "norm_label": ".on_show()"
     },
     {
@@ -11313,7 +11313,7 @@
       "source_file": "bot_ruleta/gui/screens/login.py",
       "source_location": "L158",
       "id": "screens_login_loginscreen_update_thresh_lbl",
-      "community": 32,
+      "community": 86,
       "norm_label": "._update_thresh_lbl()"
     },
     {
@@ -11322,7 +11322,7 @@
       "source_file": "bot_ruleta/gui/screens/login.py",
       "source_location": "L161",
       "id": "screens_login_loginscreen_update_color_thresh_lbl",
-      "community": 32,
+      "community": 86,
       "norm_label": "._update_color_thresh_lbl()"
     },
     {
@@ -11331,7 +11331,7 @@
       "source_file": "bot_ruleta/gui/screens/login.py",
       "source_location": "L164",
       "id": "screens_login_loginscreen_update_number_thresh_lbl",
-      "community": 32,
+      "community": 86,
       "norm_label": "._update_number_thresh_lbl()"
     },
     {
@@ -11340,7 +11340,7 @@
       "source_file": "bot_ruleta/gui/screens/login.py",
       "source_location": "L167",
       "id": "screens_login_loginscreen_start_bot",
-      "community": 32,
+      "community": 86,
       "norm_label": ".start_bot()"
     },
     {
@@ -11385,7 +11385,7 @@
       "source_file": "bot_ruleta/gui/screens/prerequisites.py",
       "source_location": "L51",
       "id": "screens_prerequisites_prerequisitesscreen_run_checks",
-      "community": 86,
+      "community": 28,
       "norm_label": ".run_checks()"
     },
     {
@@ -11529,7 +11529,7 @@
       "source_file": "bot_ruleta/launcher.py",
       "source_location": "L1",
       "id": "bot_ruleta_launcher",
-      "community": 30,
+      "community": 3,
       "norm_label": "launcher.py"
     },
     {
@@ -11538,7 +11538,7 @@
       "source_file": "bot_ruleta/launcher.py",
       "source_location": "L24",
       "id": "bot_ruleta_launcher_clear_screen",
-      "community": 30,
+      "community": 3,
       "norm_label": "clear_screen()"
     },
     {
@@ -11547,7 +11547,7 @@
       "source_file": "bot_ruleta/launcher.py",
       "source_location": "L27",
       "id": "bot_ruleta_launcher_render_ui",
-      "community": 30,
+      "community": 3,
       "norm_label": "render_ui()"
     },
     {
@@ -11556,7 +11556,7 @@
       "source_file": "bot_ruleta/launcher.py",
       "source_location": "L46",
       "id": "bot_ruleta_launcher_update_tunnel_url",
-      "community": 30,
+      "community": 3,
       "norm_label": "_update_tunnel_url()"
     },
     {
@@ -11565,7 +11565,7 @@
       "source_file": "bot_ruleta/launcher.py",
       "source_location": "L60",
       "id": "bot_ruleta_launcher_cloudflared_watchdog",
-      "community": 30,
+      "community": 3,
       "norm_label": "cloudflared_watchdog()"
     },
     {
@@ -11574,7 +11574,7 @@
       "source_file": "bot_ruleta/launcher.py",
       "source_location": "L75",
       "id": "bot_ruleta_launcher_track_bot",
-      "community": 30,
+      "community": 3,
       "norm_label": "track_bot()"
     },
     {
@@ -11592,7 +11592,7 @@
       "source_file": "bot_ruleta/launcher.py",
       "source_location": "L28",
       "id": "bot_ruleta_launcher_rationale_28",
-      "community": 30,
+      "community": 3,
       "norm_label": "dibuja la consola limpia y minimalista"
     },
     {
@@ -11601,7 +11601,7 @@
       "source_file": "bot_ruleta/launcher.py",
       "source_location": "L47",
       "id": "bot_ruleta_launcher_rationale_47",
-      "community": 30,
+      "community": 3,
       "norm_label": "actualiza el url del tunel: variable global, telegram, ui."
     },
     {
@@ -11610,7 +11610,7 @@
       "source_file": "bot_ruleta/launcher.py",
       "source_location": "L61",
       "id": "bot_ruleta_launcher_rationale_61",
-      "community": 30,
+      "community": 3,
       "norm_label": "hilo permanente que mantiene cloudflared vivo y actualiza la consola."
     },
     {
@@ -11619,7 +11619,7 @@
       "source_file": "bot_ruleta/launcher.py",
       "source_location": "L76",
       "id": "bot_ruleta_launcher_rationale_76",
-      "community": 30,
+      "community": 3,
       "norm_label": "lee la salida del bot y actualiza la consola minimalista"
     },
     {
@@ -11718,7 +11718,7 @@
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L1",
       "id": "bot_ruleta_logic",
-      "community": 9,
+      "community": 3,
       "norm_label": "logic.py"
     },
     {
@@ -11862,7 +11862,7 @@
       "source_file": "bot_ruleta/logic_helpers.py",
       "source_location": "L1",
       "id": "bot_ruleta_logic_helpers",
-      "community": 87,
+      "community": 20,
       "norm_label": "logic_helpers.py"
     },
     {
@@ -11871,7 +11871,7 @@
       "source_file": "bot_ruleta/logic_helpers.py",
       "source_location": "L12",
       "id": "bot_ruleta_logic_helpers_extract_numero",
-      "community": 87,
+      "community": 20,
       "norm_label": "extract_numero()"
     },
     {
@@ -11880,7 +11880,7 @@
       "source_file": "bot_ruleta/logic_helpers.py",
       "source_location": "L24",
       "id": "bot_ruleta_logic_helpers_nums_to_emoji",
-      "community": 87,
+      "community": 20,
       "norm_label": "nums_to_emoji()"
     },
     {
@@ -11889,7 +11889,7 @@
       "source_file": "bot_ruleta/logic_helpers.py",
       "source_location": "L1",
       "id": "bot_ruleta_logic_helpers_rationale_1",
-      "community": 87,
+      "community": 20,
       "norm_label": "helpers compartidos por las funciones de analytics (logic.py). extraidos para e"
     },
     {
@@ -11898,7 +11898,7 @@
       "source_file": "bot_ruleta/logic_helpers.py",
       "source_location": "L13",
       "id": "bot_ruleta_logic_helpers_rationale_13",
-      "community": 87,
+      "community": 20,
       "norm_label": "extrae el valor numerico de un item que puede ser dict/row o int.     retorna e"
     },
     {
@@ -11907,7 +11907,7 @@
       "source_file": "bot_ruleta/logic_helpers.py",
       "source_location": "L25",
       "id": "bot_ruleta_logic_helpers_rationale_25",
-      "community": 87,
+      "community": 20,
       "norm_label": "convierte una lista de numeros/dicts recientes en string de emojis.     items[0"
     },
     {
@@ -12033,7 +12033,7 @@
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L79",
       "id": "bot_ruleta_scanner_run_single_session",
-      "community": 17,
+      "community": 6,
       "norm_label": "_run_single_session()"
     },
     {
@@ -12150,7 +12150,7 @@
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L343",
       "id": "bot_ruleta_scanner_soft_refresh_lobby",
-      "community": 6,
+      "community": 75,
       "norm_label": "_soft_refresh_lobby()"
     },
     {
@@ -12159,7 +12159,7 @@
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L359",
       "id": "bot_ruleta_scanner_handle_error",
-      "community": 17,
+      "community": 75,
       "norm_label": "_handle_error()"
     },
     {
@@ -12168,7 +12168,7 @@
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L371",
       "id": "bot_ruleta_scanner_cleanup_driver",
-      "community": 17,
+      "community": 75,
       "norm_label": "_cleanup_driver()"
     },
     {
@@ -12213,7 +12213,7 @@
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L80",
       "id": "bot_ruleta_scanner_rationale_80",
-      "community": 17,
+      "community": 6,
       "norm_label": "orquestador: inicializa, escanea y maneja errores de una sesion."
     },
     {
@@ -12321,7 +12321,7 @@
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L344",
       "id": "bot_ruleta_scanner_rationale_344",
-      "community": 6,
+      "community": 75,
       "norm_label": "soft refresh: recarga el lobby sin re-login."
     },
     {
@@ -12330,7 +12330,7 @@
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L360",
       "id": "bot_ruleta_scanner_rationale_360",
-      "community": 17,
+      "community": 75,
       "norm_label": "distingue sesion expirada de error real y genera crash report si aplica."
     },
     {
@@ -12339,7 +12339,7 @@
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L372",
       "id": "bot_ruleta_scanner_rationale_372",
-      "community": 17,
+      "community": 75,
       "norm_label": "cierra el navegador de forma segura."
     },
     {
@@ -12978,7 +12978,7 @@
       "source_file": "bot_ruleta/tests/test_db.py",
       "source_location": "L1",
       "id": "tests_test_db",
-      "community": 5,
+      "community": 23,
       "norm_label": "test_db.py"
     },
     {
@@ -12987,7 +12987,7 @@
       "source_file": "bot_ruleta/tests/test_db.py",
       "source_location": "L14",
       "id": "tests_test_db_testvalidatetablename",
-      "community": 5,
+      "community": 23,
       "norm_label": "testvalidatetablename"
     },
     {
@@ -12996,7 +12996,7 @@
       "source_file": "bot_ruleta/tests/test_db.py",
       "source_location": "L15",
       "id": "tests_test_db_testvalidatetablename_test_valid_table",
-      "community": 5,
+      "community": 23,
       "norm_label": ".test_valid_table()"
     },
     {
@@ -13005,7 +13005,7 @@
       "source_file": "bot_ruleta/tests/test_db.py",
       "source_location": "L20",
       "id": "tests_test_db_testvalidatetablename_test_table_not_in_config",
-      "community": 5,
+      "community": 23,
       "norm_label": ".test_table_not_in_config()"
     },
     {
@@ -13014,7 +13014,7 @@
       "source_file": "bot_ruleta/tests/test_db.py",
       "source_location": "L25",
       "id": "tests_test_db_testvalidatetablename_test_invalid_chars_space",
-      "community": 5,
+      "community": 23,
       "norm_label": ".test_invalid_chars_space()"
     },
     {
@@ -13023,7 +13023,7 @@
       "source_file": "bot_ruleta/tests/test_db.py",
       "source_location": "L30",
       "id": "tests_test_db_testvalidatetablename_test_invalid_chars_semicolon",
-      "community": 5,
+      "community": 23,
       "norm_label": ".test_invalid_chars_semicolon()"
     },
     {
@@ -13032,7 +13032,7 @@
       "source_file": "bot_ruleta/tests/test_db.py",
       "source_location": "L35",
       "id": "tests_test_db_testvalidatetablename_test_none_raises",
-      "community": 5,
+      "community": 23,
       "norm_label": ".test_none_raises()"
     },
     {
@@ -13041,7 +13041,7 @@
       "source_file": "bot_ruleta/tests/test_db.py",
       "source_location": "L40",
       "id": "tests_test_db_testvalidatetablename_test_empty_string_raises",
-      "community": 5,
+      "community": 23,
       "norm_label": ".test_empty_string_raises()"
     },
     {
@@ -13050,7 +13050,7 @@
       "source_file": "bot_ruleta/tests/test_db.py",
       "source_location": "L45",
       "id": "tests_test_db_testvalidatetablename_test_all_configured_tables_valid",
-      "community": 5,
+      "community": 23,
       "norm_label": ".test_all_configured_tables_valid()"
     },
     {
@@ -13158,7 +13158,7 @@
       "source_file": "bot_ruleta/tests/test_db.py",
       "source_location": "L1",
       "id": "tests_test_db_rationale_1",
-      "community": 5,
+      "community": 23,
       "norm_label": "tests para db.py: validador de tablas y operaciones crud."
     },
     {
@@ -13176,7 +13176,7 @@
       "source_file": "bot_ruleta/tests/test_helpers.py",
       "source_location": "L1",
       "id": "tests_test_helpers",
-      "community": 87,
+      "community": 20,
       "norm_label": "test_helpers.py"
     },
     {
@@ -13185,7 +13185,7 @@
       "source_file": "bot_ruleta/tests/test_helpers.py",
       "source_location": "L13",
       "id": "tests_test_helpers_testextractnumero",
-      "community": 87,
+      "community": 20,
       "norm_label": "testextractnumero"
     },
     {
@@ -13194,7 +13194,7 @@
       "source_file": "bot_ruleta/tests/test_helpers.py",
       "source_location": "L14",
       "id": "tests_test_helpers_testextractnumero_test_from_dict_with_numero_key",
-      "community": 87,
+      "community": 20,
       "norm_label": ".test_from_dict_with_numero_key()"
     },
     {
@@ -13203,7 +13203,7 @@
       "source_file": "bot_ruleta/tests/test_helpers.py",
       "source_location": "L17",
       "id": "tests_test_helpers_testextractnumero_test_from_dict_missing_numero_key",
-      "community": 87,
+      "community": 20,
       "norm_label": ".test_from_dict_missing_numero_key()"
     },
     {
@@ -13212,7 +13212,7 @@
       "source_file": "bot_ruleta/tests/test_helpers.py",
       "source_location": "L21",
       "id": "tests_test_helpers_testextractnumero_test_from_int",
-      "community": 87,
+      "community": 20,
       "norm_label": ".test_from_int()"
     },
     {
@@ -13221,7 +13221,7 @@
       "source_file": "bot_ruleta/tests/test_helpers.py",
       "source_location": "L24",
       "id": "tests_test_helpers_testextractnumero_test_from_sqlite_row",
-      "community": 87,
+      "community": 20,
       "norm_label": ".test_from_sqlite_row()"
     },
     {
@@ -13230,7 +13230,7 @@
       "source_file": "bot_ruleta/tests/test_helpers.py",
       "source_location": "L32",
       "id": "tests_test_helpers_testextractnumero_test_from_sqlite_row_missing_numero",
-      "community": 87,
+      "community": 20,
       "norm_label": ".test_from_sqlite_row_missing_numero()"
     },
     {
@@ -13239,7 +13239,7 @@
       "source_file": "bot_ruleta/tests/test_helpers.py",
       "source_location": "L40",
       "id": "tests_test_helpers_testnumstoemoji",
-      "community": 87,
+      "community": 20,
       "norm_label": "testnumstoemoji"
     },
     {
@@ -13248,7 +13248,7 @@
       "source_file": "bot_ruleta/tests/test_helpers.py",
       "source_location": "L41",
       "id": "tests_test_helpers_testnumstoemoji_test_basic_numbers",
-      "community": 87,
+      "community": 20,
       "norm_label": ".test_basic_numbers()"
     },
     {
@@ -13257,7 +13257,7 @@
       "source_file": "bot_ruleta/tests/test_helpers.py",
       "source_location": "L45",
       "id": "tests_test_helpers_testnumstoemoji_test_number_ten",
-      "community": 87,
+      "community": 20,
       "norm_label": ".test_number_ten()"
     },
     {
@@ -13266,7 +13266,7 @@
       "source_file": "bot_ruleta/tests/test_helpers.py",
       "source_location": "L49",
       "id": "tests_test_helpers_testnumstoemoji_test_empty_list",
-      "community": 87,
+      "community": 20,
       "norm_label": ".test_empty_list()"
     },
     {
@@ -13275,7 +13275,7 @@
       "source_file": "bot_ruleta/tests/test_helpers.py",
       "source_location": "L53",
       "id": "tests_test_helpers_testnumstoemoji_test_more_than_ten_limits",
-      "community": 87,
+      "community": 20,
       "norm_label": ".test_more_than_ten_limits()"
     },
     {
@@ -13284,7 +13284,7 @@
       "source_file": "bot_ruleta/tests/test_helpers.py",
       "source_location": "L59",
       "id": "tests_test_helpers_testnumstoemoji_test_mixed_int_and_dict",
-      "community": 87,
+      "community": 20,
       "norm_label": ".test_mixed_int_and_dict()"
     },
     {
@@ -13293,7 +13293,7 @@
       "source_file": "bot_ruleta/tests/test_helpers.py",
       "source_location": "L65",
       "id": "tests_test_helpers_testkeycapmap",
-      "community": 87,
+      "community": 20,
       "norm_label": "testkeycapmap"
     },
     {
@@ -13302,7 +13302,7 @@
       "source_file": "bot_ruleta/tests/test_helpers.py",
       "source_location": "L66",
       "id": "tests_test_helpers_testkeycapmap_test_all_digits_mapped",
-      "community": 87,
+      "community": 20,
       "norm_label": ".test_all_digits_mapped()"
     },
     {
@@ -13311,7 +13311,7 @@
       "source_file": "bot_ruleta/tests/test_helpers.py",
       "source_location": "L1",
       "id": "tests_test_helpers_rationale_1",
-      "community": 87,
+      "community": 20,
       "norm_label": "tests para logic_helpers.py y helpers.py: utilidades compartidas."
     },
     {
@@ -13887,7 +13887,7 @@
       "source_file": "bot_ruleta/thresholds.py",
       "source_location": "L1",
       "id": "bot_ruleta_thresholds",
-      "community": 20,
+      "community": 1,
       "norm_label": "thresholds.py"
     },
     {
@@ -13896,7 +13896,7 @@
       "source_file": "bot_ruleta/thresholds.py",
       "source_location": "L17",
       "id": "bot_ruleta_thresholds_get_color_streak_threshold",
-      "community": 20,
+      "community": 1,
       "norm_label": "get_color_streak_threshold()"
     },
     {
@@ -13905,7 +13905,7 @@
       "source_file": "bot_ruleta/thresholds.py",
       "source_location": "L53",
       "id": "bot_ruleta_thresholds_get_number_delay_threshold",
-      "community": 20,
+      "community": 1,
       "norm_label": "get_number_delay_threshold()"
     },
     {
@@ -13914,7 +13914,7 @@
       "source_file": "bot_ruleta/thresholds.py",
       "source_location": "L1",
       "id": "bot_ruleta_thresholds_rationale_1",
-      "community": 20,
+      "community": 1,
       "norm_label": "umbrales de alerta para rachas de color y retrasos de numeros. separado de conf"
     },
     {
@@ -13923,7 +13923,7 @@
       "source_file": "bot_ruleta/thresholds.py",
       "source_location": "L18",
       "id": "bot_ruleta_thresholds_rationale_18",
-      "community": 20,
+      "community": 1,
       "norm_label": "lee el umbral de racha de color. prioridad: runtime overrides > gui saved > .env"
     },
     {
@@ -13932,7 +13932,7 @@
       "source_file": "bot_ruleta/thresholds.py",
       "source_location": "L54",
       "id": "bot_ruleta_thresholds_rationale_54",
-      "community": 20,
+      "community": 1,
       "norm_label": "lee el umbral de retraso de numeros individuales. prioridad: runtime overrides >"
     },
     {
@@ -14058,7 +14058,7 @@
       "source_file": "bot_ruleta/updater.py",
       "source_location": "L22",
       "id": "bot_ruleta_updater_check_for_updates",
-      "community": 86,
+      "community": 28,
       "norm_label": "check_for_updates()"
     },
     {
@@ -14094,7 +14094,7 @@
       "source_file": "bot_ruleta/updater.py",
       "source_location": "L23",
       "id": "bot_ruleta_updater_rationale_23",
-      "community": 86,
+      "community": 28,
       "norm_label": "checks github for updates in a background thread.     calls callback(new_versio"
     },
     {
@@ -16023,6 +16023,15 @@
       "norm_label": "build()"
     },
     {
+      "label": "_do_build()",
+      "file_type": "code",
+      "source_file": "scripts/build_exe.py",
+      "source_location": "L73",
+      "id": "scripts_build_exe_do_build",
+      "community": 7,
+      "norm_label": "_do_build()"
+    },
+    {
       "label": "Script para empaquetar Roulette Sniper Pro en un solo .exe Requiere: pip instal",
       "file_type": "rationale",
       "source_file": "scripts/build_exe.py",
@@ -16039,6 +16048,15 @@
       "id": "scripts_build_exe_rationale_13",
       "community": 7,
       "norm_label": "compila el dashboard react y copia los archivos a flask static."
+    },
+    {
+      "label": "Empaqueta el proyecto en un .exe. Si production=True, usa DEV_MODE=False.",
+      "file_type": "rationale",
+      "source_file": "scripts/build_exe.py",
+      "source_location": "L53",
+      "id": "scripts_build_exe_rationale_53",
+      "community": 7,
+      "norm_label": "empaqueta el proyecto en un .exe. si production=true, usa dev_mode=false."
     },
     {
       "label": "gen_icon.py",
@@ -16387,7 +16405,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L138",
-      "community": 30,
+      "community": 3,
       "norm_label": "send_telegram_msg()",
       "id": "bot_ruleta_logic_send_telegram_msg"
     },
@@ -16612,7 +16630,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L508",
-      "community": 9,
+      "community": 31,
       "norm_label": "sync_color_backtest()",
       "id": "bot_ruleta_logic_sync_color_backtest"
     },
@@ -16693,7 +16711,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L139",
-      "community": 30,
+      "community": 3,
       "norm_label": "envia mensaje raw a telegram.",
       "id": "bot_ruleta_logic_rationale_139"
     },
@@ -16792,7 +16810,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/debug_logger.py",
       "source_location": "L85",
-      "community": 45,
+      "community": 28,
       "norm_label": "_guiqueuehandler",
       "id": "bot_ruleta_debug_logger_guiqueuehandler"
     },
@@ -16801,7 +16819,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/debug_logger.py",
       "source_location": "L87",
-      "community": 45,
+      "community": 28,
       "norm_label": ".__init__()",
       "id": "bot_ruleta_debug_logger_guiqueuehandler_init"
     },
@@ -16810,7 +16828,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/debug_logger.py",
       "source_location": "L91",
-      "community": 45,
+      "community": 28,
       "norm_label": ".emit()",
       "id": "bot_ruleta_debug_logger_guiqueuehandler_emit"
     },
@@ -16819,7 +16837,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/debug_logger.py",
       "source_location": "L99",
-      "community": 45,
+      "community": 28,
       "norm_label": "attach_gui_queue()",
       "id": "bot_ruleta_debug_logger_attach_gui_queue"
     },
@@ -16828,7 +16846,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/debug_logger.py",
       "source_location": "L114",
-      "community": 6,
+      "community": 28,
       "norm_label": "set_diagnostics()",
       "id": "bot_ruleta_debug_logger_set_diagnostics"
     },
@@ -16900,7 +16918,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/debug_logger.py",
       "source_location": "L86",
-      "community": 45,
+      "community": 28,
       "norm_label": "handler que envia logs a una queue para que la gui los lea.",
       "id": "bot_ruleta_debug_logger_rationale_86"
     },
@@ -16909,7 +16927,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/debug_logger.py",
       "source_location": "L100",
-      "community": 45,
+      "community": 28,
       "norm_label": "conecta una queue al logger para que la gui reciba los logs.     llamar una sola",
       "id": "bot_ruleta_debug_logger_rationale_100"
     },
@@ -16918,7 +16936,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/debug_logger.py",
       "source_location": "L115",
-      "community": 6,
+      "community": 28,
       "norm_label": "activa o desactiva las capturas de pantalla de diagnostico rutinarias.",
       "id": "bot_ruleta_debug_logger_rationale_115"
     },
@@ -16999,7 +17017,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L40",
-      "community": 26,
+      "community": 28,
       "norm_label": "rouletteapp",
       "id": "bot_ruleta_gui_app_rouletteapp"
     },
@@ -17026,7 +17044,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L117",
-      "community": 26,
+      "community": 28,
       "norm_label": ".process_log_queue()",
       "id": "bot_ruleta_gui_app_rouletteapp_process_log_queue"
     },
@@ -17035,7 +17053,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L128",
-      "community": 26,
+      "community": 28,
       "norm_label": ".start_background_services()",
       "id": "bot_ruleta_gui_app_rouletteapp_start_background_services"
     },
@@ -17044,7 +17062,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L145",
-      "community": 26,
+      "community": 28,
       "norm_label": ".cloudflared_watchdog()",
       "id": "bot_ruleta_gui_app_rouletteapp_cloudflared_watchdog"
     },
@@ -17053,7 +17071,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L237",
-      "community": 26,
+      "community": 28,
       "norm_label": ".on_closing()",
       "id": "bot_ruleta_gui_app_rouletteapp_on_closing"
     },
@@ -17170,7 +17188,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L599",
-      "community": 26,
+      "community": 28,
       "norm_label": "dashboardscreen",
       "id": "bot_ruleta_gui_app_dashboardscreen"
     },
@@ -17179,7 +17197,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L654",
-      "community": 26,
+      "community": 28,
       "norm_label": ".toggle_logs()",
       "id": "bot_ruleta_gui_app_dashboardscreen_toggle_logs"
     },
@@ -17188,7 +17206,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L664",
-      "community": 26,
+      "community": 28,
       "norm_label": ".update_cf_url()",
       "id": "bot_ruleta_gui_app_dashboardscreen_update_cf_url"
     },
@@ -17197,7 +17215,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L677",
-      "community": 26,
+      "community": 28,
       "norm_label": ".show_open_button()",
       "id": "bot_ruleta_gui_app_dashboardscreen_show_open_button"
     },
@@ -17206,7 +17224,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L680",
-      "community": 26,
+      "community": 28,
       "norm_label": ".copy_url()",
       "id": "bot_ruleta_gui_app_dashboardscreen_copy_url"
     },
@@ -17215,7 +17233,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L686",
-      "community": 26,
+      "community": 28,
       "norm_label": ".open_url()",
       "id": "bot_ruleta_gui_app_dashboardscreen_open_url"
     },
@@ -17224,7 +17242,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L717",
-      "community": 26,
+      "community": 28,
       "norm_label": ".append_log()",
       "id": "bot_ruleta_gui_app_dashboardscreen_append_log"
     },
@@ -17233,7 +17251,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L727",
-      "community": 26,
+      "community": 28,
       "norm_label": ".start_services()",
       "id": "bot_ruleta_gui_app_dashboardscreen_start_services"
     },
@@ -17242,7 +17260,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L736",
-      "community": 26,
+      "community": 28,
       "norm_label": ".stop_bot()",
       "id": "bot_ruleta_gui_app_dashboardscreen_stop_bot"
     },
@@ -17260,7 +17278,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L765",
-      "community": 28,
+      "community": 86,
       "norm_label": ".start_update()",
       "id": "bot_ruleta_gui_app_updatescreen_start_update"
     },
@@ -22663,9 +22681,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw",
-      "target": "assets_query_bpe0xbfe",
-      "confidence_score": 1.0
+      "target": "assets_query_bpe0xbfe"
     },
     {
       "relation": "imports",
@@ -22696,9 +22714,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw",
-      "target": "assets_query_bpe0xbfe_me",
-      "confidence_score": 1.0
+      "target": "assets_query_bpe0xbfe_me"
     },
     {
       "relation": "imports",
@@ -22740,9 +22758,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw",
-      "target": "assets_recharts_pnxljkz",
-      "confidence_score": 1.0
+      "target": "assets_recharts_pnxljkz"
     },
     {
       "relation": "imports",
@@ -22784,9 +22802,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw",
-      "target": "assets_recharts_pnxljkz_jd",
-      "confidence_score": 1.0
+      "target": "assets_recharts_pnxljkz_jd"
     },
     {
       "relation": "imports",
@@ -22861,9 +22879,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw",
-      "target": "assets_rolldown_runtime_qtnflwev",
-      "confidence_score": 1.0
+      "target": "assets_rolldown_runtime_qtnflwev"
     },
     {
       "relation": "calls",
@@ -23510,9 +23528,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_i",
-      "target": "assets_query_bpe0xbfe_r",
-      "confidence_score": 1.0
+      "target": "assets_query_bpe0xbfe_r"
     },
     {
       "relation": "calls",
@@ -25578,9 +25596,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_e",
-      "target": "assets_query_bpe0xbfe_r",
-      "confidence_score": 1.0
+      "target": "assets_query_bpe0xbfe_r"
     },
     {
       "relation": "calls",
@@ -26524,9 +26542,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_ot",
-      "target": "assets_recharts_pnxljkz_c",
-      "confidence_score": 1.0
+      "target": "assets_recharts_pnxljkz_c"
     },
     {
       "relation": "calls",
@@ -28207,9 +28225,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_gn",
-      "target": "assets_query_bpe0xbfe_me",
-      "confidence_score": 1.0
+      "target": "assets_query_bpe0xbfe_me"
     },
     {
       "relation": "calls",
@@ -28317,9 +28335,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_wn",
-      "target": "assets_query_bpe0xbfe_r",
-      "confidence_score": 1.0
+      "target": "assets_query_bpe0xbfe_r"
     },
     {
       "relation": "calls",
@@ -28328,9 +28346,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_tn",
-      "target": "assets_query_bpe0xbfe_me",
-      "confidence_score": 1.0
+      "target": "assets_query_bpe0xbfe_me"
     },
     {
       "relation": "calls",
@@ -28416,9 +28434,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_sr",
-      "target": "assets_query_bpe0xbfe_r",
-      "confidence_score": 1.0
+      "target": "assets_query_bpe0xbfe_r"
     },
     {
       "relation": "calls",
@@ -28823,9 +28841,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_or",
-      "target": "assets_query_bpe0xbfe_r",
-      "confidence_score": 1.0
+      "target": "assets_query_bpe0xbfe_r"
     },
     {
       "relation": "calls",
@@ -29098,9 +29116,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_si",
-      "target": "assets_query_bpe0xbfe_me",
-      "confidence_score": 1.0
+      "target": "assets_query_bpe0xbfe_me"
     },
     {
       "relation": "calls",
@@ -29142,9 +29160,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_ci",
-      "target": "assets_query_bpe0xbfe_me",
-      "confidence_score": 1.0
+      "target": "assets_query_bpe0xbfe_me"
     },
     {
       "relation": "calls",
@@ -29241,9 +29259,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_li",
-      "target": "assets_query_bpe0xbfe_me",
-      "confidence_score": 1.0
+      "target": "assets_query_bpe0xbfe_me"
     },
     {
       "relation": "calls",
@@ -29395,9 +29413,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_ui",
-      "target": "assets_query_bpe0xbfe_me",
-      "confidence_score": 1.0
+      "target": "assets_query_bpe0xbfe_me"
     },
     {
       "relation": "calls",
@@ -29461,9 +29479,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_di",
-      "target": "assets_query_bpe0xbfe_me",
-      "confidence_score": 1.0
+      "target": "assets_query_bpe0xbfe_me"
     },
     {
       "relation": "calls",
@@ -29560,9 +29578,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_hi",
-      "target": "assets_query_bpe0xbfe_r",
-      "confidence_score": 1.0
+      "target": "assets_query_bpe0xbfe_r"
     },
     {
       "relation": "calls",
@@ -29681,9 +29699,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_gi",
-      "target": "assets_query_bpe0xbfe_me",
-      "confidence_score": 1.0
+      "target": "assets_query_bpe0xbfe_me"
     },
     {
       "relation": "calls",
@@ -29692,9 +29710,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_gi",
-      "target": "assets_query_bpe0xbfe_r",
-      "confidence_score": 1.0
+      "target": "assets_query_bpe0xbfe_r"
     },
     {
       "relation": "calls",
@@ -29758,9 +29776,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_vi",
-      "target": "assets_query_bpe0xbfe_r",
-      "confidence_score": 1.0
+      "target": "assets_query_bpe0xbfe_r"
     },
     {
       "relation": "calls",
@@ -29769,9 +29787,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_vi",
-      "target": "assets_recharts_pnxljkz_n",
-      "confidence_score": 1.0
+      "target": "assets_recharts_pnxljkz_n"
     },
     {
       "relation": "calls",
@@ -29780,9 +29798,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_vi",
-      "target": "assets_recharts_pnxljkz_r",
-      "confidence_score": 1.0
+      "target": "assets_recharts_pnxljkz_r"
     },
     {
       "relation": "calls",
@@ -29846,9 +29864,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_yi",
-      "target": "assets_query_bpe0xbfe_r",
-      "confidence_score": 1.0
+      "target": "assets_query_bpe0xbfe_r"
     },
     {
       "relation": "calls",
@@ -29857,9 +29875,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_bi",
-      "target": "assets_recharts_pnxljkz_c",
-      "confidence_score": 1.0
+      "target": "assets_recharts_pnxljkz_c"
     },
     {
       "relation": "calls",
@@ -29868,9 +29886,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_bi",
-      "target": "assets_recharts_pnxljkz_i",
-      "confidence_score": 1.0
+      "target": "assets_recharts_pnxljkz_i"
     },
     {
       "relation": "calls",
@@ -29934,9 +29952,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_xi",
-      "target": "assets_query_bpe0xbfe_me",
-      "confidence_score": 1.0
+      "target": "assets_query_bpe0xbfe_me"
     },
     {
       "relation": "calls",
@@ -29945,9 +29963,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_xi",
-      "target": "assets_query_bpe0xbfe_r",
-      "confidence_score": 1.0
+      "target": "assets_query_bpe0xbfe_r"
     },
     {
       "relation": "calls",
@@ -30044,9 +30062,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_ii",
-      "target": "assets_query_bpe0xbfe_me",
-      "confidence_score": 1.0
+      "target": "assets_query_bpe0xbfe_me"
     },
     {
       "relation": "calls",
@@ -30308,9 +30326,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_ki",
-      "target": "assets_recharts_pnxljkz_i",
-      "confidence_score": 1.0
+      "target": "assets_recharts_pnxljkz_i"
     },
     {
       "relation": "calls",
@@ -37084,9 +37102,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_w",
-      "target": "assets_query_bpe0xbfe_r",
-      "confidence_score": 1.0
+      "target": "assets_query_bpe0xbfe_r"
     },
     {
       "relation": "calls",
@@ -37095,9 +37113,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_w",
-      "target": "assets_recharts_pnxljkz_c",
-      "confidence_score": 1.0
+      "target": "assets_recharts_pnxljkz_c"
     },
     {
       "relation": "calls",
@@ -37106,9 +37124,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_w",
-      "target": "assets_recharts_pnxljkz_s",
-      "confidence_score": 1.0
+      "target": "assets_recharts_pnxljkz_s"
     },
     {
       "relation": "calls",
@@ -37161,9 +37179,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_un",
-      "target": "assets_recharts_pnxljkz_s",
-      "confidence_score": 1.0
+      "target": "assets_recharts_pnxljkz_s"
     },
     {
       "relation": "calls",
@@ -37183,9 +37201,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_pn",
-      "target": "assets_query_bpe0xbfe_r",
-      "confidence_score": 1.0
+      "target": "assets_query_bpe0xbfe_r"
     },
     {
       "relation": "calls",
@@ -37227,9 +37245,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_ai",
-      "target": "assets_query_bpe0xbfe_me",
-      "confidence_score": 1.0
+      "target": "assets_query_bpe0xbfe_me"
     },
     {
       "relation": "calls",
@@ -37238,9 +37256,9 @@
       "source_file": "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "assets_index_bn1vdvlw_oi",
-      "target": "assets_query_bpe0xbfe_me",
-      "confidence_score": 1.0
+      "target": "assets_query_bpe0xbfe_me"
     },
     {
       "relation": "contains",
@@ -66934,6 +66952,16 @@
       "target": "scripts_build_exe_build_react_dashboard"
     },
     {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build_exe.py",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "scripts_build_exe",
+      "target": "scripts_build_exe_do_build",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "scripts/build_exe.py",
@@ -66955,6 +66983,17 @@
       "target": "scripts_build_exe_build_react_dashboard"
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build_exe.py",
+      "source_location": "L75",
+      "weight": 1.0,
+      "source": "scripts_build_exe_do_build",
+      "target": "scripts_build_exe_build_react_dashboard",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "scripts/build_exe.py",
@@ -66963,6 +67002,27 @@
       "confidence_score": 1.0,
       "source": "scripts_build_exe_rationale_13",
       "target": "scripts_build_exe_build_react_dashboard"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build_exe.py",
+      "source_location": "L66",
+      "weight": 1.0,
+      "source": "scripts_build_exe_build",
+      "target": "scripts_build_exe_do_build",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build_exe.py",
+      "source_location": "L53",
+      "weight": 1.0,
+      "source": "scripts_build_exe_rationale_53",
+      "target": "scripts_build_exe_build",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -68801,5 +68861,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "063d080dbc8b0bc47005c882f72fef9471fbd38c"
+  "built_at_commit": "6b401b6ca387d0e4f6f095735795939462940bbd"
 }
