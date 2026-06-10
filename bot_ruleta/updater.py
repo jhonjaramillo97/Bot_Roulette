@@ -10,7 +10,7 @@ from bot_ruleta.paths import is_frozen
 
 log = logging.getLogger("bot")
 
-CURRENT_VERSION = "3.0.101"
+CURRENT_VERSION = "4.0.0"
 # Usamos la API de GitHub en lugar de raw.githubusercontent.com para mayor fiabilidad
 VERSION_URL = "https://api.github.com/repos/jhonjaramillo97/roulette-sniper-releases/contents/version.txt"
 

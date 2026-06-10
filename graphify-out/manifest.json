@@ -200,8 +200,8 @@
     "semantic_hash": ""
   },
   "scripts/publish.py": {
-    "mtime": 1781120255.8413136,
-    "ast_hash": "21057949cd201cfd5e498a41e76df5b3",
+    "mtime": 1781128889.4024968,
+    "ast_hash": "67118f2272368f3fa9083b66594d93b3",
     "semantic_hash": ""
   },
   "scripts/verify_number_delays.py": {
@@ -250,7 +250,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/rolldown-runtime-QTnfLwEv.js": {
-    "mtime": 1781120255.7271295,
+    "mtime": 1781121170.3758767,
     "ast_hash": "0b9fa1f21df87441aa366e428d1ebb49",
     "semantic_hash": ""
   },
@@ -280,8 +280,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/components/overview/TableCard.tsx": {
-    "mtime": 1781120255.818689,
-    "ast_hash": "4a52f2bd10e9841c43313d47c1cafe23",
+    "mtime": 1781120829.1793401,
+    "ast_hash": "171cbceb6776d4786982873b322c2f47",
     "semantic_hash": ""
   },
   "react-dashboard/src/components/overview/index.ts": {
@@ -335,8 +335,8 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/AnalisisGlobal.tsx": {
-    "mtime": 1781120255.8293016,
-    "ast_hash": "e4cf6cb829ec62848a76932756c26cfd",
+    "mtime": 1781121152.8779614,
+    "ast_hash": "6cb3873cf2923d5d27894e78c6cef0a6",
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/MesaDetail.tsx": {
@@ -385,7 +385,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/query-BPe0xBFE.js": {
-    "mtime": 1781120255.7231314,
+    "mtime": 1781121170.3738778,
     "ast_hash": "04faa70bf0cdaeaa34d0fc73933f2336",
     "semantic_hash": ""
   },
@@ -400,8 +400,8 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js": {
-    "mtime": 1781120255.7261322,
-    "ast_hash": "1ef289b4426f4a7c8eb60f031c2b770e",
+    "mtime": 1781121170.3738778,
+    "ast_hash": "e8baacc3f66b9f1f0110fe204745ffcf",
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/Login.tsx": {
@@ -419,9 +419,9 @@
     "ast_hash": "de757d65cba22a11b00a3b0b81050b0c",
     "semantic_hash": ""
   },
-  "bot_ruleta/dashboard/static/assets/index-Dkx9vjP1.js": {
-    "mtime": 1781120255.7211325,
-    "ast_hash": "c9b804c5ca196629d4769cfb152694d8",
+  "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js": {
+    "mtime": 1781121170.3728924,
+    "ast_hash": "50c9f72e7492f0a07429f4fd9e9befd2",
     "semantic_hash": ""
   }
 }
