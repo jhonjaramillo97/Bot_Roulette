@@ -190,8 +190,8 @@
     "semantic_hash": ""
   },
   "scripts/build_exe.py": {
-    "mtime": 1780855352.4533558,
-    "ast_hash": "d48f6e7ff60ca4cbbffd827fe9c02084",
+    "mtime": 1781063953.5897393,
+    "ast_hash": "c2e144de9bc222719052169f3e64c5e6",
     "semantic_hash": ""
   },
   "scripts/gen_icon.py": {

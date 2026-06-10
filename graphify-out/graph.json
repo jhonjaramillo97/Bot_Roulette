@@ -4,454 +4,499 @@
   "graph": {},
   "nodes": [
     {
+      "label": "build_exe.py",
+      "file_type": "code",
+      "source_file": "scripts/build_exe.py",
+      "source_location": "L1",
+      "id": "scripts_build_exe",
+      "community": 7,
+      "norm_label": "build_exe.py"
+    },
+    {
+      "label": "build_react_dashboard()",
+      "file_type": "code",
+      "source_file": "scripts/build_exe.py",
+      "source_location": "L12",
+      "id": "scripts_build_exe_build_react_dashboard",
+      "community": 7,
+      "norm_label": "build_react_dashboard()"
+    },
+    {
+      "label": "build()",
+      "file_type": "code",
+      "source_file": "scripts/build_exe.py",
+      "source_location": "L52",
+      "id": "scripts_build_exe_build",
+      "community": 7,
+      "norm_label": "build()"
+    },
+    {
+      "label": "Script para empaquetar Roulette Sniper Pro en un solo .exe Requiere: pip instal",
+      "file_type": "rationale",
+      "source_file": "scripts/build_exe.py",
+      "source_location": "L1",
+      "id": "scripts_build_exe_rationale_1",
+      "community": 7,
+      "norm_label": "script para empaquetar roulette sniper pro en un solo .exe requiere: pip instal"
+    },
+    {
+      "label": "Compila el dashboard React y copia los archivos a Flask static.",
+      "file_type": "rationale",
+      "source_file": "scripts/build_exe.py",
+      "source_location": "L13",
+      "id": "scripts_build_exe_rationale_13",
+      "community": 7,
+      "norm_label": "compila el dashboard react y copia los archivos a flask static."
+    },
+    {
       "label": "backtest.py",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L1",
-      "id": "bot_ruleta_backtest",
       "community": 1,
-      "norm_label": "backtest.py"
+      "norm_label": "backtest.py",
+      "id": "bot_ruleta_backtest"
     },
     {
       "label": "_BacktestSyncEngine",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L13",
-      "id": "bot_ruleta_backtest_backtestsyncengine",
       "community": 18,
-      "norm_label": "_backtestsyncengine"
+      "norm_label": "_backtestsyncengine",
+      "id": "bot_ruleta_backtest_backtestsyncengine"
     },
     {
       "label": ".__init__()",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L25",
-      "id": "bot_ruleta_backtest_backtestsyncengine_init",
       "community": 18,
-      "norm_label": ".__init__()"
+      "norm_label": ".__init__()",
+      "id": "bot_ruleta_backtest_backtestsyncengine_init"
     },
     {
       "label": "._open()",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L34",
-      "id": "bot_ruleta_backtest_backtestsyncengine_open",
       "community": 18,
-      "norm_label": "._open()"
+      "norm_label": "._open()",
+      "id": "bot_ruleta_backtest_backtestsyncengine_open"
     },
     {
       "label": "._load_state()",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L38",
-      "id": "bot_ruleta_backtest_backtestsyncengine_load_state",
       "community": 18,
-      "norm_label": "._load_state()"
+      "norm_label": "._load_state()",
+      "id": "bot_ruleta_backtest_backtestsyncengine_load_state"
     },
     {
       "label": "._fetch_rows()",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L46",
-      "id": "bot_ruleta_backtest_backtestsyncengine_fetch_rows",
       "community": 18,
-      "norm_label": "._fetch_rows()"
+      "norm_label": "._fetch_rows()",
+      "id": "bot_ruleta_backtest_backtestsyncengine_fetch_rows"
     },
     {
       "label": "._is_new()",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L54",
-      "id": "bot_ruleta_backtest_backtestsyncengine_is_new",
       "community": 18,
-      "norm_label": "._is_new()"
+      "norm_label": "._is_new()",
+      "id": "bot_ruleta_backtest_backtestsyncengine_is_new"
     },
     {
       "label": "._save_state()",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L57",
-      "id": "bot_ruleta_backtest_backtestsyncengine_save_state",
       "community": 18,
-      "norm_label": "._save_state()"
+      "norm_label": "._save_state()",
+      "id": "bot_ruleta_backtest_backtestsyncengine_save_state"
     },
     {
       "label": "._close()",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L63",
-      "id": "bot_ruleta_backtest_backtestsyncengine_close",
       "community": 18,
-      "norm_label": "._close()"
+      "norm_label": "._close()",
+      "id": "bot_ruleta_backtest_backtestsyncengine_close"
     },
     {
       "label": ".run()",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L67",
-      "id": "bot_ruleta_backtest_backtestsyncengine_run",
       "community": 18,
-      "norm_label": ".run()"
+      "norm_label": ".run()",
+      "id": "bot_ruleta_backtest_backtestsyncengine_run"
     },
     {
       "label": "._init_state()",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L111",
-      "id": "bot_ruleta_backtest_backtestsyncengine_init_state",
       "community": 18,
-      "norm_label": "._init_state()"
+      "norm_label": "._init_state()",
+      "id": "bot_ruleta_backtest_backtestsyncengine_init_state"
     },
     {
       "label": "._process_row()",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L114",
-      "id": "bot_ruleta_backtest_backtestsyncengine_process_row",
       "community": 18,
-      "norm_label": "._process_row()"
+      "norm_label": "._process_row()",
+      "id": "bot_ruleta_backtest_backtestsyncengine_process_row"
     },
     {
       "label": "._handle_chain_break()",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L117",
-      "id": "bot_ruleta_backtest_backtestsyncengine_handle_chain_break",
       "community": 18,
-      "norm_label": "._handle_chain_break()"
+      "norm_label": "._handle_chain_break()",
+      "id": "bot_ruleta_backtest_backtestsyncengine_handle_chain_break"
     },
     {
       "label": "_ZoneBacktestSync",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L121",
-      "id": "bot_ruleta_backtest_zonebacktestsync",
       "community": 91,
-      "norm_label": "_zonebacktestsync"
+      "norm_label": "_zonebacktestsync",
+      "id": "bot_ruleta_backtest_zonebacktestsync"
     },
     {
       "label": ".__init__()",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L129",
-      "id": "bot_ruleta_backtest_zonebacktestsync_init",
       "community": 91,
-      "norm_label": ".__init__()"
+      "norm_label": ".__init__()",
+      "id": "bot_ruleta_backtest_zonebacktestsync_init"
     },
     {
       "label": "._init_state()",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L132",
-      "id": "bot_ruleta_backtest_zonebacktestsync_init_state",
       "community": 91,
-      "norm_label": "._init_state()"
+      "norm_label": "._init_state()",
+      "id": "bot_ruleta_backtest_zonebacktestsync_init_state"
     },
     {
       "label": "._handle_chain_break()",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L136",
-      "id": "bot_ruleta_backtest_zonebacktestsync_handle_chain_break",
       "community": 91,
-      "norm_label": "._handle_chain_break()"
+      "norm_label": "._handle_chain_break()",
+      "id": "bot_ruleta_backtest_zonebacktestsync_handle_chain_break"
     },
     {
       "label": "._process_row()",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L150",
-      "id": "bot_ruleta_backtest_zonebacktestsync_process_row",
       "community": 91,
-      "norm_label": "._process_row()"
+      "norm_label": "._process_row()",
+      "id": "bot_ruleta_backtest_zonebacktestsync_process_row"
     },
     {
       "label": "sync_backtest()",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L187",
-      "id": "bot_ruleta_backtest_sync_backtest",
       "community": 1,
-      "norm_label": "sync_backtest()"
+      "norm_label": "sync_backtest()",
+      "id": "bot_ruleta_backtest_sync_backtest"
     },
     {
       "label": "_ColorBacktestSync",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L191",
-      "id": "bot_ruleta_backtest_colorbacktestsync",
       "community": 91,
-      "norm_label": "_colorbacktestsync"
+      "norm_label": "_colorbacktestsync",
+      "id": "bot_ruleta_backtest_colorbacktestsync"
     },
     {
       "label": ".__init__()",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L194",
-      "id": "bot_ruleta_backtest_colorbacktestsync_init",
       "community": 91,
-      "norm_label": ".__init__()"
+      "norm_label": ".__init__()",
+      "id": "bot_ruleta_backtest_colorbacktestsync_init"
     },
     {
       "label": "._init_state()",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L197",
-      "id": "bot_ruleta_backtest_colorbacktestsync_init_state",
       "community": 91,
-      "norm_label": "._init_state()"
+      "norm_label": "._init_state()",
+      "id": "bot_ruleta_backtest_colorbacktestsync_init_state"
     },
     {
       "label": "._handle_chain_break()",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L203",
-      "id": "bot_ruleta_backtest_colorbacktestsync_handle_chain_break",
       "community": 91,
-      "norm_label": "._handle_chain_break()"
+      "norm_label": "._handle_chain_break()",
+      "id": "bot_ruleta_backtest_colorbacktestsync_handle_chain_break"
     },
     {
       "label": "._save_streak()",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L210",
-      "id": "bot_ruleta_backtest_colorbacktestsync_save_streak",
       "community": 91,
-      "norm_label": "._save_streak()"
+      "norm_label": "._save_streak()",
+      "id": "bot_ruleta_backtest_colorbacktestsync_save_streak"
     },
     {
       "label": "._process_row()",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L220",
-      "id": "bot_ruleta_backtest_colorbacktestsync_process_row",
       "community": 91,
-      "norm_label": "._process_row()"
+      "norm_label": "._process_row()",
+      "id": "bot_ruleta_backtest_colorbacktestsync_process_row"
     },
     {
       "label": "sync_color_backtest()",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L250",
-      "id": "bot_ruleta_backtest_sync_color_backtest",
       "community": 1,
-      "norm_label": "sync_color_backtest()"
+      "norm_label": "sync_color_backtest()",
+      "id": "bot_ruleta_backtest_sync_color_backtest"
     },
     {
       "label": "_NumberBacktestSync",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L254",
-      "id": "bot_ruleta_backtest_numberbacktestsync",
       "community": 18,
-      "norm_label": "_numberbacktestsync"
+      "norm_label": "_numberbacktestsync",
+      "id": "bot_ruleta_backtest_numberbacktestsync"
     },
     {
       "label": ".__init__()",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L257",
-      "id": "bot_ruleta_backtest_numberbacktestsync_init",
       "community": 91,
-      "norm_label": ".__init__()"
+      "norm_label": ".__init__()",
+      "id": "bot_ruleta_backtest_numberbacktestsync_init"
     },
     {
       "label": "._init_state()",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L260",
-      "id": "bot_ruleta_backtest_numberbacktestsync_init_state",
       "community": 18,
-      "norm_label": "._init_state()"
+      "norm_label": "._init_state()",
+      "id": "bot_ruleta_backtest_numberbacktestsync_init_state"
     },
     {
       "label": "._handle_chain_break()",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L265",
-      "id": "bot_ruleta_backtest_numberbacktestsync_handle_chain_break",
       "community": 18,
-      "norm_label": "._handle_chain_break()"
+      "norm_label": "._handle_chain_break()",
+      "id": "bot_ruleta_backtest_numberbacktestsync_handle_chain_break"
     },
     {
       "label": "._process_row()",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L279",
-      "id": "bot_ruleta_backtest_numberbacktestsync_process_row",
       "community": 18,
-      "norm_label": "._process_row()"
+      "norm_label": "._process_row()",
+      "id": "bot_ruleta_backtest_numberbacktestsync_process_row"
     },
     {
       "label": "sync_number_backtest()",
       "file_type": "code",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L309",
-      "id": "bot_ruleta_backtest_sync_number_backtest",
       "community": 1,
-      "norm_label": "sync_number_backtest()"
+      "norm_label": "sync_number_backtest()",
+      "id": "bot_ruleta_backtest_sync_number_backtest"
     },
     {
       "label": "Motores de sincronizacion incremental de backtests. Extraido de db.py/logic.py",
       "file_type": "rationale",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L1",
-      "id": "bot_ruleta_backtest_rationale_1",
       "community": 1,
-      "norm_label": "motores de sincronizacion incremental de backtests. extraido de db.py/logic.py"
+      "norm_label": "motores de sincronizacion incremental de backtests. extraido de db.py/logic.py",
+      "id": "bot_ruleta_backtest_rationale_1"
     },
     {
       "label": "Motor de sincronizacion incremental compartido por todos los backtests.      M",
       "file_type": "rationale",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L14",
-      "id": "bot_ruleta_backtest_rationale_14",
       "community": 18,
-      "norm_label": "motor de sincronizacion incremental compartido por todos los backtests.      m"
+      "norm_label": "motor de sincronizacion incremental compartido por todos los backtests.      m",
+      "id": "bot_ruleta_backtest_rationale_14"
     },
     {
       "label": "Sincroniza eventos de retraso de docenas y columnas.",
       "file_type": "rationale",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L122",
-      "id": "bot_ruleta_backtest_rationale_122",
       "community": 91,
-      "norm_label": "sincroniza eventos de retraso de docenas y columnas."
+      "norm_label": "sincroniza eventos de retraso de docenas y columnas.",
+      "id": "bot_ruleta_backtest_rationale_122"
     },
     {
       "label": "Sincroniza eventos de rachas de rojos/negros consecutivos.",
       "file_type": "rationale",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L192",
-      "id": "bot_ruleta_backtest_rationale_192",
       "community": 91,
-      "norm_label": "sincroniza eventos de rachas de rojos/negros consecutivos."
+      "norm_label": "sincroniza eventos de rachas de rojos/negros consecutivos.",
+      "id": "bot_ruleta_backtest_rationale_192"
     },
     {
       "label": "Sincroniza eventos de retraso de numeros individuales (0-36).",
       "file_type": "rationale",
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L255",
-      "id": "bot_ruleta_backtest_rationale_255",
       "community": 18,
-      "norm_label": "sincroniza eventos de retraso de numeros individuales (0-36)."
+      "norm_label": "sincroniza eventos de retraso de numeros individuales (0-36).",
+      "id": "bot_ruleta_backtest_rationale_255"
     },
     {
       "label": "test_backtest.py",
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_backtest.py",
       "source_location": "L1",
-      "id": "tests_test_backtest",
       "community": 91,
-      "norm_label": "test_backtest.py"
+      "norm_label": "test_backtest.py",
+      "id": "tests_test_backtest"
     },
     {
       "label": "TestBacktestSync",
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_backtest.py",
       "source_location": "L15",
-      "id": "tests_test_backtest_testbacktestsync",
       "community": 91,
-      "norm_label": "testbacktestsync"
+      "norm_label": "testbacktestsync",
+      "id": "tests_test_backtest_testbacktestsync"
     },
     {
       "label": ".setup_db()",
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_backtest.py",
       "source_location": "L17",
-      "id": "tests_test_backtest_testbacktestsync_setup_db",
       "community": 91,
-      "norm_label": ".setup_db()"
+      "norm_label": ".setup_db()",
+      "id": "tests_test_backtest_testbacktestsync_setup_db"
     },
     {
       "label": "._insert()",
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_backtest.py",
       "source_location": "L43",
-      "id": "tests_test_backtest_testbacktestsync_insert",
       "community": 91,
-      "norm_label": "._insert()"
+      "norm_label": "._insert()",
+      "id": "tests_test_backtest_testbacktestsync_insert"
     },
     {
       "label": ".test_sync_empty_table_no_errors()",
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_backtest.py",
       "source_location": "L47",
-      "id": "tests_test_backtest_testbacktestsync_test_sync_empty_table_no_errors",
       "community": 91,
-      "norm_label": ".test_sync_empty_table_no_errors()"
+      "norm_label": ".test_sync_empty_table_no_errors()",
+      "id": "tests_test_backtest_testbacktestsync_test_sync_empty_table_no_errors"
     },
     {
       "label": ".test_zone_sync_detects_signal()",
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_backtest.py",
       "source_location": "L52",
-      "id": "tests_test_backtest_testbacktestsync_test_zone_sync_detects_signal",
       "community": 91,
-      "norm_label": ".test_zone_sync_detects_signal()"
+      "norm_label": ".test_zone_sync_detects_signal()",
+      "id": "tests_test_backtest_testbacktestsync_test_zone_sync_detects_signal"
     },
     {
       "label": ".test_color_sync_chain_break()",
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_backtest.py",
       "source_location": "L61",
-      "id": "tests_test_backtest_testbacktestsync_test_color_sync_chain_break",
       "community": 91,
-      "norm_label": ".test_color_sync_chain_break()"
+      "norm_label": ".test_color_sync_chain_break()",
+      "id": "tests_test_backtest_testbacktestsync_test_color_sync_chain_break"
     },
     {
       "label": ".test_color_sync_basic()",
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_backtest.py",
       "source_location": "L69",
-      "id": "tests_test_backtest_testbacktestsync_test_color_sync_basic",
       "community": 91,
-      "norm_label": ".test_color_sync_basic()"
+      "norm_label": ".test_color_sync_basic()",
+      "id": "tests_test_backtest_testbacktestsync_test_color_sync_basic"
     },
     {
       "label": ".test_number_sync_no_errors()",
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_backtest.py",
       "source_location": "L77",
-      "id": "tests_test_backtest_testbacktestsync_test_number_sync_no_errors",
       "community": 91,
-      "norm_label": ".test_number_sync_no_errors()"
+      "norm_label": ".test_number_sync_no_errors()",
+      "id": "tests_test_backtest_testbacktestsync_test_number_sync_no_errors"
     },
     {
       "label": ".test_sync_with_chain_break()",
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_backtest.py",
       "source_location": "L84",
-      "id": "tests_test_backtest_testbacktestsync_test_sync_with_chain_break",
       "community": 91,
-      "norm_label": ".test_sync_with_chain_break()"
+      "norm_label": ".test_sync_with_chain_break()",
+      "id": "tests_test_backtest_testbacktestsync_test_sync_with_chain_break"
     },
     {
       "label": ".test_time_gap_breaks_chain()",
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_backtest.py",
       "source_location": "L92",
-      "id": "tests_test_backtest_testbacktestsync_test_time_gap_breaks_chain",
       "community": 91,
-      "norm_label": ".test_time_gap_breaks_chain()"
+      "norm_label": ".test_time_gap_breaks_chain()",
+      "id": "tests_test_backtest_testbacktestsync_test_time_gap_breaks_chain"
     },
     {
       "label": "Tests para backtest.py: motores de sincronizacion incremental. Usa SQLite en me",
       "file_type": "rationale",
       "source_file": "bot_ruleta/tests/test_backtest.py",
       "source_location": "L1",
-      "id": "tests_test_backtest_rationale_1",
       "community": 91,
-      "norm_label": "tests para backtest.py: motores de sincronizacion incremental. usa sqlite en me"
+      "norm_label": "tests para backtest.py: motores de sincronizacion incremental. usa sqlite en me",
+      "id": "tests_test_backtest_rationale_1"
     },
     {
       "label": "Un gap de mas de 30 minutos entre filas debe romper la cadena y reiniciar delays",
       "file_type": "rationale",
       "source_file": "bot_ruleta/tests/test_backtest.py",
       "source_location": "L93",
-      "id": "tests_test_backtest_rationale_93",
       "community": 91,
-      "norm_label": "un gap de mas de 30 minutos entre filas debe romper la cadena y reiniciar delays"
+      "norm_label": "un gap de mas de 30 minutos entre filas debe romper la cadena y reiniciar delays",
+      "id": "tests_test_backtest_rationale_93"
     },
     {
       "label": "test_dashboard.py",
@@ -791,7 +836,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L1",
-      "community": 21,
+      "community": 22,
       "norm_label": "r()",
       "id": "assets_index_ba4lfeer_r"
     },
@@ -800,7 +845,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L1",
-      "community": 28,
+      "community": 22,
       "norm_label": "i()",
       "id": "assets_index_ba4lfeer_i"
     },
@@ -827,7 +872,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L1",
-      "community": 33,
+      "community": 27,
       "norm_label": "re()",
       "id": "assets_index_ba4lfeer_re"
     },
@@ -845,7 +890,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L1",
-      "community": 22,
+      "community": 21,
       "norm_label": "se()",
       "id": "assets_index_ba4lfeer_se"
     },
@@ -854,7 +899,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L1",
-      "community": 32,
+      "community": 21,
       "norm_label": "a()",
       "id": "assets_index_ba4lfeer_a"
     },
@@ -863,7 +908,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L1",
-      "community": 28,
+      "community": 22,
       "norm_label": "o()",
       "id": "assets_index_ba4lfeer_o"
     },
@@ -872,7 +917,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L1",
-      "community": 23,
+      "community": 72,
       "norm_label": "s()",
       "id": "assets_index_ba4lfeer_s"
     },
@@ -890,7 +935,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L1",
-      "community": 23,
+      "community": 72,
       "norm_label": "l()",
       "id": "assets_index_ba4lfeer_l"
     },
@@ -908,7 +953,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L1",
-      "community": 23,
+      "community": 72,
       "norm_label": "f()",
       "id": "assets_index_ba4lfeer_f"
     },
@@ -917,7 +962,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L1",
-      "community": 28,
+      "community": 21,
       "norm_label": "p()",
       "id": "assets_index_ba4lfeer_p"
     },
@@ -926,7 +971,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L1",
-      "community": 28,
+      "community": 21,
       "norm_label": "ce()",
       "id": "assets_index_ba4lfeer_ce"
     },
@@ -944,7 +989,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L1",
-      "community": 33,
+      "community": 27,
       "norm_label": "he()",
       "id": "assets_index_ba4lfeer_he"
     },
@@ -953,7 +998,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L1",
-      "community": 28,
+      "community": 21,
       "norm_label": "e()",
       "id": "assets_index_ba4lfeer_e"
     },
@@ -971,7 +1016,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L1",
-      "community": 28,
+      "community": 21,
       "norm_label": "xe()",
       "id": "assets_index_ba4lfeer_xe"
     },
@@ -1034,7 +1079,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 23,
+      "community": 72,
       "norm_label": "tt()",
       "id": "assets_index_ba4lfeer_tt"
     },
@@ -1124,7 +1169,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 23,
+      "community": 21,
       "norm_label": "dt()",
       "id": "assets_index_ba4lfeer_dt"
     },
@@ -1178,7 +1223,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 23,
+      "community": 72,
       "norm_label": "et()",
       "id": "assets_index_ba4lfeer_et"
     },
@@ -1277,7 +1322,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 27,
+      "community": 23,
       "norm_label": "nn()",
       "id": "assets_index_ba4lfeer_nn"
     },
@@ -1286,7 +1331,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 32,
+      "community": 23,
       "norm_label": "rn()",
       "id": "assets_index_ba4lfeer_rn"
     },
@@ -1295,7 +1340,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 23,
+      "community": 27,
       "norm_label": "an()",
       "id": "assets_index_ba4lfeer_an"
     },
@@ -1304,7 +1349,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 322,
+      "community": 27,
       "norm_label": "cn()",
       "id": "assets_index_ba4lfeer_cn"
     },
@@ -1313,7 +1358,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 27,
+      "community": 22,
       "norm_label": "ln()",
       "id": "assets_index_ba4lfeer_ln"
     },
@@ -1322,7 +1367,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 23,
+      "community": 72,
       "norm_label": "dn()",
       "id": "assets_index_ba4lfeer_dn"
     },
@@ -1349,7 +1394,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 23,
+      "community": 27,
       "norm_label": "wn()",
       "id": "assets_index_ba4lfeer_wn"
     },
@@ -1376,7 +1421,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 23,
+      "community": 27,
       "norm_label": "kn()",
       "id": "assets_index_ba4lfeer_kn"
     },
@@ -1529,7 +1574,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 32,
+      "community": 33,
       "norm_label": "fr()",
       "id": "assets_index_ba4lfeer_fr"
     },
@@ -1547,7 +1592,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 32,
+      "community": 23,
       "norm_label": "lr()",
       "id": "assets_index_ba4lfeer_lr"
     },
@@ -1574,7 +1619,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 22,
       "norm_label": "si()",
       "id": "assets_index_ba4lfeer_si"
     },
@@ -1583,7 +1628,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 22,
       "norm_label": "ci()",
       "id": "assets_index_ba4lfeer_ci"
     },
@@ -1592,7 +1637,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 22,
       "norm_label": "li()",
       "id": "assets_index_ba4lfeer_li"
     },
@@ -1601,7 +1646,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 22,
       "norm_label": "ui()",
       "id": "assets_index_ba4lfeer_ui"
     },
@@ -1610,7 +1655,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 22,
       "norm_label": "di()",
       "id": "assets_index_ba4lfeer_di"
     },
@@ -1619,7 +1664,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 22,
       "norm_label": "fi()",
       "id": "assets_index_ba4lfeer_fi"
     },
@@ -1628,7 +1673,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 32,
+      "community": 21,
       "norm_label": "mi()",
       "id": "assets_index_ba4lfeer_mi"
     },
@@ -1637,7 +1682,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 22,
       "norm_label": "hi()",
       "id": "assets_index_ba4lfeer_hi"
     },
@@ -1646,7 +1691,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 21,
       "norm_label": "gi()",
       "id": "assets_index_ba4lfeer_gi"
     },
@@ -1655,7 +1700,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 21,
       "norm_label": "vi()",
       "id": "assets_index_ba4lfeer_vi"
     },
@@ -1664,7 +1709,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 21,
       "norm_label": "yi()",
       "id": "assets_index_ba4lfeer_yi"
     },
@@ -1682,7 +1727,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 33,
+      "community": 21,
       "norm_label": "xi()",
       "id": "assets_index_ba4lfeer_xi"
     },
@@ -1700,7 +1745,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 22,
       "norm_label": "ii()",
       "id": "assets_index_ba4lfeer_ii"
     },
@@ -1709,7 +1754,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 22,
       "norm_label": "ri()",
       "id": "assets_index_ba4lfeer_ri"
     },
@@ -1727,7 +1772,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 21,
       "norm_label": "wi()",
       "id": "assets_index_ba4lfeer_wi"
     },
@@ -1736,7 +1781,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 22,
       "norm_label": "ki()",
       "id": "assets_index_ba4lfeer_ki"
     },
@@ -1745,7 +1790,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 21,
       "norm_label": "qi()",
       "id": "assets_index_ba4lfeer_qi"
     },
@@ -1754,7 +1799,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 21,
       "norm_label": "ji()",
       "id": "assets_index_ba4lfeer_ji"
     },
@@ -1772,7 +1817,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 21,
       "norm_label": "ta()",
       "id": "assets_index_ba4lfeer_ta"
     },
@@ -1826,7 +1871,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 21,
+      "community": 23,
       "norm_label": "sa()",
       "id": "assets_index_ba4lfeer_sa"
     },
@@ -1835,7 +1880,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 21,
+      "community": 23,
       "norm_label": "ca()",
       "id": "assets_index_ba4lfeer_ca"
     },
@@ -1844,7 +1889,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 21,
+      "community": 23,
       "norm_label": "la()",
       "id": "assets_index_ba4lfeer_la"
     },
@@ -1853,7 +1898,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 23,
+      "community": 72,
       "norm_label": "pa()",
       "id": "assets_index_ba4lfeer_pa"
     },
@@ -1862,7 +1907,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 21,
+      "community": 32,
       "norm_label": "ma()",
       "id": "assets_index_ba4lfeer_ma"
     },
@@ -1871,7 +1916,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 22,
       "norm_label": "ya()",
       "id": "assets_index_ba4lfeer_ya"
     },
@@ -1889,7 +1934,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 23,
+      "community": 72,
       "norm_label": "xa()",
       "id": "assets_index_ba4lfeer_xa"
     },
@@ -1907,7 +1952,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 23,
+      "community": 72,
       "norm_label": "ja()",
       "id": "assets_index_ba4lfeer_ja"
     },
@@ -1925,7 +1970,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 33,
+      "community": 21,
       "norm_label": "za()",
       "id": "assets_index_ba4lfeer_za"
     },
@@ -1934,7 +1979,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 32,
+      "community": 21,
       "norm_label": "va()",
       "id": "assets_index_ba4lfeer_va"
     },
@@ -1952,7 +1997,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 21,
+      "community": 72,
       "norm_label": "ka()",
       "id": "assets_index_ba4lfeer_ka"
     },
@@ -1979,7 +2024,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 21,
+      "community": 32,
       "norm_label": "to()",
       "id": "assets_index_ba4lfeer_to"
     },
@@ -1988,7 +2033,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 21,
+      "community": 32,
       "norm_label": "no()",
       "id": "assets_index_ba4lfeer_no"
     },
@@ -2015,7 +2060,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 21,
       "norm_label": "so()",
       "id": "assets_index_ba4lfeer_so"
     },
@@ -2060,7 +2105,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 21,
       "norm_label": "ho()",
       "id": "assets_index_ba4lfeer_ho"
     },
@@ -2078,7 +2123,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 21,
+      "community": 32,
       "norm_label": "z()",
       "id": "assets_index_ba4lfeer_z"
     },
@@ -2105,7 +2150,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 22,
       "norm_label": "jo()",
       "id": "assets_index_ba4lfeer_jo"
     },
@@ -2114,7 +2159,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 21,
+      "community": 23,
       "norm_label": "io()",
       "id": "assets_index_ba4lfeer_io"
     },
@@ -2159,7 +2204,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 22,
+      "community": 21,
       "norm_label": "vo()",
       "id": "assets_index_ba4lfeer_vo"
     },
@@ -2213,7 +2258,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 22,
       "norm_label": "ts()",
       "id": "assets_index_ba4lfeer_ts"
     },
@@ -2222,7 +2267,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 23,
+      "community": 72,
       "norm_label": "ns()",
       "id": "assets_index_ba4lfeer_ns"
     },
@@ -2231,7 +2276,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 22,
       "norm_label": "rs()",
       "id": "assets_index_ba4lfeer_rs"
     },
@@ -2240,7 +2285,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 22,
       "norm_label": "is()",
       "id": "assets_index_ba4lfeer_is"
     },
@@ -2276,7 +2321,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 33,
+      "community": 22,
       "norm_label": "cs()",
       "id": "assets_index_ba4lfeer_cs"
     },
@@ -2285,7 +2330,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 32,
+      "community": 22,
       "norm_label": "ls()",
       "id": "assets_index_ba4lfeer_ls"
     },
@@ -2294,7 +2339,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 33,
+      "community": 22,
       "norm_label": "us()",
       "id": "assets_index_ba4lfeer_us"
     },
@@ -2312,7 +2357,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 33,
+      "community": 22,
       "norm_label": "fs()",
       "id": "assets_index_ba4lfeer_fs"
     },
@@ -2321,7 +2366,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 22,
       "norm_label": "ps()",
       "id": "assets_index_ba4lfeer_ps"
     },
@@ -2357,7 +2402,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 22,
+      "community": 27,
       "norm_label": "vs()",
       "id": "assets_index_ba4lfeer_vs"
     },
@@ -2366,7 +2411,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 21,
+      "community": 32,
       "norm_label": "ys()",
       "id": "assets_index_ba4lfeer_ys"
     },
@@ -2375,7 +2420,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 22,
       "norm_label": "bs()",
       "id": "assets_index_ba4lfeer_bs"
     },
@@ -2393,7 +2438,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 33,
+      "community": 22,
       "norm_label": "ws()",
       "id": "assets_index_ba4lfeer_ws"
     },
@@ -2420,7 +2465,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 22,
       "norm_label": "zs()",
       "id": "assets_index_ba4lfeer_zs"
     },
@@ -2465,7 +2510,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 21,
       "norm_label": "rc()",
       "id": "assets_index_ba4lfeer_rc"
     },
@@ -2474,7 +2519,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 33,
+      "community": 21,
       "norm_label": "ic()",
       "id": "assets_index_ba4lfeer_ic"
     },
@@ -2564,7 +2609,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 21,
       "norm_label": "hc()",
       "id": "assets_index_ba4lfeer_hc"
     },
@@ -2573,7 +2618,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 21,
+      "community": 32,
       "norm_label": "gc()",
       "id": "assets_index_ba4lfeer_gc"
     },
@@ -2582,7 +2627,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 21,
       "norm_label": "vc()",
       "id": "assets_index_ba4lfeer_vc"
     },
@@ -2591,7 +2636,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 21,
+      "community": 32,
       "norm_label": "yc()",
       "id": "assets_index_ba4lfeer_yc"
     },
@@ -2600,7 +2645,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 21,
       "norm_label": "bc()",
       "id": "assets_index_ba4lfeer_bc"
     },
@@ -2618,7 +2663,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 21,
+      "community": 32,
       "norm_label": "kc()",
       "id": "assets_index_ba4lfeer_kc"
     },
@@ -2636,7 +2681,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 21,
+      "community": 32,
       "norm_label": "jc()",
       "id": "assets_index_ba4lfeer_jc"
     },
@@ -2645,7 +2690,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 23,
+      "community": 32,
       "norm_label": "zc()",
       "id": "assets_index_ba4lfeer_zc"
     },
@@ -2654,7 +2699,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 21,
       "norm_label": "h()",
       "id": "assets_index_ba4lfeer_h"
     },
@@ -2663,7 +2708,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 23,
+      "community": 32,
       "norm_label": "qc()",
       "id": "assets_index_ba4lfeer_qc"
     },
@@ -2672,7 +2717,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 23,
+      "community": 32,
       "norm_label": "xc()",
       "id": "assets_index_ba4lfeer_xc"
     },
@@ -2681,7 +2726,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 23,
+      "community": 32,
       "norm_label": "el()",
       "id": "assets_index_ba4lfeer_el"
     },
@@ -2690,7 +2735,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 21,
+      "community": 32,
       "norm_label": "tl()",
       "id": "assets_index_ba4lfeer_tl"
     },
@@ -2699,7 +2744,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 21,
+      "community": 32,
       "norm_label": "ol()",
       "id": "assets_index_ba4lfeer_ol"
     },
@@ -2708,7 +2753,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 21,
+      "community": 32,
       "norm_label": "sl()",
       "id": "assets_index_ba4lfeer_sl"
     },
@@ -2717,7 +2762,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 21,
+      "community": 32,
       "norm_label": "cl()",
       "id": "assets_index_ba4lfeer_cl"
     },
@@ -2726,7 +2771,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 21,
+      "community": 32,
       "norm_label": "ul()",
       "id": "assets_index_ba4lfeer_ul"
     },
@@ -2735,7 +2780,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 21,
+      "community": 32,
       "norm_label": "dl()",
       "id": "assets_index_ba4lfeer_dl"
     },
@@ -2744,7 +2789,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 21,
+      "community": 32,
       "norm_label": "fl()",
       "id": "assets_index_ba4lfeer_fl"
     },
@@ -2753,7 +2798,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 21,
+      "community": 32,
       "norm_label": "pl()",
       "id": "assets_index_ba4lfeer_pl"
     },
@@ -2780,7 +2825,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 23,
+      "community": 32,
       "norm_label": "gl()",
       "id": "assets_index_ba4lfeer_gl"
     },
@@ -2789,7 +2834,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 23,
+      "community": 32,
       "norm_label": "vl()",
       "id": "assets_index_ba4lfeer_vl"
     },
@@ -2798,7 +2843,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 23,
+      "community": 32,
       "norm_label": "yl()",
       "id": "assets_index_ba4lfeer_yl"
     },
@@ -2807,7 +2852,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 23,
+      "community": 32,
       "norm_label": "bl()",
       "id": "assets_index_ba4lfeer_bl"
     },
@@ -2816,7 +2861,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 21,
+      "community": 32,
       "norm_label": "xl()",
       "id": "assets_index_ba4lfeer_xl"
     },
@@ -2825,7 +2870,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 21,
+      "community": 32,
       "norm_label": "wl()",
       "id": "assets_index_ba4lfeer_wl"
     },
@@ -2834,7 +2879,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 21,
+      "community": 32,
       "norm_label": "kl()",
       "id": "assets_index_ba4lfeer_kl"
     },
@@ -2852,7 +2897,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 21,
+      "community": 32,
       "norm_label": "nl()",
       "id": "assets_index_ba4lfeer_nl"
     },
@@ -2861,7 +2906,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 21,
+      "community": 32,
       "norm_label": "il()",
       "id": "assets_index_ba4lfeer_il"
     },
@@ -2870,7 +2915,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 21,
+      "community": 32,
       "norm_label": "ll()",
       "id": "assets_index_ba4lfeer_ll"
     },
@@ -2879,7 +2924,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 33,
+      "community": 22,
       "norm_label": "pu()",
       "id": "assets_index_ba4lfeer_pu"
     },
@@ -2888,7 +2933,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 33,
+      "community": 22,
       "norm_label": "mu()",
       "id": "assets_index_ba4lfeer_mu"
     },
@@ -2897,7 +2942,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 32,
+      "community": 33,
       "norm_label": "hu()",
       "id": "assets_index_ba4lfeer_hu"
     },
@@ -2924,7 +2969,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 32,
+      "community": 33,
       "norm_label": "vu()",
       "id": "assets_index_ba4lfeer_vu"
     },
@@ -2942,7 +2987,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 32,
+      "community": 33,
       "norm_label": "bu()",
       "id": "assets_index_ba4lfeer_bu"
     },
@@ -3005,7 +3050,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 33,
+      "community": 21,
       "norm_label": "du()",
       "id": "assets_index_ba4lfeer_du"
     },
@@ -3050,7 +3095,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 21,
       "norm_label": "nu()",
       "id": "assets_index_ba4lfeer_nu"
     },
@@ -3059,7 +3104,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 33,
+      "community": 22,
       "norm_label": "fu()",
       "id": "assets_index_ba4lfeer_fu"
     },
@@ -3068,7 +3113,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 33,
+      "community": 22,
       "norm_label": "iu()",
       "id": "assets_index_ba4lfeer_iu"
     },
@@ -3077,7 +3122,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 32,
+      "community": 33,
       "norm_label": "lu()",
       "id": "assets_index_ba4lfeer_lu"
     },
@@ -3086,7 +3131,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 32,
+      "community": 33,
       "norm_label": "ru()",
       "id": "assets_index_ba4lfeer_ru"
     },
@@ -3095,7 +3140,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 32,
+      "community": 33,
       "norm_label": "zu()",
       "id": "assets_index_ba4lfeer_zu"
     },
@@ -3104,7 +3149,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 32,
+      "community": 33,
       "norm_label": "uu()",
       "id": "assets_index_ba4lfeer_uu"
     },
@@ -3194,7 +3239,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 33,
+      "community": 22,
       "norm_label": "dd()",
       "id": "assets_index_ba4lfeer_dd"
     },
@@ -3221,7 +3266,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 21,
       "norm_label": "md()",
       "id": "assets_index_ba4lfeer_md"
     },
@@ -3239,7 +3284,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 32,
+      "community": 23,
       "norm_label": "q()",
       "id": "assets_index_ba4lfeer_q"
     },
@@ -3284,7 +3329,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L8",
-      "community": 28,
+      "community": 21,
       "norm_label": "jd()",
       "id": "assets_index_ba4lfeer_jd"
     },
@@ -3293,7 +3338,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L9",
-      "community": 32,
+      "community": 23,
       "norm_label": "nd()",
       "id": "assets_index_ba4lfeer_nd"
     },
@@ -3311,7 +3356,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L9",
-      "community": 22,
+      "community": 21,
       "norm_label": "hd()",
       "id": "assets_index_ba4lfeer_hd"
     },
@@ -3338,7 +3383,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L9",
-      "community": 23,
+      "community": 32,
       "norm_label": "zd()",
       "id": "assets_index_ba4lfeer_zd"
     },
@@ -3347,7 +3392,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L9",
-      "community": 23,
+      "community": 72,
       "norm_label": "qd()",
       "id": "assets_index_ba4lfeer_qd"
     },
@@ -3410,7 +3455,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L9",
-      "community": 41,
+      "community": 27,
       "norm_label": "sf()",
       "id": "assets_index_ba4lfeer_sf"
     },
@@ -3428,7 +3473,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L9",
-      "community": 28,
+      "community": 21,
       "norm_label": "uf()",
       "id": "assets_index_ba4lfeer_uf"
     },
@@ -3473,7 +3518,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L9",
-      "community": 23,
+      "community": 72,
       "norm_label": "vf()",
       "id": "assets_index_ba4lfeer_vf"
     },
@@ -3482,7 +3527,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L9",
-      "community": 23,
+      "community": 22,
       "norm_label": "yf()",
       "id": "assets_index_ba4lfeer_yf"
     },
@@ -3563,7 +3608,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L9",
-      "community": 23,
+      "community": 32,
       "norm_label": "hf()",
       "id": "assets_index_ba4lfeer_hf"
     },
@@ -3581,7 +3626,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L9",
-      "community": 23,
+      "community": 72,
       "norm_label": "ep()",
       "id": "assets_index_ba4lfeer_ep"
     },
@@ -3590,7 +3635,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L9",
-      "community": 23,
+      "community": 72,
       "norm_label": "tp()",
       "id": "assets_index_ba4lfeer_tp"
     },
@@ -3599,7 +3644,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L9",
-      "community": 23,
+      "community": 72,
       "norm_label": "np()",
       "id": "assets_index_ba4lfeer_np"
     },
@@ -3608,7 +3653,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L9",
-      "community": 23,
+      "community": 72,
       "norm_label": "rp()",
       "id": "assets_index_ba4lfeer_rp"
     },
@@ -3617,7 +3662,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L9",
-      "community": 23,
+      "community": 72,
       "norm_label": "ip()",
       "id": "assets_index_ba4lfeer_ip"
     },
@@ -3626,7 +3671,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L9",
-      "community": 23,
+      "community": 72,
       "norm_label": "ap()",
       "id": "assets_index_ba4lfeer_ap"
     },
@@ -3635,7 +3680,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L9",
-      "community": 23,
+      "community": 72,
       "norm_label": "op()",
       "id": "assets_index_ba4lfeer_op"
     },
@@ -3644,7 +3689,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L9",
-      "community": 23,
+      "community": 72,
       "norm_label": "cp()",
       "id": "assets_index_ba4lfeer_cp"
     },
@@ -3653,7 +3698,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L9",
-      "community": 23,
+      "community": 72,
       "norm_label": "lp()",
       "id": "assets_index_ba4lfeer_lp"
     },
@@ -3662,7 +3707,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L9",
-      "community": 23,
+      "community": 72,
       "norm_label": "up()",
       "id": "assets_index_ba4lfeer_up"
     },
@@ -3671,7 +3716,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L9",
-      "community": 23,
+      "community": 72,
       "norm_label": "dp()",
       "id": "assets_index_ba4lfeer_dp"
     },
@@ -3680,7 +3725,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L9",
-      "community": 23,
+      "community": 72,
       "norm_label": "pp()",
       "id": "assets_index_ba4lfeer_pp"
     },
@@ -3689,7 +3734,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L9",
-      "community": 23,
+      "community": 72,
       "norm_label": "mp()",
       "id": "assets_index_ba4lfeer_mp"
     },
@@ -3698,7 +3743,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L9",
-      "community": 23,
+      "community": 72,
       "norm_label": "wp()",
       "id": "assets_index_ba4lfeer_wp"
     },
@@ -3707,7 +3752,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L9",
-      "community": 23,
+      "community": 72,
       "norm_label": "kp()",
       "id": "assets_index_ba4lfeer_kp"
     },
@@ -3752,7 +3797,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L9",
-      "community": 27,
+      "community": 33,
       "norm_label": "fe()",
       "id": "assets_index_ba4lfeer_fe"
     },
@@ -3770,7 +3815,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L9",
-      "community": 33,
+      "community": 27,
       "norm_label": "me()",
       "id": "assets_index_ba4lfeer_me"
     },
@@ -3806,7 +3851,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L9",
-      "community": 33,
+      "community": 23,
       "norm_label": "ne()",
       "id": "assets_index_ba4lfeer_ne"
     },
@@ -3851,7 +3896,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L11",
-      "community": 28,
+      "community": 21,
       "norm_label": "componentdidcatch()",
       "id": "assets_index_ba4lfeer_componentdidcatch"
     },
@@ -3860,7 +3905,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L11",
-      "community": 21,
+      "community": 27,
       "norm_label": "render()",
       "id": "assets_index_ba4lfeer_render"
     },
@@ -3878,7 +3923,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L11",
-      "community": 23,
+      "community": 27,
       "norm_label": "un()",
       "id": "assets_index_ba4lfeer_un"
     },
@@ -3887,7 +3932,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L11",
-      "community": 33,
+      "community": 23,
       "norm_label": "fn()",
       "id": "assets_index_ba4lfeer_fn"
     },
@@ -3941,7 +3986,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L11",
-      "community": 23,
+      "community": 27,
       "norm_label": "xn()",
       "id": "assets_index_ba4lfeer_xn"
     },
@@ -3950,7 +3995,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L11",
-      "community": 23,
+      "community": 27,
       "norm_label": "sn()",
       "id": "assets_index_ba4lfeer_sn"
     },
@@ -3968,7 +4013,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L11",
-      "community": 27,
+      "community": 22,
       "norm_label": "zn()",
       "id": "assets_index_ba4lfeer_zn"
     },
@@ -3977,7 +4022,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L11",
-      "community": 28,
+      "community": 21,
       "norm_label": "xr()",
       "id": "assets_index_ba4lfeer_xr"
     },
@@ -3986,7 +4031,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L11",
-      "community": 28,
+      "community": 22,
       "norm_label": "rr()",
       "id": "assets_index_ba4lfeer_rr"
     },
@@ -4022,7 +4067,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L11",
-      "community": 28,
+      "community": 22,
       "norm_label": "ai()",
       "id": "assets_index_ba4lfeer_ai"
     },
@@ -4031,7 +4076,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L11",
-      "community": 28,
+      "community": 22,
       "norm_label": "oi()",
       "id": "assets_index_ba4lfeer_oi"
     },
@@ -4040,7 +4085,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js",
       "source_location": "L11",
-      "community": 28,
+      "community": 22,
       "norm_label": "pi()",
       "id": "assets_index_ba4lfeer_pi"
     },
@@ -16397,7 +16442,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/diagnostics/screenshots.py",
       "source_location": "L19",
-      "community": 26,
+      "community": 20,
       "norm_label": "bool",
       "id": "bool"
     },
@@ -16406,7 +16451,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/diagnostics/screenshots.py",
       "source_location": "L24",
-      "community": 6,
+      "community": 20,
       "norm_label": "capture_screenshot()",
       "id": "diagnostics_screenshots_capture_screenshot"
     },
@@ -16415,7 +16460,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/diagnostics/screenshots.py",
       "source_location": "L24",
-      "community": 6,
+      "community": 20,
       "norm_label": "str",
       "id": "bot_ruleta_diagnostics_screenshots_py_str"
     },
@@ -16604,7 +16649,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui/app.py",
       "source_location": "L36",
-      "community": 3,
+      "community": 96,
       "norm_label": "rouletteapp",
       "id": "gui_app_rouletteapp"
     },
@@ -16613,7 +16658,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui/app.py",
       "source_location": "L37",
-      "community": 3,
+      "community": 96,
       "norm_label": ".__init__()",
       "id": "gui_app_rouletteapp_init"
     },
@@ -16622,7 +16667,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui/app.py",
       "source_location": "L95",
-      "community": 3,
+      "community": 96,
       "norm_label": ".show_frame()",
       "id": "gui_app_rouletteapp_show_frame"
     },
@@ -16631,7 +16676,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui/app.py",
       "source_location": "L101",
-      "community": 3,
+      "community": 96,
       "norm_label": "._process_log_queue()",
       "id": "gui_app_rouletteapp_process_log_queue"
     },
@@ -16640,7 +16685,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui/app.py",
       "source_location": "L111",
-      "community": 3,
+      "community": 96,
       "norm_label": ".start_background_services()",
       "id": "gui_app_rouletteapp_start_background_services"
     },
@@ -16658,7 +16703,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui/app.py",
       "source_location": "L146",
-      "community": 3,
+      "community": 96,
       "norm_label": ".on_closing()",
       "id": "gui_app_rouletteapp_on_closing"
     },
@@ -16676,7 +16721,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui/screens/__init__.py",
       "source_location": "L1",
-      "community": 19,
+      "community": 86,
       "norm_label": "__init__.py",
       "id": "screens_init"
     },
@@ -16685,7 +16730,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui/screens/dashboard.py",
       "source_location": "L1",
-      "community": 19,
+      "community": 28,
       "norm_label": "dashboard.py",
       "id": "screens_dashboard"
     },
@@ -16829,7 +16874,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui/screens/login.py",
       "source_location": "L1",
-      "community": 19,
+      "community": 93,
       "norm_label": "login.py",
       "id": "screens_login"
     },
@@ -16838,7 +16883,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui/screens/login.py",
       "source_location": "L13",
-      "community": 19,
+      "community": 93,
       "norm_label": "_resource_path()",
       "id": "screens_login_resource_path"
     },
@@ -16847,7 +16892,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui/screens/login.py",
       "source_location": "L22",
-      "community": 19,
+      "community": 93,
       "norm_label": "loginscreen",
       "id": "screens_login_loginscreen"
     },
@@ -16856,7 +16901,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui/screens/login.py",
       "source_location": "L23",
-      "community": 19,
+      "community": 93,
       "norm_label": ".__init__()",
       "id": "screens_login_loginscreen_init"
     },
@@ -16865,7 +16910,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui/screens/login.py",
       "source_location": "L132",
-      "community": 19,
+      "community": 93,
       "norm_label": ".on_show()",
       "id": "screens_login_loginscreen_on_show"
     },
@@ -16874,7 +16919,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui/screens/login.py",
       "source_location": "L158",
-      "community": 19,
+      "community": 93,
       "norm_label": "._update_thresh_lbl()",
       "id": "screens_login_loginscreen_update_thresh_lbl"
     },
@@ -16883,7 +16928,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui/screens/login.py",
       "source_location": "L161",
-      "community": 19,
+      "community": 93,
       "norm_label": "._update_color_thresh_lbl()",
       "id": "screens_login_loginscreen_update_color_thresh_lbl"
     },
@@ -16892,7 +16937,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui/screens/login.py",
       "source_location": "L164",
-      "community": 19,
+      "community": 93,
       "norm_label": "._update_number_thresh_lbl()",
       "id": "screens_login_loginscreen_update_number_thresh_lbl"
     },
@@ -16901,7 +16946,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui/screens/login.py",
       "source_location": "L167",
-      "community": 19,
+      "community": 93,
       "norm_label": ".start_bot()",
       "id": "screens_login_loginscreen_start_bot"
     },
@@ -16910,7 +16955,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui/screens/prerequisites.py",
       "source_location": "L1",
-      "community": 57,
+      "community": 86,
       "norm_label": "prerequisites.py",
       "id": "screens_prerequisites"
     },
@@ -16919,7 +16964,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui/screens/prerequisites.py",
       "source_location": "L14",
-      "community": 57,
+      "community": 86,
       "norm_label": "prerequisitesscreen",
       "id": "screens_prerequisites_prerequisitesscreen"
     },
@@ -16928,7 +16973,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui/screens/prerequisites.py",
       "source_location": "L15",
-      "community": 57,
+      "community": 86,
       "norm_label": ".__init__()",
       "id": "screens_prerequisites_prerequisitesscreen_init"
     },
@@ -16937,7 +16982,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui/screens/prerequisites.py",
       "source_location": "L48",
-      "community": 57,
+      "community": 86,
       "norm_label": ".on_show()",
       "id": "screens_prerequisites_prerequisitesscreen_on_show"
     },
@@ -16946,7 +16991,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui/screens/prerequisites.py",
       "source_location": "L51",
-      "community": 57,
+      "community": 86,
       "norm_label": ".run_checks()",
       "id": "screens_prerequisites_prerequisitesscreen_run_checks"
     },
@@ -16955,7 +17000,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui/screens/update.py",
       "source_location": "L1",
-      "community": 57,
+      "community": 86,
       "norm_label": "update.py",
       "id": "screens_update"
     },
@@ -16964,7 +17009,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui/screens/update.py",
       "source_location": "L6",
-      "community": 57,
+      "community": 86,
       "norm_label": "updatescreen",
       "id": "screens_update_updatescreen"
     },
@@ -16973,7 +17018,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui/screens/update.py",
       "source_location": "L7",
-      "community": 57,
+      "community": 86,
       "norm_label": ".__init__()",
       "id": "screens_update_updatescreen_init"
     },
@@ -16982,7 +17027,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui/screens/update.py",
       "source_location": "L32",
-      "community": 57,
+      "community": 86,
       "norm_label": ".start_update()",
       "id": "screens_update_updatescreen_start_update"
     },
@@ -17144,7 +17189,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/launcher.py",
       "source_location": "L90",
-      "community": 20,
+      "community": 92,
       "norm_label": "cleanup()",
       "id": "bot_ruleta_launcher_cleanup"
     },
@@ -17477,7 +17522,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/paths.py",
       "source_location": "L1",
-      "community": 20,
+      "community": 98,
       "norm_label": "paths.py",
       "id": "bot_ruleta_paths"
     },
@@ -17486,7 +17531,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/paths.py",
       "source_location": "L10",
-      "community": 20,
+      "community": 92,
       "norm_label": "is_frozen()",
       "id": "bot_ruleta_paths_is_frozen"
     },
@@ -17495,7 +17540,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/paths.py",
       "source_location": "L14",
-      "community": 20,
+      "community": 92,
       "norm_label": "get_base_dir()",
       "id": "bot_ruleta_paths_get_base_dir"
     },
@@ -17504,7 +17549,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/paths.py",
       "source_location": "L21",
-      "community": 20,
+      "community": 98,
       "norm_label": "get_data_dir()",
       "id": "bot_ruleta_paths_get_data_dir"
     },
@@ -17513,7 +17558,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/paths.py",
       "source_location": "L1",
-      "community": 20,
+      "community": 98,
       "norm_label": "resolucion centralizada de rutas para desarrollo y pyinstaller. elimina el patr",
       "id": "bot_ruleta_paths_rationale_1"
     },
@@ -17522,7 +17567,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/paths.py",
       "source_location": "L15",
-      "community": 20,
+      "community": 92,
       "norm_label": "directorio raiz del ejecutable (frozen) o del source (dev).",
       "id": "bot_ruleta_paths_rationale_15"
     },
@@ -17531,7 +17576,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/paths.py",
       "source_location": "L22",
-      "community": 20,
+      "community": 98,
       "norm_label": "directorio data/ para bd, credenciales, logs.",
       "id": "bot_ruleta_paths_rationale_22"
     },
@@ -17540,7 +17585,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/run.py",
       "source_location": "L1",
-      "community": 26,
+      "community": 28,
       "norm_label": "run.py",
       "id": "bot_ruleta_run"
     },
@@ -17567,7 +17612,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L1",
-      "community": 6,
+      "community": 28,
       "norm_label": "scanner.py",
       "id": "bot_ruleta_scanner"
     },
@@ -17576,7 +17621,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L28",
-      "community": 6,
+      "community": 28,
       "norm_label": "extract_nums_js()",
       "id": "bot_ruleta_scanner_extract_nums_js"
     },
@@ -17585,7 +17630,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L28",
-      "community": 6,
+      "community": 28,
       "norm_label": "str",
       "id": "bot_ruleta_scanner_py_str"
     },
@@ -17612,7 +17657,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L122",
-      "community": 6,
+      "community": 28,
       "norm_label": "_start_audio_keepalive()",
       "id": "bot_ruleta_scanner_start_audio_keepalive"
     },
@@ -17621,7 +17666,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L146",
-      "community": 6,
+      "community": 28,
       "norm_label": "_scan_loop()",
       "id": "bot_ruleta_scanner_scan_loop"
     },
@@ -17630,7 +17675,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L180",
-      "community": 6,
+      "community": 28,
       "norm_label": "_simulate_mouse_move()",
       "id": "bot_ruleta_scanner_simulate_mouse_move"
     },
@@ -17639,7 +17684,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L197",
-      "community": 6,
+      "community": 28,
       "norm_label": "_scan_all_tables()",
       "id": "bot_ruleta_scanner_scan_all_tables"
     },
@@ -17648,7 +17693,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L206",
-      "community": 6,
+      "community": 28,
       "norm_label": "_scan_single_table()",
       "id": "bot_ruleta_scanner_scan_single_table"
     },
@@ -17657,7 +17702,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L229",
-      "community": 6,
+      "community": 28,
       "norm_label": "_chain_match_and_save()",
       "id": "bot_ruleta_scanner_chain_match_and_save"
     },
@@ -17666,7 +17711,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L249",
-      "community": 6,
+      "community": 28,
       "norm_label": "_get_color()",
       "id": "bot_ruleta_scanner_get_color"
     },
@@ -17684,7 +17729,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L287",
-      "community": 6,
+      "community": 28,
       "norm_label": "_send_alerts()",
       "id": "bot_ruleta_scanner_send_alerts"
     },
@@ -17693,7 +17738,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L302",
-      "community": 6,
+      "community": 28,
       "norm_label": "_handle_zero_tiles()",
       "id": "bot_ruleta_scanner_handle_zero_tiles"
     },
@@ -17702,7 +17747,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L321",
-      "community": 6,
+      "community": 28,
       "norm_label": "_check_session_expiry()",
       "id": "bot_ruleta_scanner_check_session_expiry"
     },
@@ -17720,7 +17765,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L359",
-      "community": 6,
+      "community": 28,
       "norm_label": "_handle_error()",
       "id": "bot_ruleta_scanner_handle_error"
     },
@@ -17729,7 +17774,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L371",
-      "community": 6,
+      "community": 28,
       "norm_label": "_cleanup_driver()",
       "id": "bot_ruleta_scanner_cleanup_driver"
     },
@@ -17738,7 +17783,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L385",
-      "community": 19,
+      "community": 28,
       "norm_label": "run_bot()",
       "id": "bot_ruleta_scanner_run_bot"
     },
@@ -17747,7 +17792,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L385",
-      "community": 19,
+      "community": 28,
       "norm_label": "any",
       "id": "bot_ruleta_scanner_py_any"
     },
@@ -17756,7 +17801,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L1",
-      "community": 6,
+      "community": 28,
       "norm_label": "loop principal del bot: escaneo de tiles, extraccion y guardado de datos. inclu",
       "id": "bot_ruleta_scanner_rationale_1"
     },
@@ -17765,7 +17810,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L29",
-      "community": 6,
+      "community": 28,
       "norm_label": "extrae numeros visibles de un tile usando javascript (class-agnostic).",
       "id": "bot_ruleta_scanner_rationale_29"
     },
@@ -17792,7 +17837,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L123",
-      "community": 6,
+      "community": 28,
       "norm_label": "audiocontext silencioso para evitar que chrome suspenda la pagina.",
       "id": "bot_ruleta_scanner_rationale_123"
     },
@@ -17801,7 +17846,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L147",
-      "community": 6,
+      "community": 28,
       "norm_label": "loop infinito de escaneo de tiles.",
       "id": "bot_ruleta_scanner_rationale_147"
     },
@@ -17810,7 +17855,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L181",
-      "community": 6,
+      "community": 28,
       "norm_label": "simula movimiento de mouse js para evitar desconexion de pragmatic.",
       "id": "bot_ruleta_scanner_rationale_181"
     },
@@ -17819,7 +17864,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L198",
-      "community": 6,
+      "community": 28,
       "norm_label": "escanea todas las mesas mapeadas. retorna cuantas tuvieron exito.",
       "id": "bot_ruleta_scanner_rationale_198"
     },
@@ -17828,7 +17873,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L207",
-      "community": 6,
+      "community": 28,
       "norm_label": "escanea una mesa. retorna true si encontro numeros y los proceso.",
       "id": "bot_ruleta_scanner_rationale_207"
     },
@@ -17837,7 +17882,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L230",
-      "community": 6,
+      "community": 28,
       "norm_label": "chain matching robusto + guardado en db. retorna los numeros nuevos.",
       "id": "bot_ruleta_scanner_rationale_230"
     },
@@ -17855,7 +17900,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L288",
-      "community": 6,
+      "community": 28,
       "norm_label": "envia alertas de delay, color y numeros a telegram.",
       "id": "bot_ruleta_scanner_rationale_288"
     },
@@ -17864,7 +17909,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L303",
-      "community": 6,
+      "community": 28,
       "norm_label": "maneja ciclos sin tiles: chequeo de expiracion, soft refresh, fallo critico.",
       "id": "bot_ruleta_scanner_rationale_303"
     },
@@ -17873,7 +17918,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L322",
-      "community": 6,
+      "community": 28,
       "norm_label": "detecta si la sesion expiro por inactividad.",
       "id": "bot_ruleta_scanner_rationale_322"
     },
@@ -17891,7 +17936,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L360",
-      "community": 6,
+      "community": 28,
       "norm_label": "distingue sesion expirada de error real y genera crash report si aplica.",
       "id": "bot_ruleta_scanner_rationale_360"
     },
@@ -17900,7 +17945,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L372",
-      "community": 6,
+      "community": 28,
       "norm_label": "cierra el navegador de forma segura.",
       "id": "bot_ruleta_scanner_rationale_372"
     },
@@ -17909,7 +17954,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L386",
-      "community": 19,
+      "community": 28,
       "norm_label": "loop supervisor que asegura que el bot se reinicie si falla.          args:",
       "id": "bot_ruleta_scanner_rationale_386"
     },
@@ -17927,7 +17972,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/telegram.py",
       "source_location": "L12",
-      "community": 3,
+      "community": 90,
       "norm_label": "send_telegram_msg()",
       "id": "bot_ruleta_telegram_send_telegram_msg"
     },
@@ -17945,7 +17990,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/telegram.py",
       "source_location": "L13",
-      "community": 3,
+      "community": 90,
       "norm_label": "envia mensaje raw a telegram.",
       "id": "bot_ruleta_telegram_rationale_13"
     },
@@ -17963,7 +18008,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_config_paths.py",
       "source_location": "L1",
-      "community": 20,
+      "community": 92,
       "norm_label": "test_config_paths.py",
       "id": "tests_test_config_paths"
     },
@@ -17972,7 +18017,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_config_paths.py",
       "source_location": "L11",
-      "community": 20,
+      "community": 94,
       "norm_label": "testconfig",
       "id": "tests_test_config_paths_testconfig"
     },
@@ -17981,7 +18026,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_config_paths.py",
       "source_location": "L12",
-      "community": 20,
+      "community": 94,
       "norm_label": ".test_tables_count()",
       "id": "tests_test_config_paths_testconfig_test_tables_count"
     },
@@ -17990,7 +18035,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_config_paths.py",
       "source_location": "L16",
-      "community": 20,
+      "community": 94,
       "norm_label": ".test_all_tables_have_required_keys()",
       "id": "tests_test_config_paths_testconfig_test_all_tables_have_required_keys"
     },
@@ -17999,7 +18044,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_config_paths.py",
       "source_location": "L24",
-      "community": 20,
+      "community": 94,
       "norm_label": ".test_reds_count()",
       "id": "tests_test_config_paths_testconfig_test_reds_count"
     },
@@ -18008,7 +18053,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_config_paths.py",
       "source_location": "L28",
-      "community": 20,
+      "community": 94,
       "norm_label": ".test_reds_are_strings()",
       "id": "tests_test_config_paths_testconfig_test_reds_are_strings"
     },
@@ -18017,7 +18062,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_config_paths.py",
       "source_location": "L34",
-      "community": 20,
+      "community": 94,
       "norm_label": ".test_lobby_url_configured()",
       "id": "tests_test_config_paths_testconfig_test_lobby_url_configured"
     },
@@ -18026,7 +18071,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_config_paths.py",
       "source_location": "L39",
-      "community": 20,
+      "community": 94,
       "norm_label": ".test_lobby_mode_is_bool()",
       "id": "tests_test_config_paths_testconfig_test_lobby_mode_is_bool"
     },
@@ -18035,7 +18080,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_config_paths.py",
       "source_location": "L43",
-      "community": 20,
+      "community": 94,
       "norm_label": ".test_afk_interval_positive()",
       "id": "tests_test_config_paths_testconfig_test_afk_interval_positive"
     },
@@ -18044,7 +18089,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_config_paths.py",
       "source_location": "L47",
-      "community": 20,
+      "community": 94,
       "norm_label": ".test_table_names_are_unique()",
       "id": "tests_test_config_paths_testconfig_test_table_names_are_unique"
     },
@@ -18053,7 +18098,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_config_paths.py",
       "source_location": "L53",
-      "community": 20,
+      "community": 92,
       "norm_label": "testpaths",
       "id": "tests_test_config_paths_testpaths"
     },
@@ -18062,7 +18107,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_config_paths.py",
       "source_location": "L54",
-      "community": 20,
+      "community": 92,
       "norm_label": ".test_is_frozen_false_in_dev()",
       "id": "tests_test_config_paths_testpaths_test_is_frozen_false_in_dev"
     },
@@ -18071,7 +18116,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_config_paths.py",
       "source_location": "L58",
-      "community": 20,
+      "community": 92,
       "norm_label": ".test_get_base_dir_returns_valid_path()",
       "id": "tests_test_config_paths_testpaths_test_get_base_dir_returns_valid_path"
     },
@@ -18080,7 +18125,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_config_paths.py",
       "source_location": "L63",
-      "community": 20,
+      "community": 92,
       "norm_label": ".test_get_data_dir_exists()",
       "id": "tests_test_config_paths_testpaths_test_get_data_dir_exists"
     },
@@ -18089,7 +18134,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/tests/test_config_paths.py",
       "source_location": "L1",
-      "community": 20,
+      "community": 92,
       "norm_label": "tests para config.py y paths.py: constantes y resolucion de rutas.",
       "id": "tests_test_config_paths_rationale_1"
     },
@@ -18908,7 +18953,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_telegram_tunnel.py",
       "source_location": "L1",
-      "community": 3,
+      "community": 90,
       "norm_label": "test_telegram_tunnel.py",
       "id": "tests_test_telegram_tunnel"
     },
@@ -18917,7 +18962,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_telegram_tunnel.py",
       "source_location": "L12",
-      "community": 3,
+      "community": 90,
       "norm_label": "testsendtelegrammsg",
       "id": "tests_test_telegram_tunnel_testsendtelegrammsg"
     },
@@ -18926,7 +18971,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_telegram_tunnel.py",
       "source_location": "L14",
-      "community": 3,
+      "community": 90,
       "norm_label": ".test_success_returns_true()",
       "id": "tests_test_telegram_tunnel_testsendtelegrammsg_test_success_returns_true"
     },
@@ -18935,7 +18980,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_telegram_tunnel.py",
       "source_location": "L22",
-      "community": 3,
+      "community": 90,
       "norm_label": ".test_failure_returns_false()",
       "id": "tests_test_telegram_tunnel_testsendtelegrammsg_test_failure_returns_false"
     },
@@ -18944,7 +18989,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_telegram_tunnel.py",
       "source_location": "L30",
-      "community": 3,
+      "community": 90,
       "norm_label": ".test_exception_returns_false()",
       "id": "tests_test_telegram_tunnel_testsendtelegrammsg_test_exception_returns_false"
     },
@@ -18953,7 +18998,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_telegram_tunnel.py",
       "source_location": "L36",
-      "community": 3,
+      "community": 90,
       "norm_label": ".test_full_url_and_payload()",
       "id": "tests_test_telegram_tunnel_testsendtelegrammsg_test_full_url_and_payload"
     },
@@ -18962,7 +19007,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_telegram_tunnel.py",
       "source_location": "L49",
-      "community": 3,
+      "community": 90,
       "norm_label": "testtunnel",
       "id": "tests_test_telegram_tunnel_testtunnel"
     },
@@ -18971,7 +19016,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_telegram_tunnel.py",
       "source_location": "L50",
-      "community": 3,
+      "community": 90,
       "norm_label": ".test_dev_mode_true_returns_none()",
       "id": "tests_test_telegram_tunnel_testtunnel_test_dev_mode_true_returns_none"
     },
@@ -18980,7 +19025,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_telegram_tunnel.py",
       "source_location": "L57",
-      "community": 3,
+      "community": 90,
       "norm_label": ".test_prod_mode_returns_token()",
       "id": "tests_test_telegram_tunnel_testtunnel_test_prod_mode_returns_token"
     },
@@ -18989,7 +19034,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/tests/test_telegram_tunnel.py",
       "source_location": "L65",
-      "community": 3,
+      "community": 90,
       "norm_label": ".test_notify_tunnel_url_does_not_crash()",
       "id": "tests_test_telegram_tunnel_testtunnel_test_notify_tunnel_url_does_not_crash"
     },
@@ -18998,7 +19043,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/tests/test_telegram_tunnel.py",
       "source_location": "L1",
-      "community": 3,
+      "community": 90,
       "norm_label": "tests para telegram.py y tunnel.py: envio de mensajes y gestion de cloudflare.",
       "id": "tests_test_telegram_tunnel_rationale_1"
     },
@@ -19070,7 +19115,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/tunnel.py",
       "source_location": "L29",
-      "community": 3,
+      "community": 90,
       "norm_label": "get_cf_env_vars()",
       "id": "bot_ruleta_tunnel_get_cf_env_vars"
     },
@@ -19124,7 +19169,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/tunnel.py",
       "source_location": "L30",
-      "community": 3,
+      "community": 90,
       "norm_label": "retorna (token, dominio) de cloudflare.     prioridad: cloudflare_token env > t",
       "id": "bot_ruleta_tunnel_rationale_30"
     },
@@ -19160,7 +19205,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/updater.py",
       "source_location": "L1",
-      "community": 57,
+      "community": 86,
       "norm_label": "updater.py",
       "id": "bot_ruleta_updater"
     },
@@ -19169,7 +19214,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/updater.py",
       "source_location": "L18",
-      "community": 57,
+      "community": 86,
       "norm_label": "_get_download_url()",
       "id": "bot_ruleta_updater_get_download_url"
     },
@@ -19178,7 +19223,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/updater.py",
       "source_location": "L22",
-      "community": 57,
+      "community": 86,
       "norm_label": "check_for_updates()",
       "id": "bot_ruleta_updater_check_for_updates"
     },
@@ -19187,7 +19232,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/updater.py",
       "source_location": "L69",
-      "community": 57,
+      "community": 86,
       "norm_label": "_cleanup_old_versions()",
       "id": "bot_ruleta_updater_cleanup_old_versions"
     },
@@ -19196,7 +19241,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/updater.py",
       "source_location": "L95",
-      "community": 57,
+      "community": 86,
       "norm_label": "perform_update()",
       "id": "bot_ruleta_updater_perform_update"
     },
@@ -19205,7 +19250,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/updater.py",
       "source_location": "L19",
-      "community": 57,
+      "community": 86,
       "norm_label": "genera la url de descarga para una version especifica.",
       "id": "bot_ruleta_updater_rationale_19"
     },
@@ -19214,7 +19259,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/updater.py",
       "source_location": "L23",
-      "community": 57,
+      "community": 86,
       "norm_label": "checks github for updates in a background thread.     calls callback(new_versio",
       "id": "bot_ruleta_updater_rationale_23"
     },
@@ -19223,7 +19268,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/updater.py",
       "source_location": "L70",
-      "community": 57,
+      "community": 86,
       "norm_label": "limpia archivos de actualizaciones anteriores (.old, .update, versiones viejas).",
       "id": "bot_ruleta_updater_rationale_70"
     },
@@ -19232,7 +19277,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/updater.py",
       "source_location": "L96",
-      "community": 57,
+      "community": 86,
       "norm_label": "downloads the new versioned executable and spawns a bat file to replace the curr",
       "id": "bot_ruleta_updater_rationale_96"
     },
@@ -19261,33 +19306,6 @@
       "community": 11,
       "norm_label": "install_ubuntu.sh script",
       "id": "c_users_bairon_jaramillo_documents_bot_stake_bot_stake_recolector_install_ubuntu_sh__entry"
-    },
-    {
-      "label": "build_exe.py",
-      "file_type": "code",
-      "source_file": "scripts/build_exe.py",
-      "source_location": "L1",
-      "community": 7,
-      "norm_label": "build_exe.py",
-      "id": "scripts_build_exe"
-    },
-    {
-      "label": "build()",
-      "file_type": "code",
-      "source_file": "scripts/build_exe.py",
-      "source_location": "L10",
-      "community": 7,
-      "norm_label": "build()",
-      "id": "scripts_build_exe_build"
-    },
-    {
-      "label": "Script para empaquetar Roulette Sniper Pro en un solo .exe Requiere: pip instal",
-      "file_type": "rationale",
-      "source_file": "scripts/build_exe.py",
-      "source_location": "L1",
-      "community": 7,
-      "norm_label": "script para empaquetar roulette sniper pro en un solo .exe requiere: pip instal",
-      "id": "scripts_build_exe_rationale_1"
     },
     {
       "label": "gen_icon.py",
@@ -19501,7 +19519,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L385",
-      "community": 19,
+      "community": 28,
       "norm_label": "any",
       "id": "any"
     },
@@ -19573,7 +19591,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/telegram.py",
       "source_location": "L10",
-      "community": 3,
+      "community": 90,
       "norm_label": "envia mensaje raw a telegram.",
       "id": "bot_ruleta_telegram_rationale_10"
     },
@@ -19987,7 +20005,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/debug_logger.py",
       "source_location": "L85",
-      "community": 26,
+      "community": 97,
       "norm_label": "_guiqueuehandler",
       "id": "bot_ruleta_debug_logger_guiqueuehandler"
     },
@@ -19996,7 +20014,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/debug_logger.py",
       "source_location": "L87",
-      "community": 26,
+      "community": 97,
       "norm_label": ".__init__()",
       "id": "bot_ruleta_debug_logger_guiqueuehandler_init"
     },
@@ -20005,7 +20023,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/debug_logger.py",
       "source_location": "L91",
-      "community": 26,
+      "community": 97,
       "norm_label": ".emit()",
       "id": "bot_ruleta_debug_logger_guiqueuehandler_emit"
     },
@@ -20014,7 +20032,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/debug_logger.py",
       "source_location": "L99",
-      "community": 26,
+      "community": 57,
       "norm_label": "attach_gui_queue()",
       "id": "bot_ruleta_debug_logger_attach_gui_queue"
     },
@@ -20023,7 +20041,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/debug_logger.py",
       "source_location": "L114",
-      "community": 26,
+      "community": 57,
       "norm_label": "set_diagnostics()",
       "id": "bot_ruleta_debug_logger_set_diagnostics"
     },
@@ -20050,7 +20068,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/debug_logger.py",
       "source_location": "L194",
-      "community": 26,
+      "community": 28,
       "norm_label": "run_diagnostics()",
       "id": "bot_ruleta_debug_logger_run_diagnostics"
     },
@@ -20095,7 +20113,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/debug_logger.py",
       "source_location": "L86",
-      "community": 26,
+      "community": 97,
       "norm_label": "handler que envia logs a una queue para que la gui los lea.",
       "id": "bot_ruleta_debug_logger_rationale_86"
     },
@@ -20104,7 +20122,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/debug_logger.py",
       "source_location": "L100",
-      "community": 26,
+      "community": 57,
       "norm_label": "conecta una queue al logger para que la gui reciba los logs.     llamar una sola",
       "id": "bot_ruleta_debug_logger_rationale_100"
     },
@@ -20113,7 +20131,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/debug_logger.py",
       "source_location": "L115",
-      "community": 26,
+      "community": 57,
       "norm_label": "activa o desactiva las capturas de pantalla de diagnostico rutinarias.",
       "id": "bot_ruleta_debug_logger_rationale_115"
     },
@@ -20140,7 +20158,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/debug_logger.py",
       "source_location": "L195",
-      "community": 26,
+      "community": 28,
       "norm_label": "ejecuta un diagnostico completo del entorno y retorna el reporte como string.",
       "id": "bot_ruleta_debug_logger_rationale_195"
     },
@@ -20446,7 +20464,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L741",
-      "community": 57,
+      "community": 86,
       "norm_label": "updatescreen",
       "id": "bot_ruleta_gui_app_updatescreen"
     },
@@ -20455,7 +20473,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L765",
-      "community": 57,
+      "community": 86,
       "norm_label": ".start_update()",
       "id": "bot_ruleta_gui_app_updatescreen_start_update"
     },
@@ -20470,6 +20488,57 @@
     }
   ],
   "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build_exe.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_build_exe",
+      "target": "scripts_build_exe_build"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build_exe.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "scripts_build_exe",
+      "target": "scripts_build_exe_build_react_dashboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build_exe.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_build_exe_rationale_1",
+      "target": "scripts_build_exe"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build_exe.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "scripts_build_exe_build",
+      "target": "scripts_build_exe_build_react_dashboard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/build_exe.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "scripts_build_exe_rationale_13",
+      "target": "scripts_build_exe_build_react_dashboard",
+      "confidence_score": 1.0
+    },
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
@@ -20904,9 +20973,9 @@
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L122",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "bot_ruleta_backtest_rationale_122",
-      "target": "bot_ruleta_backtest_zonebacktestsync",
-      "confidence_score": 1.0
+      "target": "bot_ruleta_backtest_zonebacktestsync"
     },
     {
       "relation": "calls",
@@ -21114,9 +21183,9 @@
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L192",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "bot_ruleta_backtest_rationale_192",
-      "target": "bot_ruleta_backtest_colorbacktestsync",
-      "confidence_score": 1.0
+      "target": "bot_ruleta_backtest_colorbacktestsync"
     },
     {
       "relation": "calls",
@@ -21274,9 +21343,9 @@
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L255",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "bot_ruleta_backtest_rationale_255",
-      "target": "bot_ruleta_backtest_numberbacktestsync",
-      "confidence_score": 1.0
+      "target": "bot_ruleta_backtest_numberbacktestsync"
     },
     {
       "relation": "calls",
@@ -21440,9 +21509,9 @@
       "source_file": "bot_ruleta/tests/test_backtest.py",
       "source_location": "L92",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_backtest_testbacktestsync",
-      "target": "tests_test_backtest_testbacktestsync_test_time_gap_breaks_chain",
-      "confidence_score": 1.0
+      "target": "tests_test_backtest_testbacktestsync_test_time_gap_breaks_chain"
     },
     {
       "relation": "method",
@@ -21505,9 +21574,9 @@
       "source_file": "bot_ruleta/tests/test_backtest.py",
       "source_location": "L95",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_backtest_testbacktestsync_test_time_gap_breaks_chain",
-      "target": "tests_test_backtest_testbacktestsync_insert",
-      "confidence_score": 1.0
+      "target": "tests_test_backtest_testbacktestsync_insert"
     },
     {
       "relation": "calls",
@@ -21526,9 +21595,9 @@
       "source_file": "bot_ruleta/tests/test_backtest.py",
       "source_location": "L93",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "tests_test_backtest_rationale_93",
-      "target": "tests_test_backtest_testbacktestsync_test_time_gap_breaks_chain",
-      "confidence_score": 1.0
+      "target": "tests_test_backtest_testbacktestsync_test_time_gap_breaks_chain"
     },
     {
       "relation": "contains",
@@ -85943,26 +86012,6 @@
     {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "scripts/build_exe.py",
-      "source_location": "L10",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_build_exe",
-      "target": "scripts_build_exe_build"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/build_exe.py",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "scripts_build_exe_rationale_1",
-      "target": "scripts_build_exe"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
       "source_file": "scripts/publish.py",
       "source_location": "L26",
       "weight": 1.0,
@@ -87797,5 +87846,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "4165ec4388c24b07e5c3e2e936870891e1ed2814"
+  "built_at_commit": "1b15b502ba71f375651438d6c5d8ab6c8a0fc0d4"
 }

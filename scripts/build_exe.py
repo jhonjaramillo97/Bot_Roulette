@@ -31,10 +31,10 @@ def build_react_dashboard():
 
     if not os.path.exists(os.path.join(react_dir, "node_modules")):
         print("-> Instalando dependencias npm...")
-        subprocess.check_call(["npm", "install"], cwd=react_dir, env=env)
+        subprocess.check_call(["npm", "install"], cwd=react_dir, env=env, shell=True)
 
     print("-> npm run build...")
-    subprocess.check_call(["npm", "run", "build"], cwd=react_dir, env=env)
+    subprocess.check_call(["npm", "run", "build"], cwd=react_dir, env=env, shell=True)
 
     if os.path.exists(assets_dir):
         shutil.rmtree(assets_dir, ignore_errors=True)
