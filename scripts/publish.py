@@ -19,7 +19,7 @@ def get_token():
 
 GITHUB_TOKEN = get_token()
 REPO_OWNER = "jhonjaramillo97"
-REPO_NAME = "roulette-sniper-releases"
+REPO_NAME = "Bot_Roulette"
 EXE_PATH = os.path.join(ROOT, "dist", "RouletteSniperPro.exe")
 UPDATER_FILE = os.path.join(ROOT, "bot_ruleta", "updater.py")
 
