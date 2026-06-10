@@ -20,15 +20,15 @@ if %ERRORLEVEL% neq 0 (
 )
 
 :: Step 1: Install deps if needed
-if not exist "%PROJECT_DIR%react-dashboard\node_modules" (
+if not exist "%PROJECT_DIR%frontend\node_modules" (
     echo  📦 Instalando dependencias React...
-    cd /d "%PROJECT_DIR%react-dashboard"
+    cd /d "%PROJECT_DIR%frontend"
     call npm install
 )
 
 :: Step 2: Start Flask in background
 echo  [1/2] 🐍 Iniciando Flask (puerto 5050)...
-start /b "Flask Dashboard" python -m bot_ruleta.dashboard.app
+start /b "Flask Dashboard" python -m backend.dashboard.app
 
 :: Wait for Flask to start
 timeout /t 3 /nobreak >nul
@@ -45,5 +45,5 @@ echo.
 echo  Presiona Ctrl+C para cerrar Vite. Cierra Flask manualmente.
 echo.
 
-cd /d "%PROJECT_DIR%react-dashboard"
+cd /d "%PROJECT_DIR%frontend"
 call npm run dev

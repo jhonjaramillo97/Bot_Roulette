@@ -40,7 +40,7 @@ echo.
 
 :: Step 1: Build React dashboard (if node_modules exists)
 echo  [1/3] Compilando dashboard React...
-cd /d "%PROJECT_DIR%react-dashboard"
+cd /d "%PROJECT_DIR%frontend"
 
 if not exist "node_modules" (
     echo         Instalando dependencias npm...
@@ -56,10 +56,10 @@ if %ERRORLEVEL% neq 0 (
 
 :: Step 2: Copy build to Flask static
 echo  [2/3] Copiando build a Flask...
-if exist "%PROJECT_DIR%bot_ruleta\dashboard\static\assets" rmdir /s /q "%PROJECT_DIR%bot_ruleta\dashboard\static\assets"
-if not exist "%PROJECT_DIR%bot_ruleta\dashboard\static\assets" mkdir "%PROJECT_DIR%bot_ruleta\dashboard\static\assets"
-copy /Y "%PROJECT_DIR%react-dashboard\dist\index.html" "%PROJECT_DIR%bot_ruleta\dashboard\static\index.html" >nul
-copy /Y "%PROJECT_DIR%react-dashboard\dist\assets\*" "%PROJECT_DIR%bot_ruleta\dashboard\static\assets\" >nul
+if exist "%PROJECT_DIR%backend\dashboard\static\assets" rmdir /s /q "%PROJECT_DIR%backend\dashboard\static\assets"
+if not exist "%PROJECT_DIR%backend\dashboard\static\assets" mkdir "%PROJECT_DIR%backend\dashboard\static\assets"
+copy /Y "%PROJECT_DIR%frontend\dist\index.html" "%PROJECT_DIR%backend\dashboard\static\index.html" >nul
+copy /Y "%PROJECT_DIR%frontend\dist\assets\*" "%PROJECT_DIR%backend\dashboard\static\assets\" >nul
 
 :: Step 3: Start bot launcher (includes Flask dashboard)
 echo  [3/3] Iniciando bot...
@@ -70,6 +70,6 @@ echo  =========================================================
 echo.
 
 cd /d "%PROJECT_DIR%"
-python -u bot_ruleta\launcher.py
+python -u backend\launcher.py
 
 pause

@@ -20,10 +20,10 @@ venv.bak/
 .env
 *.env
 github_token.txt
-bot_ruleta/data/
-!bot_ruleta/data/.gitkeep
+backend/data/
+!backend/data/.gitkeep
 github_token.txt
-bot_ruleta/dist/data/
+backend/dist/data/
 
 # ============================================================
 # Build / Dist / Empaquetado

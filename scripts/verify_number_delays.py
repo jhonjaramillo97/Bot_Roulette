@@ -17,7 +17,8 @@ import sqlite3
 import argparse
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from bot_ruleta.config import TABLES, get_number_delay_threshold
+from backend.config.config import TABLES
+from backend.roulette.thresholds import get_number_delay_threshold
 
 DB_PATH = None  # Se setea en main()
 
@@ -95,7 +96,7 @@ def audit_table(table_name, threshold):
 
     numeros = [{"numero": r[0], "color": r[1], "timestamp": r[2]} for r in rows]
 
-    from bot_ruleta.logic import compute_number_delays
+    from backend.roulette.logic import compute_number_delays
     real_delays = compute_number_delays(numeros)
 
     manual = manual_delays(numeros)
@@ -124,11 +125,11 @@ def audit_table(table_name, threshold):
 def main():
     global DB_PATH
 
-    # Ruta por defecto: buscar en dist/data (donde corre el .exe), luego bot_ruleta/data
+    # Ruta por defecto: buscar en dist/data (donde corre el .exe), luego backend/data
     script_dir = os.path.dirname(os.path.abspath(__file__))
     default_paths = [
         os.path.join(script_dir, "dist", "data", "ruleta.db"),
-        os.path.join(script_dir, "bot_ruleta", "data", "ruleta.db"),
+        os.path.join(script_dir, "backend", "data", "ruleta.db"),
     ]
     default_db = next((p for p in default_paths if os.path.exists(p)), default_paths[0])
 

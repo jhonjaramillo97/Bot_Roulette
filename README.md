@@ -32,7 +32,7 @@ Bot automatizado avanzado para extraer datos en vivo de multiples mesas de rulet
 ```bash
 git clone <repo>
 cd Bot_Stake_Recolector
-pip install -r bot_ruleta/requirements.txt
+pip install -r backend/requirements.txt
 ```
 
 ### Credenciales
@@ -77,40 +77,33 @@ Bot_Stake_Recolector/
 ├── README.md
 ├── version.txt
 │
-├── bot_ruleta/
-│   ├── config.py             # Constantes y configuracion de mesas
-│   ├── db.py                 # SQLite con WAL + conexion persistente
-│   ├── logic.py              # Algoritmos de delays, rachas y alertas
-│   ├── scanner.py            # Loop principal de escaneo
-│   ├── driver.py             # Selenium + anti-deteccion
-│   ├── lobby.py              # Navegacion y mapeo dinamico de mesas
-│   ├── iframe.py             # Manejo de iframes y modales
-│   ├── telegram.py           # Cliente de Telegram Bot API
-│   ├── tunnel.py             # Cloudflare Tunnel
-│   ├── credentials.py        # Carga de credenciales (runtime > DPAPI > .env)
-│   ├── thresholds.py         # Umbrales de alerta
-│   ├── backtest.py           # Motor de sincronizacion incremental
-│   ├── updater.py            # Auto-updater desde GitHub Releases
-│   ├── launcher.py           # Orquestador CLI
-│   ├── gui_app.py            # Entry point GUI (PyInstaller)
-│   ├── run.py                # Entry point CLI
-│   ├── logic_helpers.py      # Utilidades compartidas
-│   ├── helpers.py            # human_type
-│   ├── paths.py              # Resolucion de rutas (frozen vs dev)
-│   ├── debug_logger.py       # Re-exportador de diagnostics
-│   ├── gui_credentials.py    # DPAPI encrypt/decrypt (Windows)
-│   │
-│   ├── gui/
-│   │   ├── app.py            # Orquestador GUI (CustomTkinter)
+├── backend/
+│   ├── roulette/             # Motor de ruleta (driver, scanner, lobby, iframe, logic)
+│   ├── database/             # SQLite con WAL + conexion persistente
+│   ├── backtesting/          # Motor de sincronizacion incremental
+│   ├── scanner_tools/        # Scanner de lobby IDs
+│   ├── notifier/             # Telegram + Cloudflare Tunnel
+│   ├── dashboard/            # Backend Flask + static React SPA
+│   │   └── static/           # Build del dashboard React
+│   ├── desktop/              # GUI CustomTkinter
 │   │   └── screens/          # Pantallas: prerequisites, login, loading, dashboard, update
-│   │
-│   ├── dashboard/
-│   │   ├── app.py            # Backend Flask
-│   │   └── static/           # Frontend HTML/CSS/JS
-│   │
+│   ├── auth/                 # Credenciales DPAPI + .env
 │   ├── diagnostics/          # Logger, screenshots, crash reports, system info
+│   ├── config/               # Constantes y resolucion de rutas
+│   ├── shared/               # Utilidades compartidas
 │   ├── tests/                # Tests unitarios (pytest)
-│   └── data/                 # SQLite DB + logs + credenciales (gitignored)
+│   ├── data/                 # SQLite DB + logs + credenciales (gitignored)
+│   ├── launcher.py           # Orquestador CLI
+│   ├── updater.py            # Auto-updater desde GitHub Releases
+│   ├── main.py               # Entry point CLI
+│   └── requirements.txt
+│
+├── frontend/                 # Dashboard React (Vite + TypeScript)
+│   └── src/
+│       ├── features/         # Dominios: overview, mesa-detail, analytics, auth
+│       ├── components/       # UI compartidos (layout, ui)
+│       ├── hooks/            # useApi, useSSE, useAlert
+│       └── lib/              # Tipos, API client, contexto
 │
 ├── scripts/
 │   ├── build_exe.py          # Builder PyInstaller
@@ -129,7 +122,7 @@ Bot_Stake_Recolector/
 ## Tests
 
 ```bash
-pytest bot_ruleta/tests/ -v
+pytest backend/tests/ -v
 ```
 
 ---

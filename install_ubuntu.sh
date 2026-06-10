@@ -38,15 +38,15 @@ python3 -m venv venv
 echo "[7] Activando entorno e instalando librerías del Bot (requirements.txt)..."
 source venv/bin/activate
 pip install --upgrade pip
-if [ -f "requirements.txt" ]; then
-    pip install -r requirements.txt
+if [ -f "backend/requirements.txt" ]; then
+    pip install -r backend/requirements.txt
 else
-    echo "⚠️ ADVERTENCIA: No se encontró requirements.txt en esta carpeta."
+    echo "⚠️ ADVERTENCIA: No se encontró backend/requirements.txt en esta carpeta."
 fi
 
 echo "=============================================================================="
 echo "✅ Instalación completada en el Servidor Ubuntu."
 echo "Para arrancar el bot permanente, utiliza tmux o screen y luego:"
 echo "source venv/bin/activate"
-echo "xvfb-run -a python3 start_bot.py"
+echo "xvfb-run -a python3 backend/launcher.py"
 echo "=============================================================================="

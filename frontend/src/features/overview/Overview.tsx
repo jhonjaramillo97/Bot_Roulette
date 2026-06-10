@@ -1,0 +1,98 @@
+import { useMemo, useState } from "react"
+import { useOverview } from "@/hooks/useApi"
+import { useAlertSound } from "@/hooks/useAlert"
+import { useDashboard } from "@/lib/DashboardContext"
+import { TableCard } from "@/features/overview/components"
+import { MesaPopup } from "@/features/overview/components/MesaPopup"
+import { LoadingOverlay } from "@/components/layout/LoadingOverlay"
+import { cn } from "@/lib/utils"
+
+export default function OverviewPage() {
+  const { data, isLoading } = useOverview()
+  const { viewMode, filterSignals, hiddenTables, customThresholds } = useDashboard()
+  const [expandedCards, setExpandedCards] = useState<Set<string>>(new Set())
+  const [popupTable, setPopupTable] = useState<string | null>(null)
+
+  const apiThreshold = data?.threshold ?? 15
+  const apiColorStreak = data?.color_streak_threshold ?? 8
+  const apiNumberDelay = data?.number_delay_threshold ?? 70
+  const tables = data?.tables ?? []
+
+  const threshold = customThresholds?.delay ?? apiThreshold
+  const colorStreakThreshold = customThresholds?.colorStreak ?? apiColorStreak
+  const numberDelayThreshold = customThresholds?.numberDelay ?? apiNumberDelay
+
+  const totalAlerts = useMemo(() => {
+    if (!data) return 0
+    return tables.reduce((acc, t) => {
+      acc += t.alertas.filter((a) => (t.delays[a] ?? 0) >= threshold).length
+      if (t.color_streak && t.color_streak.streak >= colorStreakThreshold) acc += 1
+      if ((t.number_alert_numbers ?? []).some(([, delay]) => delay >= numberDelayThreshold)) acc += 1
+      return acc
+    }, 0)
+  }, [data, tables, colorStreakThreshold, threshold, numberDelayThreshold])
+
+  useAlertSound(totalAlerts)
+
+  const isFresh = tables.some((t) => t.last_update_seconds < 300)
+  const hasData = tables.length > 0
+
+  const filteredTables = useMemo(() => {
+    let result = tables.filter((t) => !hiddenTables.has(t.table_name))
+    if (filterSignals) {
+      result = result.filter(
+        (t) => t.alertas.some((a) => (t.delays[a] ?? 0) >= threshold)
+          || (t.color_streak && t.color_streak.streak >= colorStreakThreshold)
+          || (t.number_alert_numbers ?? []).some(([, delay]) => delay >= numberDelayThreshold)
+      )
+    }
+    return result
+  }, [tables, filterSignals, colorStreakThreshold, threshold, numberDelayThreshold, hiddenTables])
+
+  const toggleExpanded = (tableName: string) => {
+    setExpandedCards((prev) => {
+      const next = new Set(prev)
+      if (next.has(tableName)) next.delete(tableName)
+      else next.add(tableName)
+      return next
+    })
+  }
+
+  return (
+    <div className="flex min-h-0 flex-1 flex-col">
+      <LoadingOverlay hasData={hasData} isFresh={isFresh} onBypass={() => {}} />
+
+      <div
+        className={cn(
+          "mx-auto w-full flex-1 overflow-y-auto px-2 py-2",
+          viewMode === "grid"
+            ? "grid grid-cols-[repeat(auto-fill,minmax(260px,1fr))] gap-2"
+            : "flex flex-col gap-1 max-w-[900px]"
+        )}
+        style={{ maxHeight: "calc(100vh - 50px)" }}
+      >
+        {isLoading && tables.length === 0 ? (
+          <div className="flex items-center justify-center py-20 text-text-secondary">
+            Cargando mesas...
+          </div>
+        ) : (
+          filteredTables.map((table) => (
+            <TableCard
+              key={table.table_name}
+              table={table}
+              threshold={threshold}
+              colorStreakThreshold={colorStreakThreshold}
+              numberDelayThreshold={numberDelayThreshold}
+              viewMode={viewMode}
+              isExpanded={expandedCards.has(table.table_name)}
+              onToggle={() => toggleExpanded(table.table_name)}
+              onNameClick={(name) => setPopupTable(name)}
+            />
+          ))
+        )}
+      </div>
+
+      {popupTable && <MesaPopup tableName={popupTable} onClose={() => setPopupTable(null)} customThreshold={customThresholds?.delay} customColorStreak={customThresholds?.colorStreak} customNumberDelay={customThresholds?.numberDelay} />}
+    </div>
+  )
+}

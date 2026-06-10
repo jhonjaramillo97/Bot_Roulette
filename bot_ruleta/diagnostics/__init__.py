@@ -1,4 +1,0 @@
-from bot_ruleta.diagnostics.logger import get_logger, attach_gui_queue
-from bot_ruleta.diagnostics.screenshots import capture_screenshot, set_diagnostics
-from bot_ruleta.diagnostics.system_info import run_diagnostics
-from bot_ruleta.diagnostics.crash_report import generate_crash_report

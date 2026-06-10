@@ -1,9 +1,0 @@
-"""
-Sistema de Diagnóstico Forense — re-exportador.
-La implementación está en el paquete diagnostics/ (logger, screenshots, system_info, crash_report).
-Este módulo se mantiene para no romper los imports existentes.
-"""
-from bot_ruleta.diagnostics.logger import get_logger, attach_gui_queue
-from bot_ruleta.diagnostics.screenshots import capture_screenshot, set_diagnostics
-from bot_ruleta.diagnostics.system_info import run_diagnostics
-from bot_ruleta.diagnostics.crash_report import generate_crash_report

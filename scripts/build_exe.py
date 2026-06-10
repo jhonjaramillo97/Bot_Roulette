@@ -12,8 +12,8 @@ import shutil
 def build_react_dashboard():
     """Compila el dashboard React y copia los archivos a Flask static."""
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    react_dir = os.path.join(root, "react-dashboard")
-    static_dir = os.path.join(root, "bot_ruleta", "dashboard", "static")
+    react_dir = os.path.join(root, "frontend")
+    static_dir = os.path.join(root, "backend", "dashboard", "static")
     assets_dir = os.path.join(static_dir, "assets")
 
     print("=" * 50)
@@ -26,7 +26,7 @@ def build_react_dashboard():
         env["PATH"] = nodejs_path + os.pathsep + env.get("PATH", "")
 
     if not os.path.exists(react_dir):
-        print("WARN: react-dashboard/ no encontrado, saltando build React.")
+        print("WARN: frontend/ no encontrado, saltando build React.")
         return
 
     if not os.path.exists(os.path.join(react_dir, "node_modules")):
@@ -45,7 +45,7 @@ def build_react_dashboard():
     for f in os.listdir(os.path.join(dist_dir, "assets")):
         shutil.copy(os.path.join(dist_dir, "assets", f), assets_dir)
 
-    print("OK: Dashboard React copiado a bot_ruleta/dashboard/static/")
+    print("OK: Dashboard React copiado a backend/dashboard/static/")
     print()
 
 
@@ -53,10 +53,10 @@ def build():
     # Build React dashboard first
     build_react_dashboard()
 
-    # Rutas base — build_exe.py esta en scripts/, el codigo fuente en bot_ruleta/
-    base_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "bot_ruleta")
-    main_script = os.path.join(base_dir, "gui_app.py")
-    icon_path = os.path.join(base_dir, "icon.ico")
+    # Rutas base — build_exe.py esta en scripts/, el codigo fuente en backend/
+    base_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "backend")
+    main_script = os.path.join(base_dir, "desktop", "app.py")
+    icon_path = os.path.join(base_dir, "assets", "icon.ico")
 
     # Asegurarse de que las dependencias están instaladas
     print("Verificando dependencias...")
@@ -94,7 +94,7 @@ def build():
     # Incluir datos estáticos del dashboard (Flask)
     dashboard_static = os.path.join(base_dir, "dashboard", "static")
     if os.path.exists(dashboard_static):
-        cmd.append(f"--add-data={dashboard_static};dashboard/static")
+        cmd.append(f"--add-data={dashboard_static};backend/dashboard/static")
 
     # Intentar obtener la ruta de customtkinter para incluirla explícitamente
     try:

@@ -2,7 +2,7 @@ name: Tests
 
 on:
   push:
-    branches: [main, code_auditor, migracion_react]
+    branches: [main, code_auditor, migracion_react, re-estructuracion]
   pull_request:
     branches: [main]
 
@@ -20,7 +20,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install -r bot_ruleta/requirements.txt
+        run: pip install -r backend/requirements.txt
 
       - name: Run tests
-        run: python -m pytest bot_ruleta/tests/ -v --tb=short
+        run: python -m pytest backend/tests/ -v --tb=short

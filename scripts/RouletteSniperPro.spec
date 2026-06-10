@@ -4,7 +4,7 @@ from PyInstaller.utils.hooks import collect_submodules
 from PyInstaller.utils.hooks import collect_all
 from PyInstaller.utils.hooks import copy_metadata
 
-datas = [('C:\\Users\\Bairon Jaramillo\\Documents\\bot_stake\\Bot_Stake_Recolector\\scripts\\..\\bot_ruleta\\icon.ico', '.'), ('C:\\Users\\Bairon Jaramillo\\Documents\\bot_stake\\Bot_Stake_Recolector\\scripts\\..\\bot_ruleta\\dashboard\\static', 'dashboard/static'), ('C:\\Users\\Bairon Jaramillo\\Documents\\bot_stake\\Bot_Stake_Recolector\\venv\\Lib\\site-packages\\customtkinter', 'customtkinter')]
+datas = [('C:\\Users\\Bairon Jaramillo\\Documents\\bot_stake\\Bot_Stake_Recolector\\backend\\assets\\icon.ico', '.'), ('C:\\Users\\Bairon Jaramillo\\Documents\\bot_stake\\Bot_Stake_Recolector\\backend\\dashboard\\static', 'backend/dashboard/static'), ('C:\\Users\\Bairon Jaramillo\\AppData\\Local\\Programs\\Python\\Python314\\Lib\\site-packages\\customtkinter', 'customtkinter')]
 binaries = []
 hiddenimports = ['undetected_chromedriver', 'selenium', 'PIL', 'urllib', 'tkinter', 'waitress']
 datas += collect_data_files('selenium')
@@ -23,7 +23,7 @@ datas += tmp_ret[0]; binaries += tmp_ret[1]; hiddenimports += tmp_ret[2]
 
 
 a = Analysis(
-    ['C:\\Users\\Bairon Jaramillo\\Documents\\bot_stake\\Bot_Stake_Recolector\\scripts\\..\\bot_ruleta\\gui_app.py'],
+    ['C:\\Users\\Bairon Jaramillo\\Documents\\bot_stake\\Bot_Stake_Recolector\\backend\\desktop\\app.py'],
     pathex=[],
     binaries=binaries,
     datas=datas,
@@ -56,5 +56,5 @@ exe = EXE(
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    icon=['C:\\Users\\Bairon Jaramillo\\Documents\\bot_stake\\Bot_Stake_Recolector\\bot_ruleta\\icon.ico'],
+    icon=['C:\\Users\\Bairon Jaramillo\\Documents\\bot_stake\\Bot_Stake_Recolector\\backend\\assets\\icon.ico'],
 )

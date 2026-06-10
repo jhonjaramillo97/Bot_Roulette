@@ -27,7 +27,7 @@ if %errorlevel% neq 0 (
 )
 
 set "PYTHON_EXE=venv\Scripts\python.exe"
-set "LAUNCHER_PY=bot_ruleta\launcher.py"
+set "LAUNCHER_PY=backend\launcher.py"
 
 if not exist "%LAUNCHER_PY%" (
     echo [ERROR] No se encontro la arquitectura principal en "%LAUNCHER_PY%".

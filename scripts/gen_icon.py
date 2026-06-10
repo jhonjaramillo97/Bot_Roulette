@@ -2,10 +2,10 @@ from PIL import Image
 import os, shutil, struct, io
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BASE = os.path.join(ROOT, "bot_ruleta")
+BASE = os.path.join(ROOT, "backend")
 
 logo_path = os.path.join(BASE, "dashboard", "static", "logo.png")
-ico_path = os.path.join(BASE, "icon.ico")
+ico_path = os.path.join(BASE, "assets", "icon.ico")
 favicon_path = os.path.join(BASE, "dashboard", "static", "favicon.ico")
 
 img = Image.open(logo_path).convert('RGBA')

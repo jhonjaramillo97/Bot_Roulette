@@ -21,7 +21,7 @@ GITHUB_TOKEN = get_token()
 REPO_OWNER = "jhonjaramillo97"
 REPO_NAME = "roulette-sniper-releases"
 EXE_PATH = os.path.join(ROOT, "dist", "RouletteSniperPro.exe")
-UPDATER_FILE = os.path.join(ROOT, "bot_ruleta", "updater.py")
+UPDATER_FILE = os.path.join(ROOT, "backend", "updater.py")
 
 def api_request(url, method="GET", data=None, is_upload=False):
     headers = {

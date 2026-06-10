@@ -23,7 +23,7 @@
 - **`README.md`**: Manual de usuario con instrucciones de instalación, dependencias y explicaciones generales de uso.
 - **`.env`**: Archivo de variables de entorno donde se almacenan configuraciones sensibles: credenciales de Stake, tokens de Telegram y variables de umbrales.
 - **`.gitignore`**: Define qué archivos o carpetas Git no debe rastrear. Excluye `venv/`, `data/`, `build/`, `dist/`, `.env`, `github_token.txt`, logs y archivos de credenciales para seguridad.
-- **`start_bot.bat`**: Script Windows que activa el entorno virtual y ejecuta `bot_ruleta/launcher.py`. Lanza el bot + dashboard + túnel con una sola llamada.
+- **`start_bot.bat`**: Script Windows que activa el entorno virtual y ejecuta `backend/launcher.py`. Lanza el bot + dashboard + túnel con una sola llamada.
 - **`install.bat`**: Script Windows que crea/repara el entorno virtual `venv` e instala todas las dependencias desde `requirements.txt`.
 - **`install_ubuntu.sh`**: Script Bash para VPS Ubuntu que instala Chrome, Xvfb, swap, entorno virtual y dependencias del bot.
 - **`publish.py`**: Script de distribución para el desarrollador. Automatiza: compilar con `build_exe.py`, actualizar `version.txt` en GitHub, crear/eliminar releases y subir el asset `.exe`. Requiere `github_token.txt`.
@@ -34,7 +34,7 @@
 
 ---
 
-### Directorio Principal: `bot_ruleta/`
+### Directorio Principal: `backend/`
 
 Este directorio contiene todo el código fuente operativo del bot, dividido lógicamente en varios submódulos.
 
@@ -250,7 +250,7 @@ USE_RANDOM_TUNNEL=true
 ```
 
 ### GUI Saved Credentials
-- Guardado en `bot_ruleta/data/credentials.dat`.
+- Guardado en `backend/data/credentials.dat`.
 - Ofuscado con XOR + Base64, clave derivada del nombre de la máquina.
 - Incluye email, password, token Telegram, chat ID, umbrales de los tres sliders, headless y diagnósticos.
 
@@ -270,7 +270,7 @@ Para generar el `.exe` para distribución o pruebas:
 
 ```bash
 # Desde la raíz del proyecto, con el venv activado
-python bot_ruleta/build_exe.py
+python scripts/build_exe.py
 ```
 
 El ejecutable resultante estará en:
