@@ -56,6 +56,7 @@ if %ERRORLEVEL% neq 0 (
 
 :: Step 2: Copy build to Flask static
 echo  [2/3] Copiando build a Flask...
+if exist "%PROJECT_DIR%bot_ruleta\dashboard\static\assets" rmdir /s /q "%PROJECT_DIR%bot_ruleta\dashboard\static\assets"
 if not exist "%PROJECT_DIR%bot_ruleta\dashboard\static\assets" mkdir "%PROJECT_DIR%bot_ruleta\dashboard\static\assets"
 copy /Y "%PROJECT_DIR%react-dashboard\dist\index.html" "%PROJECT_DIR%bot_ruleta\dashboard\static\index.html" >nul
 copy /Y "%PROJECT_DIR%react-dashboard\dist\assets\*" "%PROJECT_DIR%bot_ruleta\dashboard\static\assets\" >nul
