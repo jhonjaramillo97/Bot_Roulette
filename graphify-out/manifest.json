@@ -85,7 +85,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/updater.py": {
-    "mtime": 1781129317.544639,
+    "mtime": 1781129560.680921,
     "ast_hash": "fa0d0872f9df204c16f8a689a08881eb",
     "semantic_hash": ""
   },
@@ -105,8 +105,8 @@
     "semantic_hash": ""
   },
   "bot_ruleta/diagnostics/logger.py": {
-    "mtime": 1781120255.7433407,
-    "ast_hash": "ff5a191be87ccc1906d22a4731c15b28",
+    "mtime": 1781130318.8179274,
+    "ast_hash": "572c74855c8689d79e1e7622ce8c72f9",
     "semantic_hash": ""
   },
   "bot_ruleta/diagnostics/screenshots.py": {
@@ -180,7 +180,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/tunnel.py": {
-    "mtime": 1781120255.7763853,
+    "mtime": 1781129660.0610619,
     "ast_hash": "9484c07053afc112efbffa5c646da5e9",
     "semantic_hash": ""
   },
@@ -190,8 +190,8 @@
     "semantic_hash": ""
   },
   "scripts/build_exe.py": {
-    "mtime": 1781120255.84031,
-    "ast_hash": "81c88e4a1a6eff1ff199e1013a1993a7",
+    "mtime": 1781129685.7439444,
+    "ast_hash": "a770a80ab3758b79f7a39550915bb842",
     "semantic_hash": ""
   },
   "scripts/gen_icon.py": {
@@ -200,8 +200,8 @@
     "semantic_hash": ""
   },
   "scripts/publish.py": {
-    "mtime": 1781129325.306893,
-    "ast_hash": "2c0fc736f2163814272ed9513e1d2244",
+    "mtime": 1781129685.744945,
+    "ast_hash": "99e633818fa05b467a0158d801a0b4b6",
     "semantic_hash": ""
   },
   "scripts/verify_number_delays.py": {
@@ -250,7 +250,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/rolldown-runtime-QTnfLwEv.js": {
-    "mtime": 1781129142.855937,
+    "mtime": 1781129573.61647,
     "ast_hash": "0b9fa1f21df87441aa366e428d1ebb49",
     "semantic_hash": ""
   },
@@ -385,7 +385,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/query-BPe0xBFE.js": {
-    "mtime": 1781129141.9055395,
+    "mtime": 1781129572.5692234,
     "ast_hash": "04faa70bf0cdaeaa34d0fc73933f2336",
     "semantic_hash": ""
   },
@@ -400,7 +400,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js": {
-    "mtime": 1781129142.852932,
+    "mtime": 1781129573.5844676,
     "ast_hash": "e8baacc3f66b9f1f0110fe204745ffcf",
     "semantic_hash": ""
   },
@@ -420,8 +420,8 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js": {
-    "mtime": 1781129317.540642,
-    "ast_hash": "e68ab0d9a4a289c11622e1a68051382d",
+    "mtime": 1781129572.4616556,
+    "ast_hash": "50c9f72e7492f0a07429f4fd9e9befd2",
     "semantic_hash": ""
   }
 }
