@@ -13,7 +13,7 @@ LOGS_DIR = os.path.join(get_data_dir(), "logs")
 os.makedirs(LOGS_DIR, exist_ok=True)
 
 
-def _cleanup_old_logs(max_days=7):
+def _cleanup_old_logs(max_days=3):
     """Elimina archivos de log con mas de max_days dias de antigüedad."""
     try:
         now = datetime.now()
