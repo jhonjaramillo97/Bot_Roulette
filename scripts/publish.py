@@ -19,7 +19,7 @@ def get_token():
 
 GITHUB_TOKEN = get_token()
 REPO_OWNER = "jhonjaramillo97"
-REPO_NAME = "roulette-sniper-releases"
+REPO_NAME = "Bot_Roulette"
 EXE_PATH = os.path.join(ROOT, "dist", "RouletteSniperPro.exe")
 UPDATER_FILE = os.path.join(ROOT, "bot_ruleta", "updater.py")
 
@@ -63,10 +63,10 @@ def get_file_sha(path):
 
 def update_github_version_file(new_version):
     print("-> Actualizando version.txt en GitHub...")
-    path = os.path.join(ROOT, "version.txt")
-    sha = get_file_sha(path)
-    
-    url = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/contents/{path}"
+    repo_path = "version.txt"
+    sha = get_file_sha(repo_path)
+
+    url = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/contents/{repo_path}"
     content_b64 = base64.b64encode(new_version.encode("utf-8")).decode("utf-8")
     
     data = {

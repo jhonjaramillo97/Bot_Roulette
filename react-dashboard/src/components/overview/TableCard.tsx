@@ -142,7 +142,7 @@ export const TableCard = memo(function TableCard({
         )}
       >
         {/* Delay grid */}
-        <div className="grid grid-cols-4 grid-rows-3 gap-px" style={{ minHeight: viewMode === "grid" ? "90px" : undefined }}>
+        <div className="grid grid-cols-4 grid-rows-3 gap-[3px]" style={{ minHeight: viewMode === "grid" ? "90px" : undefined }}>
           {zoneKeys.map((key) => {
             const value = table.delays[key]
             if (value === undefined) return null
