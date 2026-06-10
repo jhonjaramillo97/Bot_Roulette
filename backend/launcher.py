@@ -147,9 +147,9 @@ if __name__ == "__main__":
     print("=" * 60)
     time.sleep(3)  # Dar tiempo a leer el diagnóstico
     
-    # 1. Iniciar Dashboard (via gui_app.py --run-dashboard, mismo handler que la GUI)
+    # 1. Iniciar Dashboard (via desktop/app.py --run-dashboard, mismo handler que la GUI)
     base_dir = os.path.dirname(os.path.abspath(__file__))
-    gui_app_path = os.path.join(base_dir, "gui_app.py")
+    gui_app_path = os.path.join(base_dir, "desktop", "app.py")
     dashboard_proc = subprocess.Popen([sys.executable, gui_app_path, "--run-dashboard"], 
                                       stdout=subprocess.DEVNULL, 
                                       stderr=subprocess.DEVNULL)
@@ -161,7 +161,7 @@ if __name__ == "__main__":
     time.sleep(2) # Esperar que levante web
     
     # 3. Iniciar Bot Principal con flag -u (unbuffered) y env UTF-8
-    run_py_path = os.path.join(base_dir, "run.py")
+    run_py_path = os.path.join(base_dir, "main.py")
     
     bot_env = os.environ.copy()
     bot_env["PYTHONIOENCODING"] = "utf-8"

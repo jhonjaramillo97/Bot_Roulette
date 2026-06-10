@@ -114,7 +114,7 @@ class RouletteApp(ctk.CTk):
             if getattr(sys, 'frozen', False):
                 cmd = [sys.executable, "--run-dashboard"]
             else:
-                gui_app_path = os.path.join(os.path.dirname(__file__), "..", "gui_app.py")
+                gui_app_path = os.path.join(os.path.dirname(__file__), "..", "app.py")
                 cmd = [sys.executable, os.path.abspath(gui_app_path), "--run-dashboard"]
             self.dashboard_proc = subprocess.Popen(
                 cmd, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,

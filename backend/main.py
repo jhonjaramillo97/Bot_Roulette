@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Entrypoint del bot de ruleta.
-Uso: python run.py
+Uso: python backend/main.py
 """
 
 import sys
