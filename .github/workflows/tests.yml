@@ -2,7 +2,7 @@ name: Tests
 
 on:
   push:
-    branches: [main, code_auditor]
+    branches: [main, code_auditor, migracion_react]
   pull_request:
     branches: [main]
 

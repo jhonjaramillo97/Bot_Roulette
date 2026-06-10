@@ -418,5 +418,10 @@
     "mtime": 1781061743.126906,
     "ast_hash": "e93fe6a46792d0c22dec96fd2a7bde51",
     "semantic_hash": ""
+  },
+  "bot_ruleta/tests/test_dashboard.py": {
+    "mtime": 1781062047.4851773,
+    "ast_hash": "f160644ebefef31b1a5918e5cd97cc59",
+    "semantic_hash": ""
   }
 }
