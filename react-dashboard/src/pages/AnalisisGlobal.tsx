@@ -148,16 +148,16 @@ export default function AnalisisGlobalPage() {
       </div>
 
       {/* Stats Summary */}
-      <div className="mx-auto mb-5 flex w-fit divide-x divide-border rounded-sm border border-border">
-        <div className="flex flex-col items-center justify-center px-8 py-4 border-b-2 border-b-accent/40">
+      <div className="mx-auto mb-5 flex w-fit gap-2">
+        <div className="flex flex-col items-center justify-center rounded-sm border border-border bg-bg-card px-8 py-4 shadow-sm border-l-2 border-l-accent">
           <span className="font-tabular-nums text-2xl font-semibold leading-none tracking-tight text-accent">{stats.total}</span>
           <span className="mt-1.5 text-[11px] tracking-wide text-text-muted">Señales</span>
         </div>
-        <div className="flex flex-col items-center justify-center px-8 py-4 border-b-2 border-b-warn/40">
+        <div className="flex flex-col items-center justify-center rounded-sm border border-border bg-bg-card px-8 py-4 shadow-sm border-l-2 border-l-warn">
           <span className="font-tabular-nums text-2xl font-semibold leading-none tracking-tight text-warn">{stats.avg}</span>
           <span className="mt-1.5 text-[11px] tracking-wide text-text-muted">Pico Prom.</span>
         </div>
-        <div className="flex flex-col items-center justify-center px-8 py-4 border-b-2 border-b-danger/40">
+        <div className="flex flex-col items-center justify-center rounded-sm border border-border bg-bg-card px-8 py-4 shadow-sm border-l-2 border-l-danger">
           <span className="font-tabular-nums text-2xl font-semibold leading-none tracking-tight text-danger">{stats.max}</span>
           <span className="mt-1.5 text-[11px] tracking-wide text-text-muted">Peor Caso</span>
         </div>
