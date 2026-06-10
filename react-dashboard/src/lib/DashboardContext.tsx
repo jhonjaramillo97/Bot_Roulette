@@ -21,7 +21,7 @@ interface DashboardState {
 }
 
 const DashboardContext = createContext<DashboardState>({
-  viewMode: "list",
+  viewMode: "grid",
   setViewMode: () => {},
   filterSignals: false,
   setFilterSignals: () => {},
@@ -37,7 +37,7 @@ export function useDashboard() {
 }
 
 export function DashboardProvider({ children }: { children: React.ReactNode }) {
-  const [viewMode, setViewMode] = useLocalStorage<"list" | "grid">("dashboardView", "list")
+  const [viewMode, setViewMode] = useLocalStorage<"list" | "grid">("dashboardView", "grid")
   const [filterSignals, setFilterSignals] = useState(false)
   const [hiddenRaw, setHiddenRaw] = useLocalStorage<string[]>("hiddenTables", [])
   const [customRaw, setCustomRaw] = useLocalStorage<Thresholds | null>("customThresholds", null)
