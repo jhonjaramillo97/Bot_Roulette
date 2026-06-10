@@ -75,6 +75,8 @@ class _BacktestSyncEngine:
 
         self._init_state()
         self.max_id = self.last_game_id
+        prev_ts = None
+        MAX_GAP_MINUTES = 30
 
         for row in rows:
             db_id, n = row[0], row[1]
@@ -83,9 +85,22 @@ class _BacktestSyncEngine:
             self.max_id = max(self.max_id, db_id)
             is_new = self._is_new(db_id)
 
+            if prev_ts is not None and ts and prev_ts:
+                try:
+                    dt_prev = datetime.strptime(prev_ts, "%Y-%m-%d %H:%M:%S")
+                    dt_curr = datetime.strptime(ts, "%Y-%m-%d %H:%M:%S")
+                    gap = (dt_curr - dt_prev).total_seconds() / 60
+                    if gap > MAX_GAP_MINUTES:
+                        self._handle_chain_break(prev_ts, is_new)
+                        self._init_state()
+                except (ValueError, TypeError):
+                    pass
+            prev_ts = ts
+
             if n == -1:
                 self._handle_chain_break(ts, is_new)
                 self._init_state()
+                prev_ts = None
                 continue
 
             self._process_row(db_id, n, extra, ts, is_new)

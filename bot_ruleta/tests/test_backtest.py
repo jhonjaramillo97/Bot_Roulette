@@ -88,3 +88,28 @@ class TestBacktestSync:
             self._insert(n, ts=f"2026-01-01 12:00:{i:02d}")
         engine = _ZoneBacktestSync(TABLE, 2)
         engine.run("id, numero, timestamp")
+
+    def test_time_gap_breaks_chain(self):
+        """Un gap de mas de 30 minutos entre filas debe romper la cadena y reiniciar delays."""
+        # Ayer/lapso viejo: 5 giros sin docena_1
+        self._insert(13, ts="2026-01-01 12:00:00")
+        self._insert(14, ts="2026-01-01 12:01:00")
+        self._insert(15, ts="2026-01-01 12:02:00")
+        self._insert(16, ts="2026-01-01 12:03:00")
+        self._insert(17, ts="2026-01-01 12:04:00")
+        # Gap > 30 minutos
+        # Nuevo lapso: 3 giros sin docena_1
+        self._insert(18, ts="2026-01-01 12:35:00")
+        self._insert(19, ts="2026-01-01 12:36:00")
+        self._insert(20, ts="2026-01-01 12:37:00")
+
+        from bot_ruleta.backtest import _ZoneBacktestSync
+        engine = _ZoneBacktestSync(TABLE, 2)
+        engine.run("id, numero, timestamp")
+
+        rows = self.conn.execute(
+            "SELECT max_delay FROM backtest_history WHERE table_name = ? ORDER BY id", (TABLE,)
+        ).fetchall()
+        # El gap debe romper las cadenas: delays no deben acumularse entre lapsos
+        for r in rows:
+            assert r[0] < 10, f"Delay no deberia acumularse entre sesiones: {r[0]}"

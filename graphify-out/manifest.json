@@ -220,8 +220,8 @@
     "semantic_hash": ""
   },
   ".github/workflows/tests.yml": {
-    "mtime": 1780856119.0103426,
-    "ast_hash": "b79fe0605d6cde4555f51a22431f4683",
+    "mtime": 1781062154.2030416,
+    "ast_hash": "176e6a2e2c763659e5b89d3b43bfb93b",
     "semantic_hash": ""
   },
   "bot_ruleta/tests/test_db.py": {
