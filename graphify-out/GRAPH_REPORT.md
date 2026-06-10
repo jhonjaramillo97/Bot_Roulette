@@ -1,7 +1,7 @@
 # Graph Report - Bot_Stake_Recolector  (2026-06-10)
 
 ## Corpus Check
-- 89 files · ~46,573 words
+- 89 files · ~46,563 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `9b31d6ed`
+- Built from commit: `003f242b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -491,7 +491,7 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.059) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `$()` (e.g. with `dO()` and `So()`) actually correct?**
   _`$()` has 2 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `Configuracion centralizada del bot de ruleta. Constantes, configuracion de mesa`, `Resolucion centralizada de rutas para desarrollo y PyInstaller. Elimina el patr`, `Directorio raiz del paquete backend (frozen) o del source (dev).` to the rest of the system?**
+- **What connects `Lee el threshold de los datos guardados por la GUI. Fallback al .env`, `Valida el parametro 'mesa' de un request.     Retorna el table_name validado o`, `Calcula los delays de docenas y columnas para una tabla dada (USANDO LOGIC COMPA` to the rest of the system?**
   _460 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 1` be split into smaller, more focused modules?**
   _Cohesion score 0.08880666049953746 - nodes in this community are weakly interconnected._

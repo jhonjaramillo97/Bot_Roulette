@@ -94,7 +94,7 @@ def build():
     # Incluir datos estáticos del dashboard (Flask)
     dashboard_static = os.path.join(base_dir, "dashboard", "static")
     if os.path.exists(dashboard_static):
-        cmd.append(f"--add-data={dashboard_static};backend/dashboard/static")
+        cmd.append(f"--add-data={dashboard_static};dashboard/static")
 
     # Intentar obtener la ruta de customtkinter para incluirla explícitamente
     try:

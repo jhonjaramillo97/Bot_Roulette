@@ -4,139 +4,400 @@
   "graph": {},
   "nodes": [
     {
+      "label": "app.py",
+      "file_type": "code",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L1",
+      "id": "dashboard_app",
+      "community": 1,
+      "norm_label": "app.py"
+    },
+    {
+      "label": "get_dashboard_threshold()",
+      "file_type": "code",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L22",
+      "id": "dashboard_app_get_dashboard_threshold",
+      "community": 1,
+      "norm_label": "get_dashboard_threshold()"
+    },
+    {
+      "label": "_get_validated_table()",
+      "file_type": "code",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L31",
+      "id": "dashboard_app_get_validated_table",
+      "community": 55,
+      "norm_label": "_get_validated_table()"
+    },
+    {
+      "label": "check_token()",
+      "file_type": "code",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L57",
+      "id": "dashboard_app_check_token",
+      "community": 1,
+      "norm_label": "check_token()"
+    },
+    {
+      "label": "calculate_delays()",
+      "file_type": "code",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L64",
+      "id": "dashboard_app_calculate_delays",
+      "community": 1,
+      "norm_label": "calculate_delays()"
+    },
+    {
+      "label": "serve_spa()",
+      "file_type": "code",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L95",
+      "id": "dashboard_app_serve_spa",
+      "community": 1,
+      "norm_label": "serve_spa()"
+    },
+    {
+      "label": "spa_fallback()",
+      "file_type": "code",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L100",
+      "id": "dashboard_app_spa_fallback",
+      "community": 1,
+      "norm_label": "spa_fallback()"
+    },
+    {
+      "label": "get_mesas()",
+      "file_type": "code",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L108",
+      "id": "dashboard_app_get_mesas",
+      "community": 1,
+      "norm_label": "get_mesas()"
+    },
+    {
+      "label": "get_overview()",
+      "file_type": "code",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L113",
+      "id": "dashboard_app_get_overview",
+      "community": 1,
+      "norm_label": "get_overview()"
+    },
+    {
+      "label": "get_data()",
+      "file_type": "code",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L187",
+      "id": "dashboard_app_get_data",
+      "community": 1,
+      "norm_label": "get_data()"
+    },
+    {
+      "label": "get_backtest()",
+      "file_type": "code",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L244",
+      "id": "dashboard_app_get_backtest",
+      "community": 1,
+      "norm_label": "get_backtest()"
+    },
+    {
+      "label": "get_backtest_color()",
+      "file_type": "code",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L276",
+      "id": "dashboard_app_get_backtest_color",
+      "community": 1,
+      "norm_label": "get_backtest_color()"
+    },
+    {
+      "label": "get_backtest_number()",
+      "file_type": "code",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L309",
+      "id": "dashboard_app_get_backtest_number",
+      "community": 1,
+      "norm_label": "get_backtest_number()"
+    },
+    {
+      "label": "get_analisis_global()",
+      "file_type": "code",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L362",
+      "id": "dashboard_app_get_analisis_global",
+      "community": 1,
+      "norm_label": "get_analisis_global()"
+    },
+    {
+      "label": "get_signal_detail()",
+      "file_type": "code",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L440",
+      "id": "dashboard_app_get_signal_detail",
+      "community": 55,
+      "norm_label": "get_signal_detail()"
+    },
+    {
+      "label": "get_tunnel()",
+      "file_type": "code",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L503",
+      "id": "dashboard_app_get_tunnel",
+      "community": 1,
+      "norm_label": "get_tunnel()"
+    },
+    {
+      "label": "sse_stream()",
+      "file_type": "code",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L519",
+      "id": "dashboard_app_sse_stream",
+      "community": 1,
+      "norm_label": "sse_stream()"
+    },
+    {
+      "label": "_build_overview_data()",
+      "file_type": "code",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L541",
+      "id": "dashboard_app_build_overview_data",
+      "community": 1,
+      "norm_label": "_build_overview_data()"
+    },
+    {
+      "label": "Lee el threshold de los datos guardados por la GUI. Fallback al .env",
+      "file_type": "rationale",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L23",
+      "id": "dashboard_app_rationale_23",
+      "community": 1,
+      "norm_label": "lee el threshold de los datos guardados por la gui. fallback al .env"
+    },
+    {
+      "label": "Valida el parametro 'mesa' de un request.     Retorna el table_name validado o",
+      "file_type": "rationale",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L32",
+      "id": "dashboard_app_rationale_32",
+      "community": 55,
+      "norm_label": "valida el parametro 'mesa' de un request.     retorna el table_name validado o"
+    },
+    {
+      "label": "Calcula los delays de docenas y columnas para una tabla dada (USANDO LOGIC COMPA",
+      "file_type": "rationale",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L65",
+      "id": "dashboard_app_rationale_65",
+      "community": 1,
+      "norm_label": "calcula los delays de docenas y columnas para una tabla dada (usando logic compa"
+    },
+    {
+      "label": "Cualquier ruta que no sea /api/* sirve index.html para React Router.",
+      "file_type": "rationale",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L101",
+      "id": "dashboard_app_rationale_101",
+      "community": 1,
+      "norm_label": "cualquier ruta que no sea /api/* sirve index.html para react router."
+    },
+    {
+      "label": "Retorna un resumen r\u00e1pido de TODAS las mesas: delay m\u00e1ximo y alertas.",
+      "file_type": "rationale",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L114",
+      "id": "dashboard_app_rationale_114",
+      "community": 1,
+      "norm_label": "retorna un resumen rapido de todas las mesas: delay maximo y alertas."
+    },
+    {
+      "label": "Historial de rachas de color completadas para una mesa.",
+      "file_type": "rationale",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L277",
+      "id": "dashboard_app_rationale_277",
+      "community": 1,
+      "norm_label": "historial de rachas de color completadas para una mesa."
+    },
+    {
+      "label": "Historial de retrasos de numeros individuales completados + alertas activas.",
+      "file_type": "rationale",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L310",
+      "id": "dashboard_app_rationale_310",
+      "community": 1,
+      "norm_label": "historial de retrasos de numeros individuales completados + alertas activas."
+    },
+    {
+      "label": "Devuelve las jugadas individuales que componen una senal especifica.",
+      "file_type": "rationale",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L441",
+      "id": "dashboard_app_rationale_441",
+      "community": 55,
+      "norm_label": "devuelve las jugadas individuales que componen una senal especifica."
+    },
+    {
+      "label": "Retorna el link actual de Cloudflare si esta disponible",
+      "file_type": "rationale",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L504",
+      "id": "dashboard_app_rationale_504",
+      "community": 1,
+      "norm_label": "retorna el link actual de cloudflare si esta disponible"
+    },
+    {
+      "label": "Server-Sent Events endpoint para datos en tiempo real.",
+      "file_type": "rationale",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L520",
+      "id": "dashboard_app_rationale_520",
+      "community": 1,
+      "norm_label": "server-sent events endpoint para datos en tiempo real."
+    },
+    {
+      "label": "Construye los datos del overview como dict (sin jsonify).",
+      "file_type": "rationale",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L542",
+      "id": "dashboard_app_rationale_542",
+      "community": 1,
+      "norm_label": "construye los datos del overview como dict (sin jsonify)."
+    },
+    {
       "label": "config.py",
       "file_type": "code",
       "source_file": "backend/config/config.py",
       "source_location": "L1",
-      "id": "config_config",
       "community": 79,
-      "norm_label": "config.py"
+      "norm_label": "config.py",
+      "id": "config_config"
     },
     {
       "label": "Configuracion centralizada del bot de ruleta. Constantes, configuracion de mesa",
       "file_type": "rationale",
       "source_file": "backend/config/config.py",
       "source_location": "L1",
-      "id": "config_config_rationale_1",
       "community": 79,
-      "norm_label": "configuracion centralizada del bot de ruleta. constantes, configuracion de mesa"
+      "norm_label": "configuracion centralizada del bot de ruleta. constantes, configuracion de mesa",
+      "id": "config_config_rationale_1"
     },
     {
       "label": "paths.py",
       "file_type": "code",
       "source_file": "backend/config/paths.py",
       "source_location": "L1",
-      "id": "config_paths",
       "community": 20,
-      "norm_label": "paths.py"
+      "norm_label": "paths.py",
+      "id": "config_paths"
     },
     {
       "label": "is_frozen()",
       "file_type": "code",
       "source_file": "backend/config/paths.py",
       "source_location": "L10",
-      "id": "config_paths_is_frozen",
       "community": 20,
-      "norm_label": "is_frozen()"
+      "norm_label": "is_frozen()",
+      "id": "config_paths_is_frozen"
     },
     {
       "label": "get_base_dir()",
       "file_type": "code",
       "source_file": "backend/config/paths.py",
       "source_location": "L14",
-      "id": "config_paths_get_base_dir",
       "community": 20,
-      "norm_label": "get_base_dir()"
+      "norm_label": "get_base_dir()",
+      "id": "config_paths_get_base_dir"
     },
     {
       "label": "get_data_dir()",
       "file_type": "code",
       "source_file": "backend/config/paths.py",
       "source_location": "L22",
-      "id": "config_paths_get_data_dir",
       "community": 20,
-      "norm_label": "get_data_dir()"
+      "norm_label": "get_data_dir()",
+      "id": "config_paths_get_data_dir"
     },
     {
       "label": "Resolucion centralizada de rutas para desarrollo y PyInstaller. Elimina el patr",
       "file_type": "rationale",
       "source_file": "backend/config/paths.py",
       "source_location": "L1",
-      "id": "config_paths_rationale_1",
       "community": 20,
-      "norm_label": "resolucion centralizada de rutas para desarrollo y pyinstaller. elimina el patr"
+      "norm_label": "resolucion centralizada de rutas para desarrollo y pyinstaller. elimina el patr",
+      "id": "config_paths_rationale_1"
     },
     {
       "label": "Directorio raiz del paquete backend (frozen) o del source (dev).",
       "file_type": "rationale",
       "source_file": "backend/config/paths.py",
       "source_location": "L15",
-      "id": "config_paths_rationale_15",
       "community": 20,
-      "norm_label": "directorio raiz del paquete backend (frozen) o del source (dev)."
+      "norm_label": "directorio raiz del paquete backend (frozen) o del source (dev).",
+      "id": "config_paths_rationale_15"
     },
     {
       "label": "Directorio data/ para BD, credenciales, logs.",
       "file_type": "rationale",
       "source_file": "backend/config/paths.py",
       "source_location": "L23",
-      "id": "config_paths_rationale_23",
       "community": 20,
-      "norm_label": "directorio data/ para bd, credenciales, logs."
+      "norm_label": "directorio data/ para bd, credenciales, logs.",
+      "id": "config_paths_rationale_23"
     },
     {
       "label": "thresholds.py",
       "file_type": "code",
       "source_file": "backend/roulette/thresholds.py",
       "source_location": "L1",
-      "id": "roulette_thresholds",
       "community": 1,
-      "norm_label": "thresholds.py"
+      "norm_label": "thresholds.py",
+      "id": "roulette_thresholds"
     },
     {
       "label": "get_color_streak_threshold()",
       "file_type": "code",
       "source_file": "backend/roulette/thresholds.py",
       "source_location": "L17",
-      "id": "roulette_thresholds_get_color_streak_threshold",
       "community": 1,
-      "norm_label": "get_color_streak_threshold()"
+      "norm_label": "get_color_streak_threshold()",
+      "id": "roulette_thresholds_get_color_streak_threshold"
     },
     {
       "label": "get_number_delay_threshold()",
       "file_type": "code",
       "source_file": "backend/roulette/thresholds.py",
       "source_location": "L53",
-      "id": "roulette_thresholds_get_number_delay_threshold",
       "community": 1,
-      "norm_label": "get_number_delay_threshold()"
+      "norm_label": "get_number_delay_threshold()",
+      "id": "roulette_thresholds_get_number_delay_threshold"
     },
     {
       "label": "Umbrales de alerta para rachas de color y retrasos de n\u00fameros. Separado de conf",
       "file_type": "rationale",
       "source_file": "backend/roulette/thresholds.py",
       "source_location": "L1",
-      "id": "roulette_thresholds_rationale_1",
       "community": 1,
-      "norm_label": "umbrales de alerta para rachas de color y retrasos de numeros. separado de conf"
+      "norm_label": "umbrales de alerta para rachas de color y retrasos de numeros. separado de conf",
+      "id": "roulette_thresholds_rationale_1"
     },
     {
       "label": "Lee el umbral de racha de color. Prioridad: runtime overrides > GUI saved > .env",
       "file_type": "rationale",
       "source_file": "backend/roulette/thresholds.py",
       "source_location": "L18",
-      "id": "roulette_thresholds_rationale_18",
       "community": 1,
-      "norm_label": "lee el umbral de racha de color. prioridad: runtime overrides > gui saved > .env"
+      "norm_label": "lee el umbral de racha de color. prioridad: runtime overrides > gui saved > .env",
+      "id": "roulette_thresholds_rationale_18"
     },
     {
       "label": "Lee el umbral de retraso de n\u00fameros individuales. Prioridad: runtime overrides >",
       "file_type": "rationale",
       "source_file": "backend/roulette/thresholds.py",
       "source_location": "L54",
-      "id": "roulette_thresholds_rationale_54",
       "community": 1,
-      "norm_label": "lee el umbral de retraso de numeros individuales. prioridad: runtime overrides >"
+      "norm_label": "lee el umbral de retraso de numeros individuales. prioridad: runtime overrides >",
+      "id": "roulette_thresholds_rationale_54"
     },
     {
       "label": "__init__.py",
@@ -515,267 +776,6 @@
       "community": 94,
       "norm_label": "__init__.py",
       "id": "dashboard_init"
-    },
-    {
-      "label": "app.py",
-      "file_type": "code",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L1",
-      "community": 1,
-      "norm_label": "app.py",
-      "id": "dashboard_app"
-    },
-    {
-      "label": "get_dashboard_threshold()",
-      "file_type": "code",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L22",
-      "community": 1,
-      "norm_label": "get_dashboard_threshold()",
-      "id": "dashboard_app_get_dashboard_threshold"
-    },
-    {
-      "label": "_get_validated_table()",
-      "file_type": "code",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L31",
-      "community": 55,
-      "norm_label": "_get_validated_table()",
-      "id": "dashboard_app_get_validated_table"
-    },
-    {
-      "label": "check_token()",
-      "file_type": "code",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L57",
-      "community": 1,
-      "norm_label": "check_token()",
-      "id": "dashboard_app_check_token"
-    },
-    {
-      "label": "calculate_delays()",
-      "file_type": "code",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L64",
-      "community": 1,
-      "norm_label": "calculate_delays()",
-      "id": "dashboard_app_calculate_delays"
-    },
-    {
-      "label": "serve_spa()",
-      "file_type": "code",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L95",
-      "community": 1,
-      "norm_label": "serve_spa()",
-      "id": "dashboard_app_serve_spa"
-    },
-    {
-      "label": "spa_fallback()",
-      "file_type": "code",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L100",
-      "community": 1,
-      "norm_label": "spa_fallback()",
-      "id": "dashboard_app_spa_fallback"
-    },
-    {
-      "label": "get_mesas()",
-      "file_type": "code",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L108",
-      "community": 1,
-      "norm_label": "get_mesas()",
-      "id": "dashboard_app_get_mesas"
-    },
-    {
-      "label": "get_overview()",
-      "file_type": "code",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L113",
-      "community": 1,
-      "norm_label": "get_overview()",
-      "id": "dashboard_app_get_overview"
-    },
-    {
-      "label": "get_data()",
-      "file_type": "code",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L187",
-      "community": 1,
-      "norm_label": "get_data()",
-      "id": "dashboard_app_get_data"
-    },
-    {
-      "label": "get_backtest()",
-      "file_type": "code",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L244",
-      "community": 1,
-      "norm_label": "get_backtest()",
-      "id": "dashboard_app_get_backtest"
-    },
-    {
-      "label": "get_backtest_color()",
-      "file_type": "code",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L276",
-      "community": 1,
-      "norm_label": "get_backtest_color()",
-      "id": "dashboard_app_get_backtest_color"
-    },
-    {
-      "label": "get_backtest_number()",
-      "file_type": "code",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L309",
-      "community": 1,
-      "norm_label": "get_backtest_number()",
-      "id": "dashboard_app_get_backtest_number"
-    },
-    {
-      "label": "get_analisis_global()",
-      "file_type": "code",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L362",
-      "community": 1,
-      "norm_label": "get_analisis_global()",
-      "id": "dashboard_app_get_analisis_global"
-    },
-    {
-      "label": "get_signal_detail()",
-      "file_type": "code",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L440",
-      "community": 55,
-      "norm_label": "get_signal_detail()",
-      "id": "dashboard_app_get_signal_detail"
-    },
-    {
-      "label": "get_tunnel()",
-      "file_type": "code",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L503",
-      "community": 1,
-      "norm_label": "get_tunnel()",
-      "id": "dashboard_app_get_tunnel"
-    },
-    {
-      "label": "sse_stream()",
-      "file_type": "code",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L521",
-      "community": 1,
-      "norm_label": "sse_stream()",
-      "id": "dashboard_app_sse_stream"
-    },
-    {
-      "label": "_build_overview_data()",
-      "file_type": "code",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L543",
-      "community": 1,
-      "norm_label": "_build_overview_data()",
-      "id": "dashboard_app_build_overview_data"
-    },
-    {
-      "label": "Lee el threshold de los datos guardados por la GUI. Fallback al .env",
-      "file_type": "rationale",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L23",
-      "community": 1,
-      "norm_label": "lee el threshold de los datos guardados por la gui. fallback al .env",
-      "id": "dashboard_app_rationale_23"
-    },
-    {
-      "label": "Valida el parametro 'mesa' de un request.     Retorna el table_name validado o",
-      "file_type": "rationale",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L32",
-      "community": 55,
-      "norm_label": "valida el parametro 'mesa' de un request.     retorna el table_name validado o",
-      "id": "dashboard_app_rationale_32"
-    },
-    {
-      "label": "Calcula los delays de docenas y columnas para una tabla dada (USANDO LOGIC COMPA",
-      "file_type": "rationale",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L65",
-      "community": 1,
-      "norm_label": "calcula los delays de docenas y columnas para una tabla dada (usando logic compa",
-      "id": "dashboard_app_rationale_65"
-    },
-    {
-      "label": "Cualquier ruta que no sea /api/* sirve index.html para React Router.",
-      "file_type": "rationale",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L101",
-      "community": 1,
-      "norm_label": "cualquier ruta que no sea /api/* sirve index.html para react router.",
-      "id": "dashboard_app_rationale_101"
-    },
-    {
-      "label": "Retorna un resumen r\u00e1pido de TODAS las mesas: delay m\u00e1ximo y alertas.",
-      "file_type": "rationale",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L114",
-      "community": 1,
-      "norm_label": "retorna un resumen rapido de todas las mesas: delay maximo y alertas.",
-      "id": "dashboard_app_rationale_114"
-    },
-    {
-      "label": "Historial de rachas de color completadas para una mesa.",
-      "file_type": "rationale",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L277",
-      "community": 1,
-      "norm_label": "historial de rachas de color completadas para una mesa.",
-      "id": "dashboard_app_rationale_277"
-    },
-    {
-      "label": "Historial de retrasos de numeros individuales completados + alertas activas.",
-      "file_type": "rationale",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L310",
-      "community": 1,
-      "norm_label": "historial de retrasos de numeros individuales completados + alertas activas.",
-      "id": "dashboard_app_rationale_310"
-    },
-    {
-      "label": "Devuelve las jugadas individuales que componen una senal especifica.",
-      "file_type": "rationale",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L441",
-      "community": 55,
-      "norm_label": "devuelve las jugadas individuales que componen una senal especifica.",
-      "id": "dashboard_app_rationale_441"
-    },
-    {
-      "label": "Retorna el link actual de Cloudflare si est\u00e1 disponible",
-      "file_type": "rationale",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L504",
-      "community": 1,
-      "norm_label": "retorna el link actual de cloudflare si esta disponible",
-      "id": "dashboard_app_rationale_504"
-    },
-    {
-      "label": "Server-Sent Events endpoint para datos en tiempo real.",
-      "file_type": "rationale",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L522",
-      "community": 1,
-      "norm_label": "server-sent events endpoint para datos en tiempo real.",
-      "id": "dashboard_app_rationale_522"
-    },
-    {
-      "label": "Construye los datos del overview como dict (sin jsonify).",
-      "file_type": "rationale",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L544",
-      "community": 1,
-      "norm_label": "construye los datos del overview como dict (sin jsonify).",
-      "id": "dashboard_app_rationale_544"
     },
     {
       "label": "$()",
@@ -20228,6 +20228,1111 @@
   ],
   "links": [
     {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "backtesting_backtest_sync_backtest"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "backtesting_backtest_sync_color_backtest"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "backtesting_backtest_sync_number_backtest"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "bot_ruleta_backtest"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "bot_ruleta_backtest_sync_backtest"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "bot_ruleta_backtest_sync_color_backtest"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "bot_ruleta_backtest_sync_number_backtest"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "bot_ruleta_config"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "bot_ruleta_db"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "bot_ruleta_db_get_connection"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "bot_ruleta_db_validate_table_name"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "bot_ruleta_logic"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "bot_ruleta_paths"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "bot_ruleta_paths_get_data_dir"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "bot_ruleta_thresholds"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "bot_ruleta_thresholds_get_color_streak_threshold"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "bot_ruleta_thresholds_get_number_delay_threshold"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L38",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "config_paths_get_data_dir"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L525",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "dashboard_app_build_overview_data"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L54",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "dashboard_app_calculate_delays"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "dashboard_app_check_token"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L310",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "dashboard_app_get_analisis_global"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L218",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "dashboard_app_get_backtest"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L248",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "dashboard_app_get_backtest_color"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L279",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "dashboard_app_get_backtest_number"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "dashboard_app_get_dashboard_threshold"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L162",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "dashboard_app_get_data"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L83",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "dashboard_app_get_mesas"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L88",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "dashboard_app_get_overview"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L363",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "dashboard_app_get_signal_detail"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L424",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "dashboard_app_get_tunnel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "dashboard_app_get_validated_table"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L85",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "dashboard_app_serve_spa"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L90",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "dashboard_app_spa_fallback"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L503",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "dashboard_app_sse_stream"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "database_db_get_connection"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "database_db_validate_table_name"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "roulette_thresholds_get_color_streak_threshold"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L16",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app",
+      "target": "roulette_thresholds_get_number_delay_threshold"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L530",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_build_overview_data",
+      "target": "dashboard_app_get_dashboard_threshold"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L311",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_get_analisis_global",
+      "target": "dashboard_app_get_dashboard_threshold"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L223",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_get_backtest",
+      "target": "dashboard_app_get_dashboard_threshold"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L175",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_get_data",
+      "target": "dashboard_app_get_dashboard_threshold"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L93",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_get_overview",
+      "target": "dashboard_app_get_dashboard_threshold"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_rationale_23",
+      "target": "dashboard_app_get_dashboard_threshold"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L242",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_get_backtest",
+      "target": "dashboard_app_get_validated_table"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L276",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_get_backtest_color",
+      "target": "dashboard_app_get_validated_table"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L310",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_get_backtest_number",
+      "target": "dashboard_app_get_validated_table"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L187",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_get_data",
+      "target": "dashboard_app_get_validated_table"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L450",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_get_signal_detail",
+      "target": "dashboard_app_get_validated_table"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_get_validated_table",
+      "target": "bot_ruleta_db_validate_table_name"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_get_validated_table",
+      "target": "database_db_validate_table_name"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_rationale_32",
+      "target": "dashboard_app_get_validated_table"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L534",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_build_overview_data",
+      "target": "dashboard_app_calculate_delays"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L58",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_calculate_delays",
+      "target": "bot_ruleta_db_get_connection"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_calculate_delays",
+      "target": "bot_ruleta_db_validate_table_name"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L68",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_calculate_delays",
+      "target": "database_db_get_connection"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L67",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_calculate_delays",
+      "target": "database_db_validate_table_name"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L393",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_get_analisis_global",
+      "target": "dashboard_app_calculate_delays"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L326",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_get_backtest_number",
+      "target": "dashboard_app_calculate_delays"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L183",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_get_data",
+      "target": "dashboard_app_calculate_delays"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L110",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_get_overview",
+      "target": "dashboard_app_calculate_delays"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L65",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_rationale_65",
+      "target": "dashboard_app_calculate_delays"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L101",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_rationale_101",
+      "target": "dashboard_app_spa_fallback"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L158",
+      "weight": 1.0,
+      "source": "dashboard_app_get_overview",
+      "target": "bot_ruleta_thresholds_get_color_streak_threshold"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L138",
+      "weight": 1.0,
+      "source": "dashboard_app_get_overview",
+      "target": "bot_ruleta_thresholds_get_number_delay_threshold"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L176",
+      "weight": 1.0,
+      "source": "dashboard_app_get_overview",
+      "target": "roulette_thresholds_get_color_streak_threshold"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L156",
+      "weight": 1.0,
+      "source": "dashboard_app_get_overview",
+      "target": "roulette_thresholds_get_number_delay_threshold"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L114",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_rationale_114",
+      "target": "dashboard_app_get_overview"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L215",
+      "weight": 1.0,
+      "source": "dashboard_app_get_data",
+      "target": "bot_ruleta_thresholds_get_color_streak_threshold"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L205",
+      "weight": 1.0,
+      "source": "dashboard_app_get_data",
+      "target": "bot_ruleta_thresholds_get_number_delay_threshold"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L234",
+      "weight": 1.0,
+      "source": "dashboard_app_get_data",
+      "target": "roulette_thresholds_get_color_streak_threshold"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L224",
+      "weight": 1.0,
+      "source": "dashboard_app_get_data",
+      "target": "roulette_thresholds_get_number_delay_threshold"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L255",
+      "weight": 1.0,
+      "source": "dashboard_app_get_backtest",
+      "target": "backtesting_backtest_sync_backtest"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L235",
+      "weight": 1.0,
+      "source": "dashboard_app_get_backtest",
+      "target": "bot_ruleta_backtest_sync_backtest"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L288",
+      "weight": 1.0,
+      "source": "dashboard_app_get_backtest_color",
+      "target": "backtesting_backtest_sync_color_backtest"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L266",
+      "weight": 1.0,
+      "source": "dashboard_app_get_backtest_color",
+      "target": "bot_ruleta_backtest_sync_color_backtest"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L261",
+      "weight": 1.0,
+      "source": "dashboard_app_get_backtest_color",
+      "target": "bot_ruleta_thresholds_get_color_streak_threshold"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L284",
+      "weight": 1.0,
+      "source": "dashboard_app_get_backtest_color",
+      "target": "roulette_thresholds_get_color_streak_threshold"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L277",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_rationale_277",
+      "target": "dashboard_app_get_backtest_color"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L321",
+      "weight": 1.0,
+      "source": "dashboard_app_get_backtest_number",
+      "target": "backtesting_backtest_sync_number_backtest"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L297",
+      "weight": 1.0,
+      "source": "dashboard_app_get_backtest_number",
+      "target": "bot_ruleta_backtest_sync_number_backtest"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L292",
+      "weight": 1.0,
+      "source": "dashboard_app_get_backtest_number",
+      "target": "bot_ruleta_thresholds_get_number_delay_threshold"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L317",
+      "weight": 1.0,
+      "source": "dashboard_app_get_backtest_number",
+      "target": "roulette_thresholds_get_number_delay_threshold"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L310",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_rationale_310",
+      "target": "dashboard_app_get_backtest_number"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L371",
+      "weight": 1.0,
+      "source": "dashboard_app_get_analisis_global",
+      "target": "backtesting_backtest_sync_backtest"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L372",
+      "weight": 1.0,
+      "source": "dashboard_app_get_analisis_global",
+      "target": "backtesting_backtest_sync_color_backtest"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L373",
+      "weight": 1.0,
+      "source": "dashboard_app_get_analisis_global",
+      "target": "backtesting_backtest_sync_number_backtest"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L347",
+      "weight": 1.0,
+      "source": "dashboard_app_get_analisis_global",
+      "target": "bot_ruleta_backtest_sync_backtest"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L348",
+      "weight": 1.0,
+      "source": "dashboard_app_get_analisis_global",
+      "target": "bot_ruleta_backtest_sync_color_backtest"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L349",
+      "weight": 1.0,
+      "source": "dashboard_app_get_analisis_global",
+      "target": "bot_ruleta_backtest_sync_number_backtest"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L339",
+      "weight": 1.0,
+      "source": "dashboard_app_get_analisis_global",
+      "target": "bot_ruleta_thresholds_get_color_streak_threshold"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L341",
+      "weight": 1.0,
+      "source": "dashboard_app_get_analisis_global",
+      "target": "bot_ruleta_thresholds_get_number_delay_threshold"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L364",
+      "weight": 1.0,
+      "source": "dashboard_app_get_analisis_global",
+      "target": "roulette_thresholds_get_color_streak_threshold"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L366",
+      "weight": 1.0,
+      "source": "dashboard_app_get_analisis_global",
+      "target": "roulette_thresholds_get_number_delay_threshold"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L441",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_rationale_441",
+      "target": "dashboard_app_get_signal_detail"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L504",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_rationale_504",
+      "target": "dashboard_app_get_tunnel"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L520",
+      "weight": 1.0,
+      "source": "dashboard_app_rationale_520",
+      "target": "dashboard_app_sse_stream",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L599",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_build_overview_data",
+      "target": "bot_ruleta_thresholds_get_color_streak_threshold"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/dashboard/app.py",
+      "source_location": "L577",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_build_overview_data",
+      "target": "bot_ruleta_thresholds_get_number_delay_threshold"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L599",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_build_overview_data",
+      "target": "roulette_thresholds_get_color_streak_threshold"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L577",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "dashboard_app_build_overview_data",
+      "target": "roulette_thresholds_get_number_delay_threshold"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "backend/dashboard/app.py",
+      "source_location": "L542",
+      "weight": 1.0,
+      "source": "dashboard_app_rationale_542",
+      "target": "dashboard_app_build_overview_data",
+      "confidence_score": 1.0
+    },
+    {
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "backend/config/config.py",
@@ -20447,19 +21552,8 @@
       "source_file": "backend/config/paths.py",
       "source_location": "L23",
       "weight": 1.0,
-      "source": "config_paths_rationale_23",
-      "target": "config_paths_get_data_dir",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L38",
-      "weight": 1.0,
       "confidence_score": 1.0,
-      "source": "dashboard_app",
+      "source": "config_paths_rationale_23",
       "target": "config_paths_get_data_dir"
     },
     {
@@ -20584,72 +21678,6 @@
       "relation": "imports",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "roulette_thresholds_get_color_streak_threshold"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L599",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_build_overview_data",
-      "target": "roulette_thresholds_get_color_streak_threshold"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L364",
-      "weight": 1.0,
-      "source": "dashboard_app_get_analisis_global",
-      "target": "roulette_thresholds_get_color_streak_threshold"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L284",
-      "weight": 1.0,
-      "source": "dashboard_app_get_backtest_color",
-      "target": "roulette_thresholds_get_color_streak_threshold"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L234",
-      "weight": 1.0,
-      "source": "dashboard_app_get_data",
-      "target": "roulette_thresholds_get_color_streak_threshold"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L176",
-      "weight": 1.0,
-      "source": "dashboard_app_get_overview",
-      "target": "roulette_thresholds_get_color_streak_threshold"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
       "source_file": "backend/roulette/logic.py",
       "source_location": "L187",
       "weight": 1.0,
@@ -20677,72 +21705,6 @@
       "confidence_score": 1.0,
       "source": "roulette_thresholds_rationale_18",
       "target": "roulette_thresholds_get_color_streak_threshold"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "roulette_thresholds_get_number_delay_threshold"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L577",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_build_overview_data",
-      "target": "roulette_thresholds_get_number_delay_threshold"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L366",
-      "weight": 1.0,
-      "source": "dashboard_app_get_analisis_global",
-      "target": "roulette_thresholds_get_number_delay_threshold"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L317",
-      "weight": 1.0,
-      "source": "dashboard_app_get_backtest_number",
-      "target": "roulette_thresholds_get_number_delay_threshold"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L224",
-      "weight": 1.0,
-      "source": "dashboard_app_get_data",
-      "target": "roulette_thresholds_get_number_delay_threshold"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L156",
-      "weight": 1.0,
-      "source": "dashboard_app_get_overview",
-      "target": "roulette_thresholds_get_number_delay_threshold"
     },
     {
       "relation": "imports",
@@ -21321,39 +22283,6 @@
       "target": "backtesting_backtest_numberbacktestsync_init"
     },
     {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L18",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "backtesting_backtest_sync_backtest"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L371",
-      "weight": 1.0,
-      "source": "dashboard_app_get_analisis_global",
-      "target": "backtesting_backtest_sync_backtest"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L255",
-      "weight": 1.0,
-      "source": "dashboard_app_get_backtest",
-      "target": "backtesting_backtest_sync_backtest"
-    },
-    {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "backend/backtesting/backtest.py",
@@ -21491,39 +22420,6 @@
       "target": "backtesting_backtest_colorbacktestsync_save_streak"
     },
     {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L18",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "backtesting_backtest_sync_color_backtest"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L372",
-      "weight": 1.0,
-      "source": "dashboard_app_get_analisis_global",
-      "target": "backtesting_backtest_sync_color_backtest"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L288",
-      "weight": 1.0,
-      "source": "dashboard_app_get_backtest_color",
-      "target": "backtesting_backtest_sync_color_backtest"
-    },
-    {
       "relation": "method",
       "confidence": "EXTRACTED",
       "source_file": "backend/backtesting/backtest.py",
@@ -21605,902 +22501,6 @@
       "weight": 1.0,
       "source": "tests_test_backtest_testbacktestsync_test_number_sync_no_errors",
       "target": "backtesting_backtest_numberbacktestsync"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L18",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "backtesting_backtest_sync_number_backtest"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L373",
-      "weight": 1.0,
-      "source": "dashboard_app_get_analisis_global",
-      "target": "backtesting_backtest_sync_number_backtest"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L321",
-      "weight": 1.0,
-      "source": "dashboard_app_get_backtest_number",
-      "target": "backtesting_backtest_sync_number_backtest"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "bot_ruleta_backtest"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "bot_ruleta_backtest_sync_backtest"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "bot_ruleta_backtest_sync_color_backtest"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "bot_ruleta_backtest_sync_number_backtest"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "bot_ruleta_config"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L20",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "bot_ruleta_db"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L19",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "bot_ruleta_db_get_connection"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L19",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "bot_ruleta_db_validate_table_name"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "bot_ruleta_logic"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L27",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "bot_ruleta_paths"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L27",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "bot_ruleta_paths_get_data_dir"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "bot_ruleta_thresholds"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "bot_ruleta_thresholds_get_color_streak_threshold"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L14",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "bot_ruleta_thresholds_get_number_delay_threshold"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L525",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "dashboard_app_build_overview_data"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L54",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "dashboard_app_calculate_delays"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L57",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "dashboard_app_check_token"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L310",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "dashboard_app_get_analisis_global"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L218",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "dashboard_app_get_backtest"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L248",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "dashboard_app_get_backtest_color"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L279",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "dashboard_app_get_backtest_number"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L16",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "dashboard_app_get_dashboard_threshold"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L162",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "dashboard_app_get_data"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L83",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "dashboard_app_get_mesas"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L88",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "dashboard_app_get_overview"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L363",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "dashboard_app_get_signal_detail"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L424",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "dashboard_app_get_tunnel"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L32",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "dashboard_app_get_validated_table"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L85",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "dashboard_app_serve_spa"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L90",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "dashboard_app_spa_fallback"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L503",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "dashboard_app_sse_stream"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L19",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "database_db_get_connection"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L19",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app",
-      "target": "database_db_validate_table_name"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L530",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_build_overview_data",
-      "target": "dashboard_app_get_dashboard_threshold"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L311",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_get_analisis_global",
-      "target": "dashboard_app_get_dashboard_threshold"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L223",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_get_backtest",
-      "target": "dashboard_app_get_dashboard_threshold"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L175",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_get_data",
-      "target": "dashboard_app_get_dashboard_threshold"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L93",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_get_overview",
-      "target": "dashboard_app_get_dashboard_threshold"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L23",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_rationale_23",
-      "target": "dashboard_app_get_dashboard_threshold"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L242",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_get_backtest",
-      "target": "dashboard_app_get_validated_table"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L276",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_get_backtest_color",
-      "target": "dashboard_app_get_validated_table"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L310",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_get_backtest_number",
-      "target": "dashboard_app_get_validated_table"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L187",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_get_data",
-      "target": "dashboard_app_get_validated_table"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L450",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_get_signal_detail",
-      "target": "dashboard_app_get_validated_table"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L36",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_get_validated_table",
-      "target": "bot_ruleta_db_validate_table_name"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L36",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_get_validated_table",
-      "target": "database_db_validate_table_name"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L32",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_rationale_32",
-      "target": "dashboard_app_get_validated_table"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L534",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_build_overview_data",
-      "target": "dashboard_app_calculate_delays"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L58",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_calculate_delays",
-      "target": "bot_ruleta_db_get_connection"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L57",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_calculate_delays",
-      "target": "bot_ruleta_db_validate_table_name"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L68",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_calculate_delays",
-      "target": "database_db_get_connection"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "backend/dashboard/app.py",
-      "source_location": "L67",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_calculate_delays",
-      "target": "database_db_validate_table_name"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L393",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_get_analisis_global",
-      "target": "dashboard_app_calculate_delays"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L326",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_get_backtest_number",
-      "target": "dashboard_app_calculate_delays"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L183",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_get_data",
-      "target": "dashboard_app_calculate_delays"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L110",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_get_overview",
-      "target": "dashboard_app_calculate_delays"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L65",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_rationale_65",
-      "target": "dashboard_app_calculate_delays"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L101",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_rationale_101",
-      "target": "dashboard_app_spa_fallback"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L158",
-      "weight": 1.0,
-      "source": "dashboard_app_get_overview",
-      "target": "bot_ruleta_thresholds_get_color_streak_threshold"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L138",
-      "weight": 1.0,
-      "source": "dashboard_app_get_overview",
-      "target": "bot_ruleta_thresholds_get_number_delay_threshold"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L114",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_rationale_114",
-      "target": "dashboard_app_get_overview"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L215",
-      "weight": 1.0,
-      "source": "dashboard_app_get_data",
-      "target": "bot_ruleta_thresholds_get_color_streak_threshold"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L205",
-      "weight": 1.0,
-      "source": "dashboard_app_get_data",
-      "target": "bot_ruleta_thresholds_get_number_delay_threshold"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L235",
-      "weight": 1.0,
-      "source": "dashboard_app_get_backtest",
-      "target": "bot_ruleta_backtest_sync_backtest"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L266",
-      "weight": 1.0,
-      "source": "dashboard_app_get_backtest_color",
-      "target": "bot_ruleta_backtest_sync_color_backtest"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L261",
-      "weight": 1.0,
-      "source": "dashboard_app_get_backtest_color",
-      "target": "bot_ruleta_thresholds_get_color_streak_threshold"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L277",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_rationale_277",
-      "target": "dashboard_app_get_backtest_color"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L297",
-      "weight": 1.0,
-      "source": "dashboard_app_get_backtest_number",
-      "target": "bot_ruleta_backtest_sync_number_backtest"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L292",
-      "weight": 1.0,
-      "source": "dashboard_app_get_backtest_number",
-      "target": "bot_ruleta_thresholds_get_number_delay_threshold"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L310",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_rationale_310",
-      "target": "dashboard_app_get_backtest_number"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L347",
-      "weight": 1.0,
-      "source": "dashboard_app_get_analisis_global",
-      "target": "bot_ruleta_backtest_sync_backtest"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L348",
-      "weight": 1.0,
-      "source": "dashboard_app_get_analisis_global",
-      "target": "bot_ruleta_backtest_sync_color_backtest"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L349",
-      "weight": 1.0,
-      "source": "dashboard_app_get_analisis_global",
-      "target": "bot_ruleta_backtest_sync_number_backtest"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L339",
-      "weight": 1.0,
-      "source": "dashboard_app_get_analisis_global",
-      "target": "bot_ruleta_thresholds_get_color_streak_threshold"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L341",
-      "weight": 1.0,
-      "source": "dashboard_app_get_analisis_global",
-      "target": "bot_ruleta_thresholds_get_number_delay_threshold"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L441",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_rationale_441",
-      "target": "dashboard_app_get_signal_detail"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L504",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_rationale_504",
-      "target": "dashboard_app_get_tunnel"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L522",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_rationale_522",
-      "target": "dashboard_app_sse_stream"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L599",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_build_overview_data",
-      "target": "bot_ruleta_thresholds_get_color_streak_threshold"
-    },
-    {
-      "relation": "calls",
-      "context": "call",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L577",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_build_overview_data",
-      "target": "bot_ruleta_thresholds_get_number_delay_threshold"
-    },
-    {
-      "relation": "rationale_for",
-      "confidence": "EXTRACTED",
-      "source_file": "bot_ruleta/dashboard/app.py",
-      "source_location": "L544",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "dashboard_app_rationale_544",
-      "target": "dashboard_app_build_overview_data"
     },
     {
       "relation": "contains",
@@ -73952,5 +73952,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "9b31d6eda9589835e08b9ef50f62762977b1c051"
+  "built_at_commit": "003f242bd3dcf510eb87dcf50ab76492fc1326db"
 }
