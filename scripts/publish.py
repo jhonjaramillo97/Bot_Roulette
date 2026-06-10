@@ -96,7 +96,7 @@ def update_local_updater(new_version):
 def build_executable():
     print("-> Compilando nuevo ejecutable. Esto tomara unos minutos...")
     try:
-        subprocess.check_call([sys.executable, os.path.join(ROOT, "scripts", "build_exe.py")])
+        subprocess.check_call([sys.executable, os.path.join(ROOT, "scripts", "build_exe.py"), "--production"])
         print("OK: Ejecutable compilado con exito.")
     except Exception as e:
         print(f"Error al compilar: {e}")

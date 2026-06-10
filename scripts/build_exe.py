@@ -49,7 +49,28 @@ def build_react_dashboard():
     print()
 
 
-def build():
+def build(production=False):
+    """Empaqueta el proyecto en un .exe. Si production=True, usa DEV_MODE=False."""
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    tunnel_path = os.path.join(root, "bot_ruleta", "tunnel.py")
+    original_tunnel = None
+
+    if production and os.path.exists(tunnel_path):
+        print(">>> Modo PRODUCCION: DEV_MODE=False (dominio fijo)")
+        with open(tunnel_path, "r", encoding="utf-8") as f:
+            original_tunnel = f.read()
+        with open(tunnel_path, "w", encoding="utf-8") as f:
+            f.write(original_tunnel.replace("DEV_MODE = True", "DEV_MODE = False"))
+
+    try:
+        _do_build()
+    finally:
+        if original_tunnel:
+            with open(tunnel_path, "w", encoding="utf-8") as f:
+                f.write(original_tunnel)
+
+
+def _do_build():
     # Build React dashboard first
     build_react_dashboard()
 
@@ -87,7 +108,6 @@ def build():
     # Incluir ícono si existe
     if os.path.exists(icon_path):
         cmd.append(f"--icon={icon_path}")
-        # Asegurar que el icono se incluya en el paquete en tiempo de ejecución
         separator = ";" if os.name == 'nt' else ":"
         cmd.append(f"--add-data={icon_path}{separator}.")
 
@@ -142,4 +162,5 @@ def build():
     print("="*50)
 
 if __name__ == "__main__":
-    build()
+    prod = "--production" in sys.argv
+    build(production=prod)

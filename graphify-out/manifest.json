@@ -85,8 +85,8 @@
     "semantic_hash": ""
   },
   "bot_ruleta/updater.py": {
-    "mtime": 1781120255.777386,
-    "ast_hash": "da69797aa8fc64893995380bb1c2986b",
+    "mtime": 1781129317.544639,
+    "ast_hash": "fa0d0872f9df204c16f8a689a08881eb",
     "semantic_hash": ""
   },
   "install_ubuntu.sh": {
@@ -200,8 +200,8 @@
     "semantic_hash": ""
   },
   "scripts/publish.py": {
-    "mtime": 1781128889.4024968,
-    "ast_hash": "67118f2272368f3fa9083b66594d93b3",
+    "mtime": 1781129325.306893,
+    "ast_hash": "2c0fc736f2163814272ed9513e1d2244",
     "semantic_hash": ""
   },
   "scripts/verify_number_delays.py": {
@@ -250,7 +250,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/rolldown-runtime-QTnfLwEv.js": {
-    "mtime": 1781121170.3758767,
+    "mtime": 1781129142.855937,
     "ast_hash": "0b9fa1f21df87441aa366e428d1ebb49",
     "semantic_hash": ""
   },
@@ -280,7 +280,7 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/components/overview/TableCard.tsx": {
-    "mtime": 1781120829.1793401,
+    "mtime": 1781129325.3038838,
     "ast_hash": "171cbceb6776d4786982873b322c2f47",
     "semantic_hash": ""
   },
@@ -335,7 +335,7 @@
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/AnalisisGlobal.tsx": {
-    "mtime": 1781121152.8779614,
+    "mtime": 1781129325.3058836,
     "ast_hash": "6cb3873cf2923d5d27894e78c6cef0a6",
     "semantic_hash": ""
   },
@@ -385,7 +385,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/query-BPe0xBFE.js": {
-    "mtime": 1781121170.3738778,
+    "mtime": 1781129141.9055395,
     "ast_hash": "04faa70bf0cdaeaa34d0fc73933f2336",
     "semantic_hash": ""
   },
@@ -400,7 +400,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js": {
-    "mtime": 1781121170.3738778,
+    "mtime": 1781129142.852932,
     "ast_hash": "e8baacc3f66b9f1f0110fe204745ffcf",
     "semantic_hash": ""
   },
@@ -420,8 +420,8 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js": {
-    "mtime": 1781121170.3728924,
-    "ast_hash": "50c9f72e7492f0a07429f4fd9e9befd2",
+    "mtime": 1781129317.540642,
+    "ast_hash": "e68ab0d9a4a289c11622e1a68051382d",
     "semantic_hash": ""
   }
 }
