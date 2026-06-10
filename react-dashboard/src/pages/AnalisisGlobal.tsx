@@ -149,15 +149,15 @@ export default function AnalisisGlobalPage() {
 
       {/* Stats Summary */}
       <div className="mx-auto mb-5 flex w-fit gap-2">
-        <div className="flex flex-col items-center justify-center rounded-sm border border-border bg-bg-card px-8 py-4 shadow-sm border-l-2 border-l-accent">
+        <div className="flex flex-col items-center justify-center rounded-sm border border-border bg-bg-card px-8 py-4 shadow-sm">
           <span className="font-tabular-nums text-2xl font-semibold leading-none tracking-tight text-accent">{stats.total}</span>
           <span className="mt-1.5 text-[11px] tracking-wide text-text-muted">Señales</span>
         </div>
-        <div className="flex flex-col items-center justify-center rounded-sm border border-border bg-bg-card px-8 py-4 shadow-sm border-l-2 border-l-warn">
+        <div className="flex flex-col items-center justify-center rounded-sm border border-border bg-bg-card px-8 py-4 shadow-sm">
           <span className="font-tabular-nums text-2xl font-semibold leading-none tracking-tight text-warn">{stats.avg}</span>
           <span className="mt-1.5 text-[11px] tracking-wide text-text-muted">Pico Prom.</span>
         </div>
-        <div className="flex flex-col items-center justify-center rounded-sm border border-border bg-bg-card px-8 py-4 shadow-sm border-l-2 border-l-danger">
+        <div className="flex flex-col items-center justify-center rounded-sm border border-border bg-bg-card px-8 py-4 shadow-sm">
           <span className="font-tabular-nums text-2xl font-semibold leading-none tracking-tight text-danger">{stats.max}</span>
           <span className="mt-1.5 text-[11px] tracking-wide text-text-muted">Peor Caso</span>
         </div>
