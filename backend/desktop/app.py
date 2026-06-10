@@ -5,7 +5,7 @@ La implementacion esta en gui/app.py.
 import os
 import sys
 
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 from backend.desktop.screens.base import RouletteApp
 from backend.desktop.screens import (

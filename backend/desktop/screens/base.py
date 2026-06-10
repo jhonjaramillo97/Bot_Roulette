@@ -11,7 +11,7 @@ import subprocess
 import platform
 import customtkinter as ctk
 
-sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))))
 
 from backend.diagnostics import attach_gui_queue, get_logger
 from backend.notifier.tunnel import run_tunnel, TUNNEL_FILE
