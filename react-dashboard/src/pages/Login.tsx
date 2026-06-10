@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { LoginBackground } from "./LoginBackground"
-import { playClickSound } from "@/lib/utils"
+import { playClickSound, cn } from "@/lib/utils"
 
 export function LoginPage({ onLogin }: { onLogin: (token: string) => void }) {
   const [token, setToken] = useState("")
@@ -48,7 +48,12 @@ export function LoginPage({ onLogin }: { onLogin: (token: string) => void }) {
           <button
             type="submit"
             disabled={!isValid || loading}
-            className="w-full rounded-sm border border-border bg-white/5 px-4 py-2.5 text-sm font-medium text-text-secondary transition-colors hover:border-border-hover hover:bg-white/10 hover:text-text disabled:opacity-40 disabled:cursor-not-allowed"
+            className={cn(
+              "w-full rounded-sm border px-4 py-2.5 text-sm font-medium transition-all",
+              isValid
+                ? "border-safe/40 bg-safe/10 text-safe hover:border-safe/60 hover:bg-safe/20"
+                : "border-border bg-white/5 text-text-secondary"
+            )}
           >
             {loading ? "Verificando…" : "Ingresar"}
           </button>
