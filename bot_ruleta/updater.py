@@ -10,14 +10,17 @@ from bot_ruleta.paths import is_frozen
 
 log = logging.getLogger("bot")
 
-CURRENT_VERSION = "4.0.0"
+CURRENT_VERSION = "4.0.1"
 # Usamos la API de GitHub en lugar de raw.githubusercontent.com para mayor fiabilidad
-VERSION_URL = "https://api.github.com/repos/jhonjaramillo97/roulette-sniper-releases/contents/version.txt"
+VERSION_URL = "https://api.github.com/repos/jhonjaramillo97/Bot_Roulette/contents/version.txt"
+
+# Token inyectado por build_exe.py al compilar --production
+_GITHUB_TOKEN = ""
 
 # La URL de descarga ahora apunta al asset versionado (latest release)
 def _get_download_url(version):
-    """Genera la URL de descarga para una versión específica."""
-    return f"https://github.com/jhonjaramillo97/roulette-sniper-releases/releases/download/v{version}/RouletteSniperPro_v{version}.exe"
+    """Genera la URL de descarga para una version especifica."""
+    return f"https://github.com/jhonjaramillo97/Bot_Roulette/releases/download/v{version}/RouletteSniperPro_v{version}.exe"
 
 def check_for_updates(callback):
     """
@@ -35,6 +38,8 @@ def check_for_updates(callback):
                 'User-Agent': 'RouletteSniper-Updater',
                 'Accept': 'application/vnd.github+json'
             }
+            if _GITHUB_TOKEN:
+                headers['Authorization'] = f'Bearer {_GITHUB_TOKEN}'
             
             # La API de GitHub es más estable que el enlace raw en algunas redes
             req = urllib.request.Request(f"{VERSION_URL}?t={int(time.time())}", headers=headers)
@@ -120,7 +125,11 @@ def perform_update(new_version, progress_callback, completion_callback):
             download_url = _get_download_url(new_version)
             log.info(f"📥 Descargando v{new_version} desde {download_url}...")
             
-            with urllib.request.urlopen(download_url) as response:
+            req = urllib.request.Request(download_url)
+            if _GITHUB_TOKEN:
+                req.add_header('Authorization', f'Bearer {_GITHUB_TOKEN}')
+            
+            with urllib.request.urlopen(req) as response:
                 total_size = int(response.getheader('Content-Length').strip())
                 downloaded = 0
                 chunk_size = 8192

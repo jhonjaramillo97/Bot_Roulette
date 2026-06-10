@@ -53,7 +53,9 @@ def build(production=False):
     """Empaqueta el proyecto en un .exe. Si production=True, usa DEV_MODE=False."""
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     tunnel_path = os.path.join(root, "bot_ruleta", "tunnel.py")
+    updater_path = os.path.join(root, "bot_ruleta", "updater.py")
     original_tunnel = None
+    original_updater = None
 
     if production and os.path.exists(tunnel_path):
         print(">>> Modo PRODUCCION: DEV_MODE=False (dominio fijo)")
@@ -62,12 +64,27 @@ def build(production=False):
         with open(tunnel_path, "w", encoding="utf-8") as f:
             f.write(original_tunnel.replace("DEV_MODE = True", "DEV_MODE = False"))
 
+    if production and os.path.exists(updater_path):
+        token_file = os.path.join(root, "github_token.txt")
+        if os.path.exists(token_file):
+            with open(token_file, "r") as f:
+                token = f.read().strip()
+            if token:
+                print(">>> Inyectando token de GitHub en updater.py...")
+                with open(updater_path, "r", encoding="utf-8") as f:
+                    original_updater = f.read()
+                with open(updater_path, "w", encoding="utf-8") as f:
+                    f.write(original_updater.replace('_GITHUB_TOKEN = ""', f'_GITHUB_TOKEN = "{token}"'))
+
     try:
         _do_build()
     finally:
         if original_tunnel:
             with open(tunnel_path, "w", encoding="utf-8") as f:
                 f.write(original_tunnel)
+        if original_updater:
+            with open(updater_path, "w", encoding="utf-8") as f:
+                f.write(original_updater)
 
 
 def _do_build():
