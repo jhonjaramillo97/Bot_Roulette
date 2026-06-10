@@ -4,10 +4,38 @@ Tests para el dashboard React: middleware de token, rutas SPA y endpoints API.
 import pytest
 import os
 import sys
+import sqlite3
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 
 import bot_ruleta.dashboard.app as dashboard_app
+from bot_ruleta.config import TABLES
+
+
+@pytest.fixture(autouse=True)
+def _setup_test_db(monkeypatch):
+    """Configura SQLite en memoria para todos los tests."""
+    conn = sqlite3.connect(":memory:")
+    conn.row_factory = sqlite3.Row
+    c = conn.cursor()
+
+    for mesa in TABLES:
+        tn = mesa.get("table_name", "")
+        if not tn:
+            continue
+        c.execute(f"CREATE TABLE {tn} (id INTEGER PRIMARY KEY AUTOINCREMENT, numero INTEGER, color TEXT, timestamp TEXT)")
+
+    c.execute("CREATE TABLE IF NOT EXISTS backtest_history (id INTEGER PRIMARY KEY AUTOINCREMENT, table_name TEXT, zone_name TEXT, start_time TEXT, end_time TEXT, max_delay INTEGER, threshold_used INTEGER)")
+    c.execute("CREATE TABLE IF NOT EXISTS color_streak_history (id INTEGER PRIMARY KEY AUTOINCREMENT, table_name TEXT, streak_color TEXT, streak_count INTEGER, start_time TEXT, end_time TEXT, threshold_used INTEGER)")
+    c.execute("CREATE TABLE IF NOT EXISTS number_delay_history (id INTEGER PRIMARY KEY AUTOINCREMENT, table_name TEXT, number INTEGER, start_time TEXT, end_time TEXT, max_delay INTEGER, threshold_used INTEGER, termination TEXT DEFAULT 'normal')")
+    c.execute("CREATE TABLE IF NOT EXISTS sync_state (table_name TEXT PRIMARY KEY, last_game_id INTEGER)")
+    c.execute("CREATE TABLE IF NOT EXISTS color_sync_state (table_name TEXT PRIMARY KEY, last_game_id INTEGER)")
+    c.execute("CREATE TABLE IF NOT EXISTS number_sync_state (table_name TEXT PRIMARY KEY, last_game_id INTEGER)")
+    conn.commit()
+
+    monkeypatch.setattr(dashboard_app, "get_db_connection", lambda: conn)
+    yield
+    conn.close()
 
 
 @pytest.fixture(autouse=True)
