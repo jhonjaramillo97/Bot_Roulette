@@ -250,7 +250,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/rolldown-runtime-QTnfLwEv.js": {
-    "mtime": 1781034686.2649899,
+    "mtime": 1781061743.1294918,
     "ast_hash": "0b9fa1f21df87441aa366e428d1ebb49",
     "semantic_hash": ""
   },
@@ -385,7 +385,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/query-BPe0xBFE.js": {
-    "mtime": 1781034686.2629852,
+    "mtime": 1781061743.1286557,
     "ast_hash": "04faa70bf0cdaeaa34d0fc73933f2336",
     "semantic_hash": ""
   },
@@ -400,13 +400,13 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js": {
-    "mtime": 1781034686.2639892,
+    "mtime": 1781061743.1294918,
     "ast_hash": "e8baacc3f66b9f1f0110fe204745ffcf",
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/Login.tsx": {
-    "mtime": 1781034136.0995991,
-    "ast_hash": "a3775e5dc0927e36c5d4727cabdde71a",
+    "mtime": 1781061725.8187284,
+    "ast_hash": "cc62b4467f4c94c1ad247bda6ca50948",
     "semantic_hash": ""
   },
   "react-dashboard/src/pages/LoginBackground.tsx": {
@@ -414,9 +414,9 @@
     "ast_hash": "579ce88e89775fdd685f7eadd3d1ddf4",
     "semantic_hash": ""
   },
-  "bot_ruleta/dashboard/static/assets/index-DIWaNBWn.js": {
-    "mtime": 1781034686.2619877,
-    "ast_hash": "0b03210ae0e429e2a2d40f752887a476",
+  "bot_ruleta/dashboard/static/assets/index-BA4lFEer.js": {
+    "mtime": 1781061743.126906,
+    "ast_hash": "e93fe6a46792d0c22dec96fd2a7bde51",
     "semantic_hash": ""
   }
 }
