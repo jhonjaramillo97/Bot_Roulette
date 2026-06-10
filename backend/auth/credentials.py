@@ -63,7 +63,8 @@ def load_credentials():
     headless = True
 
     # 1. Intentar leer desde .env (fallback legacy)
-    env_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), ".env")
+    # credentials.py esta en backend/auth/ → subir 3 niveles para llegar a la raiz del proyecto
+    env_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), ".env")
     env_loaded = False
     if os.path.exists(env_path):
         try:

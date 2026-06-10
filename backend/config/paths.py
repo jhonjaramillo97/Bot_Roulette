@@ -12,10 +12,11 @@ def is_frozen():
 
 
 def get_base_dir():
-    """Directorio raiz del ejecutable (frozen) o del source (dev)."""
+    """Directorio raiz del paquete backend (frozen) o del source (dev)."""
     if is_frozen():
         return os.path.dirname(sys.executable)
-    return os.path.dirname(os.path.abspath(__file__))
+    # paths.py esta en backend/config/ → subir un nivel a backend/
+    return os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 def get_data_dir():

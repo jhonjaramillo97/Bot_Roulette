@@ -40,7 +40,7 @@ TABLES: List[Dict[str, str]] = [
 LOBBY_URL: str = "https://stake.com.co/es/casino/juego/roulette-lobby-571"
 
 # --- DIRECTORIOS ---
-DATA_DIR: str = os.path.join(os.path.dirname(__file__), "data")
+DATA_DIR: str = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
 
 # --- INTERVALOS ---
 AFK_INTERVAL: int = 300  # segundos (300 = 5 min produccion)

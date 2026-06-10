@@ -32,7 +32,7 @@ def get_color_streak_threshold():
     if cached is not None:
         return cached
 
-    env_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), ".env")
+    env_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), ".env")
     try:
         with open(env_path, "r", encoding="utf-8") as f:
             for line in f:
@@ -68,7 +68,7 @@ def get_number_delay_threshold():
     if cached is not None:
         return cached
 
-    env_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), ".env")
+    env_path = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(__file__))), ".env")
     try:
         with open(env_path, "r", encoding="utf-8") as f:
             for line in f:
