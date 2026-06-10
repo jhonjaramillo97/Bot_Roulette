@@ -165,8 +165,8 @@
     "semantic_hash": ""
   },
   "bot_ruleta/backtest.py": {
-    "mtime": 1780856119.0123627,
-    "ast_hash": "60e7865e644764dd178d355d902fc4b2",
+    "mtime": 1781062580.19084,
+    "ast_hash": "d89d46c25366a95113fb33ebcaff37a4",
     "semantic_hash": ""
   },
   "bot_ruleta/logic_helpers.py": {
@@ -245,8 +245,8 @@
     "semantic_hash": ""
   },
   "bot_ruleta/tests/test_backtest.py": {
-    "mtime": 1780872995.4783993,
-    "ast_hash": "6294107ff68c716048a71f0a418675cd",
+    "mtime": 1781062666.3128238,
+    "ast_hash": "de610431c40f9e9305bc1faed51a2167",
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/rolldown-runtime-QTnfLwEv.js": {

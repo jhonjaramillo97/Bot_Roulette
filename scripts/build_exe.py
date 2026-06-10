@@ -6,8 +6,53 @@ Requiere: pip install pyinstaller
 import os
 import subprocess
 import sys
+import shutil
+
+
+def build_react_dashboard():
+    """Compila el dashboard React y copia los archivos a Flask static."""
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    react_dir = os.path.join(root, "react-dashboard")
+    static_dir = os.path.join(root, "bot_ruleta", "dashboard", "static")
+    assets_dir = os.path.join(static_dir, "assets")
+
+    print("=" * 50)
+    print(">>> Compilando dashboard React...")
+    print("=" * 50)
+
+    nodejs_path = r"C:\Program Files\nodejs"
+    env = os.environ.copy()
+    if os.path.exists(nodejs_path) and nodejs_path not in env.get("PATH", ""):
+        env["PATH"] = nodejs_path + os.pathsep + env.get("PATH", "")
+
+    if not os.path.exists(react_dir):
+        print("WARN: react-dashboard/ no encontrado, saltando build React.")
+        return
+
+    if not os.path.exists(os.path.join(react_dir, "node_modules")):
+        print("-> Instalando dependencias npm...")
+        subprocess.check_call(["npm", "install"], cwd=react_dir, env=env)
+
+    print("-> npm run build...")
+    subprocess.check_call(["npm", "run", "build"], cwd=react_dir, env=env)
+
+    if os.path.exists(assets_dir):
+        shutil.rmtree(assets_dir, ignore_errors=True)
+    os.makedirs(assets_dir, exist_ok=True)
+
+    dist_dir = os.path.join(react_dir, "dist")
+    shutil.copy(os.path.join(dist_dir, "index.html"), static_dir)
+    for f in os.listdir(os.path.join(dist_dir, "assets")):
+        shutil.copy(os.path.join(dist_dir, "assets", f), assets_dir)
+
+    print("OK: Dashboard React copiado a bot_ruleta/dashboard/static/")
+    print()
+
 
 def build():
+    # Build React dashboard first
+    build_react_dashboard()
+
     # Rutas base — build_exe.py esta en scripts/, el codigo fuente en bot_ruleta/
     base_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "bot_ruleta")
     main_script = os.path.join(base_dir, "gui_app.py")
