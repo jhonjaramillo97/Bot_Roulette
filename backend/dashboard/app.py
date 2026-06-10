@@ -501,10 +501,8 @@ def get_signal_detail():
 
 @app.route('/api/tunnel')
 def get_tunnel():
-    """Retorna el link actual de Cloudflare si está disponible"""
-    import os
-    # El archivo se guarda en backend/data/tunnel.txt por test_launcher.py
-    tunnel_file = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "tunnel.txt")
+    """Retorna el link actual de Cloudflare si esta disponible"""
+    tunnel_file = os.path.join(get_data_dir(), "tunnel.txt")
     if os.path.exists(tunnel_file):
         try:
             with open(tunnel_file, "r") as f:

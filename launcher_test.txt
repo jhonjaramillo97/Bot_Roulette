@@ -1,0 +1,2812 @@
+============================================================
+  🔍 EJECUTANDO DIAGNÓSTICO DE ENTORNO...
+============================================================
+[2026-06-10 00:09:30.367] [INFO    ] [bot.diagnostics] ============================================================
+[2026-06-10 00:09:30.370] [INFO    ] [bot.diagnostics]   🔍 DIAGNÓSTICO DE ENTORNO
+[2026-06-10 00:09:30.373] [INFO    ] [bot.diagnostics]   Fecha: 2026-06-10 00:09:29
+[2026-06-10 00:09:30.375] [INFO    ] [bot.diagnostics] ============================================================
+[2026-06-10 00:09:30.378] [INFO    ] [bot.diagnostics]   OS:                    Windows 11 (10.0.26200)
+[2026-06-10 00:09:30.378] [INFO    ] [bot.diagnostics]   Python:                3.14.5 (C:\Users\Bairon Jaramillo\AppData\Local\Programs\Python\Python314\python.exe)
+[2026-06-10 00:09:30.378] [INFO    ] [bot.diagnostics]   Chrome:                148.0.7778.217
+[2026-06-10 00:09:30.379] [INFO    ] [bot.diagnostics]   RAM Total:             15.8 GB
+[2026-06-10 00:09:30.379] [INFO    ] [bot.diagnostics]   RAM Disponible:        3.4 GB (78.7% en uso)
+[2026-06-10 00:09:30.379] [INFO    ] [bot.diagnostics]   Disco Libre:           115.8 GB de 222.6 GB
+[2026-06-10 00:09:30.379] [INFO    ] [bot.diagnostics]   .env:                  ✅ Encontrado
+[2026-06-10 00:09:30.380] [INFO    ] [bot.diagnostics]     Email:               jva***@gmail.com
+[2026-06-10 00:09:30.380] [INFO    ] [bot.diagnostics]     Password:            ✅ Presente
+[2026-06-10 00:09:30.380] [INFO    ] [bot.diagnostics]     TG Token:            ❌ VACÍO
+[2026-06-10 00:09:30.380] [INFO    ] [bot.diagnostics]     TG Chat ID:          ❌ VACÍO
+[2026-06-10 00:09:30.380] [INFO    ] [bot.diagnostics]     Threshold:           10
+[2026-06-10 00:09:30.381] [INFO    ] [bot.diagnostics]     Headless:            False
+[2026-06-10 00:09:30.381] [INFO    ] [bot.diagnostics]   Permisos data/:        ✅ Escritura OK
+[2026-06-10 00:09:30.381] [INFO    ] [bot.diagnostics]   Permisos logs/:        ✅ Escritura OK
+[2026-06-10 00:09:30.381] [INFO    ] [bot.diagnostics]   Red (stake.com.co):    ❌ NO ACCESIBLE: HTTP Error 403: Forbidden
+[2026-06-10 00:09:30.381] [INFO    ] [bot.diagnostics]   UC Driver:             ✅ v3.5.5
+[2026-06-10 00:09:30.382] [INFO    ] [bot.diagnostics]   Selenium:              ✅ v4.44.0
+[2026-06-10 00:09:30.382] [INFO    ] [bot.diagnostics] ============================================================
+============================================================
+  🔍 DIAGNÓSTICO DE ENTORNO
+  Fecha: 2026-06-10 00:09:29
+============================================================
+  OS:                    Windows 11 (10.0.26200)
+  Python:                3.14.5 (C:\Users\Bairon Jaramillo\AppData\Local\Programs\Python\Python314\python.exe)
+  Chrome:                148.0.7778.217
+  RAM Total:             15.8 GB
+  RAM Disponible:        3.4 GB (78.7% en uso)
+  Disco Libre:           115.8 GB de 222.6 GB
+  .env:                  ✅ Encontrado
+    Email:               jva***@gmail.com
+    Password:            ✅ Presente
+    TG Token:            ❌ VACÍO
+    TG Chat ID:          ❌ VACÍO
+    Threshold:           10
+    Headless:            False
+  Permisos data/:        ✅ Escritura OK
+  Permisos logs/:        ✅ Escritura OK
+  Red (stake.com.co):    ❌ NO ACCESIBLE: HTTP Error 403: Forbidden
+  UC Driver:             ✅ v3.5.5
+  Selenium:              ✅ v4.44.0
+============================================================
+
+  ✅ Diagnóstico completado. Guardado en logs/diagnostico_inicio.txt
+============================================================
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > Iniciando sistema...
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:35.595] [INFO    ] [bot.run] ============================================================
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:35.596] [INFO    ] [bot.run] 🚀 Bot de Ruleta iniciando...
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:35.596] [INFO    ] [bot.run] ============================================================
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.366] [INFO    ] [bot.diagnostics] ============================================================
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.366] [INFO    ] [bot.diagnostics]   🔍 DIAGNÓSTICO DE ENTORNO
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.366] [INFO    ] [bot.diagnostics]   Fecha: 2026-06-10 00:09:35
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.366] [INFO    ] [bot.diagnostics] ============================================================
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.366] [INFO    ] [bot.diagnostics]   OS:                    Windows 11 (10.0.26200)
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > 09:36.366] [INFO    ] [bot.diagnostics]   Python:                3.14.5 (C:\Users\Bairon Jaramillo\AppData\Local\Programs\Python\Python314\python.exe)
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.366] [INFO    ] [bot.diagnostics]   Chrome:                148.0.7778.217
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.366] [INFO    ] [bot.diagnostics]   RAM Total:             15.8 GB
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.367] [INFO    ] [bot.diagnostics]   RAM Disponible:        3.3 GB (78.9% en uso)
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.367] [INFO    ] [bot.diagnostics]   Disco Libre:           115.8 GB de 222.6 GB
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.367] [INFO    ] [bot.diagnostics]   .env:                  ✅ Encontrado
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.367] [INFO    ] [bot.diagnostics]     Email:               jva***@gmail.com
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.367] [INFO    ] [bot.diagnostics]     Password:            ✅ Presente
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.367] [INFO    ] [bot.diagnostics]     TG Token:            ❌ VACÍO
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.367] [INFO    ] [bot.diagnostics]     TG Chat ID:          ❌ VACÍO
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.367] [INFO    ] [bot.diagnostics]     Threshold:           10
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.367] [INFO    ] [bot.diagnostics]     Headless:            False
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.368] [INFO    ] [bot.diagnostics]   Permisos data/:        ✅ Escritura OK
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.368] [INFO    ] [bot.diagnostics]   Permisos logs/:        ✅ Escritura OK
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.368] [INFO    ] [bot.diagnostics]   Red (stake.com.co):    ❌ NO ACCESIBLE: HTTP Error 403: Forbidden
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.368] [INFO    ] [bot.diagnostics]   UC Driver:             ✅ v3.5.5
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.368] [INFO    ] [bot.diagnostics]   Selenium:              ✅ v4.44.0
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.368] [INFO    ] [bot.diagnostics] ============================================================
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > :36.410] [INFO    ] [bot.db] Inicializando base de datos en: C:\Users\Bairon Jaramillo\Documents\bot_stake\Bot_Stake_Recolector\backend\data\ruleta.db
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.413] [INFO    ] [bot.db] Tablas verificadas/creadas.
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.413] [INFO    ] [bot.scanner] ============================================================
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.413] [INFO    ] [bot.scanner] 🔧 Ejecutando diagnóstico de entorno...
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.474] [INFO    ] [bot.diagnostics] ============================================================
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.475] [INFO    ] [bot.diagnostics]   🔍 DIAGNÓSTICO DE ENTORNO
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.475] [INFO    ] [bot.diagnostics]   Fecha: 2026-06-10 00:09:36
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   Generando...
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.475] [INFO    ] [bot.diagnostics] ============================================================
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.475] [INFO    ] [bot.diagnostics]   OS:                    Windows 11 (10.0.26200)
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.475] [INFO    ] [bot.diagnostics]   OS:                    Windows 11 (10.0.26200)
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > 09:36.475] [INFO    ] [bot.diagnostics]   Python:                3.14.5 (C:\Users\Bairon Jaramillo\AppData\Local\Programs\Python\Python314\python.exe)
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.475] [INFO    ] [bot.diagnostics]   Chrome:                148.0.7778.217
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.475] [INFO    ] [bot.diagnostics]   RAM Total:             15.8 GB
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.475] [INFO    ] [bot.diagnostics]   RAM Disponible:        3.3 GB (79.0% en uso)
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.475] [INFO    ] [bot.diagnostics]   Disco Libre:           115.8 GB de 222.6 GB
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.476] [INFO    ] [bot.diagnostics]   .env:                  ✅ Encontrado
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.476] [INFO    ] [bot.diagnostics]     Email:               jva***@gmail.com
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.476] [INFO    ] [bot.diagnostics]     Password:            ✅ Presente
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.476] [INFO    ] [bot.diagnostics]     TG Token:            ❌ VACÍO
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.476] [INFO    ] [bot.diagnostics]     TG Chat ID:          ❌ VACÍO
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.476] [INFO    ] [bot.diagnostics]     Threshold:           10
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.476] [INFO    ] [bot.diagnostics]     Headless:            False
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.476] [INFO    ] [bot.diagnostics]   Permisos data/:        ✅ Escritura OK
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.476] [INFO    ] [bot.diagnostics]   Permisos logs/:        ✅ Escritura OK
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.476] [INFO    ] [bot.diagnostics]   Red (stake.com.co):    ❌ NO ACCESIBLE: HTTP Error 403: Forbidden
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.477] [INFO    ] [bot.diagnostics]   UC Driver:             ✅ v3.5.5
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.477] [INFO    ] [bot.diagnostics]   Selenium:              ✅ v4.44.0
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.477] [INFO    ] [bot.diagnostics] ============================================================
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.477] [INFO    ] [bot.scanner] ============================================================
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.477] [INFO    ] [bot.scanner] 🤖 Bot Supervisor Iniciado - Headless: False
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.477] [INFO    ] [bot.scanner] 🔄 Iniciando sesión #1...
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.477] [INFO    ] [bot.scanner] Iniciando nueva sesion del bot...
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.477] [INFO    ] [bot.driver] ⚙️ Configurando WebDriver (headless=False)...
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.478] [INFO    ] [bot.driver] 🖥️ Modo Visible (con ventana)...
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.478] [INFO    ] [bot.driver] 🚀 Iniciando Chrome con undetected_chromedriver...
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.482] [INFO    ] [bot.driver] 🌐 Chrome detectado: v148.0.7778.217
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:36.482] [INFO    ] [bot.driver]    Usando version_main=148
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:41.039] [INFO    ] [bot.driver] 🛡️ Parches Anti-Detección Avanzados (CDP) aplicados.
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:41.040] [INFO    ] [bot.driver] ✅ Chrome iniciado correctamente
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:41.040] [INFO    ] [bot.driver] 🔗 Navegando a Stake...
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:50.528] [INFO    ] [bot.driver] 🧹 Limpiando cookies y almacenamiento local...
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:50.744] [INFO    ] [bot.driver] 🔑 Iniciando sesión...
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:09:58.883] [INFO    ] [bot.driver] ✅ Login enviado. Esperando confirmación de inicio de sesión...
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:00.611] [INFO    ] [bot.driver] 🎉 Login exitoso confirmado!
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:03.611] [INFO    ] [bot.lobby] 🔄 Navegando al Lobby... (from_anti_afk=False)
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:10.446] [INFO    ] [bot.lobby]    👉 Click en 'Juego real' ...
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:10.540] [INFO    ] [bot.lobby]    ⏳ Esperando recarga del iframe tras 'Juego real'...
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:22.607] [INFO    ] [bot.iframe]    ✅ Cambio a iframe #0 (class='game')
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:22.628] [INFO    ] [bot.iframe]    ✅ Elementos del juego encontrados en el iframe principal. No requiere anidado.
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:22.628] [INFO    ] [bot.lobby] ✅ Contexto cambiado al iframe del juego.
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:22.628] [INFO    ] [bot.lobby]    ⏳ Esperando a que el lobby termine de cargar...
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:25.643] [INFO    ] [bot.lobby]    ✅ Lobby cargado! 31 tiles encontrados (3s)
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:25.644] [INFO    ] [bot.iframe] 🛡️ Verificando modales bloquantes...
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:26.715] [INFO    ] [bot.scanner] MODO ESPIA ACTIVADO: Escaneando miniaturas...
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:26.766] [INFO    ] [bot.iframe]    ✅ Cambio a iframe #0 (class='game')
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:26.781] [INFO    ] [bot.iframe]    ✅ Elementos del juego encontrados en el iframe principal. No requiere anidado.
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:28.781] [INFO    ] [bot.lobby] Mapa de IDs de mesas (modo robusto)...
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:28.833] [INFO    ] [bot.iframe]    ✅ Cambio a iframe #0 (class='game')
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  Mesas: Esperando mapeo (Anti-AFK)...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:28.867] [INFO    ] [bot.iframe]    ✅ Elementos del juego encontrados en el iframe principal. No requiere anidado.
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.855] [INFO    ] [bot.lobby]
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > ID                             | TÍTULO
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.855] [INFO    ] [bot.lobby]    ------------------------------------------------------------
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.855] [INFO    ] [bot.lobby]    gatesofolympus01-2244          | Gates of Olympus Roulette
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.855] [INFO    ] [bot.lobby]    rw321stakerws321-236           | Stake Roulette
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.855] [INFO    ] [bot.lobby]    roulerw234rwl292-234           | Ruleta Latina
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.855] [INFO    ] [bot.lobby]    1hl323e1lxuqdrkr-210           | Auto Mega Roulette
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.855] [INFO    ] [bot.lobby]    1hl65ce1lxuqdrkr-204           | Mega Roulette
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.855] [INFO    ] [bot.lobby]    g03y1t9vvuhrfytl-227           | Roulette 1
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.855] [INFO    ] [bot.lobby]    megaroulette3k01-2901          | Mega Roulette 3000
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.856] [INFO    ] [bot.lobby]    fl9knouu0yjez2wi-203           | Speed Roulette 1
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.856] [INFO    ] [bot.lobby]    powruprw1qm3xc25-240           | PowerUP Roulette
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.856] [INFO    ] [bot.lobby]    autorwra311autor-226           | Speed Auto Roulette
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.856] [INFO    ] [bot.lobby]    lucky6roulettea3-211a1         | Lucky 6 Roulette
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.856] [INFO    ] [bot.lobby]    5bzl2835s5ruvweg-225           | Auto Roulette
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.856] [INFO    ] [bot.lobby]    yqpz3ichst2xg439-206           | Roulette Macao
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.856] [INFO    ] [bot.lobby]    chroma229rwltr22-230           | Roulette 3
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.856] [INFO    ] [bot.lobby]    crystalroul00001-2501          | Crystal Roulette
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.856] [INFO    ] [bot.lobby]    mrbras531mrbr532-287           | Brazilian Mega Roulette
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.856] [INFO    ] [bot.lobby]    5kvxlw4c1qm3xcyn-201           | Roulette 2 Extra Time
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.856] [INFO    ] [bot.lobby]    geogamingh2rw545-545           | VIP Roulette
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.856] [INFO    ] [bot.lobby]    t4jzencinod6iqwi-221           | Russian Roulette
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.856] [INFO    ] [bot.lobby]    rwbrzportrwa16rg-237           | Brazilian Roulette
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.856] [INFO    ] [bot.lobby]    ar25vipautorw251-266           | VIP Auto Roulette
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.857] [INFO    ] [bot.lobby]    r20speedrtwo201s-205           | Speed Roulette 2
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.857] [INFO    ] [bot.lobby]    s2x6b4jdeqza2ge2-222           | German Roulette
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.857] [INFO    ] [bot.lobby]    p8l1j84prrmxzyic-224           | Turkish Roulette
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.857] [INFO    ] [bot.lobby]    megar0ul3tt3trk1-208           | Turkish Mega Roulette
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.857] [INFO    ] [bot.lobby]    romania233rwl291-233           | Romanian Roulette
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.857] [INFO    ] [bot.lobby]    v1c52fgw7yy02upz-223           | Roulette Italia Tricolore
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.857] [INFO    ] [bot.lobby]    dutchrw235rwl293-235           | Dutch Roulette
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.857] [INFO    ] [bot.lobby]    greekchr11genric-297           | Greek Roulette
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.857] [INFO    ] [bot.lobby]    privroudeluxgt01-28301         | Privé Lounge Roulette Deluxe
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.857] [INFO    ] [bot.lobby]    privroulettegt01-28201         | Privé Lounge Roulette
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.857] [INFO    ] [bot.lobby]    ------------------------------------------------------------
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.857] [INFO    ] [bot.lobby]      Ruleta Latina: ID confirmado (roulerw234rwl292-234)
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.857] [INFO    ] [bot.lobby]      Mega Roulette: ID confirmado (1hl65ce1lxuqdrkr-204)
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.857] [INFO    ] [bot.lobby]      Brazilian Roulette: ID confirmado (rwbrzportrwa16rg-237)
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.858] [INFO    ] [bot.lobby]      Roulette 1: ID confirmado (g03y1t9vvuhrfytl-227)
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.858] [INFO    ] [bot.lobby]      Roulette 3: ID confirmado (chroma229rwltr22-230)
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.858] [INFO    ] [bot.lobby]      Roulette Macao: ID confirmado (yqpz3ichst2xg439-206)
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.858] [INFO    ] [bot.lobby]      Roulette 2 Extra Time: ID confirmado (5kvxlw4c1qm3xcyn-201)
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.901] [INFO    ] [bot.lobby]      Brazilian Mega Roulette: ID confirmado (mrbras531mrbr532-287)
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.901] [INFO    ] [bot.lobby]      Lucky 6 Roulette: ID confirmado (lucky6roulettea3-211a1)
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.901] [INFO    ] [bot.lobby]      Auto Roulette: ID confirmado (5bzl2835s5ruvweg-225)
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.901] [INFO    ] [bot.lobby]      Stake Roulette: ID confirmado (rw321stakerws321-236)
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.902] [INFO    ] [bot.lobby]      Turkish Roulette: ID confirmado (p8l1j84prrmxzyic-224)
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.902] [INFO    ] [bot.lobby]      German Roulette: ID confirmado (s2x6b4jdeqza2ge2-222)
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.902] [INFO    ] [bot.lobby]      Romanian Roulette: ID confirmado (romania233rwl291-233)
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.902] [INFO    ] [bot.lobby]      Roulette Italia Tricolore: ID confirmado (v1c52fgw7yy02upz-223)
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.902] [INFO    ] [bot.lobby]      Russian Roulette: ID confirmado (t4jzencinod6iqwi-221)
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.902] [INFO    ] [bot.lobby]      Gates of Olympus Roulette: ID confirmado (gatesofolympus01-2244)
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.902] [INFO    ] [bot.lobby]      Turkish Mega Roulette: ID confirmado (megar0ul3tt3trk1-208)
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.902] [INFO    ] [bot.lobby]      Mega Roulette 3000: ID confirmado (megaroulette3k01-2901)
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:10:59.902] [INFO    ] [bot.lobby] Mapeo completado. 19/19 mesas emparejadas.
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:11:00.010] [INFO    ] [bot.scanner] 📡 Comienza escaneo continuo...
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:11:00.564] [WARNING ] [bot.scanner] ⚠️ Ruleta Latina: CADENA ROTA (sin empalme de 4+).
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > -06-10 00:11:00.564] [INFO    ] [bot.scanner] 🔥 Ruleta Latina: Nuevos -> [-1, 3, 0, 22, 32, 2, 26, 34, 23, 28, 5, 12, 13, 13, 0, 10, 19, 23, 11, 9, 2]
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:11:01.169] [WARNING ] [bot.scanner] ⚠️ Mega Roulette: CADENA ROTA (sin empalme de 4+).
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > 6-10 00:11:01.169] [INFO    ] [bot.scanner] 🔥 Mega Roulette: Nuevos -> [-1, 23, 14, 22, 28, 8, 28, 26, 18, 30, 27, 3, 32, 19, 36, 25, 24, 25, 8, 5, 2]
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:11:01.775] [WARNING ] [bot.scanner] ⚠️ Brazilian Roulette: CADENA ROTA (sin empalme de 4+).
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > 10 00:11:01.775] [INFO    ] [bot.scanner] 🔥 Brazilian Roulette: Nuevos -> [-1, 22, 9, 6, 7, 22, 9, 33, 6, 28, 31, 15, 0, 5, 18, 5, 15, 33, 21, 34, 28]
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:11:02.362] [WARNING ] [bot.scanner] ⚠️ Roulette 1: CADENA ROTA (sin empalme de 4+).
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > 6-06-10 00:11:02.362] [INFO    ] [bot.scanner] 🔥 Roulette 1: Nuevos -> [-1, 7, 26, 19, 25, 23, 9, 13, 15, 25, 5, 33, 0, 27, 23, 20, 7, 23, 22, 24, 18]
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:11:02.952] [WARNING ] [bot.scanner] ⚠️ Roulette 3: CADENA ROTA (sin empalme de 4+).
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > -06-10 00:11:02.953] [INFO    ] [bot.scanner] 🔥 Roulette 3: Nuevos -> [-1, 20, 3, 7, 32, 12, 21, 20, 10, 19, 28, 26, 0, 20, 36, 23, 11, 26, 21, 2, 19]
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:11:03.557] [WARNING ] [bot.scanner] ⚠️ Roulette Macao: CADENA ROTA (sin empalme de 4+).
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > 0 00:11:03.557] [INFO    ] [bot.scanner] 🔥 Roulette Macao: Nuevos -> [-1, 35, 36, 29, 34, 28, 17, 18, 14, 4, 31, 33, 11, 35, 33, 16, 28, 34, 1, 0, 17]
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:11:04.174] [WARNING ] [bot.scanner] ⚠️ Roulette 2 Extra Time: CADENA ROTA (sin empalme de 4+).
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > 1:04.174] [INFO    ] [bot.scanner] 🔥 Roulette 2 Extra Time: Nuevos -> [-1, 26, 29, 2, 18, 25, 2, 35, 29, 32, 29, 9, 27, 35, 19, 8, 23, 33, 18, 14, 30]
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:11:04.770] [WARNING ] [bot.scanner] ⚠️ Brazilian Mega Roulette: CADENA ROTA (sin empalme de 4+).
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > 1:04.771] [INFO    ] [bot.scanner] 🔥 Brazilian Mega Roulette: Nuevos -> [-1, 23, 16, 8, 8, 29, 15, 4, 24, 5, 31, 36, 13, 10, 21, 24, 12, 9, 26, 19, 7]
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:11:05.366] [WARNING ] [bot.scanner] ⚠️ Lucky 6 Roulette: CADENA ROTA (sin empalme de 4+).
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > 06-10 00:11:05.366] [INFO    ] [bot.scanner] 🔥 Lucky 6 Roulette: Nuevos -> [-1, 9, 4, 19, 32, 18, 2, 23, 14, 5, 17, 26, 11, 5, 7, 8, 7, 30, 9, 34, 34]
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:11:05.976] [WARNING ] [bot.scanner] ⚠️ Auto Roulette: CADENA ROTA (sin empalme de 4+).
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > 6-10 00:11:05.976] [INFO    ] [bot.scanner] 🔥 Auto Roulette: Nuevos -> [-1, 0, 30, 17, 1, 23, 2, 22, 27, 31, 35, 32, 20, 5, 26, 24, 2, 31, 28, 30, 22]
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:11:06.574] [WARNING ] [bot.scanner] ⚠️ Stake Roulette: CADENA ROTA (sin empalme de 4+).
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > 0:11:06.574] [INFO    ] [bot.scanner] 🔥 Stake Roulette: Nuevos -> [-1, 33, 26, 35, 29, 11, 32, 29, 10, 1, 32, 27, 31, 6, 24, 27, 2, 14, 12, 0, 30, 14]
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:11:07.164] [WARNING ] [bot.scanner] ⚠️ Turkish Roulette: CADENA ROTA (sin empalme de 4+).
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > -10 00:11:07.164] [INFO    ] [bot.scanner] 🔥 Turkish Roulette: Nuevos -> [-1, 4, 29, 15, 5, 7, 34, 5, 19, 9, 19, 8, 25, 16, 9, 28, 26, 26, 31, 24, 14]
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:11:07.743] [WARNING ] [bot.scanner] ⚠️ German Roulette: CADENA ROTA (sin empalme de 4+).
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > -10 00:11:07.743] [INFO    ] [bot.scanner] 🔥 German Roulette: Nuevos -> [-1, 34, 35, 31, 0, 27, 0, 6, 29, 2, 3, 14, 32, 13, 4, 30, 27, 30, 23, 26, 23]
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:11:08.342] [WARNING ] [bot.scanner] ⚠️ Romanian Roulette: CADENA ROTA (sin empalme de 4+).
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > 00:11:08.342] [INFO    ] [bot.scanner] 🔥 Romanian Roulette: Nuevos -> [-1, 26, 6, 31, 28, 27, 30, 10, 2, 21, 29, 21, 31, 35, 32, 34, 10, 7, 19, 15, 3]
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:11:08.930] [WARNING ] [bot.scanner] ⚠️ Roulette Italia Tricolore: CADENA ROTA (sin empalme de 4+).
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > 08.930] [INFO    ] [bot.scanner] 🔥 Roulette Italia Tricolore: Nuevos -> [-1, 25, 32, 2, 11, 8, 19, 8, 29, 21, 0, 26, 19, 14, 31, 34, 0, 21, 22, 13, 2]
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:11:09.537] [WARNING ] [bot.scanner] ⚠️ Russian Roulette: CADENA ROTA (sin empalme de 4+).
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > 10 00:11:09.537] [INFO    ] [bot.scanner] 🔥 Russian Roulette: Nuevos -> [-1, 0, 0, 33, 22, 34, 1, 21, 32, 13, 34, 23, 9, 12, 16, 2, 7, 34, 34, 28, 32]
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:11:10.153] [WARNING ] [bot.scanner] ⚠️ Gates of Olympus Roulette: CADENA ROTA (sin empalme de 4+).
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > 153] [INFO    ] [bot.scanner] 🔥 Gates of Olympus Roulette: Nuevos -> [-1, 10, 18, 36, 32, 6, 17, 27, 10, 3, 18, 31, 21, 36, 33, 31, 20, 5, 33, 10, 24]
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:11:10.734] [WARNING ] [bot.scanner] ⚠️ Turkish Mega Roulette: CADENA ROTA (sin empalme de 4+).
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > :10.735] [INFO    ] [bot.scanner] 🔥 Turkish Mega Roulette: Nuevos -> [-1, 13, 28, 24, 10, 20, 34, 34, 10, 7, 35, 27, 19, 30, 18, 36, 4, 1, 17, 20, 10]
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:11:11.422] [WARNING ] [bot.scanner] ⚠️ Mega Roulette 3000: CADENA ROTA (sin empalme de 4+).
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > :11:11.423] [INFO    ] [bot.scanner] 🔥 Mega Roulette 3000: Nuevos -> [-1, 8, 35, 27, 25, 31, 14, 15, 31, 35, 6, 16, 24, 14, 18, 34, 21, 9, 36, 26, 27]
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > 📡 Escaneando... [00:11:11][2026-06-10 00:11:14.622] [INFO    ] [bot.scanner] 🔥 Roulette 3: Nuevos -> [14]
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:11:18.879] [INFO    ] [bot.scanner] 🔥 German Roulette: Nuevos -> [0]
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)
+=========================================================
+              🎰 ROULETTE SNIPER BOT 🎰
+=========================================================
+ 🏠 Dashboard Local: http://127.0.0.1:5050
+ 🌍 Acceso Remoto:   https://cached-carries-announce-quest.trycloudflare.com
+=========================================================
+ 🗂️  [2026-06-10 00:10:33.463] [INFO    ] [bot.lobby]    Encontrados 31 tiles totales. Escaneando uno por uno...
+=========================================================
+
+ ⚡ [ ESTADO ACTUAL DEL BOT ] ⚡
+
+ > [2026-06-10 00:11:19.427] [INFO    ] [bot.scanner] 🔥 Romanian Roulette: Nuevos -> [12]
+
+=========================================================
+ (Presiona Ctrl+C para apagar todo)

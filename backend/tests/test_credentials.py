@@ -91,7 +91,7 @@ class TestThresholds:
     def test_number_delay_threshold_default(self):
         from backend.roulette.thresholds import get_number_delay_threshold
         result = get_number_delay_threshold()
-        assert result == 20
+        assert result == 70
 
     def test_threshold_runtime_override(self):
         from backend.auth.credentials import _runtime_overrides
