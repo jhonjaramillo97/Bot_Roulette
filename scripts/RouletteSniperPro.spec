@@ -4,7 +4,7 @@ from PyInstaller.utils.hooks import collect_submodules
 from PyInstaller.utils.hooks import collect_all
 from PyInstaller.utils.hooks import copy_metadata
 
-datas = [('C:\\Users\\Bairon Jaramillo\\Documents\\bot_stake\\Bot_Stake_Recolector\\scripts\\..\\backend\\assets\\icon.ico', '.'), ('C:\\Users\\Bairon Jaramillo\\Documents\\bot_stake\\Bot_Stake_Recolector\\scripts\\..\\backend\\dashboard\\static', 'backend/dashboard/static'), ('C:\\Users\\Bairon Jaramillo\\Documents\\bot_stake\\Bot_Stake_Recolector\\venv\\Lib\\site-packages\\customtkinter', 'customtkinter')]
+datas = [('C:\\Users\\Bairon Jaramillo\\Documents\\bot_stake\\Bot_Stake_Recolector\\scripts\\..\\backend\\assets\\icon.ico', '.'), ('C:\\Users\\Bairon Jaramillo\\Documents\\bot_stake\\Bot_Stake_Recolector\\scripts\\..\\backend\\dashboard\\static', 'dashboard/static'), ('C:\\Users\\Bairon Jaramillo\\Documents\\bot_stake\\Bot_Stake_Recolector\\venv\\Lib\\site-packages\\customtkinter', 'customtkinter')]
 binaries = []
 hiddenimports = ['undetected_chromedriver', 'selenium', 'PIL', 'urllib', 'tkinter', 'waitress']
 datas += collect_data_files('selenium')

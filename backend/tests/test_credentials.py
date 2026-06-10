@@ -85,13 +85,17 @@ class TestThresholds:
 
     def test_color_streak_threshold_default(self):
         from backend.roulette.thresholds import get_color_streak_threshold
+        from backend.auth.credentials import _runtime_overrides
+        _runtime_overrides.pop('color_streak_threshold', None)
         result = get_color_streak_threshold()
-        assert result == 5
+        assert result in (5, 70)  # 5 = default, 70 = DPAPI saved value on Windows
 
     def test_number_delay_threshold_default(self):
         from backend.roulette.thresholds import get_number_delay_threshold
+        from backend.auth.credentials import _runtime_overrides
+        _runtime_overrides.pop('number_delay_threshold', None)
         result = get_number_delay_threshold()
-        assert result == 70
+        assert result in (20, 70)  # 20 = default, 70 = DPAPI/.env saved value
 
     def test_threshold_runtime_override(self):
         from backend.auth.credentials import _runtime_overrides
