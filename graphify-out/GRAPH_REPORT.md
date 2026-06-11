@@ -1,16 +1,16 @@
 # Graph Report - Bot_Stake_Recolector  (2026-06-10)
 
 ## Corpus Check
-- 81 files · ~46,851 words
+- 81 files · ~46,928 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1927 nodes · 4861 edges · 112 communities (88 shown, 24 thin omitted)
-- Extraction: 88% EXTRACTED · 12% INFERRED · 0% AMBIGUOUS · INFERRED: 590 edges (avg confidence: 0.8)
+- 1932 nodes · 4867 edges · 111 communities (90 shown, 21 thin omitted)
+- Extraction: 88% EXTRACTED · 12% INFERRED · 0% AMBIGUOUS · INFERRED: 591 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `2d5d6ee8`
+- Built from commit: `1289eeb4`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -42,7 +42,6 @@
 - [[_COMMUNITY_Community 29|Community 29]]
 - [[_COMMUNITY_Community 30|Community 30]]
 - [[_COMMUNITY_Community 31|Community 31]]
-- [[_COMMUNITY_Community 32|Community 32]]
 - [[_COMMUNITY_Community 33|Community 33]]
 - [[_COMMUNITY_Community 34|Community 34]]
 - [[_COMMUNITY_Community 35|Community 35]]
@@ -147,7 +146,7 @@
 ## Import Cycles
 - 1-file cycle: `bot_ruleta/gui_app.py -> bot_ruleta/gui_app.py`
 
-## Communities (112 total, 24 thin omitted)
+## Communities (111 total, 21 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.36
@@ -155,23 +154,23 @@ Nodes (11): api_request(), build_executable(), create_release(), delete_release(
 
 ### Community 1 - "Community 1"
 Cohesion: 0.10
-Nodes (33): sync_backtest(), sync_color_backtest(), sync_number_backtest(), get_color_streak_threshold(), get_number_delay_threshold(), Umbrales de alerta para rachas de color y retrasos de números. Separado de conf, Lee el umbral de racha de color. Prioridad: runtime overrides > GUI saved > .env, Lee el umbral de retraso de números individuales. Prioridad: runtime overrides > (+25 more)
+Nodes (34): Motores de sincronizacion incremental de backtests. Extraido de db.py/logic.py, sync_backtest(), sync_color_backtest(), sync_number_backtest(), get_color_streak_threshold(), get_number_delay_threshold(), Umbrales de alerta para rachas de color y retrasos de números. Separado de conf, Lee el umbral de racha de color. Prioridad: runtime overrides > GUI saved > .env (+26 more)
 
 ### Community 2 - "Community 2"
 Cohesion: 0.06
 Nodes (54): ah(), ap(), bh(), bm(), ch(), clamp(), cp(), cv() (+46 more)
 
 ### Community 3 - "Community 3"
-Cohesion: 0.07
-Nodes (33): Configuracion centralizada del bot de ruleta. Constantes, configuracion de mesa, Punto de entrada de la GUI — compatible con PyInstaller. La implementacion esta, clear_screen(), cloudflared_watchdog(), Dibuja la consola limpia y minimalista, Actualiza el URL del tunel: variable global, Telegram, UI., Hilo permanente que mantiene cloudflared vivo y actualiza la consola., Lee la salida del bot y actualiza la consola minimalista (+25 more)
+Cohesion: 0.21
+Nodes (12): Punto de entrada de la GUI — compatible con PyInstaller. La implementacion esta, Cliente de Telegram Bot API. Extraido de logic.py para separar el envio de mens, notify_tunnel_url(), Gestion del tunel Cloudflare compartido entre GUI y CLI. Unifica cloudflared_wa, Inicia un proceso cloudflared y retorna el proceso., Envia notificacion por Telegram cuando el URL del tunel se establece o cambia., Mantiene un tunel cloudflared vivo con auto-reinicio.      Args:         on_u, run_tunnel() (+4 more)
 
 ### Community 5 - "Community 5"
-Cohesion: 0.12
-Nodes (19): clear_table(), get_connection(), get_last_number(), get_last_numbers(), int, str, Guarda un resultado en la tabla especifica del juego., Obtiene el ultimo numero registrado en la tabla del juego. (+11 more)
+Cohesion: 0.10
+Nodes (23): clear_table(), get_last_number(), get_last_numbers(), init_db(), int, str, Manejo de base de datos SQLite con tablas separadas por juego., Guarda un resultado en la tabla especifica del juego. (+15 more)
 
 ### Community 6 - "Community 6"
-Cohesion: 0.33
-Nodes (4): attach_gui_queue(), _GUIQueueHandler, Conecta una Queue al logger para que la GUI reciba los logs.     Llamar una sola, Handler que envía logs a una Queue para que la GUI los lea.
+Cohesion: 0.15
+Nodes (17): check_and_notify(), check_and_notify_color(), check_and_notify_number(), Any, int, str, Envía mensaje raw a Telegram., Si la racha de color supera el umbral, envía notificación a Telegram.     Usa c (+9 more)
 
 ### Community 7 - "Community 7"
 Cohesion: 0.43
@@ -182,12 +181,12 @@ Cohesion: 0.08
 Nodes (26): addAngleAxis(), addRadiusAxis(), be(), ec(), Eo(), F(), Fb(), Gn() (+18 more)
 
 ### Community 9 - "Community 9"
-Cohesion: 0.08
-Nodes (11): _BacktestSyncEngine, _ColorBacktestSync, _NumberBacktestSync, Motor de sincronización incremental compartido por todos los backtests.      M, Sincroniza eventos de retraso de docenas y columnas., Sincroniza eventos de rachas de rojos/negros consecutivos., Sincroniza eventos de retraso de números individuales (0-36)., sync_backtest() (+3 more)
+Cohesion: 0.09
+Nodes (14): get_connection(), Retorna la conexion persistente a la BD (inicializa con WAL si es necesario)., _BacktestSyncEngine, _ColorBacktestSync, _NumberBacktestSync, Motor de sincronización incremental compartido por todos los backtests.      M, Sincroniza eventos de retraso de docenas y columnas., Sincroniza eventos de rachas de rojos/negros consecutivos. (+6 more)
 
 ### Community 15 - "Community 15"
-Cohesion: 0.19
-Nodes (13): get_chrome_major_version(), _hide_chrome_window(), login_stake(), Configuración y creación del WebDriver + flujo de login., Oculta la ventana de Chrome de la barra de tareas y la mueve fuera de la pantall, Detecta la versión principal de Chrome instalada para evitar mismatch., Navega al lobby y ejecuta el flujo de login., Configura y retorna (driver, wait). (+5 more)
+Cohesion: 0.50
+Nodes (3): human_type(), Funciones auxiliares puras: escritura simulada, persistencia CSV., Escribe texto con retardos aleatorios para simular humano.
 
 ### Community 16 - "Community 16"
 Cohesion: 0.15
@@ -195,11 +194,19 @@ Nodes (11): compute_color_streak(), Calcula la racha actual de un color (Rojo o 
 
 ### Community 17 - "Community 17"
 Cohesion: 0.07
-Nodes (58): Any, init_db(), Inicializa la base de datos creando las tablas configuradas., capture_screenshot(), _cleanup_old_crash_reports(), _cleanup_old_screenshots(), generate_crash_report(), get_logger() (+50 more)
+Nodes (55): Configuracion centralizada del bot de ruleta. Constantes, configuracion de mesa, capture_screenshot(), _cleanup_old_crash_reports(), _cleanup_old_screenshots(), generate_crash_report(), get_logger(), Sistema de Diagnóstico Forense — re-exportador. La implementación está en el pa, Toma un screenshot del navegador y opcionalmente guarda el HTML source.      Arg (+47 more)
 
 ### Community 18 - "Community 18"
 Cohesion: 0.08
 Nodes (30): aA(), ak(), dk(), Du(), ea(), Ek(), fk(), g() (+22 more)
+
+### Community 19 - "Community 19"
+Cohesion: 0.05
+Nodes (23): check_for_updates(), _cleanup_old_versions(), _get_asset_download_url(), _get_download_url(), perform_update(), Downloads the new versioned executable and spawns a bat file to replace the curr, Downloads the new versioned executable and spawns a bat file to replace the curr, Genera la URL de descarga para una versión específica. (+15 more)
+
+### Community 20 - "Community 20"
+Cohesion: 0.08
+Nodes (14): attach_gui_queue(), _GUIQueueHandler, Conecta una Queue al logger para que la GUI reciba los logs.     Llamar una sola, Activa o desactiva las capturas de pantalla de diagnóstico rutinarias., Handler que envía logs a una Queue para que la GUI los lea., set_diagnostics(), DashboardScreen, LoadingScreen (+6 more)
 
 ### Community 21 - "Community 21"
 Cohesion: 0.18
@@ -218,28 +225,24 @@ Cohesion: 0.16
 Nodes (15): bC(), Co(), defineProperty(), ex(), ge(), Me(), Oc(), So() (+7 more)
 
 ### Community 26 - "Community 26"
-Cohesion: 0.17
-Nodes (12): _chain_match_and_save(), extract_nums_js(), _get_color(), str, Escanea todas las mesas mapeadas. Retorna cuantas tuvieron exito., Escanea una mesa. Retorna True si encontró números y los procesó., Chain matching robusto + guardado en DB. Retorna los números nuevos., Envía alertas de delay, color y números a Telegram. (+4 more)
+Cohesion: 0.11
+Nodes (20): _chain_match_and_save(), _check_session_expiry(), extract_nums_js(), _get_color(), _handle_zero_tiles(), str, Loop infinito de escaneo de tiles., Simula movimiento de mouse JS para evitar desconexión de Pragmatic. (+12 more)
 
 ### Community 27 - "Community 27"
 Cohesion: 0.11
 Nodes (20): bp(), dm(), fm(), Gm(), gp(), hm(), hp(), Im() (+12 more)
 
 ### Community 28 - "Community 28"
-Cohesion: 0.22
-Nodes (5): LoadingScreen, LoginScreen, PrerequisitesScreen, Resuelve rutas de archivos empaquetados (PyInstaller) o de desarrollo., resource_path()
+Cohesion: 0.17
+Nodes (8): Envia mensaje raw a Telegram., Envia mensaje raw a Telegram., send_telegram_msg(), get_cf_env_vars(), Retorna (token, dominio) de Cloudflare.     Prioridad: CLOUDFLARE_TOKEN env > t, Tests para telegram.py y tunnel.py: envio de mensajes y gestion de Cloudflare., TestSendTelegramMsg, TestTunnel
 
 ### Community 29 - "Community 29"
-Cohesion: 0.17
-Nodes (10): UpdateScreen, _cleanup_old_versions(), _get_download_url(), perform_update(), Downloads the new versioned executable and spawns a bat file to replace the curr, Genera la URL de descarga para una versión específica., Genera la URL de descarga para una version especifica., Limpia archivos de actualizaciones anteriores (.old, .update, versiones viejas). (+2 more)
+Cohesion: 0.25
+Nodes (9): clear_screen(), cloudflared_watchdog(), Dibuja la consola limpia y minimalista, Actualiza el URL del tunel: variable global, Telegram, UI., Hilo permanente que mantiene cloudflared vivo y actualiza la consola., Lee la salida del bot y actualiza la consola minimalista, render_ui(), track_bot() (+1 more)
 
-### Community 30 - "Community 30"
-Cohesion: 0.22
-Nodes (5): check_for_updates(), Checks GitHub for updates in a background thread.     Calls callback(new_versio, Checks GitHub for updates in a background thread.     Calls callback(new_versio, PrerequisitesScreen, UpdateScreen
-
-### Community 32 - "Community 32"
-Cohesion: 0.27
-Nodes (4): Valida que un nombre de tabla sea seguro y exista en la configuracion.     Lanz, validate_table_name(), Tests para db.py: validador de tablas y operaciones CRUD., TestValidateTableName
+### Community 31 - "Community 31"
+Cohesion: 0.40
+Nodes (4): Any, Any, Loop supervisor que asegura que el bot se reinicie si falla.          Args:, run_bot()
 
 ### Community 33 - "Community 33"
 Cohesion: 0.25
@@ -366,8 +369,8 @@ Cohesion: 0.29
 Nodes (8): ei(), fetch(), invalidate(), #l(), re(), reset(), setData(), setState()
 
 ### Community 69 - "Community 69"
-Cohesion: 0.15
-Nodes (5): _BacktestSyncEngine, _NumberBacktestSync, Motores de sincronizacion incremental de backtests. Extraido de db.py/logic.py, Motor de sincronizacion incremental compartido por todos los backtests.      M, Sincroniza eventos de retraso de numeros individuales (0-36).
+Cohesion: 0.17
+Nodes (4): _BacktestSyncEngine, _NumberBacktestSync, Motor de sincronizacion incremental compartido por todos los backtests.      M, Sincroniza eventos de retraso de numeros individuales (0-36).
 
 ### Community 70 - "Community 70"
 Cohesion: 0.11
@@ -418,8 +421,12 @@ Cohesion: 0.12
 Nodes (7): _ColorBacktestSync, Sincroniza eventos de retraso de docenas y columnas., Sincroniza eventos de rachas de rojos/negros consecutivos., _ZoneBacktestSync, Tests para backtest.py: motores de sincronizacion incremental. Usa SQLite en me, Un gap de mas de 30 minutos entre filas debe romper la cadena y reiniciar delays, TestBacktestSync
 
 ### Community 92 - "Community 92"
-Cohesion: 0.07
-Nodes (36): bool, Manejo de base de datos SQLite con tablas separadas por juego., Activa o desactiva las capturas de pantalla de diagnóstico rutinarias., set_diagnostics(), int, str, str, int (+28 more)
+Cohesion: 0.10
+Nodes (27): bool, int, str, str, int, str, str, get_data_dir() (+19 more)
+
+### Community 94 - "Community 94"
+Cohesion: 0.13
+Nodes (7): cleanup(), get_base_dir(), is_frozen(), Directorio raiz del ejecutable (frozen) o del source (dev)., Tests para config.py y paths.py: constantes y resolucion de rutas., TestConfig, TestPaths
 
 ### Community 96 - "Community 96"
 Cohesion: 0.50
@@ -466,28 +473,28 @@ Cohesion: 0.20
 Nodes (3): clsx(), cn(), ZONE_LABELS
 
 ### Community 319 - "Community 319"
-Cohesion: 0.08
-Nodes (26): check_and_notify(), check_and_notify_color(), check_and_notify_number(), compute_delays(), Any, int, str, Calcula los delays de docenas y columnas dado una lista de números o diccionario (+18 more)
+Cohesion: 0.15
+Nodes (11): compute_delays(), Calcula los delays de docenas y columnas dado una lista de números o diccionario, Calcula los delays de docenas y columnas dado una lista de números o diccionario, Calcula los delays de docenas y columnas dado una lista de números o diccionario, Caso normal: cada numero cae en su docena y columna correcta.         La logica, Si todas las zonas ya salieron, los delays son las distancias al mas reciente., El marcador -1 detiene el conteo de delays., Los ceros (0) incrementan todos los delays sin romper la busqueda.         Con (+3 more)
 
 ## Knowledge Gaps
 - **126 isolated node(s):** `plugin`, `Connection`, `object`, `int`, `str` (+121 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **24 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **21 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `_()` connect `Community 36` to `Community 2`, `Community 135`, `Community 8`, `Community 18`, `Community 21`, `Community 22`, `Community 24`, `Community 27`, `Community 33`, `Community 34`, `Community 37`, `Community 38`, `Community 41`, `Community 43`, `Community 44`, `Community 45`, `Community 47`, `Community 49`, `Community 50`, `Community 54`, `Community 55`, `Community 56`, `Community 58`, `Community 59`, `Community 61`, `Community 62`, `Community 63`, `Community 65`, `Community 66`, `Community 67`, `Community 70`, `Community 72`, `Community 74`, `Community 76`, `Community 81`, `Community 82`, `Community 88`, `Community 89`, `Community 90`, `Community 93`, `Community 96`, `Community 97`, `Community 98`, `Community 235`, `Community 252`?**
-  _High betweenness centrality (0.208) - this node is a cross-community bridge._
+  _High betweenness centrality (0.210) - this node is a cross-community bridge._
 - **Why does `$()` connect `Community 76` to `Community 68`, `Community 36`, `Community 70`, `Community 71`, `Community 135`, `Community 235`, `Community 77`, `Community 79`, `Community 80`, `Community 81`, `Community 83`, `Community 152`, `Community 24`, `Community 252`, `Community 159`?**
-  _High betweenness centrality (0.169) - this node is a cross-community bridge._
+  _High betweenness centrality (0.170) - this node is a cross-community bridge._
 - **Why does `_()` connect `Community 135` to `Community 68`, `Community 36`, `Community 71`, `Community 73`, `Community 76`, `Community 151`, `Community 152`, `Community 153`, `Community 252`, `Community 157`, `Community 159`?**
-  _High betweenness centrality (0.093) - this node is a cross-community bridge._
+  _High betweenness centrality (0.097) - this node is a cross-community bridge._
 - **Are the 2 inferred relationships involving `$()` (e.g. with `dO()` and `So()`) actually correct?**
   _`$()` has 2 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `plugin`, `Motores de sincronizacion incremental de backtests. Extraido de db.py/logic.py`, `Motor de sincronizacion incremental compartido por todos los backtests.      M` to the rest of the system?**
-  _304 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _308 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 1` be split into smaller, more focused modules?**
-  _Cohesion score 0.09957325746799431 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09615384615384616 - nodes in this community are weakly interconnected._
 - **Should `Community 2` be split into smaller, more focused modules?**
   _Cohesion score 0.05520614954577219 - nodes in this community are weakly interconnected._

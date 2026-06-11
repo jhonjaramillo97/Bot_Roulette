@@ -28,7 +28,26 @@ if __name__ == "__main__":
         log_werkzeug.setLevel(logging.ERROR)
 
         from waitress import serve
-        serve(flask_app, host='0.0.0.0', port=5050, clear_untrusted_proxy_headers=False)
+        import subprocess, time as _time
+        for attempt in range(5):
+            try:
+                serve(flask_app, host='0.0.0.0', port=5050, clear_untrusted_proxy_headers=False)
+                break
+            except OSError as e:
+                if attempt < 4 and "10048" in str(e) or "Address already in use" in str(e):
+                    # Matar proceso que ocupa el puerto 5050
+                    try:
+                        out = subprocess.check_output('netstat -ano | findstr :5050', shell=True, text=True)
+                        for line in out.strip().split('\n'):
+                            parts = line.strip().split()
+                            if parts and 'LISTENING' in line:
+                                pid = parts[-1]
+                                subprocess.call(['taskkill', '/F', '/PID', pid], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                    except Exception:
+                        pass
+                    _time.sleep(5)
+                else:
+                    raise
         sys.exit(0)
 
     app = RouletteApp()
