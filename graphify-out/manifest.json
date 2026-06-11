@@ -40,8 +40,8 @@
     "semantic_hash": ""
   },
   "bot_ruleta/gui_app.py": {
-    "mtime": 1781120255.752342,
-    "ast_hash": "99cd76cab13865e741a5ba976f48cad9",
+    "mtime": 1781149378.5213242,
+    "ast_hash": "57bc441b35c0be578bfa1a690dc744de",
     "semantic_hash": ""
   },
   "bot_ruleta/helpers.py": {
@@ -55,8 +55,8 @@
     "semantic_hash": ""
   },
   "bot_ruleta/launcher.py": {
-    "mtime": 1781142951.128125,
-    "ast_hash": "f245adc80f5d0850b4426157a2ccb94a",
+    "mtime": 1781149378.5223238,
+    "ast_hash": "a6563264dc82d3b649484c30a959c443",
     "semantic_hash": ""
   },
   "bot_ruleta/lobby.py": {
@@ -85,8 +85,8 @@
     "semantic_hash": ""
   },
   "bot_ruleta/updater.py": {
-    "mtime": 1781143602.74139,
-    "ast_hash": "5fc63bfd29b7cef773a4535314c1b1af",
+    "mtime": 1781149389.3748038,
+    "ast_hash": "3c2506738bd19c2cf12df45427ae1f9d",
     "semantic_hash": ""
   },
   "install_ubuntu.sh": {
@@ -180,7 +180,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/tunnel.py": {
-    "mtime": 1781143602.7035735,
+    "mtime": 1781149389.345022,
     "ast_hash": "610dbb172b603cf81b40f3501e8a0191",
     "semantic_hash": ""
   },
