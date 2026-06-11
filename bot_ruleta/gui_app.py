@@ -22,6 +22,17 @@ if __name__ == "__main__":
         if getattr(sys, 'stderr', None) is None:
             sys.stderr = open(os.devnull, 'w')
 
+        # Asegurar que cloudflared este instalado
+        import subprocess as _sp
+        try:
+            _sp.check_output(['cloudflared', '--version'], stderr=_sp.STDOUT, creationflags=0x08000000 if os.name == 'nt' else 0)
+        except (FileNotFoundError, _sp.CalledProcessError):
+            try:
+                _sp.check_call(['winget', 'install', 'Cloudflare.cloudflared', '--accept-source-agreements', '--accept-package-agreements'],
+                              creationflags=0x08000000 if os.name == 'nt' else 0)
+            except Exception:
+                pass
+
         from bot_ruleta.dashboard.app import app as flask_app
         import logging
         log_werkzeug = logging.getLogger('werkzeug')

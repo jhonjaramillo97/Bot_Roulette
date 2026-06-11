@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from "react"
 import { Link, useLocation } from "react-router-dom"
-import { Activity, BarChart3, LayoutGrid, List, Filter, Eye, ChevronDown, SlidersHorizontal } from "lucide-react"
+import { Activity, BarChart3, LayoutGrid, List, Filter, Eye, ChevronDown, SlidersHorizontal, Link2, Copy, Check } from "lucide-react"
 import { Button } from "@/components/ui/shadcn"
-import { useOverview } from "@/hooks/useApi"
+import { useOverview, useTunnel } from "@/hooks/useApi"
 import { useDashboard } from "@/lib/DashboardContext"
 import { cn, playClickSound } from "@/lib/utils"
 
@@ -234,8 +234,19 @@ function ThresholdDropdown() {
 export function AppHeader() {
   const location = useLocation()
   const { data } = useOverview()
+  const { data: tunnelData } = useTunnel()
   const { viewMode, setViewMode, filterSignals, setFilterSignals } = useDashboard()
   const isOverview = location.pathname === "/"
+  const [copied, setCopied] = useState(false)
+
+  const tunnelUrl = tunnelData?.url
+  const copyTunnel = () => {
+    if (tunnelUrl) {
+      navigator.clipboard.writeText(tunnelUrl).catch(() => {})
+      setCopied(true)
+      setTimeout(() => setCopied(false), 1500)
+    }
+  }
 
   const links = [
     { to: "/", label: "Overview", icon: LayoutGrid },
@@ -252,6 +263,21 @@ export function AppHeader() {
             {data?.tables ? `${data.tables.length} mesas` : "Conectando…"}
           </span>
         </div>
+        {tunnelUrl && (
+          <div className="hidden sm:flex items-center gap-1">
+            <Link2 className="h-3 w-3 text-safe" aria-hidden="true" />
+            <button
+              onClick={copyTunnel}
+              className="text-xs text-text-muted hover:text-accent transition-colors truncate max-w-[180px]"
+              title="Click para copiar el enlace del tunel"
+            >
+              {tunnelUrl.replace("https://", "").split(".trycloudflare")[0] + ".trycloudflare.com"}
+            </button>
+            <button onClick={copyTunnel} className="text-text-muted hover:text-accent transition-colors" title="Copiar enlace">
+              {copied ? <Check className="h-3 w-3 text-safe" /> : <Copy className="h-3 w-3" />}
+            </button>
+          </div>
+        )}
       </div>
 
       <nav className="flex items-center gap-1">

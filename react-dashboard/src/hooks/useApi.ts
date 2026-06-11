@@ -76,3 +76,12 @@ export function useSignalDetail(table: string, start: string, end: string, pico:
     enabled: !!table && pico > 0,
   })
 }
+
+export function useTunnel() {
+  return useQuery({
+    queryKey: ["tunnel"],
+    queryFn: api.tunnel,
+    refetchInterval: 10_000,
+    staleTime: 5_000,
+  })
+}
