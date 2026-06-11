@@ -55,8 +55,8 @@
     "semantic_hash": ""
   },
   "bot_ruleta/launcher.py": {
-    "mtime": 1781120255.7553444,
-    "ast_hash": "0bcdaedca34be8520314bee4650a6563",
+    "mtime": 1781142951.128125,
+    "ast_hash": "f245adc80f5d0850b4426157a2ccb94a",
     "semantic_hash": ""
   },
   "bot_ruleta/lobby.py": {
@@ -85,8 +85,8 @@
     "semantic_hash": ""
   },
   "bot_ruleta/updater.py": {
-    "mtime": 1781131099.4048107,
-    "ast_hash": "44030df82549cda43cd3b780924c3a6a",
+    "mtime": 1781142963.3291368,
+    "ast_hash": "df10aa11f4c7f0a01732195eb379b196",
     "semantic_hash": ""
   },
   "install_ubuntu.sh": {
@@ -180,7 +180,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/tunnel.py": {
-    "mtime": 1781131099.3418858,
+    "mtime": 1781142963.294303,
     "ast_hash": "610dbb172b603cf81b40f3501e8a0191",
     "semantic_hash": ""
   },
@@ -250,7 +250,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/rolldown-runtime-QTnfLwEv.js": {
-    "mtime": 1781130444.3668475,
+    "mtime": 1781142980.4882028,
     "ast_hash": "0b9fa1f21df87441aa366e428d1ebb49",
     "semantic_hash": ""
   },
@@ -385,7 +385,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/query-BPe0xBFE.js": {
-    "mtime": 1781130443.2899697,
+    "mtime": 1781142979.345058,
     "ast_hash": "04faa70bf0cdaeaa34d0fc73933f2336",
     "semantic_hash": ""
   },
@@ -400,7 +400,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/recharts-_PnXljkz.js": {
-    "mtime": 1781130444.3252132,
+    "mtime": 1781142980.458318,
     "ast_hash": "e8baacc3f66b9f1f0110fe204745ffcf",
     "semantic_hash": ""
   },
@@ -420,7 +420,7 @@
     "semantic_hash": ""
   },
   "bot_ruleta/dashboard/static/assets/index-BN1VDvLw.js": {
-    "mtime": 1781130443.1698358,
+    "mtime": 1781142979.2391748,
     "ast_hash": "50c9f72e7492f0a07429f4fd9e9befd2",
     "semantic_hash": ""
   }

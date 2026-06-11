@@ -10,7 +10,7 @@ from bot_ruleta.paths import is_frozen
 
 log = logging.getLogger("bot")
 
-CURRENT_VERSION = "4.0.2"
+CURRENT_VERSION = "4.0.3"
 # Usamos la API de GitHub en lugar de raw.githubusercontent.com para mayor fiabilidad
 VERSION_URL = "https://api.github.com/repos/jhonjaramillo97/Bot_Roulette/contents/version.txt"
 
@@ -21,6 +21,22 @@ _GITHUB_TOKEN = ""
 def _get_download_url(version):
     """Genera la URL de descarga para una version especifica."""
     return f"https://github.com/jhonjaramillo97/Bot_Roulette/releases/download/v{version}/RouletteSniperPro_v{version}.exe"
+
+
+def _get_asset_download_url(version):
+    """Obtiene la URL de descarga del asset via API (funciona en repos privados)."""
+    import json
+    url = f"https://api.github.com/repos/jhonjaramillo97/Bot_Roulette/releases/tags/v{version}"
+    headers = {'Accept': 'application/vnd.github+json', 'User-Agent': 'RouletteSniper-Updater'}
+    if _GITHUB_TOKEN:
+        headers['Authorization'] = f'Bearer {_GITHUB_TOKEN}'
+    req = urllib.request.Request(url, headers=headers)
+    with urllib.request.urlopen(req, timeout=10) as resp:
+        release = json.loads(resp.read().decode())
+    for asset in release.get('assets', []):
+        if asset['name'].endswith('.exe'):
+            return asset['url']
+    raise Exception(f"No se encontro el asset .exe en la release v{version}")
 
 def check_for_updates(callback):
     """
@@ -122,10 +138,12 @@ def perform_update(new_version, progress_callback, completion_callback):
             _cleanup_old_versions(update_dir, keep_exe=current_exe)
             
             # 2. Descargar nueva versión con nombre versionado
-            download_url = _get_download_url(new_version)
-            log.info(f"📥 Descargando v{new_version} desde {download_url}...")
+            # Usar API de GitHub (sin redirects que borran el token en repos privados)
+            api_url = _get_asset_download_url(new_version)
+            log.info(f"📥 Descargando v{new_version} via API...")
             
-            req = urllib.request.Request(download_url)
+            req = urllib.request.Request(api_url)
+            req.add_header('Accept', 'application/octet-stream')
             if _GITHUB_TOKEN:
                 req.add_header('Authorization', f'Bearer {_GITHUB_TOKEN}')
             
@@ -227,6 +245,8 @@ start "" "{current_exe}"
             
         except Exception as e:
             log.error(f"Error durante la actualizacion: {e}")
-            completion_callback(False, "Error interno durante la actualizacion. Revisa los logs.")
+            import traceback
+            log.error(traceback.format_exc())
+            completion_callback(False, f"Error: {str(e)[:100]}")
             
     threading.Thread(target=_update, daemon=True).start()
