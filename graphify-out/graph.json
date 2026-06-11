@@ -54,7 +54,7 @@
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L1",
       "id": "bot_ruleta_backtest",
-      "community": 69,
+      "community": 1,
       "norm_label": "backtest.py"
     },
     {
@@ -342,7 +342,7 @@
       "source_file": "bot_ruleta/backtest.py",
       "source_location": "L1",
       "id": "bot_ruleta_backtest_rationale_1",
-      "community": 69,
+      "community": 1,
       "norm_label": "motores de sincronizacion incremental de backtests. extraido de db.py/logic.py"
     },
     {
@@ -387,7 +387,7 @@
       "source_file": "bot_ruleta/config.py",
       "source_location": "L1",
       "id": "bot_ruleta_config",
-      "community": 3,
+      "community": 17,
       "norm_label": "config.py"
     },
     {
@@ -396,7 +396,7 @@
       "source_file": "bot_ruleta/config.py",
       "source_location": "L1",
       "id": "bot_ruleta_config_rationale_1",
-      "community": 3,
+      "community": 17,
       "norm_label": "configuracion centralizada del bot de ruleta. constantes, configuracion de mesa"
     },
     {
@@ -10440,7 +10440,7 @@
       "source_file": "bot_ruleta/db.py",
       "source_location": "L1",
       "id": "bot_ruleta_db",
-      "community": 92,
+      "community": 5,
       "norm_label": "db.py"
     },
     {
@@ -10449,7 +10449,7 @@
       "source_file": "bot_ruleta/db.py",
       "source_location": "L30",
       "id": "bot_ruleta_db_get_connection",
-      "community": 5,
+      "community": 9,
       "norm_label": "get_connection()"
     },
     {
@@ -10458,7 +10458,7 @@
       "source_file": "bot_ruleta/db.py",
       "source_location": "L30",
       "id": "connection",
-      "community": 5,
+      "community": 9,
       "norm_label": "connection"
     },
     {
@@ -10467,7 +10467,7 @@
       "source_file": "bot_ruleta/db.py",
       "source_location": "L42",
       "id": "bot_ruleta_db_validate_table_name",
-      "community": 32,
+      "community": 5,
       "norm_label": "validate_table_name()"
     },
     {
@@ -10485,7 +10485,7 @@
       "source_file": "bot_ruleta/db.py",
       "source_location": "L54",
       "id": "bot_ruleta_db_init_db",
-      "community": 17,
+      "community": 5,
       "norm_label": "init_db()"
     },
     {
@@ -10557,7 +10557,7 @@
       "source_file": "bot_ruleta/db.py",
       "source_location": "L1",
       "id": "bot_ruleta_db_rationale_1",
-      "community": 92,
+      "community": 5,
       "norm_label": "manejo de base de datos sqlite con tablas separadas por juego."
     },
     {
@@ -10566,7 +10566,7 @@
       "source_file": "bot_ruleta/db.py",
       "source_location": "L31",
       "id": "bot_ruleta_db_rationale_31",
-      "community": 5,
+      "community": 9,
       "norm_label": "retorna la conexion persistente a la bd (inicializa con wal si es necesario)."
     },
     {
@@ -10575,7 +10575,7 @@
       "source_file": "bot_ruleta/db.py",
       "source_location": "L43",
       "id": "bot_ruleta_db_rationale_43",
-      "community": 32,
+      "community": 5,
       "norm_label": "valida que un nombre de tabla sea seguro y exista en la configuracion.     lanz"
     },
     {
@@ -10584,7 +10584,7 @@
       "source_file": "bot_ruleta/db.py",
       "source_location": "L55",
       "id": "bot_ruleta_db_rationale_55",
-      "community": 17,
+      "community": 5,
       "norm_label": "inicializa la base de datos creando las tablas configuradas."
     },
     {
@@ -10944,7 +10944,7 @@
       "source_file": "bot_ruleta/driver.py",
       "source_location": "L1",
       "id": "bot_ruleta_driver",
-      "community": 15,
+      "community": 17,
       "norm_label": "driver.py"
     },
     {
@@ -10953,7 +10953,7 @@
       "source_file": "bot_ruleta/driver.py",
       "source_location": "L22",
       "id": "bot_ruleta_driver_get_chrome_major_version",
-      "community": 15,
+      "community": 17,
       "norm_label": "get_chrome_major_version()"
     },
     {
@@ -10962,7 +10962,7 @@
       "source_file": "bot_ruleta/driver.py",
       "source_location": "L36",
       "id": "bot_ruleta_driver_setup_driver",
-      "community": 15,
+      "community": 17,
       "norm_label": "setup_driver()"
     },
     {
@@ -10971,7 +10971,7 @@
       "source_file": "bot_ruleta/driver.py",
       "source_location": "L174",
       "id": "bot_ruleta_driver_hide_chrome_window",
-      "community": 15,
+      "community": 17,
       "norm_label": "_hide_chrome_window()"
     },
     {
@@ -10980,7 +10980,7 @@
       "source_file": "bot_ruleta/driver.py",
       "source_location": "L354",
       "id": "bot_ruleta_driver_login_stake",
-      "community": 15,
+      "community": 17,
       "norm_label": "login_stake()"
     },
     {
@@ -10989,7 +10989,7 @@
       "source_file": "bot_ruleta/driver.py",
       "source_location": "L1",
       "id": "bot_ruleta_driver_rationale_1",
-      "community": 15,
+      "community": 17,
       "norm_label": "configuracion y creacion del webdriver + flujo de login."
     },
     {
@@ -10998,7 +10998,7 @@
       "source_file": "bot_ruleta/driver.py",
       "source_location": "L23",
       "id": "bot_ruleta_driver_rationale_23",
-      "community": 15,
+      "community": 17,
       "norm_label": "detecta la version principal de chrome instalada para evitar mismatch."
     },
     {
@@ -11007,7 +11007,7 @@
       "source_file": "bot_ruleta/driver.py",
       "source_location": "L37",
       "id": "bot_ruleta_driver_rationale_37",
-      "community": 15,
+      "community": 17,
       "norm_label": "configura y retorna (driver, wait)."
     },
     {
@@ -11016,7 +11016,7 @@
       "source_file": "bot_ruleta/driver.py",
       "source_location": "L175",
       "id": "bot_ruleta_driver_rationale_175",
-      "community": 15,
+      "community": 17,
       "norm_label": "oculta la ventana de chrome de la barra de tareas y la mueve fuera de la pantall"
     },
     {
@@ -11025,7 +11025,7 @@
       "source_file": "bot_ruleta/driver.py",
       "source_location": "L355",
       "id": "bot_ruleta_driver_rationale_355",
-      "community": 15,
+      "community": 17,
       "norm_label": "navega al lobby y ejecuta el flujo de login."
     },
     {
@@ -11061,7 +11061,7 @@
       "source_file": "bot_ruleta/gui/app.py",
       "source_location": "L36",
       "id": "gui_app_rouletteapp",
-      "community": 3,
+      "community": 30,
       "norm_label": "rouletteapp"
     },
     {
@@ -11070,7 +11070,7 @@
       "source_file": "bot_ruleta/gui/app.py",
       "source_location": "L37",
       "id": "gui_app_rouletteapp_init",
-      "community": 3,
+      "community": 30,
       "norm_label": ".__init__()"
     },
     {
@@ -11079,7 +11079,7 @@
       "source_file": "bot_ruleta/gui/app.py",
       "source_location": "L95",
       "id": "gui_app_rouletteapp_show_frame",
-      "community": 3,
+      "community": 30,
       "norm_label": ".show_frame()"
     },
     {
@@ -11088,7 +11088,7 @@
       "source_file": "bot_ruleta/gui/app.py",
       "source_location": "L101",
       "id": "gui_app_rouletteapp_process_log_queue",
-      "community": 3,
+      "community": 30,
       "norm_label": "._process_log_queue()"
     },
     {
@@ -11097,7 +11097,7 @@
       "source_file": "bot_ruleta/gui/app.py",
       "source_location": "L111",
       "id": "gui_app_rouletteapp_start_background_services",
-      "community": 3,
+      "community": 30,
       "norm_label": ".start_background_services()"
     },
     {
@@ -11106,7 +11106,7 @@
       "source_file": "bot_ruleta/gui/app.py",
       "source_location": "L129",
       "id": "gui_app_rouletteapp_cloudflared_watchdog",
-      "community": 3,
+      "community": 30,
       "norm_label": "._cloudflared_watchdog()"
     },
     {
@@ -11115,7 +11115,7 @@
       "source_file": "bot_ruleta/gui/app.py",
       "source_location": "L146",
       "id": "gui_app_rouletteapp_on_closing",
-      "community": 3,
+      "community": 30,
       "norm_label": ".on_closing()"
     },
     {
@@ -11142,7 +11142,7 @@
       "source_file": "bot_ruleta/gui/screens/dashboard.py",
       "source_location": "L1",
       "id": "screens_dashboard",
-      "community": 17,
+      "community": 31,
       "norm_label": "dashboard.py"
     },
     {
@@ -11295,7 +11295,7 @@
       "source_file": "bot_ruleta/gui/screens/login.py",
       "source_location": "L13",
       "id": "screens_login_resource_path",
-      "community": 31,
+      "community": 19,
       "norm_label": "_resource_path()"
     },
     {
@@ -11304,7 +11304,7 @@
       "source_file": "bot_ruleta/gui/screens/login.py",
       "source_location": "L22",
       "id": "screens_login_loginscreen",
-      "community": 31,
+      "community": 19,
       "norm_label": "loginscreen"
     },
     {
@@ -11313,7 +11313,7 @@
       "source_file": "bot_ruleta/gui/screens/login.py",
       "source_location": "L23",
       "id": "screens_login_loginscreen_init",
-      "community": 31,
+      "community": 19,
       "norm_label": ".__init__()"
     },
     {
@@ -11322,7 +11322,7 @@
       "source_file": "bot_ruleta/gui/screens/login.py",
       "source_location": "L132",
       "id": "screens_login_loginscreen_on_show",
-      "community": 31,
+      "community": 19,
       "norm_label": ".on_show()"
     },
     {
@@ -11331,7 +11331,7 @@
       "source_file": "bot_ruleta/gui/screens/login.py",
       "source_location": "L158",
       "id": "screens_login_loginscreen_update_thresh_lbl",
-      "community": 31,
+      "community": 19,
       "norm_label": "._update_thresh_lbl()"
     },
     {
@@ -11340,7 +11340,7 @@
       "source_file": "bot_ruleta/gui/screens/login.py",
       "source_location": "L161",
       "id": "screens_login_loginscreen_update_color_thresh_lbl",
-      "community": 31,
+      "community": 19,
       "norm_label": "._update_color_thresh_lbl()"
     },
     {
@@ -11349,7 +11349,7 @@
       "source_file": "bot_ruleta/gui/screens/login.py",
       "source_location": "L164",
       "id": "screens_login_loginscreen_update_number_thresh_lbl",
-      "community": 31,
+      "community": 19,
       "norm_label": "._update_number_thresh_lbl()"
     },
     {
@@ -11358,7 +11358,7 @@
       "source_file": "bot_ruleta/gui/screens/login.py",
       "source_location": "L167",
       "id": "screens_login_loginscreen_start_bot",
-      "community": 31,
+      "community": 19,
       "norm_label": ".start_bot()"
     },
     {
@@ -11367,7 +11367,7 @@
       "source_file": "bot_ruleta/gui/screens/prerequisites.py",
       "source_location": "L1",
       "id": "screens_prerequisites",
-      "community": 30,
+      "community": 19,
       "norm_label": "prerequisites.py"
     },
     {
@@ -11376,7 +11376,7 @@
       "source_file": "bot_ruleta/gui/screens/prerequisites.py",
       "source_location": "L14",
       "id": "screens_prerequisites_prerequisitesscreen",
-      "community": 30,
+      "community": 19,
       "norm_label": "prerequisitesscreen"
     },
     {
@@ -11385,7 +11385,7 @@
       "source_file": "bot_ruleta/gui/screens/prerequisites.py",
       "source_location": "L15",
       "id": "screens_prerequisites_prerequisitesscreen_init",
-      "community": 30,
+      "community": 19,
       "norm_label": ".__init__()"
     },
     {
@@ -11394,7 +11394,7 @@
       "source_file": "bot_ruleta/gui/screens/prerequisites.py",
       "source_location": "L48",
       "id": "screens_prerequisites_prerequisitesscreen_on_show",
-      "community": 30,
+      "community": 19,
       "norm_label": ".on_show()"
     },
     {
@@ -11403,7 +11403,7 @@
       "source_file": "bot_ruleta/gui/screens/prerequisites.py",
       "source_location": "L51",
       "id": "screens_prerequisites_prerequisitesscreen_run_checks",
-      "community": 30,
+      "community": 19,
       "norm_label": ".run_checks()"
     },
     {
@@ -11412,7 +11412,7 @@
       "source_file": "bot_ruleta/gui/screens/update.py",
       "source_location": "L1",
       "id": "screens_update",
-      "community": 29,
+      "community": 19,
       "norm_label": "update.py"
     },
     {
@@ -11421,7 +11421,7 @@
       "source_file": "bot_ruleta/gui/screens/update.py",
       "source_location": "L6",
       "id": "screens_update_updatescreen",
-      "community": 30,
+      "community": 19,
       "norm_label": "updatescreen"
     },
     {
@@ -11430,7 +11430,7 @@
       "source_file": "bot_ruleta/gui/screens/update.py",
       "source_location": "L7",
       "id": "screens_update_updatescreen_init",
-      "community": 30,
+      "community": 19,
       "norm_label": ".__init__()"
     },
     {
@@ -11439,7 +11439,7 @@
       "source_file": "bot_ruleta/gui/screens/update.py",
       "source_location": "L32",
       "id": "screens_update_updatescreen_start_update",
-      "community": 30,
+      "community": 19,
       "norm_label": ".start_update()"
     },
     {
@@ -11556,7 +11556,7 @@
       "source_file": "bot_ruleta/launcher.py",
       "source_location": "L24",
       "id": "bot_ruleta_launcher_clear_screen",
-      "community": 3,
+      "community": 29,
       "norm_label": "clear_screen()"
     },
     {
@@ -11565,7 +11565,7 @@
       "source_file": "bot_ruleta/launcher.py",
       "source_location": "L27",
       "id": "bot_ruleta_launcher_render_ui",
-      "community": 3,
+      "community": 29,
       "norm_label": "render_ui()"
     },
     {
@@ -11574,7 +11574,7 @@
       "source_file": "bot_ruleta/launcher.py",
       "source_location": "L46",
       "id": "bot_ruleta_launcher_update_tunnel_url",
-      "community": 3,
+      "community": 29,
       "norm_label": "_update_tunnel_url()"
     },
     {
@@ -11583,7 +11583,7 @@
       "source_file": "bot_ruleta/launcher.py",
       "source_location": "L60",
       "id": "bot_ruleta_launcher_cloudflared_watchdog",
-      "community": 3,
+      "community": 29,
       "norm_label": "cloudflared_watchdog()"
     },
     {
@@ -11592,7 +11592,7 @@
       "source_file": "bot_ruleta/launcher.py",
       "source_location": "L75",
       "id": "bot_ruleta_launcher_track_bot",
-      "community": 3,
+      "community": 29,
       "norm_label": "track_bot()"
     },
     {
@@ -11601,7 +11601,7 @@
       "source_file": "bot_ruleta/launcher.py",
       "source_location": "L90",
       "id": "bot_ruleta_launcher_cleanup",
-      "community": 92,
+      "community": 94,
       "norm_label": "cleanup()"
     },
     {
@@ -11619,7 +11619,7 @@
       "source_file": "bot_ruleta/launcher.py",
       "source_location": "L28",
       "id": "bot_ruleta_launcher_rationale_28",
-      "community": 3,
+      "community": 29,
       "norm_label": "dibuja la consola limpia y minimalista"
     },
     {
@@ -11628,7 +11628,7 @@
       "source_file": "bot_ruleta/launcher.py",
       "source_location": "L47",
       "id": "bot_ruleta_launcher_rationale_47",
-      "community": 3,
+      "community": 29,
       "norm_label": "actualiza el url del tunel: variable global, telegram, ui."
     },
     {
@@ -11637,7 +11637,7 @@
       "source_file": "bot_ruleta/launcher.py",
       "source_location": "L61",
       "id": "bot_ruleta_launcher_rationale_61",
-      "community": 3,
+      "community": 29,
       "norm_label": "hilo permanente que mantiene cloudflared vivo y actualiza la consola."
     },
     {
@@ -11646,7 +11646,7 @@
       "source_file": "bot_ruleta/launcher.py",
       "source_location": "L76",
       "id": "bot_ruleta_launcher_rationale_76",
-      "community": 3,
+      "community": 29,
       "norm_label": "lee la salida del bot y actualiza la consola minimalista"
     },
     {
@@ -11745,7 +11745,7 @@
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L1",
       "id": "bot_ruleta_logic",
-      "community": 3,
+      "community": 9,
       "norm_label": "logic.py"
     },
     {
@@ -11763,7 +11763,7 @@
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L15",
       "id": "bot_ruleta_logic_py_any",
-      "community": 319,
+      "community": 6,
       "norm_label": "any"
     },
     {
@@ -11772,7 +11772,7 @@
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L15",
       "id": "bot_ruleta_logic_py_str",
-      "community": 319,
+      "community": 6,
       "norm_label": "str"
     },
     {
@@ -11781,7 +11781,7 @@
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L15",
       "id": "bot_ruleta_logic_py_int",
-      "community": 319,
+      "community": 6,
       "norm_label": "int"
     },
     {
@@ -11790,7 +11790,7 @@
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L69",
       "id": "bot_ruleta_logic_check_and_notify",
-      "community": 319,
+      "community": 6,
       "norm_label": "check_and_notify()"
     },
     {
@@ -11808,7 +11808,7 @@
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L180",
       "id": "bot_ruleta_logic_check_and_notify_color",
-      "community": 319,
+      "community": 6,
       "norm_label": "check_and_notify_color()"
     },
     {
@@ -11826,7 +11826,7 @@
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L274",
       "id": "bot_ruleta_logic_check_and_notify_number",
-      "community": 319,
+      "community": 6,
       "norm_label": "check_and_notify_number()"
     },
     {
@@ -11844,7 +11844,7 @@
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L70",
       "id": "bot_ruleta_logic_rationale_70",
-      "community": 319,
+      "community": 6,
       "norm_label": "verifica si hay delays que superen el umbral y envia notificacion a telegram."
     },
     {
@@ -11862,7 +11862,7 @@
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L181",
       "id": "bot_ruleta_logic_rationale_181",
-      "community": 319,
+      "community": 6,
       "norm_label": "si la racha de color supera el umbral, envia notificacion a telegram.     usa c"
     },
     {
@@ -11880,7 +11880,7 @@
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L275",
       "id": "bot_ruleta_logic_rationale_275",
-      "community": 319,
+      "community": 6,
       "norm_label": "verifica si hay numeros individuales que superen el umbral de retraso.     envi"
     },
     {
@@ -11952,7 +11952,7 @@
       "source_file": "bot_ruleta/paths.py",
       "source_location": "L10",
       "id": "bot_ruleta_paths_is_frozen",
-      "community": 92,
+      "community": 94,
       "norm_label": "is_frozen()"
     },
     {
@@ -11961,7 +11961,7 @@
       "source_file": "bot_ruleta/paths.py",
       "source_location": "L14",
       "id": "bot_ruleta_paths_get_base_dir",
-      "community": 92,
+      "community": 94,
       "norm_label": "get_base_dir()"
     },
     {
@@ -11988,7 +11988,7 @@
       "source_file": "bot_ruleta/paths.py",
       "source_location": "L15",
       "id": "bot_ruleta_paths_rationale_15",
-      "community": 92,
+      "community": 94,
       "norm_label": "directorio raiz del ejecutable (frozen) o del source (dev)."
     },
     {
@@ -12015,7 +12015,7 @@
       "source_file": "bot_ruleta/scan_lobby_ids.py",
       "source_location": "L1",
       "id": "bot_ruleta_scan_lobby_ids",
-      "community": 15,
+      "community": 17,
       "norm_label": "scan_lobby_ids.py"
     },
     {
@@ -12024,7 +12024,7 @@
       "source_file": "bot_ruleta/scan_lobby_ids.py",
       "source_location": "L7",
       "id": "bot_ruleta_scan_lobby_ids_main",
-      "community": 15,
+      "community": 17,
       "norm_label": "main()"
     },
     {
@@ -12087,7 +12087,7 @@
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L146",
       "id": "bot_ruleta_scanner_scan_loop",
-      "community": 17,
+      "community": 26,
       "norm_label": "_scan_loop()"
     },
     {
@@ -12096,7 +12096,7 @@
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L180",
       "id": "bot_ruleta_scanner_simulate_mouse_move",
-      "community": 17,
+      "community": 26,
       "norm_label": "_simulate_mouse_move()"
     },
     {
@@ -12159,7 +12159,7 @@
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L302",
       "id": "bot_ruleta_scanner_handle_zero_tiles",
-      "community": 17,
+      "community": 26,
       "norm_label": "_handle_zero_tiles()"
     },
     {
@@ -12168,7 +12168,7 @@
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L321",
       "id": "bot_ruleta_scanner_check_session_expiry",
-      "community": 17,
+      "community": 26,
       "norm_label": "_check_session_expiry()"
     },
     {
@@ -12204,7 +12204,7 @@
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L385",
       "id": "bot_ruleta_scanner_run_bot",
-      "community": 17,
+      "community": 31,
       "norm_label": "run_bot()"
     },
     {
@@ -12213,7 +12213,7 @@
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L385",
       "id": "bot_ruleta_scanner_py_any",
-      "community": 17,
+      "community": 31,
       "norm_label": "any"
     },
     {
@@ -12267,7 +12267,7 @@
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L147",
       "id": "bot_ruleta_scanner_rationale_147",
-      "community": 17,
+      "community": 26,
       "norm_label": "loop infinito de escaneo de tiles."
     },
     {
@@ -12276,7 +12276,7 @@
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L181",
       "id": "bot_ruleta_scanner_rationale_181",
-      "community": 17,
+      "community": 26,
       "norm_label": "simula movimiento de mouse js para evitar desconexion de pragmatic."
     },
     {
@@ -12330,7 +12330,7 @@
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L303",
       "id": "bot_ruleta_scanner_rationale_303",
-      "community": 17,
+      "community": 26,
       "norm_label": "maneja ciclos sin tiles: chequeo de expiracion, soft refresh, fallo critico."
     },
     {
@@ -12339,7 +12339,7 @@
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L322",
       "id": "bot_ruleta_scanner_rationale_322",
-      "community": 17,
+      "community": 26,
       "norm_label": "detecta si la sesion expiro por inactividad."
     },
     {
@@ -12375,7 +12375,7 @@
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L386",
       "id": "bot_ruleta_scanner_rationale_386",
-      "community": 17,
+      "community": 31,
       "norm_label": "loop supervisor que asegura que el bot se reinicie si falla.          args:"
     },
     {
@@ -12393,7 +12393,7 @@
       "source_file": "bot_ruleta/telegram.py",
       "source_location": "L12",
       "id": "bot_ruleta_telegram_send_telegram_msg",
-      "community": 3,
+      "community": 28,
       "norm_label": "send_telegram_msg()"
     },
     {
@@ -12411,7 +12411,7 @@
       "source_file": "bot_ruleta/telegram.py",
       "source_location": "L13",
       "id": "bot_ruleta_telegram_rationale_13",
-      "community": 3,
+      "community": 28,
       "norm_label": "envia mensaje raw a telegram."
     },
     {
@@ -12546,7 +12546,7 @@
       "source_file": "bot_ruleta/tests/test_config_paths.py",
       "source_location": "L1",
       "id": "tests_test_config_paths",
-      "community": 92,
+      "community": 94,
       "norm_label": "test_config_paths.py"
     },
     {
@@ -12636,7 +12636,7 @@
       "source_file": "bot_ruleta/tests/test_config_paths.py",
       "source_location": "L53",
       "id": "tests_test_config_paths_testpaths",
-      "community": 92,
+      "community": 94,
       "norm_label": "testpaths"
     },
     {
@@ -12645,7 +12645,7 @@
       "source_file": "bot_ruleta/tests/test_config_paths.py",
       "source_location": "L54",
       "id": "tests_test_config_paths_testpaths_test_is_frozen_false_in_dev",
-      "community": 92,
+      "community": 94,
       "norm_label": ".test_is_frozen_false_in_dev()"
     },
     {
@@ -12654,7 +12654,7 @@
       "source_file": "bot_ruleta/tests/test_config_paths.py",
       "source_location": "L58",
       "id": "tests_test_config_paths_testpaths_test_get_base_dir_returns_valid_path",
-      "community": 92,
+      "community": 94,
       "norm_label": ".test_get_base_dir_returns_valid_path()"
     },
     {
@@ -12663,7 +12663,7 @@
       "source_file": "bot_ruleta/tests/test_config_paths.py",
       "source_location": "L63",
       "id": "tests_test_config_paths_testpaths_test_get_data_dir_exists",
-      "community": 92,
+      "community": 94,
       "norm_label": ".test_get_data_dir_exists()"
     },
     {
@@ -12672,7 +12672,7 @@
       "source_file": "bot_ruleta/tests/test_config_paths.py",
       "source_location": "L1",
       "id": "tests_test_config_paths_rationale_1",
-      "community": 92,
+      "community": 94,
       "norm_label": "tests para config.py y paths.py: constantes y resolucion de rutas."
     },
     {
@@ -13005,7 +13005,7 @@
       "source_file": "bot_ruleta/tests/test_db.py",
       "source_location": "L1",
       "id": "tests_test_db",
-      "community": 32,
+      "community": 5,
       "norm_label": "test_db.py"
     },
     {
@@ -13014,7 +13014,7 @@
       "source_file": "bot_ruleta/tests/test_db.py",
       "source_location": "L14",
       "id": "tests_test_db_testvalidatetablename",
-      "community": 32,
+      "community": 5,
       "norm_label": "testvalidatetablename"
     },
     {
@@ -13023,7 +13023,7 @@
       "source_file": "bot_ruleta/tests/test_db.py",
       "source_location": "L15",
       "id": "tests_test_db_testvalidatetablename_test_valid_table",
-      "community": 32,
+      "community": 5,
       "norm_label": ".test_valid_table()"
     },
     {
@@ -13032,7 +13032,7 @@
       "source_file": "bot_ruleta/tests/test_db.py",
       "source_location": "L20",
       "id": "tests_test_db_testvalidatetablename_test_table_not_in_config",
-      "community": 32,
+      "community": 5,
       "norm_label": ".test_table_not_in_config()"
     },
     {
@@ -13041,7 +13041,7 @@
       "source_file": "bot_ruleta/tests/test_db.py",
       "source_location": "L25",
       "id": "tests_test_db_testvalidatetablename_test_invalid_chars_space",
-      "community": 32,
+      "community": 5,
       "norm_label": ".test_invalid_chars_space()"
     },
     {
@@ -13050,7 +13050,7 @@
       "source_file": "bot_ruleta/tests/test_db.py",
       "source_location": "L30",
       "id": "tests_test_db_testvalidatetablename_test_invalid_chars_semicolon",
-      "community": 32,
+      "community": 5,
       "norm_label": ".test_invalid_chars_semicolon()"
     },
     {
@@ -13059,7 +13059,7 @@
       "source_file": "bot_ruleta/tests/test_db.py",
       "source_location": "L35",
       "id": "tests_test_db_testvalidatetablename_test_none_raises",
-      "community": 32,
+      "community": 5,
       "norm_label": ".test_none_raises()"
     },
     {
@@ -13068,7 +13068,7 @@
       "source_file": "bot_ruleta/tests/test_db.py",
       "source_location": "L40",
       "id": "tests_test_db_testvalidatetablename_test_empty_string_raises",
-      "community": 32,
+      "community": 5,
       "norm_label": ".test_empty_string_raises()"
     },
     {
@@ -13077,7 +13077,7 @@
       "source_file": "bot_ruleta/tests/test_db.py",
       "source_location": "L45",
       "id": "tests_test_db_testvalidatetablename_test_all_configured_tables_valid",
-      "community": 32,
+      "community": 5,
       "norm_label": ".test_all_configured_tables_valid()"
     },
     {
@@ -13185,7 +13185,7 @@
       "source_file": "bot_ruleta/tests/test_db.py",
       "source_location": "L1",
       "id": "tests_test_db_rationale_1",
-      "community": 32,
+      "community": 5,
       "norm_label": "tests para db.py: validador de tablas y operaciones crud."
     },
     {
@@ -13815,7 +13815,7 @@
       "source_file": "bot_ruleta/tests/test_telegram_tunnel.py",
       "source_location": "L1",
       "id": "tests_test_telegram_tunnel",
-      "community": 3,
+      "community": 28,
       "norm_label": "test_telegram_tunnel.py"
     },
     {
@@ -13824,7 +13824,7 @@
       "source_file": "bot_ruleta/tests/test_telegram_tunnel.py",
       "source_location": "L12",
       "id": "tests_test_telegram_tunnel_testsendtelegrammsg",
-      "community": 3,
+      "community": 28,
       "norm_label": "testsendtelegrammsg"
     },
     {
@@ -13833,7 +13833,7 @@
       "source_file": "bot_ruleta/tests/test_telegram_tunnel.py",
       "source_location": "L14",
       "id": "tests_test_telegram_tunnel_testsendtelegrammsg_test_success_returns_true",
-      "community": 3,
+      "community": 28,
       "norm_label": ".test_success_returns_true()"
     },
     {
@@ -13842,7 +13842,7 @@
       "source_file": "bot_ruleta/tests/test_telegram_tunnel.py",
       "source_location": "L22",
       "id": "tests_test_telegram_tunnel_testsendtelegrammsg_test_failure_returns_false",
-      "community": 3,
+      "community": 28,
       "norm_label": ".test_failure_returns_false()"
     },
     {
@@ -13851,7 +13851,7 @@
       "source_file": "bot_ruleta/tests/test_telegram_tunnel.py",
       "source_location": "L30",
       "id": "tests_test_telegram_tunnel_testsendtelegrammsg_test_exception_returns_false",
-      "community": 3,
+      "community": 28,
       "norm_label": ".test_exception_returns_false()"
     },
     {
@@ -13860,7 +13860,7 @@
       "source_file": "bot_ruleta/tests/test_telegram_tunnel.py",
       "source_location": "L36",
       "id": "tests_test_telegram_tunnel_testsendtelegrammsg_test_full_url_and_payload",
-      "community": 3,
+      "community": 28,
       "norm_label": ".test_full_url_and_payload()"
     },
     {
@@ -13869,7 +13869,7 @@
       "source_file": "bot_ruleta/tests/test_telegram_tunnel.py",
       "source_location": "L49",
       "id": "tests_test_telegram_tunnel_testtunnel",
-      "community": 3,
+      "community": 28,
       "norm_label": "testtunnel"
     },
     {
@@ -13878,7 +13878,7 @@
       "source_file": "bot_ruleta/tests/test_telegram_tunnel.py",
       "source_location": "L50",
       "id": "tests_test_telegram_tunnel_testtunnel_test_dev_mode_true_returns_none",
-      "community": 3,
+      "community": 28,
       "norm_label": ".test_dev_mode_true_returns_none()"
     },
     {
@@ -13887,7 +13887,7 @@
       "source_file": "bot_ruleta/tests/test_telegram_tunnel.py",
       "source_location": "L57",
       "id": "tests_test_telegram_tunnel_testtunnel_test_prod_mode_returns_token",
-      "community": 3,
+      "community": 28,
       "norm_label": ".test_prod_mode_returns_token()"
     },
     {
@@ -13896,7 +13896,7 @@
       "source_file": "bot_ruleta/tests/test_telegram_tunnel.py",
       "source_location": "L65",
       "id": "tests_test_telegram_tunnel_testtunnel_test_notify_tunnel_url_does_not_crash",
-      "community": 3,
+      "community": 28,
       "norm_label": ".test_notify_tunnel_url_does_not_crash()"
     },
     {
@@ -13905,7 +13905,7 @@
       "source_file": "bot_ruleta/tests/test_telegram_tunnel.py",
       "source_location": "L1",
       "id": "tests_test_telegram_tunnel_rationale_1",
-      "community": 3,
+      "community": 28,
       "norm_label": "tests para telegram.py y tunnel.py: envio de mensajes y gestion de cloudflare."
     },
     {
@@ -13977,7 +13977,7 @@
       "source_file": "bot_ruleta/tunnel.py",
       "source_location": "L29",
       "id": "bot_ruleta_tunnel_get_cf_env_vars",
-      "community": 3,
+      "community": 28,
       "norm_label": "get_cf_env_vars()"
     },
     {
@@ -14031,7 +14031,7 @@
       "source_file": "bot_ruleta/tunnel.py",
       "source_location": "L30",
       "id": "bot_ruleta_tunnel_rationale_30",
-      "community": 3,
+      "community": 28,
       "norm_label": "retorna (token, dominio) de cloudflare.     prioridad: cloudflare_token env > t"
     },
     {
@@ -14067,7 +14067,7 @@
       "source_file": "bot_ruleta/updater.py",
       "source_location": "L1",
       "id": "bot_ruleta_updater",
-      "community": 29,
+      "community": 19,
       "norm_label": "updater.py"
     },
     {
@@ -14076,34 +14076,43 @@
       "source_file": "bot_ruleta/updater.py",
       "source_location": "L21",
       "id": "bot_ruleta_updater_get_download_url",
-      "community": 29,
+      "community": 19,
       "norm_label": "_get_download_url()"
+    },
+    {
+      "label": "_get_asset_download_url()",
+      "file_type": "code",
+      "source_file": "bot_ruleta/updater.py",
+      "source_location": "L26",
+      "id": "bot_ruleta_updater_get_asset_download_url",
+      "community": 19,
+      "norm_label": "_get_asset_download_url()"
     },
     {
       "label": "check_for_updates()",
       "file_type": "code",
       "source_file": "bot_ruleta/updater.py",
-      "source_location": "L25",
+      "source_location": "L41",
       "id": "bot_ruleta_updater_check_for_updates",
-      "community": 30,
+      "community": 19,
       "norm_label": "check_for_updates()"
     },
     {
       "label": "_cleanup_old_versions()",
       "file_type": "code",
       "source_file": "bot_ruleta/updater.py",
-      "source_location": "L74",
+      "source_location": "L90",
       "id": "bot_ruleta_updater_cleanup_old_versions",
-      "community": 29,
+      "community": 19,
       "norm_label": "_cleanup_old_versions()"
     },
     {
       "label": "perform_update()",
       "file_type": "code",
       "source_file": "bot_ruleta/updater.py",
-      "source_location": "L100",
+      "source_location": "L116",
       "id": "bot_ruleta_updater_perform_update",
-      "community": 29,
+      "community": 19,
       "norm_label": "perform_update()"
     },
     {
@@ -14112,34 +14121,43 @@
       "source_file": "bot_ruleta/updater.py",
       "source_location": "L22",
       "id": "bot_ruleta_updater_rationale_22",
-      "community": 29,
+      "community": 19,
       "norm_label": "genera la url de descarga para una version especifica."
+    },
+    {
+      "label": "Obtiene la URL de descarga del asset via API (funciona en repos privados).",
+      "file_type": "rationale",
+      "source_file": "bot_ruleta/updater.py",
+      "source_location": "L27",
+      "id": "bot_ruleta_updater_rationale_27",
+      "community": 19,
+      "norm_label": "obtiene la url de descarga del asset via api (funciona en repos privados)."
     },
     {
       "label": "Checks GitHub for updates in a background thread.     Calls callback(new_versio",
       "file_type": "rationale",
       "source_file": "bot_ruleta/updater.py",
-      "source_location": "L26",
-      "id": "bot_ruleta_updater_rationale_26",
-      "community": 30,
+      "source_location": "L42",
+      "id": "bot_ruleta_updater_rationale_42",
+      "community": 19,
       "norm_label": "checks github for updates in a background thread.     calls callback(new_versio"
     },
     {
       "label": "Limpia archivos de actualizaciones anteriores (.old, .update, versiones viejas).",
       "file_type": "rationale",
       "source_file": "bot_ruleta/updater.py",
-      "source_location": "L75",
-      "id": "bot_ruleta_updater_rationale_75",
-      "community": 29,
+      "source_location": "L91",
+      "id": "bot_ruleta_updater_rationale_91",
+      "community": 19,
       "norm_label": "limpia archivos de actualizaciones anteriores (.old, .update, versiones viejas)."
     },
     {
       "label": "Downloads the new versioned executable and spawns a bat file to replace the curr",
       "file_type": "rationale",
       "source_file": "bot_ruleta/updater.py",
-      "source_location": "L101",
-      "id": "bot_ruleta_updater_rationale_101",
-      "community": 29,
+      "source_location": "L117",
+      "id": "bot_ruleta_updater_rationale_117",
+      "community": 19,
       "norm_label": "downloads the new versioned executable and spawns a bat file to replace the curr"
     },
     {
@@ -16284,11 +16302,38 @@
       "norm_label": "calcula delays manualmente (independiente de compute_number_delays).     numero"
     },
     {
+      "label": "Checks GitHub for updates in a background thread.     Calls callback(new_versio",
+      "file_type": "rationale",
+      "source_file": "bot_ruleta/updater.py",
+      "source_location": "L26",
+      "community": 19,
+      "norm_label": "checks github for updates in a background thread.     calls callback(new_versio",
+      "id": "bot_ruleta_updater_rationale_26"
+    },
+    {
+      "label": "Limpia archivos de actualizaciones anteriores (.old, .update, versiones viejas).",
+      "file_type": "rationale",
+      "source_file": "bot_ruleta/updater.py",
+      "source_location": "L75",
+      "community": 19,
+      "norm_label": "limpia archivos de actualizaciones anteriores (.old, .update, versiones viejas).",
+      "id": "bot_ruleta_updater_rationale_75"
+    },
+    {
+      "label": "Downloads the new versioned executable and spawns a bat file to replace the curr",
+      "file_type": "rationale",
+      "source_file": "bot_ruleta/updater.py",
+      "source_location": "L101",
+      "community": 19,
+      "norm_label": "downloads the new versioned executable and spawns a bat file to replace the curr",
+      "id": "bot_ruleta_updater_rationale_101"
+    },
+    {
       "label": "Genera la URL de descarga para una versi\u00f3n espec\u00edfica.",
       "file_type": "rationale",
       "source_file": "bot_ruleta/updater.py",
       "source_location": "L19",
-      "community": 29,
+      "community": 19,
       "norm_label": "genera la url de descarga para una version especifica.",
       "id": "bot_ruleta_updater_rationale_19"
     },
@@ -16297,7 +16342,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/updater.py",
       "source_location": "L23",
-      "community": 30,
+      "community": 19,
       "norm_label": "checks github for updates in a background thread.     calls callback(new_versio",
       "id": "bot_ruleta_updater_rationale_23"
     },
@@ -16306,7 +16351,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/updater.py",
       "source_location": "L70",
-      "community": 29,
+      "community": 19,
       "norm_label": "limpia archivos de actualizaciones anteriores (.old, .update, versiones viejas).",
       "id": "bot_ruleta_updater_rationale_70"
     },
@@ -16315,7 +16360,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/updater.py",
       "source_location": "L96",
-      "community": 29,
+      "community": 19,
       "norm_label": "downloads the new versioned executable and spawns a bat file to replace the curr",
       "id": "bot_ruleta_updater_rationale_96"
     },
@@ -16396,7 +16441,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/scanner.py",
       "source_location": "L385",
-      "community": 17,
+      "community": 31,
       "norm_label": "any",
       "id": "any"
     },
@@ -16423,7 +16468,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L67",
-      "community": 319,
+      "community": 6,
       "norm_label": "verifica si hay delays que superen el umbral y envia notificacion a telegram.",
       "id": "bot_ruleta_logic_rationale_67"
     },
@@ -16441,7 +16486,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L178",
-      "community": 319,
+      "community": 6,
       "norm_label": "si la racha de color supera el umbral, envia notificacion a telegram.     usa c",
       "id": "bot_ruleta_logic_rationale_178"
     },
@@ -16459,7 +16504,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L272",
-      "community": 319,
+      "community": 6,
       "norm_label": "verifica si hay numeros individuales que superen el umbral de retraso.     envi",
       "id": "bot_ruleta_logic_rationale_272"
     },
@@ -16468,7 +16513,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/telegram.py",
       "source_location": "L10",
-      "community": 3,
+      "community": 28,
       "norm_label": "envia mensaje raw a telegram.",
       "id": "bot_ruleta_telegram_rationale_10"
     },
@@ -16477,7 +16522,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L138",
-      "community": 3,
+      "community": 6,
       "norm_label": "send_telegram_msg()",
       "id": "bot_ruleta_logic_send_telegram_msg"
     },
@@ -16774,7 +16819,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L68",
-      "community": 319,
+      "community": 6,
       "norm_label": "verifica si hay delays que superen el umbral y envia notificacion a telegram.",
       "id": "bot_ruleta_logic_rationale_68"
     },
@@ -16783,7 +16828,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L139",
-      "community": 3,
+      "community": 6,
       "norm_label": "envia mensaje raw a telegram.",
       "id": "bot_ruleta_logic_rationale_139"
     },
@@ -16801,7 +16846,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L207",
-      "community": 319,
+      "community": 6,
       "norm_label": "si la racha de color supera el umbral, envia notificacion a telegram.     usa c",
       "id": "bot_ruleta_logic_rationale_207"
     },
@@ -16846,7 +16891,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/logic.py",
       "source_location": "L555",
-      "community": 319,
+      "community": 6,
       "norm_label": "verifica si hay numeros individuales que superen el umbral de retraso.     envi",
       "id": "bot_ruleta_logic_rationale_555"
     },
@@ -16873,7 +16918,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/debug_logger.py",
       "source_location": "L85",
-      "community": 6,
+      "community": 20,
       "norm_label": "_guiqueuehandler",
       "id": "bot_ruleta_debug_logger_guiqueuehandler"
     },
@@ -16882,7 +16927,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/debug_logger.py",
       "source_location": "L87",
-      "community": 6,
+      "community": 20,
       "norm_label": ".__init__()",
       "id": "bot_ruleta_debug_logger_guiqueuehandler_init"
     },
@@ -16891,7 +16936,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/debug_logger.py",
       "source_location": "L91",
-      "community": 6,
+      "community": 20,
       "norm_label": ".emit()",
       "id": "bot_ruleta_debug_logger_guiqueuehandler_emit"
     },
@@ -16900,7 +16945,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/debug_logger.py",
       "source_location": "L99",
-      "community": 6,
+      "community": 20,
       "norm_label": "attach_gui_queue()",
       "id": "bot_ruleta_debug_logger_attach_gui_queue"
     },
@@ -16909,7 +16954,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/debug_logger.py",
       "source_location": "L114",
-      "community": 92,
+      "community": 20,
       "norm_label": "set_diagnostics()",
       "id": "bot_ruleta_debug_logger_set_diagnostics"
     },
@@ -16981,7 +17026,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/debug_logger.py",
       "source_location": "L86",
-      "community": 6,
+      "community": 20,
       "norm_label": "handler que envia logs a una queue para que la gui los lea.",
       "id": "bot_ruleta_debug_logger_rationale_86"
     },
@@ -16990,7 +17035,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/debug_logger.py",
       "source_location": "L100",
-      "community": 6,
+      "community": 20,
       "norm_label": "conecta una queue al logger para que la gui reciba los logs.     llamar una sola",
       "id": "bot_ruleta_debug_logger_rationale_100"
     },
@@ -16999,7 +17044,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/debug_logger.py",
       "source_location": "L115",
-      "community": 92,
+      "community": 20,
       "norm_label": "activa o desactiva las capturas de pantalla de diagnostico rutinarias.",
       "id": "bot_ruleta_debug_logger_rationale_115"
     },
@@ -17062,7 +17107,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L1",
-      "community": 3,
+      "community": 20,
       "norm_label": "gui_app.py",
       "id": "bot_ruleta_gui_app"
     },
@@ -17071,7 +17116,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L32",
-      "community": 28,
+      "community": 20,
       "norm_label": "resource_path()",
       "id": "bot_ruleta_gui_app_resource_path"
     },
@@ -17089,7 +17134,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L41",
-      "community": 28,
+      "community": 20,
       "norm_label": ".__init__()",
       "id": "bot_ruleta_gui_app_rouletteapp_init"
     },
@@ -17098,7 +17143,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L111",
-      "community": 28,
+      "community": 20,
       "norm_label": ".show_frame()",
       "id": "bot_ruleta_gui_app_rouletteapp_show_frame"
     },
@@ -17143,7 +17188,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L251",
-      "community": 28,
+      "community": 20,
       "norm_label": "prerequisitesscreen",
       "id": "bot_ruleta_gui_app_prerequisitesscreen"
     },
@@ -17152,7 +17197,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L287",
-      "community": 28,
+      "community": 19,
       "norm_label": ".run_checks()",
       "id": "bot_ruleta_gui_app_prerequisitesscreen_run_checks"
     },
@@ -17161,7 +17206,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L353",
-      "community": 3,
+      "community": 20,
       "norm_label": "get_cropped_image()",
       "id": "bot_ruleta_gui_app_get_cropped_image"
     },
@@ -17170,7 +17215,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L371",
-      "community": 28,
+      "community": 20,
       "norm_label": "loginscreen",
       "id": "bot_ruleta_gui_app_loginscreen"
     },
@@ -17179,7 +17224,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L476",
-      "community": 28,
+      "community": 20,
       "norm_label": ".on_show()",
       "id": "bot_ruleta_gui_app_loginscreen_on_show"
     },
@@ -17188,7 +17233,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L503",
-      "community": 28,
+      "community": 20,
       "norm_label": ".update_thresh_lbl()",
       "id": "bot_ruleta_gui_app_loginscreen_update_thresh_lbl"
     },
@@ -17197,7 +17242,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L506",
-      "community": 28,
+      "community": 20,
       "norm_label": ".update_color_thresh_lbl()",
       "id": "bot_ruleta_gui_app_loginscreen_update_color_thresh_lbl"
     },
@@ -17206,7 +17251,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L509",
-      "community": 28,
+      "community": 20,
       "norm_label": ".update_number_thresh_lbl()",
       "id": "bot_ruleta_gui_app_loginscreen_update_number_thresh_lbl"
     },
@@ -17215,7 +17260,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L512",
-      "community": 28,
+      "community": 20,
       "norm_label": ".start_bot()",
       "id": "bot_ruleta_gui_app_loginscreen_start_bot"
     },
@@ -17224,7 +17269,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L554",
-      "community": 28,
+      "community": 20,
       "norm_label": "loadingscreen",
       "id": "bot_ruleta_gui_app_loadingscreen"
     },
@@ -17233,7 +17278,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L578",
-      "community": 28,
+      "community": 20,
       "norm_label": ".start_loading()",
       "id": "bot_ruleta_gui_app_loadingscreen_start_loading"
     },
@@ -17242,7 +17287,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L584",
-      "community": 28,
+      "community": 20,
       "norm_label": ".update_progress()",
       "id": "bot_ruleta_gui_app_loadingscreen_update_progress"
     },
@@ -17332,7 +17377,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L741",
-      "community": 29,
+      "community": 20,
       "norm_label": "updatescreen",
       "id": "bot_ruleta_gui_app_updatescreen"
     },
@@ -17341,7 +17386,7 @@
       "file_type": "code",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L765",
-      "community": 29,
+      "community": 19,
       "norm_label": ".start_update()",
       "id": "bot_ruleta_gui_app_updatescreen_start_update"
     },
@@ -17350,7 +17395,7 @@
       "file_type": "rationale",
       "source_file": "bot_ruleta/gui_app.py",
       "source_location": "L33",
-      "community": 28,
+      "community": 20,
       "norm_label": "resuelve rutas de archivos empaquetados (pyinstaller) o de desarrollo.",
       "id": "bot_ruleta_gui_app_rationale_33"
     }
@@ -57375,6 +57420,17 @@
       "target": "exception"
     },
     {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "bot_ruleta/updater.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "bot_ruleta_updater_get_asset_download_url",
+      "target": "exception"
+    },
+    {
       "relation": "references",
       "context": "parameter_type",
       "confidence": "EXTRACTED",
@@ -59512,9 +59568,9 @@
       "source_file": "bot_ruleta/launcher.py",
       "source_location": "L161",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "bot_ruleta_launcher",
-      "target": "bot_ruleta_launcher_dashboard_watchdog",
-      "confidence_score": 1.0
+      "target": "bot_ruleta_launcher_dashboard_watchdog"
     },
     {
       "relation": "contains",
@@ -64728,6 +64784,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "bot_ruleta/updater.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_updater",
+      "target": "bot_ruleta_updater_get_asset_download_url"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/updater.py",
       "source_location": "L16",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -64763,6 +64829,16 @@
       "confidence_score": 1.0,
       "source": "bot_ruleta_updater_rationale_22",
       "target": "bot_ruleta_updater_get_download_url"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/updater.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_updater_rationale_27",
+      "target": "bot_ruleta_updater_get_asset_download_url"
     },
     {
       "relation": "imports",
@@ -64810,6 +64886,16 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "bot_ruleta/updater.py",
+      "source_location": "L42",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_updater_rationale_42",
+      "target": "bot_ruleta_updater_check_for_updates"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/updater.py",
       "source_location": "L70",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -64824,6 +64910,16 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "bot_ruleta_updater_rationale_75",
+      "target": "bot_ruleta_updater_cleanup_old_versions"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/updater.py",
+      "source_location": "L91",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_updater_rationale_91",
       "target": "bot_ruleta_updater_cleanup_old_versions"
     },
     {
@@ -64856,6 +64952,16 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "bot_ruleta_updater_rationale_101",
+      "target": "bot_ruleta_updater_perform_update"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "bot_ruleta/updater.py",
+      "source_location": "L117",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "bot_ruleta_updater_rationale_117",
       "target": "bot_ruleta_updater_perform_update"
     },
     {
@@ -69005,5 +69111,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "2d5d6ee8d1c63e2db9b15bf4db8c5643243953f3"
+  "built_at_commit": "1289eeb4f53c47a9ab18a37460826b26cefd2dd1"
 }

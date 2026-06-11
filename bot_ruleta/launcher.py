@@ -162,8 +162,8 @@ if __name__ == "__main__":
         while True:
             _dashboard_ref[0].wait()
             timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
-            log.warning(f"[{timestamp}] Dashboard Flask se ha detenido. Reiniciando en 3 segundos...")
-            time.sleep(3)
+            log.warning(f"[{timestamp}] Dashboard Flask se ha detenido. Reiniciando en 5 segundos...")
+            time.sleep(5)
             _dashboard_ref[0] = subprocess.Popen([sys.executable, gui_app_path, "--run-dashboard"],
                                                   stdout=dashboard_log,
                                                   stderr=subprocess.STDOUT)
