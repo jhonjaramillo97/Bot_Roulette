@@ -85,8 +85,8 @@
     "semantic_hash": ""
   },
   "bot_ruleta/updater.py": {
-    "mtime": 1781130427.1294367,
-    "ast_hash": "fd465353ead80cc450f0c67b6235380b",
+    "mtime": 1781131099.4048107,
+    "ast_hash": "44030df82549cda43cd3b780924c3a6a",
     "semantic_hash": ""
   },
   "install_ubuntu.sh": {
@@ -180,8 +180,8 @@
     "semantic_hash": ""
   },
   "bot_ruleta/tunnel.py": {
-    "mtime": 1781130543.815292,
-    "ast_hash": "9484c07053afc112efbffa5c646da5e9",
+    "mtime": 1781131099.3418858,
+    "ast_hash": "610dbb172b603cf81b40f3501e8a0191",
     "semantic_hash": ""
   },
   "bot_ruleta/paths.py": {
@@ -190,8 +190,8 @@
     "semantic_hash": ""
   },
   "scripts/build_exe.py": {
-    "mtime": 1781129685.7439444,
-    "ast_hash": "a770a80ab3758b79f7a39550915bb842",
+    "mtime": 1781131075.5960133,
+    "ast_hash": "a8c4487031ff14155db035fd8ba749e9",
     "semantic_hash": ""
   },
   "scripts/gen_icon.py": {

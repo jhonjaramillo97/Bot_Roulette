@@ -147,12 +147,27 @@ if __name__ == "__main__":
     print("=" * 60)
     time.sleep(3)  # Dar tiempo a leer el diagnóstico
     
-    # 1. Iniciar Dashboard (via gui_app.py --run-dashboard, mismo handler que la GUI)
+# 1. Iniciar Dashboard (via gui_app.py --run-dashboard, mismo handler que la GUI)
     base_dir = os.path.dirname(os.path.abspath(__file__))
     gui_app_path = os.path.join(base_dir, "gui_app.py")
+    
+    dashboard_log = open(os.path.join(base_dir, "logs", "dashboard.log"), "a")
     dashboard_proc = subprocess.Popen([sys.executable, gui_app_path, "--run-dashboard"], 
-                                      stdout=subprocess.DEVNULL, 
-                                      stderr=subprocess.DEVNULL)
+                                       stdout=dashboard_log, 
+                                       stderr=subprocess.STDOUT)
+    
+    # Watchdog para reiniciar Flask si se cae
+    _dashboard_ref = [dashboard_proc]  # mutable para el closure
+    def dashboard_watchdog():
+        while True:
+            _dashboard_ref[0].wait()
+            timestamp = time.strftime("%Y-%m-%d %H:%M:%S")
+            log.warning(f"[{timestamp}] Dashboard Flask se ha detenido. Reiniciando en 3 segundos...")
+            time.sleep(3)
+            _dashboard_ref[0] = subprocess.Popen([sys.executable, gui_app_path, "--run-dashboard"],
+                                                  stdout=dashboard_log,
+                                                  stderr=subprocess.STDOUT)
+    threading.Thread(target=dashboard_watchdog, daemon=True).start()
     
     # 2. Iniciar Cloudflared (con watchdog que auto-reinicia)
     threading.Thread(target=cloudflared_watchdog, daemon=True).start()
@@ -185,7 +200,7 @@ if __name__ == "__main__":
         # Cerrar todo ordenadamente
         try: bot_proc.terminate()
         except Exception: pass
-        try: dashboard_proc.terminate()
+        try: _dashboard_ref[0].terminate()
         except Exception: pass
         # cloudflared se cierra solo porque el hilo watchdog es daemon
         cleanup()
